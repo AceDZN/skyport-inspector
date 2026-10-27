@@ -1,0 +1,134 @@
+{
+  "scope": "Current module profiles; frozen static chamber build unchanged.",
+  "checks": [
+    {
+      "step": "quiet profiles, independent contact/press and repeat guards",
+      "state": {
+        "context": "running",
+        "paused": false,
+        "loopCount": 3,
+        "activeSfx": 4,
+        "cuesPlayed": 4,
+        "energy": false,
+        "chapter": 1,
+        "intensity": 0,
+        "environment": "chamber",
+        "airSpeed": 0,
+        "airActive": false,
+        "recentCues": [
+          "footstep",
+          "contact",
+          "pad",
+          "button-release"
+        ],
+        "paired": false,
+        "bridge": false,
+        "ducked": false,
+        "gains": {
+          "master": 0.8,
+          "music": 0.7,
+          "sfx": 0.74,
+          "voice": 0.8
+        },
+        "loadedBuffers": 29,
+        "loadErrors": [],
+        "timeline": 0
+      },
+      "gains": [
+        0.15000000596046448,
+        0.8799999952316284,
+        0.8799999952316284,
+        0.23999999463558197
+      ],
+      "sources": [
+        {
+          "buffer": "contact",
+          "pitch": 0.6520000100135803
+        },
+        {
+          "buffer": "contact",
+          "pitch": 1
+        },
+        {
+          "buffer": "pad",
+          "pitch": 1.0149999856948853
+        },
+        {
+          "buffer": "pad",
+          "pitch": 0.7319999933242798
+        }
+      ]
+    },
+    {
+      "step": "paused footstep suppressed",
+      "state": {
+        "context": "suspended",
+        "paused": true,
+        "loopCount": 3,
+        "activeSfx": 4,
+        "cuesPlayed": 4,
+        "energy": false,
+        "chapter": 1,
+        "intensity": 0,
+        "environment": "chamber",
+        "airSpeed": 0,
+        "airActive": false,
+        "recentCues": [
+          "footstep",
+          "contact",
+          "pad",
+          "button-release"
+        ],
+        "paired": false,
+        "bridge": false,
+        "ducked": false,
+        "gains": {
+          "master": 0.8,
+          "music": 0.7,
+          "sfx": 0.74,
+          "voice": 0.8
+        },
+        "loadedBuffers": 29,
+        "loadErrors": [],
+        "timeline": 0.10933333333333328
+      }
+    },
+    {
+      "step": "resume footstep schedules normally",
+      "state": {
+        "context": "running",
+        "paused": false,
+        "loopCount": 3,
+        "activeSfx": 4,
+        "cuesPlayed": 4,
+        "energy": false,
+        "chapter": 1,
+        "intensity": 0,
+        "environment": "chamber",
+        "airSpeed": 0,
+        "airActive": false,
+        "recentCues": [
+          "footstep",
+          "contact",
+          "pad",
+          "button-release"
+        ],
+        "paired": false,
+        "bridge": false,
+        "ducked": false,
+        "gains": {
+          "master": 0.8,
+          "music": 0.7,
+          "sfx": 0.74,
+          "voice": 0.8
+        },
+        "loadedBuffers": 29,
+        "loadErrors": [],
+        "timeline": 0.18933333333333324
+      }
+    }
+  ],
+  "errors": [
+    "Error: Resume footstep lost"
+  ]
+}

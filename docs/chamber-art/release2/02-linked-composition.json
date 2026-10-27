@@ -1,0 +1,227 @@
+{
+  "title": "Rift Runner",
+  "version": "rapier-core-1",
+  "mode": "playing",
+  "level": 2,
+  "world": {
+    "room": "chamber-2",
+    "number": 2,
+    "mission": "Fall through the floor rift. Use your momentum to reach the upper exit.",
+    "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+    "player": {
+      "position": [
+        -0.000014561395801138133,
+        0.8650000095367432,
+        10.703146934509277
+      ],
+      "velocity": [
+        0,
+        0,
+        0.00018827937729890093
+      ],
+      "yaw": 0,
+      "pitch": -0.29000000000000015,
+      "grounded": true,
+      "crossings": 0
+    },
+    "portals": [
+      {
+        "surface": "drop-floor",
+        "position": [
+          -0.000015912726667011157,
+          -2.95,
+          5.946056760104395
+        ],
+        "normal": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "surface": "high-wall",
+        "position": [
+          -0.000014686596841784194,
+          7.14802845373764,
+          -11.959999999999999
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ]
+      }
+    ],
+    "crates": [],
+    "pads": [],
+    "devices": [
+      {
+        "id": "upper-door",
+        "kind": "shutter",
+        "label": "EXIT",
+        "position": [
+          5,
+          8.4,
+          -6.9
+        ],
+        "size": [
+          3,
+          3,
+          0.3
+        ],
+        "active": true,
+        "progress": 1,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      }
+    ],
+    "panels": [
+      {
+        "id": "drop-floor",
+        "position": [
+          0,
+          -2.975,
+          6
+        ],
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "width": 3.5,
+        "height": 6.5
+      },
+      {
+        "id": "high-wall",
+        "position": [
+          0,
+          7.15,
+          -11.985
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "width": 14,
+        "height": 7.1
+      }
+    ],
+    "exits": [
+      {
+        "id": "upper-exit",
+        "label": "",
+        "position": [
+          5,
+          4.25,
+          -9.4
+        ],
+        "size": [
+          1.7,
+          1.8,
+          1.2
+        ]
+      }
+    ],
+    "result": null,
+    "held": null,
+    "holdSpaceTransform": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "launchUsed": false,
+    "respawns": 0,
+    "events": [
+      {
+        "type": "land",
+        "time": 8
+      },
+      {
+        "type": "footstep",
+        "time": 1135
+      },
+      {
+        "type": "portalA",
+        "time": 2589,
+        "surface": "drop-floor",
+        "point": [
+          -0.000015912726667011157,
+          -2.95,
+          5.946056760104395
+        ]
+      },
+      {
+        "type": "portalB",
+        "time": 3708,
+        "surface": "high-wall",
+        "point": [
+          -0.000014686596841784194,
+          7.14802845373764,
+          -11.959999999999999
+        ]
+      },
+      {
+        "type": "footstep",
+        "time": 4270
+      }
+    ]
+  },
+  "progress": {
+    "completed": [
+      1
+    ],
+    "resume": 2
+  },
+  "pointerLocked": false,
+  "controls": {
+    "unlocked": true,
+    "sensitivity": 0.0022
+  },
+  "audio": {
+    "context": "running",
+    "paused": false,
+    "loopCount": 3,
+    "activeSfx": 2,
+    "cuesPlayed": 4,
+    "energy": true,
+    "chapter": 1,
+    "intensity": 0,
+    "environment": "chamber",
+    "airSpeed": 0,
+    "airActive": false,
+    "recentCues": [
+      "footstep",
+      "portalA",
+      "portalB",
+      "footstep"
+    ],
+    "paired": true,
+    "bridge": false,
+    "ducked": false,
+    "gains": {
+      "master": 0.8,
+      "music": 0.7,
+      "sfx": 0.74,
+      "voice": 0.8
+    },
+    "loadedBuffers": 29,
+    "loadErrors": [],
+    "timeline": 1.7946666666666669
+  }
+}

@@ -1,7 +1,9 @@
 /** New Rapier-core integration contracts. Isolated unit setup is never browser play evidence. */
 import test,{before} from 'node:test';
+import RAPIER from '@dimforge/rapier3d-compat';
 import assert from 'node:assert/strict';
-import {Vector3} from 'three';
+import {Vector3,Quaternion} from 'three';
+import {portalMatrix,makeSolid} from '../src/physics';
 import {CoreWorld,initializePhysics} from '../src/core/world';
 const idle={forward:0,strafe:0,jump:false};
 before(async()=>{await initializePhysics();});
@@ -60,4 +62,37 @@ test('falling into the inaccessible lower catch area promptly restores the safe 
 
 test('held cube crosses independently while player stays in front, and can be pulled back through the same pair',()=>{
  const w=new CoreWorld(1);try{w.place(0,'near-wall',new Vector3(-7.985,1.55,6));w.place(1,'far-wall',new Vector3(3,4.35,-11.985));playerAt(w,3,3.68,-6.4);tick(w,.1);look(w,w.crates[0].pos);w.grabDrop();assert.equal(w.heldId,'weighted-cube');look(w,new Vector3(3,4.35,-11.985));let partial=false;for(let i=0;i<360;i++){w.step(1/120,{forward:1,strafe:0,jump:false});if(w.crates[0].crossings>0&&w.player.crossings===0){partial=true;break;}}assert.ok(partial,'Cube never independently reaches connected space before the player');const cube=w.crates[0];assert.ok(cube.pos.x< -6,'Crossed cube is not at the other portal');for(let i=0;i<100&&cube.crossings<2;i++)w.step(1/120,{forward:-1,strafe:0,jump:false});assert.equal(cube.crossings,2,'Pulling back leaves held cube stranded in connected space');assert.equal(w.player.crossings,0,'Pullback unexpectedly teleports player');assert.ok(cube.pos.z< -7&&cube.pos.x>0);assert.ok(cube.pos.toArray().every(Number.isFinite));}finally{w.dispose();}
+});
+
+
+test('loose rigid cube traverses with transformed orientation and angular velocity, without a bounce',()=>{
+ const w=new CoreWorld(1);try{w.place(0,'near-wall',new Vector3(-7.985,1.55,6));w.place(1,'far-wall',new Vector3(3,4.35,-11.985));const c=cubeAt(w,-7.1,1.55,6);c.rigid.setLinvel({x:-4,y:0,z:0},true);c.rigid.setAngvel({x:0,y:1.2,z:.4},true);c.rigid.setRotation(new Quaternion().setFromAxisAngle(new Vector3(0,1,0),.35),true);let oldRotation=c.rotation.clone(),oldAngular=c.angularVelocity.clone();for(let i=0;i<180&&c.crossings===0;i++){oldRotation=c.rotation.clone();oldAngular=c.angularVelocity.clone();w.step(1/120,idle);}assert.equal(c.crossings,1,'Loose cube never crossed');const transform=new Quaternion().setFromRotationMatrix(portalMatrix(w.portals[0]!,w.portals[1]!));assert.ok(c.rotation.angleTo(oldRotation.premultiply(transform))<.06,'Rigid orientation was not mapped to destination');assert.ok(c.angularVelocity.angleTo(oldAngular.applyQuaternion(transform))<.04,'Angular direction was not mapped to destination');const event=w.events.find(e=>e.type==='enter'&&e.body===c.id)!;assert.ok(Math.abs(Number(event.speed)-Number(event.exitSpeed))<1e-5);tick(w,.3);assert.equal(c.crossings,1,'Cube immediately bounced back');assert.ok(c.pos.z< -8);}finally{w.dispose();}
+});
+
+test('a portal leaves the adjacent host wall solid to a dynamic cube',()=>{
+ const w=new CoreWorld(1);try{w.place(0,'near-wall',new Vector3(-7.985,1.55,6));w.place(1,'far-wall',new Vector3(3,4.35,-11.985));const c=cubeAt(w,-7,.56,9);c.rigid.setLinvel({x:-4,y:0,z:0},true);tick(w,1);assert.equal(c.crossings,0);assert.ok(c.pos.x>=-7.52,'Loose cube passes through adjacent host wall');}finally{w.dispose();}
+});
+
+
+function blockedPair(w:CoreWorld){w.place(0,'near-wall',new Vector3(-7.985,1.55,6));w.place(1,'far-wall',new Vector3(3,4.35,-11.985));return w.physics.createCollider(RAPIER.ColliderDesc.cuboid(.8,1,.5).setTranslation(3,4.2,-11.35));}
+
+test('blocked loose-cube exit rolls back the actual rigid body and recovers after obstruction removal',()=>{
+ const w=new CoreWorld(1);try{const block=blockedPair(w),c=cubeAt(w,-7.1,1.55,6);c.rigid.setLinvel({x:-4,y:0,z:0},true);tick(w,1);assert.equal(c.crossings,0);assert.ok(c.pos.x>-7.98,'Cube escaped behind entry host wall');assert.ok(c.pos.distanceTo(new Vector3().copy(c.rigid.translation()))<.025,'Proxy rolled back but rigid body escaped');assert.ok(w.events.some(e=>e.type==='blocked'));w.physics.removeCollider(block,true);c.rigid.setLinvel({x:-4,y:3,z:0},true);tick(w,1);assert.equal(c.crossings,1,'Physically clear upward throw retains stale cube failure or bounces back');assert.ok(c.pos.z< -8);}finally{w.dispose();}
+});
+
+test('blocked character exit rolls back Rapier and recovers without replacing portals',()=>{
+ const w=new CoreWorld(1);try{const block=blockedPair(w);playerAt(w,-7.1,.87,6);w.yaw=Math.PI/2;tick(w,1,{forward:1,strafe:0,jump:false});assert.equal(w.player.crossings,0);assert.ok(w.player.pos.x>-7.98,'Character escaped behind entry host');assert.ok(w.player.pos.distanceTo(new Vector3().copy(w.character.translation()))<.025,'Character/proxy rollback diverges');w.physics.removeCollider(block,true);tick(w,1,{forward:1,strafe:0,jump:false});assert.equal(w.player.crossings,1,'Cleared exit retains stale character failure');}finally{w.dispose();}
+});
+
+test('blocked held-cube exit preserves both physical bodies and recovers as a connected carry',()=>{
+ const w=new CoreWorld(1);try{const block=blockedPair(w);playerAt(w,-4,.87,6);const c=cubeAt(w,-5.7,.8,6);look(w,c.pos);w.grabDrop();assert.equal(w.heldId,c.id);look(w,new Vector3(-8.5,1.55,6));tick(w,1.4,{forward:1,strafe:0,jump:false});assert.equal(c.crossings,0);assert.equal(w.player.crossings,0);assert.ok(c.pos.x>-7.98&&w.player.pos.x>-7.98,'Held/body escaped behind blocked entry');assert.ok(c.pos.distanceTo(new Vector3().copy(c.rigid.translation()))<.025,'Held proxy and rigid diverge');w.physics.removeCollider(block,true);tick(w,1.4,{forward:1,strafe:0,jump:false});assert.ok(c.crossings>=1&&w.player.crossings>=1,'Removed blockage leaves connected carry unwinnable');assert.equal(w.heldId,c.id);}finally{w.dispose();}
+});
+
+
+test('exit floor clearance uses the cube actual rotated support, not its unrotated half-height',()=>{
+ const w=new CoreWorld(1);try{w.place(0,'near-wall',new Vector3(-7.985,1.55,6));w.place(1,'far-wall',new Vector3(3,4.35,-11.985));const floor=makeSolid('raised-exit-clearance',3,3.25,-11.3,2,.4,1.2,'floor');w.solids.push(floor);const collider=w.physics.createCollider(RAPIER.ColliderDesc.cuboid(1,.2,.6).setTranslation(3,3.25,-11.3));w.fixed.set(collider.handle,floor);const c=cubeAt(w,-7.1,1.35,6);c.rigid.setGravityScale(0,true);c.rigid.setRotation(new Quaternion().setFromAxisAngle(new Vector3(0,0,1),Math.PI/4),true);c.rigid.setAngvel({x:0,y:0,z:0},true);c.rigid.setLinvel({x:-4,y:0,z:0},true);tick(w,.4);assert.equal(c.crossings,0,'Tilted cube telefrags into higher destination floor');assert.ok(w.events.some(e=>e.type==='blocked'));assert.ok(c.pos.x>-7.98,'Rejected tilted cube escaped entry host');}finally{w.dispose();}
+});
+
+test('the highest valid wall exit still cannot turn an idle low-speed floor entry into a gallery bypass',()=>{
+ const w=new CoreWorld(2);try{const high=w.surfaces.find(s=>s.id==='high-wall')!,top=high.center.y+high.height/2-1.55;assert.ok(w.place(0,'drop-floor',new Vector3(0,-2.975,6)));assert.ok(w.place(1,'high-wall',new Vector3(0,top,-11.985)));playerAt(w,0,-2.13,6);tick(w,2);assert.equal(w.campaignResult,undefined);assert.ok(!(w.player.grounded&&w.player.pos.y>3.9&&w.player.pos.z>-7.5),'Highest band permits an unearned low-speed gallery landing');}finally{w.dispose();}
 });

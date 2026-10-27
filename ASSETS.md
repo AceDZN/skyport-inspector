@@ -1,6 +1,6 @@
 # Rift Runner — local model and font provenance
 
-Active art direction: warm ceramic/concrete, graphite structure, brushed aluminum, botanical glimpses and violet/amber portal rings. The rejected ticket desk is historical. Its asset prose and unused banker lamp are under `docs/rift-art/history/`, and Git tag`skyport-desk-v1` preserves the old build. It is not the new world.
+Current immediate art direction: two enclosed test chambers with cool white ceramic, graphite service recesses, brushed metal and cyan/amber portal energy. The sparse fifty-level courtyard draft is preserved as unverified source material, not the current core delivery. Chamber architecture and the original handheld instrument are documented in `docs/chamber-art/DEVICE_AND_MATERIALS.md`. The rejected ticket desk is historical. Its asset prose and unused banker lamp are under `docs/rift-art/history/`, and Git tag`skyport-desk-v1` preserves the old build. It is not the new world.
 
 ## Featured original cargo module
 

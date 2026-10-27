@@ -132,23 +132,29 @@ export class ChamberScene extends RiftScene {
    for(const x of[-8.88,8.88])for(const z of[-10,-3,4,11]){this.staticPart([x,-5.8,z],[.04,.46,.18],f.warm);}
   }
   // Small inlaid bay number: architectural wayfinding rather than floating labels.
-  const plaque=this.label(this.core.number===1?'01':'02',.5,.4,'#252b30','#bbc4c6',160);plaque.position.set(-half+.14,1.55,11);plaque.rotation.y=Math.PI/2;this.root.add(plaque);
+  const plaque=this.label(this.core.number===1?'01':'02',.5,.4,'#252b30','#bbc4c6',160);plaque.position.set(-half+.14,1.55,this.core.number===1?12.95:11);plaque.rotation.y=Math.PI/2;this.root.add(plaque);
   for(const s of b.surfaces){const visualMaterial=this.core.number===1?this.material(new T.MeshBasicMaterial({transparent:true,opacity:0,depthWrite:false})):f.white;const face=this.mesh(this.geo(new T.PlaneGeometry(s.width,s.height)),visualMaterial);face.matrix.copy(poseMatrix(s.center.clone().addScaledVector(s.normal,this.core.number===1?.05:.008),s.normal,s.up));face.matrix.decompose(face.position,face.quaternion,face.scale);face.userData.surface=s.id;this.targets.unshift(face);
    // Full eligible wall regions are integrated surfaces, not labelled predetermined rectangles.
 
   }
  }
  private doorSurround(x:number,y:number,z:number,width:number,axis:'x'|'z'){
-  const f=this.finishes,push=(u:number,h:number,d:number,size:number[],mat:T.Material,round=false)=>this.staticPart(axis==='x'?[x+d,y+h,z-u]:[x+u,y+h,z+d],axis==='x'?[size[2],size[1],size[0]]:size,mat,undefined,round);
+  const f=this.finishes,headerStatus=this.material(new T.MeshStandardMaterial({color:0xedb54f,emissive:0xffb437,emissiveIntensity:1.4,roughness:.35})),push=(u:number,h:number,d:number,size:number[],mat:T.Material,round=false)=>this.staticPart(axis==='x'?[x+d,y+h,z-u]:[x+u,y+h,z+d],axis==='x'?[size[2],size[1],size[0]]:size,mat,undefined,round);
   for(const side of[-1,1]){push(side*(width/2+.16),1.65,0,[.32,3.3,.4],f.graphite,true);push(side*(width/2-.02),1.5,.22,[.04,2.85,.08],f.aluminum);push(side*(width/2+.31),1.55,.11,[.055,.64,.065],f.warm);}
-  push(0,3.27,0,[width+.65,.3,.43],f.graphite,true);push(0,3.29,.24,[.72,.09,.035],f.warm);push(0,.016,0,[width+.2,.035,.45],f.aluminum);
+  push(0,3.27,0,[width+.65,.3,.43],f.graphite,true);push(0,3.29,.29,[.72,.09,.035],headerStatus);push(0,.016,0,[width+.2,.035,.45],f.aluminum);
+  // The raised leaf retracts into a finished mechanical pocket rather than hovering over the frame.
+  const pocketHeight=Math.min(this.core.number===1?6.8:10.8,y+6.65)-(y+3);push(0,3+pocketHeight/2,-.025,[width+.6,pocketHeight,.55],f.graphite,true);
+  push(0,3+pocketHeight/2,.26,[width+.33,pocketHeight-.2,.035],f.recess,true);
+  for(let i=0;i<6;i++)push(0,3.65+i*.37,.292,[width-.28,.045,.035],f.graphite);
+  for(const side of[-1,1]){push(side*(width/2+.2),3.15,.285,[.08,6.25,.075],f.aluminum);for(const h of[3.3,3+pocketHeight-.2])push(side*(width/2+.15),h,.305,[.04,.04,.02],f.aluminum);}
+  return headerStatus;
  }
  private mechanisms(){const f=this.finishes;this.doors=[];this.buttons=new Map();
-  for(const d of this.core.machines.devices.filter(d=>d.spec.kind==='shutter')){const alongX=d.spec.size[0]<d.spec.size[2],w=Math.max(d.spec.size[0],d.spec.size[2]),h=d.spec.size[1],depth=Math.min(d.spec.size[0],d.spec.size[2]);this.doorSurround(d.spec.position[0]+(alongX?depth*.55:0),d.spec.position[1]-h/2,d.spec.position[2]+(alongX?0:depth*.55),w,alongX?'x':'z');const leaf=new T.Group();leaf.position.copy(d.position);if(alongX)leaf.rotation.y=Math.PI/2;this.root.add(leaf);
+  for(const d of this.core.machines.devices.filter(d=>d.spec.kind==='shutter')){const alongX=d.spec.size[0]<d.spec.size[2],w=Math.max(d.spec.size[0],d.spec.size[2]),h=d.spec.size[1],depth=Math.min(d.spec.size[0],d.spec.size[2]);const frameStatus=this.doorSurround(d.spec.position[0]+(alongX?depth*.55:0),d.spec.position[1]-h/2,d.spec.position[2]+(alongX?0:depth*.55),w,alongX?'x':'z');const leaf=new T.Group();leaf.position.copy(d.position);if(alongX)leaf.rotation.y=Math.PI/2;this.root.add(leaf);
    this.part(leaf,[0,0,0],[w,h,depth],f.graphite,.035);
    for(const side of[-1,1]){this.part(leaf,[side*w*.25,0,depth*.55],[w*.475,h-.14,.09],f.ceramic,.035);this.part(leaf,[side*.075,0,depth*.75],[.055,.55,.055],f.aluminum,.01);}
    for(const y of[-h*.34,h*.34])this.part(leaf,[0,y,depth*.75],[w-.16,.025,.035],f.graphite,.004);
-   const status=this.material(new T.MeshStandardMaterial({color:0xedb54f,emissive:0xffb437,emissiveIntensity:1.4}));this.part(leaf,[0,h*.42,depth*.75],[.45,.06,.035],status,.006);leaf.traverse(o=>{if(o instanceof T.Mesh)this.targets.push(o);});this.doors.push({state:d,leaf,indicators:[status]});
+   const status=this.material(new T.MeshStandardMaterial({color:0xedb54f,emissive:0xffb437,emissiveIntensity:1.4}));this.part(leaf,[0,h*.42,depth*.75],[.45,.06,.035],status,.006);const clip=new T.Plane(V(0,-1,0),d.spec.position[1]+h/2+.015),clipped=new Map<T.Material,T.Material>();leaf.traverse(o=>{if(o instanceof T.Mesh){const copy=(m:T.Material)=>{let c=clipped.get(m);if(!c){c=m===status?m:this.material(m.clone());c.clippingPlanes=[clip];c.clipShadows=true;clipped.set(m,c);}return c;};o.material=Array.isArray(o.material)?o.material.map(copy):copy(o.material);this.targets.push(o);}});this.doors.push({state:d,leaf,indicators:[status,frameStatus]});
   }
   for(const p of this.core.pads){
    const base=this.mesh(this.geo(new T.CylinderGeometry(1.04,1.09,.14,48)),f.graphite);base.position.copy(p.pos).add(V(0,-.08,0));

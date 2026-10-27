@@ -7,3 +7,7 @@ The original 29 audio buffers are reused. The only new sound is continuous veloc
 Strict isolated TypeScript compilation passed. Current tests prove walking silence, velocity ramp, source reuse, landing teardown, pause/suspend, immediate resume cue, three-loop idempotence, aliases, mute and sampled headroom. They do not prove the chamber physics, event integration, completion, subjective sound quality or human listening. Actual new-chamber gameplay review is pending the lead's integration.
 
 The fifty-level prototype was stopped after direct human rejection. Its earlier evidence remains under `docs/campaign-audio/` and is historical draft only.
+
+## Quiet Rapier profiles
+
+`quiet-profiles.json` and `check-quiet-profiles.mjs` verify footstep gain .15/lower pitch on the contact buffer, button-release gain .24/lower pitch on the pad buffer, unchanged regular impact/press gain .88, separate event histories/repeat guards, paused silence and resumed playback. Still 29 assets. `quiet-profiles-guard-observation.json` preserves an early incorrect harness expectation about a repeat inside the .26-second guard; the corrected test passes without source changes.

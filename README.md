@@ -4,7 +4,7 @@ An original first-person portal puzzle game. The current rebuild focuses on two 
 
 The new core is composed around Rapier3D0.21: a capsule character controller, dynamic rigid cubes with angular motion, collision-aware holding, aperture-scoped portals and physical machinery. It does not inherit the rejected AABB controller. Existing original sound/music and appropriate art are reused.
 
-**Core candidate:** [localhost4261](http://localhost:4261/). **Development:** [localhost5261/chambers.html](http://localhost:5261/chambers.html). Normal-input and video validation is in progress. No completed-core or fifty-level delivery claim is made yet.
+**Core candidate:** [localhost4261](http://localhost:4261/). **Development:** [localhost5261/chambers.html](http://localhost:5261/chambers.html). Both core routes have independent normal-input completions. Frozen recording and regression review continue; the fifty-level campaign is still being built.
 
 WASD move, mouse look, left/right mouse place portals on valid white surfaces, Space jump, E grab/drop, R safe retry, M Hebrew help, Escape pause/unlock. Drag look is available if pointer lock is unavailable. Reading pauses the puzzle.
 

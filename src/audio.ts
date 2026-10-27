@@ -102,15 +102,17 @@ export class SkyportAudio {
   if (!this.ctx || this.ctx.state==='closed' || this.paused) return;
   // resume() is asynchronous: queued one-shots begin when the context resumes.
   // The paused flag still rejects every cue during an intentional pause.
-  name=aliases[name]||name; const b=this.buffers.get(name); if(!b) return;
-  const gap=({contact:.10,land:.10,invalid:.14,error:.20,'switch-toggle':.12,'shutter-open':.70,'shutter-close':.70,'lift-motor':2.0,'lift-arrival':.40,'conveyor-clutch':.30,'platform-move':1.2,'junction-rotate':.60,'relay-align':.30,'beam-blocked':.25,'receiver-power':.70} as Record<string,number>)[name]||0;
-  if(this.ctx.currentTime-(this.lastCue.get(name)??-100)<gap)return;
-  this.lastCue.set(name,this.ctx.currentTime);
+  const profile=name==='footstep'?{event:name,buffer:'contact',gain:.15,pitch:.64,gap:.26}:name==='button-release'?{event:name,buffer:'pad',gain:.24,pitch:.72,gap:.20}:undefined;
+  name=profile?.buffer||aliases[name]||name; const b=this.buffers.get(name); if(!b) return;
+  const event=profile?.event||name;
+  const gap=profile?.gap??(({contact:.10,land:.10,invalid:.14,error:.20,'switch-toggle':.12,'shutter-open':.70,'shutter-close':.70,'lift-motor':2.0,'lift-arrival':.40,'conveyor-clutch':.30,'platform-move':1.2,'junction-rotate':.60,'relay-align':.30,'beam-blocked':.25,'receiver-power':.70} as Record<string,number>)[name]||0);
+  if(this.ctx.currentTime-(this.lastCue.get(event)??-100)<gap)return;
+  this.lastCue.set(event,this.ctx.currentTime);
   // Cap one-shots and vary mechanical/impact playback subtly to prevent machine-gun chatter.
   if(this.shots.size>=8) {const oldest=this.shots.values().next().value as AudioBufferSourceNode|undefined; try{oldest?.stop();}catch{} if(oldest)this.shots.delete(oldest);}
   const s=this.ctx.createBufferSource(); s.buffer=b;
-  this.cueCount++;this.recentCues.push(name);if(this.recentCues.length>12)this.recentCues.shift(); if(!['portalA','portalB','respawn','complete'].includes(name)) s.playbackRate.value=.97+(this.cueCount%5)*.015;
-  const g=this.ctx.createGain(); g.gain.value=.88;
+  this.cueCount++;this.recentCues.push(event);if(this.recentCues.length>12)this.recentCues.shift(); if(profile)s.playbackRate.value=profile.pitch+(this.cueCount%3)*.012;else if(!['portalA','portalB','respawn','complete'].includes(name)) s.playbackRate.value=.97+(this.cueCount%5)*.015;
+  const g=this.ctx.createGain(); g.gain.value=profile?.gain??.88;
   const spatial=this.ctx.createStereoPanner();spatial.pan.value=Number.isFinite(pan)?Math.min(1,Math.max(-1,pan)):0;
   s.connect(g); g.connect(spatial);spatial.connect(this.buses!.sfx); this.shots.add(s);
   s.onended=()=>{this.shots.delete(s); s.disconnect(); g.disconnect();spatial.disconnect();}; s.start();

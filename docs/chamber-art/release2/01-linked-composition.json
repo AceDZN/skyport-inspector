@@ -1,0 +1,296 @@
+{
+  "title": "Rift Runner",
+  "version": "rapier-core-1",
+  "mode": "playing",
+  "level": 1,
+  "world": {
+    "room": "chamber-1",
+    "number": 1,
+    "mission": "Bring the cube back from the alcove. Leave it on the button to open the exit.",
+    "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+    "player": {
+      "position": [
+        -2.1062397956848145,
+        0.8639014959335327,
+        12.143646240234375
+      ],
+      "velocity": [
+        -6.986661837025891e-11,
+        0,
+        0.000001275118351005618
+      ],
+      "yaw": 0.14000000000000004,
+      "pitch": -0.10000000000000002,
+      "grounded": true,
+      "crossings": 0
+    },
+    "portals": [
+      {
+        "surface": "near-wall",
+        "position": [
+          -7.96,
+          1.7982095316337394,
+          6.0250476882737996
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "surface": "far-wall",
+        "position": [
+          2.993177110409448,
+          4.592981735848784,
+          -11.959999999999999
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ]
+      }
+    ],
+    "crates": [
+      {
+        "id": "weighted-cube",
+        "position": [
+          2.9999940395355225,
+          3.3498923778533936,
+          -8
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          -0.000002235259671579115,
+          3.806251321070153e-12,
+          0.000002162983491871273,
+          1
+        ],
+        "angularVelocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      }
+    ],
+    "pads": [
+      {
+        "id": "exit-button",
+        "position": [
+          2,
+          0.14,
+          6
+        ],
+        "pressed": false,
+        "crate": null
+      }
+    ],
+    "devices": [
+      {
+        "id": "exit-door",
+        "kind": "shutter",
+        "label": "EXIT",
+        "position": [
+          -8.12,
+          1.5,
+          11
+        ],
+        "size": [
+          0.3,
+          3,
+          2.6
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      }
+    ],
+    "panels": [
+      {
+        "id": "near-wall",
+        "position": [
+          -7.985,
+          3.5,
+          -1.15
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ],
+        "width": 21.7,
+        "height": 7
+      },
+      {
+        "id": "far-wall",
+        "position": [
+          0,
+          3.5,
+          -11.985
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "width": 16,
+        "height": 7
+      },
+      {
+        "id": "east-wall",
+        "position": [
+          7.985,
+          3.5,
+          1
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ],
+        "width": 26,
+        "height": 7
+      },
+      {
+        "id": "south-wall",
+        "position": [
+          0,
+          3.5,
+          13.985
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "width": 16,
+        "height": 7
+      }
+    ],
+    "exits": [
+      {
+        "id": "next-chamber",
+        "label": "",
+        "position": [
+          -10.7,
+          0.85,
+          11
+        ],
+        "size": [
+          1.8,
+          1.8,
+          2
+        ]
+      }
+    ],
+    "result": null,
+    "held": null,
+    "holdSpaceTransform": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "launchUsed": false,
+    "respawns": 0,
+    "events": [
+      {
+        "type": "land",
+        "time": 8
+      },
+      {
+        "type": "portalA",
+        "time": 1994,
+        "surface": "near-wall",
+        "point": [
+          -7.96,
+          1.7982095316337394,
+          6.0250476882737996
+        ]
+      },
+      {
+        "type": "portalB",
+        "time": 3160,
+        "surface": "far-wall",
+        "point": [
+          2.993177110409448,
+          4.592981735848784,
+          -11.959999999999999
+        ]
+      },
+      {
+        "type": "footstep",
+        "time": 3914
+      },
+      {
+        "type": "footstep",
+        "time": 4336
+      },
+      {
+        "type": "footstep",
+        "time": 4759
+      }
+    ]
+  },
+  "progress": {
+    "completed": [],
+    "resume": 1
+  },
+  "pointerLocked": false,
+  "controls": {
+    "unlocked": true,
+    "sensitivity": 0.0022
+  },
+  "audio": {
+    "context": "running",
+    "paused": false,
+    "loopCount": 3,
+    "activeSfx": 0,
+    "cuesPlayed": 3,
+    "energy": true,
+    "chapter": 1,
+    "intensity": 0,
+    "environment": "chamber",
+    "airSpeed": 0,
+    "airActive": false,
+    "recentCues": [
+      "portalA",
+      "portalB",
+      "footstep"
+    ],
+    "paired": true,
+    "bridge": false,
+    "ducked": false,
+    "gains": {
+      "master": 0.8,
+      "music": 0.7,
+      "sfx": 0.74,
+      "voice": 0.8
+    },
+    "loadedBuffers": 29,
+    "loadErrors": [],
+    "timeline": 2.4560000000000004
+  }
+}

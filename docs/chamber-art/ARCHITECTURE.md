@@ -1,6 +1,6 @@
-# Enclosed chamber art direction — proposal pending targets
+# Enclosed chamber art direction
 
-The current open blue-void stages do not meet the requested test-chamber quality. Preserve them as an unverified campaign draft; use the new two-room build to establish an actual enclosed environment and a reliable portal loop before expanding again.
+The rejected open stages are preserved as an unverified campaign draft. The current enclosed architecture was implemented after inspecting the new targets; actual public-UI comparison and remaining limits are in `ART_REVIEW.md`. The fresh Rapier core establishes the standard for later rooms.
 
 ## Construction language
 
@@ -26,6 +26,6 @@ A separate viewmodel scene can render the instrument after the world pass with a
 
 ## Integration boundary
 
-Art owns new `src/chamber-scene.ts`, original device geometry/source and art provenance. Lead owns collision/controller/chamber state, public UI, portal traversal and integration. Proposed scene API is `constructor(canvas, world)`, `setWorld(world)`, `aim()`, `update(dt)` and existing renderer/camera access, retaining the tested portal/cargo rendering path. Final API and physical dimensions wait for the inspected targets and lead's chamber specification.
+Art owns new `src/chamber-scene.ts`, original device geometry/source and art provenance. Lead owns collision/controller/chamber state, public UI, portal traversal and integration. Implemented scene API is `constructor(canvas, CoreWorld)`, `setWorld(world)`, `aim()`, `fire(index)`, `update(dt)` and existing renderer/camera access. `CoreWorld` owns fresh Rapier physics; the inherited scene is only a read adapter for rendering. The lead-owned bounded recursive `PortalRenderer` is integrated through the virtual linked-view hook. New room families require authoritative geometry/goals and inspected targets before art expansion.
 
 Verification must compare actual game captures with the specific inspected targets, including a near device/cargo view and a linked destination view. Mark visually inspected, mechanically tested and actually completed separately. No generated frame is a gameplay screenshot; no seeded room access is earned campaign progression.

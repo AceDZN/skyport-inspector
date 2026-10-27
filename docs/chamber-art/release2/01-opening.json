@@ -1,0 +1,236 @@
+{
+  "title": "Rift Runner",
+  "version": "rapier-core-1",
+  "mode": "playing",
+  "level": 1,
+  "world": {
+    "room": "chamber-1",
+    "number": 1,
+    "mission": "Bring the cube back from the alcove. Leave it on the button to open the exit.",
+    "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+    "player": {
+      "position": [
+        -6.258790108404355e-8,
+        0.8641793131828308,
+        10
+      ],
+      "velocity": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "grounded": true,
+      "crossings": 0
+    },
+    "portals": [
+      null,
+      null
+    ],
+    "crates": [
+      {
+        "id": "weighted-cube",
+        "position": [
+          2.9999911785125732,
+          3.349893808364868,
+          -8
+        ],
+        "velocity": [
+          -0.0000031104871140996693,
+          5.272739826978068e-7,
+          -0.0000016755245724198176
+        ],
+        "rotation": [
+          -0.0000017366328393109143,
+          3.8760899871703725e-12,
+          0.0000016070266610768158,
+          1
+        ],
+        "angularVelocity": [
+          -0.000003046632627956569,
+          -1.5572099165694908e-11,
+          0.000005655848326568957
+        ],
+        "held": false,
+        "crossings": 0
+      }
+    ],
+    "pads": [
+      {
+        "id": "exit-button",
+        "position": [
+          2,
+          0.14,
+          6
+        ],
+        "pressed": false,
+        "crate": null
+      }
+    ],
+    "devices": [
+      {
+        "id": "exit-door",
+        "kind": "shutter",
+        "label": "EXIT",
+        "position": [
+          -8.12,
+          1.5,
+          11
+        ],
+        "size": [
+          0.3,
+          3,
+          2.6
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      }
+    ],
+    "panels": [
+      {
+        "id": "near-wall",
+        "position": [
+          -7.985,
+          3.5,
+          -1.15
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ],
+        "width": 21.7,
+        "height": 7
+      },
+      {
+        "id": "far-wall",
+        "position": [
+          0,
+          3.5,
+          -11.985
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "width": 16,
+        "height": 7
+      },
+      {
+        "id": "east-wall",
+        "position": [
+          7.985,
+          3.5,
+          1
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ],
+        "width": 26,
+        "height": 7
+      },
+      {
+        "id": "south-wall",
+        "position": [
+          0,
+          3.5,
+          13.985
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "width": 16,
+        "height": 7
+      }
+    ],
+    "exits": [
+      {
+        "id": "next-chamber",
+        "label": "",
+        "position": [
+          -10.7,
+          0.85,
+          11
+        ],
+        "size": [
+          1.8,
+          1.8,
+          2
+        ]
+      }
+    ],
+    "result": null,
+    "held": null,
+    "holdSpaceTransform": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "launchUsed": false,
+    "respawns": 0,
+    "events": [
+      {
+        "type": "land",
+        "time": 8
+      }
+    ]
+  },
+  "progress": {
+    "completed": [],
+    "resume": 1
+  },
+  "pointerLocked": false,
+  "controls": {
+    "unlocked": true,
+    "sensitivity": 0.0022
+  },
+  "audio": {
+    "context": "running",
+    "paused": false,
+    "loopCount": 0,
+    "activeSfx": 0,
+    "cuesPlayed": 0,
+    "energy": false,
+    "chapter": 1,
+    "intensity": 0,
+    "environment": "chamber",
+    "airSpeed": 0,
+    "airActive": false,
+    "recentCues": [],
+    "paired": false,
+    "bridge": false,
+    "ducked": false,
+    "gains": {
+      "master": 0.8,
+      "music": 0.7,
+      "sfx": 0.74,
+      "voice": 0.8
+    },
+    "loadedBuffers": 27,
+    "loadErrors": [],
+    "timeline": 0.7573333333333333
+  }
+}

@@ -1,6 +1,6 @@
 # Rift Runner — immediate core reset
 
-Read REAL-PORTAL-RESET.md. It supersedes the50-room breadth-first draft. Human rejected the current game as broken, ugly and insufficiently Portal-like. Preserve that draft tag rift-campaign-50-draft-v1; do not call it shipped. Immediate work: ONE polished ENCLOSED test chamber with proper first-person device/mouse/WASD, valid aimed portals/live linked views/seamless traversals, solid cube→pressurebutton→physicaldoor, then a second chamber with genuinely necessary floor→wall momentum fling. No broad level multiplication until those pass normal-input browser/video proof and actual-capture visual comparison.
+Read REAL-PORTAL-RESET.md and PORTAL-CAMPAIGN-QUALITY.md. It supersedes the50-room breadth-first draft. Human rejected the current game as broken, ugly and insufficiently Portal-like. Preserve that draft tag rift-campaign-50-draft-v1; do not call it shipped. Immediate work: ONE polished ENCLOSED test chamber with proper first-person device/mouse/WASD, valid aimed portals/live linked views/seamless traversals, solid cube→pressurebutton→physicaldoor, then a second chamber with genuinely necessary floor→wall momentum fling. No broad level multiplication until those pass normal-input browser/video proof and actual-capture visual comparison.
 
 Eventual scope remains exactly50authored levels, one savedcampaign, no grade selector. Existing assets/audio/source/save/English can be reused only where suitable. Natural English should support real puzzles; no arbitrary exit-check chores.
 

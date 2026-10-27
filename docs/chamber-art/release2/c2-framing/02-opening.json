@@ -1,0 +1,170 @@
+{
+  "title": "Rift Runner",
+  "version": "rapier-core-1",
+  "mode": "playing",
+  "level": 2,
+  "world": {
+    "room": "chamber-2",
+    "number": 2,
+    "mission": "Fall through the floor rift. Use your momentum to reach the upper exit.",
+    "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+    "player": {
+      "position": [
+        1.682351751242095e-7,
+        0.8650819659233093,
+        12
+      ],
+      "velocity": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "pitch": -0.15191999999999992,
+      "grounded": true,
+      "crossings": 0
+    },
+    "portals": [
+      null,
+      null
+    ],
+    "crates": [],
+    "pads": [],
+    "devices": [
+      {
+        "id": "upper-door",
+        "kind": "shutter",
+        "label": "EXIT",
+        "position": [
+          5,
+          8.4,
+          -6.9
+        ],
+        "size": [
+          3,
+          3,
+          0.3
+        ],
+        "active": true,
+        "progress": 1,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      }
+    ],
+    "panels": [
+      {
+        "id": "drop-floor",
+        "position": [
+          0,
+          -2.975,
+          6
+        ],
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "width": 3.5,
+        "height": 6.5
+      },
+      {
+        "id": "high-wall",
+        "position": [
+          0,
+          7.15,
+          -11.985
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "width": 14,
+        "height": 7.1
+      }
+    ],
+    "exits": [
+      {
+        "id": "upper-exit",
+        "label": "",
+        "position": [
+          5,
+          4.25,
+          -9.4
+        ],
+        "size": [
+          1.7,
+          1.8,
+          1.2
+        ]
+      }
+    ],
+    "result": null,
+    "held": null,
+    "holdSpaceTransform": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "launchUsed": false,
+    "respawns": 0,
+    "events": [
+      {
+        "type": "land",
+        "time": 8
+      }
+    ]
+  },
+  "progress": {
+    "completed": [
+      1
+    ],
+    "resume": 2
+  },
+  "pointerLocked": false,
+  "controls": {
+    "unlocked": true,
+    "sensitivity": 0.0022
+  },
+  "audio": {
+    "context": "running",
+    "paused": false,
+    "loopCount": 0,
+    "activeSfx": 0,
+    "cuesPlayed": 0,
+    "energy": false,
+    "chapter": 1,
+    "intensity": 0,
+    "environment": "chamber",
+    "airSpeed": 0,
+    "airActive": false,
+    "recentCues": [],
+    "paired": false,
+    "bridge": false,
+    "ducked": false,
+    "gains": {
+      "master": 0.8,
+      "music": 0.7,
+      "sfx": 0.74,
+      "voice": 0.8
+    },
+    "loadedBuffers": 27,
+    "loadErrors": [],
+    "timeline": 1.9093333333333333
+  }
+}
