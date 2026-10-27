@@ -1,3 +1,9 @@
+# Latest human scope:50-level regular campaign
+
+The human now requires exactly50progressive levels with saved unlocks/replay and a1–50map. Remove Select grade and grade-gated routes entirely; Englishgrades7–9are behind-the-scenes curriculum metadata. Rooms genuinely differ in geometry, route, mechanics and solution. Full50end-to-end real-input campaign testing required. This supersedes every nine-room/grade-menu instruction below. Read CAMPAIGN_PLAN.md and the incoming concrete campaign handoff before broad implementation. Preserve openingcheckpoint tag rift-runner-opening-v1; repo/main/ports5261/4261 unchanged. Current completed opening remains useful foundation;50levels are not yet implemented.
+
+---
+
 # Rift Runner — קופצים בין שערים
 
 This is the active Portal-style replacement for the human-rejected Skyport desk. Read REPLACEMENT-RIFT-RUNNER.md for the exact authoritative brief. All old desk rules and source-loop constraints are superseded. Historical implementation and artifacts remain recoverable at skyport-desk-v1; they are not evidence for this replacement.

@@ -3,14 +3,18 @@
 type Bus = 'master' | 'music' | 'sfx' | 'voice';
 type Settings = Record<Bus, number>;
 const defaults: Settings = { master: 0.8, music: 0.7, sfx: 0.74, voice: 0.8 };
-const cueFiles = ['portalA','portalB','invalid','enter','exit','pickup','drop','contact','pad','bridge','jump','land','respawn','complete','error'];
-const aliases: Record<string,string> = {portal_a:'portalA',portal_b:'portalB','portal-a':'portalA','portal-b':'portalB',portal:'portalA',teleport:'enter',grab:'pickup',release:'drop',impact:'contact',pressure:'pad',unfold:'bridge',fall:'respawn',restart:'respawn',success:'complete',end:'complete',mistake:'error',denied:'invalid'};
+const cueFiles = ['portalA','portalB','invalid','enter','exit','pickup','drop','contact','pad','bridge','jump','land','respawn','complete','error','switch-toggle','shutter-open','shutter-close','lift-motor','lift-arrival','conveyor-clutch','platform-move','junction-rotate','relay-align','beam-blocked','receiver-power'];
+const aliases: Record<string,string> = {portal_a:'portalA',portal_b:'portalB','portal-a':'portalA','portal-b':'portalB',portal:'portalA',teleport:'enter',grab:'pickup',release:'drop',impact:'contact',pressure:'pad',unfold:'bridge',fall:'respawn',restart:'respawn',success:'complete',end:'complete',mistake:'error',denied:'invalid',switch:'switch-toggle',switchToggle:'switch-toggle','door-open':'shutter-open','door-close':'shutter-close',shutterOpen:'shutter-open',shutterClose:'shutter-close',lift:'lift-motor','lift-start':'lift-motor','lift-arrive':'lift-arrival','lift-stop':'lift-arrival',conveyor:'conveyor-clutch',platform:'platform-move','moving-platform':'platform-move',junction:'junction-rotate',relay:'relay-align','relay-aligned':'relay-align',receiver:'receiver-power',power:'receiver-power'};
 const storageKey = 'rift-audio-v1';
 export class SkyportAudio {
  private ctx?: AudioContext;
  private buses?: Record<Bus, GainNode>;
  private energyGain?: GainNode;
  private duckGain?: GainNode;
+ private musicColour?: BiquadFilterNode;
+ private chapter=1;
+ private intensity=0;
+ private recentCues:string[]=[];
  private limiter?: DynamicsCompressorNode;
  private buffers = new Map<string,AudioBuffer>();
  private loops: AudioBufferSourceNode[] = [];
@@ -40,11 +44,12 @@ export class SkyportAudio {
    this.buses = {master:c.createGain(),music:c.createGain(),sfx:c.createGain(),voice:c.createGain()};
    this.duckGain=c.createGain(); this.duckGain.gain.value=this.ducked?.24:1; this.energyGain=c.createGain(); this.limiter=c.createDynamicsCompressor();
    this.limiter.threshold.value=-8; this.limiter.knee.value=12; this.limiter.ratio.value=5; this.limiter.attack.value=.005; this.limiter.release.value=.18;
-   this.buses.music.connect(this.duckGain); this.duckGain.connect(this.buses.master);
+   this.musicColour=c.createBiquadFilter();this.musicColour.type='highshelf';this.musicColour.frequency.value=2400;this.musicColour.gain.value=0;
+   this.buses.music.connect(this.musicColour);this.musicColour.connect(this.duckGain); this.duckGain.connect(this.buses.master);
    this.buses.sfx.connect(this.buses.master); this.buses.voice.connect(this.buses.master);
    this.buses.master.connect(this.limiter); this.limiter.connect(c.destination);
    for (const k of Object.keys(defaults) as Bus[]) this.buses[k].gain.value=this.values[k];
-   this.energyGain.gain.value=this.bridgeActive?.85:this.paired?.42:this.high?.85:0; this.energyGain.connect(this.buses.music);
+   this.energyGain.gain.value=this.energyLevel(); this.energyGain.connect(this.buses.music);this.applyMusicVariation();
    this.loading=this.load();
   }
   window.clearTimeout(this.pauseTimer); this.paused=false;
@@ -86,13 +91,13 @@ export class SkyportAudio {
   // resume() is asynchronous: queued one-shots begin when the context resumes.
   // The paused flag still rejects every cue during an intentional pause.
   name=aliases[name]||name; const b=this.buffers.get(name); if(!b) return;
-  const gap=({contact:.10,land:.10,invalid:.14,error:.20} as Record<string,number>)[name]||0;
+  const gap=({contact:.10,land:.10,invalid:.14,error:.20,'switch-toggle':.12,'shutter-open':.70,'shutter-close':.70,'lift-motor':2.0,'lift-arrival':.40,'conveyor-clutch':.30,'platform-move':1.2,'junction-rotate':.60,'relay-align':.30,'beam-blocked':.25,'receiver-power':.70} as Record<string,number>)[name]||0;
   if(this.ctx.currentTime-(this.lastCue.get(name)??-100)<gap)return;
   this.lastCue.set(name,this.ctx.currentTime);
   // Cap one-shots and vary mechanical/impact playback subtly to prevent machine-gun chatter.
   if(this.shots.size>=8) {const oldest=this.shots.values().next().value as AudioBufferSourceNode|undefined; try{oldest?.stop();}catch{} if(oldest)this.shots.delete(oldest);}
   const s=this.ctx.createBufferSource(); s.buffer=b;
-  this.cueCount++; if(!['portalA','portalB','respawn','complete'].includes(name)) s.playbackRate.value=.97+(this.cueCount%5)*.015;
+  this.cueCount++;this.recentCues.push(name);if(this.recentCues.length>12)this.recentCues.shift(); if(!['portalA','portalB','respawn','complete'].includes(name)) s.playbackRate.value=.97+(this.cueCount%5)*.015;
   const g=this.ctx.createGain(); g.gain.value=.88;
   const spatial=this.ctx.createStereoPanner();spatial.pan.value=Number.isFinite(pan)?Math.min(1,Math.max(-1,pan)):0;
   s.connect(g); g.connect(spatial);spatial.connect(this.buses!.sfx); this.shots.add(s);
@@ -108,9 +113,14 @@ export class SkyportAudio {
    void this.ctx.resume(); this.ramp(this.buses.master.gain,this.values.master,.12);
   }
  }
- setEnergy(high: boolean): void {this.high=high; if(this.energyGain)this.ramp(this.energyGain.gain,high?.85:0,.8);}
+ setEnergy(high: boolean): void {this.high=high;this.paired=false;this.bridgeActive=false;this.applyMusicVariation();}
  /** Reveal a quiet counter-arpeggio with a linked pair, and a fuller layer with a bridge. */
- setConnection(paired:boolean,bridge=false):void {this.paired=paired;this.bridgeActive=bridge;this.high=paired||bridge;if(this.energyGain)this.ramp(this.energyGain.gain,bridge?.85:paired?.42:0,.8);}
+ setConnection(paired:boolean,bridge=false):void {this.paired=paired;this.bridgeActive=bridge;this.high=paired||bridge;this.applyMusicVariation();}
+ private energyLevel():number{return Math.min(.92,(this.bridgeActive?.85:this.paired?.42:this.high?.85:0)+(this.chapter-1)*.035+this.intensity*.18);}
+ private applyMusicVariation():void {if(this.energyGain)this.ramp(this.energyGain.gain,this.energyLevel(),.8);if(this.musicColour)this.ramp(this.musicColour.gain,([0,-1,.5,-.5,1][this.chapter-1]??0)+this.intensity*.8,1.4);}
+ /** One coherent score across the campaign; subtle stem/colour variation, no loop restart. */
+ setChapter(chapter:number,intensity=0):void {if(Number.isFinite(chapter))this.chapter=Math.min(5,Math.max(1,Math.round(chapter)));this.setIntensity(intensity);}
+ setIntensity(value:number):void {if(!Number.isFinite(value))return;this.intensity=Math.min(1,Math.max(0,value));this.applyMusicVariation();}
  setGain(bus: string,value: number): void {
   if(!(bus in defaults) || !Number.isFinite(value))return; const key=bus as Bus;
   this.values[key]=Math.min(1,Math.max(0,value));
@@ -125,7 +135,7 @@ export class SkyportAudio {
   const s=this.ctx!.createBufferSource();s.buffer=b;s.connect(this.buses!.voice);this.voiceSource=s;this.setDucking(true);
   s.onended=()=>{if(this.voiceSource===s){this.voiceSource=undefined;this.setDucking(false);}s.disconnect();};s.start();
  }
- state() {return {context:this.ctx?.state||'not-started',paused:this.paused,loopCount:this.loops.length,activeSfx:this.shots.size,cuesPlayed:this.cueCount,energy:this.high,paired:this.paired,bridge:this.bridgeActive,ducked:this.ducked,gains:this.settings(),loadedBuffers:this.buffers.size,loadErrors:[...this.failures],timeline:this.ctx?Math.max(0,this.ctx.currentTime-this.startedAt):0};}
+ state() {return {context:this.ctx?.state||'not-started',paused:this.paused,loopCount:this.loops.length,activeSfx:this.shots.size,cuesPlayed:this.cueCount,energy:this.high,chapter:this.chapter,intensity:this.intensity,recentCues:[...this.recentCues],paired:this.paired,bridge:this.bridgeActive,ducked:this.ducked,gains:this.settings(),loadedBuffers:this.buffers.size,loadErrors:[...this.failures],timeline:this.ctx?Math.max(0,this.ctx.currentTime-this.startedAt):0};}
 }
 
 /** New product name; the old export remains source-compatible for integration. */

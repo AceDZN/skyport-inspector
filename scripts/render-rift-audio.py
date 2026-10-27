@@ -148,9 +148,6 @@ for at,name in [(1,'portalA'),(3,'portalB'),(5,'enter'),(6,'exit'),(8,'pickup'),
  x=sounds[name];i=int(at*SR);preview[i:i+min(len(x),PN-i)]+=x[:min(len(x),PN-i)]*.7
 preview[:int(.2*SR)]*=np.linspace(0,1,int(.2*SR))[:,None];preview[-SR:]*=np.linspace(1,0,SR)[:,None]
 wav(DOC/'rift-mixed-preview.wav',preview)
-# Delete only the desk assets replaced by this explicitly authorized soundtrack refresh.
-keep={n+'.wav'for n in cues}|{'rift-courtyard.flac','rift-connection.flac','rift-air.flac'}
-for p in OUT.iterdir():
- if p.name not in keep and p.is_file():p.unlink()
+# The desk migration already removed obsolete assets. Do not prune later campaign audio.
 (DOC/'audio-metrics.json').write_text(json.dumps({'sample_rate':SR,'bpm':BPM,'bars':32,'form':'A A B A-prime','files':metrics},indent=2))
 print(json.dumps(metrics,indent=2))

@@ -1,0 +1,5 @@
+# Inspected design mockup
+
+Built-in imagegen,27October2026. Visually inspected16:9 output. A genuinely different long canal topology with offset walkways, foreground conveyor rollers and a rail-driven ferry platform. A translucent original robot replay carries/handles the diamond module, while the triangle module rests independently. Mission and E·Grab match the prompt. A/B are legible, material palette/botanical lighting coherent.
+
+Useful implementation cues: conveyor end aligned with ferry stop, visible track/drive, two distinct cargo histories, protected side walkways. Generated robot has glowing eyes rather than the inherited clock face; use the existing rigged porter in runtime rather than acquiring a duplicate. Generated portal interiors are mostly luminous/opaque and do not prove the requested destination views; actual runtime must retain the real linked-view/traversal implementation. Water reflections and plant density are aspirational; safe recovery needs explicit implementation even where hidden by this camera. Not a gameplay screenshot or animation proof.

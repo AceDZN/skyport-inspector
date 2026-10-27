@@ -1,8 +1,14 @@
+# Latest human scope:50-level regular campaign
+
+The human now requires exactly50progressive levels with saved unlocks/replay and a1–50map. Remove Select grade and grade-gated routes entirely; Englishgrades7–9are behind-the-scenes curriculum metadata. Rooms genuinely differ in geometry, route, mechanics and solution. Full50end-to-end real-input campaign testing required. This supersedes every nine-room/grade-menu instruction below. Read CAMPAIGN_PLAN.md and the incoming concrete campaign handoff before broad implementation. Preserve openingcheckpoint tag rift-runner-opening-v1; repo/main/ports5261/4261 unchanged. Current completed opening remains useful foundation;50levels are not yet implemented.
+
+---
+
 # Rift Runner grade tracks
 
 Active replacement dated27 October2026. The rejected desk’s grade fixtures/tests are historical only. REPLACEMENT-RIFT-RUNNER.md is authoritative.
 
-Every grade has a required guided → independent → changed-context transfer campaign. The first guided room is integrated and physically proven before remaining rooms are authored. A changed timer or different cosmetic skin is not a grade track.
+Every grade has a required guided → independent → changed-context transfer campaign. The first guided room was integrated and independently proven through real portal/carry/bridge/win/fall play before the full nine-room pack was authored. A changed timer or different cosmetic skin is not a grade track.
 
 | Grade | Chapter10 | Chapter11 | Chapter12 | Physical evidence |
 |---|---|---|---|---|

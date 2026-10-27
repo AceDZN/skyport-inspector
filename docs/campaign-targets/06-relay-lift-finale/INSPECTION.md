@@ -1,0 +1,5 @@
+# Inspected design mockup
+
+Built-in imagegen,27October2026. Visually inspected16:9 output. First-person carried diamond module, direct energy line to a receiver/lift shutter, vertical lift shaft, offset upper bridge and alternate lower passage are simultaneously readable. The violet portal displays lift-side structure, amber portal is at the high bridge. Mission and E·Drop match the prompt. No player hands or branded characters.
+
+Useful implementation cues: relay activation visibly opens lift access; lift reaches the high offset bridge; lower bypass makes the asymmetric topology legible. Generated A/B letter markers are omitted and must remain explicit in runtime. Cargo diamond is glowing in this mockup; runtime identity labels must not become a repeated answer-highlighting shortcut. Reuse the existing module mesh and neutral plaque. This still is not proof that the relay/lift/bridge chain works or that all50 campaign rooms exist. Fine wear, vegetation and reflections are aspirational surface richness rather than a rendering completion claim.

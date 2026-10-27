@@ -1,0 +1,5 @@
+# Inspected design mockup
+
+Built-in imagegen,27October2026. Visually inspected16:9 output. Strong actual emitter→adjustable prism→receiver beam line, mechanical prism handle, partially opening door, planted channels and clear ceramic path. Mission and E·Adjust match the prompt. Portal interiors show spatial views, but explicit A/B letters are omitted.
+
+Useful implementation cues: visible reflector pivot/handle, thin uninterrupted beam, separate inactive receiver, sliding-door consequence. **Generated discrepancy:** both receivers are above the doorway, while the prompt requested a second receiver beside it. Runtime must place actual plausible alternatives consistently with each English relation; this art must not silently become authoritative room truth. Generated cargo silhouette is a more faceted container than our existing module; reuse the authored module. Light glow in this solved frame represents physical activation, not an answer cue before aiming. No optical/conditional behavior is proved by the still; target only.

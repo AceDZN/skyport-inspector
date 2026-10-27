@@ -1,3 +1,9 @@
+# Latest human scope:50-level regular campaign
+
+The human now requires exactly50progressive levels with saved unlocks/replay and a1–50map. Remove Select grade and grade-gated routes entirely; Englishgrades7–9are behind-the-scenes curriculum metadata. Rooms genuinely differ in geometry, route, mechanics and solution. Full50end-to-end real-input campaign testing required. This supersedes every nine-room/grade-menu instruction below. Read CAMPAIGN_PLAN.md and the incoming concrete campaign handoff before broad implementation. Preserve openingcheckpoint tag rift-runner-opening-v1; repo/main/ports5261/4261 unchanged. Current completed opening remains useful foundation;50levels are not yet implemented.
+
+---
+
 # Rift Runner active build contract
 
 The human rejected the desk game. REPLACEMENT-RIFT-RUNNER.md is now authoritative. Portal-style movement/aim/linked-portal/carry/pad/bridge/exit loop replaces every previous desk constraint. Preserve original rejected work in tag skyport-desk-v1, no destructive resets. Use same public main/origin, dev5261/preview4261, explicit assigned workdir. Other games/Idea Plotter read-only.
