@@ -1,6 +1,6 @@
 # Rift Runner audio
 
-Current scope: the single 50-level campaign in CAMPAIGN-50.md. The original exploration score is retained, with new machinery cues and subtle chapter/intensity variations. Audio assets and module playback are verified below; actual new-machine integration is marked separately. Earlier nine-room checks are historical evidence.
+Current scope: two enclosed physics chambers, following the human rejection of the unfinished fifty-level draft. The existing original score and 29 local buffers are reused. Chamber ventilation and velocity-driven flight air are described below. Earlier campaign/nine-room observations are historical prototype evidence and do not establish completion of the current chambers.
 
 The Portal-style replacement has a new original soundtrack and action palette. The rejected desk audio is recoverable from Git tag `skyport-desk-v1`; none of its paper/stamp/boarding sounds are loaded by the current runtime. All current audio is locally synthesized for Rift Runner. No external sample, commercial-game soundtrack, paid service, account or purchased recording is used. The original assets may be redistributed with this game, without third-party audio attribution.
 
@@ -74,7 +74,7 @@ Integration found and resolved a UI checkpoint-pause omission and a small mixer 
 
 Final evidence: `docs/rift-audio/portal-retry-check.json` (nine observed stages, zero errors), `integrated-traversal.png` (actual game capture), `resume-race-check.json`, plus the broader settings/restart observations in `integrated-browser-check.json`. The earlier approach that missed the portal used a drifting key-held aiming helper; the final traversal uses the actual unlocked drag-look control and sidesteps the crate. No injected position, completion or world action was used as a playtest.
 
-## Fifty-level campaign machinery extension
+## Historical fifty-level draft machinery extension
 
 Eleven additional original cues are authored in `scripts/render-rift-machinery.py`. They use friction/noise textures, damped material impacts, gear pulses, motor harmonics and glass overtones. They are distinct mechanical responses rather than eleven pitched UI beeps. Their finite fade envelopes prevent stuck motor notes.
 
@@ -116,4 +116,16 @@ Current runtime audio: **10,079,180 bytes**, 29 local buffers (26 action cues an
 
 `node docs/rift-audio/check-machinery.mjs` passed the actual current audio module in Chromium with standard autoplay policy: no pre-gesture context, 29 buffers, three loops, all eleven distinct machinery cues in the canonical event history, five chapter/intensity changes without loop restart, pause/suspend, immediate resume cue, repeated Start, mute ramp and restored defaults. No page errors or load errors occurred. The lab is a module test, not a campaign completion claim. Evidence: `machinery-browser-check.json` and inspected `machinery-browser.png`; the waveform PNG is only a non-silence aid.
 
-Actual new-machinery events in the campaign await the lead's engine integration and will be verified separately. No subjective human audition has been claimed. No external service, payment or third-party sample was used.
+Historical exploratory campaign checks subsequently verified actual lever/shutter opening/closing events in levels 5 and 7. The campaign was rejected before a final run; those observations are not completion evidence for the new chambers. No subjective human audition has been claimed. No external service, payment or third-party sample was used.
+
+## Current enclosed-chamber reuse
+
+The same 29 local buffers are retained; no soundtrack, external sample or downloaded sound was added for this revision. `portalA` and `portalB` already contain a rising field/charge body plus the opening attack. `enter` and `exit` give different suction/release envelopes. Existing cube pickup/contact/drop, `pad` mechanical latch and shutter sliding/stopping cues cover the cube/button/physical-door chain. Context aliases `portal-fire-a`, `portal-fire-b`, `portal-charge`, `portal-pass`, `cube-pickup`, `cube-contact`, `cube-drop`, `button-press`, `door-open` and `door-close` resolve to those existing files. Emit each physical event once; aliases do not need to be layered with their canonical cue.
+
+The default ambience environment is now `chamber`: two gentle low-pass stages at 260 Hz retain the existing low ventilation/air while suppressing distant courtyard birds. Optional `setEnvironment('courtyard')` restores the original bed; `setEnvironment('chamber')` restores the indoor filter. Transitions ramp.
+
+`setAirSpeed(speed)` adds the missing continuous fling feedback. Actual world velocity above 6 units/second reveals a restrained unpitched air texture; ordinary 4.8-unit walking creates no source. Its gain and upper bandwidth increase smoothly, capped at .13 and 3.2 kHz. The seeded stereo noise is synthesized locally in memory, with circular endpoints and a high-pass at 170 Hz; no new asset request is made. At 48 kHz it uses 768,000 extra decoded bytes only after a flight has occurred. Repeated updates reuse the same source. Landing/low speed fades and disconnects it; pause clears it, and the existing SFX/master controls govern it. The three score/connection/environment loops remain unchanged in count. `state()` reports `environment`, `airSpeed` and `airActive` for causal QA.
+
+Strict isolated TypeScript compilation passed. `node docs/chamber-audio/check-module.mjs` verified the actual module in Chromium: gesture-only startup, the same 29 buffers/three loops, context aliases, silent walking, increasing air gain on the same source, repeated grounded updates disconnecting air, pause/suspend and immediate resume cue, repeated Start, master mute and default restoration. The sampled 18-unit air RMS was .003915 before the SFX/master bus; a stress mix of eight cues plus maximum air peaked at −14.344 dBFS before the compressor (sampled RMS −28.942 dBFS). No page/load errors occurred. The stable run blocked Vite HMR and recorded one navigation; its screenshot was inspected. An earlier interrupted lab attempt remains separately labeled, not counted as a pass.
+
+Evidence: `docs/chamber-audio/module-check.json`, `module.png`, `check-module.mjs`. This is audio-module verification. Actual normal-input playback in the new chambers remains pending integration; no subjective human audition or completed chamber claim is made here.

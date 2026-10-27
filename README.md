@@ -1,8 +1,12 @@
-# Rift Runner — קופצים בין שערים
+# Rift Runner · קופצים בין שערים
 
-A Portal-style browser3D puzzle adventure in active development toward **one saved50-level campaign**. No grade selection in the campaign: curriculumgrades7–9are internal provenance only. Original code/art/audio, actual linked portal views and position/facing/velocity transforms, solid cargo, machinery and recoverable world goals.
+An original first-person portal puzzle game. The current rebuild focuses on two enclosed test chambers: retrieve a rigid cube from a raised alcove and return it to a pressure button; then use a real floor-to-wall momentum fling to reach an elevated gallery.
 
-**Current candidate:** http://localhost:4261/campaign.html · **development:** http://localhost:5261/campaign.html . Continue/New Game/Levels, strict correct-objective unlocks, reload/resume and replay frontier have normal-input proof. The50-row catalogue and physical fixtures are being authored/audited; they are not yet a verified full50-level delivery. The full clean-save1→50 run remains required. The root preview currently preserves the earlier portal-opening checkpoint while this campaign is completed.
+The new core is composed around Rapier3D0.21: a capsule character controller, dynamic rigid cubes with angular motion, collision-aware holding, aperture-scoped portals and physical machinery. It does not inherit the rejected AABB controller. Existing original sound/music and appropriate art are reused.
+
+**Core candidate:** [localhost4261](http://localhost:4261/). **Development:** [localhost5261/chambers.html](http://localhost:5261/chambers.html). Normal-input and video validation is in progress. No completed-core or fifty-level delivery claim is made yet.
+
+WASD move, mouse look, left/right mouse place portals on valid white surfaces, Space jump, E grab/drop, R safe retry, M Hebrew help, Escape pause/unlock. Drag look is available if pointer lock is unavailable. Reading pauses the puzzle.
 
 ```sh
 npm ci
@@ -11,10 +15,6 @@ npm run build
 npm run preview
 ```
 
-WASD/arrows move, mouse look (click to lock or choose unlocked drag), Spacejump, Einteract/grab/drop, primary/1placesA, secondary/2placesB, Rsafe retry, Mjournal, Escpause/release, Ffullscreen. Touch joystick/look/actions are available. Reading pauses the world. Hebrew support is optional and never blocks completion.
+REAL-PORTAL-RESET.md is authoritative and supersedes the earlier campaign approach. The eventual requirement remains fifty authored levels with saved progression and no grade selector; expansion resumes after the two core chambers satisfy physical and visual acceptance. `rift-campaign-50-draft-v1` preserves the rejected, unverified fifty-room draft. Its catalogue, static tests and partial prefix runs are historical source material, not shipped campaign evidence.
 
-CAMPAIGN-50.md is authoritative. CAMPAIGN_PLAN.md records chosen mechanic/layout families. docs/campaign/catalogue-draft.json has50authored **planned** rows; src/data/campaign.json is canonical mission data. Physical fixtures load bylevelnumber and remain unchanged under semantic contrast; scripts/prototype-blueprints.ts is an authoring prototype, not the runtime world authority. Independent conformance and physical audits distinguish drafts from verified scenes. Correct English-world objectives unlock next levels; wrong physical routes give recoverable feedback.
-
-Sources/English limits: docs/campaign/LANGUAGE_REVIEW.md. Targets before new-family visuals: docs/campaign-targets/gallery.html. Original asset/search rights: ASSETS.md/ASSET_SEARCH.md. Original32-bar soundtrack, machinery cues and preview: AUDIO.md. No subjective human listening or learning-gains claim.
-
-Historical checkpoints: skyport-desk-v1 preserves the human-rejected document booth; rift-runner-opening-v1 preserves the first portal/carry/bridge win/fall/retry milestone. Previous nine-room/grade-pack logs are historical only and never counted as50-level evidence. No production deployment.
+Targets and exact prompts: docs/chamber-targets/. Actual art/search evidence: docs/chamber-art/. Independent tests and gameplay evidence: docs/chamber-qa/. Original audio: AUDIO.md and docs/chamber-audio/. No paid Tripo generation, commercial-game assets, human acoustic audition or learning-gains claim.

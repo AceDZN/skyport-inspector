@@ -1,10 +1,10 @@
 /// <reference types="vite/client" />
-/** Original locally rendered Rift Runner exploration score and tactile science-fiction foley. See AUDIO.md. */
+/** Original Rift Runner score, tactile device foley and velocity-driven chamber air. See AUDIO.md. */
 type Bus = 'master' | 'music' | 'sfx' | 'voice';
 type Settings = Record<Bus, number>;
 const defaults: Settings = { master: 0.8, music: 0.7, sfx: 0.74, voice: 0.8 };
 const cueFiles = ['portalA','portalB','invalid','enter','exit','pickup','drop','contact','pad','bridge','jump','land','respawn','complete','error','switch-toggle','shutter-open','shutter-close','lift-motor','lift-arrival','conveyor-clutch','platform-move','junction-rotate','relay-align','beam-blocked','receiver-power'];
-const aliases: Record<string,string> = {portal_a:'portalA',portal_b:'portalB','portal-a':'portalA','portal-b':'portalB',portal:'portalA',teleport:'enter',grab:'pickup',release:'drop',impact:'contact',pressure:'pad',unfold:'bridge',fall:'respawn',restart:'respawn',success:'complete',end:'complete',mistake:'error',denied:'invalid',switch:'switch-toggle',switchToggle:'switch-toggle','door-open':'shutter-open','door-close':'shutter-close',shutterOpen:'shutter-open',shutterClose:'shutter-close',lift:'lift-motor','lift-start':'lift-motor','lift-arrive':'lift-arrival','lift-stop':'lift-arrival',conveyor:'conveyor-clutch',platform:'platform-move','moving-platform':'platform-move',junction:'junction-rotate',relay:'relay-align','relay-aligned':'relay-align',receiver:'receiver-power',power:'receiver-power'};
+const aliases: Record<string,string> = {portal_a:'portalA',portal_b:'portalB','portal-a':'portalA','portal-b':'portalB',portal:'portalA','portal-fire-a':'portalA','portal-fire-b':'portalB','portal-charge':'relay-align','portal-pass':'enter',teleport:'enter',grab:'pickup',release:'drop',impact:'contact','cube-contact':'contact','cube-pickup':'pickup','cube-drop':'drop','button-press':'pad',pressure:'pad',unfold:'bridge',fall:'respawn',restart:'respawn',success:'complete',end:'complete',mistake:'error',denied:'invalid',switch:'switch-toggle',switchToggle:'switch-toggle','door-open':'shutter-open','door-close':'shutter-close',shutterOpen:'shutter-open',shutterClose:'shutter-close',lift:'lift-motor','lift-start':'lift-motor','lift-arrive':'lift-arrival','lift-stop':'lift-arrival',conveyor:'conveyor-clutch',platform:'platform-move','moving-platform':'platform-move',junction:'junction-rotate',relay:'relay-align','relay-aligned':'relay-align',receiver:'receiver-power',power:'receiver-power'};
 const storageKey = 'rift-audio-v1';
 export class SkyportAudio {
  private ctx?: AudioContext;
@@ -32,6 +32,12 @@ export class SkyportAudio {
  private startedAt = 0;
  private failures: string[] = [];
  private voiceSource?: AudioBufferSourceNode;
+ private environment:'chamber'|'courtyard'='chamber';
+ private ambienceFilters:BiquadFilterNode[]=[];
+ private airSpeed=0;
+ private airBuffer?:AudioBuffer;
+ private air?:{source:AudioBufferSourceNode;gain:GainNode;filter:BiquadFilterNode;highpass:BiquadFilterNode};
+ private airStopTimer?:number;
  constructor() {
   try { const saved = JSON.parse(localStorage.getItem(storageKey) || '{}'); for (const k of Object.keys(defaults) as Bus[]) if (typeof saved[k] === 'number') this.values[k] = Math.min(1,Math.max(0,saved[k])); } catch { /* Storage may be disabled; defaults still work. */ }
  }
@@ -82,7 +88,13 @@ export class SkyportAudio {
    const b=this.buffers.get(name); if(!b) continue;
    const source=c.createBufferSource(); source.buffer=b; source.loop=true;
    const g=c.createGain(); g.gain.value=name==='ambience'?.56:1;
-   source.connect(g); g.connect(name==='energy'?this.energyGain!:this.buses!.music);
+   source.connect(g);
+   if(name==='ambience'){
+    // Keep the existing ventilation/wind; suppress courtyard bird harmonics indoors.
+    const filters=[c.createBiquadFilter(),c.createBiquadFilter()];
+    for(const filter of filters){filter.type='lowpass';filter.Q.value=.5;filter.frequency.value=this.environment==='chamber'?260:16000;}
+    g.connect(filters[0]);filters[0].connect(filters[1]);filters[1].connect(this.buses!.music);this.ambienceFilters=filters;
+   }else g.connect(name==='energy'?this.energyGain!:this.buses!.music);
    source.start(this.startedAt); this.loops.push(source);
   }
  }
@@ -105,6 +117,7 @@ export class SkyportAudio {
  }
  setPaused(paused: boolean): void {
   this.paused=paused; if(!this.ctx || !this.buses)return;
+  if(paused)this.setAirSpeed(0);
   window.clearTimeout(this.pauseTimer);
   if(paused) {
    this.ramp(this.buses.master.gain,0,.09);
@@ -121,6 +134,30 @@ export class SkyportAudio {
  /** One coherent score across the campaign; subtle stem/colour variation, no loop restart. */
  setChapter(chapter:number,intensity=0):void {if(Number.isFinite(chapter))this.chapter=Math.min(5,Math.max(1,Math.round(chapter)));this.setIntensity(intensity);}
  setIntensity(value:number):void {if(!Number.isFinite(value))return;this.intensity=Math.min(1,Math.max(0,value));this.applyMusicVariation();}
+ /** Indoors, retain low ventilation while removing the distant courtyard birds. */
+ setEnvironment(environment:'chamber'|'courtyard'):void {this.environment=environment;for(const f of this.ambienceFilters)this.ramp(f.frequency,environment==='chamber'?260:16000,.6);}
+ /** Actual world speed drives a continuous air texture; ordinary walking stays silent. */
+ setAirSpeed(speed:number):void {
+  if(!Number.isFinite(speed))return;this.airSpeed=Math.max(0,Math.min(80,speed));
+  if(!this.ctx||!this.buses)return;
+  const amount=this.paused?0:Math.min(1,Math.max(0,(this.airSpeed-6)/20));
+  if(!amount){
+   if(this.air){this.ramp(this.air.gain.gain,0,.12);if(this.airStopTimer===undefined){const air=this.air;this.airStopTimer=window.setTimeout(()=>{air.source.stop();air.source.disconnect();air.gain.disconnect();air.filter.disconnect();air.highpass.disconnect();if(this.air===air)this.air=undefined;this.airStopTimer=undefined;},240);}}
+   return;
+  }
+  window.clearTimeout(this.airStopTimer);this.airStopTimer=undefined;
+  if(!this.air){
+   const c=this.ctx;
+   if(!this.airBuffer){
+    // Seeded, unpitched original air. Circular endpoints avoid a periodic tick.
+    const b=c.createBuffer(2,c.sampleRate*2,c.sampleRate);let seed=0x27a1f1;
+    for(let ch=0;ch<2;ch++){const d=b.getChannelData(ch);for(let i=0;i<d.length;i++){seed^=seed<<13;seed^=seed>>>17;seed^=seed<<5;d[i]=((seed>>>0)/4294967296-.5)*.7;}const n=Math.ceil(c.sampleRate*.012),delta=d[0]-d[d.length-1];for(let i=0;i<n;i++)d[d.length-n+i]+=delta*i/(n-1);}
+    this.airBuffer=b;
+   }
+   const source=c.createBufferSource(),gain=c.createGain(),filter=c.createBiquadFilter(),highpass=c.createBiquadFilter();source.buffer=this.airBuffer;source.loop=true;gain.gain.value=0;highpass.type='highpass';highpass.frequency.value=170;filter.type='lowpass';filter.frequency.value=1100;filter.Q.value=.5;source.connect(highpass);highpass.connect(filter);filter.connect(gain);gain.connect(this.buses.sfx);source.start();this.air={source,gain,filter,highpass};
+  }
+  this.ramp(this.air.gain.gain,.13*amount**1.35,.14);this.ramp(this.air.filter.frequency,1100+amount*2100,.2);
+ }
  setGain(bus: string,value: number): void {
   if(!(bus in defaults) || !Number.isFinite(value))return; const key=bus as Bus;
   this.values[key]=Math.min(1,Math.max(0,value));
@@ -135,7 +172,7 @@ export class SkyportAudio {
   const s=this.ctx!.createBufferSource();s.buffer=b;s.connect(this.buses!.voice);this.voiceSource=s;this.setDucking(true);
   s.onended=()=>{if(this.voiceSource===s){this.voiceSource=undefined;this.setDucking(false);}s.disconnect();};s.start();
  }
- state() {return {context:this.ctx?.state||'not-started',paused:this.paused,loopCount:this.loops.length,activeSfx:this.shots.size,cuesPlayed:this.cueCount,energy:this.high,chapter:this.chapter,intensity:this.intensity,recentCues:[...this.recentCues],paired:this.paired,bridge:this.bridgeActive,ducked:this.ducked,gains:this.settings(),loadedBuffers:this.buffers.size,loadErrors:[...this.failures],timeline:this.ctx?Math.max(0,this.ctx.currentTime-this.startedAt):0};}
+ state() {return {context:this.ctx?.state||'not-started',paused:this.paused,loopCount:this.loops.length,activeSfx:this.shots.size,cuesPlayed:this.cueCount,energy:this.high,chapter:this.chapter,intensity:this.intensity,environment:this.environment,airSpeed:this.airSpeed,airActive:!!this.air,recentCues:[...this.recentCues],paired:this.paired,bridge:this.bridgeActive,ducked:this.ducked,gains:this.settings(),loadedBuffers:this.buffers.size,loadErrors:[...this.failures],timeline:this.ctx?Math.max(0,this.ctx.currentTime-this.startedAt):0};}
 }
 
 /** New product name; the old export remains source-compatible for integration. */

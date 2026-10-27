@@ -1,0 +1,22 @@
+✔ new chamber starts grounded, cube rests in raised alcove and ordinary forward movement cannot cross the divider (233.961959ms)
+✔ aimed portal placement preserves a valid offset and rejects shots whose full aperture does not fit (4.106041ms)
+✔ actual Rapier movement traverses both directions with conserved crossing speed and no repeat bounce (60.05975ms)
+✔ a portal leaves the adjacent part of its host wall solid to character movement (25.832ms)
+✔ the button responds to standing on it, releases after stepping away, and physically drives the door (21.542625ms)
+✔ a cube hovering above the button does not count as physical pressure (4.144167ms)
+✔ cube pressure opens the door and removing it does not let a closing door embed the player (41.623167ms)
+✔ an opaque divider prevents grabbing the cube even within nominal reach (2.830917ms)
+✔ a low-speed entry at the well bottom cannot reach the elevated gallery by a hidden launch boost (6.49525ms)
+✔ ordinary walk into the drop well produces a real momentum fling and safe gallery landing; forward held=false (15.129125ms)
+✔ ordinary walk into the drop well produces a real momentum fling and safe gallery landing; forward held=true (14.767333ms)
+✔ ordinary jump from the nearest approach cannot reach the high gallery (11.321416ms)
+✔ falling into the inaccessible lower catch area promptly restores the safe approach (10.9965ms)
+✔ held cube crosses independently while player stays in front, and can be pulled back through the same pair (15.7185ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2413.4865
