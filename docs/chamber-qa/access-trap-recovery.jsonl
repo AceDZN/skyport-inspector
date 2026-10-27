@@ -1,0 +1,78 @@
+{"action": "click", "selector": "[data-action=continue]"}
+{"action": "assert", "path": "level", "equals": 4}
+{"action": "assert", "path": "progress.completed", "equals": [1, 2, 3]}
+{"action": "assert", "path": "world.pads.0.position", "equals": [-4, 0.14, 4]}
+{"action": "walk", "x": -4, "z": 4}
+{"action": "wait", "ms": 1000}
+{"action": "assert", "path": "world.pads.0.pressed", "equals": true}
+{"action": "capture", "name": "unprepared-player-fully-opens-access"}
+{"action": "aim", "target": [-4, 1.5, -2]}
+{"action": "key", "code": "KeyW", "ms": 2200}
+{"action": "assert-range", "path": "world.player.position.2", "min": -2}
+{"action": "assert", "path": "world.portals.0", "equals": null}
+{"action": "assert", "path": "world.portals.1", "equals": null}
+{"action": "assert", "path": "world.result", "equals": null}
+{"action": "assert", "path": "progress.completed", "equals": [1, 2, 3]}
+{"action": "capture", "name": "no-portal-sprint-cannot-enter-access"}
+{"action": "press", "code": "KeyR"}
+{"action": "wait", "ms": 250}
+{"action": "assert", "path": "world.respawns", "equals": 1}
+{"action": "assert-range", "path": "world.player.position.2", "min": 6.9}
+{"action": "capture", "name": "r-restores-safe-source-after-blocked-sprint"}
+{"action": "walk", "x": -4, "z": 4}
+{"action": "wait", "ms": 1000}
+{"action": "aim", "target": [-3.1, 1.5, -2]}
+{"action": "key", "code": "KeyW", "ms": 450}
+{"action": "keys", "codes": ["KeyW", "Space"], "ms": 150}
+{"action": "key", "code": "KeyW", "ms": 1750}
+{"action": "assert-range", "path": "world.player.position.2", "min": -2}
+{"action": "assert", "path": "world.portals.0", "equals": null}
+{"action": "assert", "path": "world.portals.1", "equals": null}
+{"action": "assert", "path": "world.result", "equals": null}
+{"action": "assert", "path": "progress.completed", "equals": [1, 2, 3]}
+{"action": "capture", "name": "no-portal-late-diagonal-jump-cannot-enter"}
+{"action": "press", "code": "KeyR"}
+{"action": "wait", "ms": 250}
+{"action": "assert", "path": "world.respawns", "equals": 2}
+{"action": "walk", "x": -4, "z": 4}
+{"action": "wait", "ms": 1000}
+{"action": "aim", "target": [-7.985, 1.55, 6]}
+{"action": "place", "index": 0}
+{"action": "assert", "path": "world.portals.0.surface", "equals": "source-west"}
+{"action": "aim", "target": [-4, 1.55, -11.985]}
+{"action": "place", "index": 1}
+{"action": "assert", "path": "world.portals.1.surface", "equals": "remote-north"}
+{"action": "walk", "x": -6.7, "z": 6}
+{"action": "wait", "ms": 800}
+{"action": "aim", "target": [-8.5, 1.55, 6]}
+{"action": "key", "code": "KeyW", "ms": 500}
+{"action": "assert", "path": "world.player.crossings", "equals": 1}
+{"action": "walk", "x": -4, "z": -9.8}
+{"action": "aim", "target": [-4, 0.55, -8]}
+{"action": "wait", "ms": 250}
+{"action": "press", "code": "KeyE"}
+{"action": "assert", "path": "world.held", "equals": "cube"}
+{"action": "walk", "x": -4, "z": -10.7}
+{"action": "aim", "target": [-4, 1.55, -12.5]}
+{"action": "key", "code": "KeyW", "ms": 500}
+{"action": "assert", "path": "world.player.crossings", "equals": 2}
+{"action": "walk", "x": -5.8, "z": 4}
+{"action": "aim", "target": [-4, 1.2, 4]}
+{"action": "wait", "ms": 250}
+{"action": "press", "code": "KeyE"}
+{"action": "wait", "ms": 1100}
+{"action": "assert", "path": "world.pads.0.crate", "equals": "cube"}
+{"action": "movement-check", "codes": ["KeyS", "KeyA"], "ms": 300, "minDistance": 0.4}
+{"action": "capture", "name": "ordinary-sa-movement-after-cube-replacement"}
+{"action": "walk", "x": -5.8, "z": 2}
+{"action": "walk", "x": 6.5, "z": 2}
+{"action": "capture", "name": "prepared-cube-pressure-keeps-actual-exit-open"}
+{"action": "aim", "target": [7.94, 3.35, 2]}
+{"action": "capture", "name": "actual-exit-mark-from-open-branch"}
+{"action": "walk", "x": 10.7, "z": 2}
+{"action": "assert", "path": "world.result.goalMatched", "equals": true}
+{"action": "assert", "path": "progress.records.4.last.retries", "equals": 2}
+{"action": "assert", "path": "progress.completed", "equals": [1, 2, 3, 4]}
+{"action": "capture", "name": "recovered-intended-route-completes-with-two-retries"}
+{"action": "export-earned-save"}
+{"action": "close"}

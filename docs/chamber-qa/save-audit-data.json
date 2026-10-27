@@ -1,0 +1,111 @@
+{
+  "scope": "Read-only repository/frozen-bundle audit, exported fixtures and isolated in-memory Store simulations only. No browser or parent storage accessed.",
+  "exports": [
+    {
+      "path": "docs/chamber-qa/level3-run/earned-game-only-storage.json",
+      "origin": "http://localhost:4261",
+      "completed": [
+        1,
+        2,
+        3
+      ],
+      "highest": 4,
+      "resume": 4,
+      "bundleMatchesSource": true
+    },
+    {
+      "path": "docs/chamber-qa/level3-affected-replay/earned-game-only-storage.json",
+      "origin": "http://localhost:4261",
+      "completed": [
+        1,
+        2,
+        3
+      ],
+      "highest": 4,
+      "resume": 4,
+      "bundleMatchesSource": true
+    },
+    {
+      "path": "docs/chamber-qa/clean-five-run/earned-game-only-storage.json",
+      "origin": "http://localhost:4261",
+      "completed": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "highest": 6,
+      "resume": 6,
+      "bundleMatchesSource": true
+    },
+    {
+      "path": "docs/chamber-qa/final-controls-replay/earned-game-only-storage.json",
+      "origin": "http://localhost:4261",
+      "completed": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "highest": 6,
+      "resume": 6,
+      "bundleMatchesSource": true
+    },
+    {
+      "path": "docs/chamber-qa/remaining-controls-replay/earned-game-only-storage.json",
+      "origin": "http://localhost:4261",
+      "completed": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "highest": 6,
+      "resume": 6,
+      "bundleMatchesSource": true
+    }
+  ],
+  "invalidSave": {
+    "before": {
+      "rawUnchanged": true,
+      "highest": 1,
+      "records": [],
+      "warning": null,
+      "migrationWouldRun": false
+    },
+    "after": {
+      "raw": {
+        "version": 2,
+        "highestUnlocked": 1,
+        "resumeLevel": 1,
+        "records": {},
+        "updatedAt": 1793135865662
+      },
+      "backupPresent": false,
+      "writes": 1
+    }
+  },
+  "staleInstance": {
+    "before": {
+      "highest": 4,
+      "records": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "after": {
+      "highest": 1,
+      "records": []
+    },
+    "newGameCalled": false,
+    "backupPresent": false
+  },
+  "undefinedStorage": {
+    "highest": 1,
+    "warning": null
+  }
+}

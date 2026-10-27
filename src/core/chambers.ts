@@ -1,6 +1,7 @@
 import { makeSolid, V, type Surface } from '../physics';
 import type { WorldBlueprint } from '../campaign-blueprint';
 import type { CatalogueRow } from '../campaign-types';
+import {addCorridorExit} from './level-kit';
 export const chamberTitles = ['The Other Side', 'A Longer Fall'];
 export const chamberMissions = [
     'Bring the cube back from the alcove. Leave it on the button to open the exit.',
@@ -58,7 +59,7 @@ export function chamberBlueprint(number: 1 | 2): WorldBlueprint {
         b.cargo = [{ spec: { id: 'weighted-cube', label: 'CUBE', shape: 'diamond', size: 'large', start: 'behind' }, position: [3, 3.35, -8] }];
         b.pads = [{ id: 'exit-button', label: '', position: [2, .14, 6] }];
         b.devices = [{ id: 'exit-door', kind: 'shutter', label: 'EXIT', position: [-8.12, 1.5, 11], size: [.3, 3, 2.6], target: [-8.12, 5, 11], circuit: { any: ['exit-button', 'door-safety'] } }];
-        b.exits = [{ id: 'next-chamber', label: '', position: [-10.7, .85, 11], size: [1.8, 1.8, 2] }];
+        addCorridorExit(b,'next-chamber','vestibule-floor');
     }
     else {
         // Safe approach surrounds a 3.5×6.5m well. There is no walkable bridge to the high gallery.
@@ -87,7 +88,7 @@ export function chamberBlueprint(number: 1 | 2): WorldBlueprint {
         panel('high-wall', [0, 7.15, -11.985], [0, 0, 1], 'high-wall');
         Object.assign(b.surfaces.at(-1)!, { width: 14, height: 7.1 });
         b.devices = [{ id: 'upper-door', kind: 'shutter', label: 'EXIT', position: [5, 4.9, -6.9], size: [3, 3, .3], target: [5, 8.4, -6.9], initial: true }];
-        b.exits = [{ id: 'upper-exit', label: '', position: [5, 4.25, -9.4], size: [1.7, 1.8, 1.2] }];
+        addCorridorExit(b,'upper-exit','upper-vestibule-floor');
         b.routePoints = { 'well-lip': [0, .85, 9.55], 'well-centre': [0, -2.975, 6], 'landing': [0, 4.25, -4] };
     }
     // Structural ribs are both rendered and collidable; a portal must fit between them.

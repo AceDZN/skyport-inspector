@@ -1,0 +1,124 @@
+✔ no-portal ACCESS approach stays outside: current fixture / walk (714.031375ms)
+✔ no-portal ACCESS approach stays outside: current fixture / diagonal walk (170.416459ms)
+✔ no-portal ACCESS approach stays outside: current fixture / jump immediately (327.214458ms)
+✔ no-portal ACCESS approach stays outside: current fixture / late jump (323.381167ms)
+✔ no-portal ACCESS approach stays outside: current fixture / late diagonal jump (370.3315ms)
+✔ no-portal ACCESS approach stays outside: old tight-gap safety lab / walk (479.062125ms)
+✔ no-portal ACCESS approach stays outside: old tight-gap safety lab / diagonal walk (219.489875ms)
+✔ no-portal ACCESS approach stays outside: old tight-gap safety lab / jump immediately (291.683417ms)
+✔ no-portal ACCESS approach stays outside: old tight-gap safety lab / late jump (235.23875ms)
+✔ no-portal ACCESS approach stays outside: old tight-gap safety lab / late diagonal jump (438.797167ms)
+✔ wall aperture admits centered capsule and blocks its 0.08m horizontal frame overhang (358.7445ms)
+✔ wall aperture blocks a ground capsule below a raised portal opening (69.379333ms)
+✔ wall aperture uses full cube support at yaw0 (79.422166ms)
+✔ wall aperture uses full cube support at yaw0.7853981633974483 (67.371959ms)
+✔ floor aperture uses full horizontal support for player (54.227833ms)
+✔ floor aperture uses full horizontal support for cube (87.519625ms)
+✔ ordinary diagonal capsule preserves fitted crossings and rolls back a lost-width crossing (149.543208ms)
+✔ diagonal dynamic cube uses previous/current projected fit with yaw0 (10.558958ms)
+✔ diagonal dynamic cube uses previous/current projected fit with yaw0.7853981633974483 (7.305375ms)
+✔ Chamber1 next-chamber usable left jamb accepts walk through actual corridor (235.747083ms)
+✔ Chamber1 next-chamber usable left jamb accepts jump through actual corridor (70.816334ms)
+✔ Chamber1 next-chamber usable right jamb accepts walk through actual corridor (47.128584ms)
+✔ Chamber1 next-chamber usable right jamb accepts jump through actual corridor (40.58625ms)
+✔ Chamber2 upper-exit usable left jamb accepts walk through actual corridor (23.789792ms)
+✔ Chamber2 upper-exit usable left jamb accepts jump through actual corridor (25.901209ms)
+✔ Chamber2 upper-exit usable right jamb accepts walk through actual corridor (20.5735ms)
+✔ Chamber2 upper-exit usable right jamb accepts jump through actual corridor (26.330792ms)
+✔ Chamber3 north-exit usable left jamb accepts walk through actual corridor (42.824375ms)
+✔ Chamber3 north-exit usable left jamb accepts jump through actual corridor (35.938334ms)
+✔ Chamber3 north-exit usable right jamb accepts walk through actual corridor (33.206458ms)
+✔ Chamber3 north-exit usable right jamb accepts jump through actual corridor (32.598333ms)
+✔ Chamber3 south-exit usable left jamb accepts walk through actual corridor (32.526708ms)
+✔ Chamber3 south-exit usable left jamb accepts jump through actual corridor (28.424584ms)
+✔ Chamber3 south-exit usable right jamb accepts walk through actual corridor (30.858375ms)
+✔ Chamber3 south-exit usable right jamb accepts jump through actual corridor (28.400625ms)
+✔ Chamber4 exit usable left jamb accepts walk through actual corridor (30.822458ms)
+✔ Chamber4 exit usable left jamb accepts jump through actual corridor (37.5255ms)
+✔ Chamber4 exit usable right jamb accepts walk through actual corridor (36.568625ms)
+✔ Chamber4 exit usable right jamb accepts jump through actual corridor (33.975875ms)
+✔ Chamber5 exit usable left jamb accepts walk through actual corridor (33.5215ms)
+✔ Chamber5 exit usable left jamb accepts jump through actual corridor (31.671291ms)
+✔ Chamber5 exit usable right jamb accepts walk through actual corridor (29.249584ms)
+✔ Chamber5 exit usable right jamb accepts jump through actual corridor (29.279125ms)
+✔ draft4 actual opaque access door hides the remote wall until real player pressure opens it (244.086667ms)
+✔ draft4 stepping off pressure cannot sprint through the final door without the cube (309.942542ms)
+✔ draft4 native stand→visible placement→retrieve through portals→cube replacement→physical exit route is complete (194.328959ms)
+✔ draft5 two real cubes on one button cannot power the two-input exit (26.068959ms)
+✔ draft5 physical AND accepts one cube on each, assignment swapped=false, and removal closes exit (42.044375ms)
+✔ draft5 physical AND accepts one cube on each, assignment swapped=true, and removal closes exit (52.308833ms)
+✔ draft5 native low retrieval, high retrieval, simultaneous pressures and elevated physical exit route is complete (290.480875ms)
+✔ draft5 ordinary walk/jump cannot bypass the sealed low cell or raised retrieval gallery (108.072084ms)
+✔ draft5 one cube plus temporary player pressure cannot sprint through the elevated exit (261.83625ms)
+✔ ordinary Chamber2 fling→gallery→upper vestibule walk needs no jump or pin recovery (890.553708ms)
+✔ native Rapier kinematic velocity follows current displacement/current dt under tiny final substeps (130.815375ms)
+✖ ordinary held walking does not amplify cargo velocity on short remainder steps; regrab=false (107.5535ms)
+✖ ordinary held walking does not amplify cargo velocity on short remainder steps; regrab=true (133.064333ms)
+✔ new chamber starts grounded, cube rests in raised alcove and ordinary forward movement cannot cross the divider (364.371208ms)
+✔ aimed portal placement preserves a valid offset and rejects shots whose full aperture does not fit (4.438958ms)
+✔ actual Rapier movement traverses both directions with conserved crossing speed and no repeat bounce (76.780125ms)
+✔ a portal leaves the adjacent part of its host wall solid to character movement (58.063125ms)
+✔ the button responds to standing on it, releases after stepping away, and physically drives the door (67.265667ms)
+✔ a cube hovering above the button does not count as physical pressure (10.717083ms)
+✔ cube pressure opens the door and removing it does not let a closing door embed the player (36.8055ms)
+✔ an opaque divider prevents grabbing the cube even within nominal reach (5.04775ms)
+✔ a low-speed entry at the well bottom cannot reach the elevated gallery by a hidden launch boost (23.892208ms)
+✔ ordinary walk into the drop well produces a real momentum fling and safe gallery landing; forward held=false (40.436167ms)
+✔ ordinary walk into the drop well produces a real momentum fling and safe gallery landing; forward held=true (35.525417ms)
+✔ ordinary jump from the nearest approach cannot reach the high gallery (29.033792ms)
+✔ falling into the inaccessible lower catch area promptly restores the safe approach (27.916458ms)
+✔ held cube crosses independently while player stays in front, and can be pulled back through the same pair (41.200667ms)
+✔ loose rigid cube traverses with transformed orientation and angular velocity, without a bounce (23.177625ms)
+✔ a portal leaves the adjacent host wall solid to a dynamic cube (45.586958ms)
+✔ blocked loose-cube exit rolls back the actual rigid body and recovers after obstruction removal (68.970209ms)
+✔ blocked character exit rolls back Rapier and recovers without replacing portals (63.70575ms)
+✔ blocked held-cube exit preserves both physical bodies and recovers as a connected carry (64.557458ms)
+✔ exit floor clearance uses the cube actual rotated support, not its unrotated half-height (11.105958ms)
+✔ the highest valid wall exit still cannot turn an idle low-speed floor entry into a gallery bypass (20.231083ms)
+✔ fling remains a real conserved crossing and reachable landing at 30 physics steps per second (4.573333ms)
+✔ fling remains a real conserved crossing and reachable landing at 60 physics steps per second (10.392666ms)
+✔ fling remains a real conserved crossing and reachable landing at 120 physics steps per second (18.702ms)
+✔ window wording contrast keeps identical physical fixtures and changes only the requested real exit (151.508083ms)
+✔ front and behind cube placements drive genuinely different physical doors and recover normally (159.110542ms)
+✔ base south destination gives one recoverable error, then the physically powered north destination completes (123.412958ms)
+✔ contrast counts the same front/south physical answer that the base wording rejected (47.445125ms)
+ℹ tests 84
+ℹ suites 0
+ℹ pass 82
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 30093.150416
+
+✖ failing tests:
+
+test at tests/core-held-velocity.test.ts:20:34
+✖ ordinary held walking does not amplify cargo velocity on short remainder steps; regrab=false (107.5535ms)
+  AssertionError [ERR_ASSERTION]: Held cube reaches 18.001m/s while player peaks 4.765m/s; previous-step carry target is divided by current tiny dt
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-held-velocity.test.ts:24:9)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/core-held-velocity.test.ts:20:34
+✖ ordinary held walking does not amplify cargo velocity on short remainder steps; regrab=true (133.064333ms)
+  AssertionError [ERR_ASSERTION]: Held cube reaches 18.001m/s while player peaks 4.765m/s; previous-step carry target is divided by current tiny dt
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-held-velocity.test.ts:24:9)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

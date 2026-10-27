@@ -15,7 +15,10 @@ type DoorArt={state:DeviceState;leaf:T.Group;indicators:T.MeshStandardMaterial[]
 type CratePieces={source:T.Material[];copies:{group:T.Group;materials:T.Material[]}[]};
 type ButtonArt={top:T.Mesh;lights:T.MeshStandardMaterial;restY:number};
 type MachineDisplay={canvas:HTMLCanvasElement;texture:T.CanvasTexture;key:string;title:string};
-type MachineArt={state:DeviceState;body:T.Group;display:MachineDisplay;lever?:T.Group;lamp:T.MeshStandardMaterial};
+type BeltArt={canvas:HTMLCanvasElement;texture:T.CanvasTexture;direction:T.Vector3;reversed:boolean;lastTime:number;rollers:T.Mesh[];radius:number};
+type MachineArt={state:DeviceState;body:T.Group;display:MachineDisplay;lever?:T.Group;lamp:T.MeshStandardMaterial;belt?:BeltArt};
+type OpticalLamp={id:string;kind:'emitter'|'receiver';material:T.MeshStandardMaterial};
+type BeamArt={core:T.Mesh;halo:T.Mesh;impact:T.Mesh};
 
 export class ChamberScene extends RiftScene {
  declare world:RiftWorld;
@@ -30,6 +33,11 @@ export class ChamberScene extends RiftScene {
  declare private buttons:Map<string,ButtonArt>;
  declare private circuitTraces:{material:T.MeshStandardMaterial;pad:string}[];
  declare private nativeMachines:MachineArt[];
+ declare private opticalLamps:OpticalLamp[];
+ declare private beamPieces:BeamArt[];
+ declare private beamGeometry:T.CylinderGeometry|undefined;
+ declare private beamCoreMaterial:T.MeshBasicMaterial|undefined;
+ declare private beamHaloMaterial:T.MeshBasicMaterial|undefined;
  declare private portalLights:T.PointLight[];
  declare private portalRenderer:PortalRenderer|undefined;
  declare private viewScene:T.Scene|undefined;
@@ -112,7 +120,15 @@ export class ChamberScene extends RiftScene {
   const f=this.finishes,b=this.core.blueprint,{height,halfWidth:half,style}=this.core.level.architecture;
   for(const s of this.core.solids){const size=s.max.clone().sub(s.min),p=s.min.clone().add(s.max).multiplyScalar(.5);
    if(s.kind==='glass'){const m=this.material(new T.MeshPhysicalMaterial({color:0xc3d3d8,transparent:true,opacity:.10,roughness:.08,metalness:.1,clearcoat:1,envMapIntensity:.75,depthWrite:false,side:T.DoubleSide}));const pane=this.mesh(this.geo(new T.BoxGeometry(size.x,size.y,size.z)),m);pane.position.copy(p);pane.castShadow=false;continue;}
-   const ceiling=/ceiling/.test(s.id),mat=s.kind==='floor'?f.floor:ceiling?f.recess:f.graphite;const mesh=this.mesh(s.kind==='floor'?this.floorGeometry(size,p):this.geo(new T.BoxGeometry(size.x,size.y,size.z)),mat);mesh.position.copy(p);mesh.userData.solid=s.id;this.targets.push(mesh);
+   const ceiling=/ceiling/.test(s.id),raised=s.kind==='floor'&&size.y>1&&s.id!=='raised-cube-alcove',opticalHousing=/emitter-housing|receiver-pillar|receiver-optic-body/.test(s.id),mat=s.kind==='floor'?(raised?f.graphite:f.floor):ceiling?f.recess:f.graphite;const mesh=this.mesh(s.kind==='floor'?this.floorGeometry(size,p):opticalHousing?this.rounded(size.x,size.y,size.z,.035):this.geo(new T.BoxGeometry(size.x,size.y,size.z)),mat);mesh.position.copy(p);mesh.userData.solid=s.id;this.targets.push(mesh);
+   if(raised){
+    // A raised gallery is built architecture: metal walking surface over a panelled retaining structure.
+    for(const axis of['x','z']as const)for(const sign of[-1,1])this.wallCladding(s.min,s.max,axis,sign);
+    const topGeometry=this.geo(new T.PlaneGeometry(size.x,size.z)),a=topGeometry.getAttribute('position'),uv=topGeometry.getAttribute('uv');for(let i=0;i<a.count;i++)uv.setXY(i,(a.getX(i)+p.x)/2,(-a.getY(i)+p.z)/2);const top=this.mesh(topGeometry,f.floor);top.rotation.x=-Math.PI/2;top.position.set(p.x,s.max.y+.002,p.z);this.targets.push(top);
+    for(const x of[s.min.x+.03,s.max.x-.03])this.staticPart([x,s.max.y+.005,p.z],[.045,.01,size.z-.05],f.aluminum);
+    for(const z of[s.min.z+.03,s.max.z-.03])this.staticPart([p.x,s.max.y+.005,z],[size.x-.05,.01,.045],f.aluminum);
+    this.staticPart([p.x,s.max.y-.06,s.max.z+.035],[size.x-.15,.025,.022],f.warm);
+   }
    if(s.id==='raised-cube-alcove'){this.wallCladding(s.min,s.max,'z',1);this.staticPart([p.x,s.max.y-.04,s.max.z+.04],[size.x,.12,.16],f.graphite);for(const x of[s.min.x+.08,s.max.x-.08])this.staticPart([x,p.y,s.max.z+.055],[.14,size.y,.14],f.graphite);}
    if(/guide/.test(s.id)&&size.y>2&&size.x<1&&size.z<1){this.staticPart([p.x,p.y,s.max.z+.012],[Math.min(.09,size.x*.4),size.y-.1,.025],f.aluminum);for(let y=s.min.y+.3;y<s.max.y;y+=.6)this.staticPart([p.x,y,s.max.z+.028],[Math.min(.16,size.x*.65),.035,.025],f.graphite);}
    if(!ceiling&&s.kind==='wall'&&!s.id.startsWith('vestibule')&&!s.id.includes('service-inlay')){if(size.x<.7&&size.z>.8){this.wallCladding(s.min,s.max,'x',1);this.wallCladding(s.min,s.max,'x',-1);}else if(size.z<.7&&size.x>.8){this.wallCladding(s.min,s.max,'z',1);this.wallCladding(s.min,s.max,'z',-1);}}
@@ -150,6 +166,24 @@ export class ChamberScene extends RiftScene {
    // Full eligible wall regions are integrated surfaces, not labelled predetermined rectangles.
 
   }
+  this.exitFloorMarks();
+ }
+ private exitFloorMarks(){
+  for(const exit of this.core.blueprint.exits){
+   const [x,y,z]=exit.position,[sx,sy,sz]=exit.size;
+   const floor=this.core.solids.filter(s=>s.kind==='floor'&&x>=s.min.x&&x<=s.max.x&&z>=s.min.z&&z<=s.max.z&&s.max.y<=y+.1&&s.max.y>=y-sy/2-.3).sort((a,b)=>b.max.y-a.max.y)[0];if(!floor)continue;
+   const door=this.core.machines.devices.filter(d=>d.spec.kind==='shutter'&&d.spec.size[1]>2).sort((a,b)=>Math.hypot(a.spec.position[0]-x,a.spec.position[2]-z)-Math.hypot(b.spec.position[0]-x,b.spec.position[2]-z))[0];
+   const alongX=door?door.spec.size[0]<door.spec.size[2]:sx>sz,sign=Math.sign((alongX?x:z)-(door?door.spec.position[alongX?0:2]:this.core.spawn[alongX?'x':'z']))||1;
+   const minX=Math.max(floor.min.x,x-sx/2),maxX=Math.min(floor.max.x,x+sx/2),minZ=Math.max(floor.min.z,z-sz/2),maxZ=Math.min(floor.max.z,z+sz/2),width=alongX?maxZ-minZ:maxX-minX,depth=alongX?maxX-minX:maxZ-minZ;if(width<.3||depth<.3)continue;
+   // Paint follows the full authored corridor/goal footprint, never a small point target.
+   const canvas=document.createElement('canvas');canvas.width=Math.min(768,Math.max(128,Math.round(width*256)));canvas.height=Math.min(768,Math.max(128,Math.round(depth*256)));const c=canvas.getContext('2d')!,px=canvas.width/width,pz=canvas.height/depth;
+   c.fillStyle='rgba(211,205,181,.40)';const edge=.035;c.fillRect(edge*px,edge*pz,(width-edge*2)*px,edge*pz);c.fillRect(edge*px,(depth-edge*2)*pz,(width-edge*2)*px,edge*pz);for(const u of[edge,width-edge*2])c.fillRect(u*px,edge*pz,edge*px,(depth-edge*2)*pz);
+   c.fillStyle='rgba(226,220,197,.82)';for(const distance of[.18,.28])c.fillRect(edge*px,canvas.height-distance*pz,(width-edge*2)*px,.045*pz);
+   c.textAlign='center';c.textBaseline='middle';c.font=`700 ${Math.round(.24*pz)}px Heebo, Arial, sans-serif`;c.fillText('EXIT',canvas.width/2,canvas.height-Math.min(.68,depth*.6)*pz,Math.min(1.05,width-.16)*px);
+   const texture=this.texture(new T.CanvasTexture(canvas));texture.colorSpace=T.SRGBColorSpace;const material=this.material(new T.MeshBasicMaterial({map:texture,transparent:true,depthWrite:false,toneMapped:false,polygonOffset:true,polygonOffsetFactor:-1,polygonOffsetUnits:-1})),mark=this.mesh(this.geo(new T.PlaneGeometry(width,depth)),material);mark.name='exit-floor-mark:'+exit.id;mark.castShadow=false;mark.receiveShadow=false;mark.renderOrder=2;
+   const forward=alongX?V(sign,0,0):V(0,0,sign);mark.matrix.copy(poseMatrix(V((minX+maxX)/2,floor.max.y+.006,(minZ+maxZ)/2),V(0,1,0),forward));mark.matrix.decompose(mark.position,mark.quaternion,mark.scale);
+   // Deliberately absent from targets/colliders: only the real floor and exit remain interactive.
+  }
  }
  private glassFrames(){
   const f=this.finishes;
@@ -172,8 +206,13 @@ export class ChamberScene extends RiftScene {
   for(const side of[-1,1]){push(side*(width/2+.2),3.15,.285,[.08,6.25,.075],f.aluminum);for(const h of[3.3,3+pocketHeight-.2])push(side*(width/2+.15),h,.305,[.04,.04,.02],f.aluminum);}
   return headerStatus;
  }
+ private compactShutterSurround(d:DeviceState,alongX:boolean,sign:number){
+  const s=d.spec,w=Math.max(s.size[0],s.size[2]),h=s.size[1],depth=Math.min(s.size[0],s.size[2]),rise=Math.max(h,s.target?s.target[1]-s.position[1]:h+.3),f=this.finishes,group=new T.Group();group.position.set(...s.position);group.position.y-=h/2;group.rotation.y=alongX?sign*Math.PI/2:sign<0?Math.PI:0;this.root.add(group);
+  for(const x of[-w/2-.04,w/2+.04]){this.part(group,[x,(h+rise)/2,0],[.07,h+rise+.08,depth+.10],f.graphite,.012);this.part(group,[x,(h+rise)/2,depth/2+.045],[.02,h+rise,.02],f.aluminum,.004);}
+  this.part(group,[0,h+rise/2+.06,-.01],[w+.18,rise+.12,depth+.16],f.graphite,.022);for(let y=h+.15;y<h+rise;y+=.16)this.part(group,[0,y,depth/2+.08],[w-.08,.025,.018],f.aluminum,.004);const lamp=this.material(new T.MeshStandardMaterial({color:0xc7a76f,emissive:0xffb437,emissiveIntensity:.8}));this.part(group,[0,h+.07,depth/2+.10],[Math.min(.28,w*.5),.035,.016],lamp,.004);group.traverse(o=>{if(o instanceof T.Mesh)this.targets.push(o);});return lamp;
+ }
  private mechanisms(){const f=this.finishes;this.doors=[];this.buttons=new Map();
-  for(const d of this.core.machines.devices.filter(d=>d.spec.kind==='shutter')){const alongX=d.spec.size[0]<d.spec.size[2],sign=(alongX?d.spec.direction?.[0]:d.spec.direction?.[2])??1,w=Math.max(d.spec.size[0],d.spec.size[2]),h=d.spec.size[1],depth=Math.min(d.spec.size[0],d.spec.size[2]);const frameStatus=this.doorSurround(d.spec.position[0]+(alongX?sign*depth*.55:0),d.spec.position[1]-h/2,d.spec.position[2]+(alongX?0:sign*depth*.55),w,alongX?'x':'z',sign);const leaf=new T.Group();leaf.position.copy(d.position);leaf.rotation.y=alongX?sign*Math.PI/2:sign<0?Math.PI:0;this.root.add(leaf);
+  for(const d of this.core.machines.devices.filter(d=>d.spec.kind==='shutter')){const alongX=d.spec.size[0]<d.spec.size[2],sign=(alongX?d.spec.direction?.[0]:d.spec.direction?.[2])??1,w=Math.max(d.spec.size[0],d.spec.size[2]),h=d.spec.size[1],depth=Math.min(d.spec.size[0],d.spec.size[2]);const frameStatus=h<2?this.compactShutterSurround(d,alongX,sign):this.doorSurround(d.spec.position[0]+(alongX?sign*depth*.55:0),d.spec.position[1]-h/2,d.spec.position[2]+(alongX?0:sign*depth*.55),w,alongX?'x':'z',sign);const leaf=new T.Group();leaf.position.copy(d.position);leaf.rotation.y=alongX?sign*Math.PI/2:sign<0?Math.PI:0;this.root.add(leaf);
    this.part(leaf,[0,0,0],[w,h,depth],f.graphite,.035);
    for(const side of[-1,1]){this.part(leaf,[side*w*.25,0,depth*.55],[w*.475,h-.14,.09],f.ceramic,.035);this.part(leaf,[side*.075,0,depth*.75],[.055,.55,.055],f.aluminum,.01);}
    for(const y of[-h*.34,h*.34])this.part(leaf,[0,y,depth*.75],[w-.16,.025,.035],f.graphite,.004);
@@ -205,16 +244,33 @@ export class ChamberScene extends RiftScene {
   const key=display.title+'|'+state+'|'+detail;if(display.key===key)return;display.key=key;const c=display.canvas.getContext('2d')!,w=display.canvas.width,h=display.canvas.height;
   c.fillStyle='#142028';c.fillRect(0,0,w,h);c.fillStyle='#bcab79';c.fillRect(12,14,4,h-28);c.strokeStyle='#bcab79';c.lineWidth=3;c.beginPath();c.moveTo(40,h*.5-8);c.lineTo(48,h*.5);c.lineTo(40,h*.5+8);c.lineTo(32,h*.5);c.closePath();c.stroke();c.textAlign='center';c.textBaseline='middle';c.font=`600 ${Math.round(h*.17)}px Heebo, Arial, sans-serif`;c.fillStyle='#a6bac0';c.fillText(display.title.toUpperCase(),w*.53,h*(detail?.20:.27),w-110);c.font=`700 ${Math.round(h*.25)}px Heebo, Arial, sans-serif`;c.fillStyle='#ecf2ed';c.fillText(state,w*.53,h*(detail?.52:.68),w-90);if(detail){c.font=`500 ${Math.round(h*.14)}px Heebo, Arial, sans-serif`;c.fillStyle='#d7c18e';c.fillText(detail,w*.53,h*.83,w-90);}display.texture.needsUpdate=true;
  }
+ private paintTimer(display:MachineDisplay,state:DeviceState){
+  const pulse=state.spec.pulse??{period:10,onFor:5},period=Math.max(.1,pulse.period),phase=state.progress*period,enabled=this.core.machines.circuit(state.spec.circuit),left=Math.max(0,(phase<Math.min(period,pulse.onFor)?Math.min(period,pulse.onFor):period)-phase),key=[state.on,enabled,Math.floor(state.progress*24),Math.ceil(left*10)].join('|');if(display.key===key)return;display.key=key;
+  const c=display.canvas.getContext('2d')!,w=display.canvas.width,h=display.canvas.height,cx=w/2,cy=h*.51,r=Math.min(w,h)*.31;c.fillStyle='#142028';c.fillRect(0,0,w,h);c.textAlign='center';c.textBaseline='middle';c.fillStyle='#bfced0';c.font=`600 ${h*.09}px Heebo, Arial, sans-serif`;c.fillText(display.title.toUpperCase(),cx,h*.10,w*.9);
+  for(let i=0;i<24;i++){const a=-Math.PI/2+(i+.5)*Math.PI*2/24;c.save();c.translate(cx+Math.cos(a)*r,cy+Math.sin(a)*r);c.rotate(a);c.fillStyle=i===Math.floor(state.progress*24)?'#f2f4e9':i/24<pulse.onFor/period?'#4a8891':'#8a7145';c.globalAlpha=enabled?1:.35;c.fillRect(-h*.025,-h*.012,h*.05,h*.024);c.restore();}
+  c.fillStyle=enabled?(state.on?'#bce8ea':'#e7c88b'):'#8e9fa5';c.font=`700 ${h*.21}px Heebo, Arial, sans-serif`;c.fillText(left.toFixed(1),cx,h*.49);c.font=`600 ${h*.09}px Heebo, Arial, sans-serif`;c.fillText(enabled?(state.on?'ON':'OFF'):'PAUSED',cx,h*.69);c.fillStyle='#93a8af';c.font=`500 ${h*.07}px Heebo, Arial, sans-serif`;c.fillText('SECONDS',cx,h*.90);display.texture.needsUpdate=true;
+ }
+ private paintBelt(belt:BeltArt,reversed:boolean){
+  belt.reversed=reversed;const c=belt.canvas.getContext('2d')!,n=512;c.fillStyle='#273137';c.fillRect(0,0,n,n);for(let y=0;y<n;y+=32){c.fillStyle=y%64?'#303b40':'#20292f';c.fillRect(0,y,n,3);}const d=belt.direction.clone().multiplyScalar(reversed?-1:1);c.save();c.translate(n/2,n/2);c.rotate(Math.abs(d.x)>.5?(d.x<0?Math.PI:0):(d.z>0?Math.PI/2:-Math.PI/2));c.strokeStyle='#baa16a';c.lineWidth=9;for(const x of[-150,80]){c.beginPath();c.moveTo(x-28,-44);c.lineTo(x+18,0);c.lineTo(x-28,44);c.stroke();}c.restore();belt.texture.needsUpdate=true;
+ }
  private nativeMachineProps(){
   const f=this.finishes;this.nativeMachines=[];
-  for(const state of this.core.machines.devices.filter(d=>['switch','lift','moving-platform'].includes(d.spec.kind))){
+  for(const state of this.core.machines.devices.filter(d=>['switch','lift','moving-platform','timer','conveyor'].includes(d.spec.kind))){
    const s=state.spec,[w,h,d]=s.size,body=new T.Group();body.name='native-machine:'+s.id;body.position.copy(state.position);this.root.add(body);
-   const lamp=this.material(new T.MeshStandardMaterial({color:0x39484a,roughness:.28,metalness:.55}));let display:MachineDisplay,lever:T.Group|undefined;
+   const lamp=this.material(new T.MeshStandardMaterial({color:0x39484a,roughness:.28,metalness:.55}));let display:MachineDisplay,lever:T.Group|undefined,belt:BeltArt|undefined;
    if(s.kind==='switch'){
     this.part(body,[0,0,0],[w,h,d],f.graphite,.035);const control=new T.Group();control.position.copy(V(...s.position).add(V(...(s.controlOffset??[0,0,0]))));const normal=V(...(s.direction??[0,0,1]));normal.y=0;if(normal.lengthSq()<.001)normal.set(0,0,1);control.quaternion.setFromUnitVectors(V(0,0,1),normal.normalize());this.root.add(control);
     this.part(control,[0,-.06,-.035],[.43,.59,.13],f.aluminum,.025);this.part(control,[0,-.06,.04],[.38,.54,.04],f.recess,.018);const screen=new T.Group();screen.position.y=.13;control.add(screen);display=this.machineDisplay(screen,s.label,.33,.12);
     lever=new T.Group();lever.position.set(0,-.16,.09);control.add(lever);this.part(lever,[0,.105,0],[.028,.21,.035],f.aluminum,.008);this.part(lever,[0,.22,0],[.19,.055,.065],f.rubber,.018);this.part(control,[-.14,-.20,.105],[.055,.055,.026],lamp,.008);
     for(const x of[-.17,.17])for(const y of[-.28,.17])this.part(control,[x,y,.095],[.018,.018,.012],f.graphite,.004);control.traverse(o=>{if(o instanceof T.Mesh)this.targets.push(o);});
+   }else if(s.kind==='timer'){
+    this.part(body,[0,0,0],[w,h,d],f.graphite,.035);this.part(body,[0,0,d/2+.008],[w-.06,h-.06,.018],f.aluminum,.018);const panel=new T.Group();panel.position.set(0,h*.12,d/2-.072);body.add(panel);display=this.machineDisplay(panel,s.label,w*.84,Math.min(h*.64,w*.84));this.part(body,[0,-h*.34,d/2+.025],[w*.45,.045,.018],lamp,.006);
+    const bottom=s.position[1]-h/2,floor=this.core.solids.filter(solid=>solid.kind==='floor'&&s.position[0]>=solid.min.x&&s.position[0]<=solid.max.x&&s.position[2]>=solid.min.z&&s.position[2]<=solid.max.z&&solid.max.y<=bottom).sort((a,b)=>b.max.y-a.max.y)[0];if(floor&&bottom-floor.max.y>.15){const gap=bottom-floor.max.y;this.part(body,[0,-h/2-gap/2,0],[.08,gap,.10],f.aluminum,.012);this.part(body,[0,-h/2-gap+.035,0],[w*.60,.07,d],f.graphite,.015);}
+   }else if(s.kind==='conveyor'){
+    this.part(body,[0,-h*.28,0],[w,h*.44,d],f.graphite,.025);for(const z of[-d/2+.045,d/2-.045])this.part(body,[0,0,z],[w,h,.09],f.aluminum,.015);for(const x of[-w/2+.045,w/2-.045])this.part(body,[x,0,0],[.09,h,d],f.graphite,.015);
+    const canvas=document.createElement('canvas');canvas.width=canvas.height=512;const texture=this.texture(new T.CanvasTexture(canvas));texture.colorSpace=T.SRGBColorSpace;texture.wrapS=texture.wrapT=T.RepeatWrapping;texture.repeat.set(Math.max(.1,w-.12),Math.max(.1,d-.12));const direction=V(...(s.direction??[1,0,0]));direction.y=0;if(direction.lengthSq()<.001)direction.set(1,0,0);direction.normalize();const radius=Math.min(.08,h*.25),rollers:T.Mesh[]=[];belt={canvas,texture,direction,reversed:false,lastTime:this.core.time,rollers,radius};this.paintBelt(belt,false);
+    const alongX=Math.abs(direction.x)>.5;for(const end of[-1,1]){const roller=this.mesh(this.geo(new T.CylinderGeometry(radius,radius,(alongX?d:w)-.16,24)),f.rubber,body);roller.quaternion.setFromUnitVectors(V(0,1,0),alongX?V(0,0,1):V(1,0,0));roller.position.set(alongX?end*(w/2-radius-.035):0,h/2-radius,alongX?0:end*(d/2-radius-.035));rollers.push(roller);}
+    const material=this.material(new T.MeshStandardMaterial({map:texture,color:0xffffff,roughness:.82,metalness:.12})),surface=this.mesh(this.geo(new T.PlaneGeometry(w-.12,d-.12)),material,body);surface.rotation.x=-Math.PI/2;surface.position.y=h/2+.001;const panel=new T.Group();panel.position.set(0,0,d/2-.072);body.add(panel);display=this.machineDisplay(panel,s.label,.62,.16);
    }else{
     // Every visible deck top/edge follows the exact native collider, with a clear boarding centre.
     this.part(body,[0,-.02,0],[w,Math.max(.04,h-.04),d],f.graphite,.035);
@@ -226,16 +282,51 @@ export class ChamberScene extends RiftScene {
     if(s.kind==='lift'){const stem=Math.max(.02,offset.y-h/2-.22);this.part(body,[offset.x,h/2+stem/2,offset.z],[.065,stem,.065],f.aluminum,.012);this.part(body,[offset.x,h/2+.018,offset.z],[.28,.036,.24],f.graphite,.012);this.part(control,[0,0,0],[.53,.40,.16],f.graphite,.027);this.part(control,[0,.005,0],[.49,.35,.165],f.aluminum,.018);const screen=new T.Group();screen.position.y=.06;control.add(screen);display=this.machineDisplay(screen,s.label,.43,.19);if(!s.automatic)for(const x of[-.11,.11]){this.part(control,[x,-.135,.105],[.13,.06,.025],f.rubber,.008);this.part(control,[x,-.135,.12],[.06,.022,.012],f.warm,.004);}}
     else{this.part(control,[0,0,0],[.55,.24,.12],f.graphite,.015);display=this.machineDisplay(control,s.label,.49,.18);}
    }
-   body.traverse(o=>{if(o instanceof T.Mesh)this.targets.push(o);});this.nativeMachines.push({state,body,display,lever,lamp});
+   body.traverse(o=>{if(o instanceof T.Mesh)this.targets.push(o);});this.nativeMachines.push({state,body,display,lever,lamp,belt});
   }
  }
  private updateNativeMachineProps(dt:number){
   for(const art of this.nativeMachines){const d=art.state,s=d.spec;art.body.position.copy(d.position);let text=d.on?'ON':'OFF',detail=s.kind==='switch'?'TOGGLE':'';
    if(s.kind==='switch'&&art.lever)art.lever.rotation.x=T.MathUtils.damp(art.lever.rotation.x,d.on?-.48:.48,16,Math.max(0,dt));
-   if(s.kind==='lift'){const at=s.stops?.find(stop=>d.position.distanceTo(V(...stop.position))<.03),stop=s.stops?.[d.on?d.choice:0]?.label??s.states?.[d.on?d.choice:0]??(d.on?s.targetLabel:'LOWER')??'';text=at?'AT '+at.label.toUpperCase():d.moving?(s.automatic?'MOVING':'TO '+stop.toUpperCase()):'PAUSED';if(s.automatic)detail=d.on?'AUTOMATIC':'NO POWER';else{const next=(d.choice+1)%Math.max(2,s.stops?.length??s.states?.length??2),nextStop=s.stops?.[next],name=nextStop?.label??s.states?.[next];if(name)detail=this.core.machines.circuit(nextStop?.guard)?'NEXT '+name.toUpperCase():name.toUpperCase()+' · LOCKED';}}
+   if(s.kind==='lift'){const stops=s.stops??[{label:'lower',position:s.position},...(s.target?[{label:s.targetLabel??'upper',position:s.target}]:[])],at=stops.find(stop=>d.position.distanceTo(V(...stop.position))<.03),stop=stops[d.on?d.choice:0]?.label??s.states?.[d.on?d.choice:0]??(d.on?s.targetLabel:'LOWER')??'';text=at?'AT '+at.label.toUpperCase():d.moving?(s.automatic?'MOVING':'TO '+stop.toUpperCase()):'PAUSED';if(s.automatic)detail=d.on?'AUTOMATIC':'NO POWER';else{const next=(d.choice+1)%Math.max(2,s.stops?.length??s.states?.length??2),nextStop=s.stops?.[next],name=nextStop?.label??s.states?.[next];if(name)detail=this.core.machines.circuit(nextStop?.guard)?'NEXT '+name.toUpperCase():name.toUpperCase()+' · LOCKED';}}
    if(s.kind==='moving-platform')text=d.moving?'MOVING':d.on?'DOCKED':'STOPPED';
+   if(s.kind==='conveyor'&&art.belt){const reverse=!!s.controls&&this.core.machines.flag(s.controls);if(reverse!==art.belt.reversed)this.paintBelt(art.belt,reverse);const actual=art.belt.direction.clone().multiplyScalar(reverse?-1:1),elapsed=Math.max(0,this.core.time-art.belt.lastTime);art.belt.lastTime=this.core.time;if(d.on){art.belt.texture.offset.x=(art.belt.texture.offset.x-actual.x*(s.speed??1.7)*elapsed)%1;art.belt.texture.offset.y=(art.belt.texture.offset.y+actual.z*(s.speed??1.7)*elapsed)%1;for(const roller of art.belt.rollers)roller.rotateY((actual.x?-actual.x:actual.z)*(s.speed??1.7)*elapsed/art.belt.radius);}text=d.on?'RUNNING':'STOPPED';detail=Math.abs(actual.x)>.5?(actual.x>0?'EAST':'WEST'):(actual.z>0?'SOUTH':'NORTH');}
+   if(s.kind==='timer'){const enabled=this.core.machines.circuit(s.circuit);art.lamp.color.set(enabled?(d.on?0x9ddce0:0xd9b26b):0x39484a);art.lamp.emissive.set(enabled?(d.on?0x45b6c7:0xaf7224):0);art.lamp.emissiveIntensity=enabled?.8:0;this.paintTimer(art.display,d);continue;}
    art.lamp.color.set(d.on?0xc6d9d5:0x39484a);art.lamp.emissive.set(d.on?0x72b8c9:0);art.lamp.emissiveIntensity=d.on?.55:0;this.paintMachine(art.display,text,detail);
   }
+ }
+ private opticalProps(){
+  this.opticalLamps=[];this.beamPieces=[];this.beamGeometry=undefined;const optics=this.core.level.optics;if(!optics)return;const f=this.finishes;
+  this.beamGeometry=this.geo(new T.CylinderGeometry(1,1,1,8));this.beamCoreMaterial=this.material(new T.MeshBasicMaterial({color:0xffe8db,toneMapped:false}));this.beamHaloMaterial=this.material(new T.MeshBasicMaterial({color:0xff3f28,transparent:true,opacity:.23,depthWrite:false,blending:T.AdditiveBlending,toneMapped:false}));
+  for(const emitter of optics.emitters){const body=new T.Group();body.name='optical-emitter:'+emitter.id;body.position.set(...emitter.position);body.quaternion.setFromUnitVectors(V(0,0,1),V(...emitter.direction).normalize());this.root.add(body);
+   this.part(body,[0,0,-.19],[.43,.43,.27],f.graphite,.035);this.part(body,[0,0,-.055],[.39,.39,.045],f.aluminum,.025);this.part(body,[0,0,-.024],[.31,.31,.025],f.recess,.02);
+   const bezel=this.mesh(this.geo(new T.TorusGeometry(.125,.024,8,32)),f.aluminum,body);bezel.position.z=-.006;const lamp=this.material(new T.MeshStandardMaterial({color:0x602721,emissive:0xa31a0d,emissiveIntensity:0,roughness:.2,metalness:.35})),lens=this.mesh(this.geo(new T.CircleGeometry(.105,32)),lamp,body);lens.position.z=.001;
+   for(const x of[-.16,.16])for(const y of[-.16,.16])this.part(body,[x,y,-.025],[.025,.025,.014],f.graphite,.005);for(const side of[-1,1])for(let y=-.12;y<.14;y+=.06)this.part(body,[side*.216,y,-.19],[.012,.025,.16],f.aluminum,.004);
+   body.traverse(o=>{if(o instanceof T.Mesh)this.targets.push(o);});this.opticalLamps.push({id:emitter.id,kind:'emitter',material:lamp});if(optics.emitters.length===1)this.opticalServicePanel('emitter-housing','EMITTER',lamp);
+  }
+  for(const receiver of optics.receivers){const body=new T.Group(),r=receiver.radius,w=r*2+.18;body.name='optical-receiver:'+receiver.id;body.position.set(...receiver.position);body.quaternion.setFromUnitVectors(V(0,0,1),V(...(receiver.normal??[0,0,1])).normalize());this.root.add(body);
+   this.part(body,[0,0,-.15],[w,w,.26],f.graphite,.035);this.part(body,[0,0,-.02],[w-.055,w-.055,.035],f.aluminum,.025);const ring=this.mesh(this.geo(new T.TorusGeometry(r+.012,.025,8,40)),f.graphite,body);ring.position.z=.005;
+   // The native receiver is a sphere: its visible dome meets the exact traced endpoint.
+   const lamp=this.material(new T.MeshStandardMaterial({color:0x273c41,emissive:0,roughness:.17,metalness:.4}));this.mesh(this.geo(new T.SphereGeometry(r,24,16)),lamp,body);
+   for(const x of[-1,1])for(const y of[-1,1])this.part(body,[x*w*.38,y*w*.38,.003],[.025,.025,.018],f.graphite,.004);
+   this.part(body,[0,-w/2-.07,-.055],[w,.14,.12],f.graphite,.012);const label=this.label('RECEIVER',w-.04,.09,'#20292e','#c7d3d6',95);label.position.set(0,-w/2-.07,.012);body.add(label);body.traverse(o=>{if(o instanceof T.Mesh)this.targets.push(o);});this.opticalLamps.push({id:receiver.id,kind:'receiver',material:lamp});if(optics.receivers.length===1)this.opticalServicePanel('receiver-pillar','RECEIVER',lamp);
+  }
+ }
+ private opticalServicePanel(id:string,title:string,lamp:T.Material){
+  const housing=this.core.solids.find(s=>s.id===id);if(!housing)return;const size=housing.max.clone().sub(housing.min);if(size.x<.35||size.y<.8)return;const f=this.finishes,p=housing.min.clone().add(housing.max).multiplyScalar(.5),w=Math.min(.95,size.x-.10),h=Math.min(.72,size.y-.12),group=new T.Group();group.position.set(p.x,housing.min.y+size.y*.58,housing.max.z+.012);this.root.add(group);
+  this.part(group,[0,0,0],[w,h,.035],f.aluminum,.018);this.part(group,[0,0,.022],[w-.045,h-.045,.018],f.recess,.012);this.part(group,[0,-h*.06,.038],[w*.58,.035,.018],lamp,.005);for(const x of[-w*.32,0,w*.32])this.part(group,[x,-h*.30,.039],[w*.18,.025,.018],f.aluminum,.004);const label=this.label(title,w*.90,h*.17,'#172126','#d5e1e2',95);label.position.set(0,h*.28,.042);group.add(label);for(const x of[-w*.43,w*.43])for(const y of[-h*.42,h*.42])this.part(group,[x,y,.033],[.018,.018,.012],f.graphite,.004);group.traverse(o=>{if(o instanceof T.Mesh)this.targets.push(o);});
+ }
+ private updateOpticalProps(){
+  if(!this.core.level.optics)return;
+  for(const lamp of this.opticalLamps){const on=lamp.kind==='emitter'?this.core.beams.has(lamp.id):this.core.machines.flags[lamp.id]===true;lamp.material.color.set(lamp.kind==='emitter'?(on?0xf65c43:0x602721):(on?0xe6c274:0x273c41));lamp.material.emissive.set(lamp.kind==='emitter'?(on?0xff2412:0):(on?0xffb83d:0));lamp.material.emissiveIntensity=on?2.1:0;}
+  let used=0;
+  for(const result of this.core.beams.values())for(let i=0;i<result.segments.length;i++){
+   const segment=result.segments[i],a=V(...segment.from),b=V(...segment.to),delta=b.clone().sub(a),length=delta.length();if(length<.0001)continue;
+   let piece=this.beamPieces[used++];if(!piece){const core=this.mesh(this.beamGeometry!,this.beamCoreMaterial!),halo=this.mesh(this.beamGeometry!,this.beamHaloMaterial!),impact=this.mesh(this.geo(new T.SphereGeometry(.035,12,8)),this.beamCoreMaterial!);core.castShadow=halo.castShadow=impact.castShadow=false;piece={core,halo,impact};this.beamPieces.push(piece);}
+   for(const[mesh,r]of[[piece.core,.011],[piece.halo,.047]]as const){mesh.visible=true;mesh.position.copy(a).add(b).multiplyScalar(.5);mesh.quaternion.setFromUnitVectors(V(0,1,0),delta.clone().normalize());mesh.scale.set(r,length,r);}
+   piece.impact.visible=i===result.segments.length-1&&['receiver','obstacle'].includes(result.stop);piece.impact.position.copy(b);
+  }
+  for(let i=used;i<this.beamPieces.length;i++){const piece=this.beamPieces[i];piece.core.visible=piece.halo.visible=piece.impact.visible=false;}
  }
  private lighting(){
   for(const child of [...this.scene.children])if(child instanceof T.Light||child.userData.chamberLight){if(child instanceof T.SpotLight||child instanceof T.DirectionalLight)child.shadow.dispose();this.scene.remove(child);}
@@ -252,7 +343,7 @@ export class ChamberScene extends RiftScene {
   this.portalRenderer?.dispose();this.portalRenderer=undefined;
   if(this.viewScene)this.disposeObject(this.viewScene);this.viewScene=undefined;this.viewCamera=undefined;this.instrument=undefined;
   this.disposeObject(this.root);this.root.clear();this.portalViews.forEach(v=>v.target.dispose());this.portalViews=[];this.targets=[];this.crateVisuals.clear();this.padVisuals.clear();this.bridgeVisuals.clear();
-  this.ownedGeometries?.forEach(g=>g.dispose());this.ownedMaterials?.forEach(m=>m.dispose());this.ownedTextures?.forEach(t=>t.dispose());this.ownedGeometries=new Set();this.ownedMaterials=new Set();this.ownedTextures=new Set();this.batches=new Map();this.cratePieces=new Map();this.prepareFinishes();this.architecture();this.mechanisms();this.nativeMachineProps();this.flushBatches();for(const c of this.core.crates)this.createCrate(c.id);this.buildPortalVisuals();this.lighting();
+  this.ownedGeometries?.forEach(g=>g.dispose());this.ownedMaterials?.forEach(m=>m.dispose());this.ownedTextures?.forEach(t=>t.dispose());this.ownedGeometries=new Set();this.ownedMaterials=new Set();this.ownedTextures=new Set();this.batches=new Map();this.cratePieces=new Map();this.prepareFinishes();this.architecture();this.mechanisms();this.nativeMachineProps();this.opticalProps();this.flushBatches();for(const c of this.core.crates)this.createCrate(c.id);this.buildPortalVisuals();this.lighting();
  }
  override createCrate(id:string){const oldVisual=this.crateVisuals.get(id),oldTargets=new Set<T.Object3D>();oldVisual?.traverse(o=>oldTargets.add(o));this.targets=this.targets.filter(o=>!oldTargets.has(o));const previous=this.cratePieces?.get(id);if(previous)for(const copy of previous.copies){this.root.remove(copy.group);copy.materials.forEach(m=>{m.dispose();this.ownedMaterials.delete(m);});}super.createCrate(id);const group=this.crateVisuals.get(id)!;for(const child of [...group.children])if(child instanceof T.Mesh&&child.geometry.type==='PlaneGeometry'){group.remove(child);this.disposeObject(child);}const b=this.core.crates.find(c=>c.id===id)!;
   for(const side of[-1,1]){const diamond=new T.Shape();diamond.moveTo(0,.13);diamond.lineTo(.13,0);diamond.lineTo(0,-.13);diamond.lineTo(-.13,0);diamond.closePath();const mark=this.mesh(this.geo(new T.ShapeGeometry(diamond)),this.material(new T.MeshStandardMaterial({color:0xd6c28b,metalness:.65,roughness:.32})),group);mark.position.set(0,0,side*(b.half.z+.014));if(side<0)mark.rotation.y=Math.PI;}
@@ -306,6 +397,7 @@ export class ChamberScene extends RiftScene {
   for(const p of this.core.pads){const art=this.buttons.get(p.id)!;art.top.position.y=art.restY-(this.pressed(p)?.065:0);art.lights.emissiveIntensity=this.pressed(p)?2:.22;}
   for(const trace of this.circuitTraces)trace.material.emissiveIntensity=this.pressed(this.core.pads.find(p=>p.id===trace.pad)!)?2.6:.10;
   this.updateNativeMachineProps(dt);
+  this.updateOpticalProps();
   for(let i=0;i<2;i++){const p=this.core.portals[i],light=this.portalLights[i];light.intensity=p?7:0;if(p)light.position.copy(p.center).addScaledVector(p.normal,.28);}
   this.syncCratePieces();
   super.update(dt);

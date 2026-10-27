@@ -1,3 +1,5 @@
+> Historical two-chamber milestones. The current authoritative early-batch result is `FIVE_CHAMBERS.md`, with fresh1→5 video, current controls and the closed settings-audio regression.
+
 # Two-chamber Rapier core QA
 
 The two new chambers passed a clean public-root playthrough. The rejected fifty-room prototype remains a historical draft; this is not a fifty-level completion claim.

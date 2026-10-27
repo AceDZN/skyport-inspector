@@ -136,6 +136,8 @@ Evidence: `docs/chamber-audio/module-check.json`, `module.png`, `check-module.mj
 
 `docs/chamber-audio/quiet-profiles.json` verifies the actual source buffers, gain/pitch values, independent contact/press behavior, repeat suppression, intentional-pause silence and resumed playback. Strict isolated TypeScript compilation passed. An early test expected an immediate repeated footstep despite only .19 seconds of audio time having elapsed; the preserved `quiet-profiles-guard-observation.json` correctly shows the .26-second guard suppressing it. The corrected test waits out the guard and passes without a source change. These are module checks; the later frozen-build review below checks their real event integration.
 
+`cue('lift-brake')` reserves a restrained mechanical stop for an automatic powered shuttle losing power. It reuses `switch-toggle.wav` at gain .16 and rate .60–.624, with its own .35-second guard and distinct `recentCues` event. It does not play the arrival chime or alter ordinary switch gain .88. `docs/chamber-audio/lift-brake-profile.json` verifies the actual buffer, gain/pitch, independent switch cue, repeat suppression and pause/resume on the source module: still 29 buffers/three loops and no load errors. Automatic-shuttle event integration and normal-play review remain pending; the existing frozen public-build evidence is unchanged.
+
 
 ### Frozen Rapier core: actual playback review
 

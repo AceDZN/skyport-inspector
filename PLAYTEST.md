@@ -1,4 +1,14 @@
-# Rift Runner independent playtest log
+# Current Rapier core: affected five-chamber repair verified
+
+The recorded intended-route1→5 pass remains valid on its original build. The later no-portal ACCESS trap in Chamber4 was repaired and independently retested on frozen1nG:77 realtime UI commands verify blocked no-portal sprint/jump, two resets and the intended portal/cube/button/exit recovery, with zero command/page/console errors. The replay imports only a genuinely earned three-room profile and preserves the new earned4 export. The unfinished carrier seam remains separate and open.
+
+Fresh public-root intended-route1→5 passed on one frozen build, one new browser/save,194commands and zero command/page/console errors. The128.52s continuous H264 recording and independent reports are in [the current five-chamber report](docs/chamber-qa/FIVE_CHAMBERS.md). Same-world third-room meaning-change/recovery and save provenance also passed. The repaired registered source now passes84 physics/interaction and29 save/progression contracts (113total), after restoring native player nudge to close a traced vertical-jitter/held-velocity regression. The unfinished four-case carrier-seam suite remains separately open and is excluded. Direct test setup is never counted as a public-input win.
+
+This is an early batch, not the complete fifty-level request. The current report records the corrected settings-audio retest and remaining platform limits. All earlier desk, first Rift and50-layout factory results below are historical and do not verify the rebuilt core.
+
+---
+
+# Historical first Rift prototype log
 
 Active replacement27 October2026. All desk playtest results are historical and do not verify this game. New scripts/captures/results belong in docs/rift-qa.
 

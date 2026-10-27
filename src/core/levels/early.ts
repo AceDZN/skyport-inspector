@@ -23,7 +23,7 @@ function observationBays(){
   b.box(name+'-vestibule-ceiling',[-4,7.2,midZ],[3.6,.4,4.4]);
   for(const x of [-5.6,-2.4])b.box(name+'-vestibule-side-'+x,[x,3.5,midZ],[.4,7,4.4]);
   b.box(name+'-vestibule-end',[-4,3.5,endZ],[3.6,7,.4]);
-  b.exit(name+'-exit',[-4,.86,name==='north'?-16.6:16.6],[1.8,1.8,1.6]);
+  b.exitCorridor(name+'-exit',name+'-vestibule-floor');
   w.marks.push({text:name.toUpperCase(),position:[-4,3.35,z+normal*.24],normal:[0,0,normal],width:1.3,height:.24});
  }
  // White is a truthful, full eligible wall bay. End walls/vestibules remain graphite.
@@ -74,16 +74,16 @@ function maintenanceL(){
  b.box('exit-vestibule-ceiling',[10,7.2,2],[4.8,.4,3.8]);
  b.box('exit-vestibule-end',[12.2,3.5,2],[.4,7,3.8]);
  for(const z of [.3,3.7])b.box('exit-vestibule-side-'+z,[10,3.5,z],[4.8,7,.4]);
- b.exit('exit',[10.7,.86,2],[1.8,1.8,1.8]);
+ b.exitCorridor('exit','exit-vestibule-floor');
  b.panel('source-west','maintenance-west-wall',[-7.985,3.5,0],[1,0,0],24,7);
  b.panel('remote-north','remote-north-wall',[-4,3.5,-11.985],[0,0,1],8,7);
  b.panel('source-south','source-south-wall',[-4,3.5,11.985],[0,0,-1],8,7);
  for(let z=-12;z<=12;z+=4)b.box('structural-rib--1-'+z,[-7.88,3.5,z],[.22,7,.18]);
  for(const z of [0,4])b.box('structural-rib-1-'+z,[7.88,3.5,z],[.22,7,.18]);
- b.button('maintenance-button',[-4,.14,2]);b.cube('cube',[-4,.55,-8]);
+ b.button('maintenance-button',[-4,.14,4]);b.cube('cube',[-4,.55,-8]);
  w.marks.push({text:'ACCESS',position:[-4,3.35,-1.75],normal:[0,0,1],width:1,height:.22},{text:'EXIT',position:[7.94,3.35,2],normal:[-1,0,0],width:.8,height:.22});
- w.routePoints={button:[-4,.14,2],'source-portal':[-7.96,1.55,6],'remote-portal':[-4,1.55,-11.96],cube:[-4,.55,-8],exit:[10.7,.86,2]};
- w.notes.push('Stand on the button to raise opaque access-door. Aim a remote-north portal through its real aperture; a source-west portal at z6 remains available after stepping off.','Both shutters use the same real pressure flag. Retrieve the cube through the pair after the access shutter closes, return it to maintenance-button, then traverse the dark east exit branch.','Button-to-access gap and button-to-exit route prevent a player-pressure sprint. No timer latch, pickup-history gate or cargo-specific completion flag.');
+ w.routePoints={button:[-4,.14,4],'source-portal':[-7.96,1.55,6],'remote-portal':[-4,1.55,-11.96],cube:[-4,.55,-8],'drop-approach':[-5.8,.87,4],'exit-detour':[-4,.87,6],'exit-branch':[2,.87,5.5],exit:[10.7,.86,2]};
+ w.notes.push('Stand on the button at z4 to raise opaque access-door, six metres away. Aim a remote-north portal through its real aperture; a source-west portal at z6 remains available after stepping off.','Both shutters use the same real pressure flag. Retrieve the cube through the pair after the access shutter closes, return it to maintenance-button, then detour south via z6 before traversing the dark east exit branch so the capsule does not push the cube off its pad.','The former z2 button admitted an unprepared no-portal sprint and is superseded. The new gap and actual closing-door clearance require independent sprint/jump/diagonal/recovery verification. No timer latch, pickup-history gate or cargo-specific completion flag.');
  return b.finish();
 }
 
@@ -110,7 +110,7 @@ function splitHeightAnd(){
  b.box('exit-vestibule-ceiling',[11,10.2,-8],[4.8,.4,3.8]);
  b.box('exit-vestibule-end',[13.2,6.7,-8],[.4,6.6,3.8]);
  for(const z of [-9.7,-6.3])b.box('exit-vestibule-side-'+z,[11,6.7,z],[4.8,6.6,.4]);
- b.exit('exit',[11.7,4.26,-8],[1.8,1.8,1.8]);
+ b.exitCorridor('exit','exit-vestibule-floor');
  b.panel('source-south','source-south-wall',[0,5,13.985],[0,0,-1],18,10);
  b.panel('low-north','low-north-wall',[-5,5,-11.985],[0,0,1],8,10);
  b.panel('high-north','high-north-wall',[5,6.7,-11.985],[0,0,1],8,6.6);

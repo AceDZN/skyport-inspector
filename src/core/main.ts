@@ -18,10 +18,10 @@ let storage: Store | undefined;
 try { storage = localStorage; } catch { /* Session progress still works. */ }
 const progress = new CampaignProgress(storage, SAVE_KEY);
 try {
-    if (!storage?.getItem(SAVE_KEY)) progress.importCoreCompletions(JSON.parse(storage?.getItem('rift-core-v1') ?? 'null')?.completed);
-} catch { /* A malformed legacy save cannot unlock anything. */ }
+    if (progress.canImportCoreCompletions) progress.importCoreCompletions(JSON.parse(storage?.getItem('rift-core-v1') ?? 'null')?.completed);
+} catch { progress.warning ??= 'Legacy progress could not be read; saved data was not changed.'; }
 let world: CoreWorld, scene: ChamberScene;
-let number = 1, mode = 'loading', last = performance.now(), started = false;
+let number = 1, mode = 'loading', last = performance.now(), started = false, sceneDirty = true;
 let dragLook = false, sensitivity = .0022, toastTimer = 0, assistance = 0, alternate = false;
 let settingsBack = 'menu', previewTicket = 0;
 const keys = new Set<string>();
@@ -48,25 +48,29 @@ function event(type: string, data: Record<string, unknown> = {}) {
     if (type === 'portalA' || type === 'portalB') audio.setConnection(world.portals.every(Boolean));
     if (type === 'respawn') message('בחזרה לנקודת ההתחלה. השערים נשמרו.');
     if (type === 'complete' && world.campaignResult?.goalMatched) {
-        progress.observe(number, {goalMatched:true, assistance, retries:world.respawns, seconds:world.time, portalCrossings:world.player.crossings, mechanisms:world.campaignResult.mechanisms,variant:alternate?'contrast':'base'});
+        const accepted = progress.observe(number, {goalMatched:true, assistance, retries:world.respawns, seconds:world.time, portalCrossings:world.player.crossings, mechanisms:world.campaignResult.mechanisms,variant:alternate?'contrast':'base'});
+        if (!accepted) { home(); message(progress.warning ?? 'This result belongs to an older campaign. Start the room again.'); return; }
         mode = 'result'; release(); audio.setPaused(true); render();
     }
 }
 function load(n: number, contrast = false) {
+    progress.refresh();
     if (!available(n) || !progress.canPlay(n) || (contrast && progress.status(n) !== 'completed')) return;
+    if (!progress.enter(n)) { if (progress.warning) message(progress.warning); return; }
     dismissMessage(); release(); started = false;
     world?.dispose(); number = n; alternate = contrast; assistance = 0;
     world = new CoreWorld(n, event, undefined, contrast);
     if (scene) scene.setWorld(world as unknown as ChamberSceneWorld);
     else scene = new ChamberScene(canvas, world as unknown as ChamberSceneWorld);
     scene.reducedMotion = matchMedia('(prefers-reduced-motion:reduce)').matches;
-    progress.enter(n); mode = 'playing'; started = true;
+    mode = 'playing'; started = true;
     audio.setConnection(false);
     void audio.start().then(() => { audio.setPaused(mode !== 'playing'); audio.setChapter(Math.min(3, Math.ceil(n / 17)) as 1|2|3); });
     render(); canvas.focus(); void lock();
     if (progress.warning) message(progress.warning);
 }
 function render() {
+    sceneDirty = true;
     if (mode !== 'playing') dismissMessage();
     hud.innerHTML = mode === 'playing' ? `<div class="mission"><small>CHAMBER ${String(number).padStart(2,'0')}</small><p lang="en">${esc(world.level.mission)}</p></div><nav><button data-action="help" aria-label="Help">M</button><button data-action="pause" aria-label="Pause">Ⅱ</button></nav>` : '';
     document.body.classList.toggle('playing', mode === 'playing');
@@ -104,8 +108,8 @@ app.addEventListener('click', e => {
     if (action === 'home') home();
     if (action === 'levels') pause('levels');
     if (action === 'new-game') pause('new-game');
-    if (action === 'confirm-new' && progress.newGame(true)) load(1);
-    if (action === 'restore') { if (progress.restorePrevious()) home(); else message('אין משחק קודם לשחזור.'); }
+    if (action === 'confirm-new') { if (progress.newGame(true)) load(1); else if (progress.warning) message(progress.warning); }
+    if (action === 'restore') { if (progress.restorePrevious()) home(); else message(progress.warning ?? 'אין משחק קודם לשחזור.'); }
     if (action === 'sound') {
         const ticket=++previewTicket;
         void audio.start().then(() => {
@@ -157,8 +161,16 @@ window.addEventListener('keydown', e => {
 });
 window.addEventListener('keyup', e => keys.delete(e.code));
 window.addEventListener('blur', () => { if (mode === 'playing') pause(); });
+window.addEventListener('resize', () => { sceneDirty = true; });
 document.addEventListener('visibilitychange', () => { if (document.hidden && mode === 'playing') pause(); });
 document.addEventListener('pointerlockchange', () => { if (!document.pointerLockElement && mode === 'playing' && !dragLook) pause(); });
+window.addEventListener('storage', e => {
+    if(e.key!==SAVE_KEY&&e.key!==SAVE_KEY+'-journal')return;
+    const generation=progress.diagnostics().generation;
+    progress.refresh();
+    if(mode==='playing'&&progress.diagnostics().generation!==generation){home();message('המשחק השתנה בחלון אחר. אפשר להמשיך מהשמירה הנוכחית.');}
+    else if(!['loading','playing'].includes(mode))render();
+});
 function step(ms: number) {
     if (mode !== 'playing') return;
     let left = Math.min(ms / 1000, 8);
@@ -173,12 +185,12 @@ function step(ms: number) {
 }
 function frame(now: number) {
     const dt = Math.min(40,now-last); last = now; step(dt);
-    if (scene) { scene.update(mode === 'playing' ? dt/1000 : 0); if (mode === 'playing') { const hit = scene.aim(); document.querySelector('#crosshair')!.classList.toggle('valid', !!hit?.surface); hint.textContent = world.heldId ? 'E · Drop' : world.interactionHint() || (hit?.surface ? 'LMB / RMB · Place portal' : ''); } }
+    if (scene && (mode === 'playing' || sceneDirty)) { scene.update(mode === 'playing' ? dt/1000 : 0); sceneDirty = false; if (mode === 'playing') { const hit = scene.aim(); document.querySelector('#crosshair')!.classList.toggle('valid', !!hit?.surface); hint.textContent = world.heldId ? 'E · Drop' : world.interactionHint() || (hit?.surface ? 'LMB / RMB · Place portal' : ''); } }
     requestAnimationFrame(frame);
 }
 Object.assign(window, {
-    render_game_to_text: () => JSON.stringify({title:'Rift Runner',version:'rapier-campaign-early-1',mode,level:number,alternate,world:world?.snapshot(),progress:{...progress.save,completed:completed(),resume:continueLevel(),registered:coreLevels.length},pointerLocked:!!document.pointerLockElement,controls:{unlocked:dragLook,sensitivity},audio:audio.state()}),
+    render_game_to_text: () => JSON.stringify({title:'Rift Runner',version:'rapier-campaign-early-2',mode,level:number,alternate,world:world?.snapshot(),progress:{...progress.save,completed:completed(),resume:continueLevel(),registered:coreLevels.length},saveDiagnostics:{...progress.diagnostics(),origin:location.origin},pointerLocked:!!document.pointerLockElement,controls:{unlocked:dragLook,sensitivity},audio:audio.state()}),
     advanceTime:(ms:number) => { step(ms); scene?.update(0); }
 });
 render();
-void initializePhysics().then(() => {world = new CoreWorld(1,event);scene = new ChamberScene(canvas,world as unknown as ChamberSceneWorld);mode = 'menu';render();requestAnimationFrame(frame);}).catch(error => {console.error(error);message('Physics loading failed. Reload the page.');});
+void initializePhysics().then(() => {world = new CoreWorld(1,event);scene = new ChamberScene(canvas,world as unknown as ChamberSceneWorld);mode = 'menu';render();if(progress.warning)message(progress.warning);requestAnimationFrame(frame);}).catch(error => {console.error(error);message('Physics loading failed. Reload the page.');});

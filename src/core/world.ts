@@ -90,6 +90,7 @@ export class CoreWorld {
     private contactCooldown = new Map<string, number>();
     private lastWrongExit?:string;
     private mechanisms=new Set<string>();
+    private doorOccupants=new Map<string,Set<string>>();
     readonly beams=new Map<string,BeamResult>();
     constructor(number: number, onEvent: (type: string, data?: Record<string, unknown>) => void = () => { }, definition?:CoreLevel, alternate=false) {
         this.number = number;
@@ -358,9 +359,21 @@ export class CoreWorld {
         }
         for (const d of this.machines.devices) {
             const size = V(...d.spec.size), p = V(...d.spec.position);
-            const doorOccupied = Math.abs(this.player.pos.x - p.x) < size.x / 2 + .5 && Math.abs(this.player.pos.z - p.z) < size.z / 2 + .5 && this.player.pos.y < p.y + size.y / 2;
-            flags['safety:'+d.spec.id]=doorOccupied&&d.progress>.1;
-            flags['door-safety']=(flags['door-safety']??false)||(doorOccupied&&d.progress>.8);
+            if(d.spec.kind==='shutter'){
+                const occupants=this.doorOccupants.get(d.spec.id)??new Set<string>();
+                for(const body of [this.player,...this.crates]){
+                    const halfX=this.normalSupport(body,V(1,0,0)),halfY=this.normalSupport(body,V(0,1,0)),halfZ=this.normalSupport(body,V(0,0,1));
+                    const inside=Math.abs(body.pos.x-p.x)<size.x/2+halfX+.015&&Math.abs(body.pos.z-p.z)<size.z/2+halfZ+.015&&body.pos.y-halfY<p.y+size.y/2&&body.pos.y+halfY>p.y-size.y/2;
+                    // Acquire safety only through a genuinely clear opening. Once
+                    // inside, retain it until the body leaves the actual doorway.
+                    // Touching a partly closed leaf from outside cannot open it.
+                    if(!inside)occupants.delete(body.id);
+                    else if(d.position.y-size.y/2>=body.pos.y+halfY-.02)occupants.add(body.id);
+                }
+                this.doorOccupants.set(d.spec.id,occupants);
+                flags['safety:'+d.spec.id]=occupants.size>0;
+                flags['door-safety']=(flags['door-safety']??false)||occupants.size>0;
+            }
             flags['moving:'+d.spec.id]=d.moving;
             for(const stop of d.spec.stops??[])flags['at:'+d.spec.id+':'+stop.label]=!d.moving&&d.position.distanceTo(V(...stop.position))<.03;
         }
@@ -371,7 +384,7 @@ export class CoreWorld {
         for (const d of this.machines.devices)
             this.doors.get(d.spec.id)?.rigid.setNextKinematicTranslation(d.position);
     }
-    private ridingPlatform(){return this.machines.devices.find(d=>['lift','moving-platform'].includes(d.spec.kind)&&this.player.grounded&&Math.abs(this.player.pos.y-.85-(d.previous.y+d.spec.size[1]/2))<.08&&Math.abs(this.player.pos.x-d.previous.x)<d.spec.size[0]/2+.15&&Math.abs(this.player.pos.z-d.previous.z)<d.spec.size[2]/2+.15);}
+    private ridingPlatform(){return this.machines.devices.find(d=>['lift','moving-platform'].includes(d.spec.kind)&&this.player.grounded&&Math.abs(this.player.pos.y-.85-(d.previous.y+d.spec.size[1]/2))<.08&&Math.abs(this.player.pos.x-d.previous.x)<d.spec.size[0]/2-.01&&Math.abs(this.player.pos.z-d.previous.z)<d.spec.size[2]/2-.01);}
     step(dt: number, input: Input) {
         if (this.campaignResult)
             return;
@@ -407,12 +420,12 @@ export class CoreWorld {
         const requested=this.player.vel.clone().add(conveyor).multiplyScalar(dt).add(carry);
         // A supported capsule moves with its deck; gravity must not accumulate a
         // tiny penetration while that same deck is excluded from the sweep.
-        if(platform&&this.player.vel.y<=0)requested.y=carry.y;
+        if(platform&&this.player.vel.y<=0)requested.y=platform.position.y+platform.spec.size[1]/2+this.player.half.y+this.controller.offset()+this.controller.normalNudgeFactor()-this.player.pos.y;
         this.controller.computeColliderMovement(this.characterCollider, requested, undefined, undefined, c => c.handle!==platformCollider&&this.queryAllows(this.player, c));
         const movement = this.controller.computedMovement();
         const next = this.player.pos.clone().add(movement);
         this.character.setNextKinematicTranslation(next);
-        this.player.grounded = this.controller.computedGrounded()||!!(platform&&this.player.vel.y<=0&&Math.abs(next.y-.85-(platform.position.y+platform.spec.size[1]/2))<.08&&Math.abs(next.x-platform.position.x)<platform.spec.size[0]/2+.15&&Math.abs(next.z-platform.position.z)<platform.spec.size[2]/2+.15);
+        this.player.grounded = this.controller.computedGrounded()||!!(platform&&this.player.vel.y<=0&&Math.abs(next.y-.85-(platform.position.y+platform.spec.size[1]/2))<.08&&Math.abs(next.x-platform.position.x)<platform.spec.size[0]/2-.01&&Math.abs(next.z-platform.position.z)<platform.spec.size[2]/2-.01);
         if (this.player.grounded && this.player.vel.y < 0)
             this.player.vel.y = 0;
         this.updateHeld(dt,next);
@@ -453,7 +466,7 @@ export class CoreWorld {
             this.respawn();
             return;
         }
-        const exit = this.blueprint.exits.find(e => this.player.grounded && Math.abs(this.player.pos.x - e.position[0]) < e.size[0] / 2 && Math.abs(this.player.pos.y - e.position[1]) < e.size[1] / 2 && Math.abs(this.player.pos.z - e.position[2]) < e.size[2] / 2);
+        const exit = this.blueprint.exits.find(e => Math.abs(this.player.pos.x - e.position[0]) < e.size[0] / 2 && Math.abs(this.player.pos.y - e.position[1]) < e.size[1] / 2 && Math.abs(this.player.pos.z - e.position[2]) < e.size[2] / 2);
         if(!exit)this.lastWrongExit=undefined;
         if(exit&&this.level.expectedExit&&exit.id!==this.level.expectedExit){if(this.lastWrongExit!==exit.id){this.lastWrongExit=exit.id;this.event('wrong-exit',{exit:exit.id,expected:this.level.expectedExit,reason:this.level.wrongExitFeedback??'This is a different destination. Check the requested door.'});}return;}
         if (exit) {
