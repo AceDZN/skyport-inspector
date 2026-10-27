@@ -1,0 +1,11 @@
+<!doctype html><meta charset="utf-8"><title>Skyport audio verification harness</title>
+<style>body{font:18px system-ui;background:#162b3b;color:#fff;padding:2rem}button,input{margin:8px;padding:12px}pre{white-space:pre-wrap}</style>
+<h1>Skyport audio verification</h1><p>Test harness for the game’s actual audio module. User gesture starts local music.</p>
+<button id="start">Start / restart audio</button><button id="pause">Pause</button><button id="resume">Resume</button><button id="cues">Play tactile cues</button><button id="energy">End-of-shift layer</button><label>Music<input id="music" type="range" min="0" max="1" step=".01" value=".7"></label><pre id="state"></pre><h2>Focus events</h2><pre id="focuslog"></pre>
+<script type="module">
+import {SkyportAudio} from '../../src/audio.ts';
+window.audio=new SkyportAudio();
+start.onclick=()=>audio.start();pause.onclick=()=>audio.setPaused(true);resume.onclick=()=>audio.setPaused(false);music.oninput=()=>audio.setGain('music',Number(music.value));energy.onclick=()=>audio.setEnergy(true);cues.onclick=()=>{['bell','paper-pickup','paper-slide','page-turn','evidence-pencil','ink-pad','board-stamp','hold-stamp','gate-opening','recall','shift-end','mistake','question'].forEach((c,i)=>setTimeout(()=>audio.cue(c),i*500));};
+const focusEvents=[];const note=(event)=>setTimeout(()=>{focusEvents.push({event,focused:document.hasFocus(),hidden:document.hidden,audio:audio.state()});focuslog.textContent=JSON.stringify(focusEvents,null,2);},220);window.addEventListener('blur',()=>{audio.setPaused(true);note('blur');});window.addEventListener('focus',()=>{audio.setPaused(false);note('focus');});
+setInterval(()=>state.textContent=JSON.stringify(audio.state(),null,2),200);
+</script>

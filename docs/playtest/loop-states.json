@@ -1,0 +1,5779 @@
+{
+  "states": [
+    {
+      "seconds": 3,
+      "label": "inspect",
+      "state": {
+        "mode": "inspect",
+        "grade": 8,
+        "case": "g8-1",
+        "stage": "guided",
+        "passenger": "Lena Frost",
+        "objective": "Lena (she/her) is at the desk. Arun (he/him) left a case with her yesterday. Inspect Lena’s current journey.",
+        "rule": "Identify the current traveler and booking holder. Carrying another person’s luggage does not transfer their booking.",
+        "documents": [
+          {
+            "id": "ticket",
+            "title": "BOARDING TICKET",
+            "lines": [
+              {
+                "id": "g8-1-ticket",
+                "text": "Lena Frost · Cloud Garden · 27 October · 18:00 · Gate 2 · CONFIRMED.",
+                "he": "לנה פרוסט · גן העננים · 27 באוקטובר · 18:00 · שער 2 · מאושר."
+              },
+              {
+                "id": "g8-1-luggage",
+                "text": "Luggage label: Arun Moss. This label does not identify the ticket holder.",
+                "he": "תווית מזוודה: ארון מוס. התווית אינה מזהה את בעל הכרטיס."
+              }
+            ]
+          },
+          {
+            "id": "account",
+            "title": "DESK ACCOUNT",
+            "lines": [
+              {
+                "id": "g8-1-past",
+                "text": "Yesterday, Lena was carrying Arun’s case while he left the hall.",
+                "he": "אתמול לנה נשאה את המזוודה של ארון בזמן שהוא יצא מהאולם."
+              },
+              {
+                "id": "g8-1-current",
+                "text": "Today she is travelling to Cloud Garden at 18:00. Arun is going to travel tomorrow.",
+                "he": "היום היא נוסעת לגן העננים ב־18:00. ארון מתכנן לנסוע מחר."
+              },
+              {
+                "id": "g8-1-list",
+                "text": "Current boarding list: Lena Frost, 27 October, confirmed. Her gate is 2.",
+                "he": "רשימת העלייה הנוכחית: לנה פרוסט, 27 באוקטובר, מאושר. השער שלה הוא 2."
+              }
+            ]
+          }
+        ],
+        "open": true,
+        "left": 0,
+        "right": 1,
+        "evidence": [],
+        "route": {
+          "gate": "2",
+          "time": "09:00"
+        },
+        "clarified": false,
+        "paused": false,
+        "overlay": "",
+        "summary": [],
+        "events": [
+          {
+            "type": "visitor-called",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 0,
+            "stage": "guided"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 3233,
+            "document": "ticket"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 6600,
+            "document": "ticket"
+          }
+        ],
+        "coordinates": "Fixed seated camera; world +X right, +Y up, -Z dock. Papers drag onto left/right desk slots.",
+        "worldAction": {
+          "decision": "",
+          "gate": "2",
+          "time": "",
+          "visitorX": 0,
+          "gateOpen": false
+        },
+        "audio": {
+          "context": "running",
+          "paused": false,
+          "loopCount": 3,
+          "activeSfx": 1,
+          "cuesPlayed": 4,
+          "energy": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 16,
+          "loadErrors": [],
+          "timeline": 6.258666666666667
+        }
+      }
+    },
+    {
+      "seconds": 6,
+      "label": "ticket evidence",
+      "state": {
+        "mode": "inspect",
+        "grade": 8,
+        "case": "g8-1",
+        "stage": "guided",
+        "passenger": "Lena Frost",
+        "objective": "Lena (she/her) is at the desk. Arun (he/him) left a case with her yesterday. Inspect Lena’s current journey.",
+        "rule": "Identify the current traveler and booking holder. Carrying another person’s luggage does not transfer their booking.",
+        "documents": [
+          {
+            "id": "ticket",
+            "title": "BOARDING TICKET",
+            "lines": [
+              {
+                "id": "g8-1-ticket",
+                "text": "Lena Frost · Cloud Garden · 27 October · 18:00 · Gate 2 · CONFIRMED.",
+                "he": "לנה פרוסט · גן העננים · 27 באוקטובר · 18:00 · שער 2 · מאושר."
+              },
+              {
+                "id": "g8-1-luggage",
+                "text": "Luggage label: Arun Moss. This label does not identify the ticket holder.",
+                "he": "תווית מזוודה: ארון מוס. התווית אינה מזהה את בעל הכרטיס."
+              }
+            ]
+          },
+          {
+            "id": "account",
+            "title": "DESK ACCOUNT",
+            "lines": [
+              {
+                "id": "g8-1-past",
+                "text": "Yesterday, Lena was carrying Arun’s case while he left the hall.",
+                "he": "אתמול לנה נשאה את המזוודה של ארון בזמן שהוא יצא מהאולם."
+              },
+              {
+                "id": "g8-1-current",
+                "text": "Today she is travelling to Cloud Garden at 18:00. Arun is going to travel tomorrow.",
+                "he": "היום היא נוסעת לגן העננים ב־18:00. ארון מתכנן לנסוע מחר."
+              },
+              {
+                "id": "g8-1-list",
+                "text": "Current boarding list: Lena Frost, 27 October, confirmed. Her gate is 2.",
+                "he": "רשימת העלייה הנוכחית: לנה פרוסט, 27 באוקטובר, מאושר. השער שלה הוא 2."
+              }
+            ]
+          }
+        ],
+        "open": true,
+        "left": 0,
+        "right": 1,
+        "evidence": [
+          "g8-1-ticket"
+        ],
+        "route": {
+          "gate": "2",
+          "time": "09:00"
+        },
+        "clarified": false,
+        "paused": false,
+        "overlay": "",
+        "summary": [],
+        "events": [
+          {
+            "type": "visitor-called",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 0,
+            "stage": "guided"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 3233,
+            "document": "ticket"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 6600,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 9633,
+            "lines": [
+              "g8-1-ticket"
+            ]
+          }
+        ],
+        "coordinates": "Fixed seated camera; world +X right, +Y up, -Z dock. Papers drag onto left/right desk slots.",
+        "worldAction": {
+          "decision": "",
+          "gate": "2",
+          "time": "",
+          "visitorX": 0,
+          "gateOpen": false
+        },
+        "audio": {
+          "context": "running",
+          "paused": false,
+          "loopCount": 3,
+          "activeSfx": 1,
+          "cuesPlayed": 5,
+          "energy": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 16,
+          "loadErrors": [],
+          "timeline": 9.309333333333333
+        }
+      }
+    },
+    {
+      "seconds": 9,
+      "label": "current account evidence",
+      "state": {
+        "mode": "inspect",
+        "grade": 8,
+        "case": "g8-1",
+        "stage": "guided",
+        "passenger": "Lena Frost",
+        "objective": "Lena (she/her) is at the desk. Arun (he/him) left a case with her yesterday. Inspect Lena’s current journey.",
+        "rule": "Identify the current traveler and booking holder. Carrying another person’s luggage does not transfer their booking.",
+        "documents": [
+          {
+            "id": "ticket",
+            "title": "BOARDING TICKET",
+            "lines": [
+              {
+                "id": "g8-1-ticket",
+                "text": "Lena Frost · Cloud Garden · 27 October · 18:00 · Gate 2 · CONFIRMED.",
+                "he": "לנה פרוסט · גן העננים · 27 באוקטובר · 18:00 · שער 2 · מאושר."
+              },
+              {
+                "id": "g8-1-luggage",
+                "text": "Luggage label: Arun Moss. This label does not identify the ticket holder.",
+                "he": "תווית מזוודה: ארון מוס. התווית אינה מזהה את בעל הכרטיס."
+              }
+            ]
+          },
+          {
+            "id": "account",
+            "title": "DESK ACCOUNT",
+            "lines": [
+              {
+                "id": "g8-1-past",
+                "text": "Yesterday, Lena was carrying Arun’s case while he left the hall.",
+                "he": "אתמול לנה נשאה את המזוודה של ארון בזמן שהוא יצא מהאולם."
+              },
+              {
+                "id": "g8-1-current",
+                "text": "Today she is travelling to Cloud Garden at 18:00. Arun is going to travel tomorrow.",
+                "he": "היום היא נוסעת לגן העננים ב־18:00. ארון מתכנן לנסוע מחר."
+              },
+              {
+                "id": "g8-1-list",
+                "text": "Current boarding list: Lena Frost, 27 October, confirmed. Her gate is 2.",
+                "he": "רשימת העלייה הנוכחית: לנה פרוסט, 27 באוקטובר, מאושר. השער שלה הוא 2."
+              }
+            ]
+          }
+        ],
+        "open": true,
+        "left": 0,
+        "right": 1,
+        "evidence": [
+          "g8-1-ticket",
+          "g8-1-current"
+        ],
+        "route": {
+          "gate": "2",
+          "time": "09:00"
+        },
+        "clarified": false,
+        "paused": false,
+        "overlay": "",
+        "summary": [],
+        "events": [
+          {
+            "type": "visitor-called",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 0,
+            "stage": "guided"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 3233,
+            "document": "ticket"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 6600,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 9633,
+            "lines": [
+              "g8-1-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 12916,
+            "lines": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ]
+          }
+        ],
+        "coordinates": "Fixed seated camera; world +X right, +Y up, -Z dock. Papers drag onto left/right desk slots.",
+        "worldAction": {
+          "decision": "",
+          "gate": "2",
+          "time": "",
+          "visitorX": 0,
+          "gateOpen": false
+        },
+        "audio": {
+          "context": "running",
+          "paused": false,
+          "loopCount": 3,
+          "activeSfx": 1,
+          "cuesPlayed": 6,
+          "energy": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 16,
+          "loadErrors": [],
+          "timeline": 12.674666666666667
+        }
+      }
+    },
+    {
+      "seconds": 12,
+      "label": "wrong stamp armed",
+      "state": {
+        "mode": "ready",
+        "grade": 8,
+        "case": "g8-1",
+        "stage": "guided",
+        "passenger": "Lena Frost",
+        "objective": "Lena (she/her) is at the desk. Arun (he/him) left a case with her yesterday. Inspect Lena’s current journey.",
+        "rule": "Identify the current traveler and booking holder. Carrying another person’s luggage does not transfer their booking.",
+        "documents": [
+          {
+            "id": "ticket",
+            "title": "BOARDING TICKET",
+            "lines": [
+              {
+                "id": "g8-1-ticket",
+                "text": "Lena Frost · Cloud Garden · 27 October · 18:00 · Gate 2 · CONFIRMED.",
+                "he": "לנה פרוסט · גן העננים · 27 באוקטובר · 18:00 · שער 2 · מאושר."
+              },
+              {
+                "id": "g8-1-luggage",
+                "text": "Luggage label: Arun Moss. This label does not identify the ticket holder.",
+                "he": "תווית מזוודה: ארון מוס. התווית אינה מזהה את בעל הכרטיס."
+              }
+            ]
+          },
+          {
+            "id": "account",
+            "title": "DESK ACCOUNT",
+            "lines": [
+              {
+                "id": "g8-1-past",
+                "text": "Yesterday, Lena was carrying Arun’s case while he left the hall.",
+                "he": "אתמול לנה נשאה את המזוודה של ארון בזמן שהוא יצא מהאולם."
+              },
+              {
+                "id": "g8-1-current",
+                "text": "Today she is travelling to Cloud Garden at 18:00. Arun is going to travel tomorrow.",
+                "he": "היום היא נוסעת לגן העננים ב־18:00. ארון מתכנן לנסוע מחר."
+              },
+              {
+                "id": "g8-1-list",
+                "text": "Current boarding list: Lena Frost, 27 October, confirmed. Her gate is 2.",
+                "he": "רשימת העלייה הנוכחית: לנה פרוסט, 27 באוקטובר, מאושר. השער שלה הוא 2."
+              }
+            ]
+          }
+        ],
+        "open": false,
+        "left": 0,
+        "right": 1,
+        "evidence": [
+          "g8-1-ticket",
+          "g8-1-current"
+        ],
+        "route": {
+          "gate": "2",
+          "time": "18:00"
+        },
+        "clarified": false,
+        "armed": "hold",
+        "paused": false,
+        "overlay": "",
+        "summary": [],
+        "events": [
+          {
+            "type": "visitor-called",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 0,
+            "stage": "guided"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 3233,
+            "document": "ticket"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 6600,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 9633,
+            "lines": [
+              "g8-1-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 12916,
+            "lines": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ]
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 15883,
+            "decision": "hold"
+          }
+        ],
+        "coordinates": "Fixed seated camera; world +X right, +Y up, -Z dock. Papers drag onto left/right desk slots.",
+        "worldAction": {
+          "decision": "",
+          "gate": "2",
+          "time": "",
+          "visitorX": 0,
+          "gateOpen": false
+        },
+        "audio": {
+          "context": "running",
+          "paused": false,
+          "loopCount": 3,
+          "activeSfx": 1,
+          "cuesPlayed": 7,
+          "energy": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 16,
+          "loadErrors": [],
+          "timeline": 15.533333333333333
+        }
+      }
+    },
+    {
+      "seconds": 14,
+      "label": "wrong queue",
+      "state": {
+        "mode": "result",
+        "grade": 8,
+        "case": "g8-1",
+        "stage": "guided",
+        "passenger": "Lena Frost",
+        "objective": "Lena (she/her) is at the desk. Arun (he/him) left a case with her yesterday. Inspect Lena’s current journey.",
+        "rule": "Identify the current traveler and booking holder. Carrying another person’s luggage does not transfer their booking.",
+        "documents": [
+          {
+            "id": "ticket",
+            "title": "BOARDING TICKET",
+            "lines": [
+              {
+                "id": "g8-1-ticket",
+                "text": "Lena Frost · Cloud Garden · 27 October · 18:00 · Gate 2 · CONFIRMED.",
+                "he": "לנה פרוסט · גן העננים · 27 באוקטובר · 18:00 · שער 2 · מאושר."
+              },
+              {
+                "id": "g8-1-luggage",
+                "text": "Luggage label: Arun Moss. This label does not identify the ticket holder.",
+                "he": "תווית מזוודה: ארון מוס. התווית אינה מזהה את בעל הכרטיס."
+              }
+            ]
+          },
+          {
+            "id": "account",
+            "title": "DESK ACCOUNT",
+            "lines": [
+              {
+                "id": "g8-1-past",
+                "text": "Yesterday, Lena was carrying Arun’s case while he left the hall.",
+                "he": "אתמול לנה נשאה את המזוודה של ארון בזמן שהוא יצא מהאולם."
+              },
+              {
+                "id": "g8-1-current",
+                "text": "Today she is travelling to Cloud Garden at 18:00. Arun is going to travel tomorrow.",
+                "he": "היום היא נוסעת לגן העננים ב־18:00. ארון מתכנן לנסוע מחר."
+              },
+              {
+                "id": "g8-1-list",
+                "text": "Current boarding list: Lena Frost, 27 October, confirmed. Her gate is 2.",
+                "he": "רשימת העלייה הנוכחית: לנה פרוסט, 27 באוקטובר, מאושר. השער שלה הוא 2."
+              }
+            ]
+          }
+        ],
+        "open": false,
+        "left": 0,
+        "right": 1,
+        "evidence": [
+          "g8-1-ticket",
+          "g8-1-current"
+        ],
+        "route": {
+          "gate": "2",
+          "time": "18:00"
+        },
+        "clarified": false,
+        "result": {
+          "correct": false,
+          "comprehension": false,
+          "needsClarification": false,
+          "reason": "“Today she is travelling” מתייחס ללנה, בניגוד לתיאור המזוודה אתמול ולתוכנית של ארון למחר. הכרטיס והרשימה מאשרים את הנסיעה שלה היום ב־18:00, שער 2."
+        },
+        "paused": false,
+        "overlay": "",
+        "summary": [],
+        "events": [
+          {
+            "type": "visitor-called",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 0,
+            "stage": "guided"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 3233,
+            "document": "ticket"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 6600,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 9633,
+            "lines": [
+              "g8-1-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 12916,
+            "lines": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ]
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 15883,
+            "decision": "hold"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 17599,
+            "decision": "hold",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 1,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 0,
+            "firstAttempt": true,
+            "stage": "guided"
+          }
+        ],
+        "coordinates": "Fixed seated camera; world +X right, +Y up, -Z dock. Papers drag onto left/right desk slots.",
+        "worldAction": {
+          "decision": "hold",
+          "gate": "2",
+          "time": "18:00",
+          "visitorX": 0,
+          "gateOpen": false
+        },
+        "audio": {
+          "context": "running",
+          "paused": false,
+          "loopCount": 3,
+          "activeSfx": 2,
+          "cuesPlayed": 9,
+          "energy": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 16,
+          "loadErrors": [],
+          "timeline": 17.474666666666664
+        }
+      }
+    },
+    {
+      "seconds": 19,
+      "label": "visible wrong consequence",
+      "state": {
+        "mode": "result",
+        "grade": 8,
+        "case": "g8-1",
+        "stage": "guided",
+        "passenger": "Lena Frost",
+        "objective": "Lena (she/her) is at the desk. Arun (he/him) left a case with her yesterday. Inspect Lena’s current journey.",
+        "rule": "Identify the current traveler and booking holder. Carrying another person’s luggage does not transfer their booking.",
+        "documents": [
+          {
+            "id": "ticket",
+            "title": "BOARDING TICKET",
+            "lines": [
+              {
+                "id": "g8-1-ticket",
+                "text": "Lena Frost · Cloud Garden · 27 October · 18:00 · Gate 2 · CONFIRMED.",
+                "he": "לנה פרוסט · גן העננים · 27 באוקטובר · 18:00 · שער 2 · מאושר."
+              },
+              {
+                "id": "g8-1-luggage",
+                "text": "Luggage label: Arun Moss. This label does not identify the ticket holder.",
+                "he": "תווית מזוודה: ארון מוס. התווית אינה מזהה את בעל הכרטיס."
+              }
+            ]
+          },
+          {
+            "id": "account",
+            "title": "DESK ACCOUNT",
+            "lines": [
+              {
+                "id": "g8-1-past",
+                "text": "Yesterday, Lena was carrying Arun’s case while he left the hall.",
+                "he": "אתמול לנה נשאה את המזוודה של ארון בזמן שהוא יצא מהאולם."
+              },
+              {
+                "id": "g8-1-current",
+                "text": "Today she is travelling to Cloud Garden at 18:00. Arun is going to travel tomorrow.",
+                "he": "היום היא נוסעת לגן העננים ב־18:00. ארון מתכנן לנסוע מחר."
+              },
+              {
+                "id": "g8-1-list",
+                "text": "Current boarding list: Lena Frost, 27 October, confirmed. Her gate is 2.",
+                "he": "רשימת העלייה הנוכחית: לנה פרוסט, 27 באוקטובר, מאושר. השער שלה הוא 2."
+              }
+            ]
+          }
+        ],
+        "open": false,
+        "left": 0,
+        "right": 1,
+        "evidence": [
+          "g8-1-ticket",
+          "g8-1-current"
+        ],
+        "route": {
+          "gate": "2",
+          "time": "18:00"
+        },
+        "clarified": false,
+        "result": {
+          "correct": false,
+          "comprehension": false,
+          "needsClarification": false,
+          "reason": "“Today she is travelling” מתייחס ללנה, בניגוד לתיאור המזוודה אתמול ולתוכנית של ארון למחר. הכרטיס והרשימה מאשרים את הנסיעה שלה היום ב־18:00, שער 2."
+        },
+        "paused": false,
+        "overlay": "",
+        "summary": [],
+        "events": [
+          {
+            "type": "visitor-called",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 0,
+            "stage": "guided"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 3233,
+            "document": "ticket"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 6600,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 9633,
+            "lines": [
+              "g8-1-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 12916,
+            "lines": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ]
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 15883,
+            "decision": "hold"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 17599,
+            "decision": "hold",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 1,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 0,
+            "firstAttempt": true,
+            "stage": "guided"
+          }
+        ],
+        "coordinates": "Fixed seated camera; world +X right, +Y up, -Z dock. Papers drag onto left/right desk slots.",
+        "worldAction": {
+          "decision": "hold",
+          "gate": "2",
+          "time": "18:00",
+          "visitorX": -4,
+          "gateOpen": false
+        },
+        "audio": {
+          "context": "running",
+          "paused": false,
+          "loopCount": 3,
+          "activeSfx": 0,
+          "cuesPlayed": 9,
+          "energy": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 16,
+          "loadErrors": [],
+          "timeline": 22.365333333333332
+        }
+      }
+    },
+    {
+      "seconds": 20,
+      "label": "recall",
+      "state": {
+        "mode": "inspect",
+        "grade": 8,
+        "case": "g8-1",
+        "stage": "guided",
+        "passenger": "Lena Frost",
+        "objective": "Lena (she/her) is at the desk. Arun (he/him) left a case with her yesterday. Inspect Lena’s current journey.",
+        "rule": "Identify the current traveler and booking holder. Carrying another person’s luggage does not transfer their booking.",
+        "documents": [
+          {
+            "id": "ticket",
+            "title": "BOARDING TICKET",
+            "lines": [
+              {
+                "id": "g8-1-ticket",
+                "text": "Lena Frost · Cloud Garden · 27 October · 18:00 · Gate 2 · CONFIRMED.",
+                "he": "לנה פרוסט · גן העננים · 27 באוקטובר · 18:00 · שער 2 · מאושר."
+              },
+              {
+                "id": "g8-1-luggage",
+                "text": "Luggage label: Arun Moss. This label does not identify the ticket holder.",
+                "he": "תווית מזוודה: ארון מוס. התווית אינה מזהה את בעל הכרטיס."
+              }
+            ]
+          },
+          {
+            "id": "account",
+            "title": "DESK ACCOUNT",
+            "lines": [
+              {
+                "id": "g8-1-past",
+                "text": "Yesterday, Lena was carrying Arun’s case while he left the hall.",
+                "he": "אתמול לנה נשאה את המזוודה של ארון בזמן שהוא יצא מהאולם."
+              },
+              {
+                "id": "g8-1-current",
+                "text": "Today she is travelling to Cloud Garden at 18:00. Arun is going to travel tomorrow.",
+                "he": "היום היא נוסעת לגן העננים ב־18:00. ארון מתכנן לנסוע מחר."
+              },
+              {
+                "id": "g8-1-list",
+                "text": "Current boarding list: Lena Frost, 27 October, confirmed. Her gate is 2.",
+                "he": "רשימת העלייה הנוכחית: לנה פרוסט, 27 באוקטובר, מאושר. השער שלה הוא 2."
+              }
+            ]
+          }
+        ],
+        "open": true,
+        "left": 0,
+        "right": 1,
+        "evidence": [
+          "g8-1-ticket",
+          "g8-1-current"
+        ],
+        "route": {
+          "gate": "2",
+          "time": "18:00"
+        },
+        "clarified": false,
+        "paused": false,
+        "overlay": "",
+        "summary": [],
+        "events": [
+          {
+            "type": "visitor-called",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 0,
+            "stage": "guided"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 3233,
+            "document": "ticket"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 6600,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 9633,
+            "lines": [
+              "g8-1-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 12916,
+            "lines": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ]
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 15883,
+            "decision": "hold"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 17599,
+            "decision": "hold",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 1,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 0,
+            "firstAttempt": true,
+            "stage": "guided"
+          },
+          {
+            "type": "recall",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 23416,
+            "retries": 1
+          }
+        ],
+        "coordinates": "Fixed seated camera; world +X right, +Y up, -Z dock. Papers drag onto left/right desk slots.",
+        "worldAction": {
+          "decision": "",
+          "gate": "2",
+          "time": "18:00",
+          "visitorX": 0,
+          "gateOpen": false
+        },
+        "audio": {
+          "context": "running",
+          "paused": false,
+          "loopCount": 3,
+          "activeSfx": 1,
+          "cuesPlayed": 10,
+          "energy": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 16,
+          "loadErrors": [],
+          "timeline": 23.250666666666664
+        }
+      }
+    },
+    {
+      "seconds": 24,
+      "label": "corrected boarding",
+      "state": {
+        "mode": "ready",
+        "grade": 8,
+        "case": "g8-1",
+        "stage": "guided",
+        "passenger": "Lena Frost",
+        "objective": "Lena (she/her) is at the desk. Arun (he/him) left a case with her yesterday. Inspect Lena’s current journey.",
+        "rule": "Identify the current traveler and booking holder. Carrying another person’s luggage does not transfer their booking.",
+        "documents": [
+          {
+            "id": "ticket",
+            "title": "BOARDING TICKET",
+            "lines": [
+              {
+                "id": "g8-1-ticket",
+                "text": "Lena Frost · Cloud Garden · 27 October · 18:00 · Gate 2 · CONFIRMED.",
+                "he": "לנה פרוסט · גן העננים · 27 באוקטובר · 18:00 · שער 2 · מאושר."
+              },
+              {
+                "id": "g8-1-luggage",
+                "text": "Luggage label: Arun Moss. This label does not identify the ticket holder.",
+                "he": "תווית מזוודה: ארון מוס. התווית אינה מזהה את בעל הכרטיס."
+              }
+            ]
+          },
+          {
+            "id": "account",
+            "title": "DESK ACCOUNT",
+            "lines": [
+              {
+                "id": "g8-1-past",
+                "text": "Yesterday, Lena was carrying Arun’s case while he left the hall.",
+                "he": "אתמול לנה נשאה את המזוודה של ארון בזמן שהוא יצא מהאולם."
+              },
+              {
+                "id": "g8-1-current",
+                "text": "Today she is travelling to Cloud Garden at 18:00. Arun is going to travel tomorrow.",
+                "he": "היום היא נוסעת לגן העננים ב־18:00. ארון מתכנן לנסוע מחר."
+              },
+              {
+                "id": "g8-1-list",
+                "text": "Current boarding list: Lena Frost, 27 October, confirmed. Her gate is 2.",
+                "he": "רשימת העלייה הנוכחית: לנה פרוסט, 27 באוקטובר, מאושר. השער שלה הוא 2."
+              }
+            ]
+          }
+        ],
+        "open": false,
+        "left": 0,
+        "right": 1,
+        "evidence": [
+          "g8-1-ticket",
+          "g8-1-current"
+        ],
+        "route": {
+          "gate": "2",
+          "time": "18:00"
+        },
+        "clarified": false,
+        "armed": "board",
+        "paused": false,
+        "overlay": "",
+        "summary": [],
+        "events": [
+          {
+            "type": "visitor-called",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 0,
+            "stage": "guided"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 3233,
+            "document": "ticket"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 6600,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 9633,
+            "lines": [
+              "g8-1-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 12916,
+            "lines": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ]
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 15883,
+            "decision": "hold"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 17599,
+            "decision": "hold",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 1,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 0,
+            "firstAttempt": true,
+            "stage": "guided"
+          },
+          {
+            "type": "recall",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 23416,
+            "retries": 1
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 27415,
+            "decision": "board"
+          }
+        ],
+        "coordinates": "Fixed seated camera; world +X right, +Y up, -Z dock. Papers drag onto left/right desk slots.",
+        "worldAction": {
+          "decision": "",
+          "gate": "2",
+          "time": "18:00",
+          "visitorX": 0,
+          "gateOpen": false
+        },
+        "audio": {
+          "context": "running",
+          "paused": false,
+          "loopCount": 3,
+          "activeSfx": 1,
+          "cuesPlayed": 11,
+          "energy": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 16,
+          "loadErrors": [],
+          "timeline": 27.224
+        }
+      }
+    },
+    {
+      "seconds": 25,
+      "label": "board stamp",
+      "state": {
+        "mode": "result",
+        "grade": 8,
+        "case": "g8-1",
+        "stage": "guided",
+        "passenger": "Lena Frost",
+        "objective": "Lena (she/her) is at the desk. Arun (he/him) left a case with her yesterday. Inspect Lena’s current journey.",
+        "rule": "Identify the current traveler and booking holder. Carrying another person’s luggage does not transfer their booking.",
+        "documents": [
+          {
+            "id": "ticket",
+            "title": "BOARDING TICKET",
+            "lines": [
+              {
+                "id": "g8-1-ticket",
+                "text": "Lena Frost · Cloud Garden · 27 October · 18:00 · Gate 2 · CONFIRMED.",
+                "he": "לנה פרוסט · גן העננים · 27 באוקטובר · 18:00 · שער 2 · מאושר."
+              },
+              {
+                "id": "g8-1-luggage",
+                "text": "Luggage label: Arun Moss. This label does not identify the ticket holder.",
+                "he": "תווית מזוודה: ארון מוס. התווית אינה מזהה את בעל הכרטיס."
+              }
+            ]
+          },
+          {
+            "id": "account",
+            "title": "DESK ACCOUNT",
+            "lines": [
+              {
+                "id": "g8-1-past",
+                "text": "Yesterday, Lena was carrying Arun’s case while he left the hall.",
+                "he": "אתמול לנה נשאה את המזוודה של ארון בזמן שהוא יצא מהאולם."
+              },
+              {
+                "id": "g8-1-current",
+                "text": "Today she is travelling to Cloud Garden at 18:00. Arun is going to travel tomorrow.",
+                "he": "היום היא נוסעת לגן העננים ב־18:00. ארון מתכנן לנסוע מחר."
+              },
+              {
+                "id": "g8-1-list",
+                "text": "Current boarding list: Lena Frost, 27 October, confirmed. Her gate is 2.",
+                "he": "רשימת העלייה הנוכחית: לנה פרוסט, 27 באוקטובר, מאושר. השער שלה הוא 2."
+              }
+            ]
+          }
+        ],
+        "open": false,
+        "left": 0,
+        "right": 1,
+        "evidence": [
+          "g8-1-ticket",
+          "g8-1-current"
+        ],
+        "route": {
+          "gate": "2",
+          "time": "18:00"
+        },
+        "clarified": false,
+        "result": {
+          "correct": true,
+          "comprehension": true,
+          "needsClarification": false,
+          "reason": "“Today she is travelling” מתייחס ללנה, בניגוד לתיאור המזוודה אתמול ולתוכנית של ארון למחר. הכרטיס והרשימה מאשרים את הנסיעה שלה היום ב־18:00, שער 2."
+        },
+        "paused": false,
+        "overlay": "",
+        "summary": [
+          {
+            "id": "g8-1",
+            "credit": true,
+            "unaided": false,
+            "stage": "guided"
+          }
+        ],
+        "events": [
+          {
+            "type": "visitor-called",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 0,
+            "stage": "guided"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 3233,
+            "document": "ticket"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 6600,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 9633,
+            "lines": [
+              "g8-1-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 12916,
+            "lines": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ]
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 15883,
+            "decision": "hold"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 17599,
+            "decision": "hold",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 1,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 0,
+            "firstAttempt": true,
+            "stage": "guided"
+          },
+          {
+            "type": "recall",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 23416,
+            "retries": 1
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 27415,
+            "decision": "board"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 28415,
+            "decision": "board",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 2,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 1,
+            "firstAttempt": false,
+            "stage": "guided"
+          }
+        ],
+        "coordinates": "Fixed seated camera; world +X right, +Y up, -Z dock. Papers drag onto left/right desk slots.",
+        "worldAction": {
+          "decision": "board",
+          "gate": "2",
+          "time": "18:00",
+          "visitorX": 0,
+          "gateOpen": false
+        },
+        "audio": {
+          "context": "running",
+          "paused": false,
+          "loopCount": 3,
+          "activeSfx": 1,
+          "cuesPlayed": 12,
+          "energy": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 16,
+          "loadErrors": [],
+          "timeline": 28.226666666666667
+        }
+      }
+    },
+    {
+      "seconds": 29,
+      "label": "board ink and open gate",
+      "state": {
+        "mode": "result",
+        "grade": 8,
+        "case": "g8-1",
+        "stage": "guided",
+        "passenger": "Lena Frost",
+        "objective": "Lena (she/her) is at the desk. Arun (he/him) left a case with her yesterday. Inspect Lena’s current journey.",
+        "rule": "Identify the current traveler and booking holder. Carrying another person’s luggage does not transfer their booking.",
+        "documents": [
+          {
+            "id": "ticket",
+            "title": "BOARDING TICKET",
+            "lines": [
+              {
+                "id": "g8-1-ticket",
+                "text": "Lena Frost · Cloud Garden · 27 October · 18:00 · Gate 2 · CONFIRMED.",
+                "he": "לנה פרוסט · גן העננים · 27 באוקטובר · 18:00 · שער 2 · מאושר."
+              },
+              {
+                "id": "g8-1-luggage",
+                "text": "Luggage label: Arun Moss. This label does not identify the ticket holder.",
+                "he": "תווית מזוודה: ארון מוס. התווית אינה מזהה את בעל הכרטיס."
+              }
+            ]
+          },
+          {
+            "id": "account",
+            "title": "DESK ACCOUNT",
+            "lines": [
+              {
+                "id": "g8-1-past",
+                "text": "Yesterday, Lena was carrying Arun’s case while he left the hall.",
+                "he": "אתמול לנה נשאה את המזוודה של ארון בזמן שהוא יצא מהאולם."
+              },
+              {
+                "id": "g8-1-current",
+                "text": "Today she is travelling to Cloud Garden at 18:00. Arun is going to travel tomorrow.",
+                "he": "היום היא נוסעת לגן העננים ב־18:00. ארון מתכנן לנסוע מחר."
+              },
+              {
+                "id": "g8-1-list",
+                "text": "Current boarding list: Lena Frost, 27 October, confirmed. Her gate is 2.",
+                "he": "רשימת העלייה הנוכחית: לנה פרוסט, 27 באוקטובר, מאושר. השער שלה הוא 2."
+              }
+            ]
+          }
+        ],
+        "open": false,
+        "left": 0,
+        "right": 1,
+        "evidence": [
+          "g8-1-ticket",
+          "g8-1-current"
+        ],
+        "route": {
+          "gate": "2",
+          "time": "18:00"
+        },
+        "clarified": false,
+        "result": {
+          "correct": true,
+          "comprehension": true,
+          "needsClarification": false,
+          "reason": "“Today she is travelling” מתייחס ללנה, בניגוד לתיאור המזוודה אתמול ולתוכנית של ארון למחר. הכרטיס והרשימה מאשרים את הנסיעה שלה היום ב־18:00, שער 2."
+        },
+        "paused": false,
+        "overlay": "",
+        "summary": [
+          {
+            "id": "g8-1",
+            "credit": true,
+            "unaided": false,
+            "stage": "guided"
+          }
+        ],
+        "events": [
+          {
+            "type": "visitor-called",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 0,
+            "stage": "guided"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 3233,
+            "document": "ticket"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 6600,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 9633,
+            "lines": [
+              "g8-1-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 12916,
+            "lines": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ]
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 15883,
+            "decision": "hold"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 17599,
+            "decision": "hold",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 1,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 0,
+            "firstAttempt": true,
+            "stage": "guided"
+          },
+          {
+            "type": "recall",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 23416,
+            "retries": 1
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 27415,
+            "decision": "board"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 28415,
+            "decision": "board",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 2,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 1,
+            "firstAttempt": false,
+            "stage": "guided"
+          }
+        ],
+        "coordinates": "Fixed seated camera; world +X right, +Y up, -Z dock. Papers drag onto left/right desk slots.",
+        "worldAction": {
+          "decision": "board",
+          "gate": "2",
+          "time": "18:00",
+          "visitorX": 2.8,
+          "gateOpen": true
+        },
+        "audio": {
+          "context": "running",
+          "paused": false,
+          "loopCount": 3,
+          "activeSfx": 0,
+          "cuesPlayed": 13,
+          "energy": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 16,
+          "loadErrors": [],
+          "timeline": 32.28
+        }
+      }
+    },
+    {
+      "seconds": 30,
+      "label": "new visitor and complication",
+      "state": {
+        "mode": "ready",
+        "grade": 8,
+        "case": "g8-2",
+        "stage": "independent",
+        "passenger": "Nora Reed",
+        "objective": "Nora’s original ticket is correct except for any change made by the operations notice. Route this exact journey.",
+        "rule": "An update changes only its named journey/date and fields. Preserve every unchanged detail. “It” refers to the named trip.",
+        "documents": [
+          {
+            "id": "ticket",
+            "title": "ORIGINAL TICKET",
+            "lines": [
+              {
+                "id": "g8-2-ticket",
+                "text": "Nora Reed · Cloud Garden · 27 October · 18:00 · Gate 2 · CONFIRMED.",
+                "he": "נורה ריד · גן העננים · 27 באוקטובר · 18:00 · שער 2 · מאושר."
+              },
+              {
+                "id": "g8-2-other",
+                "text": "Harbor Lights departs at 19:00 from Gate 4.",
+                "he": "אורות הנמל יוצא ב־19:00 משער 4."
+              }
+            ]
+          },
+          {
+            "id": "notice",
+            "title": "OPERATIONS UPDATE · 27 OCT",
+            "lines": [
+              {
+                "id": "g8-2-update",
+                "text": "For the 18:00 Cloud Garden trip today, use Gate 3. Its departure time is unchanged.",
+                "he": "לנסיעת 18:00 לגן העננים היום, השתמשו בשער 3. שעת היציאה שלה אינה משתנה."
+              },
+              {
+                "id": "g8-2-reference",
+                "text": "Nora is booked on that trip. She should use its updated gate.",
+                "he": "נורה מוזמנת לנסיעה הזאת. עליה להשתמש בשער המעודכן שלה."
+              }
+            ]
+          }
+        ],
+        "open": false,
+        "left": 0,
+        "right": 1,
+        "evidence": [],
+        "route": {
+          "gate": "2",
+          "time": "19:00"
+        },
+        "clarified": false,
+        "paused": false,
+        "overlay": "",
+        "summary": [
+          {
+            "id": "g8-1",
+            "credit": true,
+            "unaided": false,
+            "stage": "guided"
+          }
+        ],
+        "events": [
+          {
+            "type": "visitor-called",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 0,
+            "stage": "guided"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 3233,
+            "document": "ticket"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 6600,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 9633,
+            "lines": [
+              "g8-1-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 12916,
+            "lines": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ]
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 15883,
+            "decision": "hold"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 17599,
+            "decision": "hold",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 1,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 0,
+            "firstAttempt": true,
+            "stage": "guided"
+          },
+          {
+            "type": "recall",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 23416,
+            "retries": 1
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 27415,
+            "decision": "board"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 28415,
+            "decision": "board",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 2,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 1,
+            "firstAttempt": false,
+            "stage": "guided"
+          },
+          {
+            "type": "visitor-called",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 33415,
+            "stage": "independent"
+          }
+        ],
+        "coordinates": "Fixed seated camera; world +X right, +Y up, -Z dock. Papers drag onto left/right desk slots.",
+        "worldAction": {
+          "decision": "",
+          "gate": "2",
+          "time": "18:00",
+          "visitorX": 0,
+          "gateOpen": false
+        },
+        "audio": {
+          "context": "running",
+          "paused": false,
+          "loopCount": 3,
+          "activeSfx": 1,
+          "cuesPlayed": 14,
+          "energy": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 16,
+          "loadErrors": [],
+          "timeline": 33.224000000000004
+        }
+      }
+    },
+    {
+      "seconds": 32,
+      "label": "current rulebook",
+      "state": {
+        "mode": "ready",
+        "grade": 8,
+        "case": "g8-2",
+        "stage": "independent",
+        "passenger": "Nora Reed",
+        "objective": "Nora’s original ticket is correct except for any change made by the operations notice. Route this exact journey.",
+        "rule": "An update changes only its named journey/date and fields. Preserve every unchanged detail. “It” refers to the named trip.",
+        "documents": [
+          {
+            "id": "ticket",
+            "title": "ORIGINAL TICKET",
+            "lines": [
+              {
+                "id": "g8-2-ticket",
+                "text": "Nora Reed · Cloud Garden · 27 October · 18:00 · Gate 2 · CONFIRMED.",
+                "he": "נורה ריד · גן העננים · 27 באוקטובר · 18:00 · שער 2 · מאושר."
+              },
+              {
+                "id": "g8-2-other",
+                "text": "Harbor Lights departs at 19:00 from Gate 4.",
+                "he": "אורות הנמל יוצא ב־19:00 משער 4."
+              }
+            ]
+          },
+          {
+            "id": "notice",
+            "title": "OPERATIONS UPDATE · 27 OCT",
+            "lines": [
+              {
+                "id": "g8-2-update",
+                "text": "For the 18:00 Cloud Garden trip today, use Gate 3. Its departure time is unchanged.",
+                "he": "לנסיעת 18:00 לגן העננים היום, השתמשו בשער 3. שעת היציאה שלה אינה משתנה."
+              },
+              {
+                "id": "g8-2-reference",
+                "text": "Nora is booked on that trip. She should use its updated gate.",
+                "he": "נורה מוזמנת לנסיעה הזאת. עליה להשתמש בשער המעודכן שלה."
+              }
+            ]
+          }
+        ],
+        "open": false,
+        "left": 0,
+        "right": 1,
+        "evidence": [],
+        "route": {
+          "gate": "2",
+          "time": "19:00"
+        },
+        "clarified": false,
+        "paused": false,
+        "overlay": "rules",
+        "summary": [
+          {
+            "id": "g8-1",
+            "credit": true,
+            "unaided": false,
+            "stage": "guided"
+          }
+        ],
+        "events": [
+          {
+            "type": "visitor-called",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 0,
+            "stage": "guided"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 3233,
+            "document": "ticket"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 6600,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 9633,
+            "lines": [
+              "g8-1-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 12916,
+            "lines": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ]
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 15883,
+            "decision": "hold"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 17599,
+            "decision": "hold",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 1,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 0,
+            "firstAttempt": true,
+            "stage": "guided"
+          },
+          {
+            "type": "recall",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 23416,
+            "retries": 1
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 27415,
+            "decision": "board"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 28415,
+            "decision": "board",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 2,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 1,
+            "firstAttempt": false,
+            "stage": "guided"
+          },
+          {
+            "type": "visitor-called",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 33415,
+            "stage": "independent"
+          }
+        ],
+        "coordinates": "Fixed seated camera; world +X right, +Y up, -Z dock. Papers drag onto left/right desk slots.",
+        "worldAction": {
+          "decision": "",
+          "gate": "2",
+          "time": "18:00",
+          "visitorX": 0,
+          "gateOpen": false
+        },
+        "audio": {
+          "context": "running",
+          "paused": false,
+          "loopCount": 3,
+          "activeSfx": 1,
+          "cuesPlayed": 15,
+          "energy": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 16,
+          "loadErrors": [],
+          "timeline": 35.224000000000004
+        }
+      }
+    },
+    {
+      "seconds": 36,
+      "label": "close rulebook",
+      "state": {
+        "mode": "ready",
+        "grade": 8,
+        "case": "g8-2",
+        "stage": "independent",
+        "passenger": "Nora Reed",
+        "objective": "Nora’s original ticket is correct except for any change made by the operations notice. Route this exact journey.",
+        "rule": "An update changes only its named journey/date and fields. Preserve every unchanged detail. “It” refers to the named trip.",
+        "documents": [
+          {
+            "id": "ticket",
+            "title": "ORIGINAL TICKET",
+            "lines": [
+              {
+                "id": "g8-2-ticket",
+                "text": "Nora Reed · Cloud Garden · 27 October · 18:00 · Gate 2 · CONFIRMED.",
+                "he": "נורה ריד · גן העננים · 27 באוקטובר · 18:00 · שער 2 · מאושר."
+              },
+              {
+                "id": "g8-2-other",
+                "text": "Harbor Lights departs at 19:00 from Gate 4.",
+                "he": "אורות הנמל יוצא ב־19:00 משער 4."
+              }
+            ]
+          },
+          {
+            "id": "notice",
+            "title": "OPERATIONS UPDATE · 27 OCT",
+            "lines": [
+              {
+                "id": "g8-2-update",
+                "text": "For the 18:00 Cloud Garden trip today, use Gate 3. Its departure time is unchanged.",
+                "he": "לנסיעת 18:00 לגן העננים היום, השתמשו בשער 3. שעת היציאה שלה אינה משתנה."
+              },
+              {
+                "id": "g8-2-reference",
+                "text": "Nora is booked on that trip. She should use its updated gate.",
+                "he": "נורה מוזמנת לנסיעה הזאת. עליה להשתמש בשער המעודכן שלה."
+              }
+            ]
+          }
+        ],
+        "open": false,
+        "left": 0,
+        "right": 1,
+        "evidence": [],
+        "route": {
+          "gate": "2",
+          "time": "19:00"
+        },
+        "clarified": false,
+        "paused": false,
+        "overlay": "",
+        "summary": [
+          {
+            "id": "g8-1",
+            "credit": true,
+            "unaided": false,
+            "stage": "guided"
+          }
+        ],
+        "events": [
+          {
+            "type": "visitor-called",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 0,
+            "stage": "guided"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 3233,
+            "document": "ticket"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 6600,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 9633,
+            "lines": [
+              "g8-1-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 12916,
+            "lines": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ]
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 15883,
+            "decision": "hold"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 17599,
+            "decision": "hold",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 1,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 0,
+            "firstAttempt": true,
+            "stage": "guided"
+          },
+          {
+            "type": "recall",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 23416,
+            "retries": 1
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 27415,
+            "decision": "board"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 28415,
+            "decision": "board",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 2,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 1,
+            "firstAttempt": false,
+            "stage": "guided"
+          },
+          {
+            "type": "visitor-called",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 33415,
+            "stage": "independent"
+          }
+        ],
+        "coordinates": "Fixed seated camera; world +X right, +Y up, -Z dock. Papers drag onto left/right desk slots.",
+        "worldAction": {
+          "decision": "",
+          "gate": "2",
+          "time": "18:00",
+          "visitorX": 0,
+          "gateOpen": false
+        },
+        "audio": {
+          "context": "running",
+          "paused": false,
+          "loopCount": 3,
+          "activeSfx": 0,
+          "cuesPlayed": 15,
+          "energy": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 16,
+          "loadErrors": [],
+          "timeline": 39.21866666666667
+        }
+      }
+    },
+    {
+      "seconds": 37,
+      "label": "compare current scoped update",
+      "state": {
+        "mode": "inspect",
+        "grade": 8,
+        "case": "g8-2",
+        "stage": "independent",
+        "passenger": "Nora Reed",
+        "objective": "Nora’s original ticket is correct except for any change made by the operations notice. Route this exact journey.",
+        "rule": "An update changes only its named journey/date and fields. Preserve every unchanged detail. “It” refers to the named trip.",
+        "documents": [
+          {
+            "id": "ticket",
+            "title": "ORIGINAL TICKET",
+            "lines": [
+              {
+                "id": "g8-2-ticket",
+                "text": "Nora Reed · Cloud Garden · 27 October · 18:00 · Gate 2 · CONFIRMED.",
+                "he": "נורה ריד · גן העננים · 27 באוקטובר · 18:00 · שער 2 · מאושר."
+              },
+              {
+                "id": "g8-2-other",
+                "text": "Harbor Lights departs at 19:00 from Gate 4.",
+                "he": "אורות הנמל יוצא ב־19:00 משער 4."
+              }
+            ]
+          },
+          {
+            "id": "notice",
+            "title": "OPERATIONS UPDATE · 27 OCT",
+            "lines": [
+              {
+                "id": "g8-2-update",
+                "text": "For the 18:00 Cloud Garden trip today, use Gate 3. Its departure time is unchanged.",
+                "he": "לנסיעת 18:00 לגן העננים היום, השתמשו בשער 3. שעת היציאה שלה אינה משתנה."
+              },
+              {
+                "id": "g8-2-reference",
+                "text": "Nora is booked on that trip. She should use its updated gate.",
+                "he": "נורה מוזמנת לנסיעה הזאת. עליה להשתמש בשער המעודכן שלה."
+              }
+            ]
+          }
+        ],
+        "open": true,
+        "left": 0,
+        "right": 1,
+        "evidence": [],
+        "route": {
+          "gate": "2",
+          "time": "19:00"
+        },
+        "clarified": false,
+        "paused": false,
+        "overlay": "",
+        "summary": [
+          {
+            "id": "g8-1",
+            "credit": true,
+            "unaided": false,
+            "stage": "guided"
+          }
+        ],
+        "events": [
+          {
+            "type": "visitor-called",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 0,
+            "stage": "guided"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 3233,
+            "document": "ticket"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 6600,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 9633,
+            "lines": [
+              "g8-1-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 12916,
+            "lines": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ]
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 15883,
+            "decision": "hold"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 17599,
+            "decision": "hold",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 1,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 0,
+            "firstAttempt": true,
+            "stage": "guided"
+          },
+          {
+            "type": "recall",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 23416,
+            "retries": 1
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 27415,
+            "decision": "board"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 28415,
+            "decision": "board",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 2,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 1,
+            "firstAttempt": false,
+            "stage": "guided"
+          },
+          {
+            "type": "visitor-called",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 33415,
+            "stage": "independent"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 40515,
+            "document": "ticket"
+          }
+        ],
+        "coordinates": "Fixed seated camera; world +X right, +Y up, -Z dock. Papers drag onto left/right desk slots.",
+        "worldAction": {
+          "decision": "",
+          "gate": "2",
+          "time": "18:00",
+          "visitorX": 0,
+          "gateOpen": false
+        },
+        "audio": {
+          "context": "running",
+          "paused": false,
+          "loopCount": 3,
+          "activeSfx": 1,
+          "cuesPlayed": 16,
+          "energy": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 16,
+          "loadErrors": [],
+          "timeline": 40.333333333333336
+        }
+      }
+    },
+    {
+      "seconds": 39,
+      "label": "original evidence",
+      "state": {
+        "mode": "inspect",
+        "grade": 8,
+        "case": "g8-2",
+        "stage": "independent",
+        "passenger": "Nora Reed",
+        "objective": "Nora’s original ticket is correct except for any change made by the operations notice. Route this exact journey.",
+        "rule": "An update changes only its named journey/date and fields. Preserve every unchanged detail. “It” refers to the named trip.",
+        "documents": [
+          {
+            "id": "ticket",
+            "title": "ORIGINAL TICKET",
+            "lines": [
+              {
+                "id": "g8-2-ticket",
+                "text": "Nora Reed · Cloud Garden · 27 October · 18:00 · Gate 2 · CONFIRMED.",
+                "he": "נורה ריד · גן העננים · 27 באוקטובר · 18:00 · שער 2 · מאושר."
+              },
+              {
+                "id": "g8-2-other",
+                "text": "Harbor Lights departs at 19:00 from Gate 4.",
+                "he": "אורות הנמל יוצא ב־19:00 משער 4."
+              }
+            ]
+          },
+          {
+            "id": "notice",
+            "title": "OPERATIONS UPDATE · 27 OCT",
+            "lines": [
+              {
+                "id": "g8-2-update",
+                "text": "For the 18:00 Cloud Garden trip today, use Gate 3. Its departure time is unchanged.",
+                "he": "לנסיעת 18:00 לגן העננים היום, השתמשו בשער 3. שעת היציאה שלה אינה משתנה."
+              },
+              {
+                "id": "g8-2-reference",
+                "text": "Nora is booked on that trip. She should use its updated gate.",
+                "he": "נורה מוזמנת לנסיעה הזאת. עליה להשתמש בשער המעודכן שלה."
+              }
+            ]
+          }
+        ],
+        "open": true,
+        "left": 0,
+        "right": 1,
+        "evidence": [
+          "g8-2-ticket"
+        ],
+        "route": {
+          "gate": "2",
+          "time": "19:00"
+        },
+        "clarified": false,
+        "paused": false,
+        "overlay": "",
+        "summary": [
+          {
+            "id": "g8-1",
+            "credit": true,
+            "unaided": false,
+            "stage": "guided"
+          }
+        ],
+        "events": [
+          {
+            "type": "visitor-called",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 0,
+            "stage": "guided"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 3233,
+            "document": "ticket"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 6600,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 9633,
+            "lines": [
+              "g8-1-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 12916,
+            "lines": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ]
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 15883,
+            "decision": "hold"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 17599,
+            "decision": "hold",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 1,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 0,
+            "firstAttempt": true,
+            "stage": "guided"
+          },
+          {
+            "type": "recall",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 23416,
+            "retries": 1
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 27415,
+            "decision": "board"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 28415,
+            "decision": "board",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 2,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 1,
+            "firstAttempt": false,
+            "stage": "guided"
+          },
+          {
+            "type": "visitor-called",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 33415,
+            "stage": "independent"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 40515,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 42415,
+            "lines": [
+              "g8-2-ticket"
+            ]
+          }
+        ],
+        "coordinates": "Fixed seated camera; world +X right, +Y up, -Z dock. Papers drag onto left/right desk slots.",
+        "worldAction": {
+          "decision": "",
+          "gate": "2",
+          "time": "18:00",
+          "visitorX": 0,
+          "gateOpen": false
+        },
+        "audio": {
+          "context": "running",
+          "paused": false,
+          "loopCount": 3,
+          "activeSfx": 1,
+          "cuesPlayed": 17,
+          "energy": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 16,
+          "loadErrors": [],
+          "timeline": 42.221333333333334
+        }
+      }
+    },
+    {
+      "seconds": 41,
+      "label": "update evidence",
+      "state": {
+        "mode": "inspect",
+        "grade": 8,
+        "case": "g8-2",
+        "stage": "independent",
+        "passenger": "Nora Reed",
+        "objective": "Nora’s original ticket is correct except for any change made by the operations notice. Route this exact journey.",
+        "rule": "An update changes only its named journey/date and fields. Preserve every unchanged detail. “It” refers to the named trip.",
+        "documents": [
+          {
+            "id": "ticket",
+            "title": "ORIGINAL TICKET",
+            "lines": [
+              {
+                "id": "g8-2-ticket",
+                "text": "Nora Reed · Cloud Garden · 27 October · 18:00 · Gate 2 · CONFIRMED.",
+                "he": "נורה ריד · גן העננים · 27 באוקטובר · 18:00 · שער 2 · מאושר."
+              },
+              {
+                "id": "g8-2-other",
+                "text": "Harbor Lights departs at 19:00 from Gate 4.",
+                "he": "אורות הנמל יוצא ב־19:00 משער 4."
+              }
+            ]
+          },
+          {
+            "id": "notice",
+            "title": "OPERATIONS UPDATE · 27 OCT",
+            "lines": [
+              {
+                "id": "g8-2-update",
+                "text": "For the 18:00 Cloud Garden trip today, use Gate 3. Its departure time is unchanged.",
+                "he": "לנסיעת 18:00 לגן העננים היום, השתמשו בשער 3. שעת היציאה שלה אינה משתנה."
+              },
+              {
+                "id": "g8-2-reference",
+                "text": "Nora is booked on that trip. She should use its updated gate.",
+                "he": "נורה מוזמנת לנסיעה הזאת. עליה להשתמש בשער המעודכן שלה."
+              }
+            ]
+          }
+        ],
+        "open": true,
+        "left": 0,
+        "right": 1,
+        "evidence": [
+          "g8-2-ticket",
+          "g8-2-update"
+        ],
+        "route": {
+          "gate": "2",
+          "time": "19:00"
+        },
+        "clarified": false,
+        "paused": false,
+        "overlay": "",
+        "summary": [
+          {
+            "id": "g8-1",
+            "credit": true,
+            "unaided": false,
+            "stage": "guided"
+          }
+        ],
+        "events": [
+          {
+            "type": "visitor-called",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 0,
+            "stage": "guided"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 3233,
+            "document": "ticket"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 6600,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 9633,
+            "lines": [
+              "g8-1-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 12916,
+            "lines": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ]
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 15883,
+            "decision": "hold"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 17599,
+            "decision": "hold",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 1,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 0,
+            "firstAttempt": true,
+            "stage": "guided"
+          },
+          {
+            "type": "recall",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 23416,
+            "retries": 1
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 27415,
+            "decision": "board"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 28415,
+            "decision": "board",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 2,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 1,
+            "firstAttempt": false,
+            "stage": "guided"
+          },
+          {
+            "type": "visitor-called",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 33415,
+            "stage": "independent"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 40515,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 42415,
+            "lines": [
+              "g8-2-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 44415,
+            "lines": [
+              "g8-2-ticket",
+              "g8-2-update"
+            ]
+          }
+        ],
+        "coordinates": "Fixed seated camera; world +X right, +Y up, -Z dock. Papers drag onto left/right desk slots.",
+        "worldAction": {
+          "decision": "",
+          "gate": "2",
+          "time": "18:00",
+          "visitorX": 0,
+          "gateOpen": false
+        },
+        "audio": {
+          "context": "running",
+          "paused": false,
+          "loopCount": 3,
+          "activeSfx": 1,
+          "cuesPlayed": 18,
+          "energy": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 16,
+          "loadErrors": [],
+          "timeline": 44.216
+        }
+      }
+    },
+    {
+      "seconds": 43,
+      "label": "target comparison",
+      "state": {
+        "mode": "inspect",
+        "grade": 8,
+        "case": "g8-2",
+        "stage": "independent",
+        "passenger": "Nora Reed",
+        "objective": "Nora’s original ticket is correct except for any change made by the operations notice. Route this exact journey.",
+        "rule": "An update changes only its named journey/date and fields. Preserve every unchanged detail. “It” refers to the named trip.",
+        "documents": [
+          {
+            "id": "ticket",
+            "title": "ORIGINAL TICKET",
+            "lines": [
+              {
+                "id": "g8-2-ticket",
+                "text": "Nora Reed · Cloud Garden · 27 October · 18:00 · Gate 2 · CONFIRMED.",
+                "he": "נורה ריד · גן העננים · 27 באוקטובר · 18:00 · שער 2 · מאושר."
+              },
+              {
+                "id": "g8-2-other",
+                "text": "Harbor Lights departs at 19:00 from Gate 4.",
+                "he": "אורות הנמל יוצא ב־19:00 משער 4."
+              }
+            ]
+          },
+          {
+            "id": "notice",
+            "title": "OPERATIONS UPDATE · 27 OCT",
+            "lines": [
+              {
+                "id": "g8-2-update",
+                "text": "For the 18:00 Cloud Garden trip today, use Gate 3. Its departure time is unchanged.",
+                "he": "לנסיעת 18:00 לגן העננים היום, השתמשו בשער 3. שעת היציאה שלה אינה משתנה."
+              },
+              {
+                "id": "g8-2-reference",
+                "text": "Nora is booked on that trip. She should use its updated gate.",
+                "he": "נורה מוזמנת לנסיעה הזאת. עליה להשתמש בשער המעודכן שלה."
+              }
+            ]
+          }
+        ],
+        "open": true,
+        "left": 0,
+        "right": 1,
+        "evidence": [
+          "g8-2-ticket",
+          "g8-2-update"
+        ],
+        "route": {
+          "gate": "2",
+          "time": "19:00"
+        },
+        "clarified": false,
+        "paused": false,
+        "overlay": "",
+        "summary": [
+          {
+            "id": "g8-1",
+            "credit": true,
+            "unaided": false,
+            "stage": "guided"
+          }
+        ],
+        "events": [
+          {
+            "type": "visitor-called",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 0,
+            "stage": "guided"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 3233,
+            "document": "ticket"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 6600,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 9633,
+            "lines": [
+              "g8-1-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 12916,
+            "lines": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ]
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 15883,
+            "decision": "hold"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 17599,
+            "decision": "hold",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 1,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 0,
+            "firstAttempt": true,
+            "stage": "guided"
+          },
+          {
+            "type": "recall",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 23416,
+            "retries": 1
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 27415,
+            "decision": "board"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 28415,
+            "decision": "board",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 2,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 1,
+            "firstAttempt": false,
+            "stage": "guided"
+          },
+          {
+            "type": "visitor-called",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 33415,
+            "stage": "independent"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 40515,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 42415,
+            "lines": [
+              "g8-2-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 44415,
+            "lines": [
+              "g8-2-ticket",
+              "g8-2-update"
+            ]
+          }
+        ],
+        "coordinates": "Fixed seated camera; world +X right, +Y up, -Z dock. Papers drag onto left/right desk slots.",
+        "worldAction": {
+          "decision": "",
+          "gate": "2",
+          "time": "18:00",
+          "visitorX": 0,
+          "gateOpen": false
+        },
+        "audio": {
+          "context": "running",
+          "paused": false,
+          "loopCount": 3,
+          "activeSfx": 0,
+          "cuesPlayed": 18,
+          "energy": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 16,
+          "loadErrors": [],
+          "timeline": 46.27466666666667
+        }
+      }
+    },
+    {
+      "seconds": 44,
+      "label": "route gate3 unchanged18",
+      "state": {
+        "mode": "ready",
+        "grade": 8,
+        "case": "g8-2",
+        "stage": "independent",
+        "passenger": "Nora Reed",
+        "objective": "Nora’s original ticket is correct except for any change made by the operations notice. Route this exact journey.",
+        "rule": "An update changes only its named journey/date and fields. Preserve every unchanged detail. “It” refers to the named trip.",
+        "documents": [
+          {
+            "id": "ticket",
+            "title": "ORIGINAL TICKET",
+            "lines": [
+              {
+                "id": "g8-2-ticket",
+                "text": "Nora Reed · Cloud Garden · 27 October · 18:00 · Gate 2 · CONFIRMED.",
+                "he": "נורה ריד · גן העננים · 27 באוקטובר · 18:00 · שער 2 · מאושר."
+              },
+              {
+                "id": "g8-2-other",
+                "text": "Harbor Lights departs at 19:00 from Gate 4.",
+                "he": "אורות הנמל יוצא ב־19:00 משער 4."
+              }
+            ]
+          },
+          {
+            "id": "notice",
+            "title": "OPERATIONS UPDATE · 27 OCT",
+            "lines": [
+              {
+                "id": "g8-2-update",
+                "text": "For the 18:00 Cloud Garden trip today, use Gate 3. Its departure time is unchanged.",
+                "he": "לנסיעת 18:00 לגן העננים היום, השתמשו בשער 3. שעת היציאה שלה אינה משתנה."
+              },
+              {
+                "id": "g8-2-reference",
+                "text": "Nora is booked on that trip. She should use its updated gate.",
+                "he": "נורה מוזמנת לנסיעה הזאת. עליה להשתמש בשער המעודכן שלה."
+              }
+            ]
+          }
+        ],
+        "open": false,
+        "left": 0,
+        "right": 1,
+        "evidence": [
+          "g8-2-ticket",
+          "g8-2-update"
+        ],
+        "route": {
+          "gate": "3",
+          "time": "18:00"
+        },
+        "clarified": false,
+        "armed": "board",
+        "paused": false,
+        "overlay": "",
+        "summary": [
+          {
+            "id": "g8-1",
+            "credit": true,
+            "unaided": false,
+            "stage": "guided"
+          }
+        ],
+        "events": [
+          {
+            "type": "visitor-called",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 0,
+            "stage": "guided"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 3233,
+            "document": "ticket"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 6600,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 9633,
+            "lines": [
+              "g8-1-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 12916,
+            "lines": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ]
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 15883,
+            "decision": "hold"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 17599,
+            "decision": "hold",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 1,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 0,
+            "firstAttempt": true,
+            "stage": "guided"
+          },
+          {
+            "type": "recall",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 23416,
+            "retries": 1
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 27415,
+            "decision": "board"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 28415,
+            "decision": "board",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 2,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 1,
+            "firstAttempt": false,
+            "stage": "guided"
+          },
+          {
+            "type": "visitor-called",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 33415,
+            "stage": "independent"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 40515,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 42415,
+            "lines": [
+              "g8-2-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 44415,
+            "lines": [
+              "g8-2-ticket",
+              "g8-2-update"
+            ]
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 47431,
+            "decision": "board"
+          }
+        ],
+        "coordinates": "Fixed seated camera; world +X right, +Y up, -Z dock. Papers drag onto left/right desk slots.",
+        "worldAction": {
+          "decision": "",
+          "gate": "2",
+          "time": "18:00",
+          "visitorX": 0,
+          "gateOpen": false
+        },
+        "audio": {
+          "context": "running",
+          "paused": false,
+          "loopCount": 3,
+          "activeSfx": 1,
+          "cuesPlayed": 19,
+          "energy": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 16,
+          "loadErrors": [],
+          "timeline": 47.23466666666667
+        }
+      }
+    },
+    {
+      "seconds": 45,
+      "label": "stamp scoped update",
+      "state": {
+        "mode": "result",
+        "grade": 8,
+        "case": "g8-2",
+        "stage": "independent",
+        "passenger": "Nora Reed",
+        "objective": "Nora’s original ticket is correct except for any change made by the operations notice. Route this exact journey.",
+        "rule": "An update changes only its named journey/date and fields. Preserve every unchanged detail. “It” refers to the named trip.",
+        "documents": [
+          {
+            "id": "ticket",
+            "title": "ORIGINAL TICKET",
+            "lines": [
+              {
+                "id": "g8-2-ticket",
+                "text": "Nora Reed · Cloud Garden · 27 October · 18:00 · Gate 2 · CONFIRMED.",
+                "he": "נורה ריד · גן העננים · 27 באוקטובר · 18:00 · שער 2 · מאושר."
+              },
+              {
+                "id": "g8-2-other",
+                "text": "Harbor Lights departs at 19:00 from Gate 4.",
+                "he": "אורות הנמל יוצא ב־19:00 משער 4."
+              }
+            ]
+          },
+          {
+            "id": "notice",
+            "title": "OPERATIONS UPDATE · 27 OCT",
+            "lines": [
+              {
+                "id": "g8-2-update",
+                "text": "For the 18:00 Cloud Garden trip today, use Gate 3. Its departure time is unchanged.",
+                "he": "לנסיעת 18:00 לגן העננים היום, השתמשו בשער 3. שעת היציאה שלה אינה משתנה."
+              },
+              {
+                "id": "g8-2-reference",
+                "text": "Nora is booked on that trip. She should use its updated gate.",
+                "he": "נורה מוזמנת לנסיעה הזאת. עליה להשתמש בשער המעודכן שלה."
+              }
+            ]
+          }
+        ],
+        "open": false,
+        "left": 0,
+        "right": 1,
+        "evidence": [
+          "g8-2-ticket",
+          "g8-2-update"
+        ],
+        "route": {
+          "gate": "3",
+          "time": "18:00"
+        },
+        "clarified": false,
+        "result": {
+          "correct": true,
+          "comprehension": true,
+          "needsClarification": false,
+          "reason": "“today” מחיל את העדכון על 27 באוקטובר; “Gate 3” משנה את השער. “departure time is unchanged” שומר על 18:00 מהכרטיס. הזמן של Harbor Lights אינו שייך לנסיעה הזאת."
+        },
+        "paused": false,
+        "overlay": "",
+        "summary": [
+          {
+            "id": "g8-1",
+            "credit": true,
+            "unaided": false,
+            "stage": "guided"
+          },
+          {
+            "id": "g8-2",
+            "credit": true,
+            "unaided": true,
+            "stage": "independent"
+          }
+        ],
+        "events": [
+          {
+            "type": "visitor-called",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 0,
+            "stage": "guided"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 3233,
+            "document": "ticket"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 6600,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 9633,
+            "lines": [
+              "g8-1-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 12916,
+            "lines": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ]
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 15883,
+            "decision": "hold"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 17599,
+            "decision": "hold",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 1,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 0,
+            "firstAttempt": true,
+            "stage": "guided"
+          },
+          {
+            "type": "recall",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 23416,
+            "retries": 1
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 27415,
+            "decision": "board"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 28415,
+            "decision": "board",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 2,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 1,
+            "firstAttempt": false,
+            "stage": "guided"
+          },
+          {
+            "type": "visitor-called",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 33415,
+            "stage": "independent"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 40515,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 42415,
+            "lines": [
+              "g8-2-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 44415,
+            "lines": [
+              "g8-2-ticket",
+              "g8-2-update"
+            ]
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 47431,
+            "decision": "board"
+          },
+          {
+            "type": "decision",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 48415,
+            "decision": "board",
+            "gate": "3",
+            "time": "18:00",
+            "evidence": [
+              "g8-2-ticket",
+              "g8-2-update"
+            ],
+            "clarified": false,
+            "attempts": 1,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 0,
+            "firstAttempt": true,
+            "stage": "independent"
+          }
+        ],
+        "coordinates": "Fixed seated camera; world +X right, +Y up, -Z dock. Papers drag onto left/right desk slots.",
+        "worldAction": {
+          "decision": "board",
+          "gate": "3",
+          "time": "18:00",
+          "visitorX": 0,
+          "gateOpen": false
+        },
+        "audio": {
+          "context": "running",
+          "paused": false,
+          "loopCount": 3,
+          "activeSfx": 1,
+          "cuesPlayed": 20,
+          "energy": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 16,
+          "loadErrors": [],
+          "timeline": 48.221333333333334
+        }
+      }
+    },
+    {
+      "seconds": 50,
+      "label": "changed-context transfer",
+      "state": {
+        "mode": "ready",
+        "grade": 8,
+        "case": "g8-3",
+        "stage": "transfer",
+        "passenger": "Oren Pike",
+        "objective": "At the festival’s temporary booth, Oren needs the Harbor Lights departure. Apply the message to the correct row.",
+        "rule": "Combine the original timetable with the scoped update. Changed time does not change gate or destination.",
+        "documents": [
+          {
+            "id": "ticket",
+            "title": "FESTIVAL TICKET",
+            "lines": [
+              {
+                "id": "g8-3-ticket",
+                "text": "Oren Pike · Harbor Lights · 27 October · 17:00 · Gate 4 · CONFIRMED.",
+                "he": "אורן פייק · אורות הנמל · 27 באוקטובר · 17:00 · שער 4 · מאושר."
+              },
+              {
+                "id": "g8-3-other",
+                "text": "Cloud Garden · 27 October · 18:00 · Gate 3.",
+                "he": "גן העננים · 27 באוקטובר · 18:00 · שער 3."
+              }
+            ]
+          },
+          {
+            "id": "notice",
+            "title": "MESSAGE FROM OPERATIONS",
+            "lines": [
+              {
+                "id": "g8-3-update",
+                "text": "Today’s Harbor Lights trip now leaves at 19:00. Its gate and destination stay the same.",
+                "he": "הנסיעה של היום לאורות הנמל יוצאת עכשיו ב־19:00. השער והיעד שלה נשארים כפי שהיו."
+              },
+              {
+                "id": "g8-3-tomorrow",
+                "text": "Tomorrow’s Cloud Garden trip will leave at 17:00 from Gate 2.",
+                "he": "הנסיעה של מחר לגן העננים תצא ב־17:00 משער 2."
+              }
+            ]
+          }
+        ],
+        "open": false,
+        "left": 0,
+        "right": 1,
+        "evidence": [],
+        "route": {
+          "gate": "2",
+          "time": "17:00"
+        },
+        "clarified": false,
+        "paused": false,
+        "overlay": "",
+        "summary": [
+          {
+            "id": "g8-1",
+            "credit": true,
+            "unaided": false,
+            "stage": "guided"
+          },
+          {
+            "id": "g8-2",
+            "credit": true,
+            "unaided": true,
+            "stage": "independent"
+          }
+        ],
+        "events": [
+          {
+            "type": "visitor-called",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 0,
+            "stage": "guided"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 3233,
+            "document": "ticket"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 6600,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 9633,
+            "lines": [
+              "g8-1-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 12916,
+            "lines": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ]
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 15883,
+            "decision": "hold"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 17599,
+            "decision": "hold",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 1,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 0,
+            "firstAttempt": true,
+            "stage": "guided"
+          },
+          {
+            "type": "recall",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 23416,
+            "retries": 1
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 27415,
+            "decision": "board"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 28415,
+            "decision": "board",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 2,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 1,
+            "firstAttempt": false,
+            "stage": "guided"
+          },
+          {
+            "type": "visitor-called",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 33415,
+            "stage": "independent"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 40515,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 42415,
+            "lines": [
+              "g8-2-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 44415,
+            "lines": [
+              "g8-2-ticket",
+              "g8-2-update"
+            ]
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 47431,
+            "decision": "board"
+          },
+          {
+            "type": "decision",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 48415,
+            "decision": "board",
+            "gate": "3",
+            "time": "18:00",
+            "evidence": [
+              "g8-2-ticket",
+              "g8-2-update"
+            ],
+            "clarified": false,
+            "attempts": 1,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 0,
+            "firstAttempt": true,
+            "stage": "independent"
+          },
+          {
+            "type": "visitor-called",
+            "case": "g8-3",
+            "grade": 8,
+            "at": 53415,
+            "stage": "transfer"
+          }
+        ],
+        "coordinates": "Fixed seated camera; world +X right, +Y up, -Z dock. Papers drag onto left/right desk slots.",
+        "worldAction": {
+          "decision": "",
+          "gate": "3",
+          "time": "18:00",
+          "visitorX": 0,
+          "gateOpen": false
+        },
+        "audio": {
+          "context": "running",
+          "paused": false,
+          "loopCount": 3,
+          "activeSfx": 1,
+          "cuesPlayed": 22,
+          "energy": true,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 16,
+          "loadErrors": [],
+          "timeline": 53.25066666666667
+        }
+      }
+    },
+    {
+      "seconds": 51,
+      "label": "transfer inspection",
+      "state": {
+        "mode": "inspect",
+        "grade": 8,
+        "case": "g8-3",
+        "stage": "transfer",
+        "passenger": "Oren Pike",
+        "objective": "At the festival’s temporary booth, Oren needs the Harbor Lights departure. Apply the message to the correct row.",
+        "rule": "Combine the original timetable with the scoped update. Changed time does not change gate or destination.",
+        "documents": [
+          {
+            "id": "ticket",
+            "title": "FESTIVAL TICKET",
+            "lines": [
+              {
+                "id": "g8-3-ticket",
+                "text": "Oren Pike · Harbor Lights · 27 October · 17:00 · Gate 4 · CONFIRMED.",
+                "he": "אורן פייק · אורות הנמל · 27 באוקטובר · 17:00 · שער 4 · מאושר."
+              },
+              {
+                "id": "g8-3-other",
+                "text": "Cloud Garden · 27 October · 18:00 · Gate 3.",
+                "he": "גן העננים · 27 באוקטובר · 18:00 · שער 3."
+              }
+            ]
+          },
+          {
+            "id": "notice",
+            "title": "MESSAGE FROM OPERATIONS",
+            "lines": [
+              {
+                "id": "g8-3-update",
+                "text": "Today’s Harbor Lights trip now leaves at 19:00. Its gate and destination stay the same.",
+                "he": "הנסיעה של היום לאורות הנמל יוצאת עכשיו ב־19:00. השער והיעד שלה נשארים כפי שהיו."
+              },
+              {
+                "id": "g8-3-tomorrow",
+                "text": "Tomorrow’s Cloud Garden trip will leave at 17:00 from Gate 2.",
+                "he": "הנסיעה של מחר לגן העננים תצא ב־17:00 משער 2."
+              }
+            ]
+          }
+        ],
+        "open": true,
+        "left": 0,
+        "right": 1,
+        "evidence": [],
+        "route": {
+          "gate": "2",
+          "time": "17:00"
+        },
+        "clarified": false,
+        "paused": false,
+        "overlay": "",
+        "summary": [
+          {
+            "id": "g8-1",
+            "credit": true,
+            "unaided": false,
+            "stage": "guided"
+          },
+          {
+            "id": "g8-2",
+            "credit": true,
+            "unaided": true,
+            "stage": "independent"
+          }
+        ],
+        "events": [
+          {
+            "type": "visitor-called",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 0,
+            "stage": "guided"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 3233,
+            "document": "ticket"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 6600,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 9633,
+            "lines": [
+              "g8-1-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 12916,
+            "lines": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ]
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 15883,
+            "decision": "hold"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 17599,
+            "decision": "hold",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 1,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 0,
+            "firstAttempt": true,
+            "stage": "guided"
+          },
+          {
+            "type": "recall",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 23416,
+            "retries": 1
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 27415,
+            "decision": "board"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 28415,
+            "decision": "board",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 2,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 1,
+            "firstAttempt": false,
+            "stage": "guided"
+          },
+          {
+            "type": "visitor-called",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 33415,
+            "stage": "independent"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 40515,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 42415,
+            "lines": [
+              "g8-2-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 44415,
+            "lines": [
+              "g8-2-ticket",
+              "g8-2-update"
+            ]
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 47431,
+            "decision": "board"
+          },
+          {
+            "type": "decision",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 48415,
+            "decision": "board",
+            "gate": "3",
+            "time": "18:00",
+            "evidence": [
+              "g8-2-ticket",
+              "g8-2-update"
+            ],
+            "clarified": false,
+            "attempts": 1,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 0,
+            "firstAttempt": true,
+            "stage": "independent"
+          },
+          {
+            "type": "visitor-called",
+            "case": "g8-3",
+            "grade": 8,
+            "at": 53415,
+            "stage": "transfer"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-3",
+            "grade": 8,
+            "at": 54414,
+            "document": "ticket"
+          }
+        ],
+        "coordinates": "Fixed seated camera; world +X right, +Y up, -Z dock. Papers drag onto left/right desk slots.",
+        "worldAction": {
+          "decision": "",
+          "gate": "3",
+          "time": "18:00",
+          "visitorX": 0,
+          "gateOpen": false
+        },
+        "audio": {
+          "context": "running",
+          "paused": false,
+          "loopCount": 3,
+          "activeSfx": 2,
+          "cuesPlayed": 23,
+          "energy": true,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 16,
+          "loadErrors": [],
+          "timeline": 54.22666666666667
+        }
+      }
+    },
+    {
+      "seconds": 53,
+      "label": "transfer ticket",
+      "state": {
+        "mode": "inspect",
+        "grade": 8,
+        "case": "g8-3",
+        "stage": "transfer",
+        "passenger": "Oren Pike",
+        "objective": "At the festival’s temporary booth, Oren needs the Harbor Lights departure. Apply the message to the correct row.",
+        "rule": "Combine the original timetable with the scoped update. Changed time does not change gate or destination.",
+        "documents": [
+          {
+            "id": "ticket",
+            "title": "FESTIVAL TICKET",
+            "lines": [
+              {
+                "id": "g8-3-ticket",
+                "text": "Oren Pike · Harbor Lights · 27 October · 17:00 · Gate 4 · CONFIRMED.",
+                "he": "אורן פייק · אורות הנמל · 27 באוקטובר · 17:00 · שער 4 · מאושר."
+              },
+              {
+                "id": "g8-3-other",
+                "text": "Cloud Garden · 27 October · 18:00 · Gate 3.",
+                "he": "גן העננים · 27 באוקטובר · 18:00 · שער 3."
+              }
+            ]
+          },
+          {
+            "id": "notice",
+            "title": "MESSAGE FROM OPERATIONS",
+            "lines": [
+              {
+                "id": "g8-3-update",
+                "text": "Today’s Harbor Lights trip now leaves at 19:00. Its gate and destination stay the same.",
+                "he": "הנסיעה של היום לאורות הנמל יוצאת עכשיו ב־19:00. השער והיעד שלה נשארים כפי שהיו."
+              },
+              {
+                "id": "g8-3-tomorrow",
+                "text": "Tomorrow’s Cloud Garden trip will leave at 17:00 from Gate 2.",
+                "he": "הנסיעה של מחר לגן העננים תצא ב־17:00 משער 2."
+              }
+            ]
+          }
+        ],
+        "open": true,
+        "left": 0,
+        "right": 1,
+        "evidence": [
+          "g8-3-ticket"
+        ],
+        "route": {
+          "gate": "2",
+          "time": "17:00"
+        },
+        "clarified": false,
+        "paused": false,
+        "overlay": "",
+        "summary": [
+          {
+            "id": "g8-1",
+            "credit": true,
+            "unaided": false,
+            "stage": "guided"
+          },
+          {
+            "id": "g8-2",
+            "credit": true,
+            "unaided": true,
+            "stage": "independent"
+          }
+        ],
+        "events": [
+          {
+            "type": "visitor-called",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 0,
+            "stage": "guided"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 3233,
+            "document": "ticket"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 6600,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 9633,
+            "lines": [
+              "g8-1-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 12916,
+            "lines": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ]
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 15883,
+            "decision": "hold"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 17599,
+            "decision": "hold",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 1,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 0,
+            "firstAttempt": true,
+            "stage": "guided"
+          },
+          {
+            "type": "recall",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 23416,
+            "retries": 1
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 27415,
+            "decision": "board"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 28415,
+            "decision": "board",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 2,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 1,
+            "firstAttempt": false,
+            "stage": "guided"
+          },
+          {
+            "type": "visitor-called",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 33415,
+            "stage": "independent"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 40515,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 42415,
+            "lines": [
+              "g8-2-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 44415,
+            "lines": [
+              "g8-2-ticket",
+              "g8-2-update"
+            ]
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 47431,
+            "decision": "board"
+          },
+          {
+            "type": "decision",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 48415,
+            "decision": "board",
+            "gate": "3",
+            "time": "18:00",
+            "evidence": [
+              "g8-2-ticket",
+              "g8-2-update"
+            ],
+            "clarified": false,
+            "attempts": 1,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 0,
+            "firstAttempt": true,
+            "stage": "independent"
+          },
+          {
+            "type": "visitor-called",
+            "case": "g8-3",
+            "grade": 8,
+            "at": 53415,
+            "stage": "transfer"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-3",
+            "grade": 8,
+            "at": 54414,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-3",
+            "grade": 8,
+            "at": 56414,
+            "lines": [
+              "g8-3-ticket"
+            ]
+          }
+        ],
+        "coordinates": "Fixed seated camera; world +X right, +Y up, -Z dock. Papers drag onto left/right desk slots.",
+        "worldAction": {
+          "decision": "",
+          "gate": "3",
+          "time": "18:00",
+          "visitorX": 0,
+          "gateOpen": false
+        },
+        "audio": {
+          "context": "running",
+          "paused": false,
+          "loopCount": 3,
+          "activeSfx": 1,
+          "cuesPlayed": 24,
+          "energy": true,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 16,
+          "loadErrors": [],
+          "timeline": 56.221333333333334
+        }
+      }
+    },
+    {
+      "seconds": 54,
+      "label": "transfer update",
+      "state": {
+        "mode": "inspect",
+        "grade": 8,
+        "case": "g8-3",
+        "stage": "transfer",
+        "passenger": "Oren Pike",
+        "objective": "At the festival’s temporary booth, Oren needs the Harbor Lights departure. Apply the message to the correct row.",
+        "rule": "Combine the original timetable with the scoped update. Changed time does not change gate or destination.",
+        "documents": [
+          {
+            "id": "ticket",
+            "title": "FESTIVAL TICKET",
+            "lines": [
+              {
+                "id": "g8-3-ticket",
+                "text": "Oren Pike · Harbor Lights · 27 October · 17:00 · Gate 4 · CONFIRMED.",
+                "he": "אורן פייק · אורות הנמל · 27 באוקטובר · 17:00 · שער 4 · מאושר."
+              },
+              {
+                "id": "g8-3-other",
+                "text": "Cloud Garden · 27 October · 18:00 · Gate 3.",
+                "he": "גן העננים · 27 באוקטובר · 18:00 · שער 3."
+              }
+            ]
+          },
+          {
+            "id": "notice",
+            "title": "MESSAGE FROM OPERATIONS",
+            "lines": [
+              {
+                "id": "g8-3-update",
+                "text": "Today’s Harbor Lights trip now leaves at 19:00. Its gate and destination stay the same.",
+                "he": "הנסיעה של היום לאורות הנמל יוצאת עכשיו ב־19:00. השער והיעד שלה נשארים כפי שהיו."
+              },
+              {
+                "id": "g8-3-tomorrow",
+                "text": "Tomorrow’s Cloud Garden trip will leave at 17:00 from Gate 2.",
+                "he": "הנסיעה של מחר לגן העננים תצא ב־17:00 משער 2."
+              }
+            ]
+          }
+        ],
+        "open": true,
+        "left": 0,
+        "right": 1,
+        "evidence": [
+          "g8-3-ticket",
+          "g8-3-update"
+        ],
+        "route": {
+          "gate": "2",
+          "time": "17:00"
+        },
+        "clarified": false,
+        "paused": false,
+        "overlay": "",
+        "summary": [
+          {
+            "id": "g8-1",
+            "credit": true,
+            "unaided": false,
+            "stage": "guided"
+          },
+          {
+            "id": "g8-2",
+            "credit": true,
+            "unaided": true,
+            "stage": "independent"
+          }
+        ],
+        "events": [
+          {
+            "type": "visitor-called",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 0,
+            "stage": "guided"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 3233,
+            "document": "ticket"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 6600,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 9633,
+            "lines": [
+              "g8-1-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 12916,
+            "lines": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ]
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 15883,
+            "decision": "hold"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 17599,
+            "decision": "hold",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 1,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 0,
+            "firstAttempt": true,
+            "stage": "guided"
+          },
+          {
+            "type": "recall",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 23416,
+            "retries": 1
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 27415,
+            "decision": "board"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 28415,
+            "decision": "board",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 2,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 1,
+            "firstAttempt": false,
+            "stage": "guided"
+          },
+          {
+            "type": "visitor-called",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 33415,
+            "stage": "independent"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 40515,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 42415,
+            "lines": [
+              "g8-2-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 44415,
+            "lines": [
+              "g8-2-ticket",
+              "g8-2-update"
+            ]
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 47431,
+            "decision": "board"
+          },
+          {
+            "type": "decision",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 48415,
+            "decision": "board",
+            "gate": "3",
+            "time": "18:00",
+            "evidence": [
+              "g8-2-ticket",
+              "g8-2-update"
+            ],
+            "clarified": false,
+            "attempts": 1,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 0,
+            "firstAttempt": true,
+            "stage": "independent"
+          },
+          {
+            "type": "visitor-called",
+            "case": "g8-3",
+            "grade": 8,
+            "at": 53415,
+            "stage": "transfer"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-3",
+            "grade": 8,
+            "at": 54414,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-3",
+            "grade": 8,
+            "at": 56414,
+            "lines": [
+              "g8-3-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-3",
+            "grade": 8,
+            "at": 57414,
+            "lines": [
+              "g8-3-ticket",
+              "g8-3-update"
+            ]
+          }
+        ],
+        "coordinates": "Fixed seated camera; world +X right, +Y up, -Z dock. Papers drag onto left/right desk slots.",
+        "worldAction": {
+          "decision": "",
+          "gate": "3",
+          "time": "18:00",
+          "visitorX": 0,
+          "gateOpen": false
+        },
+        "audio": {
+          "context": "running",
+          "paused": false,
+          "loopCount": 3,
+          "activeSfx": 1,
+          "cuesPlayed": 25,
+          "energy": true,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 16,
+          "loadErrors": [],
+          "timeline": 57.224000000000004
+        }
+      }
+    },
+    {
+      "seconds": 57,
+      "label": "time changed gate retained",
+      "state": {
+        "mode": "ready",
+        "grade": 8,
+        "case": "g8-3",
+        "stage": "transfer",
+        "passenger": "Oren Pike",
+        "objective": "At the festival’s temporary booth, Oren needs the Harbor Lights departure. Apply the message to the correct row.",
+        "rule": "Combine the original timetable with the scoped update. Changed time does not change gate or destination.",
+        "documents": [
+          {
+            "id": "ticket",
+            "title": "FESTIVAL TICKET",
+            "lines": [
+              {
+                "id": "g8-3-ticket",
+                "text": "Oren Pike · Harbor Lights · 27 October · 17:00 · Gate 4 · CONFIRMED.",
+                "he": "אורן פייק · אורות הנמל · 27 באוקטובר · 17:00 · שער 4 · מאושר."
+              },
+              {
+                "id": "g8-3-other",
+                "text": "Cloud Garden · 27 October · 18:00 · Gate 3.",
+                "he": "גן העננים · 27 באוקטובר · 18:00 · שער 3."
+              }
+            ]
+          },
+          {
+            "id": "notice",
+            "title": "MESSAGE FROM OPERATIONS",
+            "lines": [
+              {
+                "id": "g8-3-update",
+                "text": "Today’s Harbor Lights trip now leaves at 19:00. Its gate and destination stay the same.",
+                "he": "הנסיעה של היום לאורות הנמל יוצאת עכשיו ב־19:00. השער והיעד שלה נשארים כפי שהיו."
+              },
+              {
+                "id": "g8-3-tomorrow",
+                "text": "Tomorrow’s Cloud Garden trip will leave at 17:00 from Gate 2.",
+                "he": "הנסיעה של מחר לגן העננים תצא ב־17:00 משער 2."
+              }
+            ]
+          }
+        ],
+        "open": false,
+        "left": 0,
+        "right": 1,
+        "evidence": [
+          "g8-3-ticket",
+          "g8-3-update"
+        ],
+        "route": {
+          "gate": "4",
+          "time": "19:00"
+        },
+        "clarified": false,
+        "armed": "board",
+        "paused": false,
+        "overlay": "",
+        "summary": [
+          {
+            "id": "g8-1",
+            "credit": true,
+            "unaided": false,
+            "stage": "guided"
+          },
+          {
+            "id": "g8-2",
+            "credit": true,
+            "unaided": true,
+            "stage": "independent"
+          }
+        ],
+        "events": [
+          {
+            "type": "visitor-called",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 0,
+            "stage": "guided"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 3233,
+            "document": "ticket"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 6600,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 9633,
+            "lines": [
+              "g8-1-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 12916,
+            "lines": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ]
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 15883,
+            "decision": "hold"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 17599,
+            "decision": "hold",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 1,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 0,
+            "firstAttempt": true,
+            "stage": "guided"
+          },
+          {
+            "type": "recall",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 23416,
+            "retries": 1
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 27415,
+            "decision": "board"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 28415,
+            "decision": "board",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 2,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 1,
+            "firstAttempt": false,
+            "stage": "guided"
+          },
+          {
+            "type": "visitor-called",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 33415,
+            "stage": "independent"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 40515,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 42415,
+            "lines": [
+              "g8-2-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 44415,
+            "lines": [
+              "g8-2-ticket",
+              "g8-2-update"
+            ]
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 47431,
+            "decision": "board"
+          },
+          {
+            "type": "decision",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 48415,
+            "decision": "board",
+            "gate": "3",
+            "time": "18:00",
+            "evidence": [
+              "g8-2-ticket",
+              "g8-2-update"
+            ],
+            "clarified": false,
+            "attempts": 1,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 0,
+            "firstAttempt": true,
+            "stage": "independent"
+          },
+          {
+            "type": "visitor-called",
+            "case": "g8-3",
+            "grade": 8,
+            "at": 53415,
+            "stage": "transfer"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-3",
+            "grade": 8,
+            "at": 54414,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-3",
+            "grade": 8,
+            "at": 56414,
+            "lines": [
+              "g8-3-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-3",
+            "grade": 8,
+            "at": 57414,
+            "lines": [
+              "g8-3-ticket",
+              "g8-3-update"
+            ]
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-3",
+            "grade": 8,
+            "at": 60414,
+            "decision": "board"
+          }
+        ],
+        "coordinates": "Fixed seated camera; world +X right, +Y up, -Z dock. Papers drag onto left/right desk slots.",
+        "worldAction": {
+          "decision": "",
+          "gate": "3",
+          "time": "18:00",
+          "visitorX": 0,
+          "gateOpen": false
+        },
+        "audio": {
+          "context": "running",
+          "paused": false,
+          "loopCount": 3,
+          "activeSfx": 1,
+          "cuesPlayed": 26,
+          "energy": true,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 16,
+          "loadErrors": [],
+          "timeline": 60.216
+        }
+      }
+    },
+    {
+      "seconds": 58,
+      "label": "transfer stamp",
+      "state": {
+        "mode": "result",
+        "grade": 8,
+        "case": "g8-3",
+        "stage": "transfer",
+        "passenger": "Oren Pike",
+        "objective": "At the festival’s temporary booth, Oren needs the Harbor Lights departure. Apply the message to the correct row.",
+        "rule": "Combine the original timetable with the scoped update. Changed time does not change gate or destination.",
+        "documents": [
+          {
+            "id": "ticket",
+            "title": "FESTIVAL TICKET",
+            "lines": [
+              {
+                "id": "g8-3-ticket",
+                "text": "Oren Pike · Harbor Lights · 27 October · 17:00 · Gate 4 · CONFIRMED.",
+                "he": "אורן פייק · אורות הנמל · 27 באוקטובר · 17:00 · שער 4 · מאושר."
+              },
+              {
+                "id": "g8-3-other",
+                "text": "Cloud Garden · 27 October · 18:00 · Gate 3.",
+                "he": "גן העננים · 27 באוקטובר · 18:00 · שער 3."
+              }
+            ]
+          },
+          {
+            "id": "notice",
+            "title": "MESSAGE FROM OPERATIONS",
+            "lines": [
+              {
+                "id": "g8-3-update",
+                "text": "Today’s Harbor Lights trip now leaves at 19:00. Its gate and destination stay the same.",
+                "he": "הנסיעה של היום לאורות הנמל יוצאת עכשיו ב־19:00. השער והיעד שלה נשארים כפי שהיו."
+              },
+              {
+                "id": "g8-3-tomorrow",
+                "text": "Tomorrow’s Cloud Garden trip will leave at 17:00 from Gate 2.",
+                "he": "הנסיעה של מחר לגן העננים תצא ב־17:00 משער 2."
+              }
+            ]
+          }
+        ],
+        "open": false,
+        "left": 0,
+        "right": 1,
+        "evidence": [
+          "g8-3-ticket",
+          "g8-3-update"
+        ],
+        "route": {
+          "gate": "4",
+          "time": "19:00"
+        },
+        "clarified": false,
+        "result": {
+          "correct": true,
+          "comprehension": true,
+          "needsClarification": false,
+          "reason": "“now leaves at 19:00” משנה רק את שעת Harbor Lights להיום. “gate and destination stay the same” משאיר את שער 4 ואת היעד מהכרטיס. ההודעה על מחר שייכת לנסיעה אחרת."
+        },
+        "paused": false,
+        "overlay": "",
+        "summary": [
+          {
+            "id": "g8-1",
+            "credit": true,
+            "unaided": false,
+            "stage": "guided"
+          },
+          {
+            "id": "g8-2",
+            "credit": true,
+            "unaided": true,
+            "stage": "independent"
+          },
+          {
+            "id": "g8-3",
+            "credit": true,
+            "unaided": true,
+            "stage": "transfer"
+          }
+        ],
+        "events": [
+          {
+            "type": "visitor-called",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 0,
+            "stage": "guided"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 3233,
+            "document": "ticket"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 6600,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 9633,
+            "lines": [
+              "g8-1-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 12916,
+            "lines": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ]
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 15883,
+            "decision": "hold"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 17599,
+            "decision": "hold",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 1,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 0,
+            "firstAttempt": true,
+            "stage": "guided"
+          },
+          {
+            "type": "recall",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 23416,
+            "retries": 1
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 27415,
+            "decision": "board"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 28415,
+            "decision": "board",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 2,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 1,
+            "firstAttempt": false,
+            "stage": "guided"
+          },
+          {
+            "type": "visitor-called",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 33415,
+            "stage": "independent"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 40515,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 42415,
+            "lines": [
+              "g8-2-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 44415,
+            "lines": [
+              "g8-2-ticket",
+              "g8-2-update"
+            ]
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 47431,
+            "decision": "board"
+          },
+          {
+            "type": "decision",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 48415,
+            "decision": "board",
+            "gate": "3",
+            "time": "18:00",
+            "evidence": [
+              "g8-2-ticket",
+              "g8-2-update"
+            ],
+            "clarified": false,
+            "attempts": 1,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 0,
+            "firstAttempt": true,
+            "stage": "independent"
+          },
+          {
+            "type": "visitor-called",
+            "case": "g8-3",
+            "grade": 8,
+            "at": 53415,
+            "stage": "transfer"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-3",
+            "grade": 8,
+            "at": 54414,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-3",
+            "grade": 8,
+            "at": 56414,
+            "lines": [
+              "g8-3-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-3",
+            "grade": 8,
+            "at": 57414,
+            "lines": [
+              "g8-3-ticket",
+              "g8-3-update"
+            ]
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-3",
+            "grade": 8,
+            "at": 60414,
+            "decision": "board"
+          },
+          {
+            "type": "decision",
+            "case": "g8-3",
+            "grade": 8,
+            "at": 61414,
+            "decision": "board",
+            "gate": "4",
+            "time": "19:00",
+            "evidence": [
+              "g8-3-ticket",
+              "g8-3-update"
+            ],
+            "clarified": false,
+            "attempts": 1,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 0,
+            "firstAttempt": true,
+            "stage": "transfer"
+          }
+        ],
+        "coordinates": "Fixed seated camera; world +X right, +Y up, -Z dock. Papers drag onto left/right desk slots.",
+        "worldAction": {
+          "decision": "board",
+          "gate": "4",
+          "time": "19:00",
+          "visitorX": 0,
+          "gateOpen": false
+        },
+        "audio": {
+          "context": "running",
+          "paused": false,
+          "loopCount": 3,
+          "activeSfx": 1,
+          "cuesPlayed": 27,
+          "energy": true,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 16,
+          "loadErrors": [],
+          "timeline": 61.224000000000004
+        }
+      }
+    },
+    {
+      "seconds": 62,
+      "label": "transfer consequence",
+      "state": {
+        "mode": "result",
+        "grade": 8,
+        "case": "g8-3",
+        "stage": "transfer",
+        "passenger": "Oren Pike",
+        "objective": "At the festival’s temporary booth, Oren needs the Harbor Lights departure. Apply the message to the correct row.",
+        "rule": "Combine the original timetable with the scoped update. Changed time does not change gate or destination.",
+        "documents": [
+          {
+            "id": "ticket",
+            "title": "FESTIVAL TICKET",
+            "lines": [
+              {
+                "id": "g8-3-ticket",
+                "text": "Oren Pike · Harbor Lights · 27 October · 17:00 · Gate 4 · CONFIRMED.",
+                "he": "אורן פייק · אורות הנמל · 27 באוקטובר · 17:00 · שער 4 · מאושר."
+              },
+              {
+                "id": "g8-3-other",
+                "text": "Cloud Garden · 27 October · 18:00 · Gate 3.",
+                "he": "גן העננים · 27 באוקטובר · 18:00 · שער 3."
+              }
+            ]
+          },
+          {
+            "id": "notice",
+            "title": "MESSAGE FROM OPERATIONS",
+            "lines": [
+              {
+                "id": "g8-3-update",
+                "text": "Today’s Harbor Lights trip now leaves at 19:00. Its gate and destination stay the same.",
+                "he": "הנסיעה של היום לאורות הנמל יוצאת עכשיו ב־19:00. השער והיעד שלה נשארים כפי שהיו."
+              },
+              {
+                "id": "g8-3-tomorrow",
+                "text": "Tomorrow’s Cloud Garden trip will leave at 17:00 from Gate 2.",
+                "he": "הנסיעה של מחר לגן העננים תצא ב־17:00 משער 2."
+              }
+            ]
+          }
+        ],
+        "open": false,
+        "left": 0,
+        "right": 1,
+        "evidence": [
+          "g8-3-ticket",
+          "g8-3-update"
+        ],
+        "route": {
+          "gate": "4",
+          "time": "19:00"
+        },
+        "clarified": false,
+        "result": {
+          "correct": true,
+          "comprehension": true,
+          "needsClarification": false,
+          "reason": "“now leaves at 19:00” משנה רק את שעת Harbor Lights להיום. “gate and destination stay the same” משאיר את שער 4 ואת היעד מהכרטיס. ההודעה על מחר שייכת לנסיעה אחרת."
+        },
+        "paused": false,
+        "overlay": "",
+        "summary": [
+          {
+            "id": "g8-1",
+            "credit": true,
+            "unaided": false,
+            "stage": "guided"
+          },
+          {
+            "id": "g8-2",
+            "credit": true,
+            "unaided": true,
+            "stage": "independent"
+          },
+          {
+            "id": "g8-3",
+            "credit": true,
+            "unaided": true,
+            "stage": "transfer"
+          }
+        ],
+        "events": [
+          {
+            "type": "visitor-called",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 0,
+            "stage": "guided"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 3233,
+            "document": "ticket"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 6600,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 9633,
+            "lines": [
+              "g8-1-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 12916,
+            "lines": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ]
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 15883,
+            "decision": "hold"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 17599,
+            "decision": "hold",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 1,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 0,
+            "firstAttempt": true,
+            "stage": "guided"
+          },
+          {
+            "type": "recall",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 23416,
+            "retries": 1
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 27415,
+            "decision": "board"
+          },
+          {
+            "type": "decision",
+            "case": "g8-1",
+            "grade": 8,
+            "at": 28415,
+            "decision": "board",
+            "gate": "2",
+            "time": "18:00",
+            "evidence": [
+              "g8-1-ticket",
+              "g8-1-current"
+            ],
+            "clarified": false,
+            "attempts": 2,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 1,
+            "firstAttempt": false,
+            "stage": "guided"
+          },
+          {
+            "type": "visitor-called",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 33415,
+            "stage": "independent"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 40515,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 42415,
+            "lines": [
+              "g8-2-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 44415,
+            "lines": [
+              "g8-2-ticket",
+              "g8-2-update"
+            ]
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 47431,
+            "decision": "board"
+          },
+          {
+            "type": "decision",
+            "case": "g8-2",
+            "grade": 8,
+            "at": 48415,
+            "decision": "board",
+            "gate": "3",
+            "time": "18:00",
+            "evidence": [
+              "g8-2-ticket",
+              "g8-2-update"
+            ],
+            "clarified": false,
+            "attempts": 1,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 0,
+            "firstAttempt": true,
+            "stage": "independent"
+          },
+          {
+            "type": "visitor-called",
+            "case": "g8-3",
+            "grade": 8,
+            "at": 53415,
+            "stage": "transfer"
+          },
+          {
+            "type": "document-inspected",
+            "case": "g8-3",
+            "grade": 8,
+            "at": 54414,
+            "document": "ticket"
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-3",
+            "grade": 8,
+            "at": 56414,
+            "lines": [
+              "g8-3-ticket"
+            ]
+          },
+          {
+            "type": "evidence-selected",
+            "case": "g8-3",
+            "grade": 8,
+            "at": 57414,
+            "lines": [
+              "g8-3-ticket",
+              "g8-3-update"
+            ]
+          },
+          {
+            "type": "stamp-armed",
+            "case": "g8-3",
+            "grade": 8,
+            "at": 60414,
+            "decision": "board"
+          },
+          {
+            "type": "decision",
+            "case": "g8-3",
+            "grade": 8,
+            "at": 61414,
+            "decision": "board",
+            "gate": "4",
+            "time": "19:00",
+            "evidence": [
+              "g8-3-ticket",
+              "g8-3-update"
+            ],
+            "clarified": false,
+            "attempts": 1,
+            "hints": 0,
+            "translations": 0,
+            "translationUsed": false,
+            "retries": 0,
+            "firstAttempt": true,
+            "stage": "transfer"
+          }
+        ],
+        "coordinates": "Fixed seated camera; world +X right, +Y up, -Z dock. Papers drag onto left/right desk slots.",
+        "worldAction": {
+          "decision": "board",
+          "gate": "4",
+          "time": "19:00",
+          "visitorX": 4.6,
+          "gateOpen": true
+        },
+        "audio": {
+          "context": "running",
+          "paused": false,
+          "loopCount": 3,
+          "activeSfx": 0,
+          "cuesPlayed": 28,
+          "energy": true,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 16,
+          "loadErrors": [],
+          "timeline": 65.304
+        }
+      }
+    }
+  ],
+  "errors": []
+}

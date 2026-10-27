@@ -1,0 +1,125 @@
+{
+  "report": [
+    "UI loaded g7-1",
+    "g7-1 correct action and evidence credit through real UI",
+    "UI loaded g7-2",
+    "Clarification reply becomes a physical/selectable document",
+    "g7-2 correct action and evidence credit through real UI",
+    "UI loaded g7-3",
+    "g7-3 correct action and evidence credit through real UI",
+    "Grade 7 real three-case campaign completes",
+    "Grade 7 three first-attempt unaided evidence decisions",
+    "UI loaded g8-1",
+    "g8-1 correct action and evidence credit through real UI",
+    "UI loaded g8-2",
+    "g8-2 correct action and evidence credit through real UI",
+    "UI loaded g8-3",
+    "g8-3 correct action and evidence credit through real UI",
+    "Grade 8 real three-case campaign completes",
+    "Grade 8 three first-attempt unaided evidence decisions",
+    "UI loaded g9-1",
+    "g9-1 correct action and evidence credit through real UI",
+    "UI loaded g9-2",
+    "g9-2 correct action and evidence credit through real UI",
+    "UI loaded g9-3",
+    "g9-3 correct action and evidence credit through real UI",
+    "Grade 9 real three-case campaign completes",
+    "Grade 9 three first-attempt unaided evidence decisions",
+    "Wrong HOLD has visible wrong-queue result",
+    "Recall restores document inspection",
+    "Recovered action passes without unaided-first-attempt claim",
+    "Even a lucky current route is blocked until missing detail is clarified",
+    "Irrelevant habit question does not invent current departure",
+    "Translation recorded as assistance",
+    "Assistance remains recorded after hiding translation",
+    "Pause modal sets paused state",
+    "advanceTime respects pause",
+    "Escape resumes paused overlay only",
+    "Music slider changes real audio setting",
+    "Restart returns cleanly to first visitor"
+  ],
+  "errors": [],
+  "finalState": {
+    "mode": "ready",
+    "grade": 7,
+    "case": "g7-1",
+    "stage": "guided",
+    "passenger": "Nora Reed",
+    "objective": "Nora is taking festival lanterns to Cloud Garden. Inspect her journey for 27 October.",
+    "rule": "Board a confirmed ticket only for today, its named holder and the matching journey. Read the date, destination, time and gate together.",
+    "documents": [
+      {
+        "id": "ticket",
+        "title": "BOARDING TICKET",
+        "lines": [
+          {
+            "id": "g7-1-ticket",
+            "text": "Nora Reed · Cloud Garden · 27 October · 18:00 · Gate 2",
+            "he": "נורה ריד · גן העננים · 27 באוקטובר · 18:00 · שער 2"
+          },
+          {
+            "id": "g7-1-print",
+            "text": "One passenger. Keep this ticket until arrival.",
+            "he": "נוסעת אחת. שמרו את הכרטיס עד ההגעה."
+          }
+        ]
+      },
+      {
+        "id": "list",
+        "title": "TODAY’S BOARDING LIST",
+        "lines": [
+          {
+            "id": "g7-1-list",
+            "text": "27 October: Nora Reed is confirmed for Cloud Garden at 18:00, Gate 2.",
+            "he": "27 באוקטובר: ההזמנה של נורה ריד מאושרת לגן העננים ב־18:00, שער 2."
+          },
+          {
+            "id": "g7-1-other",
+            "text": "Cloud Garden morning service: 09:00, Gate 3.",
+            "he": "השירות של הבוקר לגן העננים: 09:00, שער 3."
+          }
+        ]
+      }
+    ],
+    "open": false,
+    "left": 0,
+    "right": 1,
+    "evidence": [],
+    "route": {
+      "gate": "2",
+      "time": "09:00"
+    },
+    "clarified": false,
+    "paused": false,
+    "overlay": "",
+    "summary": [],
+    "events": [
+      {
+        "type": "visitor-called",
+        "case": "g7-1",
+        "grade": 7,
+        "at": 0,
+        "stage": "guided"
+      }
+    ],
+    "coordinates": "Fixed seated camera; world +X right, +Y up, -Z dock. Papers drag onto left/right desk slots.",
+    "audio": {
+      "context": "running",
+      "paused": false,
+      "loopCount": 3,
+      "activeSfx": 3,
+      "cuesPlayed": 30,
+      "energy": false,
+      "ducked": false,
+      "gains": {
+        "master": 0.8,
+        "music": 0.12,
+        "sfx": 0.23,
+        "voice": 0.8
+      },
+      "loadedBuffers": 16,
+      "loadErrors": [],
+      "timeline": 2.9253333333333336
+    }
+  }
+}

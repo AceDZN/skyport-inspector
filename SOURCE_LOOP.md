@@ -14,4 +14,4 @@ Skyport Inspector is a direct, original adaptation of the document-booth loop in
 
 Route correctness can advance a visitor without comprehension credit. Only a supported pair with correct action earns observed comprehension; summary distinguishes first-attempt unaided and assisted/retry performance. No timer rewards fast reading. Nine launch cases and three meaning-changing pairs are finite practice, not full-curriculum mastery.
 
-A real state/capture sequence is retained in docs/qa and docs/playtest. It shows inspection, wrong decision/recall, supported decision and changed-context transfer; a separate narrative video is not used as proof of playability.
+A continuous real UI recording is retained in docs/playtest/source-loop.mp4 with 26 corresponding states in loop-states.json. It shows inspection, wrong decision/recall, supported decision, new scoped rule and changed-context transfer. The recording is silent; the actual composed sound is available in the separate mixed audio preview. Independent full-campaign and controls evidence is in docs/qa.

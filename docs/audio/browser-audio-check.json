@@ -1,0 +1,288 @@
+{
+  "harness": [
+    {
+      "step": "start",
+      "state": {
+        "context": "running",
+        "paused": false,
+        "loopCount": 3,
+        "activeSfx": 0,
+        "cuesPlayed": 0,
+        "energy": false,
+        "ducked": false,
+        "gains": {
+          "master": 0.8,
+          "music": 0.7,
+          "sfx": 0.74,
+          "voice": 0.8
+        },
+        "loadedBuffers": 16,
+        "loadErrors": [],
+        "timeline": 1.2026666666666666
+      }
+    },
+    {
+      "step": "audible analyser",
+      "rms": 0.019117248249645457
+    },
+    {
+      "step": "settings + all 13 cues",
+      "state": {
+        "context": "running",
+        "paused": false,
+        "loopCount": 3,
+        "activeSfx": 1,
+        "cuesPlayed": 13,
+        "energy": true,
+        "ducked": false,
+        "gains": {
+          "master": 0.8,
+          "music": 0.22,
+          "sfx": 0.74,
+          "voice": 0.8
+        },
+        "loadedBuffers": 16,
+        "loadErrors": [],
+        "timeline": 9.805333333333333
+      }
+    },
+    {
+      "step": "pause",
+      "state": {
+        "context": "suspended",
+        "paused": true,
+        "loopCount": 3,
+        "activeSfx": 0,
+        "cuesPlayed": 13,
+        "energy": true,
+        "ducked": false,
+        "gains": {
+          "master": 0.8,
+          "music": 0.22,
+          "sfx": 0.74,
+          "voice": 0.8
+        },
+        "loadedBuffers": 16,
+        "loadErrors": [],
+        "timeline": 10.989333333333333
+      },
+      "timelineFrozen": true
+    },
+    {
+      "step": "resume",
+      "state": {
+        "context": "running",
+        "paused": false,
+        "loopCount": 3,
+        "activeSfx": 0,
+        "cuesPlayed": 13,
+        "energy": true,
+        "ducked": false,
+        "gains": {
+          "master": 0.8,
+          "music": 0.22,
+          "sfx": 0.74,
+          "voice": 0.8
+        },
+        "loadedBuffers": 16,
+        "loadErrors": [],
+        "timeline": 11.309333333333333
+      }
+    },
+    {
+      "step": "repeat start",
+      "state": {
+        "context": "running",
+        "paused": false,
+        "loopCount": 3,
+        "activeSfx": 0,
+        "cuesPlayed": 13,
+        "energy": true,
+        "ducked": false,
+        "gains": {
+          "master": 0.8,
+          "music": 0.22,
+          "sfx": 0.74,
+          "voice": 0.8
+        },
+        "loadedBuffers": 16,
+        "loadErrors": [],
+        "timeline": 12.701333333333332
+      }
+    },
+    {
+      "step": "duck + mute",
+      "state": {
+        "context": "running",
+        "paused": false,
+        "loopCount": 3,
+        "activeSfx": 0,
+        "cuesPlayed": 13,
+        "energy": true,
+        "ducked": true,
+        "gains": {
+          "master": 0,
+          "music": 0.22,
+          "sfx": 0.74,
+          "voice": 0.8
+        },
+        "loadedBuffers": 16,
+        "loadErrors": [],
+        "timeline": 13.026666666666666
+      },
+      "masterGain": 0
+    },
+    {
+      "step": "persisted settings after reload",
+      "state": {
+        "context": "not-started",
+        "paused": false,
+        "loopCount": 0,
+        "activeSfx": 0,
+        "cuesPlayed": 0,
+        "energy": false,
+        "ducked": false,
+        "gains": {
+          "master": 0.8,
+          "music": 0.7,
+          "sfx": 0.74,
+          "voice": 0.8
+        },
+        "loadedBuffers": 0,
+        "loadErrors": [],
+        "timeline": 0
+      }
+    }
+  ],
+  "errors": [
+    "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('[data-action=pause]').first()\u001b[22m\n\u001b[2m    - locator resolved to <button data-action=\"pause\">השהיה</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n"
+  ],
+  "game": [
+    {
+      "step": "before Start",
+      "state": {
+        "context": "not-started",
+        "paused": false,
+        "loopCount": 0,
+        "activeSfx": 0,
+        "cuesPlayed": 0,
+        "energy": false,
+        "ducked": false,
+        "gains": {
+          "master": 0.8,
+          "music": 0.7,
+          "sfx": 0.74,
+          "voice": 0.8
+        },
+        "loadedBuffers": 0,
+        "loadErrors": [],
+        "timeline": 0
+      }
+    },
+    {
+      "step": "Start user gesture",
+      "state": {
+        "context": "running",
+        "paused": false,
+        "loopCount": 3,
+        "activeSfx": 0,
+        "cuesPlayed": 1,
+        "energy": false,
+        "ducked": false,
+        "gains": {
+          "master": 0.8,
+          "music": 0.7,
+          "sfx": 0.74,
+          "voice": 0.8
+        },
+        "loadedBuffers": 16,
+        "loadErrors": [],
+        "timeline": 2.333333333333333
+      }
+    },
+    {
+      "step": "settings and bell test",
+      "state": {
+        "context": "running",
+        "paused": false,
+        "loopCount": 3,
+        "activeSfx": 1,
+        "cuesPlayed": 2,
+        "energy": false,
+        "ducked": false,
+        "gains": {
+          "master": 0.6,
+          "music": 0.4,
+          "sfx": 0.5,
+          "voice": 0.3
+        },
+        "loadedBuffers": 16,
+        "loadErrors": [],
+        "timeline": 3.1653333333333338
+      }
+    },
+    {
+      "step": "master mute",
+      "state": {
+        "context": "running",
+        "paused": false,
+        "loopCount": 3,
+        "activeSfx": 1,
+        "cuesPlayed": 2,
+        "energy": false,
+        "ducked": false,
+        "gains": {
+          "master": 0,
+          "music": 0.4,
+          "sfx": 0.5,
+          "voice": 0.3
+        },
+        "loadedBuffers": 16,
+        "loadErrors": [],
+        "timeline": 4.232
+      }
+    },
+    {
+      "step": "Pause",
+      "state": {
+        "context": "suspended",
+        "paused": true,
+        "loopCount": 3,
+        "activeSfx": 0,
+        "cuesPlayed": 2,
+        "energy": false,
+        "ducked": false,
+        "gains": {
+          "master": 0.8,
+          "music": 0.4,
+          "sfx": 0.5,
+          "voice": 0.3
+        },
+        "loadedBuffers": 16,
+        "loadErrors": [],
+        "timeline": 5.197333333333334
+      }
+    },
+    {
+      "step": "Resume",
+      "state": {
+        "context": "running",
+        "paused": false,
+        "loopCount": 3,
+        "activeSfx": 0,
+        "cuesPlayed": 2,
+        "energy": false,
+        "ducked": false,
+        "gains": {
+          "master": 0.8,
+          "music": 0.4,
+          "sfx": 0.5,
+          "voice": 0.3
+        },
+        "loadedBuffers": 16,
+        "loadErrors": [],
+        "timeline": 5.741333333333333
+      }
+    }
+  ]
+}

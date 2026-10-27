@@ -1,0 +1,15 @@
+# Skyport loop — recorded state sequence
+
+This is a roughly **60-second review sequence through real captured game states**, with a suggested viewing cadence. It is **not a continuous 60-second video**, and the frames came from separate UI test runs. The source files are actual gameplay captures and the independent QA runner records the actions/assertions in [browser-test.mjs](../qa/browser-test.mjs) and [browser-results.json](../qa/browser-results.json). No win state was injected for these frames.
+
+| Review time | Actual frame | Loop verb and visible result |
+|---|---|---|
+| 00–08 s | [Visitor and physical papers](../playtest/desk.png) | The booth has called Nora Reed. A real rigged automaton waits behind the desk with ticket, boarding list, stamp, lamp, bell and rulebook. Read today's journey objective. |
+| 08–20 s | [Compare two documents](../playtest/compare.png) | Inspect ticket against current boarding list. Scan the exact holder, date, destination, 18:00 and Gate 2. Select evidence phrases; the initial capture has no correct-answer highlight. |
+| 20–28 s | [Stamp and boarding consequence](../qa/g7-1-result.png) | The UI runner chose Gate 2 / 18:00, selected supporting ticket/list evidence and stamped BOARD. The stamp is physically raised over the paper, gate is opening and Hebrew feedback identifies the matching journey. The resulting state asserts correct action plus comprehension evidence. |
+| 28–36 s | [Wrong interpretation](../qa/wrong-queue.png) | A separate test deliberately stamped HOLD for eligible Nora. The consequence says the passenger is in the wrong queue and offers recall. A wrong action is recoverable. |
+| 36–43 s | [Inspection recovery view](readable-inspection-review.png) | The independent QA sequence clicked recall, restored inspection, selected supporting evidence and corrected BOARD. The report explicitly verifies recovery without counting an unaided first attempt. This image illustrates the real inspection surface; it is not a timestamped image of the exact correction click. |
+| 43–53 s | [New scoped notice](../qa/g8-2-inspection.png) | A later grade's complication keeps the same tactile loop but changes the English: “use Gate 3” applies to this 18:00 Cloud Garden trip; departure time is unchanged. The original ticket remains a separately selectable document. Both panes happen to display the update in this automation capture. |
+| 53–60 s | [Transfer outcome](../qa/g9-3-result.png) | A new practical-source transfer case combines exact journey evidence and its narrow update. QA completed all three cases in each of grades 7, 8 and 9 using UI actions and evidence credit. The finite result does not claim retained mastery or whole-chapter coverage. |
+
+The first minute of live play uses the same controls: call/inspect, compare, mark evidence, select route, stamp, consequence, next complication. Reading is untimed in practice; the viewing times above are a presentation cadence rather than a proficiency timer. [SOURCE_LOOP.md](../../SOURCE_LOOP.md) describes the source-loop adaptation and [PLAYTEST.md](../../PLAYTEST.md) records final verification where present.
