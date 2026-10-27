@@ -96,3 +96,20 @@ test('exit floor clearance uses the cube actual rotated support, not its unrotat
 test('the highest valid wall exit still cannot turn an idle low-speed floor entry into a gallery bypass',()=>{
  const w=new CoreWorld(2);try{const high=w.surfaces.find(s=>s.id==='high-wall')!,top=high.center.y+high.height/2-1.55;assert.ok(w.place(0,'drop-floor',new Vector3(0,-2.975,6)));assert.ok(w.place(1,'high-wall',new Vector3(0,top,-11.985)));playerAt(w,0,-2.13,6);tick(w,2);assert.equal(w.campaignResult,undefined);assert.ok(!(w.player.grounded&&w.player.pos.y>3.9&&w.player.pos.z>-7.5),'Highest band permits an unearned low-speed gallery landing');}finally{w.dispose();}
 });
+
+for(const rate of [30,60,120])test(`fling remains a real conserved crossing and reachable landing at ${rate} physics steps per second`,()=>{
+ const w=new CoreWorld(2);try{
+  w.place(0,'drop-floor',new Vector3(0,-2.975,6));w.place(1,'high-wall',new Vector3(0,6,-11.985));
+  let landed=false;
+  for(let i=0;i<rate*6;i++){
+   w.step(1/rate,{forward:1,strafe:0,jump:false});
+   if(w.player.crossings>0&&w.player.grounded&&w.player.pos.y>4&&w.player.pos.z>-7.5&&w.player.pos.z<-.5){landed=true;break;}
+  }
+  const event=w.events.find(e=>e.type==='enter'&&e.body==='player');
+  assert.ok(event,`No actual portal crossing at ${rate}Hz`);
+  assert.ok(Number(event.speed)>9,'Fall does not supply the launch energy');
+  assert.ok(Math.abs(Number(event.speed)-Number(event.exitSpeed))<1e-6,'Crossing changes speed');
+  assert.equal(w.player.crossings,1,'Frame schedule causes bounce/repeated crossing');
+  assert.ok(landed,`Momentum landing fails at ${rate}Hz: ${w.player.pos.toArray()}`);
+ }finally{w.dispose();}
+});
