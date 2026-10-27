@@ -1,67 +1,69 @@
-# Skyport Inspector audio
+# Rift Runner audio
 
-All music, ambience and foley in this repository are original synthesis created for this game on 27 October 2026. No external recordings, commercial-game soundtrack, paid service, account or purchased sample is used. The synthesis source is `scripts/render-audio.py`; the runtime is `src/audio.ts`. These original audio assets may be used and redistributed with Skyport Inspector. There are no third-party audio attribution requirements.
+The Portal-style replacement has a new original soundtrack and action palette. The rejected desk audio is recoverable from Git tag `skyport-desk-v1`; none of its paper/stamp/boarding sounds are loaded by the current runtime. All current audio is locally synthesized for Rift Runner. No external sample, commercial-game soundtrack, paid service, account or purchased recording is used. The original assets may be redistributed with this game, without third-party audio attribution.
 
-## Composition: “Afternoon Boarding”
+## “Between Two Courtyards”
 
-82 BPM, 4/4, 32 bars, 93.659 seconds. A A B A′ form, D major with a B minor bridge. The foreground melody is a restrained reed-like harmonic voice; the accompaniment uses soft frequency-modulated electric-piano chords, plucked harmonic bass and quiet shuffled brush synthesis. The A motif rises F♯–A–B and returns through A–F♯–E to D. The second A changes the response notes; the bridge changes harmony, contour and register; the final A resolves to D. The final 8-bar section is a musical return, not a repeated timer cue.
+92 BPM, 4/4, 32 bars, A A B A′, 83.478 seconds. Airy glass mallets carry a rising E–A–B–C♯ motif and a descending response; soft hollow plucks, breathing harmony, rounded bass and sparse granular percussion support it. Harmonic motion in the A sections follows Aadd9 → F♯m9 → Dmaj9 → Eadd9. The B section moves through C♯m7 → Dmaj9 → Bm7 → Esus, with a contrasting higher melody. The second A changes phrase replies; the final A returns and resolves to A. This is an authored tune with melody, harmony, bass, rhythm and phrase variation.
 
-| Bars | Form | Harmony / arrangement |
-|---|---|---|
-| 1–8 | A | Dmaj9 → Gmaj9 → Em7 → A7; first reed question/answer |
-| 9–16 | A | Same progression, altered opening/response notes and articulation |
-| 17–24 | B | Bm7 → Gmaj9 → Em7 → A7; contrasting higher-register melody |
-| 25–32 | A′ | A returns and resolves to D; final cadence leaves space for the next loop |
+`public/audio/rift-courtyard.flac` is the complete calm exploration score. `rift-connection.flac` is an aligned counter-arpeggio and light pulse, revealed gradually when a portal pair exists and more fully when a bridge is active. `rift-air.flac` is a 24-second courtyard environment: slow wind, distant ventilation and occasional synthesized birds, without intelligible speech. All loops are lossless FLAC, with equal endpoints and circular musical tails; the connection and score stems start together and share exact duration.
 
-`skyport-chamber.flac` contains the complete calm arrangement. `shift-energy.flac` is an aligned optional shuffle/fill layer, raised by `setEnergy(true)` for a later case or shift completion. It does not replace the harmony/melody. `terminal-ambience.flac` contains a low airship propeller, soft cloth/wind noise and distant wordless formant-like terminal murmurs. These are synthesized environmental textures, not recorded speech. They loop independently under the music.
+The reproducible seeded source is `scripts/render-rift-audio.py` (Python/numpy + FFmpeg). It also authors all action cues from harmonic/noise synthesis. Short cues use WAV to avoid codec padding.
 
-The circular room-reflection mix preserves final-note tails at the loop start. A short endpoint correction removes sample discontinuities. The score and energy stems have identical length and start time. Lossless FLAC encoding preserves the exact loop endpoints and keeps the three loops compact; WAV cues avoid codec delay on short tactile actions.
+## Action palette
 
-## Context cues
-
-13 different locally bundled cues, with slight playback-rate variation for repeated tactile actions:
-
-| Runtime name | Sound / action |
+| Cue | Sound |
 |---|---|
-| `bell` | Brass partials for calling the next visitor |
-| `paper-pickup` | Short paper fiber rustle |
-| `paper-slide` | Longer paper scrape |
-| `page-turn` | Double-folded page flutter |
-| `evidence-pencil` | Two pencil strokes |
-| `ink-pad` | Soft ink-pad contact |
-| `board-stamp` | Firm, higher wooden/rubber impact |
-| `hold-stamp` | Lower, heavier stamp impact |
-| `gate-opening` | Quiet sliding mechanism / airy release |
-| `recall` | Descending then resolving piano correction cue |
-| `shift-end` | Four-note D-major completion figure |
-| `mistake` | Short low, gentle unresolved interval |
-| `question` | Rising two-note piano question |
+| `portalA` | Lower ascending glass/field placement chord |
+| `portalB` | Complementary higher glass/field placement chord |
+| `invalid` | Quiet, short blocked-surface knock |
+| `enter` | Falling suction whoosh |
+| `exit` | Rising, expanding release whoosh |
+| `pickup` | Magnetic contact with a tiny glass overtone |
+| `drop` | Compact cargo impact |
+| `contact` | Lighter material contact |
+| `pad` | Two-part mechanical latch |
+| `bridge` | Gentle geared/servo unfolding with a harmonic opening |
+| `jump` | Short upward air motion |
+| `land` | Low, soft landing impact |
+| `respawn` | Reversing field shimmer resolving into three notes |
+| `complete` | Five-note expanding completion figure |
+| `error` | Gentle unresolved short interval |
 
-Aliases accepted by `cue()` include `next`, `pickup`, `slide`, `inspect`, `page`, `evidence`, `ink`, `board`, `hold`, `gate`, `correction`, `success`, `end`, `ask`, and `stamp`.
+A/B sounds differ without relying on volume or harshness. Enter/exit and pickup/drop have different envelopes. Sound is feedback alongside the physical and textual outcome, and is never the only correctness signal.
 
-## Playback controls
+## Mixer API and safeguards
 
-`SkyportAudio.start()` creates/resumes AudioContext from a user gesture and fetches/decodes all local assets. Repeated calls reuse one context and the same three loop sources. Master, music, SFX and voice gains are independent, clamped to 0–1 and saved in `localStorage`; setting any bus to zero mutes it. Gain ramps avoid hard changes. SFX are capped at eight concurrent sources, with old sources disconnected when finished. A master compressor provides final headroom. Pause fades then suspends the context; resume preserves loop position. The game calls `setPaused` for pause/tab visibility and `setEnergy` for end-of-shift intensity.
+`src/audio.ts` exports `RiftAudio`, with `SkyportAudio` retained as a source-compatible class name. Public methods:
 
-Voice is optional and this slice contains no spoken-language samples. `playVoice(url)` supports replayable local subtitled speech if added later, and `setDucking(true)` lowers music and ambience to 24% while speech plays. The exposed voice slider therefore reserves the gain bus; it does not imply listening assessment.
+- `start(): Promise<void>` — user-gesture creation/resume, local fetch/decode, idempotent loop setup.
+- `cue(name, pan=0)` — context action sound; optional stereo pan from −1 to 1.
+- `setConnection(paired, bridge=false)` — reveal counter-arpeggio at 42% for a linked pair or 85% for a bridge.
+- `setEnergy(bool)` — compatible simple connection-layer switch.
+- `setPaused(bool)` — fade/suspend or resume without duplicate loops.
+- `settings()`, `setGain(bus, 0..1)`, `state()` — independent master/music/SFX/voice gains, persisted in `rift-audio-v1` localStorage.
+- `setDucking(bool)`, `playVoice(url)` — optional local subtitled speech support; music/ambience duck to 24%. This slice contains no speech recordings and makes no listening-assessment claim.
 
-## Preview and verification
+All gain changes ramp. A compressor keeps output headroom; at most eight one-shots run concurrently, finished nodes disconnect, and contact/landing/error cues have short repeat guards. Repeated Start/resume keeps one context and the same three looping sources. Global controls remain the lead's responsibility: menus/input focus suppress movement, and pause/focus handlers call the mixer API.
 
-[26-second mixed preview](docs/audio/skyport-mixed-preview.wav) includes the calm tune/ambience, optional energy texture, bell, paper, pencil, ink pad, both stamps, gate, mistake, correction, question and shift-end sounds. The preview is an authored mix, not a recording of gameplay. Machine measurements are in `docs/audio/audio-metrics.json`; they include PCM duration, RMS, peak and loop endpoint delta. The generator is seeded for reproducibility. Encoded-file decoding checks and actual browser checks are recorded below when complete.
+## Preview and checks
 
-No subjective human listening session has been asserted. Automated non-silence/decoding and AudioContext checks do not establish musical quality; the preview is provided for audition.
+[26-second mixed preview](docs/rift-audio/rift-mixed-preview.wav) ([local player](docs/rift-audio/preview.html)) demonstrates the new tune and courtyard environment; the counter-arpeggio emerges after the two portal sounds. It then includes traversal, pickup/drop/contact, pad/bridge, jump/land, invalid placement, respawn and completion. This is an authored mixed preview, not gameplay audio recording.
 
-### Verified results — 27 October 2026
+Measurements are in `docs/rift-audio/audio-metrics.json`; encoded decode checks and current-browser checks are added below. No subjective human listening session is claimed. Automated decoding/non-silence and a running AudioContext do not establish musical quality; the preview is provided for audition.
 
-- `npx tsc --noEmit` passed with the integrated sources.
-- Source metrics: score 93.658531 seconds; preview 26.000 seconds, peak −7.904 dBFS, RMS −28.980 dBFS. Every final file decoded to finite non-silent PCM with FFmpeg. All three lossless loop endpoint deltas are exactly zero at 32 kHz. Runtime audio totals 8,651,559 bytes. Decoding/resampling all buffers uses roughly 83 MB at a 48 kHz browser context; the compressed download size is separate from memory use.
-- An early Opus encoding introduced an endpoint jump after decoding, so the final three loops use FLAC. Old Opus files are removed. Final encoded checks are in `docs/audio/encoded-decoding.json`.
-- Standard-autoplay-policy Chromium module harness: 16 buffers loaded with zero errors; three synchronized looping sources; measured output analyser RMS 0.0191; all 13 cues triggered; settings persisted after reload; master gain reached zero; ducking activated; pause suspended the context and froze its timeline; resume continued; repeated Start kept three loop sources. This is automated playback verification, not a subjective listening claim.
-- Integrated game on Chromium/Metal: before Start had no context; keyboard Start ran music/bell; all four settings gains and the bell test worked; mute worked; Pause suspended and Resume ran the context; Restart from Pause kept exactly three loops; defaults were restored; no page errors. Evidence: `docs/audio/integrated-audio-check.json` and `docs/audio/integrated-audio.png` (actual game capture).
-- A preliminary SwiftShader browser run was interrupted after Start/settings/mute/pause/resume passed because software-rendered UI interactions were slow. Its partial output remains in `browser-audio-check.json`; the later Metal integrated run supersedes it. The headless/automated headed browser tab switches both reported the game still focused, so those runs do **not** establish native blur behavior. A separate native Chrome check is recorded next.
+### Replacement audio verification — 27 October 2026
 
-The waveform PNG is a visual non-silence aid; it is not a listening-quality score. This slice has no spoken language and makes no listening-learning claim.
+- `npx tsc --noEmit --strict --module ESNext --moduleResolution Bundler --target ES2022 --lib ES2022,DOM --skipLibCheck src/audio.ts` passed. A project-wide check during the lead's content/engine rewrite had expected old-main/new-content errors; it is not counted as a final build check.
+- All 18 current runtime files decode to finite, non-silent PCM without clipping. Total compressed runtime audio is 8,505,576 bytes. The 26-second preview peaks at −12.993 dBFS with RMS −28.755 dBFS. See `encoded-decoding.json` and `audio-metrics.json` in docs/rift-audio.
+- Current Chromium/Metal module lab uses the standard autoplay policy: no audio context before Start; a click loads 18 buffers and three looping sources with zero errors. Measured output RMS is 0.01529. All 15 cues played; the simultaneous cue cap stayed at eight. Pair/bridge gains reached approximately .410/.840 after a one-second ramp toward .42/.85. All four gains, master mute, ducking, persistence, pause/resume and repeated Start passed. Pause suspended/froze the timeline; repeated Start retained three loops. Defaults restored afterward.
+- The browser runs at 48 kHz and holds 77,639,616 decoded audio bytes. Browser resampling initially reintroduced small endpoint differences; a 12 ms correction after decoding now gives exactly zero endpoint differences on all three browser loop buffers. This is a numerical seam check, not a human listening claim.
+- Native macOS Chrome also played the current module. A real tab blur recorded focused:false, hidden:true, context:suspended, paused:true and three loops; returning recorded running/paused:false, still three loops. The tool read the displayed focus history through native AX; precise values are in `native-focus-observation.json`. Only newly created test tabs were used and then closed. This native check is against the actual module in its lab; integrated game controls are checked separately when the lead's new engine is ready.
 
-- Native macOS Chrome focus check through `mcp__cua_repl` succeeded using the actual module in the audio harness: a real tab blur recorded `focused:false`, `hidden:true`, `context:suspended`, `paused:true`; returning recorded `context:running`, `paused:false`, still exactly three loops. See `docs/audio/native-focus-observation.md` for the precise procedure, observed timeline and scope. Only newly created test tabs were used and cleaned up. Chrome visibly marked playback, but no subjective human listening review is claimed.
+Evidence: `docs/rift-audio/module-browser-check.json`, `module-browser.png`, `native-focus-observation.json`, `encoded-decoding.json`, `preview-waveform.png`. The waveform was inspected as a non-silence aid. The audio-lab capture is a test harness, not a gameplay screenshot.
 
-Final lead cue smoke: static built preview verified exactly one bell on Restart and distinct `mistake` on wrong stamp, retaining `correction` for recall. Three loops remained active and local files loaded without HTTP/browser errors (docs/playtest/static-preview-check.json).
+### First actual Rift UI pass
+
+`node docs/rift-audio/check-integrated.mjs` exercised the replacement engine at port 5261 through normal DOM/keyboard actions and the documented deterministic step hook. Start loaded the new 18 buffers and three loops. The four gain sliders, portal sound test, mute, Escape close/pause/resume, keyboard retry during play, full room restart, actual portal placement, pair stem, Space jump and landing all produced the expected current audio state/events. No page errors were observed. The gameplay screenshot was opened and inspected.
+
+Two issues were reported to the lead, without modifying its engine/UI ownership: checkpoint retry from the Pause dialog returned to play while the mixer remained suspended; and the first normal approach to a linked front/rear pair was physically blocked at the exit, so this run does **not** verify actual traversal entry/exit cues. Precise pre-fix evidence is retained in `docs/rift-audio/integrated-pre-fix-check.json` and `integrated-blocked.png`. The lead's fixes and a narrow recheck are pending; this paragraph is not a final integrated pass claim.

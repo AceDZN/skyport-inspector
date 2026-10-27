@@ -1,11 +1,17 @@
-# Skyport grade tracks
+# Rift Runner grade tracks
 
-All tracks are required now, not placeholders. Three authored challenges per grade, last one changed-context transfer; selected-rule scope only. Source snapshots are in docs/curriculum.
+Active replacement dated27 October2026. The rejected desk’s grade fixtures/tests are historical only. REPLACEMENT-RIFT-RUNNER.md is authoritative.
 
-| Grade | Chapter 10 | Chapter 11 | Chapter 12 | Evidence |
+Every grade has a required guided → independent → changed-context transfer campaign. The first guided room is integrated and physically proven before remaining rooms are authored. A changed timer or different cosmetic skin is not a grade track.
+
+| Grade | Chapter10 | Chapter11 | Chapter12 | Physical evidence |
 |---|---|---|---|---|
-| 7 | mixed-tenses-guide | reference/questions supporting functional reading; claim only tasks actually implemented | reading-functional-texts | Act on current journey instead of habit/past journey; extract missing time/destination |
-| 8 | mixed-tenses-reference | pronoun reference from tracking-reference-and-connections; use only with unambiguous antecedents | reading-practical-texts-and-sources | Preserve unchanged details while applying the scoped update |
-| 9 | present-perfect-vs-past-simple-reference | reported-speech-reference | reading-practical-texts-and-sources-reference | Distinguish dated event/current relevant record without tense-only inference; preserve speaker, holder and reporting time |
+|7| Current task versus habitual/past/future context, from mixed-tenses-guide | Spatial relation and imperative/sequence, from exact newly fetched prepositions-time-place and modals-and-imperatives | Read a short practical instruction and preserve its conditions | Move the specified crate through the chamber, place it at the stated side of glass, then use the required bridge. |
+|8| Past event versus ongoing background, from mixed-tenses-reference | Identify a crate through the robot’s real action history and unambiguous reference, from exact relative-clauses-reference and pronouns-and-reference | Combine a scoped current notice with unchanged crate/pad instructions | Select the crate actually carried rather than merely approached; preserve pad while a bridge update changes. |
+|9| Contextual present perfect/current report versus dated past event with explicit current condition | Reported instruction with known speaker/addressee and stable crate ownership, from reported-speech-reference | Combine current source, scoped update and real room state | Use the currently safe route; move the reported holder’s crate; complete a changed-context launch plan. |
 
-Do not use a harder clock as grade progression. Pair cases that differ in English meaning while keeping their visual skin. Optional translation/hints mark support; correct evidence plus the decision, rather than a lucky stamp, establishes the observed comprehension outcome.
+New exact Workbook snapshots are under docs/rift-qa/curriculum. Existing exact mixed-tense/current-status/report/practical-source snapshots remain under docs/curriculum. Source mappings and current verification status are in CURRICULUM.md/coverage.json. No rule module is covered merely because a word occurs in a mission.
+
+World actions supply evidence; there are no mandatory phrase pairs, multiple-choice doors or grammar forms to fill in. A physically valid alternate solution stands. Language credit is limited to the actual crate/location/route demonstrated. Hints, translation and retries must remain distinguishable from first-attempt play. Pausing the journal must stop action pressure.
+
+No whole-chapter, free-writing, full tense-system, speaking/listening-proficiency, or retained-mastery claim. The robot’s action history must exist in gameplay before event/reference credit is verified. A tense alone never proves present bridge safety: current status is stated explicitly.

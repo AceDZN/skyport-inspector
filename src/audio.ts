@@ -1,11 +1,11 @@
 /// <reference types="vite/client" />
-/** Original locally rendered chamber-jazz score and tactile foley. See AUDIO.md. */
+/** Original locally rendered Rift Runner exploration score and tactile science-fiction foley. See AUDIO.md. */
 type Bus = 'master' | 'music' | 'sfx' | 'voice';
 type Settings = Record<Bus, number>;
 const defaults: Settings = { master: 0.8, music: 0.7, sfx: 0.74, voice: 0.8 };
-const cueFiles = ['bell','paper-pickup','paper-slide','page-turn','evidence-pencil','ink-pad','board-stamp','hold-stamp','gate-opening','recall','shift-end','mistake','question'];
-const aliases: Record<string,string> = {next:'bell',pickup:'paper-pickup',slide:'paper-slide',page:'page-turn',inspect:'page-turn',evidence:'evidence-pencil',ink:'ink-pad',board:'board-stamp',hold:'hold-stamp',gate:'gate-opening',correction:'recall',success:'gate-opening',end:'shift-end',ask:'question',stamp:'board-stamp'};
-const storageKey = 'skyport-audio-v1';
+const cueFiles = ['portalA','portalB','invalid','enter','exit','pickup','drop','contact','pad','bridge','jump','land','respawn','complete','error'];
+const aliases: Record<string,string> = {portal_a:'portalA',portal_b:'portalB','portal-a':'portalA','portal-b':'portalB',portal:'portalA',teleport:'enter',grab:'pickup',release:'drop',impact:'contact',pressure:'pad',unfold:'bridge',fall:'respawn',restart:'respawn',success:'complete',end:'complete',mistake:'error',denied:'invalid'};
+const storageKey = 'rift-audio-v1';
 export class SkyportAudio {
  private ctx?: AudioContext;
  private buses?: Record<Bus, GainNode>;
@@ -19,6 +19,9 @@ export class SkyportAudio {
  private loading?: Promise<void>;
  private paused = false;
  private high = false;
+ private paired = false;
+ private bridgeActive = false;
+ private lastCue = new Map<string,number>();
  private ducked = false;
  private pauseTimer?: number;
  private cueCount = 0;
@@ -41,7 +44,7 @@ export class SkyportAudio {
    this.buses.sfx.connect(this.buses.master); this.buses.voice.connect(this.buses.master);
    this.buses.master.connect(this.limiter); this.limiter.connect(c.destination);
    for (const k of Object.keys(defaults) as Bus[]) this.buses[k].gain.value=this.values[k];
-   this.energyGain.gain.value=this.high?.85:0; this.energyGain.connect(this.buses.music);
+   this.energyGain.gain.value=this.bridgeActive?.85:this.paired?.42:this.high?.85:0; this.energyGain.connect(this.buses.music);
    this.loading=this.load();
   }
   window.clearTimeout(this.pauseTimer); this.paused=false;
@@ -52,12 +55,19 @@ export class SkyportAudio {
   if (!this.loops.length) this.launchLoops();
  }
  private async load() {
-  const files: [string,string][] = [['music','skyport-chamber.flac'],['energy','shift-energy.flac'],['ambience','terminal-ambience.flac'],...cueFiles.map(n=>[n,n+'.wav'] as [string,string])];
+  const files: [string,string][] = [['music','rift-courtyard.flac'],['energy','rift-connection.flac'],['ambience','rift-air.flac'],...cueFiles.map(n=>[n,n+'.wav'] as [string,string])];
   await Promise.all(files.map(async ([name,file])=>{
    try {
     const response=await fetch(new URL(import.meta.env.BASE_URL+'audio/'+file,document.baseURI).href);
     if (!response.ok) throw new Error(String(response.status));
-    this.buffers.set(name,await this.ctx!.decodeAudioData(await response.arrayBuffer()));
+    const decoded=await this.ctx!.decodeAudioData(await response.arrayBuffer());
+    if(['music','energy','ambience'].includes(name)){
+     // Browser sample-rate conversion can reintroduce a tiny endpoint step even in FLAC.
+     // Correct only the last 12ms in the decoded buffer, preserving tails and exact length.
+     const frames=Math.min(decoded.length,Math.ceil(decoded.sampleRate*.012));
+     for(let ch=0;ch<decoded.numberOfChannels;ch++){const data=decoded.getChannelData(ch),delta=data[0]-data[data.length-1];for(let i=0;i<frames;i++)data[data.length-frames+i]+=delta*i/(frames-1);}
+    }
+    this.buffers.set(name,decoded);
    } catch(e) {this.failures.push(`${file}: ${String(e)}`);}
   }));
  }
@@ -71,16 +81,22 @@ export class SkyportAudio {
    source.start(this.startedAt); this.loops.push(source);
   }
  }
- cue(name: string): void {
-  if (!this.ctx || this.ctx.state!=='running' || this.paused) return;
+ cue(name: string,pan=0): void {
+  if (!this.ctx || this.ctx.state==='closed' || this.paused) return;
+  // resume() is asynchronous: queued one-shots begin when the context resumes.
+  // The paused flag still rejects every cue during an intentional pause.
   name=aliases[name]||name; const b=this.buffers.get(name); if(!b) return;
-  // Cap one-shots and vary paper/impact playback subtly to avoid machine-gun repetition.
+  const gap=({contact:.10,land:.10,invalid:.14,error:.20} as Record<string,number>)[name]||0;
+  if(this.ctx.currentTime-(this.lastCue.get(name)??-100)<gap)return;
+  this.lastCue.set(name,this.ctx.currentTime);
+  // Cap one-shots and vary mechanical/impact playback subtly to prevent machine-gun chatter.
   if(this.shots.size>=8) {const oldest=this.shots.values().next().value as AudioBufferSourceNode|undefined; try{oldest?.stop();}catch{} if(oldest)this.shots.delete(oldest);}
   const s=this.ctx.createBufferSource(); s.buffer=b;
-  this.cueCount++; if(!['shift-end','recall','question'].includes(name)) s.playbackRate.value=.97+(this.cueCount%5)*.015;
+  this.cueCount++; if(!['portalA','portalB','respawn','complete'].includes(name)) s.playbackRate.value=.97+(this.cueCount%5)*.015;
   const g=this.ctx.createGain(); g.gain.value=.88;
-  s.connect(g); g.connect(this.buses!.sfx); this.shots.add(s);
-  s.onended=()=>{this.shots.delete(s); s.disconnect(); g.disconnect();}; s.start();
+  const spatial=this.ctx.createStereoPanner();spatial.pan.value=Number.isFinite(pan)?Math.min(1,Math.max(-1,pan)):0;
+  s.connect(g); g.connect(spatial);spatial.connect(this.buses!.sfx); this.shots.add(s);
+  s.onended=()=>{this.shots.delete(s); s.disconnect(); g.disconnect();spatial.disconnect();}; s.start();
  }
  setPaused(paused: boolean): void {
   this.paused=paused; if(!this.ctx || !this.buses)return;
@@ -93,6 +109,8 @@ export class SkyportAudio {
   }
  }
  setEnergy(high: boolean): void {this.high=high; if(this.energyGain)this.ramp(this.energyGain.gain,high?.85:0,.8);}
+ /** Reveal a quiet counter-arpeggio with a linked pair, and a fuller layer with a bridge. */
+ setConnection(paired:boolean,bridge=false):void {this.paired=paired;this.bridgeActive=bridge;this.high=paired||bridge;if(this.energyGain)this.ramp(this.energyGain.gain,bridge?.85:paired?.42:0,.8);}
  setGain(bus: string,value: number): void {
   if(!(bus in defaults) || !Number.isFinite(value))return; const key=bus as Bus;
   this.values[key]=Math.min(1,Math.max(0,value));
@@ -107,5 +125,8 @@ export class SkyportAudio {
   const s=this.ctx!.createBufferSource();s.buffer=b;s.connect(this.buses!.voice);this.voiceSource=s;this.setDucking(true);
   s.onended=()=>{if(this.voiceSource===s){this.voiceSource=undefined;this.setDucking(false);}s.disconnect();};s.start();
  }
- state() {return {context:this.ctx?.state||'not-started',paused:this.paused,loopCount:this.loops.length,activeSfx:this.shots.size,cuesPlayed:this.cueCount,energy:this.high,ducked:this.ducked,gains:this.settings(),loadedBuffers:this.buffers.size,loadErrors:[...this.failures],timeline:this.ctx?Math.max(0,this.ctx.currentTime-this.startedAt):0};}
+ state() {return {context:this.ctx?.state||'not-started',paused:this.paused,loopCount:this.loops.length,activeSfx:this.shots.size,cuesPlayed:this.cueCount,energy:this.high,paired:this.paired,bridge:this.bridgeActive,ducked:this.ducked,gains:this.settings(),loadedBuffers:this.buffers.size,loadErrors:[...this.failures],timeline:this.ctx?Math.max(0,this.ctx.currentTime-this.startedAt):0};}
 }
+
+/** New product name; the old export remains source-compatible for integration. */
+export { SkyportAudio as RiftAudio };

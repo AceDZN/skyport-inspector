@@ -1,0 +1,27 @@
+import { chromium } from 'playwright';
+import fs from 'node:fs/promises';
+const out=new URL('./',import.meta.url).pathname;
+const browser=await chromium.launch({headless:true,args:['--use-angle=metal','--enable-gpu','--ignore-gpu-blocklist']});
+const context=await browser.newContext({viewport:{width:1440,height:900}});const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(String(e)));const report=[];
+const state=()=>page.evaluate(()=>JSON.parse(window.render_game_to_text()));
+const note=(m,s)=>{report.push({message:m,...s});console.log(m,s?JSON.stringify(s):'');};
+const check=(x,m)=>{if(!x)throw Error(m);note(m);};
+async function wait(ms){await page.evaluate(ms=>window.advanceTime(ms),ms);await page.waitForTimeout(25);}
+async function key(code,ms){await page.keyboard.down(code);await page.evaluate(ms=>window.advanceTime(ms),ms);await page.keyboard.up(code);await page.waitForTimeout(20);}
+async function aim(target){for(let correction=0;correction<2;correction++){let s=await state(),p=s.world.player.position;const delta=target.map((x,i)=>x-[p[0],p[1]+.65,p[2]][i]);let yaw=Math.atan2(-delta[0],-delta[2]),pitch=Math.asin(delta[1]/Math.hypot(...delta)),d=yaw-s.world.player.yaw;while(d>Math.PI)d-=2*Math.PI;while(d< -Math.PI)d+=2*Math.PI;let dp=pitch-s.world.player.pitch;while(Math.abs(d)>.001||Math.abs(dp)>.001){const a=Math.max(-.8,Math.min(.8,d)),b=Math.max(-.5,Math.min(.5,dp)),sens=s.controls.sensitivity;if(Math.abs(a/sens)+Math.abs(b/sens)<1.5)break;await page.mouse.move(720,480);await page.mouse.down();await page.mouse.move(720-a/sens,480-b/sens);await page.mouse.up();d-=a;dp-=b;}await page.waitForTimeout(25);}}
+async function walkTo(x,z,stop=.22){for(let i=0;i<35;i++){const s=(await state()).world,p=s.player.position,d=Math.hypot(p[0]-x,p[2]-z);if(d<stop)return;await aim([x,p[1]+.65,z]);await key('KeyW',Math.min(150,d/4.8*1000));if((await state()).mode==='result')return;}throw Error('Could not reach '+[x,z]);}
+async function crossPortal(index,expected){for(let i=0;i<30;i++){const s=(await state()).world;if(s.player.crossings>=expected)return;const pp=s.portals[index].position;await aim([pp[0],1.5,pp[2]-.45]);await key('KeyW',110);}throw Error('Could not cross portal '+index);}
+try{
+ await page.goto('http://localhost:4261',{waitUntil:'domcontentloaded'});await page.waitForFunction(()=>typeof window.render_game_to_text==='function');await page.locator('[data-action="settings"]').click();await page.locator('#unlocked').check();await page.locator('[data-action="resume"]').first().click();await page.locator('#start-btn').click();await page.waitForFunction(()=>JSON.parse(window.render_game_to_text()).mode==='playing');await wait(200);
+ check((await state()).world.room==='g7-1','First authored room starts');
+ await aim([-4,1.6,2.39]);await page.keyboard.press('Digit1');await wait(50);check((await state()).world.portals[0]?.surface==='front','A is aimed onto eligible near wall');
+ await aim([-4,1.6,-11.78]);await page.keyboard.press('Digit2');await wait(50);check((await state()).world.portals[1]?.surface==='rear','B is aimed through glass onto eligible far wall');
+ await page.screenshot({path:out+'first-portals.png'});
+ await walkTo(-.9,8.4);await aim([-.9,.43,7]);await page.keyboard.press('KeyE');await wait(60);check((await state()).world.held==='c1','Small diamond crate grabbed with real E input');
+ await crossPortal(0,1);let s=await state();note('After aimed carried crossing',{world:s.world});check(s.world.player.crossings>=1&&s.world.crates.find(c=>c.id==='c1').crossings>=1,'Player and carried crate traverse actual linked portals');
+ await page.screenshot({path:out+'first-carried-portal.png'});await crossPortal(1,2);check((await state()).world.player.crossings>=2,'Carried return crossing works in reverse portal direction');await crossPortal(0,3);check((await state()).world.player.crossings>=3,'Repeated carried crossing separates without exit bounce');
+ await walkTo(.85,-6.35,.25);await aim([2,.45,-5]);await page.keyboard.press('KeyE');await wait(1000);s=await state();check(s.world.pads.find(p=>p.id==='behind').crate==='c1','Real crate rests on behind-glass pressure pad');check(s.world.bridges.some(b=>b.id==='behind-east'&&b.progress>.85),'Behind east bridge physically unfolds');
+ await page.screenshot({path:out+'first-pad-bridge.png'});
+ await walkTo(5.5,-5.05,.25);await walkTo(14.3,-5,.25);s=await state();check(s.mode==='result'&&s.result?.languageGoal&&s.result?.portalMechanics,'First room completes through pad→east bridge→real exit with language goal');
+ await page.screenshot({path:out+'first-win.png'});await page.locator('[data-action="restart-room"]').click();await aim([20,1.5,10]);await key('KeyW',4000);await wait(1600);check((await state()).world.respawns>0,'Walking off the unbridged edge falls and respawns safely');await page.keyboard.press('KeyR');await wait(100);check((await state()).mode==='playing'&&(await state()).world.player.position[1]>.5,'R retry restores a playable safe checkpoint');await page.screenshot({path:out+'first-retry.png'});check(errors.length===0,'No page errors during first physical win');await fs.writeFile(out+'first-room-results.json',JSON.stringify({report,errors,state:s},null,2));
+}catch(e){await page.screenshot({path:out+'first-failure.png'});const s=await state().catch(()=>null);await fs.writeFile(out+'first-room-results.json',JSON.stringify({report,errors,failure:String(e),state:s},null,2));console.error(e);process.exitCode=1;}finally{await browser.close();}

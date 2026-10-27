@@ -1,17 +1,5 @@
-# Source loop and original adaptation
+# Rift Runner: Portal-style replacement loop
 
-Skyport Inspector is a direct, original adaptation of the document-booth loop in [Papers, Please](https://store.steampowered.com/app/239030/Papers_Please/). It uses original code, fictional festival journeys, commissioned owned models and original composed audio; no commercial game files or soundtrack.
+The human explicitly rejected the previous desk. The new reference is [Portal2](https://store.steampowered.com/app/620/Portal_2/): explore, aim/place two linked portals, traverse with coherent facing/velocity, carry/drop real objects, activate a pressure pad/unfold a bridge, reach the exit; later preserve momentum for a launch. Original code/art/music/levels and safe retries. No commercial characters, logos or soundtrack.
 
-| Preserved beat | Playable Skyport action |
-|---|---|
-| Next visitor | Ring the physical bell or use the Next control/N between cases. A rigged automaton brings a new travel case. |
-| Receive/handle documents | Raycast paper objects; click to inspect or drag and snap into desk slots. Keyboard 1–3 and HTML document choices provide equivalent access. |
-| Current rules | Open the physical rulebook or R; read the case’s rule and conceptual Hebrew explanation. |
-| Inspect discrepancy | Compare two readable paper faces and pencil-mark two phrases; ask a precise question when departure information is absent. |
-| Commit decision | Set gate/time; arm BOARD or HOLD; stamp once by clicking a physical paper or the keyboard-accessible stamp target. |
-| Consequence and correction | Visitor moves into boarding/hold queue, gate opens on boarding; result explains the decision. Recall restores the case for revision. |
-| Escalation | Guided ticket → independent current/missing data → changed-context transfer; grade 8 scoped updates/reference and grade 9 contextual record/reported message require different valid actions. |
-
-Route correctness can advance a visitor without comprehension credit. Only a supported pair with correct action earns observed comprehension; summary distinguishes first-attempt unaided and assisted/retry performance. No timer rewards fast reading. Nine launch cases and three meaning-changing pairs are finite practice, not full-curriculum mastery.
-
-A continuous real UI recording is retained in docs/playtest/source-loop.mp4 with 26 corresponding states in loop-states.json. It shows inspection, wrong decision/recall, supported decision, new scoped rule and changed-context transfer. The recording is silent; the actual composed sound is available in the separate mixed audio preview. Independent full-campaign and controls evidence is in docs/qa.
+Portal placement, body/cargo crossings, object/pad state and physical exit determine outcomes. English missions specify crate, spatial relationship, current bridge or reported instruction; no obligatory language quiz/evidence selection. Alternate physical solutions stand, with English and portal-mechanic evidence recorded separately. Real replacement captures and tests will be in docs/rift-playtest and docs/rift-qa. Desk evidence is historical only at tag skyport-desk-v1.

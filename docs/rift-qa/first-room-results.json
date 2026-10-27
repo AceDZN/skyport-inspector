@@ -1,0 +1,598 @@
+{
+  "report": [
+    {
+      "message": "First authored room starts"
+    },
+    {
+      "message": "A is aimed onto eligible near wall"
+    },
+    {
+      "message": "B is aimed through glass onto eligible far wall"
+    },
+    {
+      "message": "Small diamond crate grabbed with real E input"
+    },
+    {
+      "message": "After aimed carried crossing",
+      "world": {
+        "coordinateSystem": "+Y up, -Z beyond glass, +X east. Player position is capsule center; eye +0.65Y.",
+        "room": "g7-1",
+        "mission": "Put the small crate on the platform behind the glass. Then cross the east bridge.",
+        "player": {
+          "position": [
+            -4.145480289841153,
+            0.8499999822222222,
+            -11.234025534948655
+          ],
+          "velocity": [
+            1.0213097429787923,
+            -0.0005333333333449874,
+            2.1224876199952694
+          ],
+          "yaw": -2.693109816675731,
+          "pitch": -3.3569335949890096e-8,
+          "grounded": false,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "front",
+            "position": [
+              -4.000000294558419,
+              1.6,
+              2.415
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          },
+          {
+            "surface": "rear",
+            "position": [
+              -3.9999988879093147,
+              1.6,
+              -11.754999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "c1",
+            "label": "DIAMOND",
+            "shape": "diamond",
+            "size": "small",
+            "start": "front",
+            "position": [
+              -3.36500225376253,
+              0.9999999217974174,
+              -9.612034771966679
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "held": true,
+            "crossings": 1
+          },
+          {
+            "id": "c2",
+            "label": "TRIANGLE",
+            "shape": "triangle",
+            "size": "large",
+            "start": "front",
+            "position": [
+              1.9,
+              0.5499999822222222,
+              7
+            ],
+            "velocity": [
+              0,
+              -0.0005333333333449874,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "front",
+            "position": [
+              2,
+              0.14,
+              5
+            ],
+            "crate": null
+          },
+          {
+            "id": "behind",
+            "position": [
+              2,
+              0.14,
+              -5
+            ],
+            "crate": null
+          }
+        ],
+        "bridges": [
+          {
+            "id": "front-east",
+            "pad": "front",
+            "side": "east",
+            "active": false,
+            "progress": 0
+          },
+          {
+            "id": "front-west",
+            "pad": "front",
+            "side": "west",
+            "active": false,
+            "progress": 0
+          },
+          {
+            "id": "behind-east",
+            "pad": "behind",
+            "side": "east",
+            "active": false,
+            "progress": 0
+          },
+          {
+            "id": "behind-west",
+            "pad": "behind",
+            "side": "west",
+            "active": false,
+            "progress": 0
+          }
+        ],
+        "held": "c1",
+        "lastBridge": null,
+        "outcome": null,
+        "respawns": 0,
+        "launchUsed": false,
+        "events": [
+          {
+            "type": "portalA",
+            "time": 490,
+            "surface": "front",
+            "paired": false
+          },
+          {
+            "type": "portalB",
+            "time": 740,
+            "surface": "rear",
+            "paired": true
+          },
+          {
+            "type": "pickup",
+            "time": 2363,
+            "body": "c1"
+          },
+          {
+            "type": "enter",
+            "time": 5465,
+            "body": "player",
+            "from": 0,
+            "to": 1,
+            "speed": 4.521427255770494,
+            "exitSpeed": 4.521427255770494,
+            "held": "c1"
+          },
+          {
+            "type": "exit",
+            "time": 5465,
+            "body": "player"
+          }
+        ]
+      }
+    },
+    {
+      "message": "Player and carried crate traverse actual linked portals"
+    },
+    {
+      "message": "Carried return crossing works in reverse portal direction"
+    },
+    {
+      "message": "Repeated carried crossing separates without exit bounce"
+    },
+    {
+      "message": "Real crate rests on behind-glass pressure pad"
+    },
+    {
+      "message": "Behind east bridge physically unfolds"
+    },
+    {
+      "message": "First room completes through pad→east bridge→real exit with language goal"
+    },
+    {
+      "message": "Walking off the unbridged edge falls and respawns safely"
+    },
+    {
+      "message": "R retry restores a playable safe checkpoint"
+    },
+    {
+      "message": "No page errors during first physical win"
+    }
+  ],
+  "errors": [],
+  "state": {
+    "title": "Rift Runner",
+    "mode": "result",
+    "grade": 7,
+    "roomIndex": 0,
+    "stage": "guided",
+    "world": {
+      "coordinateSystem": "+Y up, -Z beyond glass, +X east. Player position is capsule center; eye +0.65Y.",
+      "room": "g7-1",
+      "mission": "Put the small crate on the platform behind the glass. Then cross the east bridge.",
+      "player": {
+        "position": [
+          13.407198460367587,
+          0.85,
+          -4.996045544687218
+        ],
+        "velocity": [
+          1.5258573791836634,
+          0,
+          -0.0046372164614791826
+        ],
+        "yaw": 4.715428060083934,
+        "pitch": 2.7755575615628914e-17,
+        "grounded": true,
+        "crossings": 3
+      },
+      "portals": [
+        {
+          "surface": "front",
+          "position": [
+            -4.000000294558419,
+            1.6,
+            2.415
+          ],
+          "normal": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "surface": "rear",
+          "position": [
+            -3.9999988879093147,
+            1.6,
+            -11.754999999999999
+          ],
+          "normal": [
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "crates": [
+        {
+          "id": "c1",
+          "label": "DIAMOND",
+          "shape": "diamond",
+          "size": "small",
+          "start": "front",
+          "position": [
+            2.017546843837409,
+            0.56,
+            -4.989418106889698
+          ],
+          "velocity": [
+            3.277672207658405e-21,
+            0,
+            3.6780815446024415e-21
+          ],
+          "held": false,
+          "crossings": 3
+        },
+        {
+          "id": "c2",
+          "label": "TRIANGLE",
+          "shape": "triangle",
+          "size": "large",
+          "start": "front",
+          "position": [
+            1.9,
+            0.55,
+            7
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "held": false,
+          "crossings": 0
+        }
+      ],
+      "pads": [
+        {
+          "id": "front",
+          "position": [
+            2,
+            0.14,
+            5
+          ],
+          "crate": null
+        },
+        {
+          "id": "behind",
+          "position": [
+            2,
+            0.14,
+            -5
+          ],
+          "crate": "c1"
+        }
+      ],
+      "bridges": [
+        {
+          "id": "front-east",
+          "pad": "front",
+          "side": "east",
+          "active": false,
+          "progress": 0
+        },
+        {
+          "id": "front-west",
+          "pad": "front",
+          "side": "west",
+          "active": false,
+          "progress": 0
+        },
+        {
+          "id": "behind-east",
+          "pad": "behind",
+          "side": "east",
+          "active": true,
+          "progress": 1
+        },
+        {
+          "id": "behind-west",
+          "pad": "behind",
+          "side": "west",
+          "active": true,
+          "progress": 1
+        }
+      ],
+      "held": null,
+      "lastBridge": {
+        "pad": "behind",
+        "side": "east"
+      },
+      "outcome": {
+        "crateId": "c1",
+        "pad": "behind",
+        "bridge": "east",
+        "crateOnPad": true,
+        "playerCrossed": true,
+        "atExit": true,
+        "portalTraversals": 3,
+        "cratePortalTraversals": 3,
+        "launchUsed": false
+      },
+      "respawns": 0,
+      "launchUsed": false,
+      "events": [
+        {
+          "type": "exit",
+          "time": 6167,
+          "body": "player"
+        },
+        {
+          "type": "enter",
+          "time": 7038,
+          "body": "player",
+          "from": 0,
+          "to": 1,
+          "speed": 4.427566321761226,
+          "exitSpeed": 4.427566321761226,
+          "held": "c1"
+        },
+        {
+          "type": "exit",
+          "time": 7038,
+          "body": "player"
+        },
+        {
+          "type": "drop",
+          "time": 9821,
+          "body": "c1"
+        },
+        {
+          "type": "pad",
+          "time": 9829,
+          "pad": "behind",
+          "crate": "c1",
+          "matches": true
+        },
+        {
+          "type": "bridge",
+          "time": 9829,
+          "bridge": "behind-east"
+        },
+        {
+          "type": "bridge",
+          "time": 9829,
+          "bridge": "behind-west"
+        },
+        {
+          "type": "complete",
+          "time": 15604,
+          "crateId": "c1",
+          "pad": "behind",
+          "bridge": "east",
+          "crateOnPad": true,
+          "playerCrossed": true,
+          "atExit": true,
+          "portalTraversals": 3,
+          "cratePortalTraversals": 3,
+          "launchUsed": false
+        }
+      ]
+    },
+    "result": {
+      "physicalComplete": true,
+      "languageGoal": true,
+      "unaided": true,
+      "portalMechanics": true,
+      "reason": "הארגז, המיקום והמסלול תואמים למשפט באנגלית. הפעולה בעולם היא הראיה להבנת ההוראה."
+    },
+    "assistance": {
+      "hints": 0,
+      "translations": 0,
+      "retries": 0
+    },
+    "summary": [
+      {
+        "id": "g7-1",
+        "language": true,
+        "unaided": true,
+        "portals": true
+      }
+    ],
+    "events": [
+      {
+        "type": "pickup",
+        "room": "g7-1",
+        "time": 2363,
+        "body": "c1"
+      },
+      {
+        "type": "enter",
+        "room": "g7-1",
+        "time": 5457,
+        "body": "player",
+        "from": 0,
+        "to": 1,
+        "speed": 4.521427255770494,
+        "exitSpeed": 4.521427255770494,
+        "held": "c1"
+      },
+      {
+        "type": "exit",
+        "room": "g7-1",
+        "time": 5457,
+        "body": "player"
+      },
+      {
+        "type": "enter",
+        "room": "g7-1",
+        "time": 6158,
+        "body": "player",
+        "from": 1,
+        "to": 0,
+        "speed": 1.5028486765187803,
+        "exitSpeed": 1.5028486765187803,
+        "held": "c1"
+      },
+      {
+        "type": "exit",
+        "room": "g7-1",
+        "time": 6158,
+        "body": "player"
+      },
+      {
+        "type": "enter",
+        "room": "g7-1",
+        "time": 7030,
+        "body": "player",
+        "from": 0,
+        "to": 1,
+        "speed": 4.427566321761226,
+        "exitSpeed": 4.427566321761226,
+        "held": "c1"
+      },
+      {
+        "type": "exit",
+        "room": "g7-1",
+        "time": 7030,
+        "body": "player"
+      },
+      {
+        "type": "drop",
+        "room": "g7-1",
+        "time": 9821,
+        "body": "c1"
+      },
+      {
+        "type": "pad",
+        "room": "g7-1",
+        "time": 9821,
+        "pad": "behind",
+        "crate": "c1",
+        "matches": true
+      },
+      {
+        "type": "bridge",
+        "room": "g7-1",
+        "time": 9821,
+        "bridge": "behind-east"
+      },
+      {
+        "type": "bridge",
+        "room": "g7-1",
+        "time": 9821,
+        "bridge": "behind-west"
+      },
+      {
+        "type": "complete",
+        "room": "g7-1",
+        "time": 15596,
+        "crateId": "c1",
+        "pad": "behind",
+        "bridge": "east",
+        "crateOnPad": true,
+        "playerCrossed": true,
+        "atExit": true,
+        "portalTraversals": 3,
+        "cratePortalTraversals": 3,
+        "launchUsed": false
+      }
+    ],
+    "pointerLocked": false,
+    "controls": {
+      "unlocked": true,
+      "sensitivity": 0.0022,
+      "invert": false,
+      "touchMode": false,
+      "reduced": false
+    },
+    "audio": {
+      "context": "running",
+      "paused": false,
+      "loopCount": 3,
+      "activeSfx": 1,
+      "cuesPlayed": 15,
+      "energy": true,
+      "paired": true,
+      "bridge": true,
+      "ducked": false,
+      "gains": {
+        "master": 0.8,
+        "music": 0.7,
+        "sfx": 0.74,
+        "voice": 0.8
+      },
+      "loadedBuffers": 18,
+      "loadErrors": [],
+      "timeline": 9.341333333333333
+    },
+    "renderer": {
+      "software": false,
+      "drawCalls": 8,
+      "triangles": 84
+    }
+  }
+}

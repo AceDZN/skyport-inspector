@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-27",
+  "surface": "Native macOS Chrome controlled through mcp__cua_repl",
+  "scope": "New uninstrumented native tab with Rift Runner audio lab, using the actual current RiftAudio module",
+  "procedure": "Click Start, switch to a newly created blank tab, return, read displayed focus history through native AX; close only the two created tabs",
+  "events": [
+    {"event":"blur","focused":false,"hidden":true,"context":"suspended","paused":true,"loops":3,"timeline":3.016},
+    {"event":"focus","focused":true,"hidden":false,"context":"running","paused":false,"loops":3,"timeline":3.224}
+  ],
+  "loadedBuffersAfterReturn": 18,
+  "loadErrors": [],
+  "humanAuditionClaimed": false
+}

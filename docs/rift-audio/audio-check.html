@@ -1,0 +1,13 @@
+<!doctype html><meta charset="utf-8"><title>Rift Runner audio lab</title>
+<style>body{font:17px system-ui;background:#e8ece8;color:#25363a;padding:24px;margin:0}button,input{margin:6px;padding:10px}pre{white-space:pre-wrap;font-size:14px}h1{margin:8px 0}button{background:#30343b;color:#fff;border:0;border-radius:6px}</style>
+<h1>Rift Runner · Audio lab</h1><p>Original courtyard score and local action sounds. Start with a user gesture.</p>
+<button id="start">Start / restart</button><button id="pause">Pause</button><button id="resume">Resume</button><button id="cues">All action sounds</button><button id="pair">Linked pair</button><button id="bridge">Bridge active</button><label>Music<input id="music" type="range" min="0" max="1" step=".01" value=".7"></label>
+<pre id="state"></pre><h2>Native focus history</h2><pre id="focuslog"></pre>
+<script type="module">
+import {RiftAudio} from '../../src/audio.ts';
+const byId=id=>document.getElementById(id);window.audio=new RiftAudio();
+byId('start').onclick=()=>audio.start();byId('pause').onclick=()=>audio.setPaused(true);byId('resume').onclick=()=>audio.setPaused(false);byId('music').oninput=e=>audio.setGain('music',Number(e.target.value));byId('pair').onclick=()=>audio.setConnection(true);byId('bridge').onclick=()=>audio.setConnection(true,true);
+byId('cues').onclick=()=>['portalA','portalB','invalid','enter','exit','pickup','drop','contact','pad','bridge','jump','land','respawn','complete','error'].forEach((c,i)=>setTimeout(()=>audio.cue(c,(i%3-1)*.5),i*450));
+const events=[];const note=event=>setTimeout(()=>{events.push({event,focused:document.hasFocus(),hidden:document.hidden,context:audio.state().context,paused:audio.state().paused,loops:audio.state().loopCount,timeline:audio.state().timeline});byId('focuslog').textContent=JSON.stringify(events,null,2);},220);
+window.addEventListener('blur',()=>{audio.setPaused(true);note('blur');});window.addEventListener('focus',()=>{audio.setPaused(false);note('focus');});setInterval(()=>byId('state').textContent=JSON.stringify(audio.state(),null,2),200);
+</script>
