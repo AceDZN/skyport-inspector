@@ -13,12 +13,13 @@ import type {DeviceState} from './systems';
 type Batch={geometry:T.BufferGeometry;material:T.Material;matrices:T.Matrix4[]};
 type DoorArt={state:DeviceState;leaf:T.Group;indicators:T.MeshStandardMaterial[];inputs:{id:string;lamp:T.MeshStandardMaterial}[]};
 type CratePieces={source:T.Material[];copies:{group:T.Group;materials:T.Material[]}[]};
-type ButtonArt={top:T.Mesh;lights:T.MeshStandardMaterial;restY:number};
+type ButtonArt={top:T.Mesh;lights:T.MeshStandardMaterial;restY:number;plungers:T.Group;plungerRestY:number};
 type MachineDisplay={canvas:HTMLCanvasElement;texture:T.CanvasTexture;key:string;title:string};
 type BeltArt={canvas:HTMLCanvasElement;texture:T.CanvasTexture;direction:T.Vector3;reversed:boolean;lastTime:number;rollers:T.Mesh[];radius:number};
 type MachineArt={state:DeviceState;body:T.Group;display:MachineDisplay;lever?:T.Group;lamp:T.MeshStandardMaterial;belt?:BeltArt};
 type OpticalLamp={id:string;kind:'emitter'|'receiver';material:T.MeshStandardMaterial};
 type BeamArt={core:T.Mesh;halo:T.Mesh;impact:T.Mesh};
+type FootprintArt={patch:T.Mesh<T.BufferGeometry,T.MeshBasicMaterial>;outline:T.LineSegments<T.BufferGeometry,T.LineBasicMaterial>;opacity:number;key:string;centre:T.Vector3};
 
 export class ChamberScene extends RiftScene {
  declare world:RiftWorld;
@@ -40,6 +41,8 @@ export class ChamberScene extends RiftScene {
  declare private beamHaloMaterial:T.MeshBasicMaterial|undefined;
  declare private portalLights:T.PointLight[];
  declare private portalRenderer:PortalRenderer|undefined;
+ declare private refreshLinkedViews:boolean;
+ declare private heldFootprintArt:FootprintArt|undefined;
  declare private viewScene:T.Scene|undefined;
  declare private viewCamera:T.PerspectiveCamera|undefined;
  declare private instrument:T.Group|undefined;
@@ -87,13 +90,13 @@ export class ChamberScene extends RiftScene {
   this.finishes={
    ceramic:this.material(new T.MeshStandardMaterial({...wall,color:0xffffff,roughness:.78,metalness:.03,normalScale:new T.Vector2(.6,.6)})),
    white:this.material(new T.MeshStandardMaterial({...wall,color:0xe7e8e0,roughness:.62,metalness:.04,normalScale:new T.Vector2(.35,.35)})),
-   floor:this.material(new T.MeshStandardMaterial({...floor,color:0xffffff,roughness:.7,metalness:.42,normalScale:new T.Vector2(.8,.8)})),
+   floor:this.material(new T.MeshStandardMaterial({...floor,color:0xffffff,roughness:this.core.number===5?.54:.7,metalness:this.core.number===5?.36:.42,normalScale:new T.Vector2(this.core.number===5?.62:.8,this.core.number===5?.62:.8)})),
    graphite:this.material(new T.MeshStandardMaterial({color:0x20262c,roughness:.44,metalness:.72})),
    recess:this.material(new T.MeshStandardMaterial({color:0x10161b,roughness:.8,metalness:.28})),
    aluminum:this.material(new T.MeshStandardMaterial({color:0x77858b,roughness:.31,metalness:.86})),
    rubber:this.material(new T.MeshStandardMaterial({color:0x10151a,roughness:.9,metalness:0})),
    red:this.material(new T.MeshStandardMaterial({color:0x7c2623,roughness:.38,metalness:.2})),
-   light:this.material(new T.MeshStandardMaterial({color:0xe9f0ed,emissive:0xd9f0ff,emissiveIntensity:3.4,roughness:.4})),
+   light:this.material(new T.MeshStandardMaterial({color:this.core.number===5?0xffeed8:0xe9f0ed,emissive:this.core.number===5?0xffd49b:0xd9f0ff,emissiveIntensity:3.4,roughness:.4})),
    warm:this.material(new T.MeshStandardMaterial({color:0xe4bd72,emissive:0xffbe59,emissiveIntensity:1.8,roughness:.4})),
   };
  }
@@ -116,6 +119,17 @@ export class ChamberScene extends RiftScene {
    if(y<y1||y>y2)continue;if(this.core.number>5&&regions.some(r=>r.y1<y+h/2&&r.y2>y-h/2))continue;const p=axis==='x'?[plane+sign*.04,y,(u1+u2)/2]:[(u1+u2)/2,y,plane+sign*.04];this.staticPart(p,axis==='x'?[.09,h,u2-u1]:[u2-u1,h,.09],this.finishes.graphite);
   }
  }
+ private finishSplitGallery(min:T.Vector3,max:T.Vector3){
+  const f=this.finishes,width=max.x-min.x,height=max.y-min.y,front=max.z,panel=this.material(new T.MeshStandardMaterial({color:0x55564e,roughness:.62,metalness:.3,normalMap:f.ceramic.normalMap,roughnessMap:f.ceramic.roughnessMap,normalScale:new T.Vector2(.28,.28)}));
+  // Flush finish on the real retaining wall. Every front detail remains below its physical lip.
+  const face=(x:number,y:number,w:number,h:number,material:T.Material,bias=.008)=>{const m=this.mesh(this.geo(new T.PlaneGeometry(w,h)),material);m.position.set(x,y,front+bias);return m;};
+  const count=4,bay=(width-.24)/count;for(let i=0;i<count;i++){const x=min.x+.12+bay*(i+.5);face(x,min.y+height/2,bay-.07,height-.48,panel);}
+  for(let i=0;i<=count;i++)face(min.x+.12+bay*i,min.y+height/2,.045,height-.24,f.aluminum,.011);
+  face((min.x+max.x)/2,min.y+.13,width-.10,.10,f.graphite,.012);face((min.x+max.x)/2,max.y-.10,width-.10,.16,f.graphite,.012);face((min.x+max.x)/2,max.y-.055,width-.18,.027,f.warm,.014);
+  // Walking-edge inlay is flat on the existing floor, never a rail across the aimed high portal.
+  const inlay=this.material(new T.MeshStandardMaterial({color:0xc8b17a,roughness:.42,metalness:.65}));
+  for(let i=0;i<8;i++){const mark=this.mesh(this.geo(new T.PlaneGeometry((width-.16)/8-.055,.10)),inlay);mark.rotation.x=-Math.PI/2;mark.position.set(min.x+.08+(i+.5)*(width-.16)/8,max.y+.003,front-.105);mark.castShadow=false;}
+ }
  private architecture(){
   const f=this.finishes,b=this.core.blueprint,{height,halfWidth:half,style}=this.core.level.architecture;
   for(const s of this.core.solids){const size=s.max.clone().sub(s.min),p=s.min.clone().add(s.max).multiplyScalar(.5);
@@ -123,11 +137,12 @@ export class ChamberScene extends RiftScene {
    const ceiling=/ceiling/.test(s.id),raised=s.kind==='floor'&&size.y>1&&s.id!=='raised-cube-alcove',opticalHousing=/emitter-housing|receiver-pillar|receiver-optic-body/.test(s.id),mat=s.kind==='floor'?(raised?f.graphite:f.floor):ceiling?f.recess:f.graphite;const mesh=this.mesh(s.kind==='floor'?this.floorGeometry(size,p):opticalHousing?this.rounded(size.x,size.y,size.z,.035):this.geo(new T.BoxGeometry(size.x,size.y,size.z)),mat);mesh.position.copy(p);mesh.userData.solid=s.id;this.targets.push(mesh);
    if(raised){
     // A raised gallery is built architecture: metal walking surface over a panelled retaining structure.
-    for(const axis of['x','z']as const)for(const sign of[-1,1])this.wallCladding(s.min,s.max,axis,sign);
+    for(const axis of['x','z']as const)for(const sign of[-1,1]){if(this.core.number===5&&s.id==='upper-gallery'&&axis==='z'&&sign===1)continue;this.wallCladding(s.min,s.max,axis,sign);}
+    if(this.core.number===5&&s.id==='upper-gallery')this.finishSplitGallery(s.min,s.max);
     const topGeometry=this.geo(new T.PlaneGeometry(size.x,size.z)),a=topGeometry.getAttribute('position'),uv=topGeometry.getAttribute('uv');for(let i=0;i<a.count;i++)uv.setXY(i,(a.getX(i)+p.x)/2,(-a.getY(i)+p.z)/2);const top=this.mesh(topGeometry,f.floor);top.rotation.x=-Math.PI/2;top.position.set(p.x,s.max.y+.002,p.z);this.targets.push(top);
     for(const x of[s.min.x+.03,s.max.x-.03])this.staticPart([x,s.max.y+.005,p.z],[.045,.01,size.z-.05],f.aluminum);
     for(const z of[s.min.z+.03,s.max.z-.03])this.staticPart([p.x,s.max.y+.005,z],[size.x-.05,.01,.045],f.aluminum);
-    this.staticPart([p.x,s.max.y-.06,s.max.z+.035],[size.x-.15,.025,.022],f.warm);
+    if(this.core.number!==5||s.id!=='upper-gallery')this.staticPart([p.x,s.max.y-.06,s.max.z+.035],[size.x-.15,.025,.022],f.warm);
    }
    if(s.id==='raised-cube-alcove'){this.wallCladding(s.min,s.max,'z',1);this.staticPart([p.x,s.max.y-.04,s.max.z+.04],[size.x,.12,.16],f.graphite);for(const x of[s.min.x+.08,s.max.x-.08])this.staticPart([x,p.y,s.max.z+.055],[.14,size.y,.14],f.graphite);}
    if(/guide/.test(s.id)&&size.y>2&&size.x<1&&size.z<1){this.staticPart([p.x,p.y,s.max.z+.012],[Math.min(.09,size.x*.4),size.y-.1,.025],f.aluminum);for(let y=s.min.y+.3;y<s.max.y;y+=.6)this.staticPart([p.x,y,s.max.z+.028],[Math.min(.16,size.x*.65),.035,.025],f.graphite);}
@@ -222,11 +237,19 @@ export class ChamberScene extends RiftScene {
   }
   for(const p of this.core.pads){
    const base=this.mesh(this.geo(new T.CylinderGeometry(1.04,1.09,.14,48)),f.graphite);base.position.copy(p.pos).add(V(0,-.08,0));
-   const rim=this.mesh(this.geo(new T.CylinderGeometry(.91,1,.07,48)),f.aluminum);rim.position.copy(p.pos).add(V(0,-.025,0));
-   const red=this.material(f.red.clone()),top=this.mesh(this.geo(new T.CylinderGeometry(.83,.87,.11,48)),red);top.position.copy(p.pos).add(V(0,.04,0));
+   // Fixed contact disk and real annulus meet the native cylinder top exactly at p.y.
+   const rim=this.mesh(this.geo(new T.CylinderGeometry(.96,1,.07,48,1,true)),f.aluminum);rim.position.copy(p.pos).add(V(0,-.035,0));
+   const annulus=this.mesh(this.geo(new T.RingGeometry(.83,.96,48)),f.aluminum);annulus.rotation.x=-Math.PI/2;annulus.position.copy(p.pos);
+   const red=this.material(f.red.clone()),top=this.mesh(this.geo(new T.CylinderGeometry(.83,.87,.11,48)),red);top.position.copy(p.pos).add(V(0,-.055,0));
+   // Exposed peripheral sliders show pressure without moving the load-bearing contact plane.
+   const plungers=new T.Group();plungers.position.copy(p.pos).add(V(0,-.04,0));this.root.add(plungers);
+   for(let i=0;i<4;i++){const a=i*Math.PI/2,x=Math.sin(a)*1.115,z=Math.cos(a)*1.115,guide=new T.Group();guide.position.copy(p.pos).add(V(x,-.065,z));guide.rotation.y=a;this.root.add(guide);
+    this.part(guide,[0,-.035,0],[.13,.025,.095],f.graphite,.008);for(const side of[-1,1])this.part(guide,[side*.047,0,0],[.014,.10,.026],f.aluminum,.004);
+    const slider=new T.Group();slider.position.set(x,0,z);slider.rotation.y=a;plungers.add(slider);this.part(slider,[0,0,0],[.072,.032,.065],red,.006);this.part(slider,[0,-.035,0],[.025,.05,.025],f.graphite,.004);
+   }
    const glow=this.material(new T.MeshStandardMaterial({color:0xb48a45,emissive:0xffb747,emissiveIntensity:.25}));
    for(let i=0;i<8;i++){const a=i*Math.PI/4;this.part(this.root,[p.pos.x+Math.sin(a)*1.018,p.pos.y-.015,p.pos.z+Math.cos(a)*1.018],[.12,.055,.04],glow,.008).rotation.y=a;}
-   this.buttons.set(p.id,{top,lights:glow,restY:p.pos.y+.04});
+   this.buttons.set(p.id,{top,lights:glow,restY:p.pos.y-.055,plungers,plungerRestY:p.pos.y-.04});
    const dummy=new T.Mesh(this.geo(new T.PlaneGeometry(.01,.01)),this.material(new T.MeshStandardMaterial()));dummy.visible=false;this.padVisuals.set(p.id,dummy);
   }
   this.circuitTraces=[];
@@ -259,7 +282,7 @@ export class ChamberScene extends RiftScene {
    const s=state.spec,[w,h,d]=s.size,body=new T.Group();body.name='native-machine:'+s.id;body.position.copy(state.position);this.root.add(body);
    const lamp=this.material(new T.MeshStandardMaterial({color:0x39484a,roughness:.28,metalness:.55}));let display:MachineDisplay,lever:T.Group|undefined,belt:BeltArt|undefined;
    if(s.kind==='switch'){
-    this.part(body,[0,0,0],[w,h,d],f.graphite,.035);const control=new T.Group();control.position.copy(V(...s.position).add(V(...(s.controlOffset??[0,0,0]))));const normal=V(...(s.direction??[0,0,1]));normal.y=0;if(normal.lengthSq()<.001)normal.set(0,0,1);control.quaternion.setFromUnitVectors(V(0,0,1),normal.normalize());this.root.add(control);
+    this.part(body,[0,0,0],[w,h,d],f.graphite,.035);const control=new T.Group();control.position.copy(V(...s.position).add(V(...(s.controlOffset??[0,0,0]))));const normal=V(...(s.controlFacing??s.direction??[0,0,1]));normal.y=0;if(normal.lengthSq()<.001)normal.set(0,0,1);control.quaternion.setFromUnitVectors(V(0,0,1),normal.normalize());this.root.add(control);
     this.part(control,[0,-.06,-.035],[.43,.59,.13],f.aluminum,.025);this.part(control,[0,-.06,.04],[.38,.54,.04],f.recess,.018);const screen=new T.Group();screen.position.y=.13;control.add(screen);display=this.machineDisplay(screen,s.label,.33,.12);
     lever=new T.Group();lever.position.set(0,-.16,.09);control.add(lever);this.part(lever,[0,.105,0],[.028,.21,.035],f.aluminum,.008);this.part(lever,[0,.22,0],[.19,.055,.065],f.rubber,.018);this.part(control,[-.14,-.20,.105],[.055,.055,.026],lamp,.008);
     for(const x of[-.17,.17])for(const y of[-.28,.17])this.part(control,[x,y,.095],[.018,.018,.012],f.graphite,.004);control.traverse(o=>{if(o instanceof T.Mesh)this.targets.push(o);});
@@ -278,7 +301,7 @@ export class ChamberScene extends RiftScene {
     for(const x of[-w/2+.045,w/2-.045])this.part(body,[x,h/2-.025,0],[.045,.05,d-.08],f.aluminum,.008);
     for(const z of[-d/2+.045,d/2-.045])this.part(body,[0,h/2-.025,z],[w-.08,.05,.045],f.aluminum,.008);
     for(const x of[-1,1])for(const z of[-1,1]){this.part(body,[x*(w/2-.16),h/2+.002,z*(d/2-.16)],[.20,.008,.05],lamp,.003);this.part(body,[x*(w/2-.10),0,z*(d/2-.3)],[.08,Math.min(.12,h*.65),.22],f.aluminum,.012);}
-    const control=new T.Group(),offset=s.kind==='lift'?V(...(s.controlOffset??(s.automatic?[w/2-.6,.9,d/2-.6]:[0,0,0]))):V(0,h/2+.12,d/2-.11);control.position.copy(offset);const normal=s.kind==='lift'?V(offset.x,0,offset.z):V(0,0,1);if(normal.lengthSq()<.001)normal.set(0,0,1);control.quaternion.setFromUnitVectors(V(0,0,1),normal.normalize());body.add(control);
+    const control=new T.Group(),offset=s.kind==='lift'?V(...(s.controlOffset??(s.automatic?[w/2-.6,.9,d/2-.6]:[0,0,0]))):V(0,h/2+.12,d/2-.11);control.position.copy(offset);const normal=s.controlFacing?V(...s.controlFacing):s.kind==='lift'?V(offset.x,0,offset.z):V(0,0,1);normal.y=0;if(normal.lengthSq()<.001)normal.set(0,0,1);control.quaternion.setFromUnitVectors(V(0,0,1),normal.normalize());body.add(control);
     if(s.kind==='lift'){const stem=Math.max(.02,offset.y-h/2-.22);this.part(body,[offset.x,h/2+stem/2,offset.z],[.065,stem,.065],f.aluminum,.012);this.part(body,[offset.x,h/2+.018,offset.z],[.28,.036,.24],f.graphite,.012);this.part(control,[0,0,0],[.53,.40,.16],f.graphite,.027);this.part(control,[0,.005,0],[.49,.35,.165],f.aluminum,.018);const screen=new T.Group();screen.position.y=.06;control.add(screen);display=this.machineDisplay(screen,s.label,.43,.19);if(!s.automatic)for(const x of[-.11,.11]){this.part(control,[x,-.135,.105],[.13,.06,.025],f.rubber,.008);this.part(control,[x,-.135,.12],[.06,.022,.012],f.warm,.004);}}
     else{this.part(control,[0,0,0],[.55,.24,.12],f.graphite,.015);display=this.machineDisplay(control,s.label,.49,.18);}
    }
@@ -330,20 +353,50 @@ export class ChamberScene extends RiftScene {
  }
  private lighting(){
   for(const child of [...this.scene.children])if(child instanceof T.Light||child.userData.chamberLight){if(child instanceof T.SpotLight||child instanceof T.DirectionalLight)child.shadow.dispose();this.scene.remove(child);}
-  RectAreaLightUniformsLib.init();this.scene.background=new T.Color(0x10151a);this.scene.fog=new T.Fog(0x10151a,38,70);this.scene.environmentIntensity=.48;this.renderer.toneMappingExposure=1.08;
-  this.scene.add(new T.HemisphereLight(0xcbdce5,0x3b3028,.48));
+  const split=this.core.number===5;RectAreaLightUniformsLib.init();this.scene.background=new T.Color(0x10151a);this.scene.fog=new T.Fog(0x10151a,38,70);this.scene.environmentIntensity=split?.38:.48;this.renderer.toneMappingExposure=1.08;
+  this.scene.add(new T.HemisphereLight(split?0xe4d9c9:0xcbdce5,0x3b3028,split?.34:.48));
   const ceiling=this.core.level.architecture.height;
-  if(this.software){const key=new T.DirectionalLight(0xdce8ed,1.55);key.position.set(-4,10,5);this.scene.add(key);const fill=new T.DirectionalLight(0xffdcaf,.65);fill.position.set(5,6,-8);this.scene.add(fill);}
-  for(const x of(this.software?[]:[-4.2,4.2]))for(const z of[-9,-1,8]){const area=new T.RectAreaLight(0xe2edf5,6.8,3.8,1.1);area.position.set(x,ceiling-.45,z);area.rotation.x=-Math.PI/2;this.scene.add(area);}
-  const key=new T.SpotLight(0xffedcf,this.software?0:150,28,.92,.7,2);key.position.set(-4,ceiling-.55,5);key.target.position.set(0,0,-3);key.castShadow=!this.software;key.shadow.mapSize.set(1024,1024);key.shadow.bias=-.0001;key.shadow.normalBias=.025;this.scene.add(key,key.target);key.userData.chamberLight=true;key.target.userData.chamberLight=true;
+  if(this.software){const key=new T.DirectionalLight(split?0xffe1b5:0xdce8ed,split?1.1:1.55);key.position.set(-4,10,5);this.scene.add(key);const fill=new T.DirectionalLight(0xffdcaf,split?.5:.65);fill.position.set(5,6,-8);this.scene.add(fill);}
+  for(const x of(this.software?[]:[-4.2,4.2]))for(const z of[-9,-1,8]){const area=new T.RectAreaLight(split?0xffe6c7:0xe2edf5,split?5.8:6.8,3.8,1.1);area.position.set(x,ceiling-.45,z);area.rotation.x=-Math.PI/2;this.scene.add(area);}
+  const key=new T.SpotLight(split?0xffd9a8:0xffedcf,this.software?0:150,28,.92,.7,2);key.position.set(-4,ceiling-.55,5);key.target.position.set(0,0,-3);key.castShadow=!this.software;key.shadow.mapSize.set(1024,1024);key.shadow.bias=-.0001;key.shadow.normalBias=.025;this.scene.add(key,key.target);key.userData.chamberLight=true;key.target.userData.chamberLight=true;
   for(const x of[-7.6,7.6]){const fill=new T.PointLight(0xffce8a,14,9,2);fill.position.set(x,.7,-8);this.scene.add(fill);}
+  if(split){
+   // Practical pools shape the near floor, retaining facade and the whole existing eligible upper bay.
+   for(const[p,target,intensity,range,angle]of[[[-4,ceiling-.55,5],[-4,0,4],125,17,.68],[[6.5,ceiling-.55,-4],[5,5.4,-11.9],190,18,.72]]as const){const light=new T.SpotLight(0xffcf91,intensity,range,angle,.85,2);light.position.set(p[0],p[1],p[2]);light.target.position.set(target[0],target[1],target[2]);light.userData.chamberLight=light.target.userData.chamberLight=true;this.scene.add(light,light.target);}
+   const gallery=this.core.solids.find(s=>s.id==='upper-gallery');if(gallery)for(const x of[gallery.min.x+.9,gallery.max.x-.9]){const light=new T.PointLight(0xffc47c,17,6,2);light.position.set(x,gallery.max.y-.18,gallery.max.z+.28);this.scene.add(light);}
+  }
   this.portalLights=[0,1].map(i=>{const light=new T.PointLight(i===0?0x55c9ee:0xffb535,0,5,2);this.scene.add(light);return light;});
+ }
+ private buildHeldFootprint(){
+  // Native support polygons are convex. Pool both GPU buffers once per room; no target/collision.
+  const geometry=this.geo(new T.BufferGeometry());geometry.setAttribute('position',new T.BufferAttribute(new Float32Array(64*9*3),3).setUsage(T.DynamicDrawUsage));geometry.setAttribute('color',new T.BufferAttribute(new Float32Array(64*9*4),4).setUsage(T.DynamicDrawUsage));geometry.setDrawRange(0,0);
+  const patch=new T.Mesh(geometry,this.material(new T.MeshBasicMaterial({color:0x20272b,vertexColors:true,transparent:true,opacity:0,depthWrite:false,toneMapped:false,side:T.DoubleSide,polygonOffset:true,polygonOffsetFactor:-1,polygonOffsetUnits:-1})));this.root.add(patch);patch.name='held-cargo-support-patch';patch.castShadow=patch.receiveShadow=false;patch.frustumCulled=false;patch.renderOrder=1;patch.visible=false;
+  const edges=this.geo(new T.BufferGeometry());edges.setAttribute('position',new T.BufferAttribute(new Float32Array(2048*3),3).setUsage(T.DynamicDrawUsage));edges.setDrawRange(0,0);
+  const outline=new T.LineSegments(edges,this.material(new T.LineBasicMaterial({color:0xaeb6b6,transparent:true,opacity:0,depthWrite:false,toneMapped:false})));outline.name='held-cargo-support-outline';outline.frustumCulled=false;outline.renderOrder=2;outline.visible=false;this.root.add(outline);
+  this.heldFootprintArt={patch,outline,opacity:0,key:'',centre:V()};
+ }
+ private updateHeldFootprint(dt:number){
+  const art=this.heldFootprintArt;if(!art)return;
+  const hit=this.core.heldId?this.core.heldFootprint():null;
+  // Never leave stale paint under an obstruction, unsupported edge, dropped cube or portal seam.
+  if(!hit||hit.cubeId!==this.core.heldId||hit.polygon.length<3||hit.polygon.length>64){art.patch.visible=art.outline.visible=false;art.opacity=0;art.key='';return;}
+  const key=hit.cubeId+':'+hit.supportId;if(key!==art.key){art.key=key;art.opacity=0;}
+  const target=1-T.MathUtils.smoothstep(hit.height,.2,2);art.opacity=this.reducedMotion||dt===0?target:T.MathUtils.damp(art.opacity,target,18,Math.max(0,dt));
+  art.patch.visible=art.outline.visible=art.opacity>.002;if(!art.patch.visible)return;
+  art.centre.set(0,0,0);for(const p of hit.polygon)art.centre.add(p);art.centre.multiplyScalar(1/hit.polygon.length);
+  const positions=art.patch.geometry.getAttribute('position') as T.BufferAttribute,colors=art.patch.geometry.getAttribute('color') as T.BufferAttribute,edges=art.outline.geometry.getAttribute('position') as T.BufferAttribute,normal=hit.normal;let count=0,edgeCount=0;
+  const vertex=(p:T.Vector3,inner:boolean,alpha:number)=>{const t=inner?.82:1;positions.setXYZ(count,art.centre.x+(p.x-art.centre.x)*t+normal.x*.004,art.centre.y+(p.y-art.centre.y)*t+normal.y*.004,art.centre.z+(p.z-art.centre.z)*t+normal.z*.004);colors.setXYZW(count++,1,1,1,alpha);};
+  for(let i=0;i<hit.polygon.length;i++){
+   const a=hit.polygon[i],b=hit.polygon[(i+1)%hit.polygon.length];vertex(art.centre,false,1);vertex(a,true,.65);vertex(b,true,.65);vertex(a,true,.65);vertex(a,false,0);vertex(b,false,0);vertex(a,true,.65);vertex(b,false,0);vertex(b,true,.65);
+   const length=a.distanceTo(b);for(let start=.025;start<length&&edgeCount+2<=edges.count;start+=.17){for(const distance of[start,Math.min(length,start+.10)]){const t=distance/length;edges.setXYZ(edgeCount++,a.x+(b.x-a.x)*t+normal.x*.007,a.y+(b.y-a.y)*t+normal.y*.007,a.z+(b.z-a.z)*t+normal.z*.007);}}
+  }
+  positions.needsUpdate=colors.needsUpdate=edges.needsUpdate=true;art.patch.geometry.setDrawRange(0,count);art.outline.geometry.setDrawRange(0,edgeCount);art.patch.material.opacity=.20*art.opacity;art.outline.material.opacity=.36*art.opacity;
  }
  override build(){
   this.portalRenderer?.dispose();this.portalRenderer=undefined;
   if(this.viewScene)this.disposeObject(this.viewScene);this.viewScene=undefined;this.viewCamera=undefined;this.instrument=undefined;
   this.disposeObject(this.root);this.root.clear();this.portalViews.forEach(v=>v.target.dispose());this.portalViews=[];this.targets=[];this.crateVisuals.clear();this.padVisuals.clear();this.bridgeVisuals.clear();
-  this.ownedGeometries?.forEach(g=>g.dispose());this.ownedMaterials?.forEach(m=>m.dispose());this.ownedTextures?.forEach(t=>t.dispose());this.ownedGeometries=new Set();this.ownedMaterials=new Set();this.ownedTextures=new Set();this.batches=new Map();this.cratePieces=new Map();this.prepareFinishes();this.architecture();this.mechanisms();this.nativeMachineProps();this.opticalProps();this.flushBatches();for(const c of this.core.crates)this.createCrate(c.id);this.buildPortalVisuals();this.lighting();
+  this.ownedGeometries?.forEach(g=>g.dispose());this.ownedMaterials?.forEach(m=>m.dispose());this.ownedTextures?.forEach(t=>t.dispose());this.ownedGeometries=new Set();this.ownedMaterials=new Set();this.ownedTextures=new Set();this.batches=new Map();this.cratePieces=new Map();this.prepareFinishes();this.architecture();this.mechanisms();this.nativeMachineProps();this.opticalProps();this.flushBatches();for(const c of this.core.crates)this.createCrate(c.id);this.buildPortalVisuals();this.lighting();this.buildHeldFootprint();
  }
  override createCrate(id:string){const oldVisual=this.crateVisuals.get(id),oldTargets=new Set<T.Object3D>();oldVisual?.traverse(o=>oldTargets.add(o));this.targets=this.targets.filter(o=>!oldTargets.has(o));const previous=this.cratePieces?.get(id);if(previous)for(const copy of previous.copies){this.root.remove(copy.group);copy.materials.forEach(m=>{m.dispose();this.ownedMaterials.delete(m);});}super.createCrate(id);const group=this.crateVisuals.get(id)!;for(const child of [...group.children])if(child instanceof T.Mesh&&child.geometry.type==='PlaneGeometry'){group.remove(child);this.disposeObject(child);}const b=this.core.crates.find(c=>c.id===id)!;
   for(const side of[-1,1]){const diamond=new T.Shape();diamond.moveTo(0,.13);diamond.lineTo(.13,0);diamond.lineTo(0,-.13);diamond.lineTo(-.13,0);diamond.closePath();const mark=this.mesh(this.geo(new T.ShapeGeometry(diamond)),this.material(new T.MeshStandardMaterial({color:0xd6c28b,metalness:.65,roughness:.32})),group);mark.position.set(0,0,side*(b.half.z+.014));if(side<0)mark.rotation.y=Math.PI;}
@@ -388,18 +441,21 @@ export class ChamberScene extends RiftScene {
  }
  private instrumentFit(){const aspect=this.viewCamera?.aspect??this.camera.aspect,ratio=T.MathUtils.clamp(aspect/1.35,.62,1);return{scale:.58*ratio,x:Math.min(.43,Math.max(.07,Math.tan(27*Math.PI/180)*.70*aspect-.17*ratio)),y:-.37*Math.sqrt(ratio)};}
  fire(index:number){this.recoil=.032;this.pulse=.16;this.shotIndex=index;}
- override renderLinkedViews(){this.portalRenderer??=new PortalRenderer(this.renderer,this.scene);if(!this.software||this.frame++%3===0)this.portalRenderer.render(this.camera,this.core.portals,this.portalViews);}
- override resize(){super.resize();if(this.viewCamera){this.viewCamera.aspect=this.camera.aspect;this.viewCamera.updateProjectionMatrix();}}
+ override renderLinkedViews(){this.portalRenderer??=new PortalRenderer(this.renderer,this.scene);if(this.refreshLinkedViews||!this.software||this.frame++%3===0){this.refreshLinkedViews=false;this.portalRenderer.render(this.camera,this.core.portals,this.portalViews);}}
+ override resize(){super.resize();this.refreshLinkedViews=true;if(this.viewCamera){this.viewCamera.aspect=this.camera.aspect;this.viewCamera.updateProjectionMatrix();}}
  override setWorld(world:RiftWorld|CoreWorld){super.setWorld(world as unknown as RiftWorld);this.viewScene=undefined;this.viewCamera=undefined;this.instrument=undefined;this.buildInstrument();this.lastPortalSignature=undefined;this.recoil=0;}
  override update(dt:number){
+  // A paused dirty/resize frame may be the only render; never throttle away its linked views.
+  if(dt===0)this.refreshLinkedViews=true;
   this.artClock=(this.artClock??0)+dt;const signature=this.core.portals.map(p=>p?p.surfaceId+':'+p.center.toArray().map(v=>v.toFixed(2)).join(','):'').join('|');if(this.lastPortalSignature!==undefined&&signature!==this.lastPortalSignature)this.recoil=.035;this.lastPortalSignature=signature;this.recoil=Math.max(0,(this.recoil??0)-dt*.17);
   for(const d of this.doors){d.leaf.position.copy(d.state.position);for(const m of d.indicators){m.color.set(d.state.progress>.85?0x96c7a1:0xedb54f);m.emissive.set(d.state.progress>.85?0x68bb88:0xffb437);}for(const input of d.inputs){const on=this.core.machines.flag(input.id);input.lamp.color.set(on?0xc0d6b8:0x354047);input.lamp.emissive.set(on?0x6fba8c:0);input.lamp.emissiveIntensity=on?1.8:0;}}
-  for(const p of this.core.pads){const art=this.buttons.get(p.id)!;art.top.position.y=art.restY-(this.pressed(p)?.065:0);art.lights.emissiveIntensity=this.pressed(p)?2:.22;}
+  for(const p of this.core.pads){const art=this.buttons.get(p.id)!,pressed=this.pressed(p),target=art.plungerRestY-(pressed?.025:0);art.top.position.y=art.restY;art.plungers.position.y=this.reducedMotion||dt===0?target:T.MathUtils.damp(art.plungers.position.y,target,22,Math.max(0,dt));art.lights.emissiveIntensity=pressed?2:.22;}
   for(const trace of this.circuitTraces)trace.material.emissiveIntensity=this.pressed(this.core.pads.find(p=>p.id===trace.pad)!)?2.6:.10;
   this.updateNativeMachineProps(dt);
   this.updateOpticalProps();
   for(let i=0;i<2;i++){const p=this.core.portals[i],light=this.portalLights[i];light.intensity=p?7:0;if(p)light.position.copy(p.center).addScaledVector(p.normal,.28);}
   this.syncCratePieces();
+  this.updateHeldFootprint(dt);
   super.update(dt);
   for(const c of this.core.crates){const visual=this.crateVisuals.get(c.id);if(visual&&c.rotation)visual.quaternion.copy(c.rotation);}
   if(this.instrument&&this.viewScene&&this.viewCamera){const fit=this.instrumentFit(),speed=Math.hypot(this.core.player.vel.x,this.core.player.vel.z),sway=this.reducedMotion?0:Math.sin(this.artClock*7)*Math.min(.004,speed*.0008);this.instrument.scale.setScalar(fit.scale);this.instrument.position.set(fit.x,fit.y+sway,(this.core.heldId?-.88:-.92)+this.recoil);this.instrument.rotation.z=-.055+(this.reducedMotion?0:Math.sin(this.artClock*1.4)*.003);this.instrumentA!.emissiveIntensity=this.core.portals[0]?2.8:.25;this.instrumentB!.emissiveIntensity=this.core.portals[1]?2.8:.25;const color=this.shotIndex===1?0xffb23d:0x49ccef;this.emitterCore!.emissive.set(color);this.emitterCore!.emissiveIntensity=1.3+(this.pulse??0)*12;this.pulse=Math.max(0,(this.pulse??0)-dt);const clear=this.renderer.autoClear;this.renderer.autoClear=false;this.renderer.clearDepth();this.renderer.render(this.viewScene,this.viewCamera);this.renderer.autoClear=clear;}

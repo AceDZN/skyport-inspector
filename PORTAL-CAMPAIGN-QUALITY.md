@@ -22,7 +22,7 @@ Possible sequence, adjusted to the available source content and tested mechanics
 | --- | --- | --- |
 | 1–5 | Short imperatives and spatial language | The instruction identifies an action, its object and destination; players apply it in space. |
 | 6–10 | Negation, obligation and permission | Competing valid routes differ in whether they obey the actual operational constraint. |
-| 11–15 | Before, after, while and until | Door/platform/beam circuits require the stated order or maintained condition. |
+| 11–15 | Before, after, when and while | Door/platform/beam circuits require the stated order or maintained condition. |
 | 16–20 | Comparatives and modifiers | Different drop heights, speeds, distances or cube properties matter to the chosen route. |
 | 21–25 | Relative clauses and reference | Several plausible objects/controls exist; the description identifies the intended one. |
 | 26–30 | Present versus past event information | Current states and physical machine history jointly identify the working route. |
@@ -40,3 +40,7 @@ For each chamber record a specific counterfactual: changing one meaningful phras
 Keep a normal-input solution and a plausible wrong-language attempt for each meaningful new semantic demand. The full final campaign must be played in sequence from fresh storage, earning all fifty completions through real mouse/keyboard events. Read-only snapshots and time stepping may support focused checks; body, portal, win and unlock injection may not count as completion evidence.
 
 Bind final recordings/manifests to one frozen build. Check startup, pointer-lock and drag-look fallback, retry, fall recovery, pause/help, sound control, Continue after reload, replay preserving frontier, last-level completion and console errors. Parent review will sample the real game in addition to the full builder run. Label structural renders and seeded access screenshots as inspection only.
+
+## Verified language boundaries
+
+Use retrieved Workbook pages at their stated scope. The G8 connectors source verifies before/after/when/while; do not attribute an until unit to that page. G9 reported speech requires preserving meaning and adjusting pronouns without mandatory tense backshift; do not require a past-perfect conversion merely because an instruction is reported. Object-relative omission is reading recognition, not broad productive mastery. The verified conditional source covers zero/first, not every conditional form. Past/simple-perfect wording alone cannot establish that a machine is currently reversed, still powered, permanently changed or restored; use actual current indicators and genuine event history. Both current native cargo sizes have mass12kg, so size differences do not establish a lighter/heavier distinction without a separately implemented and tested mass change.

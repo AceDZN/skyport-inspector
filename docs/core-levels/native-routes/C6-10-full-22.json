@@ -1,0 +1,34 @@
+{
+  "scope": "Native actual-spawn C6\u201310 paths only; not browser, shortcut-completeness or language-mastery proof.",
+  "runs": [
+    {
+      "command": "npx tsx --test --test-concurrency=1 --test-name-pattern='native C7' tests/core-permissions-routes.test.ts",
+      "exitCode": 0,
+      "tests": 5,
+      "pass": 5,
+      "fail": 0,
+      "log": "C7-Z-flight-replay.txt"
+    },
+    {
+      "command": "npx tsx --test --test-concurrency=1 tests/core-permissions-routes.test.ts",
+      "exitCode": 0,
+      "tests": 22,
+      "pass": 22,
+      "fail": 0,
+      "log": "C6-10-full-22.txt"
+    }
+  ],
+  "fixtureChangeOwner": "Lead authored real bounded Z stairs/top landing/aisle and actual dock-signal shutters.",
+  "testChanges": "Only explicit recovery/safe-aisle navigation, physical door waiting and read-only diagnostics; no assertion/actor/goal/history override.",
+  "slot": "Both processes exited; current slot explicitly released to lead and QA.",
+  "postExecutionDigestAt": "2026-10-27T22:53:02.469835+00:00",
+  "digestCaveat": "Post-execution/status-comment digest snapshot, not an immutable commit binding.",
+  "sha256": {
+    "src/core/world.ts": "74f41c1b06d498db4677e4494c2c29ef6573c782234ea690dce80cfaf435e505",
+    "src/systems.ts": "995482218de4fc50b0a5a5290a04898bea0049d7851d87fafe1bdc760dec5ff9",
+    "src/core/levels/permissions.ts": "ecf88ee0d6ad8dab03ddbea9b54d8f0c5c985bad014f193ed240b21b806d3036",
+    "tests/core-permissions-routes.test.ts": "0c7e3bf4825b36b38252fa0b89b75554052cc77e547cf61b94e52f371fbea981",
+    "docs/core-levels/native-routes/C7-Z-flight-replay.txt": "787303461050049ea9737dafb6a0f5eb605998f45e6f199714726d41ba167b18",
+    "docs/core-levels/native-routes/C6-10-full-22.txt": "4075e24a06bb3261703a2d66b5290456b575bf6f6cf180b293895eece460fba9"
+  }
+}

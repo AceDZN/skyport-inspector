@@ -1,0 +1,15 @@
+# Held-cargo support cue — source implementation
+
+Source only; the static root remains the frozen `1nG` review build. The initial design is in `HELD_CARGO_FOOTPRINT_PROPOSAL.md`. Native query geometry and tests belong to the lead; this change consumes `CoreWorld.heldFootprint()` and does not infer support from scene meshes.
+
+`ChamberScene` adds two pooled world-scene objects per room: a graphite patch with per-vertex alpha feathering and a faint neutral-grey broken outline. The patch is a convex fan with a soft outer ring. Its vertices and outline stay inside the native clipped support polygon, displaced only 4/7 mm along the returned normal to avoid surface flicker. No square bounding decal extends beyond a clipped pit edge or cylinder. Both objects retain depth testing, appear naturally in linked views, cast no shadow, and are excluded from aiming targets and collision.
+
+Opacity depends only on the query's actual height: full neutral strength at 0.2 m or below, smoothly invisible by 2 m. Ordinary updates ease opacity with an approximately 0.1-second response; reduced motion and a single paused dirty frame set it directly. The contour uses 10 cm segments with 7 cm gaps. The renderer changes no cargo pose, control, force, goal, placement or drop behaviour, and uses no correct/incorrect colour, pad snapping, target label or landing prediction.
+
+Only a query matching the currently held cube may be shown. A null result, drop, mismatched cube or invalid polygon hides both objects immediately and clears opacity. This intentionally avoids fading stale paint over a newly detected obstruction or portal ambiguity. A changed support identity resets the fade while immediately replacing geometry with the new physical polygon.
+
+The two geometry buffers and materials are allocated at room build and reused during updates. Capacity is 64 polygon vertices (the current native convex cube/support clip is smaller); an oversized polygon is suppressed safely. Existing scene-owned resource tracking disposes them on rebuild. No textures, DOM widgets, additional assets, paid generation or custom shader are introduced. Three.js's existing RGBA vertex-colour support supplies the soft patch edge.
+
+Actual gameplay appearance, visual strength on different floors, near-edge anti-aliasing and portal views remain uninspected until the parent schedules a new frozen build. No browser or build was launched for this source change. Native query tests are separate from renderer geometry checks; neither replaces normal-input visual review.
+
+Source validation: final `tsc --noEmit` passes. `work/art/check-held-footprint-renderer.ts` calls the actual pooled renderer methods with a clipped triangular query and checks that all generated patch/line vertices stay inside it, native data is unchanged, buffers/objects are reused, height fades the cue, reduced motion is direct, and null/drop hides immediately. The existing paused/resize hook probe also passes after this addition. Both probes run in Node without a browser, WebGL context or physics world; they do not prove pixel appearance.

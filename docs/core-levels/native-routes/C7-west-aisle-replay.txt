@@ -1,0 +1,33 @@
+✔ native C7 base/contrast retain identical physical inventory and wiring (85.106125ms)
+✔ native C7 base walks the already parked north bridge without a control command (66.225709ms)
+✔ native C7 contrast selects actual east alignment and crosses its different dock (89.349542ms)
+✔ native C7 wrong east destination stays recoverable and restoring north removes the actual mistake (144.485625ms)
+✖ native C7 an actual missed edge lands in the basin and returns by authored stairs (104.809833ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 4
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1136.9505
+
+✖ failing tests:
+
+test at tests/core-permissions-routes.test.ts:204:1
+✖ native C7 an actual missed edge lands in the basin and returns by authored stairs (104.809833ms)
+  AssertionError [ERR_ASSERTION]: Native WASD blocked toward -7.5,4; {"player":[-13.754415512084961,-3.224653482437134,4.0001983642578125],"velocity":[4.799999997511782,0,-0.00015270487907677744],"grounded":true,"cargo":[],"devices":[{"id":"transfer-deck","kind":"lift","label":"TRANSFER","position":[-4,-0.15,-1],"size":[8,0.3,6],"active":true,"progress":0,"choice":"north","angle":0,"powered":null,"blocked":false},{"id":"north-dock-door","kind":"shutter","label":"NORTH","position":[-4,5,-10.12],"size":[2.8,3,0.3],"active":true,"progress":1,"choice":0,"angle":0,"powered":null,"blocked":false},{"id":"east-dock-door","kind":"shutter","label":"EAST","position":[14.12,1.5,-1],"size":[0.3,3,2.8],"active":false,"progress":0,"choice":0,"angle":0,"powered":null,"blocked":false}],"pads":[],"signals":{"moving:transfer-deck":false,"at:transfer-deck:north":true,"at:transfer-deck:east":false,"safety:north-dock-door":false,"door-safety":false,"moving:north-dock-door":false,"safety:east-dock-door":false,"moving:east-dock-door":false},"kcc":{"offset":0.014999999664723873,"minWidth":0.25,"maxHeight":0.23000000417232513,"contacts":[{"solid":"catch-return-step-1","toi":0.0001283091405639425,"normal":{"x":-0.8305481672286987,"y":0.5569466948509216,"z":0},"witness":{"x":-13.509964942932129,"y":-3.9599499702453613,"z":4.000114917755127},"applied":{"x":0.00012825966405216604,"y":-0.0000035627685974759515,"z":-4.080391136085382e-9},"remaining":{"x":0.03987174108624458,"y":-0.001107548363506794,"z":-0.0000012684602097579045}}]},"events":[{"type":"footstep","data":{}},{"type":"footstep","data":{}},{"type":"footstep","data":{}},{"type":"footstep","data":{}},{"type":"footstep","data":{}},{"type":"footstep","data":{}},{"type":"footstep","data":{}},{"type":"footstep","data":{}}]}
+      at NativeRoute.walk (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-permissions-routes.test.ts:66:10)
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-permissions-routes.test.ts:209:38)
+      at withRoute (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-permissions-routes.test.ts:136:123)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-permissions-routes.test.ts:204:114)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'fail',
+    diff: 'simple'
+  }

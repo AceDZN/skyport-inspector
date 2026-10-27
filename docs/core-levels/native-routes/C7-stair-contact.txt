@@ -1,0 +1,29 @@
+✖ native C7 an actual missed edge lands in the basin and returns by authored stairs (333.099333ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1207.394084
+
+✖ failing tests:
+
+test at tests/core-permissions-routes.test.ts:204:1
+✖ native C7 an actual missed edge lands in the basin and returns by authored stairs (333.099333ms)
+  AssertionError [ERR_ASSERTION]: Native WASD blocked toward -7.5,4; {"player":[-13.46325397491455,-3.096647024154663,3.9997408390045166],"velocity":[4.799999994379383,0,0.0002316694924962631],"grounded":true,"cargo":[],"devices":[{"id":"transfer-deck","kind":"lift","label":"TRANSFER","position":[-4,-0.15,-1],"size":[8,0.3,6],"active":true,"progress":0,"choice":"north","angle":0,"powered":null,"blocked":false}],"pads":[],"signals":{"moving:transfer-deck":false,"at:transfer-deck:north":true,"at:transfer-deck:east":false},"kcc":{"offset":0.014999999664723873,"minWidth":0.25,"maxHeight":0.23000000417232513,"contacts":[{"solid":"catch-return-step-2","toi":0.0000965620347415097,"normal":{"x":-0.8910183906555176,"y":0.4539671540260315,"z":-9.866661230262253e-7},"witness":{"x":-13.199999809265137,"y":-3.799999952316284,"z":3.999910831451416},"applied":{"x":0.00009652480366639793,"y":-0.000002681244495761348,"z":4.658719632288921e-9},"remaining":{"x":0.03990347310900688,"y":-0.0011084298603236675,"z":0.000001925920514622703}}]},"events":[{"type":"footstep","data":{}},{"type":"footstep","data":{}},{"type":"footstep","data":{}},{"type":"footstep","data":{}},{"type":"footstep","data":{}},{"type":"footstep","data":{}},{"type":"footstep","data":{}},{"type":"footstep","data":{}}]}
+      at NativeRoute.walk (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-permissions-routes.test.ts:66:10)
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-permissions-routes.test.ts:207:40)
+      at withRoute (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-permissions-routes.test.ts:136:123)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-permissions-routes.test.ts:204:114)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'fail',
+    diff: 'simple'
+  }

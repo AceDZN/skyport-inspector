@@ -1,0 +1,62 @@
+✖ native capsule can leave lower lift edge onto coplanar floor, cycle=false (1222.209292ms)
+✖ native capsule can leave lower lift edge onto coplanar floor, cycle=true (500.800834ms)
+✖ actual interior rider can use E up/down and disembark normally at the lower dock (422.912209ms)
+✔ captured v2 lower-dock pose can walk away instead of retaining a zero-movement floor contact (25.548291ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 1
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4001.9785
+
+✖ failing tests:
+
+test at tests/core-lift-seam.test.ts:39:33
+✖ native capsule can leave lower lift edge onto coplanar floor, cycle=false (1222.209292ms)
+  AssertionError [ERR_ASSERTION]: Coplanar deck→loading floor pins a walking capsule: -0.004149458836764097,0.8641666173934937,2.0211215019226074; {"x":0,"y":0,"z":0}
+      at exitLowerDock (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-lift-seam.test.ts:33:9)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-lift-seam.test.ts:43:3)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/core-lift-seam.test.ts:39:33
+✖ native capsule can leave lower lift edge onto coplanar floor, cycle=true (500.800834ms)
+  AssertionError [ERR_ASSERTION]: Coplanar deck→loading floor pins a walking capsule: -0.0041502187959849834,0.8648874759674072,2.0092906951904297; {"x":0,"y":0,"z":0}
+      at exitLowerDock (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-lift-seam.test.ts:33:9)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-lift-seam.test.ts:43:3)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/core-lift-seam.test.ts:46:1
+✖ actual interior rider can use E up/down and disembark normally at the lower dock (422.912209ms)
+  AssertionError [ERR_ASSERTION]: Coplanar deck→loading floor pins a walking capsule: -0.2819041311740875,0.8649197220802307,2.0038909912109375; {"x":0,"y":0,"z":0}
+      at exitLowerDock (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-lift-seam.test.ts:33:9)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-lift-seam.test.ts:53:3)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

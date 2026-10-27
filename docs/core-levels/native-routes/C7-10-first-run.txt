@@ -1,0 +1,86 @@
+✔ native C7 base/contrast retain identical physical inventory and wiring (76.353667ms)
+✔ native C8 base/contrast retain identical physical inventory and wiring (38.927625ms)
+✔ native C9 base/contrast retain identical physical inventory and wiring (22.908417ms)
+✔ native C10 base/contrast retain identical physical inventory and wiring (14.089958ms)
+✔ native C7 base walks the already parked north bridge without a control command (38.2765ms)
+✔ native C7 contrast selects actual east alignment and crosses its different dock (79.232458ms)
+✔ native C7 wrong east destination stays recoverable and restoring north removes the actual mistake (138.55525ms)
+✖ native C7 an actual missed edge lands in the basin and returns by authored stairs (196.558ms)
+✔ native C8 actual freight ascent and upper delivery; held during movement=false (104.309541ms)
+✔ native C8 actual freight ascent and upper delivery; held during movement=true (83.665ms)
+✔ native C8 contrast keeps cargo at lower receiving pressure and uses its real door (39.470167ms)
+✔ native C9 permission accepts the actual cube-a retrieval route for east (43.819875ms)
+✔ native C9 permission accepts the actual cube-b retrieval route for east (78.817ms)
+✔ native C9 both-pressure contrast accepts either actual assignment and recovers removal; swapped=false (134.159791ms)
+✖ native C9 both-pressure contrast accepts either actual assignment and recovers removal; swapped=true (103.29475ms)
+✔ native C10 base permits actual cargo ascent on the broad stairs without riding (67.012542ms)
+✔ native C10 base also permits actual lift carriage instead of treating optional as forbidden (82.940167ms)
+✖ native C10 contrast parks the upper bridge from fixed floor and reaches SIDE without a ride/cargo chore (30.818042ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 15
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1746.55
+
+✖ failing tests:
+
+test at tests/core-permissions-routes.test.ts:201:1
+✖ native C7 an actual missed edge lands in the basin and returns by authored stairs (196.558ms)
+  AssertionError [ERR_ASSERTION]: Native WASD blocked toward -7.5,4; {"player":[-13.46325397491455,-3.096647024154663,3.9997408390045166],"devices":[{"id":"transfer-deck","kind":"lift","label":"TRANSFER","position":[-4,-0.15,-1],"size":[8,0.3,6],"active":true,"progress":0,"choice":"north","angle":0,"powered":null,"blocked":false}],"pads":[],"events":[{"type":"footstep","data":{}},{"type":"footstep","data":{}},{"type":"footstep","data":{}},{"type":"footstep","data":{}},{"type":"footstep","data":{}},{"type":"footstep","data":{}},{"type":"footstep","data":{}},{"type":"footstep","data":{}}]}
+      at NativeRoute.walk (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-permissions-routes.test.ts:63:10)
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-permissions-routes.test.ts:204:40)
+      at withRoute (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-permissions-routes.test.ts:133:123)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-permissions-routes.test.ts:201:114)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'fail',
+    diff: 'simple'
+  }
+
+test at tests/core-permissions-routes.test.ts:215:35
+✖ native C9 both-pressure contrast accepts either actual assignment and recovers removal; swapped=true (103.29475ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(r.device('west-door').progress>.95)
+  
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-permissions-routes.test.ts:218:79)
+      at withRoute (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-permissions-routes.test.ts:133:123)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-permissions-routes.test.ts:215:171)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/core-permissions-routes.test.ts:229:1
+✖ native C10 contrast parks the upper bridge from fixed floor and reaches SIDE without a ride/cargo chore (30.818042ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(r.device('side-door').progress>.95)
+  
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-permissions-routes.test.ts:232:147)
+      at withRoute (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-permissions-routes.test.ts:133:123)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-permissions-routes.test.ts:229:136)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

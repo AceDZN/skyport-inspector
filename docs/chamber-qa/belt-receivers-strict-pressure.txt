@@ -1,0 +1,50 @@
+✖ native draft13 baseline actual delivery, maintained pressure and reversal (762.4445ms)
+✔ native draft13 flush actual delivery, maintained pressure and reversal (491.624958ms)
+✖ native draft15 baseline actual delivery, maintained pressure and reversal (599.52325ms)
+✔ native draft15 flush actual delivery, maintained pressure and reversal (537.833458ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 2
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2720.459333
+
+✖ failing tests:
+
+test at docs/chamber-qa/belt-receiver-regression.test.ts:5:87
+✖ native draft13 baseline actual delivery, maintained pressure and reversal (762.4445ms)
+  AssertionError [ERR_ASSERTION]: Actual east delivery stalled: {"cargo":[6.426984786987305,0.6700024008750916,-0.0000956335716182366],"driveLoss":13.849999999999854}
+  
+  false !== true
+  
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/belt-receiver-regression.test.ts:7:44)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at docs/chamber-qa/belt-receiver-regression.test.ts:5:87
+✖ native draft15 baseline actual delivery, maintained pressure and reversal (599.52325ms)
+  AssertionError [ERR_ASSERTION]: Actual east delivery stalled: {"cargo":[6.426393985748291,0.669687807559967,6.9999260902404785],"driveLoss":13.849999999999854}
+  
+  false !== true
+  
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/belt-receiver-regression.test.ts:7:44)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

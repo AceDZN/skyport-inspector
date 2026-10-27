@@ -1,0 +1,65 @@
+✖ native C7 an actual missed edge lands in the basin and returns by authored stairs (322.957542ms)
+✖ native C9 both-pressure contrast accepts either actual assignment and recovers removal; swapped=true (174.3135ms)
+✖ native C10 contrast parks the upper bridge from fixed floor and reaches SIDE without a ride/cargo chore (39.041875ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 0
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1157.758625
+
+✖ failing tests:
+
+test at tests/core-permissions-routes.test.ts:201:1
+✖ native C7 an actual missed edge lands in the basin and returns by authored stairs (322.957542ms)
+  AssertionError [ERR_ASSERTION]: Native WASD blocked toward -7.5,4; {"player":[-13.46325397491455,-3.096647024154663,3.9997408390045166],"velocity":[4.799999994379383,0,0.0002316694924962631],"grounded":true,"cargo":[],"devices":[{"id":"transfer-deck","kind":"lift","label":"TRANSFER","position":[-4,-0.15,-1],"size":[8,0.3,6],"active":true,"progress":0,"choice":"north","angle":0,"powered":null,"blocked":false}],"pads":[],"signals":{"moving:transfer-deck":false,"at:transfer-deck:north":true,"at:transfer-deck:east":false},"events":[{"type":"footstep","data":{}},{"type":"footstep","data":{}},{"type":"footstep","data":{}},{"type":"footstep","data":{}},{"type":"footstep","data":{}},{"type":"footstep","data":{}},{"type":"footstep","data":{}},{"type":"footstep","data":{}}]}
+      at NativeRoute.walk (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-permissions-routes.test.ts:63:10)
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-permissions-routes.test.ts:204:40)
+      at withRoute (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-permissions-routes.test.ts:133:123)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-permissions-routes.test.ts:201:114)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'fail',
+    diff: 'simple'
+  }
+
+test at tests/core-permissions-routes.test.ts:215:35
+✖ native C9 both-pressure contrast accepts either actual assignment and recovers removal; swapped=true (174.3135ms)
+  AssertionError [ERR_ASSERTION]: {"player":[-5.0640177726745605,0.8644304275512695,6.826263904571533],"velocity":[-9.764257336344031e-11,0,4.0110134783714285e-11],"grounded":true,"cargo":[{"id":"cube-a","position":[-10.308065414428711,0.8441163301467896,6.399105548858643],"velocity":[0,0,0],"rotation":[0.318613737821579,0.12297232449054718,0.690590500831604,-0.6375327706336975],"angularVelocity":[0,0,0],"held":false,"crossings":1},{"id":"cube-b","position":[-5.029506206512451,0.6898895502090454,5.034264087677002],"velocity":[0,0,0],"rotation":[-2.0118659449508414e-7,0.000014369321434060112,-2.2854241876757442e-7,1],"angularVelocity":[0,0,0],"held":false,"crossings":0}],"devices":[{"id":"storage-lift","kind":"lift","label":"STORAGE","position":[7,3.25,-3],"size":[4,0.3,4],"active":true,"progress":1,"choice":"gallery","angle":0,"powered":null,"blocked":false},{"id":"east-door","kind":"shutter","label":"EAST","position":[11.12,1.5,9],"size":[0.3,3,2.8],"active":false,"progress":0,"choice":0,"angle":0,"powered":null,"blocked":false},{"id":"west-door","kind":"shutter","label":"WEST","position":[-11.12,1.5,9],"size":[0.3,3,2.8],"active":false,"progress":0,"choice":0,"angle":0,"powered":null,"blocked":false}],"pads":[{"id":"east-button","position":[6,0.14,7],"pressed":false,"crate":null},{"id":"west-button-a","position":[-5,0.14,5],"pressed":true,"crate":"cube-b"},{"id":"west-button-b","position":[-1,0.14,5],"pressed":false,"crate":null}],"signals":{"east-button":false,"west-button-a":true,"west-button-b":false,"moving:storage-lift":false,"at:storage-lift:lower":false,"at:storage-lift:gallery":true,"safety:east-door":false,"door-safety":false,"moving:east-door":false,"safety:west-door":false,"moving:west-door":false},"events":[{"type":"contact","data":{"body":"cube-a","speed":11.858507209543799}},{"type":"footstep","data":{}},{"type":"button-release","data":{"pad":"west-button-b","crate":"player"}},{"type":"contact","data":{"body":"cube-a","speed":4.642408875101141}},{"type":"footstep","data":{}},{"type":"contact","data":{"body":"cube-a","speed":1.6702036929420911}},{"type":"pad","data":{"pad":"west-button-a","crate":"cube-b"}},{"type":"drop","data":{"body":"cube-b"}}]}
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-permissions-routes.test.ts:218:79)
+      at withRoute (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-permissions-routes.test.ts:133:123)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-permissions-routes.test.ts:215:171)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/core-permissions-routes.test.ts:229:1
+✖ native C10 contrast parks the upper bridge from fixed floor and reaches SIDE without a ride/cargo chore (39.041875ms)
+  AssertionError [ERR_ASSERTION]: {"player":[-2.1514387130737305,0.8649604916572571,2.5910801887512207],"velocity":[8.177479351939254e-32,0,-1.479770588499736e-32],"grounded":true,"cargo":[{"id":"cube","position":[-7.000002861022949,0.5498895645141602,10],"velocity":[0,0,0],"rotation":[1.9989441568668553e-7,3.8904513291471154e-12,-2.274011876579607e-7,1],"angularVelocity":[0,0,0],"held":false,"crossings":0}],"devices":[{"id":"service-lift","kind":"lift","label":"SERVICE","position":[0,4.05,0],"size":[6,0.3,4],"active":true,"progress":1,"choice":"upper","angle":0,"powered":null,"blocked":false},{"id":"upper-door","kind":"shutter","label":"UPPER","position":[-12.12,5.7,-5],"size":[0.3,3,2.8],"active":false,"progress":0,"choice":0,"angle":0,"powered":null,"blocked":false},{"id":"side-door","kind":"shutter","label":"SIDE","position":[12.12,6.35625,0],"size":[0.3,3,2.8],"active":true,"progress":0.18749999999999994,"choice":0,"angle":0,"powered":null,"blocked":false}],"pads":[{"id":"upper-button","position":[-6,4.34,-5],"pressed":false,"crate":null}],"signals":{"upper-button":false,"moving:service-lift":false,"at:service-lift:lower":false,"at:service-lift:upper":true,"safety:upper-door":false,"door-safety":false,"moving:upper-door":false,"safety:side-door":false,"moving:side-door":true},"events":[{"type":"footstep","data":{}},{"type":"footstep","data":{}},{"type":"footstep","data":{}},{"type":"footstep","data":{}},{"type":"lift-motor","data":{"id":"service-lift","value":"upper"}},{"type":"lift-motor","data":{"id":"service-lift"}},{"type":"lift-arrival","data":{"id":"service-lift","value":"upper"}},{"type":"shutter-open","data":{"id":"side-door"}}]}
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-permissions-routes.test.ts:232:147)
+      at withRoute (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-permissions-routes.test.ts:133:123)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-permissions-routes.test.ts:229:136)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

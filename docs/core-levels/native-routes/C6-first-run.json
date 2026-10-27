@@ -1,0 +1,18 @@
+{
+  "scope": "Filtered native C6 only; actual authored-spawn paths, not browser proof. Other C7\u201310 cases remain pending.",
+  "command": "npx tsx --test --test-concurrency=1 --test-name-pattern='native C6' tests/core-permissions-routes.test.ts",
+  "exitCode": 0,
+  "tests": 4,
+  "passed": 4,
+  "failed": 0,
+  "slot": "Explicit QA release + lead grant; process exited and slot released to both after run.",
+  "postExecutionDigestAt": "2026-10-27T22:35:41.189759+00:00",
+  "digestCaveat": "Source digest snapshot after execution/status-comment update; no immutable commit binding claimed.",
+  "sha256": {
+    "src/core/world.ts": "74f41c1b06d498db4677e4494c2c29ef6573c782234ea690dce80cfaf435e505",
+    "src/systems.ts": "995482218de4fc50b0a5a5290a04898bea0049d7851d87fafe1bdc760dec5ff9",
+    "src/core/levels/permissions.ts": "4fb162d3e5cd200453f9edcaeeaba2d6d5d4545c04fc3cfc2d981e79be3f4eb7",
+    "tests/core-permissions-routes.test.ts": "66031daf933cf593221510d11d3e5df9836293afdb7fb6460da491f8db0f065f",
+    "docs/core-levels/native-routes/C6-first-run.txt": "c55ecbde245f24fffa820322aa543567ff481dba1b80e490f6ae5e7973fe25c7"
+  }
+}

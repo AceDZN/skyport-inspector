@@ -1,0 +1,561 @@
+{
+  "scope": "Unregistered draft inspection; no level completion claim",
+  "rows": [
+    {
+      "number": 6,
+      "scope": "Native geometry/API inspection only; not mouse/keyboard play or completion proof",
+      "sameFixture": true,
+      "invalidSolids": [],
+      "duplicateSolidIds": [],
+      "apertures": [
+        {
+          "surface": "source-east",
+          "point": [
+            7.985,
+            1.55,
+            8
+          ],
+          "accepted": true,
+          "occluders": []
+        },
+        {
+          "surface": "upper-west",
+          "point": [
+            -7.985,
+            4.35,
+            -8
+          ],
+          "eye": [
+            5,
+            1.52,
+            8
+          ],
+          "accepted": true,
+          "occluders": []
+        },
+        {
+          "surface": "power-west",
+          "point": [
+            -7.985,
+            1.55,
+            2
+          ],
+          "eye": [
+            0,
+            1.52,
+            2
+          ],
+          "accepted": true,
+          "occluders": []
+        }
+      ],
+      "carrierIntersections": [],
+      "initialPads": [
+        {
+          "id": "north-button",
+          "position": [
+            -5,
+            0.14,
+            2
+          ],
+          "pressed": true,
+          "crate": "cube"
+        },
+        {
+          "id": "south-button",
+          "position": [
+            4,
+            0.14,
+            6
+          ],
+          "pressed": false,
+          "crate": null
+        }
+      ],
+      "initialDoors": [
+        {
+          "id": "north-door",
+          "kind": "shutter",
+          "label": "NORTH",
+          "position": [
+            -4,
+            7.8,
+            -12.12
+          ],
+          "size": [
+            2.8,
+            3,
+            0.3
+          ],
+          "active": true,
+          "progress": 1,
+          "choice": 0,
+          "angle": 0,
+          "powered": null,
+          "blocked": false
+        },
+        {
+          "id": "south-door",
+          "kind": "shutter",
+          "label": "SOUTH",
+          "position": [
+            4,
+            1.5,
+            12.12
+          ],
+          "size": [
+            2.8,
+            3,
+            0.3
+          ],
+          "active": false,
+          "progress": 0,
+          "choice": 0,
+          "angle": 0,
+          "powered": null,
+          "blocked": false
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "scope": "Native geometry/API inspection only; not mouse/keyboard play or completion proof",
+      "sameFixture": true,
+      "invalidSolids": [],
+      "duplicateSolidIds": [],
+      "apertures": [
+        {
+          "surface": "operations-white",
+          "point": [
+            0,
+            1.55,
+            14.985
+          ],
+          "accepted": true,
+          "occluders": []
+        },
+        {
+          "surface": "hub-white",
+          "point": [
+            0,
+            1.55,
+            2.765
+          ],
+          "eye": [
+            0,
+            1.52,
+            12
+          ],
+          "accepted": true,
+          "occluders": []
+        }
+      ],
+      "carrierIntersections": [],
+      "initialPads": [],
+      "initialDoors": [
+        {
+          "id": "transfer-deck",
+          "kind": "lift",
+          "label": "TRANSFER",
+          "position": [
+            -4,
+            -0.15,
+            -1
+          ],
+          "size": [
+            8,
+            0.3,
+            6
+          ],
+          "active": true,
+          "progress": 0,
+          "choice": "north",
+          "angle": 0,
+          "powered": null,
+          "blocked": false
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "scope": "Native geometry/API inspection only; not mouse/keyboard play or completion proof",
+      "sameFixture": true,
+      "invalidSolids": [],
+      "duplicateSolidIds": [],
+      "apertures": [
+        {
+          "surface": "source-south",
+          "point": [
+            4,
+            1.55,
+            11.985
+          ],
+          "accepted": true,
+          "occluders": []
+        },
+        {
+          "surface": "upper-east",
+          "point": [
+            8.985,
+            5.75,
+            -7
+          ],
+          "eye": [
+            5,
+            1.52,
+            11
+          ],
+          "accepted": true,
+          "occluders": []
+        }
+      ],
+      "carrierIntersections": [],
+      "initialPads": [
+        {
+          "id": "lower-button",
+          "position": [
+            -5,
+            0.14,
+            3
+          ],
+          "pressed": false,
+          "crate": null
+        },
+        {
+          "id": "upper-button",
+          "position": [
+            5,
+            4.34,
+            -7
+          ],
+          "pressed": false,
+          "crate": null
+        }
+      ],
+      "initialDoors": [
+        {
+          "id": "freight-lift",
+          "kind": "lift",
+          "label": "FREIGHT",
+          "position": [
+            0,
+            -0.15,
+            0
+          ],
+          "size": [
+            4,
+            0.3,
+            4
+          ],
+          "active": true,
+          "progress": 0,
+          "choice": "lower",
+          "angle": 0,
+          "powered": null,
+          "blocked": false
+        },
+        {
+          "id": "upper-door",
+          "kind": "shutter",
+          "label": "UPPER",
+          "position": [
+            -5,
+            5.7,
+            -10.12
+          ],
+          "size": [
+            2.8,
+            3,
+            0.3
+          ],
+          "active": false,
+          "progress": 0,
+          "choice": 0,
+          "angle": 0,
+          "powered": null,
+          "blocked": false
+        },
+        {
+          "id": "lower-door",
+          "kind": "shutter",
+          "label": "LOWER",
+          "position": [
+            9.12,
+            1.5,
+            7
+          ],
+          "size": [
+            0.3,
+            3,
+            2.8
+          ],
+          "active": false,
+          "progress": 0,
+          "choice": 0,
+          "angle": 0,
+          "powered": null,
+          "blocked": false
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "scope": "Native geometry/API inspection only; not mouse/keyboard play or completion proof",
+      "sameFixture": true,
+      "invalidSolids": [],
+      "duplicateSolidIds": [],
+      "apertures": [
+        {
+          "surface": "source-south",
+          "point": [
+            0,
+            1.55,
+            13.985
+          ],
+          "accepted": true,
+          "occluders": []
+        },
+        {
+          "surface": "low-west",
+          "point": [
+            -10.985,
+            1.55,
+            -8
+          ],
+          "eye": [
+            0,
+            1.52,
+            11
+          ],
+          "accepted": true,
+          "occluders": []
+        }
+      ],
+      "carrierIntersections": [],
+      "initialPads": [
+        {
+          "id": "east-button",
+          "position": [
+            6,
+            0.14,
+            7
+          ],
+          "pressed": false,
+          "crate": null
+        },
+        {
+          "id": "west-button-a",
+          "position": [
+            -5,
+            0.14,
+            5
+          ],
+          "pressed": false,
+          "crate": null
+        },
+        {
+          "id": "west-button-b",
+          "position": [
+            -1,
+            0.14,
+            5
+          ],
+          "pressed": false,
+          "crate": null
+        }
+      ],
+      "initialDoors": [
+        {
+          "id": "storage-lift",
+          "kind": "lift",
+          "label": "STORAGE",
+          "position": [
+            7,
+            -0.15,
+            -3
+          ],
+          "size": [
+            4,
+            0.3,
+            4
+          ],
+          "active": true,
+          "progress": 0,
+          "choice": "lower",
+          "angle": 0,
+          "powered": null,
+          "blocked": false
+        },
+        {
+          "id": "east-door",
+          "kind": "shutter",
+          "label": "EAST",
+          "position": [
+            11.12,
+            1.5,
+            9
+          ],
+          "size": [
+            0.3,
+            3,
+            2.8
+          ],
+          "active": false,
+          "progress": 0,
+          "choice": 0,
+          "angle": 0,
+          "powered": null,
+          "blocked": false
+        },
+        {
+          "id": "west-door",
+          "kind": "shutter",
+          "label": "WEST",
+          "position": [
+            -11.12,
+            1.5,
+            9
+          ],
+          "size": [
+            0.3,
+            3,
+            2.8
+          ],
+          "active": false,
+          "progress": 0,
+          "choice": 0,
+          "angle": 0,
+          "powered": null,
+          "blocked": false
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "scope": "Native geometry/API inspection only; not mouse/keyboard play or completion proof",
+      "sameFixture": true,
+      "invalidSolids": [],
+      "duplicateSolidIds": [],
+      "apertures": [
+        {
+          "surface": "source-south",
+          "point": [
+            -7,
+            1.55,
+            11.985
+          ],
+          "accepted": true,
+          "occluders": []
+        },
+        {
+          "surface": "upper-west",
+          "point": [
+            -7.985,
+            5.75,
+            3
+          ],
+          "eye": [
+            -7,
+            1.52,
+            11
+          ],
+          "accepted": true,
+          "occluders": []
+        }
+      ],
+      "carrierIntersections": [],
+      "initialPads": [
+        {
+          "id": "upper-button",
+          "position": [
+            -6,
+            4.34,
+            -5
+          ],
+          "pressed": false,
+          "crate": null
+        }
+      ],
+      "initialDoors": [
+        {
+          "id": "service-lift",
+          "kind": "lift",
+          "label": "SERVICE",
+          "position": [
+            0,
+            -0.15,
+            0
+          ],
+          "size": [
+            6,
+            0.3,
+            4
+          ],
+          "active": true,
+          "progress": 0,
+          "choice": "lower",
+          "angle": 0,
+          "powered": null,
+          "blocked": false
+        },
+        {
+          "id": "upper-door",
+          "kind": "shutter",
+          "label": "UPPER",
+          "position": [
+            -12.12,
+            5.7,
+            -5
+          ],
+          "size": [
+            0.3,
+            3,
+            2.8
+          ],
+          "active": false,
+          "progress": 0,
+          "choice": 0,
+          "angle": 0,
+          "powered": null,
+          "blocked": false
+        },
+        {
+          "id": "side-door",
+          "kind": "shutter",
+          "label": "SIDE",
+          "position": [
+            12.12,
+            5.7,
+            0
+          ],
+          "size": [
+            0.3,
+            3,
+            2.8
+          ],
+          "active": false,
+          "progress": 0,
+          "choice": 0,
+          "angle": 0,
+          "powered": null,
+          "blocked": false
+        }
+      ],
+      "realDockDoor": {
+        "transit": {
+          "flag": false,
+          "door": 0
+        },
+        "arrived": {
+          "flag": true,
+          "door": 1
+        },
+        "leaving": {
+          "flag": false,
+          "door": 0
+        }
+      }
+    }
+  ],
+  "errors": []
+}

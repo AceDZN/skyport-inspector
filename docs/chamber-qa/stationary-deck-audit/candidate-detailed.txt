@@ -1,0 +1,78 @@
+✖ stationary-type transitions preserve loose cargo and capsule across three real up/down cycles (504.182292ms)
+✖ held cargo remains connected through up/down deck-type transitions without native speed amplification (180.848084ms)
+✖ loaded automatic lift brakes midrail and restarts continuously (185.55925ms)
+✖ loaded automatic moving-platform brakes midrail and restarts continuously (382.451709ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 0
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 16079.48675
+
+✖ failing tests:
+
+test at docs/chamber-qa/stationary-deck-audit/additional.test.ts:20:1
+✖ stationary-type transitions preserve loose cargo and capsule across three real up/down cycles (504.182292ms)
+  AssertionError [ERR_ASSERTION]: Cargo penetration 0.052782042321215195
+      at support (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-audit/additional.test.ts:19:362)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-audit/additional.test.ts:21:207)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at docs/chamber-qa/stationary-deck-audit/additional.test.ts:23:1
+✖ held cargo remains connected through up/down deck-type transitions without native speed amplification (180.848084ms)
+  AssertionError [ERR_ASSERTION]: Cargo penetration 0.05125700419289281
+      at support (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-audit/additional.test.ts:19:362)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-audit/additional.test.ts:24:308)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at docs/chamber-qa/stationary-deck-audit/additional.test.ts:31:55
+✖ loaded automatic lift brakes midrail and restarts continuously (185.55925ms)
+  AssertionError [ERR_ASSERTION]: Cargo penetration 0.08277690535120641
+      at support (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-audit/additional.test.ts:19:362)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-audit/additional.test.ts:33:397)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at docs/chamber-qa/stationary-deck-audit/additional.test.ts:31:55
+✖ loaded automatic moving-platform brakes midrail and restarts continuously (382.451709ms)
+  AssertionError [ERR_ASSERTION]: Cargo penetration 0.08277690535120641
+      at support (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-audit/additional.test.ts:19:362)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-audit/additional.test.ts:33:397)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

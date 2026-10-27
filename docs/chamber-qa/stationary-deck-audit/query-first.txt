@@ -1,0 +1,230 @@
+✖ stationary-type transitions preserve loose cargo and capsule across three real up/down cycles (13898.35975ms)
+✖ loaded automatic lift brakes midrail and restarts continuously (3797.133459ms)
+✖ loaded automatic moving-platform brakes midrail and restarts continuously (888.530709ms)
+✖ loose cargo stays on a horizontal carrier over repeated stop/type transitions (3160.843792ms)
+✔ native capsule can leave lower lift edge onto coplanar floor, cycle=false (4312.019875ms)
+✖ native capsule can leave lower lift edge onto coplanar floor, cycle=true (3495.753791ms)
+✖ actual interior rider can use E up/down and disembark normally at the lower dock (2336.969125ms)
+✔ captured v2 lower-dock pose can walk away instead of retaining a zero-movement floor contact (262.944167ms)
+✔ query-only substitution frees the naturally stalled same pose without changing native integration state (19037.971167ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 3
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 173899.324666
+
+✖ failing tests:
+
+test at docs/chamber-qa/stationary-deck-audit/additional.test.ts:22:1
+✖ stationary-type transitions preserve loose cargo and capsule across three real up/down cycles (13898.35975ms)
+  AssertionError [ERR_ASSERTION]: Temporary query type changes altered deck pose/velocity
+  + actual - expected
+  ... Skipped lines
+  
+    {
+      angular: {
+        x: 0,
+        y: 0,
+        z: 0
+  ...
+        x: 0,
+  +     y: 0,
+  -     y: 2.3999974727630615,
+        z: 0
+      }
+    }
+  
+      at ag.CoreWorld.controller.computeColliderMovement (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-candidate.ts:22:448)
+      at CoreWorld.step (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/src/core/world.ts:426:25)
+      at CoreWorld.step (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-candidate.ts:56:9)
+      at tick (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-audit/additional.test.ts:13:86)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-audit/additional.test.ts:23:134)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: { translation: { x: 0, y: 2.799999952316284, z: 0 }, next: { x: 0, y: 2.799999952316284, z: 0 }, velocity: { x: 0, y: 0, z: 0 }, angular: { x: 0, y: 0, z: 0 } },
+    expected: { translation: { x: 0, y: 2.799999952316284, z: 0 }, next: { x: 0, y: 2.799999952316284, z: 0 }, velocity: { x: 0, y: 2.3999974727630615, z: 0 }, angular: { x: 0, y: 0, z: 0 } },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at docs/chamber-qa/stationary-deck-audit/additional.test.ts:33:55
+✖ loaded automatic lift brakes midrail and restarts continuously (3797.133459ms)
+  AssertionError [ERR_ASSERTION]: Temporary query type changes altered deck pose/velocity
+  + actual - expected
+  ... Skipped lines
+  
+    {
+      angular: {
+        x: 0,
+        y: 0,
+        z: 0
+  ...
+        x: 0,
+  +     y: 0,
+  -     y: 1.000006079673767,
+        z: 0
+      }
+    }
+  
+      at ag.CoreWorld.controller.computeColliderMovement (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-candidate.ts:22:448)
+      at CoreWorld.step (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/src/core/world.ts:426:25)
+      at CoreWorld.step (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-candidate.ts:56:9)
+      at tick (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-audit/additional.test.ts:13:86)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-audit/additional.test.ts:35:253)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: { translation: { x: 0, y: 0.6000000238418579, z: 0 }, next: { x: 0, y: 0.6000000238418579, z: 0 }, velocity: { x: 0, y: 0, z: 0 }, angular: { x: 0, y: 0, z: 0 } },
+    expected: { translation: { x: 0, y: 0.6000000238418579, z: 0 }, next: { x: 0, y: 0.6000000238418579, z: 0 }, velocity: { x: 0, y: 1.000006079673767, z: 0 }, angular: { x: 0, y: 0, z: 0 } },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at docs/chamber-qa/stationary-deck-audit/additional.test.ts:33:55
+✖ loaded automatic moving-platform brakes midrail and restarts continuously (888.530709ms)
+  AssertionError [ERR_ASSERTION]: Temporary query type changes altered deck pose/velocity
+  + actual - expected
+  ... Skipped lines
+  
+    {
+      angular: {
+        x: 0,
+        y: 0,
+        z: 0
+  ...
+      velocity: {
+  +     x: 0,
+  -     x: 1.3333367109298706,
+        y: 0,
+        z: 0
+      }
+    }
+  
+      at ag.CoreWorld.controller.computeColliderMovement (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-candidate.ts:22:448)
+      at CoreWorld.step (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/src/core/world.ts:426:25)
+      at CoreWorld.step (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-candidate.ts:56:9)
+      at tick (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-audit/additional.test.ts:13:86)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-audit/additional.test.ts:35:253)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: { translation: { x: 1.0666667222976685, y: -0.20000000298023224, z: 0 }, next: { x: 1.0666667222976685, y: -0.20000000298023224, z: 0 }, velocity: { x: 0, y: 0, z: 0 }, angular: { x: 0, y: 0, z: 0 } },
+    expected: { translation: { x: 1.0666667222976685, y: -0.20000000298023224, z: 0 }, next: { x: 1.0666667222976685, y: -0.20000000298023224, z: 0 }, velocity: { x: 1.3333367109298706, y: 0, z: 0 }, angular: { x: 0, y: 0, z: 0 } },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at docs/chamber-qa/stationary-deck-audit/additional.test.ts:37:1
+✖ loose cargo stays on a horizontal carrier over repeated stop/type transitions (3160.843792ms)
+  AssertionError [ERR_ASSERTION]: Temporary query type changes altered deck pose/velocity
+  + actual - expected
+  ... Skipped lines
+  
+    {
+      angular: {
+        x: 0,
+        y: 0,
+        z: 0
+  ...
+      velocity: {
+  +     x: 0,
+  -     x: 1.5999983549118042,
+        y: 0,
+        z: 0
+      }
+    }
+  
+      at ag.CoreWorld.controller.computeColliderMovement (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-candidate.ts:22:448)
+      at CoreWorld.step (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/src/core/world.ts:426:25)
+      at CoreWorld.step (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-candidate.ts:56:9)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-audit/additional.test.ts:39:223)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: { translation: { x: 4, y: -0.20000000298023224, z: 0 }, next: { x: 4, y: -0.20000000298023224, z: 0 }, velocity: { x: 0, y: 0, z: 0 }, angular: { x: 0, y: 0, z: 0 } },
+    expected: { translation: { x: 4, y: -0.20000000298023224, z: 0 }, next: { x: 4, y: -0.20000000298023224, z: 0 }, velocity: { x: 1.5999983549118042, y: 0, z: 0 }, angular: { x: 0, y: 0, z: 0 } },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at docs/chamber-qa/stationary-deck-audit/core-lift-seam-unchanged.test.ts:39:33
+✖ native capsule can leave lower lift edge onto coplanar floor, cycle=true (3495.753791ms)
+  AssertionError [ERR_ASSERTION]: Temporary query type changes altered deck pose/velocity
+  + actual - expected
+  ... Skipped lines
+  
+    {
+      angular: {
+        x: 0,
+        y: 0,
+        z: 0
+  ...
+        x: 0,
+  +     y: 0,
+  -     y: 2.3999974727630615,
+        z: 0
+      }
+    }
+  
+      at ag.CoreWorld.controller.computeColliderMovement (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-candidate.ts:22:448)
+      at CoreWorld.step (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/src/core/world.ts:426:25)
+      at CoreWorld.step (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-candidate.ts:56:9)
+      at tick (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-audit/core-lift-seam-unchanged.test.ts:21:77)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-audit/core-lift-seam-unchanged.test.ts:42:47)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: { translation: { x: 0, y: 4.050000190734863, z: 0 }, next: { x: 0, y: 4.050000190734863, z: 0 }, velocity: { x: 0, y: 0, z: 0 }, angular: { x: 0, y: 0, z: 0 } },
+    expected: { translation: { x: 0, y: 4.050000190734863, z: 0 }, next: { x: 0, y: 4.050000190734863, z: 0 }, velocity: { x: 0, y: 2.3999974727630615, z: 0 }, angular: { x: 0, y: 0, z: 0 } },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at docs/chamber-qa/stationary-deck-audit/core-lift-seam-unchanged.test.ts:46:1
+✖ actual interior rider can use E up/down and disembark normally at the lower dock (2336.969125ms)
+  AssertionError [ERR_ASSERTION]: Temporary query type changes altered deck pose/velocity
+  + actual - expected
+  ... Skipped lines
+  
+    {
+      angular: {
+        x: 0,
+        y: 0,
+        z: 0
+  ...
+        x: 0,
+  +     y: 0,
+  -     y: 2.3999974727630615,
+        z: 0
+      }
+    }
+  
+      at ag.CoreWorld.controller.computeColliderMovement (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-candidate.ts:22:448)
+      at CoreWorld.step (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/src/core/world.ts:426:25)
+      at CoreWorld.step (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-candidate.ts:56:9)
+      at tick (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-audit/core-lift-seam-unchanged.test.ts:21:77)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-audit/core-lift-seam-unchanged.test.ts:51:16)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: { translation: { x: 0, y: 4.050000190734863, z: 0 }, next: { x: 0, y: 4.050000190734863, z: 0 }, velocity: { x: 0, y: 0, z: 0 }, angular: { x: 0, y: 0, z: 0 } },
+    expected: { translation: { x: 0, y: 4.050000190734863, z: 0 }, next: { x: 0, y: 4.050000190734863, z: 0 }, velocity: { x: 0, y: 2.3999974727630615, z: 0 }, angular: { x: 0, y: 0, z: 0 } },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

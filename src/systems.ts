@@ -3,7 +3,7 @@ import {Vector3,Box3,Ray} from 'three';
 export type XYZ=[number,number,number];
 export type Circuit={all?:string[];any?:string[];not?:string[]};
 export type DeviceKind='switch'|'shutter'|'lift'|'conveyor'|'moving-platform'|'junction'|'relay'|'receiver'|'timer';
-export interface DeviceSpec {id:string;kind:DeviceKind;label:string;position:XYZ;size:XYZ;target?:XYZ;targetLabel?:string;period?:number;dwell?:number;cycle?:boolean;automatic?:boolean;pulse?:{period:number;onFor:number;offset?:number};latch?:boolean;circuit?:Circuit;controls?:string;states?:string[];initial?:boolean;direction?:XYZ;controlOffset?:XYZ;speed?:number;receivers?:{id:string;position:XYZ}[];angles?:number[];stops?:{label:string;position:XYZ;guard?:Circuit}[]}
+export interface DeviceSpec {id:string;kind:DeviceKind;label:string;position:XYZ;size:XYZ;target?:XYZ;targetLabel?:string;period?:number;dwell?:number;cycle?:boolean;automatic?:boolean;pulse?:{period:number;onFor:number;offset?:number};latch?:boolean;circuit?:Circuit;controls?:string;states?:string[];initial?:boolean;direction?:XYZ;controlOffset?:XYZ;/** Renderer-only horizontal panel normal; does not move its interaction anchor. */controlFacing?:XYZ;speed?:number;receivers?:{id:string;position:XYZ}[];angles?:number[];stops?:{label:string;position:XYZ;guard?:Circuit}[]}
 export interface DeviceState {spec:DeviceSpec;on:boolean;progress:number;choice:number;position:Vector3;previous:Vector3;delta:Vector3;powered?:string;blocked:boolean;beamHit?:Vector3;moving:boolean;angle:number;arrivalToken:string;manual:boolean;latched:boolean;cycleTime:number}
 export interface MachineBody {id:string;pos:Vector3;half:Vector3;vel:Vector3;grounded:boolean;held?:boolean}
 export class MachineSystems {

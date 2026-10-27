@@ -1,0 +1,29 @@
+✔ authored 0.20m-clearance candidate allows lower deck departure, cycle=false (315.999ms)
+✔ authored 0.20m-clearance candidate allows lower deck departure, cycle=true (287.8365ms)
+✖ actual interior rider can use E up/down and disembark normally at the lower dock (509.981333ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 2
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3334.263417
+
+✖ failing tests:
+
+test at work/lift-clearance-default.test.ts:1:2255
+✖ actual interior rider can use E up/down and disembark normally at the lower dock (509.981333ms)
+  AssertionError [ERR_ASSERTION]: Clearance candidate deck→loading floor pins a walking capsule: -2.0062966346740723,0.8472906351089478,2.1037940979003906; {"x":0,"y":0,"z":0}
+      at exitLowerDock (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/work/lift-clearance-default.test.ts:33:9)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/work/lift-clearance-default.test.ts:53:3)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

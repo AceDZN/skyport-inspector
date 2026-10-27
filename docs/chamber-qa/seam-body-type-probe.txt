@@ -1,0 +1,100 @@
+{
+  "scope": "Two native KCC queries at exactly the same naturally reproduced stalled pose; second query makes only the stationary deck Fixed to isolate kinematic friction. Neither result is applied; no actor relocation or physics-world source edit.",
+  "configuration": {
+    "offset": 0.014999999664723873,
+    "nudge": 0.00009999999747378752
+  },
+  "before": {
+    "proxy": [
+      0.0000024123439743561903,
+      0.8640573620796204,
+      2.074401378631592
+    ],
+    "native": {
+      "x": 0.0000024123439743561903,
+      "y": 0.8640573620796204,
+      "z": 2.074401378631592
+    },
+    "grounded": true,
+    "velocity": [
+      -3.4364592528251876,
+      0,
+      3.351230789377558
+    ],
+    "movement": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+  },
+  "results": [
+    {
+      "label": "actual gravity delta",
+      "desired": {
+        "x": -0.028364501893520355,
+        "y": -0.0011111111380159855,
+        "z": 0.0282038114964962
+      },
+      "movement": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "computedGrounded": true,
+      "desiredHorizontal": 0.039999999382467635,
+      "computedHorizontal": 0,
+      "horizontalRatio": 0,
+      "bounded": true,
+      "actorUnchanged": true,
+      "hitCount": 20,
+      "firstHit": {
+        "id": "loading-floor",
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "toi": 0,
+        "remaining": {
+          "x": -0.028364501893520355,
+          "y": -0.0011111111380159855,
+          "z": 0.0282038114964962
+        }
+      }
+    },
+    {
+      "label": "same actual delta with stationary deck treated as Fixed",
+      "desired": {
+        "x": -0.028364501893520355,
+        "y": -0.0011111111380159855,
+        "z": 0.0282038114964962
+      },
+      "movement": {
+        "x": -0.028364501893520355,
+        "y": 0.00009999999747378752,
+        "z": 0.0282038114964962
+      },
+      "computedGrounded": true,
+      "desiredHorizontal": 0.039999999382467635,
+      "computedHorizontal": 0.039999999382467635,
+      "horizontalRatio": 1,
+      "bounded": true,
+      "actorUnchanged": true,
+      "hitCount": 1,
+      "firstHit": {
+        "id": "loading-floor",
+        "normal": {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        "toi": 0,
+        "remaining": {
+          "x": -0.028364501893520355,
+          "y": -0.0011111111380159855,
+          "z": 0.0282038114964962
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1731 @@
+{
+  "scope": "Unmodified selected public-snapshot field excerpts, not body state assignments. Screenshots and metadata have complementary scope: e.g. the loose cube is outside the camera in024, while its actual upper pose/held=false is in this snapshot.",
+  "excerpts": [
+    {
+      "capture": "006-06-north-clear-physical-door.png",
+      "label": "06-north-clear-physical-door",
+      "level": 6,
+      "alternate": false,
+      "mode": "playing",
+      "world": {
+        "player": {
+          "position": [
+            -3.9997174739837646,
+            3.665001392364502,
+            -11.028436660766602
+          ],
+          "velocity": [
+            -0.0012928315015774228,
+            0,
+            -2.3463063550940784
+          ],
+          "yaw": 0.0005510070800779621,
+          "pitch": -0.000013897705078131716,
+          "grounded": true,
+          "crossings": 1
+        },
+        "crates": [
+          {
+            "id": "cube",
+            "position": [
+              -4.999999523162842,
+              0.6899086236953735,
+              2.000009775161743
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0.0000034249828786414582,
+              -3.076294644369093e-12,
+              6.247654482649523e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "north-button",
+            "position": [
+              -5,
+              0.14,
+              2
+            ],
+            "pressed": true,
+            "crate": "cube"
+          },
+          {
+            "id": "south-button",
+            "position": [
+              4,
+              0.14,
+              6
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "north-door",
+            "kind": "shutter",
+            "label": "NORTH",
+            "position": [
+              -4,
+              7.8,
+              -12.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "south-door",
+            "kind": "shutter",
+            "label": "SOUTH",
+            "position": [
+              4,
+              1.5,
+              12.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "portals": [
+          {
+            "surface": "source-east",
+            "position": [
+              7.96,
+              1.5499999999999998,
+              7.994517185173258
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "upper-west",
+            "position": [
+              -7.96,
+              4.3500000000000005,
+              -7.939579658940305
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "held": null,
+        "respawns": 0,
+        "result": null,
+        "signals": {
+          "north-button": true,
+          "south-button": false,
+          "safety:north-door": false,
+          "door-safety": false,
+          "moving:north-door": false,
+          "safety:south-door": false,
+          "moving:south-door": false
+        }
+      },
+      "completed": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "capture": "014-07-native-e-control-reach.png",
+      "label": "07-native-e-control-reach",
+      "level": 7,
+      "alternate": false,
+      "mode": "playing",
+      "world": {
+        "player": {
+          "position": [
+            -7.060197830200195,
+            0.8650000095367432,
+            2.9801831245422363
+          ],
+          "velocity": [
+            -0.032539589064806834,
+            0,
+            -0.010854399603214295
+          ],
+          "yaw": -0.03147815717588272,
+          "pitch": -0.40540250244140624,
+          "grounded": true,
+          "crossings": 1
+        },
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "transfer-deck",
+            "kind": "lift",
+            "label": "TRANSFER",
+            "position": [
+              -4,
+              -0.15,
+              -1
+            ],
+            "size": [
+              8,
+              0.3,
+              6
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "north",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "north-dock-door",
+            "kind": "shutter",
+            "label": "NORTH",
+            "position": [
+              -4,
+              5,
+              -10.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "east-dock-door",
+            "kind": "shutter",
+            "label": "EAST",
+            "position": [
+              14.12,
+              1.5,
+              -1
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "portals": [
+          {
+            "surface": "operations-white",
+            "position": [
+              3.242602197701052e-8,
+              1.55,
+              14.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "hub-white",
+            "position": [
+              0.549523370335188,
+              1.550069123204518,
+              2.79
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "held": null,
+        "respawns": 1,
+        "result": null,
+        "signals": {
+          "moving:transfer-deck": false,
+          "at:transfer-deck:north": true,
+          "at:transfer-deck:east": false,
+          "safety:north-dock-door": false,
+          "door-safety": false,
+          "moving:north-dock-door": false,
+          "safety:east-dock-door": false,
+          "moving:east-dock-door": false
+        }
+      },
+      "completed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "capture": "016-07-wrong-east-exit-is-recoverable.png",
+      "label": "07-wrong-east-exit-is-recoverable",
+      "level": 7,
+      "alternate": false,
+      "mode": "playing",
+      "world": {
+        "player": {
+          "position": [
+            16.612611770629883,
+            0.8648841977119446,
+            -0.9995791912078857
+          ],
+          "velocity": [
+            0.8826783573969366,
+            0,
+            0.00764636607440857
+          ],
+          "yaw": -1.57945879682432,
+          "pitch": 5.204170427930421e-18,
+          "grounded": true,
+          "crossings": 1
+        },
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "transfer-deck",
+            "kind": "lift",
+            "label": "TRANSFER",
+            "position": [
+              6,
+              -0.15,
+              -1
+            ],
+            "size": [
+              8,
+              0.3,
+              6
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": "east",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "north-dock-door",
+            "kind": "shutter",
+            "label": "NORTH",
+            "position": [
+              -4,
+              1.5,
+              -10.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "east-dock-door",
+            "kind": "shutter",
+            "label": "EAST",
+            "position": [
+              14.12,
+              5,
+              -1
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "portals": [
+          {
+            "surface": "operations-white",
+            "position": [
+              3.242602197701052e-8,
+              1.55,
+              14.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "hub-white",
+            "position": [
+              0.549523370335188,
+              1.550069123204518,
+              2.79
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "held": null,
+        "respawns": 1,
+        "result": null,
+        "signals": {
+          "moving:transfer-deck": false,
+          "at:transfer-deck:north": false,
+          "at:transfer-deck:east": true,
+          "safety:north-dock-door": false,
+          "door-safety": false,
+          "moving:north-dock-door": false,
+          "safety:east-dock-door": false,
+          "moving:east-dock-door": false
+        }
+      },
+      "completed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "capture": "019-07-actual-stair-recovery-no-respawn.png",
+      "label": "07-actual-stair-recovery-no-respawn",
+      "level": 7,
+      "alternate": false,
+      "mode": "playing",
+      "world": {
+        "player": {
+          "position": [
+            -12.500396728515625,
+            0.8648919463157654,
+            4.261414051055908
+          ],
+          "velocity": [
+            -0.00817054649103722,
+            0,
+            1.6923434590346524
+          ],
+          "yaw": -3.1464205460919,
+          "pitch": 5.204170427930421e-17,
+          "grounded": true,
+          "crossings": 1
+        },
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "transfer-deck",
+            "kind": "lift",
+            "label": "TRANSFER",
+            "position": [
+              -4,
+              -0.15,
+              -1
+            ],
+            "size": [
+              8,
+              0.3,
+              6
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "north",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "north-dock-door",
+            "kind": "shutter",
+            "label": "NORTH",
+            "position": [
+              -4,
+              5,
+              -10.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "east-dock-door",
+            "kind": "shutter",
+            "label": "EAST",
+            "position": [
+              14.12,
+              1.5,
+              -1
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "portals": [
+          {
+            "surface": "operations-white",
+            "position": [
+              3.242602197701052e-8,
+              1.55,
+              14.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "hub-white",
+            "position": [
+              0.549523370335188,
+              1.550069123204518,
+              2.79
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "held": null,
+        "respawns": 1,
+        "result": null,
+        "signals": {
+          "moving:transfer-deck": false,
+          "at:transfer-deck:north": true,
+          "at:transfer-deck:east": false,
+          "safety:north-dock-door": false,
+          "door-safety": false,
+          "moving:north-dock-door": false,
+          "safety:east-dock-door": false,
+          "moving:east-dock-door": false
+        }
+      },
+      "completed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "capture": "023-08-loose-cube-staged-on-actual-deck.png",
+      "label": "08-loose-cube-staged-on-actual-deck",
+      "level": 8,
+      "alternate": false,
+      "mode": "playing",
+      "world": {
+        "player": {
+          "position": [
+            0.0008016208885237575,
+            0.8651000261306763,
+            1.1497060060501099
+          ],
+          "velocity": [
+            4.9308389928967365e-17,
+            0,
+            -3.5396905128135087e-15
+          ],
+          "yaw": 0.00021632080078135777,
+          "pitch": -0.17524482421875,
+          "grounded": true,
+          "crossings": 0
+        },
+        "crates": [
+          {
+            "id": "cube",
+            "position": [
+              -0.00035639575798995793,
+              0.5495535731315613,
+              -0.6870075464248657
+            ],
+            "velocity": [
+              -0.000001897525862659677,
+              2.0519084387160547e-7,
+              -7.002853408266674e-7
+            ],
+            "rotation": [
+              -0.000004200593139103148,
+              1.3541843202347081e-8,
+              0.0000041347161641169805,
+              1
+            ],
+            "angularVelocity": [
+              -0.000001273734255846648,
+              2.3903692913940233e-10,
+              0.0000034513691389292944
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "lower-button",
+            "position": [
+              -5,
+              0.14,
+              3
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "upper-button",
+            "position": [
+              5,
+              4.34,
+              -7
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "freight-lift",
+            "kind": "lift",
+            "label": "FREIGHT",
+            "position": [
+              0,
+              -0.15,
+              0
+            ],
+            "size": [
+              4,
+              0.3,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "lower",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "upper-door",
+            "kind": "shutter",
+            "label": "UPPER",
+            "position": [
+              -5,
+              5.7,
+              -10.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "lower-door",
+            "kind": "shutter",
+            "label": "LOWER",
+            "position": [
+              9.12,
+              1.5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "portals": [
+          null,
+          null
+        ],
+        "held": null,
+        "respawns": 0,
+        "result": null,
+        "signals": {
+          "lower-button": false,
+          "upper-button": false,
+          "moving:freight-lift": false,
+          "at:freight-lift:lower": true,
+          "at:freight-lift:upper": false,
+          "safety:upper-door": false,
+          "door-safety": false,
+          "moving:upper-door": false,
+          "safety:lower-door": false,
+          "moving:lower-door": false
+        }
+      },
+      "completed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "capture": "024-08-capsule-and-loose-cube-carried-to-upper.png",
+      "label": "08-capsule-and-loose-cube-carried-to-upper",
+      "level": 8,
+      "alternate": false,
+      "mode": "playing",
+      "world": {
+        "player": {
+          "position": [
+            0.0008016208885237575,
+            5.065100193023682,
+            1.1497060060501099
+          ],
+          "velocity": [
+            1.092443087920345e-56,
+            0,
+            -7.842297101306569e-55
+          ],
+          "yaw": -1.685966455078125,
+          "pitch": -0.5293172607421875,
+          "grounded": true,
+          "crossings": 0
+        },
+        "crates": [
+          {
+            "id": "cube",
+            "position": [
+              -0.0008221660973504186,
+              4.749587535858154,
+              -0.6871169209480286
+            ],
+            "velocity": [
+              -0.000003891305368597386,
+              0.0000018722146251093363,
+              -0.0000030908115604688646
+            ],
+            "rotation": [
+              3.8231456755966065e-7,
+              -4.746243220665747e-8,
+              -7.328305855480721e-7,
+              1
+            ],
+            "angularVelocity": [
+              -0.000005621639047603821,
+              1.5135111219866104e-10,
+              0.0000070775959102320485
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "lower-button",
+            "position": [
+              -5,
+              0.14,
+              3
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "upper-button",
+            "position": [
+              5,
+              4.34,
+              -7
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "freight-lift",
+            "kind": "lift",
+            "label": "FREIGHT",
+            "position": [
+              0,
+              4.05,
+              0
+            ],
+            "size": [
+              4,
+              0.3,
+              4
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": "upper",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "upper-door",
+            "kind": "shutter",
+            "label": "UPPER",
+            "position": [
+              -5,
+              5.7,
+              -10.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "lower-door",
+            "kind": "shutter",
+            "label": "LOWER",
+            "position": [
+              9.12,
+              1.5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "portals": [
+          null,
+          null
+        ],
+        "held": null,
+        "respawns": 0,
+        "result": null,
+        "signals": {
+          "lower-button": false,
+          "upper-button": false,
+          "moving:freight-lift": false,
+          "at:freight-lift:lower": false,
+          "at:freight-lift:upper": true,
+          "safety:upper-door": false,
+          "door-safety": false,
+          "moving:upper-door": false,
+          "safety:lower-door": false,
+          "moving:lower-door": false
+        }
+      },
+      "completed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "capture": "026-08-real-upper-delivery-opens-upper-shutter.png",
+      "label": "08-real-upper-delivery-opens-upper-shutter",
+      "level": 8,
+      "alternate": false,
+      "mode": "playing",
+      "world": {
+        "player": {
+          "position": [
+            5.001590251922607,
+            5.065057754516602,
+            -5.288852691650391
+          ],
+          "velocity": [
+            4.8492177940238624e-20,
+            0,
+            2.7811417982247406e-18
+          ],
+          "yaw": 0.0008833435058592989,
+          "pitch": -0.1821561462402344,
+          "grounded": true,
+          "crossings": 0
+        },
+        "crates": [
+          {
+            "id": "cube",
+            "position": [
+              4.999829292297363,
+              4.889914035797119,
+              -7.080108165740967
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -0.0000018214091141999234,
+              -0.000022402316972147673,
+              -0.000003903458036802476,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "lower-button",
+            "position": [
+              -5,
+              0.14,
+              3
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "upper-button",
+            "position": [
+              5,
+              4.34,
+              -7
+            ],
+            "pressed": true,
+            "crate": "cube"
+          }
+        ],
+        "devices": [
+          {
+            "id": "freight-lift",
+            "kind": "lift",
+            "label": "FREIGHT",
+            "position": [
+              0,
+              4.05,
+              0
+            ],
+            "size": [
+              4,
+              0.3,
+              4
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": "upper",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "upper-door",
+            "kind": "shutter",
+            "label": "UPPER",
+            "position": [
+              -5,
+              9.2,
+              -10.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "lower-door",
+            "kind": "shutter",
+            "label": "LOWER",
+            "position": [
+              9.12,
+              1.5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "portals": [
+          null,
+          null
+        ],
+        "held": null,
+        "respawns": 0,
+        "result": null,
+        "signals": {
+          "lower-button": false,
+          "upper-button": true,
+          "moving:freight-lift": false,
+          "at:freight-lift:lower": false,
+          "at:freight-lift:upper": true,
+          "safety:upper-door": false,
+          "door-safety": false,
+          "moving:upper-door": false,
+          "safety:lower-door": false,
+          "moving:lower-door": false
+        }
+      },
+      "completed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "capture": "031-09-either-permits-upper-cube-alone.png",
+      "label": "09-either-permits-upper-cube-alone",
+      "level": 9,
+      "alternate": false,
+      "mode": "playing",
+      "world": {
+        "player": {
+          "position": [
+            6.0453410148620605,
+            0.8648580312728882,
+            8.927967071533203
+          ],
+          "velocity": [
+            2.5441951020673526e-18,
+            0,
+            6.951526599105174e-18
+          ],
+          "yaw": 6.306512829589844,
+          "pitch": -0.16192887573242185,
+          "grounded": true,
+          "crossings": 0
+        },
+        "crates": [
+          {
+            "id": "cube-a",
+            "position": [
+              -7.000002861022949,
+              0.5498875379562378,
+              -8
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -0.000002064312866423279,
+              2.471314385771306e-12,
+              0.000002014328174482216,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          },
+          {
+            "id": "cube-b",
+            "position": [
+              6.00318717956543,
+              0.6898984909057617,
+              7.122984886169434
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0.0000034555864658614155,
+              0.0003943929332308471,
+              0.000006427697826438816,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "east-button",
+            "position": [
+              6,
+              0.14,
+              7
+            ],
+            "pressed": true,
+            "crate": "cube-b"
+          },
+          {
+            "id": "west-button-a",
+            "position": [
+              -5,
+              0.14,
+              5
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "west-button-b",
+            "position": [
+              -1,
+              0.14,
+              5
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "storage-lift",
+            "kind": "lift",
+            "label": "STORAGE",
+            "position": [
+              7,
+              3.25,
+              -3
+            ],
+            "size": [
+              4,
+              0.3,
+              4
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": "gallery",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "east-door",
+            "kind": "shutter",
+            "label": "EAST",
+            "position": [
+              11.12,
+              5,
+              9
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "west-door",
+            "kind": "shutter",
+            "label": "WEST",
+            "position": [
+              -11.12,
+              1.5,
+              9
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "portals": [
+          null,
+          null
+        ],
+        "held": null,
+        "respawns": 0,
+        "result": null,
+        "signals": {
+          "east-button": true,
+          "west-button-a": false,
+          "west-button-b": false,
+          "moving:storage-lift": false,
+          "at:storage-lift:lower": false,
+          "at:storage-lift:gallery": true,
+          "safety:east-door": false,
+          "door-safety": false,
+          "moving:east-door": false,
+          "safety:west-door": false,
+          "moving:west-door": false
+        }
+      },
+      "completed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "capture": "035-10-actual-second-stair-flight-with-cargo.png",
+      "label": "10-actual-second-stair-flight-with-cargo",
+      "level": 10,
+      "alternate": false,
+      "mode": "playing",
+      "world": {
+        "player": {
+          "position": [
+            -4.015815734863281,
+            5.065000057220459,
+            -1.9971709251403809
+          ],
+          "velocity": [
+            0.33171757730870904,
+            0,
+            0.005002693001377222
+          ],
+          "yaw": -1.5858742431640627,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "crates": [
+          {
+            "id": "cube",
+            "position": [
+              -3.2121005058288574,
+              5.21366024017334,
+              -1.9708318710327148
+            ],
+            "velocity": [
+              -0.14305056631565094,
+              0.028610114008188248,
+              0.014305057004094124
+            ],
+            "rotation": [
+              -0.000003014694812009111,
+              1.83937413911206e-12,
+              0.0000030883234103384893,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": true,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "upper-button",
+            "position": [
+              -6,
+              4.34,
+              -5
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "service-lift",
+            "kind": "lift",
+            "label": "SERVICE",
+            "position": [
+              0,
+              -0.15,
+              0
+            ],
+            "size": [
+              6,
+              0.3,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "lower",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "upper-door",
+            "kind": "shutter",
+            "label": "UPPER",
+            "position": [
+              -12.12,
+              5.7,
+              -5
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "side-door",
+            "kind": "shutter",
+            "label": "SIDE",
+            "position": [
+              12.12,
+              5.7,
+              0
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "portals": [
+          null,
+          null
+        ],
+        "held": "cube",
+        "respawns": 0,
+        "result": null,
+        "signals": {
+          "upper-button": false,
+          "moving:service-lift": false,
+          "at:service-lift:lower": true,
+          "at:service-lift:upper": false,
+          "safety:upper-door": false,
+          "door-safety": false,
+          "moving:upper-door": false,
+          "safety:side-door": false,
+          "moving:side-door": false
+        }
+      },
+      "completed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "capture": "043-10-actual-parked-deck-connects-upper-gap.png",
+      "label": "10-actual-parked-deck-connects-upper-gap",
+      "level": 10,
+      "alternate": true,
+      "mode": "playing",
+      "world": {
+        "player": {
+          "position": [
+            0.2418195605278015,
+            5.065100193023682,
+            -0.008338581770658493
+          ],
+          "velocity": [
+            0.878286432678052,
+            0,
+            -0.03241672117955316
+          ],
+          "yaw": -7.817059497070313,
+          "pitch": -1.3877787807814457e-17,
+          "grounded": true,
+          "crossings": 0
+        },
+        "crates": [
+          {
+            "id": "cube",
+            "position": [
+              -7.0000386238098145,
+              0.5498872995376587,
+              9.999778747558594
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -0.0000017740577504810062,
+              -0.00009137035522144288,
+              0.0000017176588471556897,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "upper-button",
+            "position": [
+              -6,
+              4.34,
+              -5
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "service-lift",
+            "kind": "lift",
+            "label": "SERVICE",
+            "position": [
+              0,
+              4.05,
+              0
+            ],
+            "size": [
+              6,
+              0.3,
+              4
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": "upper",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "upper-door",
+            "kind": "shutter",
+            "label": "UPPER",
+            "position": [
+              -12.12,
+              5.7,
+              -5
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "side-door",
+            "kind": "shutter",
+            "label": "SIDE",
+            "position": [
+              12.12,
+              9.2,
+              0
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "portals": [
+          null,
+          null
+        ],
+        "held": null,
+        "respawns": 0,
+        "result": null,
+        "signals": {
+          "upper-button": false,
+          "moving:service-lift": false,
+          "at:service-lift:lower": false,
+          "at:service-lift:upper": true,
+          "safety:upper-door": false,
+          "door-safety": false,
+          "moving:upper-door": false,
+          "safety:side-door": false,
+          "moving:side-door": false
+        }
+      },
+      "completed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "capture": "046-10-frontier-retained-after-contrast-and-second-reload.png",
+      "label": "10-frontier-retained-after-contrast-and-second-reload",
+      "level": 1,
+      "alternate": false,
+      "mode": "levels",
+      "world": {
+        "player": {
+          "position": [
+            0,
+            0.86,
+            10
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": false,
+          "crossings": 0
+        },
+        "crates": [
+          {
+            "id": "weighted-cube",
+            "position": [
+              3,
+              3.35,
+              -8
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "exit-button",
+            "position": [
+              2,
+              0.14,
+              6
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "exit-door",
+            "kind": "shutter",
+            "label": "EXIT",
+            "position": [
+              -8.12,
+              1.5,
+              11
+            ],
+            "size": [
+              0.3,
+              3,
+              2.6
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "portals": [
+          null,
+          null
+        ],
+        "held": null,
+        "respawns": 0,
+        "result": null,
+        "signals": {}
+      },
+      "completed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    }
+  ]
+}

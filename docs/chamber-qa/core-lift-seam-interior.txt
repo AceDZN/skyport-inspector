@@ -1,0 +1,26 @@
+✖ actual interior rider can use E up/down and disembark normally at the lower dock (427.221334ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2885.234875
+
+✖ failing tests:
+
+test at tests/core-lift-seam.test.ts:46:1
+✖ actual interior rider can use E up/down and disembark normally at the lower dock (427.221334ms)
+  AssertionError [ERR_ASSERTION]: {"reason":"The scenario must actually ride to the upper stop","player":[0.8115096092224121,4.932578086853027,0.9137443900108337],"grounded":true,"velocity":[2.620856514104089e-40,0,-1.964126462037087e-39],"lift":[0,4.05,0],"choice":1,"cube":[-0.6012285351753235,4.749661922454834,-0.0006088998634368181],"events":[{"type":"lift-motor","time":2467,"id":"freight","value":"upper"},{"type":"lift-motor","time":2467,"id":"freight"},{"type":"lift-arrival","time":5950,"id":"freight","value":"upper"},{"type":"contact","time":6250,"body":"sample-cube","speed":2.268594612627708}]}
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-lift-seam.test.ts:51:33)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

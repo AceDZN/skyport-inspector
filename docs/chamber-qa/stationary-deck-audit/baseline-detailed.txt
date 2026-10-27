@@ -1,0 +1,68 @@
+✖ stationary-type transitions preserve loose cargo and capsule across three real up/down cycles (7122.228125ms)
+✔ held cargo remains connected through up/down deck-type transitions without native speed amplification (7875.99325ms)
+✖ loaded automatic lift brakes midrail and restarts continuously (795.433958ms)
+✖ loaded automatic moving-platform brakes midrail and restarts continuously (297.543167ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 1
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 28643.833208
+
+✖ failing tests:
+
+test at docs/chamber-qa/stationary-deck-audit/additional.test.ts:20:1
+✖ stationary-type transitions preserve loose cargo and capsule across three real up/down cycles (7122.228125ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  2 !== 1
+  
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-audit/additional.test.ts:21:225)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at docs/chamber-qa/stationary-deck-audit/additional.test.ts:31:55
+✖ loaded automatic lift brakes midrail and restarts continuously (795.433958ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  2 !== 1
+  
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-audit/additional.test.ts:33:325)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at docs/chamber-qa/stationary-deck-audit/additional.test.ts:31:55
+✖ loaded automatic moving-platform brakes midrail and restarts continuously (297.543167ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  2 !== 1
+  
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-audit/additional.test.ts:33:325)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

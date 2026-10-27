@@ -7,6 +7,7 @@ import {getCoreLevel} from './levels';
 import type {CoreLevel} from './level';
 import type { WorldBlueprint } from '../campaign-blueprint';
 import {tracePortalBeam,type BeamResult,type BeamPortal} from './portal-beam';
+import {queryHeldFootprint} from './held-footprint';
 export const initializePhysics = () => RAPIER.init();
 interface RigidCube extends Body {
     rigid: RAPIER.RigidBody;
@@ -317,6 +318,7 @@ export class CoreWorld {
         return this.machines.devices.filter(d=>!d.spec.automatic&&['switch','relay','junction','lift'].includes(d.spec.kind)).map(d=>({device:d,point:(d.spec.kind==='lift'?d.position.clone():V(...d.spec.position)).add(V(...(d.spec.controlOffset??[0,0,0])))})).filter(({point})=>{const delta=point.clone().sub(eye);return delta.length()<2.8&&delta.normalize().dot(forward)>.6;}).sort((a,b)=>a.point.distanceTo(eye)-b.point.distanceTo(eye)).find(({device,point})=>{const delta=point.clone().sub(eye),distance=delta.length(),ray=new Ray(eye,delta.normalize());return !this.activeSolids().some(s=>{if(s.id===device.spec.id)return false;const hit=ray.intersectBox(new Box3(s.min,s.max),V());return hit&&hit.distanceTo(eye)<distance-.1;});})?.device;
     }
     interactionHint(){return this.heldId?'E · Drop':this.nearbyControl()?'E · Use '+this.nearbyControl()!.spec.label:this.grabbableCube()?'E · Pick up':'';}
+    heldFootprint(){const cube=this.crates.find(c=>c.id===this.heldId);return cube?queryHeldFootprint(this.physics,cube,this.portals,c=>this.fixed.get(c.handle)?.id??this.bodyForCollider(c.handle)?.id??[...this.doors].find(([,body])=>body.collider.handle===c.handle)?.[0]??'support:'+c.handle):null;}
     grabDrop() {
         if(this.heldId){const c=this.crates.find(c=>c.id===this.heldId)!;this.heldId=undefined;this.holdMap.identity();c.held=false;c.rigid.setBodyType(RAPIER.RigidBodyType.Dynamic,true);c.rigid.setLinvel(this.player.vel.clone().addScaledVector(this.forward(),.5),true);this.event('drop',{body:c.id});return;}
         const c=this.grabbableCube();if(!c){this.event('invalid',{reason:'Move closer and look at the cube.'});return;}
@@ -385,6 +387,25 @@ export class CoreWorld {
             this.doors.get(d.spec.id)?.rigid.setNextKinematicTranslation(d.position);
     }
     private ridingPlatform(){return this.machines.devices.find(d=>['lift','moving-platform'].includes(d.spec.kind)&&this.player.grounded&&Math.abs(this.player.pos.y-.85-(d.previous.y+d.spec.size[1]/2))<.08&&Math.abs(this.player.pos.x-d.previous.x)<d.spec.size[0]/2-.01&&Math.abs(this.player.pos.z-d.previous.z)<d.spec.size[2]/2-.01);}
+    private computeCharacterMovement(requested:Vector3,platformCollider?:number){
+        // A stationary kinematic deck's predictive friction can cancel the KCC's
+        // separation nudge at a floor seam. Keep its exact collision geometry in
+        // this query, but omit that friction by querying it as Fixed. Actual
+        // integration always uses its original kinematic body type.
+        const stationary=this.machines.devices.filter(d=>['lift','moving-platform'].includes(d.spec.kind)&&d.delta.lengthSq()===0).map(d=>this.doors.get(d.spec.id)!.rigid).filter(body=>{
+            if(body.bodyType()!==RAPIER.RigidBodyType.KinematicPositionBased)return false;
+            const v=body.linvel(),a=body.angvel();
+            // Arrival/brake frames still have a genuine previous native velocity.
+            // Leave those queries untouched so type restoration cannot erase it.
+            return v.x*v.x+v.y*v.y+v.z*v.z<=1e-16&&a.x*a.x+a.y*a.y+a.z*a.z<=1e-16;
+        }).map(body=>({body,type:body.bodyType()}));
+        try{
+            for(const {body} of stationary)body.setBodyType(RAPIER.RigidBodyType.Fixed,true);
+            this.controller.computeColliderMovement(this.characterCollider,requested,undefined,undefined,c=>c.handle!==platformCollider&&this.queryAllows(this.player,c));
+        }finally{
+            for(const {body,type} of stationary)body.setBodyType(type,true);
+        }
+    }
     step(dt: number, input: Input) {
         if (this.campaignResult)
             return;
@@ -421,7 +442,7 @@ export class CoreWorld {
         // A supported capsule moves with its deck; gravity must not accumulate a
         // tiny penetration while that same deck is excluded from the sweep.
         if(platform&&this.player.vel.y<=0)requested.y=platform.position.y+platform.spec.size[1]/2+this.player.half.y+this.controller.offset()+this.controller.normalNudgeFactor()-this.player.pos.y;
-        this.controller.computeColliderMovement(this.characterCollider, requested, undefined, undefined, c => c.handle!==platformCollider&&this.queryAllows(this.player, c));
+        this.computeCharacterMovement(requested,platformCollider);
         const movement = this.controller.computedMovement();
         const next = this.player.pos.clone().add(movement);
         this.character.setNextKinematicTranslation(next);

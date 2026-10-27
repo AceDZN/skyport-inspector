@@ -1,0 +1,94 @@
+✖ stationary-type transitions preserve loose cargo and capsule across three real up/down cycles (129.12375ms)
+✖ held cargo remains connected through up/down deck-type transitions without native speed amplification (65.261458ms)
+✔ 120Hz jump truly detaches from an actively moving lift (12.4105ms)
+✔ 120Hz jump truly detaches from an actively moving moving-platform (13.749958ms)
+✖ loaded automatic lift brakes midrail and restarts continuously (15.407375ms)
+✖ loaded automatic moving-platform brakes midrail and restarts continuously (16.144959ms)
+✔ loose cargo stays on a horizontal carrier over repeated stop/type transitions (89.873209ms)
+✔ stationary and moving deck bodies remain native portal-exit/query obstacles and recover when clear (28.805458ms)
+✔ native lift carries a grounded capsule up and back down without teleporting or clipping its deck (197.504417ms)
+✔ a horizontal moving platform carries an idle capsule through a real cycle (143.5595ms)
+✔ a deck-mounted lift control stays reachable at both physical stops (83.440542ms)
+✔ conveyor transports a resting dynamic cube and a physical wall still stops it (136.444333ms)
+✔ E control requires a nearby visible physical control and toggles a real shutter circuit (12.084166ms)
+✔ a portal-routed beam powers a physical shutter; a dynamic blocker removes power promptly (32.918458ms)
+✔ a powered cyclic carrier starts, brakes, and resumes continuously with its own phase (44.486709ms)
+✔ a physical dock contact cannot be triggered by selecting a lift stop before arrival (20.373708ms)
+✔ authored11 has identical hardware under both instructions and real optical power (160.411042ms)
+✔ authored11 native beam→door→automatic lift→upper gallery route is complete (173.601875ms)
+✔ authored11 contrast uses a real offset pair and unpowered lower route (58.091583ms)
+✔ authored11 power loss physically brakes a loaded shuttle and restoring it resumes without a jump (79.432292ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 16
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4561.191625
+
+✖ failing tests:
+
+test at docs/chamber-qa/stationary-deck-audit/additional.test.ts:20:1
+✖ stationary-type transitions preserve loose cargo and capsule across three real up/down cycles (129.12375ms)
+  AssertionError [ERR_ASSERTION]: Cargo penetration 0.052782042321215195
+      at support (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-audit/additional.test.ts:19:362)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-audit/additional.test.ts:21:207)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at docs/chamber-qa/stationary-deck-audit/additional.test.ts:23:1
+✖ held cargo remains connected through up/down deck-type transitions without native speed amplification (65.261458ms)
+  AssertionError [ERR_ASSERTION]: Cargo penetration 0.05125700419289281
+      at support (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-audit/additional.test.ts:19:362)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-audit/additional.test.ts:24:308)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at docs/chamber-qa/stationary-deck-audit/additional.test.ts:31:55
+✖ loaded automatic lift brakes midrail and restarts continuously (15.407375ms)
+  AssertionError [ERR_ASSERTION]: Cargo penetration 0.08277690535120641
+      at support (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-audit/additional.test.ts:19:362)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-audit/additional.test.ts:33:397)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at docs/chamber-qa/stationary-deck-audit/additional.test.ts:31:55
+✖ loaded automatic moving-platform brakes midrail and restarts continuously (16.144959ms)
+  AssertionError [ERR_ASSERTION]: Cargo penetration 0.08277690535120641
+      at support (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-audit/additional.test.ts:19:362)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-deck-audit/additional.test.ts:33:397)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

@@ -1,0 +1,23 @@
+
+> skyport-inspector@1.0.0 build
+> tsc --noEmit && vite build
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 41 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/chambers.html                     0.45 kB │ gzip:     0.29 kB
+dist/campaign.html                     0.46 kB │ gzip:     0.31 kB
+dist/index.html                        0.51 kB │ gzip:     0.34 kB
+dist/assets/main-DJa4fsj8.css          3.69 kB │ gzip:     1.36 kB
+dist/assets/campaign-GUGf1LH7.css      8.77 kB │ gzip:     2.80 kB
+dist/assets/campaign-CEMmDWO2.js     480.55 kB │ gzip:    84.22 kB
+dist/assets/audio-DEVOEDN4.js        686.32 kB │ gzip:   181.85 kB
+dist/assets/main-DiK0owgl.js       4,719.53 kB │ gzip: 1,793.59 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 1.79s

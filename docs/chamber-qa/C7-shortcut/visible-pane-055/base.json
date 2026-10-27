@@ -1,0 +1,4067 @@
+{
+  "scope": "Unregistered C7 authored-spawn native regression; no pose/velocity/machine/goal/history/save assignments or browser completion claim.",
+  "contrast": false,
+  "error": null,
+  "reference": "Read-only parent level7-cross-dock-probe.mts/result in idea-plotter reports",
+  "checkpoints": [
+    {
+      "label": "authored-operations-to-hub",
+      "state": {
+        "room": "chamber-7",
+        "number": 7,
+        "mission": "You mustn't send the platform east. Cross to the north dock.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -4.149183750152588,
+            0.8650246858596802,
+            4.030601501464844
+          ],
+          "velocity": [
+            -0.09513639632651524,
+            0,
+            0.019513745927585376
+          ],
+          "yaw": 1.7731002261420776,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "operations-white",
+            "position": [
+              0,
+              1.55,
+              14.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "hub-white",
+            "position": [
+              0.55,
+              1.55,
+              2.79
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "transfer-deck",
+            "kind": "lift",
+            "label": "TRANSFER",
+            "position": [
+              -4,
+              -0.15,
+              -1
+            ],
+            "size": [
+              8,
+              0.3,
+              6
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "north",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "north-dock-door",
+            "kind": "shutter",
+            "label": "NORTH",
+            "position": [
+              -4,
+              5,
+              -10.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "east-dock-door",
+            "kind": "shutter",
+            "label": "EAST",
+            "position": [
+              14.12,
+              1.5,
+              -1
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "operations-white",
+            "position": [
+              0,
+              2,
+              14.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 4
+          },
+          {
+            "id": "hub-white",
+            "position": [
+              0,
+              1.75,
+              2.765
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "north-exit",
+            "label": "EXIT",
+            "position": [
+              -4,
+              1.5,
+              -11.9
+            ],
+            "size": [
+              2.760000000000001,
+              3,
+              4.16
+            ]
+          },
+          {
+            "id": "east-exit",
+            "label": "EXIT",
+            "position": [
+              15.9,
+              1.5,
+              -1
+            ],
+            "size": [
+              4.16,
+              3,
+              2.76
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "moving:transfer-deck": false,
+          "at:transfer-deck:north": true,
+          "at:transfer-deck:east": false,
+          "safety:north-dock-door": false,
+          "door-safety": false,
+          "moving:north-dock-door": false,
+          "safety:east-dock-door": false,
+          "moving:east-dock-door": false
+        },
+        "events": [
+          {
+            "type": "shutter-open",
+            "time": 8,
+            "id": "north-dock-door"
+          },
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "portalA",
+            "time": 500,
+            "surface": "operations-white",
+            "point": [
+              0,
+              1.55,
+              14.959999999999999
+            ]
+          },
+          {
+            "type": "portalB",
+            "time": 500,
+            "surface": "hub-white",
+            "point": [
+              0.55,
+              1.55,
+              2.79
+            ]
+          },
+          {
+            "type": "footstep",
+            "time": 508
+          },
+          {
+            "type": "footstep",
+            "time": 1108
+          },
+          {
+            "type": "enter",
+            "time": 1375,
+            "body": "player",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "operations-white",
+            "toSurface": "hub-white",
+            "speed": 4.7779609743577645,
+            "exitSpeed": 4.7779609743577645,
+            "held": null
+          },
+          {
+            "type": "land",
+            "time": 1383
+          },
+          {
+            "type": "footstep",
+            "time": 1567
+          },
+          {
+            "type": "footstep",
+            "time": 1992
+          },
+          {
+            "type": "footstep",
+            "time": 2417
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "hub-floor",
+          "toi": 0.00006271852180361748,
+          "normal": {
+            "x": 0.00001990089367609471,
+            "y": 1,
+            "z": -0.000007960357834235765
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-east-docking",
+      "state": {
+        "room": "chamber-7",
+        "number": 7,
+        "mission": "You mustn't send the platform east. Cross to the north dock.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            3.1564223766326904,
+            0.864814043045044,
+            2.9956929683685303
+          ],
+          "velocity": [
+            0.09707882645555742,
+            0,
+            -0.0027227129925523467
+          ],
+          "yaw": -1.5420906313639595,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "operations-white",
+            "position": [
+              0,
+              1.55,
+              14.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "hub-white",
+            "position": [
+              0.55,
+              1.55,
+              2.79
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "transfer-deck",
+            "kind": "lift",
+            "label": "TRANSFER",
+            "position": [
+              6,
+              -0.15,
+              -1
+            ],
+            "size": [
+              8,
+              0.3,
+              6
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": "east",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "north-dock-door",
+            "kind": "shutter",
+            "label": "NORTH",
+            "position": [
+              -4,
+              1.5,
+              -10.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "east-dock-door",
+            "kind": "shutter",
+            "label": "EAST",
+            "position": [
+              14.12,
+              5,
+              -1
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "operations-white",
+            "position": [
+              0,
+              2,
+              14.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 4
+          },
+          {
+            "id": "hub-white",
+            "position": [
+              0,
+              1.75,
+              2.765
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "north-exit",
+            "label": "EXIT",
+            "position": [
+              -4,
+              1.5,
+              -11.9
+            ],
+            "size": [
+              2.760000000000001,
+              3,
+              4.16
+            ]
+          },
+          {
+            "id": "east-exit",
+            "label": "EXIT",
+            "position": [
+              15.9,
+              1.5,
+              -1
+            ],
+            "size": [
+              4.16,
+              3,
+              2.76
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "moving:transfer-deck": false,
+          "at:transfer-deck:north": false,
+          "at:transfer-deck:east": true,
+          "safety:north-dock-door": false,
+          "door-safety": false,
+          "moving:north-dock-door": false,
+          "safety:east-dock-door": false,
+          "moving:east-dock-door": false
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 1567
+          },
+          {
+            "type": "footstep",
+            "time": 1992
+          },
+          {
+            "type": "footstep",
+            "time": 2417
+          },
+          {
+            "type": "footstep",
+            "time": 2842
+          },
+          {
+            "type": "footstep",
+            "time": 3267
+          },
+          {
+            "type": "lift-motor",
+            "time": 3700,
+            "id": "transfer-deck",
+            "value": "east"
+          },
+          {
+            "type": "lift-motor",
+            "time": 3700,
+            "id": "transfer-deck"
+          },
+          {
+            "type": "shutter-close",
+            "time": 3708,
+            "id": "north-dock-door"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 12017,
+            "id": "transfer-deck",
+            "value": "east"
+          },
+          {
+            "type": "shutter-open",
+            "time": 12033,
+            "id": "east-dock-door"
+          },
+          {
+            "type": "footstep",
+            "time": 12233
+          },
+          {
+            "type": "footstep",
+            "time": 12658
+          },
+          {
+            "type": "footstep",
+            "time": 13083
+          },
+          {
+            "type": "footstep",
+            "time": 13508
+          },
+          {
+            "type": "footstep",
+            "time": 13933
+          },
+          {
+            "type": "footstep",
+            "time": 14358
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "hub-floor",
+          "toi": 0,
+          "normal": {
+            "x": 0,
+            "y": 1,
+            "z": -0.000020186771507724188
+          }
+        }
+      ]
+    },
+    {
+      "label": "parent-counterexample-runup",
+      "state": {
+        "room": "chamber-7",
+        "number": 7,
+        "mission": "You mustn't send the platform east. Cross to the north dock.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            4.023550510406494,
+            0.8651000261306763,
+            -2.654304027557373
+          ],
+          "velocity": [
+            0.014652494730280846,
+            0,
+            -0.09600533634623803
+          ],
+          "yaw": -0.15145319865420503,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "operations-white",
+            "position": [
+              0,
+              1.55,
+              14.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "hub-white",
+            "position": [
+              0.55,
+              1.55,
+              2.79
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "transfer-deck",
+            "kind": "lift",
+            "label": "TRANSFER",
+            "position": [
+              6,
+              -0.15,
+              -1
+            ],
+            "size": [
+              8,
+              0.3,
+              6
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": "east",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "north-dock-door",
+            "kind": "shutter",
+            "label": "NORTH",
+            "position": [
+              -4,
+              1.5,
+              -10.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "east-dock-door",
+            "kind": "shutter",
+            "label": "EAST",
+            "position": [
+              14.12,
+              5,
+              -1
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "operations-white",
+            "position": [
+              0,
+              2,
+              14.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 4
+          },
+          {
+            "id": "hub-white",
+            "position": [
+              0,
+              1.75,
+              2.765
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "north-exit",
+            "label": "EXIT",
+            "position": [
+              -4,
+              1.5,
+              -11.9
+            ],
+            "size": [
+              2.760000000000001,
+              3,
+              4.16
+            ]
+          },
+          {
+            "id": "east-exit",
+            "label": "EXIT",
+            "position": [
+              15.9,
+              1.5,
+              -1
+            ],
+            "size": [
+              4.16,
+              3,
+              2.76
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "moving:transfer-deck": false,
+          "at:transfer-deck:north": false,
+          "at:transfer-deck:east": true,
+          "safety:north-dock-door": false,
+          "door-safety": false,
+          "moving:north-dock-door": false,
+          "safety:east-dock-door": false,
+          "moving:east-dock-door": false
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 2842
+          },
+          {
+            "type": "footstep",
+            "time": 3267
+          },
+          {
+            "type": "lift-motor",
+            "time": 3700,
+            "id": "transfer-deck",
+            "value": "east"
+          },
+          {
+            "type": "lift-motor",
+            "time": 3700,
+            "id": "transfer-deck"
+          },
+          {
+            "type": "shutter-close",
+            "time": 3708,
+            "id": "north-dock-door"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 12017,
+            "id": "transfer-deck",
+            "value": "east"
+          },
+          {
+            "type": "shutter-open",
+            "time": 12033,
+            "id": "east-dock-door"
+          },
+          {
+            "type": "footstep",
+            "time": 12233
+          },
+          {
+            "type": "footstep",
+            "time": 12658
+          },
+          {
+            "type": "footstep",
+            "time": 13083
+          },
+          {
+            "type": "footstep",
+            "time": 13508
+          },
+          {
+            "type": "footstep",
+            "time": 13933
+          },
+          {
+            "type": "footstep",
+            "time": 14358
+          },
+          {
+            "type": "footstep",
+            "time": 14783
+          },
+          {
+            "type": "footstep",
+            "time": 15208
+          },
+          {
+            "type": "footstep",
+            "time": 15633
+          }
+        ]
+      },
+      "contacts": []
+    },
+    {
+      "label": "parent-counterexample-takeoff",
+      "state": {
+        "room": "chamber-7",
+        "number": 7,
+        "mission": "You mustn't send the platform east. Cross to the north dock.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            2.652627468109131,
+            0.8651000261306763,
+            -3.3446409702301025
+          ],
+          "velocity": [
+            -4.289872213413999,
+            0,
+            -2.1450171404345832
+          ],
+          "yaw": 1.1071487177940904,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "operations-white",
+            "position": [
+              0,
+              1.55,
+              14.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "hub-white",
+            "position": [
+              0.55,
+              1.55,
+              2.79
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "transfer-deck",
+            "kind": "lift",
+            "label": "TRANSFER",
+            "position": [
+              6,
+              -0.15,
+              -1
+            ],
+            "size": [
+              8,
+              0.3,
+              6
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": "east",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "north-dock-door",
+            "kind": "shutter",
+            "label": "NORTH",
+            "position": [
+              -4,
+              1.5,
+              -10.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "east-dock-door",
+            "kind": "shutter",
+            "label": "EAST",
+            "position": [
+              14.12,
+              5,
+              -1
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "operations-white",
+            "position": [
+              0,
+              2,
+              14.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 4
+          },
+          {
+            "id": "hub-white",
+            "position": [
+              0,
+              1.75,
+              2.765
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "north-exit",
+            "label": "EXIT",
+            "position": [
+              -4,
+              1.5,
+              -11.9
+            ],
+            "size": [
+              2.760000000000001,
+              3,
+              4.16
+            ]
+          },
+          {
+            "id": "east-exit",
+            "label": "EXIT",
+            "position": [
+              15.9,
+              1.5,
+              -1
+            ],
+            "size": [
+              4.16,
+              3,
+              2.76
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "moving:transfer-deck": false,
+          "at:transfer-deck:north": false,
+          "at:transfer-deck:east": true,
+          "safety:north-dock-door": false,
+          "door-safety": false,
+          "moving:north-dock-door": false,
+          "safety:east-dock-door": false,
+          "moving:east-dock-door": false
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 3267
+          },
+          {
+            "type": "lift-motor",
+            "time": 3700,
+            "id": "transfer-deck",
+            "value": "east"
+          },
+          {
+            "type": "lift-motor",
+            "time": 3700,
+            "id": "transfer-deck"
+          },
+          {
+            "type": "shutter-close",
+            "time": 3708,
+            "id": "north-dock-door"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 12017,
+            "id": "transfer-deck",
+            "value": "east"
+          },
+          {
+            "type": "shutter-open",
+            "time": 12033,
+            "id": "east-dock-door"
+          },
+          {
+            "type": "footstep",
+            "time": 12233
+          },
+          {
+            "type": "footstep",
+            "time": 12658
+          },
+          {
+            "type": "footstep",
+            "time": 13083
+          },
+          {
+            "type": "footstep",
+            "time": 13508
+          },
+          {
+            "type": "footstep",
+            "time": 13933
+          },
+          {
+            "type": "footstep",
+            "time": 14358
+          },
+          {
+            "type": "footstep",
+            "time": 14783
+          },
+          {
+            "type": "footstep",
+            "time": 15208
+          },
+          {
+            "type": "footstep",
+            "time": 15633
+          },
+          {
+            "type": "footstep",
+            "time": 16058
+          }
+        ]
+      },
+      "contacts": []
+    },
+    {
+      "label": "genuine-north-dock-landing",
+      "state": {
+        "room": "chamber-7",
+        "number": 7,
+        "mission": "You mustn't send the platform east. Cross to the north dock.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -0.7694239616394043,
+            0.8649788498878479,
+            -5.055727958679199
+          ],
+          "velocity": [
+            -0.012355648448220262,
+            0,
+            -0.00617796744419276
+          ],
+          "yaw": 1.1071487177940904,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "operations-white",
+            "position": [
+              0,
+              1.55,
+              14.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "hub-white",
+            "position": [
+              0.55,
+              1.55,
+              2.79
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "transfer-deck",
+            "kind": "lift",
+            "label": "TRANSFER",
+            "position": [
+              6,
+              -0.15,
+              -1
+            ],
+            "size": [
+              8,
+              0.3,
+              6
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": "east",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "north-dock-door",
+            "kind": "shutter",
+            "label": "NORTH",
+            "position": [
+              -4,
+              1.5,
+              -10.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "east-dock-door",
+            "kind": "shutter",
+            "label": "EAST",
+            "position": [
+              14.12,
+              5,
+              -1
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "operations-white",
+            "position": [
+              0,
+              2,
+              14.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 4
+          },
+          {
+            "id": "hub-white",
+            "position": [
+              0,
+              1.75,
+              2.765
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "north-exit",
+            "label": "EXIT",
+            "position": [
+              -4,
+              1.5,
+              -11.9
+            ],
+            "size": [
+              2.760000000000001,
+              3,
+              4.16
+            ]
+          },
+          {
+            "id": "east-exit",
+            "label": "EXIT",
+            "position": [
+              15.9,
+              1.5,
+              -1
+            ],
+            "size": [
+              4.16,
+              3,
+              2.76
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "moving:transfer-deck": false,
+          "at:transfer-deck:north": false,
+          "at:transfer-deck:east": true,
+          "safety:north-dock-door": false,
+          "door-safety": false,
+          "moving:north-dock-door": false,
+          "safety:east-dock-door": false,
+          "moving:east-dock-door": false
+        },
+        "events": [
+          {
+            "type": "shutter-close",
+            "time": 3708,
+            "id": "north-dock-door"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 12017,
+            "id": "transfer-deck",
+            "value": "east"
+          },
+          {
+            "type": "shutter-open",
+            "time": 12033,
+            "id": "east-dock-door"
+          },
+          {
+            "type": "footstep",
+            "time": 12233
+          },
+          {
+            "type": "footstep",
+            "time": 12658
+          },
+          {
+            "type": "footstep",
+            "time": 13083
+          },
+          {
+            "type": "footstep",
+            "time": 13508
+          },
+          {
+            "type": "footstep",
+            "time": 13933
+          },
+          {
+            "type": "footstep",
+            "time": 14358
+          },
+          {
+            "type": "footstep",
+            "time": 14783
+          },
+          {
+            "type": "footstep",
+            "time": 15208
+          },
+          {
+            "type": "footstep",
+            "time": 15633
+          },
+          {
+            "type": "footstep",
+            "time": 16058
+          },
+          {
+            "type": "jump",
+            "time": 16400
+          },
+          {
+            "type": "land",
+            "time": 17125
+          },
+          {
+            "type": "footstep",
+            "time": 17125
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "north-dock",
+          "toi": 0,
+          "normal": {
+            "x": -0.000002754131173787755,
+            "y": 1,
+            "z": -0.0000020030045106977923
+          }
+        }
+      ]
+    },
+    {
+      "label": "closed-north-leaf-blocks-unaligned-shortcut",
+      "state": {
+        "room": "chamber-7",
+        "number": 7,
+        "mission": "You mustn't send the platform east. Cross to the north dock.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -4.070570468902588,
+            0.8648409843444824,
+            -9.675341606140137
+          ],
+          "velocity": [
+            0.11988443737771655,
+            0,
+            -4.798502654128119
+          ],
+          "yaw": -0.02497852183316519,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "operations-white",
+            "position": [
+              0,
+              1.55,
+              14.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "hub-white",
+            "position": [
+              0.55,
+              1.55,
+              2.79
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "transfer-deck",
+            "kind": "lift",
+            "label": "TRANSFER",
+            "position": [
+              6,
+              -0.15,
+              -1
+            ],
+            "size": [
+              8,
+              0.3,
+              6
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": "east",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "north-dock-door",
+            "kind": "shutter",
+            "label": "NORTH",
+            "position": [
+              -4,
+              1.5,
+              -10.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "east-dock-door",
+            "kind": "shutter",
+            "label": "EAST",
+            "position": [
+              14.12,
+              5,
+              -1
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "operations-white",
+            "position": [
+              0,
+              2,
+              14.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 4
+          },
+          {
+            "id": "hub-white",
+            "position": [
+              0,
+              1.75,
+              2.765
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "north-exit",
+            "label": "EXIT",
+            "position": [
+              -4,
+              1.5,
+              -11.9
+            ],
+            "size": [
+              2.760000000000001,
+              3,
+              4.16
+            ]
+          },
+          {
+            "id": "east-exit",
+            "label": "EXIT",
+            "position": [
+              15.9,
+              1.5,
+              -1
+            ],
+            "size": [
+              4.16,
+              3,
+              2.76
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "moving:transfer-deck": false,
+          "at:transfer-deck:north": false,
+          "at:transfer-deck:east": true,
+          "safety:north-dock-door": false,
+          "door-safety": false,
+          "moving:north-dock-door": false,
+          "safety:east-dock-door": false,
+          "moving:east-dock-door": false
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 14358
+          },
+          {
+            "type": "footstep",
+            "time": 14783
+          },
+          {
+            "type": "footstep",
+            "time": 15208
+          },
+          {
+            "type": "footstep",
+            "time": 15633
+          },
+          {
+            "type": "footstep",
+            "time": 16058
+          },
+          {
+            "type": "jump",
+            "time": 16400
+          },
+          {
+            "type": "land",
+            "time": 17125
+          },
+          {
+            "type": "footstep",
+            "time": 17125
+          },
+          {
+            "type": "footstep",
+            "time": 17550
+          },
+          {
+            "type": "footstep",
+            "time": 17975
+          },
+          {
+            "type": "footstep",
+            "time": 18400
+          },
+          {
+            "type": "footstep",
+            "time": 18825
+          },
+          {
+            "type": "footstep",
+            "time": 19250
+          },
+          {
+            "type": "footstep",
+            "time": 19675
+          },
+          {
+            "type": "footstep",
+            "time": 20100
+          },
+          {
+            "type": "footstep",
+            "time": 20525
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "north-dock",
+          "toi": 0,
+          "normal": {
+            "x": -0.000008032483492570464,
+            "y": 1,
+            "z": 0.000001004060436571308
+          }
+        },
+        {
+          "id": "north-dock-door",
+          "toi": 0,
+          "normal": {
+            "x": -0.0000030497103580273688,
+            "y": 0.00000813256065157475,
+            "z": 1
+          }
+        },
+        {
+          "id": "north-dock-door",
+          "toi": 0,
+          "normal": {
+            "x": -0.0000030497103580273688,
+            "y": 0.00000813256065157475,
+            "z": 1
+          }
+        },
+        {
+          "id": "north-dock-door",
+          "toi": 0,
+          "normal": {
+            "x": -0.0000030497103580273688,
+            "y": 0.00000813256065157475,
+            "z": 1
+          }
+        },
+        {
+          "id": "north-dock-door",
+          "toi": 0,
+          "normal": {
+            "x": -0.0000030497103580273688,
+            "y": 0.00000813256065157475,
+            "z": 1
+          }
+        },
+        {
+          "id": "north-dock-door",
+          "toi": 0,
+          "normal": {
+            "x": -0.0000030497103580273688,
+            "y": 0.00000813256065157475,
+            "z": 1
+          }
+        },
+        {
+          "id": "north-dock-door",
+          "toi": 0,
+          "normal": {
+            "x": -0.0000030497103580273688,
+            "y": 0.00000813256065157475,
+            "z": 1
+          }
+        },
+        {
+          "id": "north-dock-door",
+          "toi": 0,
+          "normal": {
+            "x": -0.0000030497103580273688,
+            "y": 0.00000813256065157475,
+            "z": 1
+          }
+        },
+        {
+          "id": "north-dock-door",
+          "toi": 0,
+          "normal": {
+            "x": -0.0000030497103580273688,
+            "y": 0.00000813256065157475,
+            "z": 1
+          }
+        },
+        {
+          "id": "north-dock-door",
+          "toi": 0,
+          "normal": {
+            "x": -0.0000030497103580273688,
+            "y": 0.00000813256065157475,
+            "z": 1
+          }
+        },
+        {
+          "id": "north-dock-door",
+          "toi": 0,
+          "normal": {
+            "x": -0.0000030497103580273688,
+            "y": 0.00000813256065157475,
+            "z": 1
+          }
+        },
+        {
+          "id": "north-dock-door",
+          "toi": 0,
+          "normal": {
+            "x": -0.0000030497103580273688,
+            "y": 0.00000813256065157475,
+            "z": 1
+          }
+        },
+        {
+          "id": "north-dock-door",
+          "toi": 0,
+          "normal": {
+            "x": -0.0000030497103580273688,
+            "y": 0.00000813256065157475,
+            "z": 1
+          }
+        },
+        {
+          "id": "north-dock-door",
+          "toi": 0,
+          "normal": {
+            "x": -0.0000030497103580273688,
+            "y": 0.00000813256065157475,
+            "z": 1
+          }
+        },
+        {
+          "id": "north-dock-door",
+          "toi": 0,
+          "normal": {
+            "x": -0.0000030497103580273688,
+            "y": 0.00000813256065157475,
+            "z": 1
+          }
+        },
+        {
+          "id": "north-dock-door",
+          "toi": 0,
+          "normal": {
+            "x": -0.0000030497103580273688,
+            "y": 0.00000813256065157475,
+            "z": 1
+          }
+        },
+        {
+          "id": "north-dock-door",
+          "toi": 0,
+          "normal": {
+            "x": -0.0000030497103580273688,
+            "y": 0.00000813256065157475,
+            "z": 1
+          }
+        },
+        {
+          "id": "north-dock-door",
+          "toi": 0,
+          "normal": {
+            "x": -0.0000030497103580273688,
+            "y": 0.00000813256065157475,
+            "z": 1
+          }
+        },
+        {
+          "id": "north-dock-door",
+          "toi": 0,
+          "normal": {
+            "x": -0.0000030497103580273688,
+            "y": 0.00000813256065157475,
+            "z": 1
+          }
+        },
+        {
+          "id": "north-dock-door",
+          "toi": 0,
+          "normal": {
+            "x": -0.0000030497103580273688,
+            "y": 0.00000813256065157475,
+            "z": 1
+          }
+        }
+      ]
+    },
+    {
+      "label": "ordinary-jump-return-to-east-deck",
+      "state": {
+        "room": "chamber-7",
+        "number": 7,
+        "mission": "You mustn't send the platform east. Cross to the north dock.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            2.831855058670044,
+            0.8651000261306763,
+            -3.473048210144043
+          ],
+          "velocity": [
+            0.012355673876092665,
+            0,
+            0.006177916588447966
+          ],
+          "yaw": -2.0344439357957027,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "operations-white",
+            "position": [
+              0,
+              1.55,
+              14.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "hub-white",
+            "position": [
+              0.55,
+              1.55,
+              2.79
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "transfer-deck",
+            "kind": "lift",
+            "label": "TRANSFER",
+            "position": [
+              6,
+              -0.15,
+              -1
+            ],
+            "size": [
+              8,
+              0.3,
+              6
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": "east",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "north-dock-door",
+            "kind": "shutter",
+            "label": "NORTH",
+            "position": [
+              -4,
+              1.5,
+              -10.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "east-dock-door",
+            "kind": "shutter",
+            "label": "EAST",
+            "position": [
+              14.12,
+              5,
+              -1
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "operations-white",
+            "position": [
+              0,
+              2,
+              14.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 4
+          },
+          {
+            "id": "hub-white",
+            "position": [
+              0,
+              1.75,
+              2.765
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "north-exit",
+            "label": "EXIT",
+            "position": [
+              -4,
+              1.5,
+              -11.9
+            ],
+            "size": [
+              2.760000000000001,
+              3,
+              4.16
+            ]
+          },
+          {
+            "id": "east-exit",
+            "label": "EXIT",
+            "position": [
+              15.9,
+              1.5,
+              -1
+            ],
+            "size": [
+              4.16,
+              3,
+              2.76
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "moving:transfer-deck": false,
+          "at:transfer-deck:north": false,
+          "at:transfer-deck:east": true,
+          "safety:north-dock-door": false,
+          "door-safety": false,
+          "moving:north-dock-door": false,
+          "safety:east-dock-door": false,
+          "moving:east-dock-door": false
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 17125
+          },
+          {
+            "type": "footstep",
+            "time": 17550
+          },
+          {
+            "type": "footstep",
+            "time": 17975
+          },
+          {
+            "type": "footstep",
+            "time": 18400
+          },
+          {
+            "type": "footstep",
+            "time": 18825
+          },
+          {
+            "type": "footstep",
+            "time": 19250
+          },
+          {
+            "type": "footstep",
+            "time": 19675
+          },
+          {
+            "type": "footstep",
+            "time": 20100
+          },
+          {
+            "type": "footstep",
+            "time": 20525
+          },
+          {
+            "type": "footstep",
+            "time": 20950
+          },
+          {
+            "type": "footstep",
+            "time": 21375
+          },
+          {
+            "type": "footstep",
+            "time": 21800
+          },
+          {
+            "type": "footstep",
+            "time": 22225
+          },
+          {
+            "type": "jump",
+            "time": 22425
+          },
+          {
+            "type": "land",
+            "time": 23150
+          },
+          {
+            "type": "footstep",
+            "time": 23150
+          }
+        ]
+      },
+      "contacts": []
+    },
+    {
+      "label": "actual-north-docking-opens-real-leaf",
+      "state": {
+        "room": "chamber-7",
+        "number": 7,
+        "mission": "You mustn't send the platform east. Cross to the north dock.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            2.9995765686035156,
+            0.8649502396583557,
+            3.1629204750061035
+          ],
+          "velocity": [
+            -5.012919106389168e-85,
+            0,
+            1.7480043575471457e-82
+          ],
+          "yaw": -0.00020319256268832076,
+          "pitch": -0.37240532922216385,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "operations-white",
+            "position": [
+              0,
+              1.55,
+              14.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "hub-white",
+            "position": [
+              0.55,
+              1.55,
+              2.79
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "transfer-deck",
+            "kind": "lift",
+            "label": "TRANSFER",
+            "position": [
+              -4,
+              -0.15,
+              -1
+            ],
+            "size": [
+              8,
+              0.3,
+              6
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "north",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "north-dock-door",
+            "kind": "shutter",
+            "label": "NORTH",
+            "position": [
+              -4,
+              5,
+              -10.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "east-dock-door",
+            "kind": "shutter",
+            "label": "EAST",
+            "position": [
+              14.12,
+              1.5,
+              -1
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "operations-white",
+            "position": [
+              0,
+              2,
+              14.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 4
+          },
+          {
+            "id": "hub-white",
+            "position": [
+              0,
+              1.75,
+              2.765
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "north-exit",
+            "label": "EXIT",
+            "position": [
+              -4,
+              1.5,
+              -11.9
+            ],
+            "size": [
+              2.760000000000001,
+              3,
+              4.16
+            ]
+          },
+          {
+            "id": "east-exit",
+            "label": "EXIT",
+            "position": [
+              15.9,
+              1.5,
+              -1
+            ],
+            "size": [
+              4.16,
+              3,
+              2.76
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "moving:transfer-deck": false,
+          "at:transfer-deck:north": true,
+          "at:transfer-deck:east": false,
+          "safety:north-dock-door": false,
+          "door-safety": false,
+          "moving:north-dock-door": false,
+          "safety:east-dock-door": false,
+          "moving:east-dock-door": false
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 20950
+          },
+          {
+            "type": "footstep",
+            "time": 21375
+          },
+          {
+            "type": "footstep",
+            "time": 21800
+          },
+          {
+            "type": "footstep",
+            "time": 22225
+          },
+          {
+            "type": "jump",
+            "time": 22425
+          },
+          {
+            "type": "land",
+            "time": 23150
+          },
+          {
+            "type": "footstep",
+            "time": 23150
+          },
+          {
+            "type": "footstep",
+            "time": 23575
+          },
+          {
+            "type": "footstep",
+            "time": 24000
+          },
+          {
+            "type": "footstep",
+            "time": 24433
+          },
+          {
+            "type": "footstep",
+            "time": 24858
+          },
+          {
+            "type": "lift-motor",
+            "time": 25258,
+            "id": "transfer-deck",
+            "value": "north"
+          },
+          {
+            "type": "lift-motor",
+            "time": 25258,
+            "id": "transfer-deck"
+          },
+          {
+            "type": "shutter-close",
+            "time": 25267,
+            "id": "east-dock-door"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 33575,
+            "id": "transfer-deck",
+            "value": "north"
+          },
+          {
+            "type": "shutter-open",
+            "time": 33592,
+            "id": "north-dock-door"
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "hub-floor",
+          "toi": 0,
+          "normal": {
+            "x": 0,
+            "y": 0.9999999403953552,
+            "z": -0.00001602301017555874
+          }
+        }
+      ]
+    },
+    {
+      "label": "physical-north-exit-after-actual-restoration",
+      "state": {
+        "room": "chamber-7",
+        "number": 7,
+        "mission": "You mustn't send the platform east. Cross to the north dock.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -3.9986484050750732,
+            0.8655855655670166,
+            -9.831754684448242
+          ],
+          "velocity": [
+            -0.0024490899574318337,
+            0,
+            -4.799999077924886
+          ],
+          "yaw": 0.0005066420298282682,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "operations-white",
+            "position": [
+              0,
+              1.55,
+              14.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "hub-white",
+            "position": [
+              0.55,
+              1.55,
+              2.79
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "transfer-deck",
+            "kind": "lift",
+            "label": "TRANSFER",
+            "position": [
+              -4,
+              -0.15,
+              -1
+            ],
+            "size": [
+              8,
+              0.3,
+              6
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "north",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "north-dock-door",
+            "kind": "shutter",
+            "label": "NORTH",
+            "position": [
+              -4,
+              5,
+              -10.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "east-dock-door",
+            "kind": "shutter",
+            "label": "EAST",
+            "position": [
+              14.12,
+              1.5,
+              -1
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "operations-white",
+            "position": [
+              0,
+              2,
+              14.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 4
+          },
+          {
+            "id": "hub-white",
+            "position": [
+              0,
+              1.75,
+              2.765
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "north-exit",
+            "label": "EXIT",
+            "position": [
+              -4,
+              1.5,
+              -11.9
+            ],
+            "size": [
+              2.760000000000001,
+              3,
+              4.16
+            ]
+          },
+          {
+            "id": "east-exit",
+            "label": "EXIT",
+            "position": [
+              15.9,
+              1.5,
+              -1
+            ],
+            "size": [
+              4.16,
+              3,
+              2.76
+            ]
+          }
+        ],
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "north-exit",
+          "reason": "",
+          "events": [
+            {
+              "type": "shutter-open",
+              "time": 8,
+              "id": "north-dock-door"
+            },
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "portalA",
+              "time": 500,
+              "surface": "operations-white",
+              "point": [
+                0,
+                1.55,
+                14.959999999999999
+              ]
+            },
+            {
+              "type": "portalB",
+              "time": 500,
+              "surface": "hub-white",
+              "point": [
+                0.55,
+                1.55,
+                2.79
+              ]
+            },
+            {
+              "type": "footstep",
+              "time": 508
+            },
+            {
+              "type": "footstep",
+              "time": 1108
+            },
+            {
+              "type": "enter",
+              "time": 1375,
+              "body": "player",
+              "from": 0,
+              "to": 1,
+              "fromSurface": "operations-white",
+              "toSurface": "hub-white",
+              "speed": 4.7779609743577645,
+              "exitSpeed": 4.7779609743577645,
+              "held": null
+            },
+            {
+              "type": "land",
+              "time": 1383
+            },
+            {
+              "type": "footstep",
+              "time": 1567
+            },
+            {
+              "type": "footstep",
+              "time": 1992
+            },
+            {
+              "type": "footstep",
+              "time": 2417
+            },
+            {
+              "type": "footstep",
+              "time": 2842
+            },
+            {
+              "type": "footstep",
+              "time": 3267
+            },
+            {
+              "type": "lift-motor",
+              "time": 3700,
+              "id": "transfer-deck",
+              "value": "east"
+            },
+            {
+              "type": "lift-motor",
+              "time": 3700,
+              "id": "transfer-deck"
+            },
+            {
+              "type": "shutter-close",
+              "time": 3708,
+              "id": "north-dock-door"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 12017,
+              "id": "transfer-deck",
+              "value": "east"
+            },
+            {
+              "type": "shutter-open",
+              "time": 12033,
+              "id": "east-dock-door"
+            },
+            {
+              "type": "footstep",
+              "time": 12233
+            },
+            {
+              "type": "footstep",
+              "time": 12658
+            },
+            {
+              "type": "footstep",
+              "time": 13083
+            },
+            {
+              "type": "footstep",
+              "time": 13508
+            },
+            {
+              "type": "footstep",
+              "time": 13933
+            },
+            {
+              "type": "footstep",
+              "time": 14358
+            },
+            {
+              "type": "footstep",
+              "time": 14783
+            },
+            {
+              "type": "footstep",
+              "time": 15208
+            },
+            {
+              "type": "footstep",
+              "time": 15633
+            },
+            {
+              "type": "footstep",
+              "time": 16058
+            },
+            {
+              "type": "jump",
+              "time": 16400
+            },
+            {
+              "type": "land",
+              "time": 17125
+            },
+            {
+              "type": "footstep",
+              "time": 17125
+            },
+            {
+              "type": "footstep",
+              "time": 17550
+            },
+            {
+              "type": "footstep",
+              "time": 17975
+            },
+            {
+              "type": "footstep",
+              "time": 18400
+            },
+            {
+              "type": "footstep",
+              "time": 18825
+            },
+            {
+              "type": "footstep",
+              "time": 19250
+            },
+            {
+              "type": "footstep",
+              "time": 19675
+            },
+            {
+              "type": "footstep",
+              "time": 20100
+            },
+            {
+              "type": "footstep",
+              "time": 20525
+            },
+            {
+              "type": "footstep",
+              "time": 20950
+            },
+            {
+              "type": "footstep",
+              "time": 21375
+            },
+            {
+              "type": "footstep",
+              "time": 21800
+            },
+            {
+              "type": "footstep",
+              "time": 22225
+            },
+            {
+              "type": "jump",
+              "time": 22425
+            },
+            {
+              "type": "land",
+              "time": 23150
+            },
+            {
+              "type": "footstep",
+              "time": 23150
+            },
+            {
+              "type": "footstep",
+              "time": 23575
+            },
+            {
+              "type": "footstep",
+              "time": 24000
+            },
+            {
+              "type": "footstep",
+              "time": 24433
+            },
+            {
+              "type": "footstep",
+              "time": 24858
+            },
+            {
+              "type": "lift-motor",
+              "time": 25258,
+              "id": "transfer-deck",
+              "value": "north"
+            },
+            {
+              "type": "lift-motor",
+              "time": 25258,
+              "id": "transfer-deck"
+            },
+            {
+              "type": "shutter-close",
+              "time": 25267,
+              "id": "east-dock-door"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 33575,
+              "id": "transfer-deck",
+              "value": "north"
+            },
+            {
+              "type": "shutter-open",
+              "time": 33592,
+              "id": "north-dock-door"
+            },
+            {
+              "type": "footstep",
+              "time": 34792
+            },
+            {
+              "type": "footstep",
+              "time": 35217
+            },
+            {
+              "type": "footstep",
+              "time": 35642
+            },
+            {
+              "type": "footstep",
+              "time": 36067
+            },
+            {
+              "type": "footstep",
+              "time": 36558
+            },
+            {
+              "type": "footstep",
+              "time": 36983
+            },
+            {
+              "type": "footstep",
+              "time": 37408
+            },
+            {
+              "type": "footstep",
+              "time": 37833
+            },
+            {
+              "type": "footstep",
+              "time": 38258
+            },
+            {
+              "type": "footstep",
+              "time": 38683
+            },
+            {
+              "type": "footstep",
+              "time": 39108
+            },
+            {
+              "type": "footstep",
+              "time": 39533
+            }
+          ],
+          "mechanisms": [
+            "shutters",
+            "portals",
+            "lifts"
+          ]
+        },
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "moving:transfer-deck": false,
+          "at:transfer-deck:north": true,
+          "at:transfer-deck:east": false,
+          "safety:north-dock-door": true,
+          "door-safety": true,
+          "moving:north-dock-door": false,
+          "safety:east-dock-door": false,
+          "moving:east-dock-door": false
+        },
+        "events": [
+          {
+            "type": "shutter-close",
+            "time": 25267,
+            "id": "east-dock-door"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 33575,
+            "id": "transfer-deck",
+            "value": "north"
+          },
+          {
+            "type": "shutter-open",
+            "time": 33592,
+            "id": "north-dock-door"
+          },
+          {
+            "type": "footstep",
+            "time": 34792
+          },
+          {
+            "type": "footstep",
+            "time": 35217
+          },
+          {
+            "type": "footstep",
+            "time": 35642
+          },
+          {
+            "type": "footstep",
+            "time": 36067
+          },
+          {
+            "type": "footstep",
+            "time": 36558
+          },
+          {
+            "type": "footstep",
+            "time": 36983
+          },
+          {
+            "type": "footstep",
+            "time": 37408
+          },
+          {
+            "type": "footstep",
+            "time": 37833
+          },
+          {
+            "type": "footstep",
+            "time": 38258
+          },
+          {
+            "type": "footstep",
+            "time": 38683
+          },
+          {
+            "type": "footstep",
+            "time": 39108
+          },
+          {
+            "type": "footstep",
+            "time": 39533
+          },
+          {
+            "type": "complete",
+            "time": 39742,
+            "chamber": 7
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "north-vestibule-floor",
+          "toi": 0.0020377649925649166,
+          "normal": {
+            "x": 0,
+            "y": 0.9998973608016968,
+            "z": 0.014331468380987644
+          }
+        }
+      ]
+    },
+    {
+      "label": "final",
+      "state": {
+        "room": "chamber-7",
+        "number": 7,
+        "mission": "You mustn't send the platform east. Cross to the north dock.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -3.9986484050750732,
+            0.8655855655670166,
+            -9.831754684448242
+          ],
+          "velocity": [
+            -0.0024490899574318337,
+            0,
+            -4.799999077924886
+          ],
+          "yaw": 0.0005066420298282682,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "operations-white",
+            "position": [
+              0,
+              1.55,
+              14.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "hub-white",
+            "position": [
+              0.55,
+              1.55,
+              2.79
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "transfer-deck",
+            "kind": "lift",
+            "label": "TRANSFER",
+            "position": [
+              -4,
+              -0.15,
+              -1
+            ],
+            "size": [
+              8,
+              0.3,
+              6
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "north",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "north-dock-door",
+            "kind": "shutter",
+            "label": "NORTH",
+            "position": [
+              -4,
+              5,
+              -10.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "east-dock-door",
+            "kind": "shutter",
+            "label": "EAST",
+            "position": [
+              14.12,
+              1.5,
+              -1
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "operations-white",
+            "position": [
+              0,
+              2,
+              14.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 4
+          },
+          {
+            "id": "hub-white",
+            "position": [
+              0,
+              1.75,
+              2.765
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "north-exit",
+            "label": "EXIT",
+            "position": [
+              -4,
+              1.5,
+              -11.9
+            ],
+            "size": [
+              2.760000000000001,
+              3,
+              4.16
+            ]
+          },
+          {
+            "id": "east-exit",
+            "label": "EXIT",
+            "position": [
+              15.9,
+              1.5,
+              -1
+            ],
+            "size": [
+              4.16,
+              3,
+              2.76
+            ]
+          }
+        ],
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "north-exit",
+          "reason": "",
+          "events": [
+            {
+              "type": "shutter-open",
+              "time": 8,
+              "id": "north-dock-door"
+            },
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "portalA",
+              "time": 500,
+              "surface": "operations-white",
+              "point": [
+                0,
+                1.55,
+                14.959999999999999
+              ]
+            },
+            {
+              "type": "portalB",
+              "time": 500,
+              "surface": "hub-white",
+              "point": [
+                0.55,
+                1.55,
+                2.79
+              ]
+            },
+            {
+              "type": "footstep",
+              "time": 508
+            },
+            {
+              "type": "footstep",
+              "time": 1108
+            },
+            {
+              "type": "enter",
+              "time": 1375,
+              "body": "player",
+              "from": 0,
+              "to": 1,
+              "fromSurface": "operations-white",
+              "toSurface": "hub-white",
+              "speed": 4.7779609743577645,
+              "exitSpeed": 4.7779609743577645,
+              "held": null
+            },
+            {
+              "type": "land",
+              "time": 1383
+            },
+            {
+              "type": "footstep",
+              "time": 1567
+            },
+            {
+              "type": "footstep",
+              "time": 1992
+            },
+            {
+              "type": "footstep",
+              "time": 2417
+            },
+            {
+              "type": "footstep",
+              "time": 2842
+            },
+            {
+              "type": "footstep",
+              "time": 3267
+            },
+            {
+              "type": "lift-motor",
+              "time": 3700,
+              "id": "transfer-deck",
+              "value": "east"
+            },
+            {
+              "type": "lift-motor",
+              "time": 3700,
+              "id": "transfer-deck"
+            },
+            {
+              "type": "shutter-close",
+              "time": 3708,
+              "id": "north-dock-door"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 12017,
+              "id": "transfer-deck",
+              "value": "east"
+            },
+            {
+              "type": "shutter-open",
+              "time": 12033,
+              "id": "east-dock-door"
+            },
+            {
+              "type": "footstep",
+              "time": 12233
+            },
+            {
+              "type": "footstep",
+              "time": 12658
+            },
+            {
+              "type": "footstep",
+              "time": 13083
+            },
+            {
+              "type": "footstep",
+              "time": 13508
+            },
+            {
+              "type": "footstep",
+              "time": 13933
+            },
+            {
+              "type": "footstep",
+              "time": 14358
+            },
+            {
+              "type": "footstep",
+              "time": 14783
+            },
+            {
+              "type": "footstep",
+              "time": 15208
+            },
+            {
+              "type": "footstep",
+              "time": 15633
+            },
+            {
+              "type": "footstep",
+              "time": 16058
+            },
+            {
+              "type": "jump",
+              "time": 16400
+            },
+            {
+              "type": "land",
+              "time": 17125
+            },
+            {
+              "type": "footstep",
+              "time": 17125
+            },
+            {
+              "type": "footstep",
+              "time": 17550
+            },
+            {
+              "type": "footstep",
+              "time": 17975
+            },
+            {
+              "type": "footstep",
+              "time": 18400
+            },
+            {
+              "type": "footstep",
+              "time": 18825
+            },
+            {
+              "type": "footstep",
+              "time": 19250
+            },
+            {
+              "type": "footstep",
+              "time": 19675
+            },
+            {
+              "type": "footstep",
+              "time": 20100
+            },
+            {
+              "type": "footstep",
+              "time": 20525
+            },
+            {
+              "type": "footstep",
+              "time": 20950
+            },
+            {
+              "type": "footstep",
+              "time": 21375
+            },
+            {
+              "type": "footstep",
+              "time": 21800
+            },
+            {
+              "type": "footstep",
+              "time": 22225
+            },
+            {
+              "type": "jump",
+              "time": 22425
+            },
+            {
+              "type": "land",
+              "time": 23150
+            },
+            {
+              "type": "footstep",
+              "time": 23150
+            },
+            {
+              "type": "footstep",
+              "time": 23575
+            },
+            {
+              "type": "footstep",
+              "time": 24000
+            },
+            {
+              "type": "footstep",
+              "time": 24433
+            },
+            {
+              "type": "footstep",
+              "time": 24858
+            },
+            {
+              "type": "lift-motor",
+              "time": 25258,
+              "id": "transfer-deck",
+              "value": "north"
+            },
+            {
+              "type": "lift-motor",
+              "time": 25258,
+              "id": "transfer-deck"
+            },
+            {
+              "type": "shutter-close",
+              "time": 25267,
+              "id": "east-dock-door"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 33575,
+              "id": "transfer-deck",
+              "value": "north"
+            },
+            {
+              "type": "shutter-open",
+              "time": 33592,
+              "id": "north-dock-door"
+            },
+            {
+              "type": "footstep",
+              "time": 34792
+            },
+            {
+              "type": "footstep",
+              "time": 35217
+            },
+            {
+              "type": "footstep",
+              "time": 35642
+            },
+            {
+              "type": "footstep",
+              "time": 36067
+            },
+            {
+              "type": "footstep",
+              "time": 36558
+            },
+            {
+              "type": "footstep",
+              "time": 36983
+            },
+            {
+              "type": "footstep",
+              "time": 37408
+            },
+            {
+              "type": "footstep",
+              "time": 37833
+            },
+            {
+              "type": "footstep",
+              "time": 38258
+            },
+            {
+              "type": "footstep",
+              "time": 38683
+            },
+            {
+              "type": "footstep",
+              "time": 39108
+            },
+            {
+              "type": "footstep",
+              "time": 39533
+            }
+          ],
+          "mechanisms": [
+            "shutters",
+            "portals",
+            "lifts"
+          ]
+        },
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "moving:transfer-deck": false,
+          "at:transfer-deck:north": true,
+          "at:transfer-deck:east": false,
+          "safety:north-dock-door": true,
+          "door-safety": true,
+          "moving:north-dock-door": false,
+          "safety:east-dock-door": false,
+          "moving:east-dock-door": false
+        },
+        "events": [
+          {
+            "type": "shutter-close",
+            "time": 25267,
+            "id": "east-dock-door"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 33575,
+            "id": "transfer-deck",
+            "value": "north"
+          },
+          {
+            "type": "shutter-open",
+            "time": 33592,
+            "id": "north-dock-door"
+          },
+          {
+            "type": "footstep",
+            "time": 34792
+          },
+          {
+            "type": "footstep",
+            "time": 35217
+          },
+          {
+            "type": "footstep",
+            "time": 35642
+          },
+          {
+            "type": "footstep",
+            "time": 36067
+          },
+          {
+            "type": "footstep",
+            "time": 36558
+          },
+          {
+            "type": "footstep",
+            "time": 36983
+          },
+          {
+            "type": "footstep",
+            "time": 37408
+          },
+          {
+            "type": "footstep",
+            "time": 37833
+          },
+          {
+            "type": "footstep",
+            "time": 38258
+          },
+          {
+            "type": "footstep",
+            "time": 38683
+          },
+          {
+            "type": "footstep",
+            "time": 39108
+          },
+          {
+            "type": "footstep",
+            "time": 39533
+          },
+          {
+            "type": "complete",
+            "time": 39742,
+            "chamber": 7
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "north-vestibule-floor",
+          "toi": 0.0020377649925649166,
+          "normal": {
+            "x": 0,
+            "y": 0.9998973608016968,
+            "z": 0.014331468380987644
+          }
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "shutter-open",
+      "data": {
+        "id": "north-dock-door"
+      }
+    },
+    {
+      "type": "land",
+      "data": {}
+    },
+    {
+      "type": "portalA",
+      "data": {
+        "surface": "operations-white",
+        "point": [
+          0,
+          1.55,
+          14.959999999999999
+        ]
+      }
+    },
+    {
+      "type": "portalB",
+      "data": {
+        "surface": "hub-white",
+        "point": [
+          0.55,
+          1.55,
+          2.79
+        ]
+      }
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "enter",
+      "data": {
+        "body": "player",
+        "from": 0,
+        "to": 1,
+        "fromSurface": "operations-white",
+        "toSurface": "hub-white",
+        "speed": 4.7779609743577645,
+        "exitSpeed": 4.7779609743577645,
+        "held": null
+      }
+    },
+    {
+      "type": "land",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "lift-motor",
+      "data": {
+        "id": "transfer-deck",
+        "value": "east"
+      }
+    },
+    {
+      "type": "lift-motor",
+      "data": {
+        "id": "transfer-deck"
+      }
+    },
+    {
+      "type": "shutter-close",
+      "data": {
+        "id": "north-dock-door"
+      }
+    },
+    {
+      "type": "lift-arrival",
+      "data": {
+        "id": "transfer-deck",
+        "value": "east"
+      }
+    },
+    {
+      "type": "shutter-open",
+      "data": {
+        "id": "east-dock-door"
+      }
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "jump",
+      "data": {}
+    },
+    {
+      "type": "land",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "jump",
+      "data": {}
+    },
+    {
+      "type": "land",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "lift-motor",
+      "data": {
+        "id": "transfer-deck",
+        "value": "north"
+      }
+    },
+    {
+      "type": "lift-motor",
+      "data": {
+        "id": "transfer-deck"
+      }
+    },
+    {
+      "type": "shutter-close",
+      "data": {
+        "id": "east-dock-door"
+      }
+    },
+    {
+      "type": "lift-arrival",
+      "data": {
+        "id": "transfer-deck",
+        "value": "north"
+      }
+    },
+    {
+      "type": "shutter-open",
+      "data": {
+        "id": "north-dock-door"
+      }
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "complete",
+      "data": {
+        "chamber": 7
+      }
+    }
+  ]
+}
