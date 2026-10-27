@@ -30,3 +30,5 @@ A later source-position audit found the fixed chamber01 plaque at the door cente
 - Housing, source clipping and material cleanup must remain correct on room change/restart and across actual GPU/software paths. Software uses deliberately cheaper light/view updates and is not visually identical to hardware.
 
 The final evidence should include actual Chamber1 retrieval/carry/button/door footage and Chamber2 drop/fling/landing footage, with intermediate screenshots and errors. Successful unit probes and seeded access shots remain separate from played completion. The lead has reported independent normal-input passage through both core gates; that assertion should be linked to the lead/QA evidence rather than attributed to the art inspection captures.
+
+The final normal-input recording and checkpoints have now been inspected; see `MOTION_REVIEW.md` for the exact build/video hashes, all-frame startup/white scan and representative live-view/cube/landing findings. QA's finalized `docs/chamber-qa/final-run/manifest.json` records earned `[1,2]` and zero errors. The front-on partial cube view supports continuous visibility but does not prove all-angle side-seam clipping.

@@ -1,0 +1,212 @@
+{
+  "status": "Art harness only, no completion evidence",
+  "world": {
+    "room": "chamber-98",
+    "number": 98,
+    "mission": "UNPLAYED art fixture",
+    "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+    "player": {
+      "position": [
+        0.00014458027726504952,
+        5.064941883087158,
+        2.0139195919036865
+      ],
+      "velocity": [
+        0,
+        0,
+        -5.13392273701643e-56
+      ],
+      "yaw": -1.0624999999999982,
+      "pitch": -0.48000000000000026,
+      "grounded": true,
+      "crossings": 0
+    },
+    "portals": [
+      null,
+      null
+    ],
+    "crates": [
+      {
+        "id": "sample-cube",
+        "position": [
+          -0.6012495756149292,
+          4.7495903968811035,
+          -0.0005976131069473922
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          -0.0000031743779800308403,
+          4.814361531657596e-8,
+          -0.0000036939859455742408,
+          1
+        ],
+        "angularVelocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      }
+    ],
+    "pads": [],
+    "devices": [
+      {
+        "id": "freight",
+        "kind": "lift",
+        "label": "FREIGHT",
+        "position": [
+          0,
+          4.05,
+          0
+        ],
+        "size": [
+          4,
+          0.3,
+          4
+        ],
+        "active": true,
+        "progress": 1,
+        "choice": "upper",
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "power",
+        "kind": "switch",
+        "label": "POWER",
+        "position": [
+          -4,
+          0.7,
+          5
+        ],
+        "size": [
+          0.6,
+          1,
+          0.35
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      }
+    ],
+    "panels": [
+      {
+        "id": "west-ceramic",
+        "position": [
+          -7.985,
+          4.5,
+          0
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ],
+        "width": 24,
+        "height": 9
+      },
+      {
+        "id": "north-ceramic",
+        "position": [
+          0,
+          6.6,
+          -11.985
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "width": 16,
+        "height": 4.8
+      }
+    ],
+    "exits": [],
+    "result": null,
+    "held": null,
+    "holdSpaceTransform": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "launchUsed": false,
+    "respawns": 0,
+    "beams": {},
+    "signals": {
+      "safety:freight": false,
+      "door-safety": false,
+      "moving:freight": false,
+      "at:freight:lower": false,
+      "at:freight:upper": true,
+      "safety:power": false,
+      "moving:power": false
+    },
+    "events": [
+      {
+        "type": "land",
+        "time": 8
+      },
+      {
+        "type": "footstep",
+        "time": 1408
+      },
+      {
+        "type": "footstep",
+        "time": 1833
+      },
+      {
+        "type": "footstep",
+        "time": 2258
+      },
+      {
+        "type": "lift-motor",
+        "time": 4692,
+        "id": "freight",
+        "value": "upper"
+      },
+      {
+        "type": "lift-motor",
+        "time": 4692,
+        "id": "freight"
+      },
+      {
+        "type": "lift-arrival",
+        "time": 8175,
+        "id": "freight",
+        "value": "upper"
+      },
+      {
+        "type": "contact",
+        "time": 8475,
+        "body": "sample-cube",
+        "speed": 2.268594612627708
+      }
+    ]
+  },
+  "renderer": {
+    "calls": 47,
+    "triangles": 12794
+  }
+}

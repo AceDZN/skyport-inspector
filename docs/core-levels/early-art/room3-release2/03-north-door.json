@@ -1,0 +1,344 @@
+{
+  "title": "Rift Runner",
+  "version": "rapier-campaign-early-1",
+  "mode": "playing",
+  "level": 3,
+  "alternate": false,
+  "world": {
+    "room": "chamber-3",
+    "number": 3,
+    "mission": "Put the cube on the button behind the window. Use the north door.",
+    "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+    "player": {
+      "position": [
+        -6.000000476837158,
+        0.8650767803192139,
+        -0.000007234750228235498
+      ],
+      "velocity": [
+        0,
+        0,
+        0
+      ],
+      "yaw": -6.425082467959755,
+      "pitch": 0.06953938776635812,
+      "grounded": true,
+      "crossings": 0
+    },
+    "portals": [
+      {
+        "surface": "west-ceramic",
+        "position": [
+          -7.96,
+          1.55,
+          5.848866279066591
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "surface": "east-ceramic",
+        "position": [
+          7.96,
+          1.55,
+          5.978548419466654
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ]
+      }
+    ],
+    "crates": [
+      {
+        "id": "cube",
+        "position": [
+          -5.000003814697266,
+          0.549888014793396,
+          2.999992609024048
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          -0.0000018221556956632412,
+          2.427998774257034e-12,
+          0.0000018199250462203054,
+          1
+        ],
+        "angularVelocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      }
+    ],
+    "pads": [
+      {
+        "id": "front-button",
+        "position": [
+          -3,
+          0.14,
+          0
+        ],
+        "pressed": false,
+        "crate": null
+      },
+      {
+        "id": "behind-button",
+        "position": [
+          3,
+          0.14,
+          0
+        ],
+        "pressed": false,
+        "crate": null
+      }
+    ],
+    "devices": [
+      {
+        "id": "north-door",
+        "kind": "shutter",
+        "label": "NORTH",
+        "position": [
+          -4,
+          1.5,
+          -14.12
+        ],
+        "size": [
+          2.8,
+          3,
+          0.3
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "south-door",
+        "kind": "shutter",
+        "label": "SOUTH",
+        "position": [
+          -4,
+          1.5,
+          14.12
+        ],
+        "size": [
+          2.8,
+          3,
+          0.3
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      }
+    ],
+    "panels": [
+      {
+        "id": "west-ceramic",
+        "position": [
+          -7.985,
+          3.5,
+          0
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ],
+        "width": 28,
+        "height": 7
+      },
+      {
+        "id": "east-ceramic",
+        "position": [
+          7.985,
+          3.5,
+          0
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ],
+        "width": 28,
+        "height": 7
+      }
+    ],
+    "exits": [
+      {
+        "id": "north-exit",
+        "label": "",
+        "position": [
+          -4,
+          0.86,
+          -16.6
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.6
+        ]
+      },
+      {
+        "id": "south-exit",
+        "label": "",
+        "position": [
+          -4,
+          0.86,
+          16.6
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.6
+        ]
+      }
+    ],
+    "result": null,
+    "held": null,
+    "holdSpaceTransform": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "launchUsed": false,
+    "respawns": 0,
+    "beams": {},
+    "events": [
+      {
+        "type": "land",
+        "time": 8
+      },
+      {
+        "type": "portalA",
+        "time": 2540,
+        "surface": "west-ceramic",
+        "point": [
+          -7.96,
+          1.55,
+          5.848866279066591
+        ]
+      },
+      {
+        "type": "portalB",
+        "time": 3680,
+        "surface": "east-ceramic",
+        "point": [
+          7.96,
+          1.55,
+          5.978548419466654
+        ]
+      }
+    ]
+  },
+  "progress": {
+    "version": 2,
+    "highestUnlocked": 3,
+    "resumeLevel": 3,
+    "records": {
+      "1": {
+        "completed": true,
+        "runs": 0,
+        "completions": 0,
+        "unaided": false,
+        "bestRetries": null,
+        "last": {
+          "goalMatched": true,
+          "provenance": "legacy-core-completion",
+          "variant": "base",
+          "assistance": null,
+          "retries": null,
+          "seconds": null,
+          "portalCrossings": null,
+          "mechanisms": []
+        }
+      },
+      "2": {
+        "completed": true,
+        "runs": 0,
+        "completions": 0,
+        "unaided": false,
+        "bestRetries": null,
+        "last": {
+          "goalMatched": true,
+          "provenance": "legacy-core-completion",
+          "variant": "base",
+          "assistance": null,
+          "retries": null,
+          "seconds": null,
+          "portalCrossings": null,
+          "mechanisms": []
+        }
+      }
+    },
+    "updatedAt": 1793131724642,
+    "completed": [
+      1,
+      2
+    ],
+    "resume": 3,
+    "registered": 5
+  },
+  "pointerLocked": false,
+  "controls": {
+    "unlocked": true,
+    "sensitivity": 0.0022
+  },
+  "audio": {
+    "context": "running",
+    "paused": false,
+    "loopCount": 3,
+    "activeSfx": 0,
+    "cuesPlayed": 2,
+    "energy": true,
+    "chapter": 1,
+    "intensity": 0,
+    "environment": "chamber",
+    "airSpeed": 0,
+    "airActive": false,
+    "recentCues": [
+      "portalA",
+      "portalB"
+    ],
+    "paired": true,
+    "bridge": false,
+    "ducked": false,
+    "gains": {
+      "master": 0.8,
+      "music": 0.7,
+      "sfx": 0.74,
+      "voice": 0.8
+    },
+    "loadedBuffers": 29,
+    "loadErrors": [],
+    "timeline": 2.925333333333333
+  }
+}

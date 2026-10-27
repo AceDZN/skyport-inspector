@@ -1,0 +1,91 @@
+{"action": "click", "selector": "[data-action=continue]"}
+{"action": "assert", "path": "level", "equals": 3}
+{"action": "assert", "path": "progress.completed", "equals": [1, 2]}
+{"action": "aim", "target": [-7.61, 1.25, 0]}
+{"action": "capture", "name": "entry-plaque-readable-from-fixed-west-start"}
+{"action": "aim", "target": [-7.985, 1.55, 6]}
+{"action": "place", "index": 0}
+{"action": "assert", "path": "world.portals.0.surface", "equals": "west-ceramic"}
+{"action": "aim", "target": [7.985, 1.55, 6]}
+{"action": "place", "index": 1}
+{"action": "assert", "path": "world.portals.1.surface", "equals": "east-ceramic"}
+{"action": "capture", "name": "west-entrance-fixed-window-and-pair"}
+{"action": "walk", "x": -5, "z": 1.3}
+{"action": "aim", "target": [-5, 0.55, 3]}
+{"action": "press", "code": "KeyE"}
+{"action": "assert", "path": "world.held", "equals": "cube"}
+{"action": "walk", "x": -4.8, "z": 0}
+{"action": "aim", "target": [-3, 1.2, 0]}
+{"action": "press", "code": "KeyE"}
+{"action": "wait", "ms": 1100}
+{"action": "assert", "path": "world.pads.0.pressed", "equals": true}
+{"action": "capture", "name": "front-button-opens-south-not-north"}
+{"action": "walk", "x": -4, "z": 10}
+{"action": "aim", "target": [-4, 3.35, 14.2]}
+{"action": "capture", "name": "south-label-readable-before-door"}
+{"action": "walk", "x": -4, "z": 13}
+{"action": "walk", "x": -4, "z": 16.6}
+{"action": "assert", "path": "world.result", "equals": null}
+{"action": "assert", "path": "progress.completed", "equals": [1, 2]}
+{"action": "capture", "name": "wrong-south-destination-remains-recoverable"}
+{"action": "walk", "x": -4.8, "z": 0}
+{"action": "aim", "target": [-3, 0.69, 0]}
+{"action": "press", "code": "KeyE"}
+{"action": "assert", "path": "world.held", "equals": "cube"}
+{"action": "walk", "x": -6.7, "z": 6}
+{"action": "aim", "target": [-8.5, 1.55, 6]}
+{"action": "key", "code": "KeyW", "ms": 500}
+{"action": "capture", "name": "carried-to-far-side-through-wall-pair"}
+{"action": "assert", "path": "world.player.crossings", "equals": 1}
+{"action": "walk", "x": 4.8, "z": 0}
+{"action": "aim", "target": [3, 1.2, 0]}
+{"action": "press", "code": "KeyE"}
+{"action": "wait", "ms": 1100}
+{"action": "assert", "path": "world.pads.1.crate", "equals": "cube"}
+{"action": "assert", "path": "world.pads.0.pressed", "equals": false}
+{"action": "capture", "name": "behind-button-powers-north-door"}
+{"action": "walk", "x": 6.7, "z": 6}
+{"action": "aim", "target": [8.5, 1.55, 6]}
+{"action": "key", "code": "KeyW", "ms": 500}
+{"action": "assert", "path": "world.player.crossings", "equals": 2}
+{"action": "walk", "x": -4, "z": -10}
+{"action": "aim", "target": [-4, 3.35, -14.2]}
+{"action": "capture", "name": "north-label-readable-before-door"}
+{"action": "walk", "x": -4, "z": -13}
+{"action": "capture", "name": "actual-north-door-open-after-remote-pressure"}
+{"action": "walk", "x": -4, "z": -16.6}
+{"action": "assert", "path": "world.result.goalMatched", "equals": true}
+{"action": "assert", "path": "world.result.exit", "equals": "north-exit"}
+{"action": "assert", "path": "progress.completed", "equals": [1, 2, 3]}
+{"action": "capture", "name": "base-behind-north-earned"}
+{"action": "export-earned-save"}
+{"action": "click", "selector": "[data-action=levels]"}
+{"action": "capture", "name": "completed-third-level-offers-contrast"}
+{"action": "click", "selector": "[data-action=contrast][data-level='3']"}
+{"action": "assert", "path": "alternate", "equals": true}
+{"action": "capture", "name": "same-world-front-south-instruction"}
+{"action": "walk", "x": -5, "z": 1.3}
+{"action": "aim", "target": [-5, 0.55, 3]}
+{"action": "press", "code": "KeyE"}
+{"action": "assert", "path": "world.held", "equals": "cube"}
+{"action": "walk", "x": -4.8, "z": 0}
+{"action": "aim", "target": [-3, 1.2, 0]}
+{"action": "press", "code": "KeyE"}
+{"action": "wait", "ms": 1100}
+{"action": "assert", "path": "world.pads.0.crate", "equals": "cube"}
+{"action": "walk", "x": -4, "z": 10}
+{"action": "aim", "target": [-4, 3.35, 14.2]}
+{"action": "capture", "name": "south-label-readable-before-door"}
+{"action": "walk", "x": -4, "z": 13}
+{"action": "walk", "x": -4, "z": 16.6}
+{"action": "assert", "path": "world.result.goalMatched", "equals": true}
+{"action": "assert", "path": "world.result.exit", "equals": "south-exit"}
+{"action": "capture", "name": "contrast-front-south-earned-on-same-fixture"}
+{"action": "export-earned-save"}
+{"action": "assert", "path": "progress.records.3.variants.base.variant", "equals": "base"}
+{"action": "assert", "path": "progress.records.3.variants.base.portalCrossings", "equals": 2}
+{"action": "assert", "path": "progress.records.3.variants.contrast.variant", "equals": "contrast"}
+{"action": "assert", "path": "progress.records.3.variants.contrast.portalCrossings", "equals": 0}
+{"action": "assert", "path": "progress.records.1.last.provenance", "equals": "legacy-core-completion"}
+{"action": "assert", "path": "progress.records.1.last.assistance", "equals": null}
+{"action": "close"}

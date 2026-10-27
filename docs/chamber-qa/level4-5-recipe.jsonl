@@ -1,0 +1,101 @@
+{"action": "click", "selector": "[data-action=continue]"}
+{"action": "assert", "path": "level", "equals": 4}
+{"action": "capture", "name": "maintenance-l-spawn"}
+{"action": "walk", "x": -4, "z": 2}
+{"action": "wait", "ms": 1000}
+{"action": "capture", "name": "player-pressure-reveals-remote-wall"}
+{"action": "aim", "target": [-7.985, 1.55, 6]}
+{"action": "place", "index": 0}
+{"action": "assert", "path": "world.portals.0.surface", "equals": "source-west"}
+{"action": "aim", "target": [-4, 1.55, -11.985]}
+{"action": "place", "index": 1}
+{"action": "assert", "path": "world.portals.1.surface", "equals": "remote-north"}
+{"action": "walk", "x": -6.7, "z": 6}
+{"action": "wait", "ms": 800}
+{"action": "assert", "path": "world.pads.0.pressed", "equals": false}
+{"action": "capture", "name": "access-recloses-after-stepping-off"}
+{"action": "aim", "target": [-8.5, 1.55, 6]}
+{"action": "key", "code": "KeyW", "ms": 500}
+{"action": "assert", "path": "world.player.crossings", "equals": 1}
+{"action": "walk", "x": -4, "z": -9.8}
+{"action": "aim", "target": [-4, 0.55, -8]}
+{"action": "press", "code": "KeyE"}
+{"action": "assert", "path": "world.held", "equals": "cube"}
+{"action": "walk", "x": -4, "z": -10.7}
+{"action": "aim", "target": [-4, 1.55, -12.5]}
+{"action": "key", "code": "KeyW", "ms": 500}
+{"action": "assert", "path": "world.player.crossings", "equals": 2}
+{"action": "walk", "x": -5.8, "z": 2}
+{"action": "aim", "target": [-4, 1.2, 2]}
+{"action": "wait", "ms": 250}
+{"action": "press", "code": "KeyE"}
+{"action": "wait", "ms": 1100}
+{"action": "assert", "path": "world.pads.0.crate", "equals": "cube"}
+{"action": "capture", "name": "cube-replaces-player-pressure"}
+{"action": "walk", "x": -5.8, "z": 4}
+{"action": "walk", "x": 6.5, "z": 4}
+{"action": "walk", "x": 6.5, "z": 2}
+{"action": "capture", "name": "physical-exit-open-with-cube-remaining"}
+{"action": "walk", "x": 10.7, "z": 2}
+{"action": "assert", "path": "world.result.goalMatched", "equals": true}
+{"action": "assert", "path": "progress.completed", "equals": [1, 2, 3, 4]}
+{"action": "capture", "name": "fourth-chamber-earned"}
+{"action": "export-earned-save"}
+{"action": "click", "selector": "[data-action=next]"}
+{"action": "assert", "path": "level", "equals": 5}
+{"action": "capture", "name": "split-height-two-button-chamber"}
+{"action": "aim", "target": [4, 1.55, 13.985]}
+{"action": "place", "index": 0}
+{"action": "assert", "path": "world.portals.0.surface", "equals": "source-south"}
+{"action": "aim", "target": [-5, 1.55, -11.985]}
+{"action": "place", "index": 1}
+{"action": "assert", "path": "world.portals.1.surface", "equals": "low-north"}
+{"action": "walk", "x": 4, "z": 12.7}
+{"action": "aim", "target": [4, 1.55, 14.5]}
+{"action": "key", "code": "KeyW", "ms": 500}
+{"action": "assert", "path": "world.player.crossings", "equals": 1}
+{"action": "walk", "x": -5, "z": -9.8}
+{"action": "aim", "target": [-5, 0.55, -8]}
+{"action": "press", "code": "KeyE"}
+{"action": "assert", "path": "world.held", "equals": "cube-a"}
+{"action": "walk", "x": -5, "z": -10.7}
+{"action": "aim", "target": [-5, 1.55, -12.5]}
+{"action": "key", "code": "KeyW", "ms": 500}
+{"action": "assert", "path": "world.player.crossings", "equals": 2}
+{"action": "walk", "x": -5.8, "z": 6}
+{"action": "aim", "target": [-4, 1.2, 6]}
+{"action": "wait", "ms": 250}
+{"action": "press", "code": "KeyE"}
+{"action": "wait", "ms": 1100}
+{"action": "assert", "path": "world.pads.0.crate", "equals": "cube-a"}
+{"action": "assert", "path": "world.pads.1.pressed", "equals": false}
+{"action": "assert", "path": "world.devices.0.progress", "equals": 0}
+{"action": "capture", "name": "one-button-still-leaves-exit-closed"}
+{"action": "walk", "x": 4, "z": 13.35}
+{"action": "aim", "target": [5, 4.95, -11.985]}
+{"action": "place", "index": 1}
+{"action": "assert", "path": "world.portals.1.surface", "equals": "high-north"}
+{"action": "capture", "name": "high-portal-aim-clears-real-gallery-lip"}
+{"action": "aim", "target": [4, 1.55, 14.5]}
+{"action": "key", "code": "KeyW", "ms": 500}
+{"action": "assert", "path": "world.player.crossings", "equals": 3}
+{"action": "walk", "x": 6, "z": -9.8}
+{"action": "aim", "target": [6, 3.95, -8]}
+{"action": "press", "code": "KeyE"}
+{"action": "assert", "path": "world.held", "equals": "cube-b"}
+{"action": "walk", "x": 5.8, "z": -4}
+{"action": "aim", "target": [4, 4.6, -4]}
+{"action": "wait", "ms": 250}
+{"action": "press", "code": "KeyE"}
+{"action": "wait", "ms": 1100}
+{"action": "assert", "path": "world.pads.0.crate", "equals": "cube-a"}
+{"action": "assert", "path": "world.pads.1.crate", "equals": "cube-b"}
+{"action": "capture", "name": "one-cube-on-each-keeps-exit-open"}
+{"action": "walk", "x": 8, "z": -8}
+{"action": "capture", "name": "elevated-physical-exit-open"}
+{"action": "walk", "x": 11.7, "z": -8}
+{"action": "assert", "path": "world.result.goalMatched", "equals": true}
+{"action": "assert", "path": "progress.completed", "equals": [1, 2, 3, 4, 5]}
+{"action": "capture", "name": "fifth-chamber-earned"}
+{"action": "export-earned-save"}
+{"action": "close"}

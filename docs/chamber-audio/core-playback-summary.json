@@ -1,0 +1,190 @@
+{
+  "scope": "Frozen-build live audio replay inspection; separate from QA clean progression proof and silent film. Passive output analyser, no audio overlay or human subjective audition.",
+  "runs": [
+    {
+      "folder": "core-playback-headless-focus-observation",
+      "versions": [
+        {
+          "at": "2026-10-27T19:35:02.743Z",
+          "url": "http://localhost:4261/",
+          "scripts": [
+            {
+              "url": "http://localhost:4261/assets/audio-BL_bYQ5f.js",
+              "sha256": "ac79a8aa77fbdd5717e2c43f911d60ba638f8835f4e42c0b2f07582e1c3ed156"
+            },
+            {
+              "url": "http://localhost:4261/assets/main-WoEqkdvS.js",
+              "sha256": "a7dc70e954adf2b530d8f53107b505baf16b034959df1ce7c0e75876fbe2d2ab"
+            }
+          ]
+        }
+      ],
+      "actions": 35,
+      "samples": 91,
+      "pageErrors": [],
+      "consoleErrors": [],
+      "livePeak": 0.15080395340919495,
+      "livePeakDbfs": -16.431745460930657,
+      "muteRunningSamples": 8,
+      "muteMaxPeak": 0,
+      "airborneAfterActualCrossingSamples": 0,
+      "maxAirSpeed": 0,
+      "final": {},
+      "blockedActions": [
+        [
+          "{\"action\": \"focus-cycle\"}",
+          "Error: Changing tab did not pause the game"
+        ]
+      ],
+      "sampledClippingWindows": 0
+    },
+    {
+      "folder": "core-playback-cube-cycle",
+      "versions": [
+        {
+          "at": "2026-10-27T19:36:02.910Z",
+          "url": "http://localhost:4261/",
+          "scripts": [
+            {
+              "url": "http://localhost:4261/assets/audio-BL_bYQ5f.js",
+              "sha256": "ac79a8aa77fbdd5717e2c43f911d60ba638f8835f4e42c0b2f07582e1c3ed156"
+            },
+            {
+              "url": "http://localhost:4261/assets/main-WoEqkdvS.js",
+              "sha256": "a7dc70e954adf2b530d8f53107b505baf16b034959df1ce7c0e75876fbe2d2ab"
+            }
+          ]
+        }
+      ],
+      "actions": 77,
+      "samples": 315,
+      "pageErrors": [],
+      "consoleErrors": [],
+      "livePeak": 0.2842828631401062,
+      "livePeakDbfs": -10.92498638466485,
+      "muteRunningSamples": 10,
+      "muteMaxPeak": 0,
+      "airborneAfterActualCrossingSamples": 0,
+      "maxAirSpeed": 0,
+      "final": {},
+      "blockedActions": [
+        [
+          "{\"action\": \"assert\", \"path\": \"world.pads.0.crate\", \"equals\": \"weighted-cube\"}",
+          "Error: Expected world.pads.0.crate=\"weighted-cube\", got null"
+        ]
+      ],
+      "sampledClippingWindows": 0
+    },
+    {
+      "folder": "core-playback-fling",
+      "versions": [
+        {
+          "at": "2026-10-27T19:37:50.019Z",
+          "url": "http://localhost:4261/",
+          "scripts": [
+            {
+              "url": "http://localhost:4261/assets/audio-BL_bYQ5f.js",
+              "sha256": "ac79a8aa77fbdd5717e2c43f911d60ba638f8835f4e42c0b2f07582e1c3ed156"
+            },
+            {
+              "url": "http://localhost:4261/assets/main-WoEqkdvS.js",
+              "sha256": "a7dc70e954adf2b530d8f53107b505baf16b034959df1ce7c0e75876fbe2d2ab"
+            }
+          ]
+        }
+      ],
+      "actions": 20,
+      "samples": 92,
+      "pageErrors": [],
+      "consoleErrors": [],
+      "livePeak": 0.18775609135627747,
+      "livePeakDbfs": -14.528119286262275,
+      "muteRunningSamples": 11,
+      "muteMaxPeak": 0,
+      "airborneAfterActualCrossingSamples": 0,
+      "maxAirSpeed": 0,
+      "final": {},
+      "blockedActions": [
+        [
+          "{\"action\": \"assert\", \"path\": \"world.portals.1.surface\", \"equals\": \"high-wall\"}",
+          "Error: Expected world.portals.1.surface=\"high-wall\", got undefined"
+        ]
+      ],
+      "sampledClippingWindows": 0
+    },
+    {
+      "folder": "core-playback-fling-final",
+      "versions": [
+        {
+          "at": "2026-10-27T19:38:56.654Z",
+          "url": "http://localhost:4261/",
+          "scripts": [
+            {
+              "url": "http://localhost:4261/assets/audio-BL_bYQ5f.js",
+              "sha256": "ac79a8aa77fbdd5717e2c43f911d60ba638f8835f4e42c0b2f07582e1c3ed156"
+            },
+            {
+              "url": "http://localhost:4261/assets/main-WoEqkdvS.js",
+              "sha256": "a7dc70e954adf2b530d8f53107b505baf16b034959df1ce7c0e75876fbe2d2ab"
+            }
+          ]
+        }
+      ],
+      "actions": 20,
+      "samples": 116,
+      "pageErrors": [],
+      "consoleErrors": [],
+      "livePeak": 0.1558065116405487,
+      "livePeakDbfs": -16.148287915237923,
+      "muteRunningSamples": 0,
+      "muteMaxPeak": null,
+      "airborneAfterActualCrossingSamples": 9,
+      "maxAirSpeed": 14.015595174723876,
+      "final": {
+        "mode": "result",
+        "level": 2,
+        "audio": {
+          "context": "running",
+          "paused": false,
+          "loopCount": 3,
+          "activeSfx": 1,
+          "cuesPlayed": 16,
+          "energy": true,
+          "chapter": 1,
+          "intensity": 0,
+          "environment": "chamber",
+          "airSpeed": 0,
+          "airActive": false,
+          "recentCues": [
+            "footstep",
+            "enter",
+            "land",
+            "footstep",
+            "footstep",
+            "footstep",
+            "footstep",
+            "footstep",
+            "footstep",
+            "footstep",
+            "footstep",
+            "complete"
+          ],
+          "paired": true,
+          "bridge": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 29,
+          "loadErrors": [],
+          "timeline": 10.733333333333334
+        }
+      },
+      "blockedActions": [],
+      "sampledClippingWindows": 0
+    }
+  ]
+}

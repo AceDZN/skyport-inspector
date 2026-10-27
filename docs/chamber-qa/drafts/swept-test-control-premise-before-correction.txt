@@ -1,0 +1,32 @@
+✔ ordinary diagonal capsule preserves fitted crossings and rolls back a lost-width crossing (144.88875ms)
+✔ diagonal dynamic cube uses previous/current projected fit with yaw0 (14.669625ms)
+✖ diagonal dynamic cube uses previous/current projected fit with yaw0.7853981633974483 (8.051625ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 2
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2691.244625
+
+✖ failing tests:
+
+test at tests/core-aperture-sweep.test.ts:23:34
+✖ diagonal dynamic cube uses previous/current projected fit with yaw0.7853981633974483 (8.051625ms)
+  AssertionError [ERR_ASSERTION]: A fitting diagonal center control no longer traverses
+  
+  0 !== 1
+  
+      at probe (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-aperture-sweep.test.ts:14:19)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-aperture-sweep.test.ts:23:121)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

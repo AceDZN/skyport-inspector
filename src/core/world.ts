@@ -3,8 +3,10 @@ import { Vector3, Quaternion, Matrix4, Box3, Ray } from 'three';
 import { V, poseMatrix, portalMatrix, type Body, type Input, type Portal, type Solid } from '../physics';
 import type { Room } from '../content';
 import { MachineSystems } from '../systems';
-import { chamberBlueprint, chamberRow } from './chambers';
+import {getCoreLevel} from './levels';
+import type {CoreLevel} from './level';
 import type { WorldBlueprint } from '../campaign-blueprint';
+import {tracePortalBeam,type BeamResult,type BeamPortal} from './portal-beam';
 export const initializePhysics = () => RAPIER.init();
 interface RigidCube extends Body {
     rigid: RAPIER.RigidBody;
@@ -29,7 +31,8 @@ export class CoreWorld {
     readonly blueprint: WorldBlueprint;
     readonly machines: MachineSystems;
     readonly room: Room;
-    readonly number: 1 | 2;
+    readonly number: number;
+    readonly level:CoreLevel;
     readonly row: {
         number: number;
     };
@@ -85,17 +88,22 @@ export class CoreWorld {
     private groundedLast = false;
     private lastStep = 0;
     private contactCooldown = new Map<string, number>();
-    constructor(number: 1 | 2, onEvent: (type: string, data?: Record<string, unknown>) => void = () => { }) {
+    private lastWrongExit?:string;
+    private mechanisms=new Set<string>();
+    readonly beams=new Map<string,BeamResult>();
+    constructor(number: number, onEvent: (type: string, data?: Record<string, unknown>) => void = () => { }, definition?:CoreLevel, alternate=false) {
         this.number = number;
         this.row = { number };
         this.onEvent = onEvent;
-        this.blueprint = chamberBlueprint(number);
-        const row = chamberRow(number);
+        const base=definition??getCoreLevel(number);
+        this.level=alternate&&base.contrast?{...base,mission:base.contrast.mission,he:base.contrast.he,expectedExit:base.contrast.expectedExit??base.expectedExit,wrongExitFeedback:base.contrast.wrongExitFeedback??base.wrongExitFeedback}:base;
+        this.blueprint = this.level.blueprint();
+        this.yaw=this.level.startYaw??0;
         this.spawn = V(...this.blueprint.spawn);
         this.solids = this.blueprint.solids;
         this.surfaces = this.blueprint.surfaces;
         this.machines = new MachineSystems(this.blueprint.devices);
-        this.room = { id: 'chamber-' + number, grade: 7, stage: 'guided', skin: 'enclosed', title: row.name, mission: row.semanticDecision.required, he: row.he!, teaching: '', layout: 'glass', crates: this.blueprint.cargo.map(c => c.spec), target: { crateId: 'weighted-cube', pad: 'behind', bridge: 'east' }, sources: [], rule: '' };
+        this.room = { id: 'chamber-' + number, grade: 7, stage: 'guided', skin: 'enclosed', title: this.level.name, mission: this.level.mission, he: this.level.he, teaching: '', layout: 'glass', crates: this.blueprint.cargo.map(c => c.spec), target: { crateId: 'weighted-cube', pad: 'behind', bridge: 'east' }, sources: this.level.sources.map(s=>s.url), rule: '' };
         this.player.pos.copy(this.spawn);
         this.character = this.physics.createRigidBody(RAPIER.RigidBodyDesc.kinematicPositionBased().setTranslation(...this.blueprint.spawn));
         this.characterCollider = this.physics.createCollider(RAPIER.ColliderDesc.capsule(.57, .28).setFriction(.5).setActiveHooks(RAPIER.ActiveHooks.FILTER_CONTACT_PAIRS), this.character);
@@ -132,11 +140,11 @@ export class CoreWorld {
             return RAPIER.SolverFlags.COMPUTE_IMPULSE; const sa = this.fixed.get(a), sb = this.fixed.get(b), bodyA = this.bodyForCollider(a), bodyB = this.bodyForCollider(b); if ((sa && bodyB && this.apertureIgnores(bodyB, sa)) || (sb && bodyA && this.apertureIgnores(bodyA, sb)))
             return null; return RAPIER.SolverFlags.COMPUTE_IMPULSE; }, filterIntersectionPair: () => true };
     private bodyForCollider(handle: number): Body | undefined { return handle === this.characterCollider.handle ? this.player : this.crates.find(c => c.collider.handle === handle); }
-    event(type: string, data: Record<string, unknown> = {}) { this.events.push({ type, time: Math.round(this.time * 1000), ...data }); if (this.events.length > 120)
+    event(type: string, data: Record<string, unknown> = {}) { const family=({enter:'portals',pickup:'cargo',pad:'buttons','shutter-open':'shutters',launch:'momentum','lift-motor':'lifts','conveyor-clutch':'conveyors','receiver-power':'beams','switch-toggle':'switches','junction-rotate':'junctions'} as Record<string,string>)[type];if(family)this.mechanisms.add(family);this.events.push({ type, time: Math.round(this.time * 1000), ...data }); if (this.events.length > 120)
         this.events.shift(); this.ledger.push({ key: type, time: this.time }); this.onEvent(type, data); }
     forward() { return V(-Math.sin(this.yaw) * Math.cos(this.pitch), Math.sin(this.pitch), -Math.cos(this.yaw) * Math.cos(this.pitch)); }
     eye() { return this.player.pos.clone().add(V(0, .65, 0)); }
-    aperture(body: Body, p: Portal) { const local = body.pos.clone().applyMatrix4(p.matrix.clone().invert()), floor = Math.abs(p.normal.y) > .8, right = V().setFromMatrixColumn(p.matrix, 0), up = V().setFromMatrixColumn(p.matrix, 1), halfX = this.normalSupport(body, right), halfY = this.normalSupport(body, up); return Math.abs(local.x) < (floor ? 1.15 : .9) - halfX * .65 && Math.abs(local.y) < (floor ? 1.15 : 1.55) - halfY * (floor ? .65 : .6); }
+    aperture(body: Body, p: Portal, position=body.pos, rotation?:Quaternion) { const local = position.clone().applyMatrix4(p.matrix.clone().invert()), floor = Math.abs(p.normal.y) > .8, right = V().setFromMatrixColumn(p.matrix, 0), up = V().setFromMatrixColumn(p.matrix, 1), halfX = this.normalSupport(body, right, rotation), halfY = this.normalSupport(body, up, rotation); return Math.abs(local.x) < (floor ? 1.15 : .9) - halfX + .015 && Math.abs(local.y) < (floor ? 1.15 : 1.55) - halfY + .015; }
     apertureIgnores(body: Body, s: Solid) { return this.portals.every(Boolean) && this.portals.some(p => p && this.blockedEntry.get(body.id) !== p.index && (body.cooldown <= 0 || this.exitPortal.get(body.id) === p.index) && this.surfaces.find(s => s.id === p.surfaceId)?.solidId === s.id && body.pos.clone().sub(p.center).dot(p.normal) > -.7 && this.aperture(body, p)); }
     activeSolids() { return [...this.solids, ...this.machines.devices.map(d => ({ id: d.spec.id, min: d.position.clone().sub(V(...d.spec.size).multiplyScalar(.5)), max: d.position.clone().add(V(...d.spec.size).multiplyScalar(.5)), kind: 'wall' as const }))]; }
     place(index: number, id: string, point: Vector3) {
@@ -205,33 +213,39 @@ export class CoreWorld {
         if (this.exitClear(body, target, rotation, exit))
             this.blockedEntry.delete(id);
     } }
-    private cross(body: Body, before: Vector3) {
+    private rollbackCrossing(body:Body,before:Vector3,entry:Portal,previousRotation?:Quaternion){
+        const cube=body===this.player?undefined:body as RigidCube;
+        if(cube&&previousRotation)cube.rotation.copy(previousRotation);
+        body.pos.copy(before);
+        const clearance=this.normalSupport(body,entry.normal)+.025,side=body.pos.clone().sub(entry.center).dot(entry.normal);
+        body.pos.addScaledVector(entry.normal,Math.max(0,clearance-side));
+        body.vel.addScaledVector(entry.normal,Math.max(0,-body.vel.dot(entry.normal)));
+        if(body===this.player){this.character.setTranslation(body.pos,true);this.character.setNextKinematicTranslation(body.pos);}
+        else{cube!.rigid.setTranslation(body.pos,true);cube!.rigid.setLinvel(body.vel,true);if(previousRotation)cube!.rigid.setRotation(previousRotation,true);if(cube!.held){cube!.rigid.setNextKinematicTranslation(body.pos);cube!.rigid.setNextKinematicRotation(cube!.rotation);}}
+        this.physics.propagateModifiedBodyPositionsToColliders();
+    }
+    private cross(body: Body, before: Vector3, previousRotation?:Quaternion) {
         if (!this.portals.every(Boolean))
             return false;
         for (let i = 0; i < 2; i++) {
             const entry = this.portals[i]!, exit = this.portals[1 - i]!, from = before.clone().sub(entry.center).dot(entry.normal), to = body.pos.clone().sub(entry.center).dot(entry.normal);
-            if (from <= 0 || to > 0 || !this.aperture(body, entry))
+            if (from <= 0 || to > 0) continue;
+            if(!this.aperture(body,entry)){
+                // Only this aperture was open at the previous physical pose. A
+                // diagonal/rotating body that loses fit cannot be left in its host.
+                if(this.aperture(body,entry,before,previousRotation)){
+                    this.rollbackCrossing(body,before,entry,previousRotation);
+                    if(this.time-(this.contactCooldown.get('fit:'+body.id)??-1)>.15){this.contactCooldown.set('fit:'+body.id,this.time);this.event('invalid',{body:body.id,reason:body===this.player?'Move toward the centre of the portal.':'Keep the whole cube inside the portal opening.'});}
+                    return false;
+                }
                 continue;
+            }
             const matrix = portalMatrix(entry, exit), newPos = body.pos.clone().applyMatrix4(matrix), q = new Quaternion().setFromRotationMatrix(matrix), cube = body === this.player ? undefined : body as RigidCube;
             const rotation = cube ? cube.rotation.clone().premultiply(q) : new Quaternion();
             newPos.addScaledVector(exit.normal, Math.max(0, .015 - newPos.clone().sub(exit.center).dot(exit.normal)));
             if (!this.exitClear(body, newPos, rotation, exit)) {
-                body.pos.copy(before);
-                const clearance = this.normalSupport(body, entry.normal) + .025, side = body.pos.clone().sub(entry.center).dot(entry.normal);
-                body.pos.addScaledVector(entry.normal, Math.max(0, clearance - side));
-                body.vel.addScaledVector(entry.normal, Math.max(0, -body.vel.dot(entry.normal)));
+                this.rollbackCrossing(body,before,entry);
                 this.blockedEntry.set(body.id, i);
-                if (body === this.player) {
-                    this.character.setTranslation(body.pos, true);
-                    this.character.setNextKinematicTranslation(body.pos);
-                }
-                else {
-                    cube!.rigid.setTranslation(body.pos, true);
-                    cube!.rigid.setLinvel(body.vel, true);
-                    if (cube!.held)
-                        cube!.rigid.setNextKinematicTranslation(body.pos);
-                }
-                this.physics.propagateModifiedBodyPositionsToColliders();
                 if (this.time - (this.contactCooldown.get('blocked:' + body.id) ?? -1) > .15) {
                     this.contactCooldown.set('blocked:' + body.id, this.time);
                     this.event('blocked', { body: body.id });
@@ -279,13 +293,16 @@ export class CoreWorld {
         }
         return false;
     }
-    carryTarget() { return this.eye().addScaledVector(this.forward(), 1.8).add(V(0, -.5, 0)); }
-    updateHeld() {
+    carryTarget(origin=this.player.pos) { return origin.clone().add(V(0, .65, 0)).addScaledVector(this.forward(), 1.8).add(V(0, -.5, 0)); }
+    updateHeld(dt:number, nextPlayerPosition=this.player.pos) {
         const c = this.crates.find(c => c.id === this.heldId);
         if (!c)
             return;
-        const target = this.carryTarget().applyMatrix4(this.holdMap);
-        this.holdController.computeColliderMovement(c.collider, target.clone().sub(c.pos), undefined, undefined, col => this.queryAllows(c, col));
+        const target = this.carryTarget(nextPlayerPosition).applyMatrix4(this.holdMap);
+        // The target follows this step's capsule pose. Bounded motion also prevents an
+        // abrupt grab/look change from imparting an unbounded kinematic impulse.
+        const movement=target.sub(c.pos).clampLength(0,18*dt);
+        this.holdController.computeColliderMovement(c.collider, movement, undefined, undefined, col => this.queryAllows(c, col));
         const corrected = this.holdController.computedMovement();
         c.rigid.setNextKinematicTranslation(c.pos.clone().add(corrected));
     }
@@ -294,25 +311,76 @@ export class CoreWorld {
         const candidates=this.crates.filter(c=>c.pos.distanceTo(eye)<3.1&&c.pos.clone().sub(eye).normalize().dot(dir)>.65).sort((a,b)=>a.pos.distanceTo(eye)-b.pos.distanceTo(eye));
         return candidates.find(c=>{const delta=c.pos.clone().sub(eye),distance=delta.length(),ray=new Ray(eye,delta.normalize());return !this.activeSolids().some(s=>{const p=ray.intersectBox(new Box3(s.min,s.max),V());return p&&p.distanceTo(eye)<distance-c.half.x*.8;});});
     }
-    interactionHint(){return this.heldId?'E · Drop':this.grabbableCube()?'E · Pick up':'';}
+    private nearbyControl(){
+        const eye=this.eye(),forward=this.forward();
+        return this.machines.devices.filter(d=>!d.spec.automatic&&['switch','relay','junction','lift'].includes(d.spec.kind)).map(d=>({device:d,point:(d.spec.kind==='lift'?d.position.clone():V(...d.spec.position)).add(V(...(d.spec.controlOffset??[0,0,0])))})).filter(({point})=>{const delta=point.clone().sub(eye);return delta.length()<2.8&&delta.normalize().dot(forward)>.6;}).sort((a,b)=>a.point.distanceTo(eye)-b.point.distanceTo(eye)).find(({device,point})=>{const delta=point.clone().sub(eye),distance=delta.length(),ray=new Ray(eye,delta.normalize());return !this.activeSolids().some(s=>{if(s.id===device.spec.id)return false;const hit=ray.intersectBox(new Box3(s.min,s.max),V());return hit&&hit.distanceTo(eye)<distance-.1;});})?.device;
+    }
+    interactionHint(){return this.heldId?'E · Drop':this.nearbyControl()?'E · Use '+this.nearbyControl()!.spec.label:this.grabbableCube()?'E · Pick up':'';}
     grabDrop() {
         if(this.heldId){const c=this.crates.find(c=>c.id===this.heldId)!;this.heldId=undefined;this.holdMap.identity();c.held=false;c.rigid.setBodyType(RAPIER.RigidBodyType.Dynamic,true);c.rigid.setLinvel(this.player.vel.clone().addScaledVector(this.forward(),.5),true);this.event('drop',{body:c.id});return;}
         const c=this.grabbableCube();if(!c){this.event('invalid',{reason:'Move closer and look at the cube.'});return;}
         this.heldId=c.id;this.holdMap.identity();c.held=true;c.rigid.setBodyType(RAPIER.RigidBodyType.KinematicPositionBased,true);c.rigid.setLinvel(V(),true);c.rigid.setAngvel(V(),true);this.event('pickup',{body:c.id});
     }
-    interact() { return false; }
+    interact() { if(this.heldId)return false;const d=this.nearbyControl();return d?this.machines.interact(d.spec.id):false; }
     respawn() { this.respawns++; this.campaignResult = undefined; this.player.pos.copy(this.spawn); this.player.vel.set(0, 0, 0); this.blockedEntry.clear(); this.character.setTranslation(this.spawn, true); this.character.setNextKinematicTranslation(this.spawn); if (this.heldId) {
         const c = this.crates.find(c => c.id === this.heldId)!;
         this.resetCube(c);
-    } this.heldId = undefined; this.holdMap.identity(); this.yaw = 0; this.pitch = 0; this.physics.propagateModifiedBodyPositionsToColliders(); this.event('respawn', { count: this.respawns }); }
+    } this.heldId = undefined; this.holdMap.identity(); this.yaw = this.level.startYaw??0; this.pitch = 0; this.physics.propagateModifiedBodyPositionsToColliders(); this.event('respawn', { count: this.respawns }); }
     private resetCube(c: RigidCube) { c.held = false; c.pos.copy(V(...this.blueprint.cargo.find(x => x.spec.id === c.id)!.position)); c.vel.set(0, 0, 0); c.rigid.setBodyType(RAPIER.RigidBodyType.Dynamic, true); c.rigid.setTranslation(c.pos, true); c.rigid.setRotation(Q, true); c.rigid.setLinvel(V(), true); c.rigid.setAngvel(V(), true); this.physics.propagateModifiedBodyPositionsToColliders(); }
+    private updateOptics(flags:Record<string,boolean>){
+        const optical=this.level.optics;if(!optical)return;
+        for(const receiver of optical.receivers)flags[receiver.id]=false;
+        const portals:BeamPortal[]=this.portals.filter((p):p is Portal=>!!p).map(p=>({id:String(p.index),linkedTo:this.portals[1-p.index]?String(1-p.index):undefined,center:p.center.toArray() as [number,number,number],normal:p.normal.toArray() as [number,number,number],up:p.up.toArray() as [number,number,number],radii:Math.abs(p.normal.y)>.8?[1.144,1.102]:[.88,1.53]}));
+        const flag=(id:string)=>flags[id]??this.machines.devices.find(d=>d.spec.id===id)?.on??false;
+        for(const emitter of optical.emitters){
+            const c=emitter.circuit,enabled=(!c?.all||c.all.every(flag))&&(!c?.any||c.any.some(flag))&&(!c?.not||c.not.every(id=>!flag(id)));
+            if(!enabled){this.beams.delete(emitter.id);continue;}
+            const result=tracePortalBeam({origin:emitter.position,direction:emitter.direction,maxDistance:emitter.range??80,portals,receivers:optical.receivers.map(r=>({id:r.id,center:r.position,radius:r.radius})),castObstacle:(origin,direction,range)=>{
+                const hit=this.physics.castRay(new RAPIER.Ray(V(...origin),V(...direction)),range,true,undefined,undefined,this.doors.get(emitter.id)?.collider);
+                if(!hit)return undefined;
+                return{id:this.fixed.get(hit.collider.handle)?.id??this.bodyForCollider(hit.collider.handle)?.id??'machine',distance:hit.timeOfImpact};
+            }});
+            this.beams.set(emitter.id,result);if(result.receiver)flags[result.receiver]=true;
+        }
+        for(const receiver of optical.receivers){const previous=this.machines.flags[receiver.id]??false;if(flags[receiver.id]!==previous)this.event(flags[receiver.id]?'receiver-power':'beam-blocked',{id:receiver.id});}
+    }
+    private updateMachinery(dt:number){
+        const flags: Record<string, boolean> = {};
+        for (const pad of this.pads) {
+            pad.pressed = false;
+            pad.crateId = undefined;
+            this.physics.intersectionsWithShape(pad.pos.clone().add(V(0, .02, 0)), Q, new RAPIER.Cuboid(.85, .03, .85), collider => { const body = this.bodyForCollider(collider.handle); if (body) {
+                pad.pressed = true;
+                if (body !== this.player)
+                    pad.crateId = body.id;
+            } return true; });
+            flags[pad.id] = pad.pressed;
+        }
+        for (const d of this.machines.devices) {
+            const size = V(...d.spec.size), p = V(...d.spec.position);
+            const doorOccupied = Math.abs(this.player.pos.x - p.x) < size.x / 2 + .5 && Math.abs(this.player.pos.z - p.z) < size.z / 2 + .5 && this.player.pos.y < p.y + size.y / 2;
+            flags['safety:'+d.spec.id]=doorOccupied&&d.progress>.1;
+            flags['door-safety']=(flags['door-safety']??false)||(doorOccupied&&d.progress>.8);
+            flags['moving:'+d.spec.id]=d.moving;
+            for(const stop of d.spec.stops??[])flags['at:'+d.spec.id+':'+stop.label]=!d.moving&&d.position.distanceTo(V(...stop.position))<.03;
+        }
+        this.updateOptics(flags);
+        this.machines.update(dt, [], flags);
+        for (const e of this.machines.events.splice(0))
+            this.event(e.type, { id: e.id,value:e.value });
+        for (const d of this.machines.devices)
+            this.doors.get(d.spec.id)?.rigid.setNextKinematicTranslation(d.position);
+    }
+    private ridingPlatform(){return this.machines.devices.find(d=>['lift','moving-platform'].includes(d.spec.kind)&&this.player.grounded&&Math.abs(this.player.pos.y-.85-(d.previous.y+d.spec.size[1]/2))<.08&&Math.abs(this.player.pos.x-d.previous.x)<d.spec.size[0]/2+.15&&Math.abs(this.player.pos.z-d.previous.z)<d.spec.size[2]/2+.15);}
     step(dt: number, input: Input) {
         if (this.campaignResult)
             return;
         this.time += dt;
         this.physics.timestep = dt;
         this.refreshBlockedEntries();
-        const previous = this.player.pos.clone(), cratePrevious = new Map(this.crates.map(c => [c.id, c.pos.clone()]));
+        this.updateMachinery(dt);
+        const platform=this.ridingPlatform();
+        const previous = this.player.pos.clone(), cratePrevious = new Map(this.crates.map(c => [c.id, {position:c.pos.clone(),rotation:c.rotation.clone()}]));
         this.player.cooldown = Math.max(0, this.player.cooldown - dt);
         for (const c of this.crates)
             c.cooldown = Math.max(0, c.cooldown - dt);
@@ -334,35 +402,21 @@ export class CoreWorld {
         }
         this.jumpLatch = input.jump;
         this.player.vel.y = Math.max(-32, this.player.vel.y - 16 * dt);
-        this.controller.computeColliderMovement(this.characterCollider, this.player.vel.clone().multiplyScalar(dt), undefined, undefined, c => this.queryAllows(this.player, c));
+        const carry=platform?.delta??V(),platformCollider=platform?this.doors.get(platform.spec.id)?.collider.handle:undefined;
+        const conveyor=this.machines.conveyorVelocity(this.player);
+        const requested=this.player.vel.clone().add(conveyor).multiplyScalar(dt).add(carry);
+        // A supported capsule moves with its deck; gravity must not accumulate a
+        // tiny penetration while that same deck is excluded from the sweep.
+        if(platform&&this.player.vel.y<=0)requested.y=carry.y;
+        this.controller.computeColliderMovement(this.characterCollider, requested, undefined, undefined, c => c.handle!==platformCollider&&this.queryAllows(this.player, c));
         const movement = this.controller.computedMovement();
         const next = this.player.pos.clone().add(movement);
         this.character.setNextKinematicTranslation(next);
-        this.player.grounded = this.controller.computedGrounded();
+        this.player.grounded = this.controller.computedGrounded()||!!(platform&&this.player.vel.y<=0&&Math.abs(next.y-.85-(platform.position.y+platform.spec.size[1]/2))<.08&&Math.abs(next.x-platform.position.x)<platform.spec.size[0]/2+.15&&Math.abs(next.z-platform.position.z)<platform.spec.size[2]/2+.15);
         if (this.player.grounded && this.player.vel.y < 0)
             this.player.vel.y = 0;
-        this.updateHeld();
-        const flags: Record<string, boolean> = {};
-        for (const pad of this.pads) {
-            pad.pressed = false;
-            pad.crateId = undefined;
-            this.physics.intersectionsWithShape(pad.pos.clone().add(V(0, .02, 0)), Q, new RAPIER.Cuboid(.85, .03, .85), collider => { const body = this.bodyForCollider(collider.handle); if (body) {
-                pad.pressed = true;
-                if (body !== this.player)
-                    pad.crateId = body.id;
-            } return true; });
-            flags[pad.id] = pad.pressed;
-        }
-        for (const d of this.machines.devices) {
-            const size = V(...d.spec.size), p = V(...d.spec.position);
-            const doorOccupied = Math.abs(this.player.pos.x - p.x) < size.x / 2 + .5 && Math.abs(this.player.pos.z - p.z) < size.z / 2 + .5 && this.player.pos.y < p.y + size.y / 2;
-            flags['door-safety'] = doorOccupied && d.progress > .8;
-        }
-        this.machines.update(dt, [], flags);
-        for (const e of this.machines.events.splice(0))
-            this.event(e.type, { id: e.id });
-        for (const d of this.machines.devices)
-            this.doors.get(d.spec.id)?.rigid.setNextKinematicTranslation(d.position);
+        this.updateHeld(dt,next);
+        for(const cube of this.crates){if(cube.held)continue;const belt=this.machines.conveyorVelocity(cube);if(belt.lengthSq()){const velocity=V().copy(cube.rigid.linvel());velocity.x+=(belt.x-velocity.x)*Math.min(1,dt*12);velocity.z+=(belt.z-velocity.z)*Math.min(1,dt*12);cube.rigid.setLinvel(velocity,true);}}
         this.physics.step(this.eventQueue, this.hooks);
         this.eventQueue.drainCollisionEvents((a, b, started) => { if (!started)
             return; const cube = this.crates.find(c => c.collider.handle === a || c.collider.handle === b); if (!cube || cube.vel.length() < .7 || this.time - (this.contactCooldown.get(cube.id) ?? -1) < .12)
@@ -375,7 +429,7 @@ export class CoreWorld {
             const q = c.rigid.rotation();
             c.rotation.set(q.x, q.y, q.z, q.w);
             c.angularVelocity.copy(c.rigid.angvel());
-            this.cross(c, cratePrevious.get(c.id)!);
+            this.cross(c, cratePrevious.get(c.id)!.position,cratePrevious.get(c.id)!.rotation);
             c.grounded = Math.abs(c.vel.y) < .12;
             if (c.pos.y < -7.6)
                 this.resetCube(c);
@@ -395,16 +449,18 @@ export class CoreWorld {
                 (pad as any).wasPressed = pad.pressed;
             }
         }
-        if (this.player.pos.y < -5.4) {
+        if (this.player.pos.y < (this.level.recoveryY??-5.4)) {
             this.respawn();
             return;
         }
         const exit = this.blueprint.exits.find(e => this.player.grounded && Math.abs(this.player.pos.x - e.position[0]) < e.size[0] / 2 && Math.abs(this.player.pos.y - e.position[1]) < e.size[1] / 2 && Math.abs(this.player.pos.z - e.position[2]) < e.size[2] / 2);
+        if(!exit)this.lastWrongExit=undefined;
+        if(exit&&this.level.expectedExit&&exit.id!==this.level.expectedExit){if(this.lastWrongExit!==exit.id){this.lastWrongExit=exit.id;this.event('wrong-exit',{exit:exit.id,expected:this.level.expectedExit,reason:this.level.wrongExitFeedback??'This is a different destination. Check the requested door.'});}return;}
         if (exit) {
-            this.campaignResult = { goalMatched: true, physicalComplete: true, exit: exit.id, reason: '', events: [...this.events], mechanisms: [] };
+            this.campaignResult = { goalMatched: true, physicalComplete: true, exit: exit.id, reason: '', events: [...this.events], mechanisms: [...this.mechanisms] };
             this.event('complete', { chamber: this.number });
         }
     }
-    snapshot() { return { room: this.room.id, number: this.number, mission: this.room.mission, physics: 'Rapier3D 0.21 · capsule KCC + dynamic rigid cubes', player: { position: this.player.pos.toArray(), velocity: this.player.vel.toArray(), yaw: this.yaw, pitch: this.pitch, grounded: this.player.grounded, crossings: this.player.crossings }, portals: this.portals.map(p => p ? { surface: p.surfaceId, position: p.center.toArray(), normal: p.normal.toArray() } : null), crates: this.crates.map(c => ({ id: c.id, position: c.pos.toArray(), velocity: c.vel.toArray(), rotation: c.rotation.toArray(), angularVelocity: c.angularVelocity.toArray(), held: !!c.held, crossings: c.crossings })), pads: this.pads.map(p => ({ id: p.id, position: p.pos.toArray(), pressed: p.pressed, crate: p.crateId ?? null })), devices: this.machines.snapshot(), panels: this.surfaces.map(s => ({ id: s.id, position: s.center.toArray(), normal: s.normal.toArray(), width: s.width, height: s.height })), exits: this.blueprint.exits, result: this.campaignResult ?? null, held: this.heldId ?? null, holdSpaceTransform: this.holdMap.toArray(), launchUsed: this.launchUsed, respawns: this.respawns, events: this.events.slice(-16) }; }
+    snapshot() { return { room: this.room.id, number: this.number, mission: this.room.mission, physics: 'Rapier3D 0.21 · capsule KCC + dynamic rigid cubes', player: { position: this.player.pos.toArray(), velocity: this.player.vel.toArray(), yaw: this.yaw, pitch: this.pitch, grounded: this.player.grounded, crossings: this.player.crossings }, portals: this.portals.map(p => p ? { surface: p.surfaceId, position: p.center.toArray(), normal: p.normal.toArray() } : null), crates: this.crates.map(c => ({ id: c.id, position: c.pos.toArray(), velocity: c.vel.toArray(), rotation: c.rotation.toArray(), angularVelocity: c.angularVelocity.toArray(), held: !!c.held, crossings: c.crossings })), pads: this.pads.map(p => ({ id: p.id, position: p.pos.toArray(), pressed: p.pressed, crate: p.crateId ?? null })), devices: this.machines.snapshot(), panels: this.surfaces.map(s => ({ id: s.id, position: s.center.toArray(), normal: s.normal.toArray(), width: s.width, height: s.height })), exits: this.blueprint.exits, result: this.campaignResult ?? null, held: this.heldId ?? null, holdSpaceTransform: this.holdMap.toArray(), launchUsed: this.launchUsed, respawns: this.respawns, beams:Object.fromEntries(this.beams),signals:{...this.machines.flags},events: this.events.slice(-16) }; }
     dispose() { this.eventQueue.free(); this.physics.free(); }
 }

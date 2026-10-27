@@ -1,0 +1,9 @@
+{"action":"click","selector":"[data-action=continue]"}
+{"action":"press","code":"Escape"}
+{"action":"click","selector":"[data-action=settings]"}
+{"action":"click","selector":"[data-action=sound]"}
+{"action":"wait","ms":150}
+{"action":"click","selector":"[data-action=back]"}
+{"action":"assert","path":"mode","equals":"pause"}
+{"action":"paused-input"}
+{"action":"close"}

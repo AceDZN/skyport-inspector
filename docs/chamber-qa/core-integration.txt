@@ -1,29 +1,32 @@
-✔ new chamber starts grounded, cube rests in raised alcove and ordinary forward movement cannot cross the divider (320.871791ms)
-✔ aimed portal placement preserves a valid offset and rejects shots whose full aperture does not fit (3.83625ms)
-✔ actual Rapier movement traverses both directions with conserved crossing speed and no repeat bounce (91.339708ms)
-✔ a portal leaves the adjacent part of its host wall solid to character movement (44.889166ms)
-✔ the button responds to standing on it, releases after stepping away, and physically drives the door (53.512167ms)
-✔ a cube hovering above the button does not count as physical pressure (6.45575ms)
-✔ cube pressure opens the door and removing it does not let a closing door embed the player (49.268625ms)
-✔ an opaque divider prevents grabbing the cube even within nominal reach (9.846125ms)
-✔ a low-speed entry at the well bottom cannot reach the elevated gallery by a hidden launch boost (18.188042ms)
-✔ ordinary walk into the drop well produces a real momentum fling and safe gallery landing; forward held=false (32.327125ms)
-✔ ordinary walk into the drop well produces a real momentum fling and safe gallery landing; forward held=true (21.487125ms)
-✔ ordinary jump from the nearest approach cannot reach the high gallery (18.8295ms)
-✔ falling into the inaccessible lower catch area promptly restores the safe approach (16.898667ms)
-✔ held cube crosses independently while player stays in front, and can be pulled back through the same pair (35.806958ms)
-✔ loose rigid cube traverses with transformed orientation and angular velocity, without a bounce (36.571ms)
-✔ a portal leaves the adjacent host wall solid to a dynamic cube (42.504792ms)
-✔ blocked loose-cube exit rolls back the actual rigid body and recovers after obstruction removal (70.2955ms)
-✔ blocked character exit rolls back Rapier and recovers without replacing portals (74.434833ms)
-✔ blocked held-cube exit preserves both physical bodies and recovers as a connected carry (90.125541ms)
-✔ exit floor clearance uses the cube actual rotated support, not its unrotated half-height (11.155333ms)
-✔ the highest valid wall exit still cannot turn an idle low-speed floor entry into a gallery bypass (16.956875ms)
-ℹ tests 21
+✔ new chamber starts grounded, cube rests in raised alcove and ordinary forward movement cannot cross the divider (307.376625ms)
+✔ aimed portal placement preserves a valid offset and rejects shots whose full aperture does not fit (3.096292ms)
+✔ actual Rapier movement traverses both directions with conserved crossing speed and no repeat bounce (65.21325ms)
+✔ a portal leaves the adjacent part of its host wall solid to character movement (33.865334ms)
+✔ the button responds to standing on it, releases after stepping away, and physically drives the door (36.594667ms)
+✔ a cube hovering above the button does not count as physical pressure (10.023084ms)
+✔ cube pressure opens the door and removing it does not let a closing door embed the player (51.924667ms)
+✔ an opaque divider prevents grabbing the cube even within nominal reach (2.576125ms)
+✔ a low-speed entry at the well bottom cannot reach the elevated gallery by a hidden launch boost (9.565417ms)
+✔ ordinary walk into the drop well produces a real momentum fling and safe gallery landing; forward held=false (24.66125ms)
+✔ ordinary walk into the drop well produces a real momentum fling and safe gallery landing; forward held=true (20.787417ms)
+✔ ordinary jump from the nearest approach cannot reach the high gallery (18.353625ms)
+✔ falling into the inaccessible lower catch area promptly restores the safe approach (13.557125ms)
+✔ held cube crosses independently while player stays in front, and can be pulled back through the same pair (25.759084ms)
+✔ loose rigid cube traverses with transformed orientation and angular velocity, without a bounce (13.814875ms)
+✔ a portal leaves the adjacent host wall solid to a dynamic cube (28.900792ms)
+✔ blocked loose-cube exit rolls back the actual rigid body and recovers after obstruction removal (44.0205ms)
+✔ blocked character exit rolls back Rapier and recovers without replacing portals (57.560208ms)
+✔ blocked held-cube exit preserves both physical bodies and recovers as a connected carry (42.006792ms)
+✔ exit floor clearance uses the cube actual rotated support, not its unrotated half-height (8.505542ms)
+✔ the highest valid wall exit still cannot turn an idle low-speed floor entry into a gallery bypass (10.989291ms)
+✔ fling remains a real conserved crossing and reachable landing at 30 physics steps per second (7.383458ms)
+✔ fling remains a real conserved crossing and reachable landing at 60 physics steps per second (8.680084ms)
+✔ fling remains a real conserved crossing and reachable landing at 120 physics steps per second (20.468708ms)
+ℹ tests 24
 ℹ suites 0
-ℹ pass 21
+ℹ pass 24
 ℹ fail 0
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 3266.054834
+ℹ duration_ms 2754.983833

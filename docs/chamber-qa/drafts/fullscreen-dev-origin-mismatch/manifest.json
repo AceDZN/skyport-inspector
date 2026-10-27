@@ -1,0 +1,1204 @@
+{
+  "status": "Two-chamber QA record; individual assertions and completion states are authoritative, no campaign completion claim",
+  "scope": "Ordinary mouse/keyboard UI inputs; render_game_to_text and advanceTime only; no save/body/win injection",
+  "importedEarnedStorage": "docs/chamber-qa/final-run/earned-game-only-storage.json",
+  "rawVideoDirectory": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/work/chamber-qa-video/1793130026934/",
+  "versions": [
+    {
+      "at": "2026-10-27T19:40:30.941Z",
+      "url": "http://localhost:5261/",
+      "scripts": [
+        {
+          "url": "http://localhost:5261/@vite/client",
+          "sha256": "8f93ca22f44435cb5e4d4482a506bc77abe1a5c35bfbcf58420f57cd6a3970f0"
+        },
+        {
+          "url": "http://localhost:5261/src/core/main.ts?t=1793129695033",
+          "sha256": "c1c13fef14984d5c03ae26bbbd5fd303b62d1f4c5d6b6fe4c7c50340f0884ddb"
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "input": {
+        "action": "click",
+        "selector": "[data-action=continue]"
+      },
+      "before": {
+        "title": "Rift Runner",
+        "version": "rapier-core-review-3",
+        "mode": "menu",
+        "level": 1,
+        "world": {
+          "room": "chamber-1",
+          "number": 1,
+          "mission": "Bring the cube back from the alcove. Leave it on the button to open the exit.",
+          "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+          "player": {
+            "position": [
+              0,
+              0.86,
+              10
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "yaw": 0,
+            "pitch": 0,
+            "grounded": false,
+            "crossings": 0
+          },
+          "portals": [
+            null,
+            null
+          ],
+          "crates": [
+            {
+              "id": "weighted-cube",
+              "position": [
+                3,
+                3.35,
+                -8
+              ],
+              "velocity": [
+                0,
+                0,
+                0
+              ],
+              "rotation": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "angularVelocity": [
+                0,
+                0,
+                0
+              ],
+              "held": false,
+              "crossings": 0
+            }
+          ],
+          "pads": [
+            {
+              "id": "exit-button",
+              "position": [
+                2,
+                0.14,
+                6
+              ],
+              "pressed": false,
+              "crate": null
+            }
+          ],
+          "devices": [
+            {
+              "id": "exit-door",
+              "kind": "shutter",
+              "label": "EXIT",
+              "position": [
+                -8.12,
+                1.5,
+                11
+              ],
+              "size": [
+                0.3,
+                3,
+                2.6
+              ],
+              "active": false,
+              "progress": 0,
+              "choice": 0,
+              "angle": 0,
+              "powered": null,
+              "blocked": false
+            }
+          ],
+          "panels": [
+            {
+              "id": "near-wall",
+              "position": [
+                -7.985,
+                3.5,
+                -1.15
+              ],
+              "normal": [
+                1,
+                0,
+                0
+              ],
+              "width": 21.7,
+              "height": 7
+            },
+            {
+              "id": "far-wall",
+              "position": [
+                0,
+                3.5,
+                -11.985
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ],
+              "width": 16,
+              "height": 7
+            },
+            {
+              "id": "east-wall",
+              "position": [
+                7.985,
+                3.5,
+                1
+              ],
+              "normal": [
+                -1,
+                0,
+                0
+              ],
+              "width": 26,
+              "height": 7
+            },
+            {
+              "id": "south-wall",
+              "position": [
+                0,
+                3.5,
+                13.985
+              ],
+              "normal": [
+                0,
+                0,
+                -1
+              ],
+              "width": 16,
+              "height": 7
+            }
+          ],
+          "exits": [
+            {
+              "id": "next-chamber",
+              "label": "",
+              "position": [
+                -10.7,
+                0.85,
+                11
+              ],
+              "size": [
+                1.8,
+                1.8,
+                2
+              ]
+            }
+          ],
+          "result": null,
+          "held": null,
+          "holdSpaceTransform": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "launchUsed": false,
+          "respawns": 0,
+          "events": []
+        },
+        "progress": {
+          "completed": [],
+          "resume": 1
+        },
+        "pointerLocked": false,
+        "controls": {
+          "unlocked": false,
+          "sensitivity": 0.0022
+        },
+        "audio": {
+          "context": "not-started",
+          "paused": false,
+          "loopCount": 0,
+          "activeSfx": 0,
+          "cuesPlayed": 0,
+          "energy": false,
+          "chapter": 1,
+          "intensity": 0,
+          "environment": "chamber",
+          "airSpeed": 0,
+          "airActive": false,
+          "recentCues": [],
+          "paired": false,
+          "bridge": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 0,
+          "loadErrors": [],
+          "timeline": 0
+        }
+      }
+    },
+    {
+      "input": "{\"action\":\"click\",\"selector\":\"[data-action=continue]\"}",
+      "error": "TimeoutError: locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-action=continue]')\u001b[22m\n",
+      "state": {
+        "title": "Rift Runner",
+        "version": "rapier-core-review-3",
+        "mode": "menu",
+        "level": 1,
+        "world": {
+          "room": "chamber-1",
+          "number": 1,
+          "mission": "Bring the cube back from the alcove. Leave it on the button to open the exit.",
+          "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+          "player": {
+            "position": [
+              0,
+              0.86,
+              10
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "yaw": 0,
+            "pitch": 0,
+            "grounded": false,
+            "crossings": 0
+          },
+          "portals": [
+            null,
+            null
+          ],
+          "crates": [
+            {
+              "id": "weighted-cube",
+              "position": [
+                3,
+                3.35,
+                -8
+              ],
+              "velocity": [
+                0,
+                0,
+                0
+              ],
+              "rotation": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "angularVelocity": [
+                0,
+                0,
+                0
+              ],
+              "held": false,
+              "crossings": 0
+            }
+          ],
+          "pads": [
+            {
+              "id": "exit-button",
+              "position": [
+                2,
+                0.14,
+                6
+              ],
+              "pressed": false,
+              "crate": null
+            }
+          ],
+          "devices": [
+            {
+              "id": "exit-door",
+              "kind": "shutter",
+              "label": "EXIT",
+              "position": [
+                -8.12,
+                1.5,
+                11
+              ],
+              "size": [
+                0.3,
+                3,
+                2.6
+              ],
+              "active": false,
+              "progress": 0,
+              "choice": 0,
+              "angle": 0,
+              "powered": null,
+              "blocked": false
+            }
+          ],
+          "panels": [
+            {
+              "id": "near-wall",
+              "position": [
+                -7.985,
+                3.5,
+                -1.15
+              ],
+              "normal": [
+                1,
+                0,
+                0
+              ],
+              "width": 21.7,
+              "height": 7
+            },
+            {
+              "id": "far-wall",
+              "position": [
+                0,
+                3.5,
+                -11.985
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ],
+              "width": 16,
+              "height": 7
+            },
+            {
+              "id": "east-wall",
+              "position": [
+                7.985,
+                3.5,
+                1
+              ],
+              "normal": [
+                -1,
+                0,
+                0
+              ],
+              "width": 26,
+              "height": 7
+            },
+            {
+              "id": "south-wall",
+              "position": [
+                0,
+                3.5,
+                13.985
+              ],
+              "normal": [
+                0,
+                0,
+                -1
+              ],
+              "width": 16,
+              "height": 7
+            }
+          ],
+          "exits": [
+            {
+              "id": "next-chamber",
+              "label": "",
+              "position": [
+                -10.7,
+                0.85,
+                11
+              ],
+              "size": [
+                1.8,
+                1.8,
+                2
+              ]
+            }
+          ],
+          "result": null,
+          "held": null,
+          "holdSpaceTransform": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "launchUsed": false,
+          "respawns": 0,
+          "events": []
+        },
+        "progress": {
+          "completed": [],
+          "resume": 1
+        },
+        "pointerLocked": false,
+        "controls": {
+          "unlocked": false,
+          "sensitivity": 0.0022
+        },
+        "audio": {
+          "context": "not-started",
+          "paused": false,
+          "loopCount": 0,
+          "activeSfx": 0,
+          "cuesPlayed": 0,
+          "energy": false,
+          "chapter": 1,
+          "intensity": 0,
+          "environment": "chamber",
+          "airSpeed": 0,
+          "airActive": false,
+          "recentCues": [],
+          "paired": false,
+          "bridge": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 0,
+          "loadErrors": [],
+          "timeline": 0
+        }
+      }
+    }
+  ],
+  "checkpoints": [
+    {
+      "label": "fresh-entry",
+      "capture": "001-fresh-entry.png",
+      "state": {
+        "title": "Rift Runner",
+        "version": "rapier-core-review-3",
+        "mode": "menu",
+        "level": 1,
+        "world": {
+          "room": "chamber-1",
+          "number": 1,
+          "mission": "Bring the cube back from the alcove. Leave it on the button to open the exit.",
+          "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+          "player": {
+            "position": [
+              0,
+              0.86,
+              10
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "yaw": 0,
+            "pitch": 0,
+            "grounded": false,
+            "crossings": 0
+          },
+          "portals": [
+            null,
+            null
+          ],
+          "crates": [
+            {
+              "id": "weighted-cube",
+              "position": [
+                3,
+                3.35,
+                -8
+              ],
+              "velocity": [
+                0,
+                0,
+                0
+              ],
+              "rotation": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "angularVelocity": [
+                0,
+                0,
+                0
+              ],
+              "held": false,
+              "crossings": 0
+            }
+          ],
+          "pads": [
+            {
+              "id": "exit-button",
+              "position": [
+                2,
+                0.14,
+                6
+              ],
+              "pressed": false,
+              "crate": null
+            }
+          ],
+          "devices": [
+            {
+              "id": "exit-door",
+              "kind": "shutter",
+              "label": "EXIT",
+              "position": [
+                -8.12,
+                1.5,
+                11
+              ],
+              "size": [
+                0.3,
+                3,
+                2.6
+              ],
+              "active": false,
+              "progress": 0,
+              "choice": 0,
+              "angle": 0,
+              "powered": null,
+              "blocked": false
+            }
+          ],
+          "panels": [
+            {
+              "id": "near-wall",
+              "position": [
+                -7.985,
+                3.5,
+                -1.15
+              ],
+              "normal": [
+                1,
+                0,
+                0
+              ],
+              "width": 21.7,
+              "height": 7
+            },
+            {
+              "id": "far-wall",
+              "position": [
+                0,
+                3.5,
+                -11.985
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ],
+              "width": 16,
+              "height": 7
+            },
+            {
+              "id": "east-wall",
+              "position": [
+                7.985,
+                3.5,
+                1
+              ],
+              "normal": [
+                -1,
+                0,
+                0
+              ],
+              "width": 26,
+              "height": 7
+            },
+            {
+              "id": "south-wall",
+              "position": [
+                0,
+                3.5,
+                13.985
+              ],
+              "normal": [
+                0,
+                0,
+                -1
+              ],
+              "width": 16,
+              "height": 7
+            }
+          ],
+          "exits": [
+            {
+              "id": "next-chamber",
+              "label": "",
+              "position": [
+                -10.7,
+                0.85,
+                11
+              ],
+              "size": [
+                1.8,
+                1.8,
+                2
+              ]
+            }
+          ],
+          "result": null,
+          "held": null,
+          "holdSpaceTransform": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "launchUsed": false,
+          "respawns": 0,
+          "events": []
+        },
+        "progress": {
+          "completed": [],
+          "resume": 1
+        },
+        "pointerLocked": false,
+        "controls": {
+          "unlocked": false,
+          "sensitivity": 0.0022
+        },
+        "audio": {
+          "context": "not-started",
+          "paused": false,
+          "loopCount": 0,
+          "activeSfx": 0,
+          "cuesPlayed": 0,
+          "energy": false,
+          "chapter": 1,
+          "intensity": 0,
+          "environment": "chamber",
+          "airSpeed": 0,
+          "airActive": false,
+          "recentCues": [],
+          "paired": false,
+          "bridge": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 0,
+          "loadErrors": [],
+          "timeline": 0
+        }
+      }
+    },
+    {
+      "label": "blocked",
+      "capture": "002-blocked.png",
+      "state": {
+        "title": "Rift Runner",
+        "version": "rapier-core-review-3",
+        "mode": "menu",
+        "level": 1,
+        "world": {
+          "room": "chamber-1",
+          "number": 1,
+          "mission": "Bring the cube back from the alcove. Leave it on the button to open the exit.",
+          "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+          "player": {
+            "position": [
+              0,
+              0.86,
+              10
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "yaw": 0,
+            "pitch": 0,
+            "grounded": false,
+            "crossings": 0
+          },
+          "portals": [
+            null,
+            null
+          ],
+          "crates": [
+            {
+              "id": "weighted-cube",
+              "position": [
+                3,
+                3.35,
+                -8
+              ],
+              "velocity": [
+                0,
+                0,
+                0
+              ],
+              "rotation": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "angularVelocity": [
+                0,
+                0,
+                0
+              ],
+              "held": false,
+              "crossings": 0
+            }
+          ],
+          "pads": [
+            {
+              "id": "exit-button",
+              "position": [
+                2,
+                0.14,
+                6
+              ],
+              "pressed": false,
+              "crate": null
+            }
+          ],
+          "devices": [
+            {
+              "id": "exit-door",
+              "kind": "shutter",
+              "label": "EXIT",
+              "position": [
+                -8.12,
+                1.5,
+                11
+              ],
+              "size": [
+                0.3,
+                3,
+                2.6
+              ],
+              "active": false,
+              "progress": 0,
+              "choice": 0,
+              "angle": 0,
+              "powered": null,
+              "blocked": false
+            }
+          ],
+          "panels": [
+            {
+              "id": "near-wall",
+              "position": [
+                -7.985,
+                3.5,
+                -1.15
+              ],
+              "normal": [
+                1,
+                0,
+                0
+              ],
+              "width": 21.7,
+              "height": 7
+            },
+            {
+              "id": "far-wall",
+              "position": [
+                0,
+                3.5,
+                -11.985
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ],
+              "width": 16,
+              "height": 7
+            },
+            {
+              "id": "east-wall",
+              "position": [
+                7.985,
+                3.5,
+                1
+              ],
+              "normal": [
+                -1,
+                0,
+                0
+              ],
+              "width": 26,
+              "height": 7
+            },
+            {
+              "id": "south-wall",
+              "position": [
+                0,
+                3.5,
+                13.985
+              ],
+              "normal": [
+                0,
+                0,
+                -1
+              ],
+              "width": 16,
+              "height": 7
+            }
+          ],
+          "exits": [
+            {
+              "id": "next-chamber",
+              "label": "",
+              "position": [
+                -10.7,
+                0.85,
+                11
+              ],
+              "size": [
+                1.8,
+                1.8,
+                2
+              ]
+            }
+          ],
+          "result": null,
+          "held": null,
+          "holdSpaceTransform": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "launchUsed": false,
+          "respawns": 0,
+          "events": []
+        },
+        "progress": {
+          "completed": [],
+          "resume": 1
+        },
+        "pointerLocked": false,
+        "controls": {
+          "unlocked": false,
+          "sensitivity": 0.0022
+        },
+        "audio": {
+          "context": "not-started",
+          "paused": false,
+          "loopCount": 0,
+          "activeSfx": 0,
+          "cuesPlayed": 0,
+          "energy": false,
+          "chapter": 1,
+          "intensity": 0,
+          "environment": "chamber",
+          "airSpeed": 0,
+          "airActive": false,
+          "recentCues": [],
+          "paired": false,
+          "bridge": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 0,
+          "loadErrors": [],
+          "timeline": 0
+        }
+      }
+    },
+    {
+      "fatal": "TimeoutError: locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-action=continue]')\u001b[22m\n",
+      "state": {
+        "title": "Rift Runner",
+        "version": "rapier-core-review-3",
+        "mode": "menu",
+        "level": 1,
+        "world": {
+          "room": "chamber-1",
+          "number": 1,
+          "mission": "Bring the cube back from the alcove. Leave it on the button to open the exit.",
+          "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+          "player": {
+            "position": [
+              0,
+              0.86,
+              10
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "yaw": 0,
+            "pitch": 0,
+            "grounded": false,
+            "crossings": 0
+          },
+          "portals": [
+            null,
+            null
+          ],
+          "crates": [
+            {
+              "id": "weighted-cube",
+              "position": [
+                3,
+                3.35,
+                -8
+              ],
+              "velocity": [
+                0,
+                0,
+                0
+              ],
+              "rotation": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "angularVelocity": [
+                0,
+                0,
+                0
+              ],
+              "held": false,
+              "crossings": 0
+            }
+          ],
+          "pads": [
+            {
+              "id": "exit-button",
+              "position": [
+                2,
+                0.14,
+                6
+              ],
+              "pressed": false,
+              "crate": null
+            }
+          ],
+          "devices": [
+            {
+              "id": "exit-door",
+              "kind": "shutter",
+              "label": "EXIT",
+              "position": [
+                -8.12,
+                1.5,
+                11
+              ],
+              "size": [
+                0.3,
+                3,
+                2.6
+              ],
+              "active": false,
+              "progress": 0,
+              "choice": 0,
+              "angle": 0,
+              "powered": null,
+              "blocked": false
+            }
+          ],
+          "panels": [
+            {
+              "id": "near-wall",
+              "position": [
+                -7.985,
+                3.5,
+                -1.15
+              ],
+              "normal": [
+                1,
+                0,
+                0
+              ],
+              "width": 21.7,
+              "height": 7
+            },
+            {
+              "id": "far-wall",
+              "position": [
+                0,
+                3.5,
+                -11.985
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ],
+              "width": 16,
+              "height": 7
+            },
+            {
+              "id": "east-wall",
+              "position": [
+                7.985,
+                3.5,
+                1
+              ],
+              "normal": [
+                -1,
+                0,
+                0
+              ],
+              "width": 26,
+              "height": 7
+            },
+            {
+              "id": "south-wall",
+              "position": [
+                0,
+                3.5,
+                13.985
+              ],
+              "normal": [
+                0,
+                0,
+                -1
+              ],
+              "width": 16,
+              "height": 7
+            }
+          ],
+          "exits": [
+            {
+              "id": "next-chamber",
+              "label": "",
+              "position": [
+                -10.7,
+                0.85,
+                11
+              ],
+              "size": [
+                1.8,
+                1.8,
+                2
+              ]
+            }
+          ],
+          "result": null,
+          "held": null,
+          "holdSpaceTransform": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "launchUsed": false,
+          "respawns": 0,
+          "events": []
+        },
+        "progress": {
+          "completed": [],
+          "resume": 1
+        },
+        "pointerLocked": false,
+        "controls": {
+          "unlocked": false,
+          "sensitivity": 0.0022
+        },
+        "audio": {
+          "context": "not-started",
+          "paused": false,
+          "loopCount": 0,
+          "activeSfx": 0,
+          "cuesPlayed": 0,
+          "energy": false,
+          "chapter": 1,
+          "intensity": 0,
+          "environment": "chamber",
+          "airSpeed": 0,
+          "airActive": false,
+          "recentCues": [],
+          "paired": false,
+          "bridge": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 0,
+          "loadErrors": [],
+          "timeline": 0
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "consoleErrors": []
+}

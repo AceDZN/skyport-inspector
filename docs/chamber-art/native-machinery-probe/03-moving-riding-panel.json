@@ -1,0 +1,225 @@
+{
+  "status": "Art harness only, no completion evidence",
+  "world": {
+    "room": "chamber-98",
+    "number": 98,
+    "mission": "UNPLAYED art fixture",
+    "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+    "player": {
+      "position": [
+        -0.0005849569570273161,
+        2.898109197616577,
+        1.8407254219055176
+      ],
+      "velocity": [
+        0,
+        0,
+        -6.916290495128507e-31
+      ],
+      "yaw": -1.176781789122872,
+      "pitch": -0.4714410511563093,
+      "grounded": true,
+      "crossings": 0
+    },
+    "portals": [
+      null,
+      null
+    ],
+    "crates": [
+      {
+        "id": "sample-cube",
+        "position": [
+          -0.6000582575798035,
+          2.629621982574463,
+          -0.000058586159866536036
+        ],
+        "velocity": [
+          -0.000041523999243509024,
+          1.2007088661193848,
+          -0.000015679510397603735
+        ],
+        "rotation": [
+          -0.0000029970799459988484,
+          -4.057733593576529e-10,
+          0.0000031688393846707186,
+          1
+        ],
+        "angularVelocity": [
+          -0.000028517473765532486,
+          1.8518715449999945e-9,
+          0.00007552273018518463
+        ],
+        "held": false,
+        "crossings": 0
+      }
+    ],
+    "pads": [],
+    "devices": [
+      {
+        "id": "freight",
+        "kind": "lift",
+        "label": "FREIGHT",
+        "position": [
+          0,
+          1.9300800000000056,
+          0
+        ],
+        "size": [
+          4,
+          0.3,
+          4
+        ],
+        "active": true,
+        "progress": 0.4952571428571441,
+        "choice": "upper",
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "power",
+        "kind": "switch",
+        "label": "POWER",
+        "position": [
+          -4,
+          0.7,
+          5
+        ],
+        "size": [
+          0.6,
+          1,
+          0.35
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      }
+    ],
+    "panels": [
+      {
+        "id": "west-ceramic",
+        "position": [
+          -7.985,
+          4.5,
+          0
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ],
+        "width": 24,
+        "height": 9
+      },
+      {
+        "id": "north-ceramic",
+        "position": [
+          0,
+          6.6,
+          -11.985
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "width": 16,
+        "height": 4.8
+      }
+    ],
+    "exits": [],
+    "result": null,
+    "held": null,
+    "holdSpaceTransform": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "launchUsed": false,
+    "respawns": 0,
+    "beams": {},
+    "signals": {
+      "safety:freight": false,
+      "door-safety": false,
+      "moving:freight": true,
+      "at:freight:lower": false,
+      "at:freight:upper": false,
+      "safety:power": false,
+      "moving:power": false
+    },
+    "events": [
+      {
+        "type": "land",
+        "time": 8
+      },
+      {
+        "type": "footstep",
+        "time": 735
+      },
+      {
+        "type": "footstep",
+        "time": 1160
+      },
+      {
+        "type": "footstep",
+        "time": 1585
+      },
+      {
+        "type": "lift-motor",
+        "time": 3737,
+        "id": "freight",
+        "value": "upper"
+      },
+      {
+        "type": "lift-motor",
+        "time": 3737,
+        "id": "freight"
+      },
+      {
+        "type": "lift-motor",
+        "time": 5337,
+        "id": "freight"
+      },
+      {
+        "type": "lift-motor",
+        "time": 5353,
+        "id": "freight"
+      },
+      {
+        "type": "lift-motor",
+        "time": 5370,
+        "id": "freight"
+      },
+      {
+        "type": "lift-motor",
+        "time": 5403,
+        "id": "freight"
+      },
+      {
+        "type": "lift-motor",
+        "time": 5437,
+        "id": "freight"
+      }
+    ]
+  },
+  "renderer": {
+    "calls": 47,
+    "triangles": 12794
+  }
+}

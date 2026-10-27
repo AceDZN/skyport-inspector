@@ -1,0 +1,46 @@
+{"action": "click", "selector": "#start-btn"}
+{"action": "aim", "target": [-7.985, 1.55, 6]}
+{"action": "place", "index": 0}
+{"action": "assert", "path": "world.portals.0.surface", "equals": "near-wall"}
+{"action": "aim", "target": [5, 4.35, -11.985]}
+{"action": "place", "index": 1}
+{"action": "assert", "path": "world.portals.1.surface", "equals": "far-wall"}
+{"action": "capture", "name": "linked-portal-destination"}
+{"action": "walk", "x": -6.8, "z": 6}
+{"action": "aim", "target": [-8.5, 1.55, 6]}
+{"action": "capture", "name": "live-destination-at-aperture"}
+{"action": "key", "code": "KeyW", "ms": 400}
+{"action": "assert", "path": "world.player.crossings", "equals": 1}
+{"action": "walk", "x": 3, "z": -9.8}
+{"action": "aim", "target": [3, 3.35, -8]}
+{"action": "press", "code": "KeyE"}
+{"action": "assert", "path": "world.held", "equals": "weighted-cube"}
+{"action": "capture", "name": "raised-alcove-cube-retrieved"}
+{"action": "press", "code": "KeyE"}
+{"action": "wait", "ms": 900}
+{"action": "assert", "path": "world.held", "equals": null}
+{"action": "assert", "path": "world.pads.0.pressed", "equals": false}
+{"action": "assert", "path": "world.result", "equals": null}
+{"action": "capture", "name": "cube-dropped-wrong-side-no-exit"}
+{"action": "aim", "target": [3, 3.35, -8]}
+{"action": "press", "code": "KeyE"}
+{"action": "assert", "path": "world.held", "equals": "weighted-cube"}
+{"action": "aim", "target": [5, 4.35, -11.985]}
+{"action": "walk", "x": 5, "z": -10}
+{"action": "aim", "target": [5, 4.35, -12.5]}
+{"action": "capture", "name": "partial-held-cube-at-rift"}
+{"action": "key", "code": "KeyW", "ms": 750}
+{"action": "assert", "path": "world.player.crossings", "equals": 2}
+{"action": "assert", "path": "world.crates.0.crossings", "equals": 1}
+{"action": "capture", "name": "carried-cube-through-live-portal"}
+{"action": "walk", "x": 0.2, "z": 6}
+{"action": "aim", "target": [2, 1.2, 6]}
+{"action": "press", "code": "KeyE"}
+{"action": "wait", "ms": 1000}
+{"action": "assert", "path": "world.pads.0.crate", "equals": "weighted-cube"}
+{"action": "capture", "name": "weighted-button-and-open-door"}
+{"action": "walk", "x": -6.6, "z": 10.8}
+{"action": "walk", "x": -10.7, "z": 11}
+{"action": "assert", "path": "world.result.goalMatched", "equals": true}
+{"action": "capture", "name": "chamber-one-physically-complete"}
+{"action": "close"}

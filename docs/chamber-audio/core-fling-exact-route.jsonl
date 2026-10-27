@@ -1,0 +1,21 @@
+{"action": "click", "selector": "[data-action=second]"}
+{"action": "aim", "target": [0, 6, -11.985]}
+{"action": "place", "index": 1}
+{"action": "assert", "path": "world.portals.1.surface", "equals": "high-wall"}
+{"action": "walk", "x": 0, "z": 9.9}
+{"action": "aim", "target": [0, -2.975, 6]}
+{"action": "place", "index": 0}
+{"action": "assert", "path": "world.portals.0.surface", "equals": "drop-floor"}
+{"action": "capture", "name": "floor-and-high-wall-linked"}
+{"action": "aim", "target": [0, -100, 6]}
+{"action": "key", "code": "KeyW", "ms": 1300}
+{"action": "trajectory", "samples": 12, "ms": 33, "captureEvery": 4}
+{"action": "assert", "path": "world.player.crossings", "equals": 1}
+{"action": "capture", "name": "momentum-gallery-landing"}
+{"action": "walk", "x": 5, "z": -5.5}
+{"action": "walk", "x": 5, "z": -9.4}
+{"action": "assert", "path": "world.result.goalMatched", "equals": true}
+{"action": "assert", "path": "progress.completed.0", "equals": 1}
+{"action": "assert", "path": "progress.completed.1", "equals": 2}
+{"action": "capture", "name": "two-chambers-earned-complete"}
+{"action": "close"}

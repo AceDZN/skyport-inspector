@@ -1,0 +1,45 @@
+✔ wall aperture admits centered capsule and blocks its 0.08m horizontal frame overhang (774.308875ms)
+✔ wall aperture blocks a ground capsule below a raised portal opening (94.229708ms)
+✔ wall aperture uses full cube support at yaw0 (106.497125ms)
+✔ wall aperture uses full cube support at yaw0.7853981633974483 (127.19825ms)
+✔ floor aperture uses full horizontal support for player (73.482458ms)
+✔ floor aperture uses full horizontal support for cube (109.90225ms)
+✔ native Rapier kinematic velocity follows current displacement/current dt under tiny final substeps (267.909959ms)
+✔ ordinary held walking does not amplify cargo velocity on short remainder steps; regrab=false (327.84125ms)
+✔ ordinary held walking does not amplify cargo velocity on short remainder steps; regrab=true (193.731416ms)
+✔ new chamber starts grounded, cube rests in raised alcove and ordinary forward movement cannot cross the divider (773.563792ms)
+✔ aimed portal placement preserves a valid offset and rejects shots whose full aperture does not fit (4.513458ms)
+✔ actual Rapier movement traverses both directions with conserved crossing speed and no repeat bounce (245.252958ms)
+✔ a portal leaves the adjacent part of its host wall solid to character movement (85.991125ms)
+✔ the button responds to standing on it, releases after stepping away, and physically drives the door (99.708708ms)
+✔ a cube hovering above the button does not count as physical pressure (9.602208ms)
+✔ cube pressure opens the door and removing it does not let a closing door embed the player (141.895792ms)
+✔ an opaque divider prevents grabbing the cube even within nominal reach (20.276292ms)
+✔ a low-speed entry at the well bottom cannot reach the elevated gallery by a hidden launch boost (56.78ms)
+✔ ordinary walk into the drop well produces a real momentum fling and safe gallery landing; forward held=false (47.639958ms)
+✔ ordinary walk into the drop well produces a real momentum fling and safe gallery landing; forward held=true (43.860334ms)
+✔ ordinary jump from the nearest approach cannot reach the high gallery (28.525625ms)
+✔ falling into the inaccessible lower catch area promptly restores the safe approach (30.25175ms)
+✔ held cube crosses independently while player stays in front, and can be pulled back through the same pair (47.2165ms)
+✔ loose rigid cube traverses with transformed orientation and angular velocity, without a bounce (25.336083ms)
+✔ a portal leaves the adjacent host wall solid to a dynamic cube (67.427333ms)
+✔ blocked loose-cube exit rolls back the actual rigid body and recovers after obstruction removal (73.102208ms)
+✔ blocked character exit rolls back Rapier and recovers without replacing portals (80.449625ms)
+✔ blocked held-cube exit preserves both physical bodies and recovers as a connected carry (77.306083ms)
+✔ exit floor clearance uses the cube actual rotated support, not its unrotated half-height (9.243084ms)
+✔ the highest valid wall exit still cannot turn an idle low-speed floor entry into a gallery bypass (19.994375ms)
+✔ fling remains a real conserved crossing and reachable landing at 30 physics steps per second (10.8065ms)
+✔ fling remains a real conserved crossing and reachable landing at 60 physics steps per second (9.623666ms)
+✔ fling remains a real conserved crossing and reachable landing at 120 physics steps per second (25.1115ms)
+✔ window wording contrast keeps identical physical fixtures and changes only the requested real exit (277.403125ms)
+✔ front and behind cube placements drive genuinely different physical doors and recover normally (385.223792ms)
+✔ base south destination gives one recoverable error, then the physically powered north destination completes (343.245083ms)
+✔ contrast counts the same front/south physical answer that the base wording rejected (82.197167ms)
+ℹ tests 37
+ℹ suites 0
+ℹ pass 37
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4342.816166

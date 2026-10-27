@@ -1,0 +1,54 @@
+{
+  "source": "docs/chamber-qa/core-gameplay.mp4",
+  "sha256": "19e0c0c7aea2818b6360b178b953cdac2cdac5f07ad39b33774774d533f7e293",
+  "method": "Every video frame decoded at160x100 for a near-white transient scan; nearest checkpoint matches and selected surrounding frames reviewed visually. This is not a claim of viewing every frame at full resolution.",
+  "fps": 25,
+  "frames": 1046,
+  "duration": 41.84,
+  "maximumNearWhiteFraction": {
+    "frame": 1,
+    "seconds": 0.04,
+    "mean": 255.0,
+    "nearWhiteFraction": 1.0
+  },
+  "framesOver90PercentNearWhite": [
+    {
+      "frame": 1,
+      "seconds": 0.04,
+      "mean": 255.0,
+      "nearWhiteFraction": 1.0
+    }
+  ],
+  "checkpointMatches": [
+    {
+      "capture": "003-live-destination-at-aperture",
+      "videoFrame": 266,
+      "videoSeconds": 10.64,
+      "meanAbsoluteGrayDifference": 0.468125
+    },
+    {
+      "capture": "005-partial-held-cube-at-rift",
+      "videoFrame": 408,
+      "videoSeconds": 16.32,
+      "meanAbsoluteGrayDifference": 0.36
+    },
+    {
+      "capture": "006-carried-cube-through-live-portal",
+      "videoFrame": 435,
+      "videoSeconds": 17.4,
+      "meanAbsoluteGrayDifference": 0.5075
+    },
+    {
+      "capture": "007-weighted-button-and-open-door",
+      "videoFrame": 558,
+      "videoSeconds": 22.32,
+      "meanAbsoluteGrayDifference": 0.345625
+    },
+    {
+      "capture": "013-momentum-gallery-landing",
+      "videoFrame": 897,
+      "videoSeconds": 35.88,
+      "meanAbsoluteGrayDifference": 0.31375
+    }
+  ]
+}

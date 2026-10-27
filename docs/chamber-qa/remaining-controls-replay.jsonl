@@ -1,0 +1,56 @@
+{"action": "click", "selector": "[data-action=continue]"}
+{"action": "press", "code": "Escape"}
+{"action": "click", "selector": "[data-action=retry]"}
+{"action": "assert", "path": "mode", "equals": "playing"}
+{"action": "assert", "path": "audio.paused", "equals": false}
+{"action": "assert", "path": "world.respawns", "equals": 1}
+{"action": "press", "code": "Escape"}
+{"action": "click", "selector": "[data-action=restart]"}
+{"action": "assert", "path": "world.respawns", "equals": 0}
+{"action": "press", "code": "Escape"}
+{"action": "click", "selector": "[data-action=home]"}
+{"action": "reload"}
+{"action": "assert", "path": "progress.completed", "equals": [1, 2, 3, 4, 5]}
+{"action": "click", "selector": "[data-action=levels]"}
+{"action": "click", "selector": "[data-action=level][data-level='1']"}
+{"action": "assert", "path": "level", "equals": 1}
+{"action": "walk", "x": 2, "z": 6}
+{"action": "wait", "ms": 700}
+{"action": "assert", "path": "world.pads.0.pressed", "equals": true}
+{"action": "capture", "name": "player-pressure-opens-door"}
+{"action": "walk", "x": 0, "z": 6}
+{"action": "wait", "ms": 1000}
+{"action": "assert", "path": "world.pads.0.pressed", "equals": false}
+{"action": "assert", "path": "world.devices.0.progress", "equals": 0}
+{"action": "capture", "name": "leaving-button-closes-door"}
+{"action": "viewport", "width": 650, "height": 900}
+{"action": "capture", "name": "narrow-live-device-and-reticle"}
+{"action": "viewport", "width": 960, "height": 540}
+{"action": "press", "code": "KeyM"}
+{"action": "capture", "name": "help-small-landscape"}
+{"action": "paused-input"}
+{"action": "press", "code": "Escape"}
+{"action": "viewport", "width": 1440, "height": 900}
+{"action": "keys", "codes": ["Space", "KeyW"], "ms": 300}
+{"action": "capture", "name": "ordinary-jump"}
+{"action": "press", "code": "KeyR"}
+{"action": "assert", "path": "world.respawns", "equals": 1}
+{"action": "assert", "path": "progress.completed", "equals": [1, 2, 3, 4, 5]}
+{"action": "capture", "name": "keyboard-retry-preserves-earned-save"}
+{"action": "press", "code": "Escape"}
+{"action": "click", "selector": "[data-action=home]"}
+{"action": "click", "selector": "[data-action=new-game]"}
+{"action": "capture", "name": "new-game-explicit-confirmation"}
+{"action": "click", "selector": "[data-action=home]"}
+{"action": "assert", "path": "progress.completed", "equals": [1, 2, 3, 4, 5]}
+{"action": "click", "selector": "[data-action=new-game]"}
+{"action": "click", "selector": "[data-action=confirm-new]"}
+{"action": "assert", "path": "progress.completed", "equals": []}
+{"action": "press", "code": "Escape"}
+{"action": "click", "selector": "[data-action=home]"}
+{"action": "click", "selector": "[data-action=new-game]"}
+{"action": "click", "selector": "[data-action=restore]"}
+{"action": "assert", "path": "progress.completed", "equals": [1, 2, 3, 4, 5]}
+{"action": "capture", "name": "earned-five-progress-restored-after-new-game"}
+{"action": "export-earned-save"}
+{"action": "close"}
