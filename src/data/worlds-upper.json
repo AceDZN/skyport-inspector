@@ -641,6 +641,26 @@
           -5,
           0.85,
           -10
+        ],
+        "control:garden-emitter": [
+          0,
+          1.2,
+          4.2
+        ],
+        "control:garden-lift:base": [
+          3.5999999999999996,
+          0.7,
+          2.5
+        ],
+        "control:garden-lift:upper": [
+          3.5999999999999996,
+          4.1000000000000005,
+          2.5
+        ],
+        "control:garden-lift": [
+          3.5999999999999996,
+          0.7,
+          2.5
         ]
       },
       "notes": [
@@ -691,7 +711,7 @@
           "min": {
             "x": 1.25,
             "y": -0.6,
-            "z": 7.75
+            "z": 9.25
           },
           "max": {
             "x": 4.75,
@@ -710,7 +730,7 @@
           "max": {
             "x": 4.75,
             "y": 0.0,
-            "z": 4.25
+            "z": 2.75
           },
           "kind": "floor"
         },
@@ -719,12 +739,12 @@
           "min": {
             "x": 1.25,
             "y": -3.4000000000000004,
-            "z": 4.25
+            "z": 2.75
           },
           "max": {
             "x": 4.75,
             "y": -3.0,
-            "z": 7.75
+            "z": 9.25
           },
           "kind": "floor"
         },
@@ -873,7 +893,7 @@
           "position": [
             3,
             0.03,
-            8.3
+            10.1
           ],
           "normal": [
             0,
@@ -898,7 +918,7 @@
         "well-lip": [
           3,
           0.86,
-          8.05
+          9.55
         ],
         "well-centre": [
           3,
@@ -927,7 +947,7 @@
         ]
       },
       "notes": [
-        "Real 3.5×3.5m start-floor hole; bottom host atY-3; high wall planeY6; landingY3.4. Wall-only low-speed entry must miss the five-metre air gap; no launchUsed win flag."
+        "Real 3.5×6.5m start-floor hole alongZ; bottom host atY-3; high wall planeY6; landingY3.4. Wall-only low-speed entry must miss the five-metre air gap; no launchUsed win flag."
       ]
     },
     {
@@ -1187,6 +1207,20 @@
       "cargo": [
         {
           "spec": {
+            "id": "cargo-1",
+            "label": "CARGO 1",
+            "shape": "diamond",
+            "size": "small",
+            "start": "front"
+          },
+          "position": [
+            5.5,
+            0.43,
+            10
+          ]
+        },
+        {
+          "spec": {
             "id": "beam-screen",
             "label": "BEAM SCREEN",
             "shape": "triangle",
@@ -1197,20 +1231,6 @@
             -0.6,
             2.56,
             1.9
-          ]
-        },
-        {
-          "spec": {
-            "id": "cargo-1",
-            "label": "CARGO 1",
-            "shape": "diamond",
-            "size": "small",
-            "start": "front"
-          },
-          "position": [
-            3,
-            0.43,
-            9
           ]
         }
       ],
@@ -1499,9 +1519,9 @@
           1.9
         ],
         "cargo:cargo-1": [
-          3,
+          5.5,
           0.43,
-          9
+          10
         ],
         "main-emitter": [
           -0.6,
@@ -1577,6 +1597,26 @@
           7.7,
           5.1,
           7
+        ],
+        "control:main-emitter": [
+          -0.6,
+          2.7,
+          3
+        ],
+        "control:cargo-lift:base": [
+          1.6,
+          0.7,
+          5.5
+        ],
+        "control:cargo-lift:upper": [
+          1.6,
+          4.1000000000000005,
+          5.5
+        ],
+        "control:cargo-lift": [
+          1.6,
+          0.7,
+          5.5
         ]
       },
       "notes": [
@@ -1728,6 +1768,34 @@
       "cargo": [
         {
           "spec": {
+            "id": "spare-cargo",
+            "label": "SPARE CARGO",
+            "shape": "triangle",
+            "size": "small",
+            "start": "front"
+          },
+          "position": [
+            3,
+            0.43,
+            8
+          ]
+        },
+        {
+          "spec": {
+            "id": "reserve-cargo",
+            "label": "RESERVE CARGO",
+            "shape": "triangle",
+            "size": "small",
+            "start": "front"
+          },
+          "position": [
+            0,
+            0.43,
+            8
+          ]
+        },
+        {
+          "spec": {
             "id": "control-cargo",
             "label": "CONTROL CARGO",
             "shape": "diamond",
@@ -1736,20 +1804,6 @@
           },
           "position": [
             -2,
-            0.43,
-            8
-          ]
-        },
-        {
-          "spec": {
-            "id": "spare-cargo",
-            "label": "SPARE CARGO",
-            "shape": "triangle",
-            "size": "small",
-            "start": "front"
-          },
-          "position": [
-            2,
             0.43,
             8
           ]
@@ -1856,13 +1910,18 @@
         }
       ],
       "routePoints": {
+        "cargo:spare-cargo": [
+          3,
+          0.43,
+          8
+        ],
         "cargo:control-cargo": [
           -2,
           0.43,
           8
         ],
-        "cargo:spare-cargo": [
-          2,
+        "cargo:reserve-cargo": [
+          0,
           0.43,
           8
         ],
@@ -2167,20 +2226,6 @@
       "cargo": [
         {
           "spec": {
-            "id": "wide-cargo",
-            "label": "WIDE CARGO",
-            "shape": "diamond",
-            "size": "large",
-            "start": "front"
-          },
-          "position": [
-            -2,
-            0.56,
-            8
-          ]
-        },
-        {
-          "spec": {
             "id": "small-cargo",
             "label": "SMALL CARGO",
             "shape": "triangle",
@@ -2188,8 +2233,36 @@
             "start": "front"
           },
           "position": [
-            2,
+            3,
             0.43,
+            8
+          ]
+        },
+        {
+          "spec": {
+            "id": "reserve-module",
+            "label": "RESERVE MODULE",
+            "shape": "triangle",
+            "size": "small",
+            "start": "front"
+          },
+          "position": [
+            -3,
+            0.43,
+            8
+          ]
+        },
+        {
+          "spec": {
+            "id": "wide-cargo",
+            "label": "WIDE CARGO",
+            "shape": "diamond",
+            "size": "large",
+            "start": "front"
+          },
+          "position": [
+            0,
+            0.56,
             8
           ]
         }
@@ -2265,14 +2338,19 @@
         }
       ],
       "routePoints": {
-        "cargo:wide-cargo": [
-          -2,
-          0.56,
+        "cargo:small-cargo": [
+          3,
+          0.43,
           8
         ],
-        "cargo:small-cargo": [
-          2,
+        "cargo:reserve-module": [
+          -3,
           0.43,
+          8
+        ],
+        "cargo:wide-cargo": [
+          0,
+          0.56,
           8
         ],
         "east-receiver": [
@@ -2701,7 +2779,7 @@
               "position": [
                 4,
                 2.5,
-                -4
+                -2.7
               ]
             },
             {
@@ -2709,7 +2787,7 @@
               "position": [
                 4,
                 2.5,
-                4
+                2.7
               ]
             }
           ]
@@ -2721,7 +2799,7 @@
           "position": [
             4,
             2.5,
-            -4
+            -2.7
           ],
           "size": [
             0.7,
@@ -2736,7 +2814,7 @@
           "position": [
             4,
             2.5,
-            4
+            2.7
           ],
           "size": [
             0.7,
@@ -2768,7 +2846,7 @@
               "position": [
                 4,
                 2.5,
-                -4
+                -2.7
               ]
             },
             {
@@ -2776,7 +2854,7 @@
               "position": [
                 4,
                 2.5,
-                4
+                2.7
               ]
             }
           ]
@@ -2931,12 +3009,12 @@
         "north-receiver": [
           4,
           2.5,
-          -4
+          -2.7
         ],
         "south-receiver": [
           4,
           2.5,
-          4
+          2.7
         ],
         "lower-emitter": [
           -6,
@@ -3016,6 +3094,31 @@
         "upper-control-panel": [
           2.8,
           4.9,
+          0
+        ],
+        "control:mirror-lift:base": [
+          -2.7,
+          0.7,
+          1.5
+        ],
+        "control:mirror-lift:upper": [
+          -2.7,
+          3.9,
+          1.5
+        ],
+        "control:mirror-lift": [
+          -2.7,
+          0.7,
+          1.5
+        ],
+        "control:upper-emitter": [
+          0,
+          4.2,
+          0
+        ],
+        "control:lower-emitter": [
+          -6,
+          1.2,
           0
         ]
       },
@@ -3575,6 +3678,46 @@
           -5.5,
           7.65,
           -5.5
+        ],
+        "control:freight-lift:base": [
+          1.6,
+          0.7,
+          2.5
+        ],
+        "control:freight-lift:middle": [
+          1.6,
+          4.1000000000000005,
+          2.5
+        ],
+        "control:freight-lift:top": [
+          1.6,
+          7.5,
+          2.5
+        ],
+        "control:freight-lift": [
+          1.6,
+          0.7,
+          2.5
+        ],
+        "control:service-lift:base": [
+          -5.4,
+          0.7,
+          4.5
+        ],
+        "control:service-lift:middle": [
+          -5.4,
+          4.1000000000000005,
+          4.5
+        ],
+        "control:service-lift:top": [
+          -5.4,
+          7.5,
+          4.5
+        ],
+        "control:service-lift": [
+          -5.4,
+          0.7,
+          4.5
         ]
       },
       "notes": [
@@ -3831,7 +3974,21 @@
             "start": "front"
           },
           "position": [
-            -1,
+            0,
+            0.43,
+            9
+          ]
+        },
+        {
+          "spec": {
+            "id": "reserve-module",
+            "label": "RESERVE MODULE",
+            "shape": "triangle",
+            "size": "small",
+            "start": "front"
+          },
+          "position": [
+            4,
             0.43,
             9
           ]
@@ -4093,7 +4250,12 @@
           4.6
         ],
         "cargo:cargo-1": [
-          -1,
+          0,
+          0.43,
+          9
+        ],
+        "cargo:reserve-module": [
+          4,
           0.43,
           9
         ],
@@ -4166,6 +4328,11 @@
           -4,
           0.86,
           -7
+        ],
+        "control:beam-emitter": [
+          -4,
+          1.2,
+          7
         ]
       },
       "notes": [
@@ -4216,7 +4383,7 @@
           "min": {
             "x": -1.75,
             "y": -0.6,
-            "z": 7.75
+            "z": 9.25
           },
           "max": {
             "x": 1.75,
@@ -4235,7 +4402,7 @@
           "max": {
             "x": 1.75,
             "y": 0.0,
-            "z": 4.25
+            "z": 2.75
           },
           "kind": "floor"
         },
@@ -4244,12 +4411,12 @@
           "min": {
             "x": -1.75,
             "y": -3.4000000000000004,
-            "z": 4.25
+            "z": 2.75
           },
           "max": {
             "x": 1.75,
             "y": -3.0,
-            "z": 7.75
+            "z": 9.25
           },
           "kind": "floor"
         },
@@ -4381,20 +4548,6 @@
       "cargo": [
         {
           "spec": {
-            "id": "cargo-1",
-            "label": "CARGO 1",
-            "shape": "diamond",
-            "size": "small",
-            "start": "front"
-          },
-          "position": [
-            -3,
-            0.43,
-            10
-          ]
-        },
-        {
-          "spec": {
             "id": "spare-cargo",
             "label": "SPARE CARGO",
             "shape": "triangle",
@@ -4403,6 +4556,20 @@
           },
           "position": [
             3,
+            0.43,
+            10
+          ]
+        },
+        {
+          "spec": {
+            "id": "cargo-1",
+            "label": "CARGO 1",
+            "shape": "diamond",
+            "size": "small",
+            "start": "front"
+          },
+          "position": [
+            -3,
             0.43,
             10
           ]
@@ -4467,7 +4634,7 @@
           "position": [
             0,
             0.03,
-            8.3
+            10.1
           ],
           "normal": [
             0,
@@ -4497,7 +4664,7 @@
         "well-lip": [
           0,
           0.86,
-          8.05
+          9.55
         ],
         "well-centre": [
           0,
@@ -4524,19 +4691,19 @@
           4.25,
           -1.8
         ],
-        "cargo:cargo-1": [
-          -3,
+        "cargo:spare-cargo": [
+          3,
           0.43,
           10
         ],
-        "cargo:spare-cargo": [
-          3,
+        "cargo:cargo-1": [
+          -3,
           0.43,
           10
         ]
       },
       "notes": [
-        "Real 3.5×3.5m start-floor hole; bottom host atY-3; high wall planeY6; landingY3.4. Wall-only low-speed entry must miss the five-metre air gap; no launchUsed win flag.",
+        "Real 3.5×6.5m start-floor hole alongZ; bottom host atY-3; high wall planeY6; landingY3.4. Wall-only low-speed entry must miss the five-metre air gap; no launchUsed win flag.",
         "Both high output panels face+Z across5m gap; origin floor-panel and cargo identity stay fixed across contrast. Catalogue portal event spelling must match actual portal:player:floor-panel ledger key."
       ]
     },
@@ -4584,7 +4751,7 @@
           "min": {
             "x": -1.75,
             "y": -0.6,
-            "z": 6.75
+            "z": 8.25
           },
           "max": {
             "x": 1.75,
@@ -4594,30 +4761,16 @@
           "kind": "floor"
         },
         {
-          "id": "launch-start-north",
-          "min": {
-            "x": -1.75,
-            "y": -0.6,
-            "z": 2.0
-          },
-          "max": {
-            "x": 1.75,
-            "y": 0.0,
-            "z": 3.25
-          },
-          "kind": "floor"
-        },
-        {
           "id": "launch-well-bottom",
           "min": {
             "x": -1.75,
             "y": -3.4000000000000004,
-            "z": 3.25
+            "z": 1.75
           },
           "max": {
             "x": 1.75,
             "y": -3.0,
-            "z": 6.75
+            "z": 8.25
           },
           "kind": "floor"
         },
@@ -4917,6 +5070,20 @@
       "cargo": [
         {
           "spec": {
+            "id": "spare-cargo",
+            "label": "SPARE CARGO",
+            "shape": "triangle",
+            "size": "small",
+            "start": "front"
+          },
+          "position": [
+            5,
+            0.43,
+            10
+          ]
+        },
+        {
+          "spec": {
             "id": "power-cell",
             "label": "POWER CELL",
             "shape": "diamond",
@@ -4931,14 +5098,14 @@
         },
         {
           "spec": {
-            "id": "spare-cargo",
-            "label": "SPARE CARGO",
+            "id": "reserve-module",
+            "label": "RESERVE MODULE",
             "shape": "triangle",
             "size": "small",
             "start": "front"
           },
           "position": [
-            5,
+            0,
             0.43,
             10
           ]
@@ -4991,6 +5158,54 @@
           ]
         },
         {
+          "id": "launch-emitter",
+          "kind": "relay",
+          "label": "LAUNCH EMITTER",
+          "position": [
+            -6,
+            4,
+            3
+          ],
+          "size": [
+            0.65,
+            1,
+            0.65
+          ],
+          "states": [
+            "launch-receiver"
+          ],
+          "receivers": [
+            {
+              "id": "launch-receiver",
+              "position": [
+                -3.2,
+                4.2,
+                7
+              ]
+            }
+          ],
+          "circuit": {
+            "all": [
+              "upper-socket"
+            ]
+          }
+        },
+        {
+          "id": "launch-receiver",
+          "kind": "receiver",
+          "label": "LAUNCH RECEIVER",
+          "position": [
+            -3.2,
+            4.2,
+            7
+          ],
+          "size": [
+            0.7,
+            0.7,
+            0.25
+          ]
+        },
+        {
           "id": "launch-shutter",
           "kind": "shutter",
           "label": "LAUNCH SHUTTER",
@@ -5006,7 +5221,8 @@
           ],
           "circuit": {
             "all": [
-              "upper-socket"
+              "upper-socket",
+              "launch-receiver"
             ]
           },
           "target": [
@@ -5137,7 +5353,7 @@
           "position": [
             0,
             0.03,
-            7.3
+            9.1
           ],
           "normal": [
             0,
@@ -5162,20 +5378,25 @@
         "well-lip": [
           0,
           0.86,
-          7.05
+          8.55
         ],
         "well-centre": [
           0,
           0.86,
           5
         ],
+        "cargo:spare-cargo": [
+          5,
+          0.43,
+          10
+        ],
         "cargo:power-cell": [
           -5,
           0.43,
           10
         ],
-        "cargo:spare-cargo": [
-          5,
+        "cargo:reserve-module": [
+          0,
           0.43,
           10
         ],
@@ -5188,6 +5409,16 @@
           -6,
           2.94,
           1
+        ],
+        "launch-emitter": [
+          -6,
+          4,
+          3
+        ],
+        "launch-receiver": [
+          -3.2,
+          4.2,
+          7
         ],
         "launch-shutter": [
           0,
@@ -5233,11 +5464,36 @@
           -7.8,
           4.5,
           7
+        ],
+        "control:receiver-lift:base": [
+          -6.4,
+          0.7,
+          5.5
+        ],
+        "control:receiver-lift:upper": [
+          -6.4,
+          3.5,
+          5.5
+        ],
+        "control:receiver-lift": [
+          -6.4,
+          0.7,
+          5.5
+        ],
+        "control:launch-emitter": [
+          -6,
+          4,
+          3
+        ],
+        "control:junction": [
+          -1,
+          4.15,
+          -2
         ]
       },
       "notes": [
-        "Real 3.5×3.5m start-floor hole; bottom host atY-3; high wall planeY6; landingY3.4. Wall-only low-speed entry must miss the five-metre air gap; no launchUsed win flag.",
-        "Socket physically opens launch-shutter guarding the only well entrance. Upper ring is separated by real flight gap; east/west/north junction arms have landing floors. Catalogue40 order shutter:launch:open is an alias mismatch: authored actual gate ID is launch-shutter, so normalize the semantic event instead of adding a fake duplicate gate."
+        "Real 3.5×6.5m start-floor hole alongZ; bottom host atY-3; high wall planeY6; landingY3.4. Wall-only low-speed entry must miss the five-metre air gap; no launchUsed win flag.",
+        "Socket enables a real spatial beam relay; its launch receiver opens launch-shutter guarding the only well entrance. Upper ring is separated by real flight gap; east/west/north junction arms have landing floors. Catalogue40 order shutter:launch:open is an alias mismatch: authored actual gate ID is launch-shutter, so normalize the semantic event instead of adding a fake duplicate gate."
       ]
     },
     {
@@ -5290,6 +5546,20 @@
             "x": 13.0,
             "y": 0.0,
             "z": 4.0
+          },
+          "kind": "floor"
+        },
+        {
+          "id": "return-elbow-floor",
+          "min": {
+            "x": 4.0,
+            "y": -0.6,
+            "z": 2.0999999999999996
+          },
+          "max": {
+            "x": 13.0,
+            "y": 0.0,
+            "z": 5.0
           },
           "kind": "floor"
         },
@@ -5477,21 +5747,6 @@
       "cargo": [
         {
           "spec": {
-            "id": "oren-crate",
-            "label": "OREN CRATE",
-            "shape": "diamond",
-            "size": "small",
-            "start": "front",
-            "owner": "Oren"
-          },
-          "position": [
-            9.3,
-            0.63,
-            -6
-          ]
-        },
-        {
-          "spec": {
             "id": "mina-crate",
             "label": "MINA CRATE",
             "shape": "diamond",
@@ -5501,6 +5756,21 @@
           },
           "position": [
             10.7,
+            0.63,
+            -6
+          ]
+        },
+        {
+          "spec": {
+            "id": "oren-crate",
+            "label": "OREN CRATE",
+            "shape": "diamond",
+            "size": "small",
+            "start": "front",
+            "owner": "Oren"
+          },
+          "position": [
+            9.3,
             0.63,
             -6
           ]
@@ -5548,6 +5818,48 @@
             1
           ],
           "speed": 1.4
+        },
+        {
+          "id": "return-elbow-belt",
+          "kind": "conveyor",
+          "label": "RETURN ELBOW BELT",
+          "position": [
+            8,
+            0.1,
+            3.3
+          ],
+          "size": [
+            7,
+            0.2,
+            2.4
+          ],
+          "direction": [
+            -1,
+            0,
+            0
+          ],
+          "speed": 1.3
+        },
+        {
+          "id": "front-receiving-belt",
+          "kind": "conveyor",
+          "label": "FRONT RECEIVING BELT",
+          "position": [
+            5,
+            0.1,
+            7
+          ],
+          "size": [
+            2.4,
+            0.2,
+            7
+          ],
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "speed": 1.3
         },
         {
           "id": "return-lever",
@@ -5671,6 +5983,16 @@
           0.1,
           -3
         ],
+        "return-elbow-belt": [
+          8,
+          0.1,
+          3.3
+        ],
+        "front-receiving-belt": [
+          5,
+          0.1,
+          7
+        ],
         "cargo:oren-crate": [
           9.3,
           0.63,
@@ -5735,10 +6057,15 @@
           -2.8,
           1.7,
           -3
+        ],
+        "control:return-lever": [
+          -4,
+          0.8,
+          9
         ]
       },
       "notes": [
-        "Both owner crates start on the actual moving belt. Main target Mina is the right-hand initial crate and second array entry; contrast changes ownership only. Return shutter is a real belt obstruction controlled from the receiving side."
+        "Both owner crates start on the actual moving belt. Three supported conveyor segments form a real return path through the shutter, around the elbow, and into the front receiving floor. Main target Mina is the right-hand initial crate and second array entry; contrast changes ownership only. Return shutter is a real belt obstruction controlled from the receiving side."
       ]
     },
     {
@@ -5935,6 +6262,20 @@
           "kind": "floor"
         },
         {
+          "id": "inlet-feeder-floor",
+          "min": {
+            "x": -6.0,
+            "y": -0.6,
+            "z": -1.3
+          },
+          "max": {
+            "x": -3.0,
+            "y": 0.0,
+            "z": 1.3
+          },
+          "kind": "floor"
+        },
+        {
           "id": "host-inlet-panel",
           "min": {
             "x": -14.18,
@@ -6012,21 +6353,6 @@
       "cargo": [
         {
           "spec": {
-            "id": "ada-crate",
-            "label": "ADA CRATE",
-            "shape": "triangle",
-            "size": "small",
-            "start": "front",
-            "owner": "Ada"
-          },
-          "position": [
-            -12,
-            0.63,
-            0.5
-          ]
-        },
-        {
-          "spec": {
             "id": "tariq-crate",
             "label": "TARIQ CRATE",
             "shape": "diamond",
@@ -6036,6 +6362,21 @@
           },
           "position": [
             -9,
+            0.63,
+            0.5
+          ]
+        },
+        {
+          "spec": {
+            "id": "ada-crate",
+            "label": "ADA CRATE",
+            "shape": "triangle",
+            "size": "small",
+            "start": "front",
+            "owner": "Ada"
+          },
+          "position": [
+            -12,
             0.63,
             0.5
           ]
@@ -6073,7 +6414,7 @@
             0
           ],
           "size": [
-            7,
+            8,
             0.2,
             2.4
           ],
@@ -6083,6 +6424,27 @@
             0
           ],
           "speed": 1.5
+        },
+        {
+          "id": "inlet-feeder-belt",
+          "kind": "conveyor",
+          "label": "INLET FEEDER BELT",
+          "position": [
+            -4.5,
+            0.1,
+            0
+          ],
+          "size": [
+            3,
+            0.2,
+            2.4
+          ],
+          "direction": [
+            1,
+            0,
+            0
+          ],
+          "speed": 1.4
         },
         {
           "id": "conveyor-junction",
@@ -6268,6 +6630,11 @@
           0.1,
           0
         ],
+        "inlet-feeder-belt": [
+          -4.5,
+          0.1,
+          0
+        ],
         "conveyor-junction": [
           0,
           -0.15,
@@ -6327,6 +6694,51 @@
           -2.8,
           1.7,
           -1
+        ],
+        "control:conveyor-junction": [
+          -1,
+          0.75,
+          2
+        ],
+        "control:ada-lift:base": [
+          1.6,
+          0.7,
+          -9.5
+        ],
+        "control:ada-lift:middle": [
+          1.6,
+          2.4,
+          -9.5
+        ],
+        "control:ada-lift:upper": [
+          1.6,
+          4.1000000000000005,
+          -9.5
+        ],
+        "control:ada-lift": [
+          1.6,
+          0.7,
+          -9.5
+        ],
+        "control:tariq-lift:base": [
+          1.6,
+          0.7,
+          12.5
+        ],
+        "control:tariq-lift:middle": [
+          1.6,
+          2.4,
+          12.5
+        ],
+        "control:tariq-lift:upper": [
+          1.6,
+          4.1000000000000005,
+          12.5
+        ],
+        "control:tariq-lift": [
+          1.6,
+          0.7,
+          12.5
         ]
       },
       "notes": [
@@ -6403,12 +6815,12 @@
         {
           "id": "host-rack-access-panel",
           "min": {
-            "x": 0.8200000000000001,
+            "x": 1.82,
             "y": 3.3,
             "z": 0.1499999999999999
           },
           "max": {
-            "x": 1.18,
+            "x": 2.18,
             "y": 6.8999999999999995,
             "z": 3.85
           },
@@ -6441,20 +6853,6 @@
             "z": -8.15
           },
           "kind": "wall"
-        },
-        {
-          "id": "rack-drop-lip",
-          "min": {
-            "x": 0.8999999999999999,
-            "y": 2.8000000000000003,
-            "z": -0.09999999999999987
-          },
-          "max": {
-            "x": 2.0,
-            "y": 3.4,
-            "z": 4.1
-          },
-          "kind": "floor"
         }
       ],
       "surfaces": [
@@ -6483,7 +6881,7 @@
         {
           "id": "rack-access-panel",
           "center": {
-            "x": 0.8,
+            "x": 1.8,
             "y": 5.1,
             "z": 2
           },
@@ -6600,7 +6998,7 @@
             2
           ],
           "size": [
-            8,
+            10,
             0.4,
             4
           ],
@@ -6690,7 +7088,7 @@
           8
         ],
         "rack-access-panel": [
-          0.8,
+          1.8,
           5.1,
           2
         ],
@@ -6703,10 +7101,25 @@
           6.8,
           1.7,
           -10
+        ],
+        "control:rack-lift:upper": [
+          -7.7,
+          4.1000000000000005,
+          3.8
+        ],
+        "control:rack-lift:base": [
+          -7.7,
+          0.7,
+          3.8
+        ],
+        "control:rack-lift": [
+          -7.7,
+          4.1000000000000005,
+          3.8
         ]
       },
       "notes": [
-        "History is fixed: crate-b carried, crate-a stood beside. B starts right of A; actual dropX=+1.1 stays inside rack bounds[-7,1] only if extended landing lip is supplied; rack extends toX1 exactly, so its projection edge is corrected by the receiving shelf below. Guide grounding must use start-floor3.4 (lead engine fix)."
+        "History is fixed: crate-b carried, crate-a stood beside. B starts right of A; actual dropX=+1.1 remains entirely inside the moving rack bounds[-8,2], so both cargoes descend with the real rack. Guide grounding must use start-floor3.4 (lead engine fix)."
       ],
       "history": {
         "actor": "Rook",
@@ -6768,44 +7181,16 @@
           "kind": "floor"
         },
         {
-          "id": "shared-upper-ring-west-west",
+          "id": "shared-upper-ring-west",
           "min": {
             "x": -7.0,
             "y": 2.8000000000000003,
             "z": -13.0
           },
           "max": {
-            "x": 2.3000000000000003,
+            "x": -5.699999999999999,
             "y": 3.4,
             "z": -1.0
-          },
-          "kind": "floor"
-        },
-        {
-          "id": "shared-upper-ring-west-south",
-          "min": {
-            "x": 2.3,
-            "y": 2.8000000000000003,
-            "z": -2.3
-          },
-          "max": {
-            "x": 5.7,
-            "y": 3.4,
-            "z": -1.0
-          },
-          "kind": "floor"
-        },
-        {
-          "id": "shared-upper-ring-west-north",
-          "min": {
-            "x": 2.3,
-            "y": 2.8000000000000003,
-            "z": -13.0
-          },
-          "max": {
-            "x": 5.7,
-            "y": 3.4,
-            "z": -5.699999999999999
           },
           "kind": "floor"
         },
@@ -6866,56 +7251,28 @@
           "kind": "floor"
         },
         {
-          "id": "shared-upper-ring-south-west",
+          "id": "shared-upper-ring-south",
           "min": {
             "x": -5.7,
             "y": 2.8000000000000003,
             "z": -2.3
           },
           "max": {
-            "x": 2.3,
+            "x": -2.3,
             "y": 3.4,
             "z": -1.0
           },
           "kind": "floor"
         },
         {
-          "id": "shared-upper-ring-south-south",
-          "min": {
-            "x": 2.3,
-            "y": 2.8000000000000003,
-            "z": -2.3
-          },
-          "max": {
-            "x": 5.7,
-            "y": 3.4,
-            "z": -1.0
-          },
-          "kind": "floor"
-        },
-        {
-          "id": "shared-upper-ring-north-west",
+          "id": "shared-upper-ring-north",
           "min": {
             "x": -5.7,
             "y": 2.8000000000000003,
             "z": -13.0
           },
           "max": {
-            "x": 2.3,
-            "y": 3.4,
-            "z": -5.699999999999999
-          },
-          "kind": "floor"
-        },
-        {
-          "id": "shared-upper-ring-north-north",
-          "min": {
-            "x": 2.3,
-            "y": 2.8000000000000003,
-            "z": -13.0
-          },
-          "max": {
-            "x": 5.7,
+            "x": -2.3,
             "y": 3.4,
             "z": -5.699999999999999
           },
@@ -7518,6 +7875,41 @@
           6.8,
           1.7,
           -5
+        ],
+        "control:garden-emitter": [
+          0,
+          1.2,
+          6
+        ],
+        "control:west-branch-lift:base": [
+          -5.4,
+          0.7,
+          -2.5
+        ],
+        "control:west-branch-lift:upper": [
+          -5.4,
+          4.1000000000000005,
+          -2.5
+        ],
+        "control:west-branch-lift": [
+          -5.4,
+          0.7,
+          -2.5
+        ],
+        "control:east-branch-lift:base": [
+          2.5999999999999996,
+          0.7,
+          -2.5
+        ],
+        "control:east-branch-lift:upper": [
+          2.5999999999999996,
+          4.1000000000000005,
+          -2.5
+        ],
+        "control:east-branch-lift": [
+          2.5999999999999996,
+          0.7,
+          -2.5
         ]
       },
       "notes": [
@@ -7951,6 +8343,20 @@
         },
         {
           "spec": {
+            "id": "reserve-cargo",
+            "label": "RESERVE CARGO",
+            "shape": "triangle",
+            "size": "small",
+            "start": "front"
+          },
+          "position": [
+            -7.5,
+            0.43,
+            9
+          ]
+        },
+        {
+          "spec": {
             "id": "today-cargo",
             "label": "TODAY CARGO",
             "shape": "diamond",
@@ -8138,13 +8544,18 @@
           8.5,
           -6
         ],
-        "cargo:tomorrow-cargo": [
-          -2,
+        "cargo:today-cargo": [
+          -5,
           0.43,
           9
         ],
-        "cargo:today-cargo": [
-          -5,
+        "cargo:reserve-cargo": [
+          -7.5,
+          0.43,
+          9
+        ],
+        "cargo:tomorrow-cargo": [
+          -2,
           0.43,
           9
         ],
@@ -8177,6 +8588,46 @@
           6,
           7.65,
           -5.5
+        ],
+        "control:freight-lift:base": [
+          -5.4,
+          0.7,
+          3.5
+        ],
+        "control:freight-lift:middle": [
+          -5.4,
+          4.1000000000000005,
+          3.5
+        ],
+        "control:freight-lift:top": [
+          -5.4,
+          7.5,
+          3.5
+        ],
+        "control:freight-lift": [
+          -5.4,
+          0.7,
+          3.5
+        ],
+        "control:service-lift:base": [
+          4.6,
+          0.7,
+          3.5
+        ],
+        "control:service-lift:middle": [
+          4.6,
+          4.1000000000000005,
+          3.5
+        ],
+        "control:service-lift:top": [
+          4.6,
+          7.5,
+          3.5
+        ],
+        "control:service-lift": [
+          4.6,
+          0.7,
+          3.5
         ]
       },
       "notes": [
@@ -8412,6 +8863,20 @@
       "cargo": [
         {
           "spec": {
+            "id": "cargo-1",
+            "label": "CARGO 1",
+            "shape": "diamond",
+            "size": "small",
+            "start": "front"
+          },
+          "position": [
+            5.5,
+            0.43,
+            10
+          ]
+        },
+        {
+          "spec": {
             "id": "screen",
             "label": "SCREEN",
             "shape": "triangle",
@@ -8422,20 +8887,6 @@
             0,
             1.16,
             5
-          ]
-        },
-        {
-          "spec": {
-            "id": "cargo-1",
-            "label": "CARGO 1",
-            "shape": "diamond",
-            "size": "small",
-            "start": "front"
-          },
-          "position": [
-            3,
-            0.43,
-            9
           ]
         }
       ],
@@ -8485,7 +8936,7 @@
               "position": [
                 -4,
                 2,
-                -0.2
+                0.8
               ]
             },
             {
@@ -8493,7 +8944,7 @@
               "position": [
                 4,
                 2,
-                -0.2
+                0.8
               ]
             }
           ],
@@ -8510,7 +8961,7 @@
           "position": [
             -4,
             2,
-            -0.2
+            0.8
           ],
           "size": [
             0.7,
@@ -8525,7 +8976,7 @@
           "position": [
             4,
             2,
-            -0.2
+            0.8
           ],
           "size": [
             0.7,
@@ -8697,9 +9148,9 @@
           5
         ],
         "cargo:cargo-1": [
-          3,
+          5.5,
           0.43,
-          9
+          10
         ],
         "main-emitter": [
           0,
@@ -8709,12 +9160,12 @@
         "main": [
           -4,
           2,
-          -0.2
+          0.8
         ],
         "auxiliary": [
           4,
           2,
-          -0.2
+          0.8
         ],
         "beam-reset": [
           -3,
@@ -8780,6 +9231,16 @@
           7.8,
           1.7,
           2
+        ],
+        "control:main-emitter": [
+          0,
+          1.2,
+          6
+        ],
+        "control:beam-reset": [
+          -3,
+          0.8,
+          9
         ]
       },
       "notes": [
@@ -9073,9 +9534,9 @@
             "owner": "Oren"
           },
           "position": [
-            -2,
+            2,
             0.43,
-            9
+            10
           ]
         },
         {
@@ -9088,9 +9549,9 @@
             "owner": "Mina"
           },
           "position": [
-            2,
+            -3.5,
             0.43,
-            9
+            8
           ]
         }
       ],
@@ -9329,14 +9790,14 @@
       ],
       "routePoints": {
         "cargo:oren-crate": [
-          -2,
-          0.43,
-          9
-        ],
-        "cargo:mina-crate": [
           2,
           0.43,
-          9
+          10
+        ],
+        "cargo:mina-crate": [
+          -3.5,
+          0.43,
+          8
         ],
         "garden-ferry": [
           -5,
@@ -9640,7 +10101,7 @@
             "start": "front"
           },
           "position": [
-            1,
+            7,
             0.43,
             9
           ]
@@ -9863,7 +10324,7 @@
       "marks": [],
       "routePoints": {
         "cargo:triangle-crate": [
-          1,
+          7,
           0.43,
           9
         ],
@@ -9936,6 +10397,31 @@
           7.8,
           1.7,
           5
+        ],
+        "control:hub-emitter": [
+          5,
+          1.2,
+          10
+        ],
+        "control:hub-lift:base": [
+          -1.4,
+          0.7,
+          3.5
+        ],
+        "control:hub-lift:upper": [
+          -1.4,
+          4.1000000000000005,
+          3.5
+        ],
+        "control:hub-lift": [
+          -1.4,
+          0.7,
+          3.5
+        ],
+        "control:junction": [
+          -1,
+          4.15,
+          0
         ]
       },
       "notes": [
@@ -9955,7 +10441,7 @@
       "spawn": [
         0,
         0.86,
-        15
+        19
       ],
       "solids": [
         {
@@ -9963,12 +10449,12 @@
           "min": {
             "x": -2.5,
             "y": -0.6,
-            "z": 8.0
+            "z": 6.0
           },
           "max": {
             "x": -1.75,
             "y": 0.0,
-            "z": 16.0
+            "z": 20.0
           },
           "kind": "floor"
         },
@@ -9977,12 +10463,12 @@
           "min": {
             "x": 1.75,
             "y": -0.6,
-            "z": 8.0
+            "z": 6.0
           },
           "max": {
             "x": 2.5,
             "y": 0.0,
-            "z": 16.0
+            "z": 20.0
           },
           "kind": "floor"
         },
@@ -9991,12 +10477,12 @@
           "min": {
             "x": -1.75,
             "y": -0.6,
-            "z": 12.75
+            "z": 14.25
           },
           "max": {
             "x": 1.75,
             "y": 0.0,
-            "z": 16.0
+            "z": 20.0
           },
           "kind": "floor"
         },
@@ -10005,12 +10491,12 @@
           "min": {
             "x": -1.75,
             "y": -0.6,
-            "z": 8.0
+            "z": 6.0
           },
           "max": {
             "x": 1.75,
             "y": 0.0,
-            "z": 9.25
+            "z": 7.75
           },
           "kind": "floor"
         },
@@ -10019,12 +10505,12 @@
           "min": {
             "x": -1.75,
             "y": -3.4000000000000004,
-            "z": 9.25
+            "z": 7.75
           },
           "max": {
             "x": 1.75,
             "y": -3.0,
-            "z": 12.75
+            "z": 14.25
           },
           "kind": "floor"
         },
@@ -10052,7 +10538,7 @@
           "max": {
             "x": -1.75,
             "y": 3.4,
-            "z": -1.0
+            "z": 3.0
           },
           "kind": "floor"
         },
@@ -10066,7 +10552,7 @@
           "max": {
             "x": 3.0,
             "y": 3.4,
-            "z": -1.0
+            "z": 3.0
           },
           "kind": "floor"
         },
@@ -10075,12 +10561,12 @@
           "min": {
             "x": -1.75,
             "y": 2.8000000000000003,
-            "z": -1.9500000000000002
+            "z": 1.25
           },
           "max": {
             "x": 1.75,
             "y": 3.4,
-            "z": -1.0
+            "z": 3.0
           },
           "kind": "floor"
         },
@@ -10094,7 +10580,7 @@
           "max": {
             "x": 1.75,
             "y": 3.4,
-            "z": -5.449999999999999
+            "z": -5.25
           },
           "kind": "floor"
         },
@@ -10103,28 +10589,42 @@
           "min": {
             "x": -1.75,
             "y": 0.0,
-            "z": -5.45
+            "z": -5.25
           },
           "max": {
             "x": 1.75,
             "y": 0.4,
-            "z": -1.9500000000000002
+            "z": 1.25
           },
           "kind": "floor"
         },
         {
           "id": "middle-opaque-front",
           "min": {
-            "x": -3.0,
+            "x": -7.0,
             "y": -0.20000000000000018,
-            "z": -0.925
+            "z": 3.075
+          },
+          "max": {
+            "x": 7.0,
+            "y": 11.8,
+            "z": 3.425
+          },
+          "kind": "wall"
+        },
+        {
+          "id": "middle-screen-plinth",
+          "min": {
+            "x": 2.0,
+            "y": 3.4000000000000004,
+            "z": -6.85
           },
           "max": {
             "x": 3.0,
-            "y": 11.8,
-            "z": -0.575
+            "y": 4.0,
+            "z": -5.950000000000001
           },
-          "kind": "wall"
+          "kind": "floor"
         },
         {
           "id": "host-west-second-high",
@@ -10233,7 +10733,7 @@
           "center": {
             "x": 0,
             "y": 0.425,
-            "z": -3.7
+            "z": -2
           },
           "normal": {
             "x": 0,
@@ -10298,6 +10798,20 @@
       "cargo": [
         {
           "spec": {
+            "id": "middle-screen",
+            "label": "MIDDLE BEAM SCREEN",
+            "shape": "triangle",
+            "size": "small",
+            "start": "front"
+          },
+          "position": [
+            2.5,
+            4.43,
+            -6.4
+          ]
+        },
+        {
+          "spec": {
             "id": "spare-cargo",
             "label": "SPARE CARGO",
             "shape": "triangle",
@@ -10305,9 +10819,9 @@
             "start": "front"
           },
           "position": [
-            1.7,
+            -1.6,
             0.43,
-            14
+            16.5
           ]
         },
         {
@@ -10319,9 +10833,23 @@
             "start": "front"
           },
           "position": [
-            -1.6,
+            0,
             0.56,
-            14
+            16.5
+          ]
+        },
+        {
+          "spec": {
+            "id": "reserve-cargo",
+            "label": "RESERVE CARGO",
+            "shape": "triangle",
+            "size": "small",
+            "start": "front"
+          },
+          "position": [
+            1.6,
+            0.43,
+            16.5
           ]
         }
       ],
@@ -10362,22 +10890,13 @@
             0.65
           ],
           "states": [
-            "middle",
-            "side"
+            "middle"
           ],
           "receivers": [
             {
               "id": "middle",
               "position": [
                 2.5,
-                5.2,
-                -6.7
-              ]
-            },
-            {
-              "id": "side",
-              "position": [
-                -2.5,
                 5.2,
                 -6.7
               ]
@@ -10400,38 +10919,23 @@
           ]
         },
         {
-          "id": "side",
-          "kind": "receiver",
-          "label": "SIDE",
-          "position": [
-            -2.5,
-            5.2,
-            -6.7
-          ],
-          "size": [
-            0.7,
-            0.7,
-            0.25
-          ]
-        },
-        {
           "id": "middle-shutter",
           "kind": "shutter",
           "label": "SECOND WELL COVER",
           "position": [
             0,
             3.42,
-            -3.7
+            -2
           ],
           "size": [
             3.5,
             0.2,
-            3.5
+            6.5
           ],
           "target": [
             4,
             3.42,
-            -3.7
+            -2
           ],
           "circuit": {
             "all": [
@@ -10476,12 +10980,12 @@
           "position": [
             0,
             4.25,
-            -4
+            -2
           ],
           "size": [
             6,
             0.4,
-            6
+            10
           ]
         }
       ],
@@ -10491,7 +10995,7 @@
           "position": [
             0,
             0.03,
-            13.3
+            15.1
           ],
           "normal": [
             0,
@@ -10531,7 +11035,7 @@
         "well-lip": [
           0,
           0.86,
-          13.05
+          14.55
         ],
         "well-centre": [
           0,
@@ -10541,7 +11045,17 @@
         "second-floor-panel": [
           0,
           0.425,
-          -3.7
+          -2
+        ],
+        "second-well-lip": [
+          0,
+          4.26,
+          1.55
+        ],
+        "second-well-centre": [
+          0,
+          4.26,
+          -2
         ],
         "middle-emitter": [
           2.5,
@@ -10553,15 +11067,15 @@
           5.2,
           -6.7
         ],
-        "side": [
-          -2.5,
-          5.2,
-          -6.7
+        "cargo:middle-screen": [
+          2.5,
+          4.43,
+          -6.4
         ],
         "middle-shutter": [
           0,
           3.42,
-          -3.7
+          -2
         ],
         "west-second-high": [
           -10,
@@ -10594,18 +11108,28 @@
           -15.8
         ],
         "cargo:spare-cargo": [
-          1.7,
+          -1.6,
           0.43,
-          14
+          16.5
         ],
         "cargo:large-cargo": [
-          -1.6,
+          0,
           0.56,
-          14
+          16.5
+        ],
+        "cargo:reserve-cargo": [
+          1.6,
+          0.43,
+          16.5
+        ],
+        "control:middle-emitter": [
+          2.5,
+          4.6,
+          -5.8
         ]
       },
       "notes": [
-        "Real 3.5×3.5m start-floor hole; bottom host atY-3; high wall planeY6; landingY3.4. Wall-only low-speed entry must miss the five-metre air gap; no launchUsed win flag.",
+        "Real 3.5×6.5m start-floor hole alongZ; bottom host atY-3; high wall planeY6; landingY3.4. Wall-only low-speed entry must miss the five-metre air gap; no launchUsed win flag.",
         "Stage1 floorY−3→wall6→middle3.4. Factory preset first B avoids exposing any second pair through a lower viewing loophole. Middle opaque front wall blocks second-pair aiming from start; only middle ledge reveals them. Stage2 floorY.4 (3m belowmiddle)→wall9.4→upper6.8 across5m gap. Large cargo can be carried through both wells. No invisible launchUsed requirement."
       ],
       "presetPortal": {
@@ -10783,7 +11307,7 @@
           "min": {
             "x": 7.5,
             "y": 2.2,
-            "z": -8.0
+            "z": -7.75
           },
           "max": {
             "x": 12.5,
@@ -10891,6 +11415,76 @@
           "kind": "wall"
         },
         {
+          "id": "garden-service-alcove",
+          "min": {
+            "x": -13.0,
+            "y": -0.6,
+            "z": -11.0
+          },
+          "max": {
+            "x": -7.0,
+            "y": 0.0,
+            "z": -7.0
+          },
+          "kind": "floor"
+        },
+        {
+          "id": "garden-service-shutter-west",
+          "min": {
+            "x": -13.0,
+            "y": 0.0,
+            "z": -7.19
+          },
+          "max": {
+            "x": -11.5,
+            "y": 4.0,
+            "z": -6.81
+          },
+          "kind": "wall"
+        },
+        {
+          "id": "garden-service-shutter-east",
+          "min": {
+            "x": -8.5,
+            "y": 0.0,
+            "z": -7.19
+          },
+          "max": {
+            "x": -7.0,
+            "y": 4.0,
+            "z": -6.81
+          },
+          "kind": "wall"
+        },
+        {
+          "id": "garden-service-shutter-transom",
+          "min": {
+            "x": -11.5,
+            "y": 3.2,
+            "z": -7.19
+          },
+          "max": {
+            "x": -8.5,
+            "y": 4.0,
+            "z": -6.81
+          },
+          "kind": "wall"
+        },
+        {
+          "id": "host-garden-service-return",
+          "min": {
+            "x": -13.18,
+            "y": -0.10000000000000009,
+            "z": -10.85
+          },
+          "max": {
+            "x": -12.82,
+            "y": 3.5,
+            "z": -7.15
+          },
+          "kind": "wall"
+        },
+        {
           "id": "zone5-launch-start-west",
           "min": {
             "x": 5.0,
@@ -10923,7 +11517,7 @@
           "min": {
             "x": 8.25,
             "y": 2.2,
-            "z": -9.25
+            "z": -7.75
           },
           "max": {
             "x": 11.75,
@@ -10942,7 +11536,7 @@
           "max": {
             "x": 11.75,
             "y": 2.8,
-            "z": -12.75
+            "z": -14.25
           },
           "kind": "floor"
         },
@@ -10951,12 +11545,12 @@
           "min": {
             "x": 8.25,
             "y": -0.6000000000000001,
-            "z": -12.75
+            "z": -14.25
           },
           "max": {
             "x": 11.75,
             "y": -0.2,
-            "z": -9.25
+            "z": -7.75
           },
           "kind": "floor"
         },
@@ -11088,6 +11682,28 @@
         }
       ],
       "surfaces": [
+        {
+          "id": "garden-service-return",
+          "center": {
+            "x": -12.8,
+            "y": 1.7,
+            "z": -9
+          },
+          "normal": {
+            "x": 1,
+            "y": 0,
+            "z": 0
+          },
+          "up": {
+            "x": 0,
+            "y": 1,
+            "z": 0
+          },
+          "width": 3.5,
+          "height": 3.6,
+          "solidId": "host-garden-service-return",
+          "floor": false
+        },
         {
           "id": "final-floor-panel",
           "center": {
@@ -11386,6 +12002,27 @@
           "speed": 1.6
         },
         {
+          "id": "cell-feeder-belt",
+          "kind": "conveyor",
+          "label": "CELL FEEDER BELT",
+          "position": [
+            -1.2,
+            0.06,
+            1.2
+          ],
+          "size": [
+            6,
+            0.12,
+            2.5
+          ],
+          "direction": [
+            1,
+            0,
+            0
+          ],
+          "speed": 1.5
+        },
+        {
           "id": "cell-lift",
           "kind": "lift",
           "label": "CELL LIFT",
@@ -11526,6 +12163,31 @@
           ]
         },
         {
+          "id": "garden-service-shutter",
+          "kind": "shutter",
+          "label": "GARDEN SERVICE SHUTTER",
+          "position": [
+            -10,
+            1.5,
+            -7
+          ],
+          "size": [
+            3,
+            3,
+            0.35
+          ],
+          "circuit": {
+            "all": [
+              "garden-receiver"
+            ]
+          },
+          "target": [
+            -10,
+            5,
+            -7
+          ]
+        },
+        {
           "id": "junction",
           "kind": "junction",
           "label": "JUNCTION",
@@ -11649,6 +12311,32 @@
           ],
           "size": [
             3.8,
+            2.6,
+            1.6
+          ]
+        },
+        {
+          "id": "route:garden-service-shutter",
+          "position": [
+            -10,
+            0.9,
+            -7
+          ],
+          "size": [
+            3,
+            1.8,
+            0.8
+          ]
+        },
+        {
+          "id": "cargo-zone:garden-service-shutter",
+          "position": [
+            -10,
+            1.3,
+            -7
+          ],
+          "size": [
+            3,
             2.6,
             1.6
           ]
@@ -11812,6 +12500,11 @@
           0.06,
           1.2
         ],
+        "cell-feeder-belt": [
+          -1.2,
+          0.06,
+          1.2
+        ],
         "cargo:oren-crate": [
           -13,
           0.43,
@@ -11877,6 +12570,26 @@
           3.6599999999999997,
           -8.3
         ],
+        "garden-service-shutter": [
+          -10,
+          1.5,
+          -7
+        ],
+        "garden-service-shutter:before": [
+          -10,
+          0.86,
+          -5.2
+        ],
+        "garden-service-shutter:after": [
+          -10,
+          0.86,
+          -8.8
+        ],
+        "garden-service-return": [
+          -12.8,
+          1.7,
+          -9
+        ],
         "final-floor-panel": [
           10,
           -0.175,
@@ -11935,12 +12648,42 @@
         "final-well-lip": [
           10,
           3.66,
-          -8.95
+          -7.45
         ],
         "final-well-centre": [
           10,
           3.66,
           -11
+        ],
+        "control:return-lever": [
+          -13,
+          0.8,
+          12
+        ],
+        "control:cell-lift:base": [
+          -1.4,
+          0.7,
+          2.5
+        ],
+        "control:cell-lift:upper": [
+          -1.4,
+          3.5,
+          2.5
+        ],
+        "control:cell-lift": [
+          -1.4,
+          0.7,
+          2.5
+        ],
+        "control:gallery-emitter": [
+          6,
+          4,
+          -1
+        ],
+        "control:junction": [
+          9,
+          6.3500000000000005,
+          -17
         ]
       },
       "notes": [

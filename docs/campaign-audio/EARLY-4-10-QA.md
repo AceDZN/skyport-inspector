@@ -23,3 +23,7 @@ The near panel's host wall spans the west bridge's normal approach: its width is
 The requested continuation stopped at this issue. Levels 5–10 have not been counted as played or verified. The browser was closed after preserving the result; its observed highest-unlocked value 5 reflects the reported faulty acceptance, not a valid campaign checkpoint for final proof. The final clean-save run must repeat after corrections.
 
 Page errors: zero. Captured console errors: zero. Audio remained at 29 buffers / three loops with zero load errors; portal/pickup/drop/pad/bridge/completion cues are present in snapshots. Captures `09-level4-cargo-quay.png` through `12-level4-west-bridge-win.png` are actual gameplay; the last was opened and inspected. Its filename describes the prototype's accepted result, not this QA verdict.
+
+## Subsequent corrected candidate
+
+A new fresh-prefix run is preserved separately in `early-4-10-v2/QA.md` and `early-4-10-v2/prototype-results.json`. It verifies the corrected level-4 large-cargo/full-west-span route, strict wrong-cargo rejection, level-5 forbidden-central-route rejection and valid side-shutter completion, plus level-6 small-triangle/central-pad/north-bridge completion. It stops at the reported back-facing destination-panel placement blocker in level 7; levels 8–10 remain pending. This later checkpoint supersedes the old level-4 bypass as current behavior without erasing that failure evidence. It is exploratory evidence across candidate builds, not a final fifty-level clean run.

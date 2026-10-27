@@ -1,0 +1,312 @@
+{
+  "title": "Rift Runner",
+  "version": "campaign-physical-draft-1",
+  "mode": "playing",
+  "level": 43,
+  "contrast": false,
+  "world": {
+    "coordinateSystem": "+Y up, -Z beyond glass, +X east. Player position is capsule center; eye +0.65Y.",
+    "room": "level-43",
+    "mission": "Rook told Mina that it carried the triangle crate. Take the crate Rook carried to the north dock.",
+    "player": {
+      "position": [
+        -5,
+        4.25,
+        9
+      ],
+      "velocity": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "pitch": -0.12000000000000001,
+      "grounded": true,
+      "crossings": 0
+    },
+    "portals": [
+      null,
+      null
+    ],
+    "crates": [
+      {
+        "id": "crate-a",
+        "label": "CRATE A",
+        "shape": "diamond",
+        "size": "small",
+        "start": "front",
+        "position": [
+          -4.5,
+          3.8200000000000003,
+          2
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      },
+      {
+        "id": "crate-b",
+        "label": "CRATE B",
+        "shape": "triangle",
+        "size": "small",
+        "start": "front",
+        "position": [
+          -0.8903866666666668,
+          4.3100000000000005,
+          2
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      }
+    ],
+    "pads": [
+      {
+        "id": "north-dock",
+        "label": "NORTH DOCK",
+        "position": [
+          0,
+          0.14,
+          -9
+        ],
+        "crate": null
+      }
+    ],
+    "bridges": [],
+    "guide": {
+      "actor": "Rook",
+      "position": [
+        -0.8903866666666668,
+        3.41,
+        1.1
+      ],
+      "carrying": "crate-b",
+      "phase": "carry",
+      "beaconBlinking": true
+    },
+    "held": null,
+    "lastBridge": null,
+    "outcome": null,
+    "respawns": 0,
+    "launchUsed": false,
+    "events": [],
+    "number": 43,
+    "name": "The Report Matches",
+    "family": "history-depot",
+    "devices": [
+      {
+        "id": "rack-lift",
+        "kind": "lift",
+        "label": "REPLAY CARGO RACK",
+        "position": [
+          -3,
+          3.2,
+          2
+        ],
+        "size": [
+          10,
+          0.4,
+          4
+        ],
+        "active": true,
+        "progress": 0,
+        "choice": "upper",
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      }
+    ],
+    "exits": [
+      {
+        "id": "north-dock-exit",
+        "label": "NORTH DOCK EXIT",
+        "position": [
+          0,
+          0.85,
+          -12
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "id": "watch-panel",
+        "position": [
+          -7.8,
+          5.1,
+          8
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "rack-access-panel",
+        "position": [
+          1.8,
+          5.1,
+          2
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "lower-rack-panel",
+        "position": [
+          -7.8,
+          1.7,
+          2
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "north-dock-panel",
+        "position": [
+          6.8,
+          1.7,
+          -10
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ]
+      }
+    ],
+    "controlPoints": [
+      {
+        "id": "rack-lift",
+        "position": [
+          -7.7,
+          4.1000000000000005,
+          3.8
+        ]
+      }
+    ],
+    "result": null,
+    "observedEvents": [
+      {
+        "key": "actor:Rook:carried:crate-b",
+        "time": 0.008333333333333333,
+        "states": {
+          "rack-lift:at:upper": true,
+          "rack-lift:at:base": false,
+          "rack-lift": "upper",
+          "rack-lift:moving": false,
+          "pad:north-dock:crate-a": false,
+          "pad:north-dock:crate-b": false,
+          "rack-lift:rising": false,
+          "actor:Rook:carrying:crate-b": true
+        }
+      },
+      {
+        "key": "cargo:crate-a:loaded:rack-lift",
+        "time": 0.008333333333333333,
+        "states": {
+          "rack-lift:at:upper": true,
+          "rack-lift:at:base": false,
+          "rack-lift": "upper",
+          "rack-lift:moving": false,
+          "pad:north-dock:crate-a": false,
+          "pad:north-dock:crate-b": false,
+          "rack-lift:rising": false,
+          "actor:Rook:carrying:crate-b": true
+        }
+      },
+      {
+        "key": "cargo:crate-a:arrived:upper-dock",
+        "time": 0.008333333333333333,
+        "states": {
+          "rack-lift:at:upper": true,
+          "rack-lift:at:base": false,
+          "rack-lift": "upper",
+          "rack-lift:moving": false,
+          "pad:north-dock:crate-a": false,
+          "pad:north-dock:crate-b": false,
+          "rack-lift:rising": false,
+          "actor:Rook:carrying:crate-b": true
+        }
+      }
+    ]
+  },
+  "assistance": {
+    "hints": 0,
+    "translations": 0,
+    "retries": 0
+  },
+  "progress": {
+    "version": 2,
+    "highestUnlocked": 50,
+    "resumeLevel": 43,
+    "records": {},
+    "updatedAt": 1793124358824
+  },
+  "events": [
+    {
+      "type": "level-start",
+      "level": 43,
+      "time": 0,
+      "number": 43,
+      "contrast": false
+    }
+  ],
+  "pointerLocked": false,
+  "controls": {
+    "unlocked": true,
+    "sensitivity": 0.0022,
+    "invert": false,
+    "touchMode": false,
+    "reduced": true
+  },
+  "audio": {
+    "context": "running",
+    "paused": false,
+    "loopCount": 3,
+    "activeSfx": 0,
+    "cuesPlayed": 0,
+    "energy": false,
+    "chapter": 5,
+    "intensity": 0,
+    "recentCues": [],
+    "paired": false,
+    "bridge": false,
+    "ducked": false,
+    "gains": {
+      "master": 0.8,
+      "music": 0.7,
+      "sfx": 0.74,
+      "voice": 0.8
+    },
+    "loadedBuffers": 29,
+    "loadErrors": [],
+    "timeline": 0.8613333333333334
+  },
+  "renderer": {
+    "software": false,
+    "drawCalls": 142,
+    "triangles": 52386,
+    "geometries": 136,
+    "textures": 22
+  }
+}

@@ -1,0 +1,489 @@
+{
+  "title": "Rift Runner",
+  "version": "campaign-physical-draft-1",
+  "mode": "playing",
+  "level": 41,
+  "contrast": false,
+  "world": {
+    "coordinateSystem": "+Y up, -Z beyond glass, +X east. Player position is capsule center; eye +0.65Y.",
+    "room": "level-41",
+    "mission": "Mina told Oren to bring her crate back to the front return platform.",
+    "player": {
+      "position": [
+        -3,
+        0.85,
+        10
+      ],
+      "velocity": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "pitch": -0.12000000000000001,
+      "grounded": true,
+      "crossings": 0
+    },
+    "portals": [
+      null,
+      null
+    ],
+    "crates": [
+      {
+        "id": "mina-crate",
+        "label": "MINA CRATE",
+        "shape": "diamond",
+        "size": "small",
+        "start": "front",
+        "owner": "Mina",
+        "position": [
+          10.7,
+          0.62,
+          -4.742286666666657
+        ],
+        "velocity": [
+          0,
+          0,
+          1.3996267164400196
+        ],
+        "held": false,
+        "crossings": 0
+      },
+      {
+        "id": "oren-crate",
+        "label": "OREN CRATE",
+        "shape": "diamond",
+        "size": "small",
+        "start": "front",
+        "owner": "Oren",
+        "position": [
+          9.3,
+          0.62,
+          -4.742286666666657
+        ],
+        "velocity": [
+          0,
+          0,
+          1.3996267164400196
+        ],
+        "held": false,
+        "crossings": 0
+      }
+    ],
+    "pads": [
+      {
+        "id": "front-return",
+        "label": "FRONT RETURN",
+        "position": [
+          -3,
+          0.14,
+          7
+        ],
+        "crate": null
+      },
+      {
+        "id": "rear-return",
+        "label": "REAR RETURN",
+        "position": [
+          0,
+          0.14,
+          -2
+        ],
+        "crate": null
+      }
+    ],
+    "bridges": [],
+    "guide": null,
+    "held": null,
+    "lastBridge": null,
+    "outcome": null,
+    "respawns": 0,
+    "launchUsed": false,
+    "events": [],
+    "number": 41,
+    "name": "Her Parcel, Your Route",
+    "family": "return-loop",
+    "devices": [
+      {
+        "id": "return-belt",
+        "kind": "conveyor",
+        "label": "RETURN BELT",
+        "position": [
+          10,
+          0.1,
+          -3
+        ],
+        "size": [
+          3.4,
+          0.2,
+          12
+        ],
+        "active": true,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "return-elbow-belt",
+        "kind": "conveyor",
+        "label": "RETURN ELBOW BELT",
+        "position": [
+          8,
+          0.1,
+          3.3
+        ],
+        "size": [
+          7,
+          0.2,
+          2.4
+        ],
+        "active": true,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "front-receiving-belt",
+        "kind": "conveyor",
+        "label": "FRONT RECEIVING BELT",
+        "position": [
+          5,
+          0.1,
+          7
+        ],
+        "size": [
+          2.4,
+          0.2,
+          7
+        ],
+        "active": true,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "return-lever",
+        "kind": "switch",
+        "label": "RETURN LEVER",
+        "position": [
+          -4,
+          0.8,
+          9
+        ],
+        "size": [
+          0.6,
+          1,
+          0.55
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "return-shutter",
+        "kind": "shutter",
+        "label": "RETURN SHUTTER",
+        "position": [
+          10,
+          1.5,
+          1
+        ],
+        "size": [
+          3.8,
+          3,
+          0.35
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      }
+    ],
+    "exits": [
+      {
+        "id": "front-return-exit",
+        "label": "FRONT RETURN EXIT",
+        "position": [
+          -5,
+          0.85,
+          11
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      },
+      {
+        "id": "rear-return-exit",
+        "label": "REAR RETURN EXIT",
+        "position": [
+          0,
+          0.85,
+          -4
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "id": "front-return-panel",
+        "position": [
+          -6.8,
+          1.7,
+          6
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "pickup-panel",
+        "position": [
+          12.8,
+          1.7,
+          2.4
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "rear-return-panel",
+        "position": [
+          -2.8,
+          1.7,
+          -3
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ]
+      }
+    ],
+    "controlPoints": [
+      {
+        "id": "return-lever",
+        "position": [
+          -4,
+          0.8,
+          9
+        ]
+      }
+    ],
+    "result": null,
+    "observedEvents": [
+      {
+        "key": "cargo:mina-crate:loaded:return-belt",
+        "time": 0.008333333333333333,
+        "states": {
+          "return-lever": false,
+          "return-shutter": "closed",
+          "pad:front-return:mina-crate": false,
+          "pad:front-return:oren-crate": false,
+          "pad:rear-return:mina-crate": false,
+          "pad:rear-return:oren-crate": false,
+          "return-belt:moving": false,
+          "return-belt:rising": false,
+          "return-elbow-belt:moving": false,
+          "return-elbow-belt:rising": false,
+          "front-receiving-belt:moving": false,
+          "front-receiving-belt:rising": false,
+          "return-lever:moving": false,
+          "return-lever:rising": false,
+          "return-shutter:moving": false,
+          "return-shutter:rising": false
+        }
+      },
+      {
+        "key": "cargo:oren-crate:loaded:return-belt",
+        "time": 0.008333333333333333,
+        "states": {
+          "return-lever": false,
+          "return-shutter": "closed",
+          "pad:front-return:mina-crate": false,
+          "pad:front-return:oren-crate": false,
+          "pad:rear-return:mina-crate": false,
+          "pad:rear-return:oren-crate": false,
+          "return-belt:moving": false,
+          "return-belt:rising": false,
+          "return-elbow-belt:moving": false,
+          "return-elbow-belt:rising": false,
+          "front-receiving-belt:moving": false,
+          "front-receiving-belt:rising": false,
+          "return-lever:moving": false,
+          "return-lever:rising": false,
+          "return-shutter:moving": false,
+          "return-shutter:rising": false
+        }
+      },
+      {
+        "key": "conveyor:return-belt:carried:mina-crate",
+        "time": 0.016666666666666666,
+        "states": {
+          "return-lever": false,
+          "return-shutter": "closed",
+          "pad:front-return:mina-crate": false,
+          "pad:front-return:oren-crate": false,
+          "pad:rear-return:mina-crate": false,
+          "pad:rear-return:oren-crate": false,
+          "return-belt:moving": false,
+          "return-belt:rising": false,
+          "return-elbow-belt:moving": false,
+          "return-elbow-belt:rising": false,
+          "front-receiving-belt:moving": false,
+          "front-receiving-belt:rising": false,
+          "return-lever:moving": false,
+          "return-lever:rising": false,
+          "return-shutter:moving": false,
+          "return-shutter:rising": false
+        }
+      },
+      {
+        "key": "conveyor:carried:mina-crate",
+        "time": 0.016666666666666666,
+        "states": {
+          "return-lever": false,
+          "return-shutter": "closed",
+          "pad:front-return:mina-crate": false,
+          "pad:front-return:oren-crate": false,
+          "pad:rear-return:mina-crate": false,
+          "pad:rear-return:oren-crate": false,
+          "return-belt:moving": false,
+          "return-belt:rising": false,
+          "return-elbow-belt:moving": false,
+          "return-elbow-belt:rising": false,
+          "front-receiving-belt:moving": false,
+          "front-receiving-belt:rising": false,
+          "return-lever:moving": false,
+          "return-lever:rising": false,
+          "return-shutter:moving": false,
+          "return-shutter:rising": false
+        }
+      },
+      {
+        "key": "conveyor:return-belt:carried:oren-crate",
+        "time": 0.016666666666666666,
+        "states": {
+          "return-lever": false,
+          "return-shutter": "closed",
+          "pad:front-return:mina-crate": false,
+          "pad:front-return:oren-crate": false,
+          "pad:rear-return:mina-crate": false,
+          "pad:rear-return:oren-crate": false,
+          "return-belt:moving": false,
+          "return-belt:rising": false,
+          "return-elbow-belt:moving": false,
+          "return-elbow-belt:rising": false,
+          "front-receiving-belt:moving": false,
+          "front-receiving-belt:rising": false,
+          "return-lever:moving": false,
+          "return-lever:rising": false,
+          "return-shutter:moving": false,
+          "return-shutter:rising": false
+        }
+      },
+      {
+        "key": "conveyor:carried:oren-crate",
+        "time": 0.016666666666666666,
+        "states": {
+          "return-lever": false,
+          "return-shutter": "closed",
+          "pad:front-return:mina-crate": false,
+          "pad:front-return:oren-crate": false,
+          "pad:rear-return:mina-crate": false,
+          "pad:rear-return:oren-crate": false,
+          "return-belt:moving": false,
+          "return-belt:rising": false,
+          "return-elbow-belt:moving": false,
+          "return-elbow-belt:rising": false,
+          "front-receiving-belt:moving": false,
+          "front-receiving-belt:rising": false,
+          "return-lever:moving": false,
+          "return-lever:rising": false,
+          "return-shutter:moving": false,
+          "return-shutter:rising": false
+        }
+      }
+    ]
+  },
+  "assistance": {
+    "hints": 0,
+    "translations": 0,
+    "retries": 0
+  },
+  "progress": {
+    "version": 2,
+    "highestUnlocked": 50,
+    "resumeLevel": 41,
+    "records": {},
+    "updatedAt": 1793124356157
+  },
+  "events": [
+    {
+      "type": "level-start",
+      "level": 41,
+      "time": 0,
+      "number": 41,
+      "contrast": false
+    }
+  ],
+  "pointerLocked": false,
+  "controls": {
+    "unlocked": true,
+    "sensitivity": 0.0022,
+    "invert": false,
+    "touchMode": false,
+    "reduced": true
+  },
+  "audio": {
+    "context": "running",
+    "paused": false,
+    "loopCount": 3,
+    "activeSfx": 0,
+    "cuesPlayed": 0,
+    "energy": false,
+    "chapter": 5,
+    "intensity": 0,
+    "recentCues": [],
+    "paired": false,
+    "bridge": false,
+    "ducked": false,
+    "gains": {
+      "master": 0.8,
+      "music": 0.7,
+      "sfx": 0.74,
+      "voice": 0.8
+    },
+    "loadedBuffers": 29,
+    "loadErrors": [],
+    "timeline": 0.8026666666666666
+  },
+  "renderer": {
+    "software": false,
+    "drawCalls": 184,
+    "triangles": 41260,
+    "geometries": 145,
+    "textures": 16
+  }
+}

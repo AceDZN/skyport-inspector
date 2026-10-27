@@ -1,0 +1,343 @@
+{
+  "level": 1,
+  "status": "PASS",
+  "state": {
+    "title": "Rift Runner",
+    "version": "campaign-physical-draft-1",
+    "mode": "result",
+    "level": 1,
+    "contrast": false,
+    "world": {
+      "coordinateSystem": "+Y up, -Z beyond glass, +X east. Player position is capsule center; eye +0.65Y.",
+      "room": "level-1",
+      "mission": "Go through the rift and leave by the east door.",
+      "player": {
+        "position": [
+          3.780865865296835,
+          0.85,
+          -7.3935658462453375
+        ],
+        "velocity": [
+          3.946122349364506,
+          0,
+          1.2745521753154954
+        ],
+        "yaw": -1.883207826929637,
+        "pitch": 0,
+        "grounded": true,
+        "crossings": 1
+      },
+      "portals": [
+        {
+          "surface": "near-panel",
+          "position": [
+            -3.000000492320925,
+            1.45,
+            3.025
+          ],
+          "normal": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "surface": "installed-b",
+          "position": [
+            -3,
+            1.45,
+            -10.475
+          ],
+          "normal": [
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "crates": [],
+      "pads": [],
+      "bridges": [],
+      "guide": null,
+      "held": null,
+      "lastBridge": null,
+      "outcome": {
+        "crateId": "",
+        "pad": "behind",
+        "bridge": "east",
+        "crateOnPad": true,
+        "playerCrossed": true,
+        "atExit": true,
+        "portalTraversals": 1,
+        "cratePortalTraversals": 0
+      },
+      "respawns": 0,
+      "launchUsed": false,
+      "events": [
+        {
+          "type": "portalA",
+          "time": 20346,
+          "surface": "near-panel",
+          "paired": true
+        },
+        {
+          "type": "enter",
+          "time": 23828,
+          "body": "player",
+          "from": 0,
+          "to": 1,
+          "fromSurface": "near-panel",
+          "toSurface": "installed-b",
+          "speed": 2.777424413903664,
+          "exitSpeed": 2.777424413903664,
+          "held": null
+        },
+        {
+          "type": "exit",
+          "time": 23828,
+          "body": "player"
+        },
+        {
+          "type": "complete",
+          "time": 26824,
+          "goalMatched": true,
+          "exit": "east-exit"
+        }
+      ],
+      "number": 1,
+      "name": "First Light",
+      "family": "threshold",
+      "devices": [],
+      "exits": [
+        {
+          "id": "east-exit",
+          "label": "EAST EXIT",
+          "position": [
+            5,
+            1,
+            -7
+          ],
+          "size": [
+            2.5,
+            2.8,
+            2.5
+          ]
+        },
+        {
+          "id": "west-exit",
+          "label": "WEST EXIT",
+          "position": [
+            -5,
+            1,
+            -7
+          ],
+          "size": [
+            2.5,
+            2.8,
+            2.5
+          ]
+        }
+      ],
+      "panels": [
+        {
+          "id": "near-panel",
+          "position": [
+            -3,
+            1.7,
+            3
+          ],
+          "normal": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "id": "installed-b",
+          "position": [
+            -3,
+            1.7,
+            -10.5
+          ],
+          "normal": [
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "controlPoints": [],
+      "result": {
+        "physicalComplete": true,
+        "goalMatched": true,
+        "exit": "east-exit",
+        "reason": "Your cargo, route, machinery and order match the English mission.",
+        "events": [
+          {
+            "key": "portal:player:near-panel",
+            "time": 23.82759999999956,
+            "states": {
+              "origin-panel": "near-panel"
+            }
+          },
+          {
+            "key": "portal:enter:near-panel",
+            "time": 23.82759999999956,
+            "states": {
+              "origin-panel": "near-panel"
+            }
+          },
+          {
+            "key": "exit:east-exit",
+            "time": 26.82416666666605,
+            "states": {
+              "origin-panel": "near-panel"
+            }
+          }
+        ],
+        "mechanisms": [
+          "portals"
+        ]
+      },
+      "observedEvents": [
+        {
+          "key": "portal:player:near-panel",
+          "time": 23.82759999999956,
+          "states": {
+            "origin-panel": "near-panel"
+          }
+        },
+        {
+          "key": "portal:enter:near-panel",
+          "time": 23.82759999999956,
+          "states": {
+            "origin-panel": "near-panel"
+          }
+        },
+        {
+          "key": "exit:east-exit",
+          "time": 26.82416666666605,
+          "states": {
+            "origin-panel": "near-panel"
+          }
+        }
+      ]
+    },
+    "assistance": {
+      "hints": 0,
+      "translations": 0,
+      "retries": 0
+    },
+    "progress": {
+      "version": 2,
+      "highestUnlocked": 2,
+      "resumeLevel": 2,
+      "records": {
+        "1": {
+          "completed": true,
+          "runs": 1,
+          "completions": 1,
+          "unaided": true,
+          "bestRetries": 0,
+          "last": {
+            "goalMatched": true,
+            "assistance": 0,
+            "retries": 0,
+            "seconds": 26.82416666666605,
+            "portalCrossings": 1,
+            "mechanisms": [
+              "portals"
+            ]
+          }
+        }
+      },
+      "updatedAt": 1793124255639
+    },
+    "events": [
+      {
+        "type": "level-start",
+        "level": 1,
+        "time": 0,
+        "number": 1,
+        "contrast": false
+      },
+      {
+        "type": "portalA",
+        "level": 1,
+        "time": 20346,
+        "surface": "near-panel",
+        "paired": true
+      },
+      {
+        "type": "enter",
+        "level": 1,
+        "time": 23819,
+        "body": "player",
+        "from": 0,
+        "to": 1,
+        "fromSurface": "near-panel",
+        "toSurface": "installed-b",
+        "speed": 2.777424413903664,
+        "exitSpeed": 2.777424413903664,
+        "held": null
+      },
+      {
+        "type": "exit",
+        "level": 1,
+        "time": 23819,
+        "body": "player"
+      },
+      {
+        "type": "complete",
+        "level": 1,
+        "time": 26816,
+        "goalMatched": true,
+        "exit": "east-exit"
+      }
+    ],
+    "pointerLocked": false,
+    "controls": {
+      "unlocked": true,
+      "sensitivity": 0.0022,
+      "invert": false,
+      "touchMode": false,
+      "reduced": false
+    },
+    "audio": {
+      "context": "running",
+      "paused": false,
+      "loopCount": 3,
+      "activeSfx": 1,
+      "cuesPlayed": 4,
+      "energy": true,
+      "chapter": 1,
+      "intensity": 0,
+      "recentCues": [
+        "portalA",
+        "enter",
+        "exit",
+        "complete"
+      ],
+      "paired": true,
+      "bridge": false,
+      "ducked": false,
+      "gains": {
+        "master": 0.8,
+        "music": 0.7,
+        "sfx": 0.74,
+        "voice": 0.8
+      },
+      "loadedBuffers": 29,
+      "loadErrors": [],
+      "timeline": 24.599999999999998
+    },
+    "renderer": {
+      "software": false,
+      "drawCalls": 22,
+      "triangles": 330,
+      "geometries": 89,
+      "textures": 15
+    }
+  },
+  "completedAt": "2026-10-27T18:04:15.760Z"
+}

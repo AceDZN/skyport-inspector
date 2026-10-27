@@ -38,7 +38,7 @@ export function auditFixture(row:Any,w:Any):Issue[]{
   const p=key.split(':'),[domain,id,action,object]=p;
   if(domain==='exit'&&!w.exits.some((e:Any)=>e.id===id))add('references','EVENT_EXIT',`Event ${key} names absent exit`);
   if(domain==='region'&&!w.regions.some((r:Any)=>r.id===key))add('references','EVENT_REGION',`Event ${key} names absent region`);
-  if(domain==='route'&&!w.regions.some((r:Any)=>r.id===key)&&!w.bridges.some((b:Any)=>b.route===id))add('references','EVENT_ROUTE',`Event ${key} names absent route`);
+  if(domain==='route'&&!w.regions.some((r:Any)=>r.id===key)&&!w.bridges.some((b:Any)=>b.route===id||b.id===id)&&!w.devices.some((d:Any)=>d.kind==='junction'&&(d.states??[]).some((state:string)=>state+'-bridge'===id)))add('references','EVENT_ROUTE',`Event ${key} names absent route`);
   if(domain==='portal'){
    const s=p.at(-1)!;if(p.length>2&&!surfaces.has(s))add('references','EVENT_SURFACE',`Event ${key} names absent surface ${s}`);
   }
@@ -83,6 +83,7 @@ export function auditFixture(row:Any,w:Any):Issue[]{
   if(g.relay){const e=device(g.relay.id);if(e?.kind!=='relay')add('references','GOAL_RELAY',`${g.relay.id} is not a real beam relay`);else if(!e.receivers?.some((x:Any)=>x.id===g.relay.receiver))add('references','RELAY_TARGET',`${g.relay.id} cannot target ${g.relay.receiver}`);}
   for(const e of [...g.order??[],...g.forbidden??[]])entityEvent(e);
   for(const h of g.temporal?.history??[]){entityEvent(h.object?h.event+':'+h.object:h.event);if(h.state)stateRef(h.state);}
+  for(const t of g.temporal?.forbiddenBefore??[]){entityEvent(t.event);if(t.after)entityEvent(t.after);entityEvent(t.until);}
   if(g.temporal?.during){for(const e of g.temporal.during.events??[])entityEvent(e);stateRef(g.temporal.during.state);}
   for(const t of [g.temporal?.throughout,g.temporal?.until].filter(Boolean)){if(t.interval){entityEvent(t.interval.start);entityEvent(t.interval.end);}else entityEvent(t.event);stateRef(t.state);}
   for(const [j,a] of (g.cargo??[]).entries())for(const b of (g.cargo??[]).slice(j+1)){if(a.id!==b.id&&pads.has(a.pad)&&pads.has(b.pad)&&distance((pads.get(a.pad)as Any).position,(pads.get(b.pad)as Any).position)<.001)add('geometry','COLOCATED_REQUIRED_PADS',`${a.pad}/${b.pad} coincide but require distinct ${a.id}/${b.id}; both sensors select the same first body`);}
@@ -93,7 +94,7 @@ export function auditFixture(row:Any,w:Any):Issue[]{
  for(const [i,a] of w.cargo.entries())for(const b of w.cargo.slice(i+1)){const ah=a.spec.size==='large'?.55:.42,bh=b.spec.size==='large'?.55:.42;if(a.position.every((v:number,k:number)=>Math.abs(v-b.position[k])<ah+bh-.01))add('geometry','OVERLAPPING_CARGO',`${a.spec.id}/${b.spec.id} start with intersecting physical bodies`);}
  const badPads=['one-outer-pad-only','diamond-platform-opens-south-shutter','change-cargo/pad','tomorrow-rear','one-pad-only','inner-pad-bypass'];for(const id of badPads)if(pads.has(id))add('inventory','PROSE_BECAME_PAD',`${id} is an alternative description accidentally materialised as a pad`);
  const minimum=(kind:string,count:number)=>{const n=w.devices.filter((x:Any)=>x.kind===kind).length;if(n<count)add('fidelity','MISSING_SYSTEM',`Plan requires >=${count} ${kind}; fixture has ${n}`);};
- const systemRequirements:Record<number,Record<string,number>>={8:{shutter:1},11:{lift:1},12:{junction:1},13:{shutter:1},14:{lift:1},15:{shutter:2},16:{shutter:1},17:{shutter:2},18:{lift:1,junction:1},19:{lift:1},20:{lift:1},21:{'moving-platform':2},23:{conveyor:2},25:{conveyor:1},26:{conveyor:3},27:{lift:2},28:{conveyor:1,junction:1},29:{lift:1,shutter:1,conveyor:1},31:{relay:1,shutter:2},33:{lift:1,shutter:1,relay:1},35:{},36:{lift:1,shutter:2},37:{lift:2},38:{relay:1,shutter:2},40:{lift:1,relay:1,junction:1},41:{conveyor:3},42:{conveyor:2,junction:1,lift:2},43:{lift:1},44:{shutter:2},46:{shutter:2},47:{'moving-platform':2},48:{lift:1,relay:1},49:{shutter:1},50:{conveyor:3,lift:1,junction:1,relay:1,shutter:2}};
+ const systemRequirements:Record<number,Record<string,number>>={8:{shutter:1},11:{lift:1},12:{junction:1},13:{shutter:1},14:{lift:1},15:{shutter:2},16:{shutter:1},17:{shutter:2},18:{lift:1,junction:1},19:{lift:1},20:{lift:1},21:{'moving-platform':2},23:{conveyor:2},25:{conveyor:1},26:{conveyor:3},27:{lift:2},28:{conveyor:1,junction:1},29:{lift:1,shutter:1,conveyor:1},31:{relay:1,shutter:2},33:{lift:1,shutter:1,relay:1},35:{},36:{lift:1,shutter:2},37:{lift:2},38:{relay:1,shutter:2},40:{lift:1,junction:1},41:{conveyor:1,shutter:1},42:{conveyor:1,junction:1,lift:2},43:{lift:1},44:{shutter:2},46:{shutter:2},47:{'moving-platform':2},48:{lift:1,relay:1},49:{shutter:1},50:{conveyor:2,lift:1,junction:1,relay:1,shutter:2}};
  for(const [kind,n] of Object.entries(systemRequirements[row.number]??{}))minimum(kind,n);
  const needs=(id:string,kind:string)=>{if(device(id)?.kind!==kind)add('fidelity','WRONG_OR_MISSING_ROLE',`${id} must be an actual ${kind}, found ${device(id)?.kind??'absent'}`);};
  if(row.number===8)needs('remote-shutter','shutter');if(row.number===15){needs('first-shutter','shutter');needs('second-shutter','shutter');}
@@ -113,7 +114,7 @@ export function auditFixture(row:Any,w:Any):Issue[]{
  if(row.number===13)requireCircuit('central-shutter','all',['west-outer','east-outer']);
  if(row.number===17){requireCircuit('north-shutter','all',['triangle-platform']);requireCircuit('south-shutter','all',['diamond-platform']);}
  if(row.number===20)requireCircuit('lift','all',['outer']);if(row.number===29)requireCircuit('cargo-gate','all',['gate-socket']);if(row.number===37)requireCircuit('freight-lift','all',['lower-outer','middle-outer']);if(row.number===50)requireCircuit('cell-lift','all',['garden-socket']);
- if([31,33,36,38,44,46,49,50].includes(row.number))for(const relay of w.devices.filter((x:Any)=>x.kind==='relay'))for(const receiver of relay.receivers??[])if(!references(w,receiver.id))add('wiring','INERT_RECEIVER',`${relay.id}→${receiver.id} drives no physical door/bridge/lift circuit`);
+ if([31,33,36,38,44,46,49,50].includes(row.number))for(const relay of w.devices.filter((x:Any)=>x.kind==='relay'))for(const receiver of relay.receivers??[])if(goals.some((g:Any)=>g.relay?.id===relay.id&&g.relay?.receiver===receiver.id)&&!references(w,receiver.id))add('wiring','INERT_RECEIVER',`${relay.id}→${receiver.id} drives no physical door/bridge/lift circuit`);
  if(row.number===16&&!w.devices.some((x:Any)=>x.kind==='shutter'&&x.circuit?.any?.length>=2)&&!w.bridges.some((x:Any)=>x.circuit?.any?.length>=2))add('wiring','MISSING_OR','No real OR-controlled door/bridge exists');
  return found.filter((x,i,all)=>all.findIndex(y=>same(x,y))===i);
 }
@@ -128,6 +129,12 @@ for(const {row,world} of auditRows){
  });
  for(const category of ['integrity','references','inventory','geometry','fidelity','wiring'])test(`L${row.number}: ${category} conforms to the authored catalogue`,()=>{const found=issues.filter(x=>x.level===row.number&&x.category===category);assert.equal(found.length,0,format(found));});
 }
+for(const row of rows)test(`L${row.number}: idle spawn never completes an exit or respawns before the player acts (unit, not play evidence)`,()=>{
+ const w=new CampaignWorld(row);for(let i=0;i<120;i++)w.step(1/120,{forward:0,strafe:0,jump:false});assert.equal(w.campaignResult,undefined,`Spawn reached ${w.campaignResult?.exit} without input`);assert.equal(w.respawns,0,'Idle spawn falls or embeds before acting');assert.ok(w.player.pos.toArray().every(Number.isFinite));
+});
+test('L17: north bridge responds to triangle platform alone, not an unrelated diamond pad',()=>{
+ const w=makeBlueprint(rows[16]),bridge=w.bridges.find(b=>b.id==='north-bridge')!;assert.ok(bridge,'Actual north bridge absent');const machines=new MachineSystems(w.devices);machines.update(1/120,[],{'triangle-platform':true,'diamond-platform':false});assert.equal(machines.circuit(bridge.circuit),true,'Triangle pad alone fails to open full north path');
+});
 for(const [number,carried,beside] of [[22,'crate-a','crate-b'],[24,'crate-a','crate-b'],[43,'crate-b','crate-a']] as const){
  test(`L${number}: fixed replay roles and actual beacon-time history agree with both tasks`,()=>{
   const row=rows.find(r=>r.number===number)!;const w=new CampaignWorld(row);assert.equal(w.blueprint.history?.carried,carried);assert.equal(w.blueprint.history?.beside,beside);const start=w.crates.find(c=>c.id===carried)!.pos.clone();for(let i=0;i<720;i++)w.step(1/120,{forward:0,strafe:0,jump:false});
@@ -149,11 +156,17 @@ for(const [number,id] of [[20,'lift'],[37,'freight-lift'],[50,'cell-lift']] as c
 test('L16: a real central delivery is remembered as the prohibited received event (unit setup, not play evidence)',()=>{
  const w=new CampaignWorld(rows[15]),c=w.crates.find(x=>x.id==='cargo-1')!,pad=w.pads.find(p=>p.id==='central')!;c.pos.copy(pad.pos).add({x:0,y:c.half.y,z:0} as any);c.vel.set(0,0,0);for(let i=0;i<30;i++)w.step(1/120,{forward:0,strafe:0,jump:false});assert.ok(w.ledger.some(e=>e.key==='cargo:cargo-1:received:central'),'Actual central pad activation does not emit the forbidden delivery event');
 });
+test('L35: static physical bridge span produces real held-cargo crossing history, rejects edge touch and portal jumps (unit, not play evidence)',()=>{
+ const w=new CampaignWorld(rows[34]);for(const [id,bodyId] of [['east-wide-bridge','wide-cargo'],['west-footbridge','small-cargo']]){
+  const solid=w.blueprint.solids.find(s=>s.id===id)!,size=solid.max.clone().sub(solid.min),center=solid.min.clone().add(solid.max).multiplyScalar(.5),axis=size.x>=size.z?'x':'z',length=Math.max(size.x,size.z),body=w.crates.find(c=>c.id===bodyId)!;body.held=true;w.player.grounded=true;body.pos.copy(center);body.pos.y=solid.max.y+body.half.y;body.pos[axis]=center[axis]-length/2+.1;w.player.pos.copy(body.pos);w.player.pos.y=solid.max.y+w.player.half.y;w.observeBridgeCrossings();body.pos[axis]+=.2;w.player.pos.copy(body.pos);w.player.pos.y=solid.max.y+w.player.half.y;w.observeBridgeCrossings();const event=`cargo:${bodyId}:cross:${id}`;assert.ok(!w.ledger.some(e=>e.key===event),'Touching edge counted as full span');body.pos[axis]=center[axis]+length/2-.1;w.player.pos.copy(body.pos);w.player.pos.y=solid.max.y+w.player.half.y;w.observeBridgeCrossings();assert.ok(w.ledger.some(e=>e.key===event),`No static bridge cargo producer for ${id}`);
+ }
+ const a=new CampaignWorld(rows[34]),bridge=a.blueprint.solids.find(s=>s.id==='east-wide-bridge')!,cargo=a.crates.find(c=>c.id==='wide-cargo')!;cargo.held=true;a.player.grounded=true;cargo.pos.set(5,bridge.max.y+cargo.half.y,bridge.min.z+.1);a.player.pos.copy(cargo.pos);a.player.pos.y=bridge.max.y+a.player.half.y;a.observeBridgeCrossings();cargo.crossings++;cargo.pos.z=bridge.max.z-.1;a.player.pos.copy(cargo.pos);a.player.pos.y=bridge.max.y+a.player.half.y;a.observeBridgeCrossings();assert.ok(!a.ledger.some(e=>e.key==='cargo:wide-cargo:cross:east-wide-bridge'),'Portal jump counted as physical bridge crossing');
+});
 function witness(g:Any){
  const states:Record<string,string|boolean>=Object.fromEntries((g.devices??[]).map((d:Any)=>[d.id,d.state]));if(g.relay)states[g.relay.id]=g.relay.receiver;
  const t=g.temporal??{};for(const x of [t.during,t.throughout,t.until,...t.history??[]])if(x?.state)states[x.state]=true;
  const keys:string[]=[...g.order??[]];const add=(key:string)=>{if(!keys.includes(key))keys.push(key);};
- for(const h of t.history??[])add(h.object?h.event+':'+h.object:h.event);for(const e of t.during?.events??[])add(e);if(t.throughout){add(t.throughout.interval.start);add(t.throughout.interval.end);}if(t.until)add(t.until.event);
+ for(const h of t.history??[])add(h.object?h.event+':'+h.object:h.event);for(const e of t.during?.events??[])add(e);if(t.throughout){const a=t.throughout.interval.start,b=t.throughout.interval.end;if(!keys.includes(a)&&keys.includes(b))keys.splice(keys.indexOf(b),0,a);else add(a);add(b);}if(t.until)add(t.until.event);
  return {exit:g.exit,pads:Object.fromEntries((g.cargo??[]).map((c:Any)=>[c.pad,c.id])),states,events:keys.map((key,i)=>({key,time:i+1,states:{...states}}))};
 }
 for(const row of rows){
@@ -165,6 +178,9 @@ for(const row of rows){
   for(const goal of [...base,...contrast])for(const key of goal.order??[]){const actual=witness(goal);actual.events=actual.events.filter(e=>e.key!==key);assert.equal(evaluateGoal(goal,actual).pass,false,`Missing directly requested event ${key} is accepted`);}
  });
 }
+test('L19: a prohibited early unload cannot be erased by reloading and later reaching the correct final state',()=>{
+ const row=rows[18];for(const goal of [row.normalizedGoal,...row.normalizedGoalAlternatives??[],(row.semanticDecision.changedWordingCheck as Any).normalizedContrastGoal,...(row.semanticDecision.changedWordingCheck as Any).normalizedContrastGoalAlternatives??[]]){const rule=(goal as Any).temporal?.forbiddenBefore?.[0];assert.ok(rule?.event&&rule?.after&&rule?.until,'Direct negative BEFORE instruction lacks ledger rule');const actual=witness(goal);const load=actual.events.findIndex(e=>e.key===rule.after);actual.events.splice(load+1,0,{key:rule.event,time:actual.events[load].time+.1,states:{...actual.states}});assert.equal(evaluateGoal(goal,actual).pass,false,'Earlier prohibited unload was erased by a later correct delivery');}
+});
 test('L27: descending movement cannot satisfy RISING in either English meaning',()=>{
  const row=rows[26];for(const goal of [row.normalizedGoal,(row.semanticDecision.changedWordingCheck as Any).normalizedContrastGoal]){const state=goal.temporal!.during!.state;assert.ok(state.endsWith(':rising'),'Canonical wording still accepts generic movement');const actual=witness(goal);for(const e of actual.events){e.states[state]=false;e.states[state.replace(':rising',':moving')]=true;}assert.equal(evaluateGoal(goal,actual).pass,false);}
 });

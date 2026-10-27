@@ -1,0 +1,684 @@
+{
+  "title": "Rift Runner",
+  "version": "campaign-physical-draft-1",
+  "mode": "playing",
+  "level": 50,
+  "contrast": false,
+  "world": {
+    "coordinateSystem": "+Y up, -Z beyond glass, +X east. Player position is capsule center; eye +0.65Y.",
+    "room": "level-50",
+    "mission": "Mina told Oren to return her crate to the garden socket. Keep it there while the lift raises the relay cell. Put the raised cell in the upper socket, then power the launch receiver. The final notice changes only the exit to west.",
+    "player": {
+      "position": [
+        -11,
+        0.97,
+        10.611939643671109
+      ],
+      "velocity": [
+        0,
+        0,
+        -1.599999971283405
+      ],
+      "yaw": 0,
+      "pitch": -0.12000000000000001,
+      "grounded": true,
+      "crossings": 0
+    },
+    "portals": [
+      null,
+      null
+    ],
+    "crates": [
+      {
+        "id": "oren-crate",
+        "label": "OREN CRATE",
+        "shape": "diamond",
+        "size": "small",
+        "start": "front",
+        "owner": "Oren",
+        "position": [
+          -13,
+          0.42,
+          10
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      },
+      {
+        "id": "relay-cell",
+        "label": "RELAY CELL",
+        "shape": "triangle",
+        "size": "small",
+        "start": "front",
+        "position": [
+          1,
+          0.42,
+          9
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      },
+      {
+        "id": "mina-crate",
+        "label": "MINA CRATE",
+        "shape": "diamond",
+        "size": "small",
+        "start": "front",
+        "owner": "Mina",
+        "position": [
+          -8,
+          0.42,
+          10
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      },
+      {
+        "id": "gallery-screen",
+        "label": "GALLERY SCREEN",
+        "shape": "triangle",
+        "size": "large",
+        "start": "front",
+        "position": [
+          6.15,
+          3.75,
+          -2
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      }
+    ],
+    "pads": [
+      {
+        "id": "garden-socket",
+        "label": "GARDEN SOCKET",
+        "position": [
+          -10,
+          0.14,
+          -4
+        ],
+        "crate": null
+      },
+      {
+        "id": "upper-socket",
+        "label": "UPPER SOCKET",
+        "position": [
+          1.8,
+          2.94,
+          -4
+        ],
+        "crate": null
+      }
+    ],
+    "bridges": [],
+    "guide": null,
+    "held": null,
+    "lastBridge": null,
+    "outcome": null,
+    "respawns": 0,
+    "launchUsed": false,
+    "events": [],
+    "number": 50,
+    "name": "The Living Relay",
+    "family": "finale",
+    "devices": [
+      {
+        "id": "return-lever",
+        "kind": "switch",
+        "label": "RETURN LEVER",
+        "position": [
+          -13,
+          0.8,
+          12
+        ],
+        "size": [
+          0.6,
+          1,
+          0.55
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "return-shutter",
+        "kind": "shutter",
+        "label": "RETURN SHUTTER",
+        "position": [
+          -10,
+          1.5,
+          3.5
+        ],
+        "size": [
+          3.8,
+          3,
+          0.35
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "loop-belt",
+        "kind": "conveyor",
+        "label": "LOOP BELT",
+        "position": [
+          -10,
+          0.06,
+          8
+        ],
+        "size": [
+          2.5,
+          0.12,
+          12
+        ],
+        "active": true,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "loop-belt-return",
+        "kind": "conveyor",
+        "label": "LOOP BELT RETURN",
+        "position": [
+          -8,
+          0.06,
+          1.2
+        ],
+        "size": [
+          6,
+          0.12,
+          2.5
+        ],
+        "active": true,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "cell-feeder-belt",
+        "kind": "conveyor",
+        "label": "CELL FEEDER BELT",
+        "position": [
+          -1.2,
+          0.06,
+          1.2
+        ],
+        "size": [
+          6,
+          0.12,
+          2.5
+        ],
+        "active": true,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "cell-lift",
+        "kind": "lift",
+        "label": "CELL LIFT",
+        "position": [
+          0,
+          -0.2,
+          1
+        ],
+        "size": [
+          3.4,
+          0.4,
+          3.4
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": "base",
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "gallery-emitter",
+        "kind": "relay",
+        "label": "GALLERY EMITTER",
+        "position": [
+          6,
+          4,
+          -1
+        ],
+        "size": [
+          0.65,
+          1,
+          0.65
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": "launch-shutter",
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "launch-shutter",
+        "kind": "receiver",
+        "label": "LAUNCH SHUTTER",
+        "position": [
+          10,
+          5,
+          -5
+        ],
+        "size": [
+          0.7,
+          0.7,
+          0.25
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "garden-receiver",
+        "kind": "receiver",
+        "label": "GARDEN RECEIVER",
+        "position": [
+          5,
+          4,
+          -5
+        ],
+        "size": [
+          0.7,
+          0.7,
+          0.25
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "launch-access-gate",
+        "kind": "shutter",
+        "label": "LAUNCH ACCESS GATE",
+        "position": [
+          10,
+          4.3,
+          -6.5
+        ],
+        "size": [
+          3.8,
+          3,
+          0.35
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "garden-service-shutter",
+        "kind": "shutter",
+        "label": "GARDEN SERVICE SHUTTER",
+        "position": [
+          -10,
+          1.5,
+          -7
+        ],
+        "size": [
+          3,
+          3,
+          0.35
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "junction",
+        "kind": "junction",
+        "label": "JUNCTION",
+        "position": [
+          10,
+          5.45,
+          -19
+        ],
+        "size": [
+          9,
+          0.3,
+          2.6
+        ],
+        "active": true,
+        "progress": 0,
+        "choice": "east",
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      }
+    ],
+    "exits": [
+      {
+        "id": "east-finale-exit",
+        "label": "EAST FINALE EXIT",
+        "position": [
+          20,
+          6.449999999999999,
+          -19
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      },
+      {
+        "id": "west-finale-exit",
+        "label": "WEST FINALE EXIT",
+        "position": [
+          0,
+          6.449999999999999,
+          -19
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      },
+      {
+        "id": "north-service-exit",
+        "label": "NORTH SERVICE EXIT",
+        "position": [
+          10,
+          6.449999999999999,
+          -29
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "id": "garden-service-return",
+        "position": [
+          -12.8,
+          1.7,
+          -9
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "final-floor-panel",
+        "position": [
+          10,
+          -0.175,
+          -11
+        ],
+        "normal": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": "final-high-panel",
+        "position": [
+          10,
+          8.8,
+          -27
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "id": "return-origin-panel",
+        "position": [
+          -15.8,
+          1.7,
+          11
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "garden-return-panel",
+        "position": [
+          -5.2,
+          1.7,
+          -3
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "cell-return-panel",
+        "position": [
+          -3.8,
+          1.7,
+          8
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "beam-service-panel",
+        "position": [
+          11.8,
+          4.5,
+          1
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ]
+      }
+    ],
+    "controlPoints": [
+      {
+        "id": "return-lever",
+        "position": [
+          -13,
+          0.8,
+          12
+        ]
+      },
+      {
+        "id": "cell-lift",
+        "position": [
+          -1.4,
+          0.7,
+          2.5
+        ]
+      },
+      {
+        "id": "gallery-emitter",
+        "position": [
+          6,
+          4,
+          -1
+        ]
+      },
+      {
+        "id": "junction",
+        "position": [
+          9,
+          6.3500000000000005,
+          -17
+        ]
+      }
+    ],
+    "result": null,
+    "observedEvents": [
+      {
+        "key": "zone:return-belt",
+        "time": 0.008333333333333333,
+        "states": {
+          "return-lever": false,
+          "return-shutter": "closed",
+          "cell-lift:at:base": true,
+          "cell-lift:at:upper": false,
+          "cell-lift": "base",
+          "cell-lift:moving": false,
+          "gallery-emitter": "unpowered",
+          "launch-shutter": false,
+          "garden-receiver": false,
+          "launch-access-gate": "closed",
+          "garden-service-shutter": "closed",
+          "junction": "east",
+          "pad:garden-socket:oren-crate": false,
+          "pad:garden-socket:relay-cell": false,
+          "pad:garden-socket:mina-crate": false,
+          "pad:garden-socket:gallery-screen": false,
+          "pad:upper-socket:oren-crate": false,
+          "pad:upper-socket:relay-cell": false,
+          "pad:upper-socket:mina-crate": false,
+          "pad:upper-socket:gallery-screen": false,
+          "return-lever:moving": false,
+          "return-lever:rising": false,
+          "return-shutter:moving": false,
+          "return-shutter:rising": false,
+          "loop-belt:moving": false,
+          "loop-belt:rising": false,
+          "loop-belt-return:moving": false,
+          "loop-belt-return:rising": false,
+          "cell-feeder-belt:moving": false,
+          "cell-feeder-belt:rising": false,
+          "cell-lift:rising": false,
+          "gallery-emitter:moving": false,
+          "gallery-emitter:rising": false,
+          "launch-shutter:moving": false,
+          "launch-shutter:rising": false,
+          "launch-shutter:unpowered": true,
+          "launch-shutter-receiver": false,
+          "garden-receiver:moving": false,
+          "garden-receiver:rising": false,
+          "garden-receiver:unpowered": true,
+          "launch-access-gate:moving": false,
+          "launch-access-gate:rising": false,
+          "garden-service-shutter:moving": false,
+          "garden-service-shutter:rising": false,
+          "junction:moving": false,
+          "junction:rising": false
+        }
+      }
+    ]
+  },
+  "assistance": {
+    "hints": 0,
+    "translations": 0,
+    "retries": 0
+  },
+  "progress": {
+    "version": 2,
+    "highestUnlocked": 50,
+    "resumeLevel": 50,
+    "records": {},
+    "updatedAt": 1793124368570
+  },
+  "events": [
+    {
+      "type": "level-start",
+      "level": 50,
+      "time": 0,
+      "number": 50,
+      "contrast": false
+    }
+  ],
+  "pointerLocked": false,
+  "controls": {
+    "unlocked": true,
+    "sensitivity": 0.0022,
+    "invert": false,
+    "touchMode": false,
+    "reduced": true
+  },
+  "audio": {
+    "context": "running",
+    "paused": false,
+    "loopCount": 3,
+    "activeSfx": 0,
+    "cuesPlayed": 0,
+    "energy": false,
+    "chapter": 5,
+    "intensity": 0,
+    "recentCues": [],
+    "paired": false,
+    "bridge": false,
+    "ducked": false,
+    "gains": {
+      "master": 0.8,
+      "music": 0.7,
+      "sfx": 0.74,
+      "voice": 0.8
+    },
+    "loadedBuffers": 29,
+    "loadErrors": [],
+    "timeline": 0.8880000000000001
+  },
+  "renderer": {
+    "software": false,
+    "drawCalls": 454,
+    "triangles": 51478,
+    "geometries": 313,
+    "textures": 30
+  }
+}

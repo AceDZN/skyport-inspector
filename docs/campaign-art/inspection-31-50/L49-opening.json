@@ -1,0 +1,388 @@
+{
+  "title": "Rift Runner",
+  "version": "campaign-physical-draft-1",
+  "mode": "playing",
+  "level": 49,
+  "contrast": false,
+  "world": {
+    "coordinateSystem": "+Y up, -Z beyond glass, +X east. Player position is capsule center; eye +0.65Y.",
+    "room": "level-49",
+    "mission": "Keep the middle receiver from the original plan. The final update changes only the landing to the west balcony; take the large crate there.",
+    "player": {
+      "position": [
+        0,
+        0.85,
+        15
+      ],
+      "velocity": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "pitch": -0.12000000000000001,
+      "grounded": true,
+      "crossings": 0
+    },
+    "portals": [
+      null,
+      {
+        "surface": "first-high-panel",
+        "position": [
+          0,
+          5.75,
+          -11.975
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ]
+      }
+    ],
+    "crates": [
+      {
+        "id": "middle-screen",
+        "label": "MIDDLE BEAM SCREEN",
+        "shape": "triangle",
+        "size": "small",
+        "start": "front",
+        "position": [
+          2.5,
+          4.42,
+          -6.4
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      },
+      {
+        "id": "spare-cargo",
+        "label": "SPARE CARGO",
+        "shape": "triangle",
+        "size": "small",
+        "start": "front",
+        "position": [
+          -1.6,
+          0.42,
+          14
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      },
+      {
+        "id": "large-cargo",
+        "label": "LARGE CARGO",
+        "shape": "diamond",
+        "size": "large",
+        "start": "front",
+        "position": [
+          0,
+          0.55,
+          14
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      },
+      {
+        "id": "reserve-cargo",
+        "label": "RESERVE CARGO",
+        "shape": "triangle",
+        "size": "small",
+        "start": "front",
+        "position": [
+          1.6,
+          0.42,
+          14
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      }
+    ],
+    "pads": [
+      {
+        "id": "west-upper",
+        "label": "WEST UPPER",
+        "position": [
+          -10,
+          6.94,
+          -18
+        ],
+        "crate": null
+      },
+      {
+        "id": "east-upper",
+        "label": "EAST UPPER",
+        "position": [
+          10,
+          6.94,
+          -18
+        ],
+        "crate": null
+      }
+    ],
+    "bridges": [],
+    "guide": null,
+    "held": null,
+    "lastBridge": null,
+    "outcome": null,
+    "respawns": 0,
+    "launchUsed": false,
+    "events": [],
+    "number": 49,
+    "name": "Two Arcs",
+    "family": "launch-spire",
+    "devices": [
+      {
+        "id": "middle-emitter",
+        "kind": "relay",
+        "label": "MIDDLE EMITTER",
+        "position": [
+          2.5,
+          4.6,
+          -5.8
+        ],
+        "size": [
+          0.65,
+          1,
+          0.65
+        ],
+        "active": true,
+        "progress": 0,
+        "choice": "middle",
+        "angle": 0,
+        "powered": null,
+        "blocked": true
+      },
+      {
+        "id": "middle",
+        "kind": "receiver",
+        "label": "MIDDLE",
+        "position": [
+          2.5,
+          5.2,
+          -6.7
+        ],
+        "size": [
+          0.7,
+          0.7,
+          0.25
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "middle-shutter",
+        "kind": "shutter",
+        "label": "SECOND WELL COVER",
+        "position": [
+          0,
+          3.42,
+          -3.7
+        ],
+        "size": [
+          3.5,
+          0.2,
+          3.5
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      }
+    ],
+    "exits": [
+      {
+        "id": "west-upper-exit",
+        "label": "WEST UPPER EXIT",
+        "position": [
+          -10,
+          7.65,
+          -15.8
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      },
+      {
+        "id": "east-upper-exit",
+        "label": "EAST UPPER EXIT",
+        "position": [
+          10,
+          7.65,
+          -15.8
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "id": "first-floor-panel",
+        "position": [
+          0,
+          -2.975,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": "first-high-panel",
+        "position": [
+          0,
+          6,
+          -12
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "id": "second-floor-panel",
+        "position": [
+          0,
+          0.425,
+          -3.7
+        ],
+        "normal": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": "west-second-high",
+        "position": [
+          -10,
+          9.4,
+          -26
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "id": "east-second-high",
+        "position": [
+          10,
+          9.4,
+          -26
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ]
+      }
+    ],
+    "controlPoints": [
+      {
+        "id": "middle-emitter",
+        "position": [
+          2.5,
+          4.6,
+          -5.8
+        ]
+      }
+    ],
+    "result": null,
+    "observedEvents": []
+  },
+  "assistance": {
+    "hints": 0,
+    "translations": 0,
+    "retries": 0
+  },
+  "progress": {
+    "version": 2,
+    "highestUnlocked": 50,
+    "resumeLevel": 49,
+    "records": {},
+    "updatedAt": 1793124367056
+  },
+  "events": [
+    {
+      "type": "level-start",
+      "level": 49,
+      "time": 0,
+      "number": 49,
+      "contrast": false
+    }
+  ],
+  "pointerLocked": false,
+  "controls": {
+    "unlocked": true,
+    "sensitivity": 0.0022,
+    "invert": false,
+    "touchMode": false,
+    "reduced": true
+  },
+  "audio": {
+    "context": "running",
+    "paused": false,
+    "loopCount": 3,
+    "activeSfx": 0,
+    "cuesPlayed": 0,
+    "energy": false,
+    "chapter": 5,
+    "intensity": 0,
+    "recentCues": [],
+    "paired": false,
+    "bridge": false,
+    "ducked": false,
+    "gains": {
+      "master": 0.8,
+      "music": 0.7,
+      "sfx": 0.74,
+      "voice": 0.8
+    },
+    "loadedBuffers": 29,
+    "loadErrors": [],
+    "timeline": 0.9146666666666666
+  },
+  "renderer": {
+    "software": false,
+    "drawCalls": 159,
+    "triangles": 62220,
+    "geometries": 135,
+    "textures": 26
+  }
+}

@@ -1,0 +1,618 @@
+{
+  "level": 3,
+  "status": "PASS",
+  "state": {
+    "title": "Rift Runner",
+    "version": "campaign-physical-draft-1",
+    "mode": "result",
+    "level": 3,
+    "contrast": false,
+    "world": {
+      "coordinateSystem": "+Y up, -Z beyond glass, +X east. Player position is capsule center; eye +0.65Y.",
+      "room": "level-3",
+      "mission": "Put the small crate on the platform behind the glass. Then cross the east bridge.",
+      "player": {
+        "position": [
+          12.776837801486009,
+          0.85,
+          -4.998360406574108
+        ],
+        "velocity": [
+          4.275006896797847,
+          0,
+          -0.004431480883879745
+        ],
+        "yaw": -1.569759725122996,
+        "pitch": -3.356933581111221e-8,
+        "grounded": true,
+        "crossings": 1
+      },
+      "portals": [
+        {
+          "surface": "near-panel",
+          "position": [
+            -4.00000030249419,
+            1.45,
+            2.425
+          ],
+          "normal": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "surface": "far-panel",
+          "position": [
+            -3.9999997943115355,
+            1.45,
+            -11.674999999999999
+          ],
+          "normal": [
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "crates": [
+        {
+          "id": "small-diamond",
+          "label": "SMALL DIAMOND",
+          "shape": "diamond",
+          "size": "small",
+          "start": "front",
+          "position": [
+            -2.5779367898085623,
+            0.56,
+            -5.91088169148477
+          ],
+          "velocity": [
+            -1.376952471056473e-26,
+            0,
+            1.524974086295602e-26
+          ],
+          "held": false,
+          "crossings": 1
+        },
+        {
+          "id": "large-triangle",
+          "label": "LARGE TRIANGLE",
+          "shape": "triangle",
+          "size": "large",
+          "start": "front",
+          "position": [
+            1.9,
+            0.6900000000000001,
+            7
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "held": false,
+          "crossings": 0
+        }
+      ],
+      "pads": [
+        {
+          "id": "behind",
+          "label": "P1",
+          "position": [
+            -2.5,
+            0.14,
+            -6
+          ],
+          "crate": "small-diamond"
+        },
+        {
+          "id": "front",
+          "label": "P2",
+          "position": [
+            2.5,
+            0.14,
+            6
+          ],
+          "crate": null
+        }
+      ],
+      "bridges": [],
+      "guide": null,
+      "held": null,
+      "lastBridge": null,
+      "outcome": {
+        "crateId": "",
+        "pad": "behind",
+        "bridge": "east",
+        "crateOnPad": true,
+        "playerCrossed": true,
+        "atExit": true,
+        "portalTraversals": 1,
+        "cratePortalTraversals": 1
+      },
+      "respawns": 0,
+      "launchUsed": false,
+      "events": [
+        {
+          "type": "enter",
+          "time": 50550,
+          "body": "player",
+          "from": 0,
+          "to": 1,
+          "fromSurface": "near-panel",
+          "toSurface": "far-panel",
+          "speed": 3.025756910032615,
+          "exitSpeed": 3.0257569100326154,
+          "held": "small-diamond"
+        },
+        {
+          "type": "exit",
+          "time": 50550,
+          "body": "player"
+        },
+        {
+          "type": "drop",
+          "time": 52827,
+          "body": "small-diamond"
+        },
+        {
+          "type": "pad",
+          "time": 52835,
+          "pad": "behind",
+          "crate": "small-diamond"
+        },
+        {
+          "type": "bridge",
+          "time": 52843,
+          "id": "east-bridge"
+        },
+        {
+          "type": "bridge",
+          "time": 52843,
+          "id": "west-bridge"
+        },
+        {
+          "type": "land",
+          "time": 54748,
+          "body": "player"
+        },
+        {
+          "type": "complete",
+          "time": 60128,
+          "goalMatched": true,
+          "exit": "east-exit"
+        }
+      ],
+      "number": 3,
+      "name": "Glass Parcel",
+      "family": "split-atrium",
+      "devices": [],
+      "exits": [
+        {
+          "id": "east-exit",
+          "label": "EAST EXIT",
+          "position": [
+            14,
+            1,
+            -5
+          ],
+          "size": [
+            2.5,
+            2.8,
+            2.5
+          ]
+        },
+        {
+          "id": "west-exit",
+          "label": "WEST EXIT",
+          "position": [
+            -14,
+            1,
+            -5
+          ],
+          "size": [
+            2.5,
+            2.8,
+            2.5
+          ]
+        }
+      ],
+      "panels": [
+        {
+          "id": "near-panel",
+          "position": [
+            -4,
+            1.7,
+            2.4
+          ],
+          "normal": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "id": "far-panel",
+          "position": [
+            -4,
+            1.7,
+            -11.7
+          ],
+          "normal": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "id": "side-panel",
+          "position": [
+            -7.8,
+            1.7,
+            8
+          ],
+          "normal": [
+            1,
+            0,
+            0
+          ]
+        }
+      ],
+      "controlPoints": [],
+      "result": {
+        "physicalComplete": true,
+        "goalMatched": true,
+        "exit": "east-exit",
+        "reason": "Your cargo, route, machinery and order match the English mission.",
+        "events": [
+          {
+            "key": "portal:player:near-panel",
+            "time": 50.55013790439653,
+            "states": {
+              "pad:behind:small-diamond": false,
+              "pad:behind:large-triangle": false,
+              "pad:front:small-diamond": false,
+              "pad:front:large-triangle": false,
+              "origin-panel": "near-panel"
+            }
+          },
+          {
+            "key": "portal:enter:near-panel",
+            "time": 50.55013790439653,
+            "states": {
+              "pad:behind:small-diamond": false,
+              "pad:behind:large-triangle": false,
+              "pad:front:small-diamond": false,
+              "pad:front:large-triangle": false,
+              "origin-panel": "near-panel"
+            }
+          },
+          {
+            "key": "pad:behind:small-diamond",
+            "time": 52.83507123772958,
+            "states": {
+              "pad:behind:small-diamond": true,
+              "pad:behind:large-triangle": false,
+              "pad:front:small-diamond": false,
+              "pad:front:large-triangle": false,
+              "origin-panel": "near-panel"
+            }
+          },
+          {
+            "key": "cargo:small-diamond:received:behind",
+            "time": 52.83507123772958,
+            "states": {
+              "pad:behind:small-diamond": true,
+              "pad:behind:large-triangle": false,
+              "pad:front:small-diamond": false,
+              "pad:front:large-triangle": false,
+              "origin-panel": "near-panel"
+            }
+          },
+          {
+            "key": "route:east-bridge",
+            "time": 60.111604571062195,
+            "states": {
+              "pad:behind:small-diamond": true,
+              "pad:behind:large-triangle": false,
+              "pad:front:small-diamond": false,
+              "pad:front:large-triangle": false,
+              "origin-panel": "near-panel"
+            }
+          },
+          {
+            "key": "exit:east-exit",
+            "time": 60.12827123772886,
+            "states": {
+              "pad:behind:small-diamond": true,
+              "pad:behind:large-triangle": false,
+              "pad:front:small-diamond": false,
+              "pad:front:large-triangle": false,
+              "origin-panel": "near-panel"
+            }
+          }
+        ],
+        "mechanisms": [
+          "cargo",
+          "portals",
+          "pads",
+          "bridges"
+        ]
+      },
+      "observedEvents": [
+        {
+          "key": "portal:player:near-panel",
+          "time": 50.55013790439653,
+          "states": {
+            "pad:behind:small-diamond": false,
+            "pad:behind:large-triangle": false,
+            "pad:front:small-diamond": false,
+            "pad:front:large-triangle": false,
+            "origin-panel": "near-panel"
+          }
+        },
+        {
+          "key": "portal:enter:near-panel",
+          "time": 50.55013790439653,
+          "states": {
+            "pad:behind:small-diamond": false,
+            "pad:behind:large-triangle": false,
+            "pad:front:small-diamond": false,
+            "pad:front:large-triangle": false,
+            "origin-panel": "near-panel"
+          }
+        },
+        {
+          "key": "pad:behind:small-diamond",
+          "time": 52.83507123772958,
+          "states": {
+            "pad:behind:small-diamond": true,
+            "pad:behind:large-triangle": false,
+            "pad:front:small-diamond": false,
+            "pad:front:large-triangle": false,
+            "origin-panel": "near-panel"
+          }
+        },
+        {
+          "key": "cargo:small-diamond:received:behind",
+          "time": 52.83507123772958,
+          "states": {
+            "pad:behind:small-diamond": true,
+            "pad:behind:large-triangle": false,
+            "pad:front:small-diamond": false,
+            "pad:front:large-triangle": false,
+            "origin-panel": "near-panel"
+          }
+        },
+        {
+          "key": "route:east-bridge",
+          "time": 60.111604571062195,
+          "states": {
+            "pad:behind:small-diamond": true,
+            "pad:behind:large-triangle": false,
+            "pad:front:small-diamond": false,
+            "pad:front:large-triangle": false,
+            "origin-panel": "near-panel"
+          }
+        },
+        {
+          "key": "exit:east-exit",
+          "time": 60.12827123772886,
+          "states": {
+            "pad:behind:small-diamond": true,
+            "pad:behind:large-triangle": false,
+            "pad:front:small-diamond": false,
+            "pad:front:large-triangle": false,
+            "origin-panel": "near-panel"
+          }
+        }
+      ]
+    },
+    "assistance": {
+      "hints": 0,
+      "translations": 0,
+      "retries": 0
+    },
+    "progress": {
+      "version": 2,
+      "highestUnlocked": 4,
+      "resumeLevel": 4,
+      "records": {
+        "1": {
+          "completed": true,
+          "runs": 1,
+          "completions": 1,
+          "unaided": true,
+          "bestRetries": 0,
+          "last": {
+            "goalMatched": true,
+            "assistance": 0,
+            "retries": 0,
+            "seconds": 26.82416666666605,
+            "portalCrossings": 1,
+            "mechanisms": [
+              "portals"
+            ]
+          }
+        },
+        "2": {
+          "completed": true,
+          "runs": 1,
+          "completions": 1,
+          "unaided": true,
+          "bestRetries": 0,
+          "last": {
+            "goalMatched": true,
+            "assistance": 0,
+            "retries": 0,
+            "seconds": 84.89666666667581,
+            "portalCrossings": 1,
+            "mechanisms": [
+              "portals"
+            ]
+          }
+        },
+        "3": {
+          "completed": true,
+          "runs": 1,
+          "completions": 1,
+          "unaided": true,
+          "bestRetries": 0,
+          "last": {
+            "goalMatched": true,
+            "assistance": 0,
+            "retries": 0,
+            "seconds": 60.12827123772886,
+            "portalCrossings": 1,
+            "mechanisms": [
+              "cargo",
+              "portals",
+              "pads",
+              "bridges"
+            ]
+          }
+        }
+      },
+      "updatedAt": 1793124392866
+    },
+    "events": [
+      {
+        "type": "level-start",
+        "level": 3,
+        "time": 111721,
+        "number": 3,
+        "contrast": false
+      },
+      {
+        "type": "portalA",
+        "level": 3,
+        "time": 158009,
+        "surface": "near-panel",
+        "paired": false
+      },
+      {
+        "type": "portalB",
+        "level": 3,
+        "time": 158159,
+        "surface": "far-panel",
+        "paired": true
+      },
+      {
+        "type": "pickup",
+        "level": 3,
+        "time": 159238,
+        "body": "small-diamond"
+      },
+      {
+        "type": "enter",
+        "level": 3,
+        "time": 162263,
+        "body": "player",
+        "from": 0,
+        "to": 1,
+        "fromSurface": "near-panel",
+        "toSurface": "far-panel",
+        "speed": 3.025756910032615,
+        "exitSpeed": 3.0257569100326154,
+        "held": "small-diamond"
+      },
+      {
+        "type": "exit",
+        "level": 3,
+        "time": 162263,
+        "body": "player"
+      },
+      {
+        "type": "drop",
+        "level": 3,
+        "time": 164548,
+        "body": "small-diamond"
+      },
+      {
+        "type": "pad",
+        "level": 3,
+        "time": 164548,
+        "pad": "behind",
+        "crate": "small-diamond"
+      },
+      {
+        "type": "bridge",
+        "level": 3,
+        "time": 164556,
+        "id": "east-bridge"
+      },
+      {
+        "type": "bridge",
+        "level": 3,
+        "time": 164556,
+        "id": "west-bridge"
+      },
+      {
+        "type": "land",
+        "level": 3,
+        "time": 166461,
+        "body": "player"
+      },
+      {
+        "type": "complete",
+        "level": 3,
+        "time": 171841,
+        "goalMatched": true,
+        "exit": "east-exit"
+      }
+    ],
+    "pointerLocked": false,
+    "controls": {
+      "unlocked": true,
+      "sensitivity": 0.0022,
+      "invert": false,
+      "touchMode": false,
+      "reduced": false
+    },
+    "audio": {
+      "context": "running",
+      "paused": false,
+      "loopCount": 3,
+      "activeSfx": 1,
+      "cuesPlayed": 20,
+      "energy": true,
+      "chapter": 1,
+      "intensity": 0,
+      "recentCues": [
+        "complete",
+        "portalA",
+        "portalB",
+        "pickup",
+        "enter",
+        "exit",
+        "drop",
+        "pad",
+        "bridge",
+        "bridge",
+        "land",
+        "complete"
+      ],
+      "paired": true,
+      "bridge": true,
+      "ducked": false,
+      "gains": {
+        "master": 0.8,
+        "music": 0.7,
+        "sfx": 0.74,
+        "voice": 0.8
+      },
+      "loadedBuffers": 29,
+      "loadErrors": [],
+      "timeline": 161.90666666666667
+    },
+    "renderer": {
+      "software": false,
+      "drawCalls": 13,
+      "triangles": 126,
+      "geometries": 158,
+      "textures": 22
+    }
+  },
+  "completedAt": "2026-10-27T18:06:33.081Z"
+}

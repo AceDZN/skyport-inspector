@@ -1,0 +1,245 @@
+{
+  "title": "Rift Runner",
+  "version": "campaign-physical-draft-1",
+  "mode": "playing",
+  "level": 35,
+  "contrast": false,
+  "world": {
+    "coordinateSystem": "+Y up, -Z beyond glass, +X east. Player position is capsule center; eye +0.65Y.",
+    "room": "level-35",
+    "mission": "The west bridge was repaired last week. Today’s notice permits cargo on the wide east bridge. Take the large crate that way.",
+    "player": {
+      "position": [
+        0,
+        0.85,
+        10
+      ],
+      "velocity": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "pitch": -0.12000000000000001,
+      "grounded": true,
+      "crossings": 0
+    },
+    "portals": [
+      null,
+      null
+    ],
+    "crates": [
+      {
+        "id": "small-cargo",
+        "label": "SMALL CARGO",
+        "shape": "triangle",
+        "size": "small",
+        "start": "front",
+        "position": [
+          3,
+          0.42,
+          8
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      },
+      {
+        "id": "reserve-module",
+        "label": "RESERVE MODULE",
+        "shape": "triangle",
+        "size": "small",
+        "start": "front",
+        "position": [
+          -3,
+          0.42,
+          8
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      },
+      {
+        "id": "wide-cargo",
+        "label": "WIDE CARGO",
+        "shape": "diamond",
+        "size": "large",
+        "start": "front",
+        "position": [
+          0,
+          0.55,
+          8
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      }
+    ],
+    "pads": [
+      {
+        "id": "east-receiver",
+        "label": "EAST RECEIVER",
+        "position": [
+          5,
+          0.14,
+          -10.5
+        ],
+        "crate": null
+      },
+      {
+        "id": "west-receiver",
+        "label": "WEST RECEIVER",
+        "position": [
+          -5,
+          0.14,
+          -10.5
+        ],
+        "crate": null
+      }
+    ],
+    "bridges": [],
+    "guide": null,
+    "held": null,
+    "lastBridge": null,
+    "outcome": null,
+    "respawns": 0,
+    "launchUsed": false,
+    "events": [],
+    "number": 35,
+    "name": "Today’s Capacity",
+    "family": "canal",
+    "devices": [],
+    "exits": [
+      {
+        "id": "east-cargo-exit",
+        "label": "EAST CARGO EXIT",
+        "position": [
+          6.5,
+          0.85,
+          -13
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      },
+      {
+        "id": "west-cargo-exit",
+        "label": "WEST CARGO EXIT",
+        "position": [
+          -6.5,
+          0.85,
+          -13
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "id": "shore-panel",
+        "position": [
+          -7.7,
+          1.7,
+          7
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "inlet-panel",
+        "position": [
+          7.7,
+          1.7,
+          3
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ]
+      }
+    ],
+    "controlPoints": [],
+    "result": null,
+    "observedEvents": []
+  },
+  "assistance": {
+    "hints": 0,
+    "translations": 0,
+    "retries": 0
+  },
+  "progress": {
+    "version": 2,
+    "highestUnlocked": 50,
+    "resumeLevel": 35,
+    "records": {},
+    "updatedAt": 1793124348217
+  },
+  "events": [
+    {
+      "type": "level-start",
+      "level": 35,
+      "time": 0,
+      "number": 35,
+      "contrast": false
+    }
+  ],
+  "pointerLocked": false,
+  "controls": {
+    "unlocked": true,
+    "sensitivity": 0.0022,
+    "invert": false,
+    "touchMode": false,
+    "reduced": true
+  },
+  "audio": {
+    "context": "running",
+    "paused": false,
+    "loopCount": 3,
+    "activeSfx": 0,
+    "cuesPlayed": 0,
+    "energy": false,
+    "chapter": 4,
+    "intensity": 0,
+    "recentCues": [],
+    "paired": false,
+    "bridge": false,
+    "ducked": false,
+    "gains": {
+      "master": 0.8,
+      "music": 0.7,
+      "sfx": 0.74,
+      "voice": 0.8
+    },
+    "loadedBuffers": 29,
+    "loadErrors": [],
+    "timeline": 0.776
+  },
+  "renderer": {
+    "software": false,
+    "drawCalls": 92,
+    "triangles": 41430,
+    "geometries": 87,
+    "textures": 15
+  }
+}

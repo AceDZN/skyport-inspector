@@ -1,0 +1,393 @@
+{
+  "title": "Rift Runner",
+  "version": "campaign-physical-draft-1",
+  "mode": "playing",
+  "level": 40,
+  "contrast": false,
+  "world": {
+    "coordinateSystem": "+Y up, -Z beyond glass, +X east. Player position is capsule center; eye +0.65Y.",
+    "room": "level-40",
+    "mission": "After the cell reaches the upper socket, use the launch well. The current notice changes the final junction to west; all earlier steps stay the same.",
+    "player": {
+      "position": [
+        0,
+        0.85,
+        11
+      ],
+      "velocity": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "pitch": -0.12000000000000001,
+      "grounded": true,
+      "crossings": 0
+    },
+    "portals": [
+      null,
+      null
+    ],
+    "crates": [
+      {
+        "id": "spare-cargo",
+        "label": "SPARE CARGO",
+        "shape": "triangle",
+        "size": "small",
+        "start": "front",
+        "position": [
+          5,
+          0.42,
+          10
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      },
+      {
+        "id": "power-cell",
+        "label": "POWER CELL",
+        "shape": "diamond",
+        "size": "small",
+        "start": "front",
+        "position": [
+          -5,
+          0.42,
+          10
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      },
+      {
+        "id": "reserve-module",
+        "label": "RESERVE MODULE",
+        "shape": "triangle",
+        "size": "small",
+        "start": "front",
+        "position": [
+          0,
+          0.42,
+          10
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      }
+    ],
+    "pads": [
+      {
+        "id": "upper-socket",
+        "label": "UPPER SOCKET",
+        "position": [
+          -6,
+          2.94,
+          1
+        ],
+        "crate": null
+      }
+    ],
+    "bridges": [],
+    "guide": null,
+    "held": null,
+    "lastBridge": null,
+    "outcome": null,
+    "respawns": 0,
+    "launchUsed": false,
+    "events": [],
+    "number": 40,
+    "name": "Forge Transfer",
+    "family": "bridge-rotunda",
+    "devices": [
+      {
+        "id": "receiver-lift",
+        "kind": "lift",
+        "label": "RECEIVER LIFT",
+        "position": [
+          -5,
+          -0.2,
+          4
+        ],
+        "size": [
+          3.4,
+          0.4,
+          3.4
+        ],
+        "active": true,
+        "progress": 0,
+        "choice": "base",
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "launch-emitter",
+        "kind": "relay",
+        "label": "LAUNCH EMITTER",
+        "position": [
+          -6,
+          4,
+          3
+        ],
+        "size": [
+          0.65,
+          1,
+          0.65
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": "launch-receiver",
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "launch-receiver",
+        "kind": "receiver",
+        "label": "LAUNCH RECEIVER",
+        "position": [
+          -3.2,
+          4.2,
+          7
+        ],
+        "size": [
+          0.7,
+          0.7,
+          0.25
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "launch-shutter",
+        "kind": "shutter",
+        "label": "LAUNCH SHUTTER",
+        "position": [
+          0,
+          1.5,
+          8.3
+        ],
+        "size": [
+          3.8,
+          3,
+          0.35
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "junction",
+        "kind": "junction",
+        "label": "JUNCTION",
+        "position": [
+          0,
+          3.25,
+          -4
+        ],
+        "size": [
+          9,
+          0.3,
+          2.6
+        ],
+        "active": true,
+        "progress": 0,
+        "choice": "east",
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      }
+    ],
+    "exits": [
+      {
+        "id": "east-upper-exit",
+        "label": "EAST UPPER EXIT",
+        "position": [
+          10,
+          4.25,
+          -4
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      },
+      {
+        "id": "west-upper-exit",
+        "label": "WEST UPPER EXIT",
+        "position": [
+          -10,
+          4.25,
+          -4
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      },
+      {
+        "id": "north-upper-exit",
+        "label": "NORTH UPPER EXIT",
+        "position": [
+          0,
+          4.25,
+          -14
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "id": "floor-rift",
+        "position": [
+          0,
+          -2.975,
+          5
+        ],
+        "normal": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": "high-rift",
+        "position": [
+          0,
+          6,
+          -12
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "id": "mezzanine-view",
+        "position": [
+          -7.8,
+          4.5,
+          7
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ]
+      }
+    ],
+    "controlPoints": [
+      {
+        "id": "receiver-lift",
+        "position": [
+          -6.4,
+          0.7,
+          5.5
+        ]
+      },
+      {
+        "id": "launch-emitter",
+        "position": [
+          -6,
+          4,
+          3
+        ]
+      },
+      {
+        "id": "junction",
+        "position": [
+          -1,
+          4.15,
+          -2
+        ]
+      }
+    ],
+    "result": null,
+    "observedEvents": []
+  },
+  "assistance": {
+    "hints": 0,
+    "translations": 0,
+    "retries": 0
+  },
+  "progress": {
+    "version": 2,
+    "highestUnlocked": 50,
+    "resumeLevel": 40,
+    "records": {},
+    "updatedAt": 1793124354814
+  },
+  "events": [
+    {
+      "type": "level-start",
+      "level": 40,
+      "time": 0,
+      "number": 40,
+      "contrast": false
+    }
+  ],
+  "pointerLocked": false,
+  "controls": {
+    "unlocked": true,
+    "sensitivity": 0.0022,
+    "invert": false,
+    "touchMode": false,
+    "reduced": true
+  },
+  "audio": {
+    "context": "running",
+    "paused": false,
+    "loopCount": 3,
+    "activeSfx": 0,
+    "cuesPlayed": 0,
+    "energy": false,
+    "chapter": 4,
+    "intensity": 0,
+    "recentCues": [],
+    "paired": false,
+    "bridge": false,
+    "ducked": false,
+    "gains": {
+      "master": 0.8,
+      "music": 0.7,
+      "sfx": 0.74,
+      "voice": 0.8
+    },
+    "loadedBuffers": 29,
+    "loadErrors": [],
+    "timeline": 0.8026666666666666
+  },
+  "renderer": {
+    "software": false,
+    "drawCalls": 242,
+    "triangles": 37118,
+    "geometries": 201,
+    "textures": 20
+  }
+}

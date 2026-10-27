@@ -1,0 +1,326 @@
+{
+  "title": "Rift Runner",
+  "version": "campaign-physical-draft-1",
+  "mode": "playing",
+  "level": 47,
+  "contrast": false,
+  "world": {
+    "coordinateSystem": "+Y up, -Z beyond glass, +X east. Player position is capsule center; eye +0.65Y.",
+    "room": "level-47",
+    "mission": "The tower ferry was inspected last week. The current manifest assigns Mina’s crate to the garden dock. Deliver it there.",
+    "player": {
+      "position": [
+        0,
+        0.85,
+        10
+      ],
+      "velocity": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "pitch": -0.14004000000000005,
+      "grounded": true,
+      "crossings": 0
+    },
+    "portals": [
+      null,
+      null
+    ],
+    "crates": [
+      {
+        "id": "oren-crate",
+        "label": "OREN CRATE",
+        "shape": "triangle",
+        "size": "small",
+        "start": "front",
+        "owner": "Oren",
+        "position": [
+          2,
+          0.42,
+          10
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      },
+      {
+        "id": "mina-crate",
+        "label": "MINA CRATE",
+        "shape": "diamond",
+        "size": "small",
+        "start": "front",
+        "owner": "Mina",
+        "position": [
+          -3.5,
+          0.42,
+          8
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      }
+    ],
+    "pads": [
+      {
+        "id": "garden-dock",
+        "label": "GARDEN DOCK",
+        "position": [
+          -5,
+          0.14,
+          -10
+        ],
+        "crate": null
+      },
+      {
+        "id": "tower-dock",
+        "label": "TOWER DOCK",
+        "position": [
+          5,
+          0.14,
+          -12
+        ],
+        "crate": null
+      }
+    ],
+    "bridges": [],
+    "guide": null,
+    "held": null,
+    "lastBridge": null,
+    "outcome": null,
+    "respawns": 0,
+    "launchUsed": false,
+    "events": [],
+    "number": 47,
+    "name": "The Current Manifest",
+    "family": "canal",
+    "devices": [
+      {
+        "id": "garden-ferry",
+        "kind": "moving-platform",
+        "label": "GARDEN FERRY",
+        "position": [
+          -5,
+          -0.2,
+          4
+        ],
+        "size": [
+          3.4,
+          0.4,
+          3.4
+        ],
+        "active": true,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "tower-ferry",
+        "kind": "moving-platform",
+        "label": "TOWER FERRY",
+        "position": [
+          5,
+          -0.2,
+          4
+        ],
+        "size": [
+          3.4,
+          0.4,
+          3.4
+        ],
+        "active": true,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "garden-shutter",
+        "kind": "shutter",
+        "label": "GARDEN SHUTTER",
+        "position": [
+          -5,
+          1.5,
+          -11.8
+        ],
+        "size": [
+          3,
+          3,
+          0.35
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "tower-shutter",
+        "kind": "shutter",
+        "label": "TOWER SHUTTER",
+        "position": [
+          5,
+          1.5,
+          -13.8
+        ],
+        "size": [
+          3,
+          3,
+          0.35
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      }
+    ],
+    "exits": [
+      {
+        "id": "garden-dock-exit",
+        "label": "GARDEN DOCK EXIT",
+        "position": [
+          -5,
+          0.85,
+          -14
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      },
+      {
+        "id": "tower-dock-exit",
+        "label": "TOWER DOCK EXIT",
+        "position": [
+          5,
+          0.85,
+          -16
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "id": "source-panel",
+        "position": [
+          -6.8,
+          1.7,
+          8
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "garden-return-panel",
+        "position": [
+          -7.8,
+          1.7,
+          -10
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "tower-return-panel",
+        "position": [
+          7.8,
+          1.7,
+          -12
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ]
+      }
+    ],
+    "controlPoints": [],
+    "result": null,
+    "observedEvents": []
+  },
+  "assistance": {
+    "hints": 0,
+    "translations": 0,
+    "retries": 0
+  },
+  "progress": {
+    "version": 2,
+    "highestUnlocked": 50,
+    "resumeLevel": 47,
+    "records": {},
+    "updatedAt": 1793124364250
+  },
+  "events": [
+    {
+      "type": "level-start",
+      "level": 47,
+      "time": 0,
+      "number": 47,
+      "contrast": false
+    }
+  ],
+  "pointerLocked": false,
+  "controls": {
+    "unlocked": true,
+    "sensitivity": 0.0022,
+    "invert": false,
+    "touchMode": false,
+    "reduced": true
+  },
+  "audio": {
+    "context": "running",
+    "paused": false,
+    "loopCount": 3,
+    "activeSfx": 0,
+    "cuesPlayed": 0,
+    "energy": false,
+    "chapter": 5,
+    "intensity": 0,
+    "recentCues": [],
+    "paired": false,
+    "bridge": false,
+    "ducked": false,
+    "gains": {
+      "master": 0.8,
+      "music": 0.7,
+      "sfx": 0.74,
+      "voice": 0.8
+    },
+    "loadedBuffers": 29,
+    "loadErrors": [],
+    "timeline": 0.792
+  },
+  "renderer": {
+    "software": false,
+    "drawCalls": 214,
+    "triangles": 33972,
+    "geometries": 143,
+    "textures": 17
+  }
+}

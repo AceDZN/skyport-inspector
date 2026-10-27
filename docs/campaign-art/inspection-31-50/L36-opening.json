@@ -1,0 +1,418 @@
+{
+  "title": "Rift Runner",
+  "version": "campaign-physical-draft-1",
+  "mode": "playing",
+  "level": 36,
+  "contrast": false,
+  "world": {
+    "coordinateSystem": "+Y up, -Z beyond glass, +X east. Player position is capsule center; eye +0.65Y.",
+    "room": "level-36",
+    "mission": "The north receiver is powered by the upper emitter. Open its vault, not the south vault.",
+    "player": {
+      "position": [
+        0,
+        0.85,
+        1
+      ],
+      "velocity": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "pitch": -0.12000000000000001,
+      "grounded": true,
+      "crossings": 0
+    },
+    "portals": [
+      null,
+      null
+    ],
+    "crates": [
+      {
+        "id": "upper-screen",
+        "label": "UPPER SCREEN",
+        "shape": "triangle",
+        "size": "large",
+        "start": "front",
+        "position": [
+          0.75,
+          3.75,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      },
+      {
+        "id": "lower-screen",
+        "label": "LOWER SCREEN",
+        "shape": "triangle",
+        "size": "large",
+        "start": "front",
+        "position": [
+          -5.25,
+          0.9500000000000001,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      },
+      {
+        "id": "cargo-1",
+        "label": "CARGO 1",
+        "shape": "diamond",
+        "size": "small",
+        "start": "front",
+        "position": [
+          2,
+          0.42,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      }
+    ],
+    "pads": [
+      {
+        "id": "north-vault",
+        "label": "NORTH VAULT",
+        "position": [
+          0,
+          0.14,
+          -8
+        ],
+        "crate": null
+      },
+      {
+        "id": "south-vault",
+        "label": "SOUTH VAULT",
+        "position": [
+          0,
+          0.14,
+          8
+        ],
+        "crate": null
+      }
+    ],
+    "bridges": [],
+    "guide": null,
+    "held": null,
+    "lastBridge": null,
+    "outcome": null,
+    "respawns": 0,
+    "launchUsed": false,
+    "events": [],
+    "number": 36,
+    "name": "Which Receiver Is Powered?",
+    "family": "dual-vault",
+    "devices": [
+      {
+        "id": "mirror-lift",
+        "kind": "lift",
+        "label": "MIRROR LIFT",
+        "position": [
+          -1.6,
+          -0.2,
+          0
+        ],
+        "size": [
+          2.8,
+          0.4,
+          3.4
+        ],
+        "active": true,
+        "progress": 0,
+        "choice": "base",
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "upper-emitter",
+        "kind": "relay",
+        "label": "UPPER EMITTER",
+        "position": [
+          0,
+          4.2,
+          0
+        ],
+        "size": [
+          0.65,
+          1,
+          0.65
+        ],
+        "active": true,
+        "progress": 0,
+        "choice": "north-receiver",
+        "angle": 0,
+        "powered": null,
+        "blocked": true
+      },
+      {
+        "id": "north-receiver",
+        "kind": "receiver",
+        "label": "NORTH RECEIVER",
+        "position": [
+          4,
+          2.5,
+          -2.7
+        ],
+        "size": [
+          0.7,
+          0.7,
+          0.25
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "south-receiver",
+        "kind": "receiver",
+        "label": "SOUTH RECEIVER",
+        "position": [
+          4,
+          2.5,
+          2.7
+        ],
+        "size": [
+          0.7,
+          0.7,
+          0.25
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "lower-emitter",
+        "kind": "relay",
+        "label": "LOWER EMITTER",
+        "position": [
+          -6,
+          1.2,
+          0
+        ],
+        "size": [
+          0.65,
+          1,
+          0.65
+        ],
+        "active": true,
+        "progress": 0,
+        "choice": "north-receiver",
+        "angle": 0,
+        "powered": null,
+        "blocked": true
+      },
+      {
+        "id": "north-vault-gate",
+        "kind": "shutter",
+        "label": "NORTH VAULT GATE",
+        "position": [
+          0,
+          1.5,
+          -3.1
+        ],
+        "size": [
+          3,
+          3,
+          0.35
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "south-vault-gate",
+        "kind": "shutter",
+        "label": "SOUTH VAULT GATE",
+        "position": [
+          0,
+          1.5,
+          3.1
+        ],
+        "size": [
+          3,
+          3,
+          0.35
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      }
+    ],
+    "exits": [
+      {
+        "id": "north-vault-exit",
+        "label": "NORTH VAULT EXIT",
+        "position": [
+          0,
+          0.85,
+          -11
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      },
+      {
+        "id": "south-vault-exit",
+        "label": "SOUTH VAULT EXIT",
+        "position": [
+          0,
+          0.85,
+          11
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "id": "control-panel",
+        "position": [
+          -7.7,
+          1.7,
+          0
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "upper-control-panel",
+        "position": [
+          2.8,
+          4.9,
+          0
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ]
+      }
+    ],
+    "controlPoints": [
+      {
+        "id": "mirror-lift",
+        "position": [
+          -2.7,
+          0.7,
+          1.5
+        ]
+      },
+      {
+        "id": "upper-emitter",
+        "position": [
+          0,
+          4.2,
+          0
+        ]
+      },
+      {
+        "id": "lower-emitter",
+        "position": [
+          -6,
+          1.2,
+          0
+        ]
+      }
+    ],
+    "result": null,
+    "observedEvents": []
+  },
+  "assistance": {
+    "hints": 0,
+    "translations": 0,
+    "retries": 0
+  },
+  "progress": {
+    "version": 2,
+    "highestUnlocked": 50,
+    "resumeLevel": 36,
+    "records": {},
+    "updatedAt": 1793124349519
+  },
+  "events": [
+    {
+      "type": "level-start",
+      "level": 36,
+      "time": 0,
+      "number": 36,
+      "contrast": false
+    }
+  ],
+  "pointerLocked": false,
+  "controls": {
+    "unlocked": true,
+    "sensitivity": 0.0022,
+    "invert": false,
+    "touchMode": false,
+    "reduced": true
+  },
+  "audio": {
+    "context": "running",
+    "paused": false,
+    "loopCount": 3,
+    "activeSfx": 0,
+    "cuesPlayed": 0,
+    "energy": false,
+    "chapter": 4,
+    "intensity": 0,
+    "recentCues": [],
+    "paired": false,
+    "bridge": false,
+    "ducked": false,
+    "gains": {
+      "master": 0.8,
+      "music": 0.7,
+      "sfx": 0.74,
+      "voice": 0.8
+    },
+    "loadedBuffers": 29,
+    "loadErrors": [],
+    "timeline": 0.7919999999999999
+  },
+  "renderer": {
+    "software": false,
+    "drawCalls": 116,
+    "triangles": 25640,
+    "geometries": 129,
+    "textures": 10
+  }
+}

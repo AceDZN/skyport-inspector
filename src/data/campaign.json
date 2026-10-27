@@ -2510,10 +2510,6 @@
               {
                 "id": "lower-relay",
                 "state": true
-              },
-              {
-                "id": "junction",
-                "state": "south"
               }
             ],
             "order": [
@@ -2542,10 +2538,6 @@
                 {
                   "id": "lower-relay",
                   "state": true
-                },
-                {
-                  "id": "junction",
-                  "state": "south"
                 }
               ],
               "order": [
@@ -2567,10 +2559,6 @@
                 {
                   "id": "lower-relay",
                   "state": true
-                },
-                {
-                  "id": "junction",
-                  "state": "south"
                 }
               ],
               "order": [
@@ -2622,10 +2610,6 @@
           {
             "id": "upper-relay",
             "state": true
-          },
-          {
-            "id": "junction",
-            "state": "north"
           }
         ],
         "order": [
@@ -2650,10 +2634,6 @@
             {
               "id": "upper-relay",
               "state": true
-            },
-            {
-              "id": "junction",
-              "state": "north"
             }
           ],
           "order": [
@@ -2675,10 +2655,6 @@
             {
               "id": "upper-relay",
               "state": true
-            },
-            {
-              "id": "junction",
-              "state": "north"
             }
           ],
           "order": [
@@ -2748,7 +2724,16 @@
               "cargo:cargo-1:unloaded:lift",
               "pad:middle-dock:cargo-1",
               "exit:middle-exit"
-            ]
+            ],
+            "temporal": {
+              "forbiddenBefore": [
+                {
+                  "event": "cargo:cargo-1:unloaded:lift",
+                  "after": "cargo:cargo-1:loaded:lift",
+                  "until": "lift:middle"
+                }
+              ]
+            }
           },
           "verification": {
             "status": "not-run",
@@ -2771,7 +2756,16 @@
                 "cargo:cargo-1:unloaded:lift",
                 "pad:middle-dock:cargo-1",
                 "exit:middle-exit"
-              ]
+              ],
+              "temporal": {
+                "forbiddenBefore": [
+                  {
+                    "event": "cargo:cargo-1:unloaded:lift",
+                    "after": "cargo:cargo-1:loaded:lift",
+                    "until": "lift:middle"
+                  }
+                ]
+              }
             },
             {
               "cargo": [
@@ -2787,7 +2781,16 @@
                 "cargo:spare-cargo:unloaded:lift",
                 "pad:middle-dock:spare-cargo",
                 "exit:middle-exit"
-              ]
+              ],
+              "temporal": {
+                "forbiddenBefore": [
+                  {
+                    "event": "cargo:spare-cargo:unloaded:lift",
+                    "after": "cargo:spare-cargo:loaded:lift",
+                    "until": "lift:middle"
+                  }
+                ]
+              }
             }
           ]
         }
@@ -2841,7 +2844,16 @@
           "cargo:cargo-1:unloaded:lift",
           "pad:top-dock:cargo-1",
           "exit:top-exit"
-        ]
+        ],
+        "temporal": {
+          "forbiddenBefore": [
+            {
+              "event": "cargo:cargo-1:unloaded:lift",
+              "after": "cargo:cargo-1:loaded:lift",
+              "until": "lift:top"
+            }
+          ]
+        }
       },
       "he": "אל תורידו את הארגז מהמעלית לפני שהיא מגיעה לנחיתה העליונה.",
       "teaching": "before it reaches the top אוסר הורדה מוקדמת; it הוא המעלית.",
@@ -2860,7 +2872,16 @@
             "cargo:cargo-1:unloaded:lift",
             "pad:top-dock:cargo-1",
             "exit:top-exit"
-          ]
+          ],
+          "temporal": {
+            "forbiddenBefore": [
+              {
+                "event": "cargo:cargo-1:unloaded:lift",
+                "after": "cargo:cargo-1:loaded:lift",
+                "until": "lift:top"
+              }
+            ]
+          }
         },
         {
           "cargo": [
@@ -2876,7 +2897,16 @@
             "cargo:spare-cargo:unloaded:lift",
             "pad:top-dock:spare-cargo",
             "exit:top-exit"
-          ]
+          ],
+          "temporal": {
+            "forbiddenBefore": [
+              {
+                "event": "cargo:spare-cargo:unloaded:lift",
+                "after": "cargo:spare-cargo:loaded:lift",
+                "until": "lift:top"
+              }
+            ]
+          }
         }
       ]
     },
@@ -4750,7 +4780,7 @@
             "exit": "west-exit",
             "order": [
               "pad:loading:control-cargo",
-              "route:west-bridge",
+              "route:west-loading-bridge",
               "exit:west-exit"
             ]
           },
@@ -4784,7 +4814,7 @@
         "exit": "east-exit",
         "order": [
           "pad:loading:control-cargo",
-          "route:east-bridge",
+          "route:east-loading-bridge",
           "exit:east-exit"
         ]
       },
@@ -5460,7 +5490,7 @@
       "chapter": "Gravity Forge",
       "family": "bridge-rotunda",
       "status": "PLANNED",
-      "geometryRoute": "A tall rotunda contains a lower energy ring, cargo lift, launch well and upper rotating bridge junction. The lift raises a receiver cell, which opens the launch shutter; a momentum exit reaches the upper ring beyond a vertical gap.",
+      "geometryRoute": "A tall rotunda contains a lower cargo area, receiver-cell lift, wired socket, shuttered launch well and upper rotating bridge junction. The lift raises a cell; its socket physically opens the launch shutter. A momentum exit reaches the upper ring beyond a vertical gap.",
       "newDemand": "Chapter transfer combines physical energy, cargo lift, vertical launch and junction route.",
       "interactionChain": [
         "Raise cell by lift",
@@ -5597,7 +5627,7 @@
       "chapter": "Rift Relay",
       "family": "return-loop",
       "status": "PLANNED",
-      "geometryRoute": "An outer return belt brings owner-labelled cargo to a central pickup bay. A shutter and reverse portal loop separate it from front/rear receiving platforms; both platforms open usable exits.",
+      "geometryRoute": "An outer return belt brings owner-labelled cargo to a central pickup bay. A shutter and reverse portal loop separate it from front/rear receiving platforms; both platforms open usable exits. The return loop combines a belt route and portal transit rather than claiming a closed conveyor circuit.",
       "newDemand": "Reported speaker ownership across a reverse cargo process.",
       "interactionChain": [
         "Open return shutter",
@@ -5703,7 +5733,7 @@
       "chapter": "Rift Relay",
       "family": "conveyor-bay",
       "status": "PLANNED",
-      "geometryRoute": "A controllable conveyor junction feeds receivers beside Ada’s north lift and Tariq’s south lift. Both owner-labelled cargo crates can enter either belt branch; lifts supply separate upper exits.",
+      "geometryRoute": "An inlet conveyor feeds a controllable rotating cargo junction with north/south branches. Receivers beside Ada’s north lift and Tariq’s south lift have separate upper exits. Both owner-labelled cargo crates can enter either branch.",
       "newDemand": "Two clear reported pronoun relationships identify object and destination.",
       "interactionChain": [
         "Load Tariq cargo",
@@ -6077,12 +6107,12 @@
         "https://english.workbook.co.il/grade-9/chapter-12/reading-practical-texts-and-sources-reference"
       ],
       "semanticDecision": {
-        "required": "We usually use the top dock, and we used it yesterday. Today deliver the crate to the middle dock. Tomorrow we will use the top again.",
+        "required": "We usually use the top dock, and we used it yesterday. Today deliver the crate labelled TODAY CARGO to the middle dock. Tomorrow we will use the top again.",
         "plausibleAlternatives": [
           "top usual/future dock"
         ],
         "changedWordingCheck": {
-          "mission": "Today deliver the crate to the top dock.",
+          "mission": "Today deliver the crate labelled TODAY CARGO to the top dock.",
           "changedGoal": {
             "pad": "top-dock",
             "liftStop": "top"
@@ -6103,27 +6133,7 @@
             "oldSolutionMustNotUnlock": true,
             "newSolutionMustComplete": true,
             "samePhysicalBlueprint": true
-          },
-          "normalizedContrastGoalAlternatives": [
-            {
-              "cargo": [
-                {
-                  "id": "today-cargo",
-                  "pad": "top-dock"
-                }
-              ],
-              "exit": "top-dock-exit"
-            },
-            {
-              "cargo": [
-                {
-                  "id": "spare-cargo",
-                  "pad": "top-dock"
-                }
-              ],
-              "exit": "top-dock-exit"
-            }
-          ]
+          }
         }
       },
       "goal": {
@@ -6162,28 +6172,8 @@
         "status": "not-run",
         "realInputEvidence": null
       },
-      "he": "בדרך כלל משתמשים ברציף העליון והשתמשנו בו אתמול. היום מסרו לרציף האמצעי; מחר נחזור לעליון.",
-      "teaching": "Today אינו usually, yesterday או tomorrow. בחירת תחנת המעלית צריכה להתאים למסירה של היום.",
-      "normalizedGoalAlternatives": [
-        {
-          "cargo": [
-            {
-              "id": "today-cargo",
-              "pad": "middle-dock"
-            }
-          ],
-          "exit": "middle-dock-exit"
-        },
-        {
-          "cargo": [
-            {
-              "id": "spare-cargo",
-              "pad": "middle-dock"
-            }
-          ],
-          "exit": "middle-dock-exit"
-        }
-      ]
+      "he": "בדרך כלל משתמשים ברציף העליון והשתמשנו בו אתמול. היום מסרו את הארגז שעליו TODAY CARGO לרציף האמצעי. מחר נחזור לעליון.",
+      "teaching": "Today אינו usually, yesterday או tomorrow. בחירת תחנת המעלית צריכה להתאים למסירה של היום."
     },
     {
       "number": 46,
@@ -6262,65 +6252,7 @@
             "oldSolutionMustNotUnlock": true,
             "newSolutionMustComplete": true,
             "samePhysicalBlueprint": true
-          },
-          "normalizedContrastGoalAlternatives": [
-            {
-              "cargo": [
-                {
-                  "id": "cargo-1",
-                  "pad": "auxiliary-vault"
-                }
-              ],
-              "exit": "auxiliary-vault-exit",
-              "relay": {
-                "id": "main-emitter",
-                "receiver": "auxiliary"
-              },
-              "devices": [
-                {
-                  "id": "main-receiver",
-                  "state": false
-                }
-              ],
-              "temporal": {
-                "throughout": {
-                  "interval": {
-                    "start": "cargo:cargo-1:enter:auxiliary-gate",
-                    "end": "cargo:cargo-1:leave:auxiliary-gate"
-                  },
-                  "state": "main-receiver:unpowered"
-                }
-              }
-            },
-            {
-              "cargo": [
-                {
-                  "id": "spare-cargo",
-                  "pad": "auxiliary-vault"
-                }
-              ],
-              "exit": "auxiliary-vault-exit",
-              "relay": {
-                "id": "main-emitter",
-                "receiver": "auxiliary"
-              },
-              "devices": [
-                {
-                  "id": "main-receiver",
-                  "state": false
-                }
-              ],
-              "temporal": {
-                "throughout": {
-                  "interval": {
-                    "start": "cargo:spare-cargo:enter:auxiliary-gate",
-                    "end": "cargo:spare-cargo:leave:auxiliary-gate"
-                  },
-                  "state": "main-receiver:unpowered"
-                }
-              }
-            }
-          ]
+          }
         }
       },
       "goal": {
@@ -6381,65 +6313,7 @@
         "realInputEvidence": null
       },
       "he": "השאירו את הקולט הנוסף מנותק לאורך מעבר הארגז בשער הראשי. אחר כך הניחו אותו על משטח הכספת הראשית.",
-      "teaching": "while מחייב שהקולט הנוסף יישאר מנותק בכל מעבר המטען בשער הראשי.",
-      "normalizedGoalAlternatives": [
-        {
-          "cargo": [
-            {
-              "id": "cargo-1",
-              "pad": "main-vault"
-            }
-          ],
-          "exit": "main-vault-exit",
-          "relay": {
-            "id": "main-emitter",
-            "receiver": "main"
-          },
-          "devices": [
-            {
-              "id": "auxiliary-receiver",
-              "state": false
-            }
-          ],
-          "temporal": {
-            "throughout": {
-              "interval": {
-                "start": "cargo:cargo-1:enter:main-gate",
-                "end": "cargo:cargo-1:leave:main-gate"
-              },
-              "state": "auxiliary-receiver:unpowered"
-            }
-          }
-        },
-        {
-          "cargo": [
-            {
-              "id": "spare-cargo",
-              "pad": "main-vault"
-            }
-          ],
-          "exit": "main-vault-exit",
-          "relay": {
-            "id": "main-emitter",
-            "receiver": "main"
-          },
-          "devices": [
-            {
-              "id": "auxiliary-receiver",
-              "state": false
-            }
-          ],
-          "temporal": {
-            "throughout": {
-              "interval": {
-                "start": "cargo:spare-cargo:enter:main-gate",
-                "end": "cargo:spare-cargo:leave:main-gate"
-              },
-              "state": "auxiliary-receiver:unpowered"
-            }
-          }
-        }
-      ]
+      "teaching": "while מחייב שהקולט הנוסף יישאר מנותק בכל מעבר המטען בשער הראשי."
     },
     {
       "number": 47,
@@ -6797,7 +6671,7 @@
       "chapter": "Rift Relay",
       "family": "finale",
       "status": "PLANNED",
-      "geometryRoute": "Five connected zones form a real route: return-loop belt, garden cargo socket, two-floor cell lift, occluded beam gallery, final launch rotunda. A complete alternative owner/exit route remains possible, so reading selects the intended finale.",
+      "geometryRoute": "Five connected zones form a real route: two return-belt reaches linked by portal transit, a garden cargo socket, a two-floor cell lift, an occluded beam gallery, and a final launch rotunda. A complete alternative owner/exit route remains possible, so reading selects the intended finale.",
       "newDemand": "Campaign transfer integrates ownership, preservation, current update and all major machinery without adding a quiz.",
       "interactionChain": [
         "Open return shutter",
@@ -6978,5 +6852,5 @@
       "teaching": "her שומר על בעלות מינה; Keep it there while מחייב רציפות בזמן העלייה, והעדכון משנה רק את היציאה."
     }
   ],
-  "normalizedGoalContract": "Strict English goal gates unlock. Every directly requested crossing uses a real body/route event; portal:enter accepts either portal index. RISING means positive vertical movement, not descent. Generic cargo tasks accept equivalent real crates. Forbidden event history persists for the attempt. Order/during/throughout/history predicates refer to actual machine/body events; no arbitrary launch-used requirement. Assistance is allowed. All rows remain PLANNED until normal-input verification."
+  "normalizedGoalContract": "Strict English goal gates unlock. Every directly requested crossing uses a real body/route event; portal:enter accepts either portal index. RISING means positive vertical movement, not descent. Generic cargo tasks accept equivalent real crates. Forbidden event history persists for the attempt. Order/during/throughout/history predicates refer to actual machine/body events; no arbitrary launch-used requirement. Assistance is allowed. All rows remain PLANNED until normal-input verification. Direct negative BEFORE instructions use temporal.forbiddenBefore [{event,after?,until}] over persistent attempt history; positive order matches a valid later subsequence."
 }

@@ -1,0 +1,197 @@
+{
+  "raysWithPermanentWalls": [],
+  "balance": {
+    "rows": [
+      {
+        "number": 33,
+        "id": "cargo-1",
+        "side": "right",
+        "inventory": 1,
+        "nearest": true
+      },
+      {
+        "number": 34,
+        "id": "control-cargo",
+        "side": "left",
+        "inventory": 3,
+        "nearest": false
+      },
+      {
+        "number": 35,
+        "id": "wide-cargo",
+        "side": "middle",
+        "inventory": 3,
+        "nearest": true
+      },
+      {
+        "number": 38,
+        "id": "cargo-1",
+        "side": "middle",
+        "inventory": 1,
+        "nearest": true
+      },
+      {
+        "number": 39,
+        "id": "cargo-1",
+        "side": "left",
+        "inventory": 2,
+        "nearest": true
+      },
+      {
+        "number": 40,
+        "id": "power-cell",
+        "side": "left",
+        "inventory": 2,
+        "nearest": false
+      },
+      {
+        "number": 41,
+        "id": "mina-crate",
+        "side": "right",
+        "inventory": 1,
+        "nearest": false
+      },
+      {
+        "number": 42,
+        "id": "tariq-crate",
+        "side": "right",
+        "inventory": 1,
+        "nearest": false
+      },
+      {
+        "number": 43,
+        "id": "crate-b",
+        "side": "right",
+        "inventory": 2,
+        "nearest": false
+      },
+      {
+        "number": 44,
+        "id": "mina-crate",
+        "side": "left",
+        "inventory": 2,
+        "nearest": true
+      },
+      {
+        "number": 45,
+        "id": "today-cargo",
+        "side": "middle",
+        "inventory": 3,
+        "nearest": true
+      },
+      {
+        "number": 46,
+        "id": "cargo-1",
+        "side": "right",
+        "inventory": 1,
+        "nearest": false
+      },
+      {
+        "number": 47,
+        "id": "mina-crate",
+        "side": "left",
+        "inventory": 2,
+        "nearest": false
+      },
+      {
+        "number": 48,
+        "id": "control-cell",
+        "side": "middle",
+        "inventory": 3,
+        "nearest": false
+      },
+      {
+        "number": 49,
+        "id": "large-cargo",
+        "side": "middle",
+        "inventory": 3,
+        "nearest": true
+      }
+    ],
+    "sides": {
+      "left": 5,
+      "middle": 5,
+      "right": 5
+    },
+    "inventory": {
+      "1": 5,
+      "2": 5,
+      "3": 5
+    },
+    "nearest": 7,
+    "total": 15
+  },
+  "history": [
+    {
+      "number": 43,
+      "history": {
+        "facts": [
+          "actor:Rook:carried:crate-b",
+          "actor:Rook:delivered:crate-b",
+          "actor:Rook:stood-beside:crate-a",
+          "actor:Rook:stood-beside:after-flash:crate-a"
+        ],
+        "cargo": [
+          {
+            "id": "crate-a",
+            "pos": [
+              -4.5,
+              3.8200000000000003,
+              2
+            ],
+            "grounded": true
+          },
+          {
+            "id": "crate-b",
+            "pos": [
+              1.099999999999993,
+              3.8200000000000003,
+              2
+            ],
+            "grounded": true
+          }
+        ]
+      }
+    },
+    {
+      "number": 48,
+      "history": {
+        "facts": [
+          "actor:Rook:carried:diamond-crate",
+          "actor:Rook:delivered:diamond-crate",
+          "actor:Rook:stood-beside:triangle-crate",
+          "actor:Rook:stood-beside:after-flash:triangle-crate"
+        ],
+        "cargo": [
+          {
+            "id": "triangle-crate",
+            "pos": [
+              7,
+              0.42,
+              9
+            ],
+            "grounded": true
+          },
+          {
+            "id": "diamond-crate",
+            "pos": [
+              -5.5999999999999925,
+              0.56,
+              9
+            ],
+            "grounded": true
+          },
+          {
+            "id": "control-cell",
+            "pos": [
+              5,
+              1.02,
+              9
+            ],
+            "grounded": true
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,235 @@
+{
+  "title": "Rift Runner",
+  "version": "campaign-physical-draft-1",
+  "mode": "playing",
+  "level": 34,
+  "contrast": false,
+  "world": {
+    "coordinateSystem": "+Y up, -Z beyond glass, +X east. Player position is capsule center; eye +0.65Y.",
+    "room": "level-34",
+    "mission": "Put the control cargo on the loading platform. The engineer has checked the east bridge; it has cargo clearance now. She checked the west bridge last week, but that record does not give today’s clearance. Cross the bridge with current cargo clearance.",
+    "player": {
+      "position": [
+        0,
+        0.85,
+        10
+      ],
+      "velocity": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "pitch": -0.14004000000000005,
+      "grounded": true,
+      "crossings": 0
+    },
+    "portals": [
+      null,
+      null
+    ],
+    "crates": [
+      {
+        "id": "spare-cargo",
+        "label": "SPARE CARGO",
+        "shape": "triangle",
+        "size": "small",
+        "start": "front",
+        "position": [
+          3,
+          0.42,
+          8
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      },
+      {
+        "id": "reserve-cargo",
+        "label": "RESERVE CARGO",
+        "shape": "triangle",
+        "size": "small",
+        "start": "front",
+        "position": [
+          0,
+          0.42,
+          8
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      },
+      {
+        "id": "control-cargo",
+        "label": "CONTROL CARGO",
+        "shape": "diamond",
+        "size": "small",
+        "start": "front",
+        "position": [
+          -2,
+          0.42,
+          8
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      }
+    ],
+    "pads": [
+      {
+        "id": "loading",
+        "label": "LOADING",
+        "position": [
+          0,
+          0.14,
+          -3
+        ],
+        "crate": null
+      }
+    ],
+    "bridges": [],
+    "guide": null,
+    "held": null,
+    "lastBridge": null,
+    "outcome": null,
+    "respawns": 0,
+    "launchUsed": false,
+    "events": [],
+    "number": 34,
+    "name": "Safe Now",
+    "family": "history-depot",
+    "devices": [],
+    "exits": [
+      {
+        "id": "east-exit",
+        "label": "EAST EXIT",
+        "position": [
+          12,
+          0.85,
+          -3
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      },
+      {
+        "id": "west-exit",
+        "label": "WEST EXIT",
+        "position": [
+          -12,
+          0.85,
+          -3
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "id": "depot-panel",
+        "position": [
+          -5.5,
+          1.7,
+          2.2
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "id": "loading-panel",
+        "position": [
+          -3.8,
+          1.7,
+          -4
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ]
+      }
+    ],
+    "controlPoints": [],
+    "result": null,
+    "observedEvents": []
+  },
+  "assistance": {
+    "hints": 0,
+    "translations": 0,
+    "retries": 0
+  },
+  "progress": {
+    "version": 2,
+    "highestUnlocked": 50,
+    "resumeLevel": 34,
+    "records": {},
+    "updatedAt": 1793124346932
+  },
+  "events": [
+    {
+      "type": "level-start",
+      "level": 34,
+      "time": 0,
+      "number": 34,
+      "contrast": false
+    }
+  ],
+  "pointerLocked": false,
+  "controls": {
+    "unlocked": true,
+    "sensitivity": 0.0022,
+    "invert": false,
+    "touchMode": false,
+    "reduced": true
+  },
+  "audio": {
+    "context": "running",
+    "paused": false,
+    "loopCount": 3,
+    "activeSfx": 0,
+    "cuesPlayed": 0,
+    "energy": false,
+    "chapter": 4,
+    "intensity": 0,
+    "recentCues": [],
+    "paired": false,
+    "bridge": false,
+    "ducked": false,
+    "gains": {
+      "master": 0.8,
+      "music": 0.7,
+      "sfx": 0.74,
+      "voice": 0.8
+    },
+    "loadedBuffers": 29,
+    "loadErrors": [],
+    "timeline": 0.7706666666666666
+  },
+  "renderer": {
+    "software": false,
+    "drawCalls": 145,
+    "triangles": 42382,
+    "geometries": 136,
+    "textures": 16
+  }
+}

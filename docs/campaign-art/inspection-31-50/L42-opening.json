@@ -1,0 +1,534 @@
+{
+  "title": "Rift Runner",
+  "version": "campaign-physical-draft-1",
+  "mode": "playing",
+  "level": 42,
+  "contrast": false,
+  "world": {
+    "coordinateSystem": "+Y up, -Z beyond glass, +X east. Player position is capsule center; eye +0.65Y.",
+    "room": "level-42",
+    "mission": "Tariq told Ada to send his crate to the receiver beside her lift.",
+    "player": {
+      "position": [
+        -9.723582880227372,
+        1.05,
+        1
+      ],
+      "velocity": [
+        1.4999999628060072,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "pitch": -0.12000000000000001,
+      "grounded": true,
+      "crossings": 0
+    },
+    "portals": [
+      null,
+      null
+    ],
+    "crates": [
+      {
+        "id": "tariq-crate",
+        "label": "TARIQ CRATE",
+        "shape": "diamond",
+        "size": "small",
+        "start": "front",
+        "owner": "Tariq",
+        "position": [
+          -7.652600000000053,
+          0.62,
+          0.5
+        ],
+        "velocity": [
+          1.4040090827457612,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      },
+      {
+        "id": "ada-crate",
+        "label": "ADA CRATE",
+        "shape": "triangle",
+        "size": "small",
+        "start": "front",
+        "owner": "Ada",
+        "position": [
+          -10.652600000000076,
+          0.62,
+          0.5
+        ],
+        "velocity": [
+          1.4040090827457612,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      }
+    ],
+    "pads": [
+      {
+        "id": "ada-lift-receiver",
+        "label": "ADA LIFT RECEIVER",
+        "position": [
+          0,
+          0.14,
+          -11
+        ],
+        "crate": null
+      },
+      {
+        "id": "tariq-lift-receiver",
+        "label": "TARIQ LIFT RECEIVER",
+        "position": [
+          0,
+          0.14,
+          11
+        ],
+        "crate": null
+      }
+    ],
+    "bridges": [],
+    "guide": null,
+    "held": null,
+    "lastBridge": null,
+    "outcome": null,
+    "respawns": 0,
+    "launchUsed": false,
+    "events": [],
+    "number": 42,
+    "name": "Beside Her Lift",
+    "family": "conveyor-bay",
+    "devices": [
+      {
+        "id": "inlet-belt",
+        "kind": "conveyor",
+        "label": "INLET BELT",
+        "position": [
+          -10,
+          0.1,
+          0
+        ],
+        "size": [
+          8,
+          0.2,
+          2.4
+        ],
+        "active": true,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "inlet-feeder-belt",
+        "kind": "conveyor",
+        "label": "INLET FEEDER BELT",
+        "position": [
+          -4.5,
+          0.1,
+          0
+        ],
+        "size": [
+          3,
+          0.2,
+          2.4
+        ],
+        "active": true,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "conveyor-junction",
+        "kind": "junction",
+        "label": "CONVEYOR JUNCTION",
+        "position": [
+          0,
+          -0.15,
+          0
+        ],
+        "size": [
+          9,
+          0.3,
+          2.6
+        ],
+        "active": true,
+        "progress": 0,
+        "choice": "east",
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "ada-lift",
+        "kind": "lift",
+        "label": "ADA · NORTH LIFT",
+        "position": [
+          3,
+          -0.2,
+          -11
+        ],
+        "size": [
+          3.4,
+          0.4,
+          3.4
+        ],
+        "active": true,
+        "progress": 0,
+        "choice": "base",
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "tariq-lift",
+        "kind": "lift",
+        "label": "TARIQ · SOUTH LIFT",
+        "position": [
+          3,
+          -0.2,
+          11
+        ],
+        "size": [
+          3.4,
+          0.4,
+          3.4
+        ],
+        "active": true,
+        "progress": 0,
+        "choice": "base",
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      }
+    ],
+    "exits": [
+      {
+        "id": "ada-upper-exit",
+        "label": "ADA UPPER EXIT",
+        "position": [
+          -2,
+          4.25,
+          -13
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      },
+      {
+        "id": "tariq-upper-exit",
+        "label": "TARIQ UPPER EXIT",
+        "position": [
+          -2,
+          4.25,
+          13
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "id": "inlet-panel",
+        "position": [
+          -13.8,
+          1.7,
+          -1
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "hub-inlet-panel",
+        "position": [
+          -2.8,
+          1.7,
+          -1
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ]
+      }
+    ],
+    "controlPoints": [
+      {
+        "id": "conveyor-junction",
+        "position": [
+          -1,
+          0.75,
+          2
+        ]
+      },
+      {
+        "id": "ada-lift",
+        "position": [
+          1.6,
+          0.7,
+          -9.5
+        ]
+      },
+      {
+        "id": "tariq-lift",
+        "position": [
+          1.6,
+          0.7,
+          12.5
+        ]
+      }
+    ],
+    "result": null,
+    "observedEvents": [
+      {
+        "key": "cargo:tariq-crate:loaded:inlet-belt",
+        "time": 0.008333333333333333,
+        "states": {
+          "conveyor-junction": "east",
+          "ada-lift:at:base": true,
+          "ada-lift:at:middle": false,
+          "ada-lift:at:upper": false,
+          "ada-lift": "base",
+          "ada-lift:moving": false,
+          "tariq-lift:at:base": true,
+          "tariq-lift:at:middle": false,
+          "tariq-lift:at:upper": false,
+          "tariq-lift": "base",
+          "tariq-lift:moving": false,
+          "pad:ada-lift-receiver:tariq-crate": false,
+          "pad:ada-lift-receiver:ada-crate": false,
+          "pad:tariq-lift-receiver:tariq-crate": false,
+          "pad:tariq-lift-receiver:ada-crate": false,
+          "inlet-belt:moving": false,
+          "inlet-belt:rising": false,
+          "inlet-feeder-belt:moving": false,
+          "inlet-feeder-belt:rising": false,
+          "conveyor-junction:moving": false,
+          "conveyor-junction:rising": false,
+          "ada-lift:rising": false,
+          "tariq-lift:rising": false
+        }
+      },
+      {
+        "key": "cargo:ada-crate:loaded:inlet-belt",
+        "time": 0.008333333333333333,
+        "states": {
+          "conveyor-junction": "east",
+          "ada-lift:at:base": true,
+          "ada-lift:at:middle": false,
+          "ada-lift:at:upper": false,
+          "ada-lift": "base",
+          "ada-lift:moving": false,
+          "tariq-lift:at:base": true,
+          "tariq-lift:at:middle": false,
+          "tariq-lift:at:upper": false,
+          "tariq-lift": "base",
+          "tariq-lift:moving": false,
+          "pad:ada-lift-receiver:tariq-crate": false,
+          "pad:ada-lift-receiver:ada-crate": false,
+          "pad:tariq-lift-receiver:tariq-crate": false,
+          "pad:tariq-lift-receiver:ada-crate": false,
+          "inlet-belt:moving": false,
+          "inlet-belt:rising": false,
+          "inlet-feeder-belt:moving": false,
+          "inlet-feeder-belt:rising": false,
+          "conveyor-junction:moving": false,
+          "conveyor-junction:rising": false,
+          "ada-lift:rising": false,
+          "tariq-lift:rising": false
+        }
+      },
+      {
+        "key": "conveyor:inlet-belt:carried:tariq-crate",
+        "time": 0.016666666666666666,
+        "states": {
+          "conveyor-junction": "east",
+          "ada-lift:at:base": true,
+          "ada-lift:at:middle": false,
+          "ada-lift:at:upper": false,
+          "ada-lift": "base",
+          "ada-lift:moving": false,
+          "tariq-lift:at:base": true,
+          "tariq-lift:at:middle": false,
+          "tariq-lift:at:upper": false,
+          "tariq-lift": "base",
+          "tariq-lift:moving": false,
+          "pad:ada-lift-receiver:tariq-crate": false,
+          "pad:ada-lift-receiver:ada-crate": false,
+          "pad:tariq-lift-receiver:tariq-crate": false,
+          "pad:tariq-lift-receiver:ada-crate": false,
+          "inlet-belt:moving": false,
+          "inlet-belt:rising": false,
+          "inlet-feeder-belt:moving": false,
+          "inlet-feeder-belt:rising": false,
+          "conveyor-junction:moving": false,
+          "conveyor-junction:rising": false,
+          "ada-lift:rising": false,
+          "tariq-lift:rising": false
+        }
+      },
+      {
+        "key": "conveyor:carried:tariq-crate",
+        "time": 0.016666666666666666,
+        "states": {
+          "conveyor-junction": "east",
+          "ada-lift:at:base": true,
+          "ada-lift:at:middle": false,
+          "ada-lift:at:upper": false,
+          "ada-lift": "base",
+          "ada-lift:moving": false,
+          "tariq-lift:at:base": true,
+          "tariq-lift:at:middle": false,
+          "tariq-lift:at:upper": false,
+          "tariq-lift": "base",
+          "tariq-lift:moving": false,
+          "pad:ada-lift-receiver:tariq-crate": false,
+          "pad:ada-lift-receiver:ada-crate": false,
+          "pad:tariq-lift-receiver:tariq-crate": false,
+          "pad:tariq-lift-receiver:ada-crate": false,
+          "inlet-belt:moving": false,
+          "inlet-belt:rising": false,
+          "inlet-feeder-belt:moving": false,
+          "inlet-feeder-belt:rising": false,
+          "conveyor-junction:moving": false,
+          "conveyor-junction:rising": false,
+          "ada-lift:rising": false,
+          "tariq-lift:rising": false
+        }
+      },
+      {
+        "key": "conveyor:inlet-belt:carried:ada-crate",
+        "time": 0.016666666666666666,
+        "states": {
+          "conveyor-junction": "east",
+          "ada-lift:at:base": true,
+          "ada-lift:at:middle": false,
+          "ada-lift:at:upper": false,
+          "ada-lift": "base",
+          "ada-lift:moving": false,
+          "tariq-lift:at:base": true,
+          "tariq-lift:at:middle": false,
+          "tariq-lift:at:upper": false,
+          "tariq-lift": "base",
+          "tariq-lift:moving": false,
+          "pad:ada-lift-receiver:tariq-crate": false,
+          "pad:ada-lift-receiver:ada-crate": false,
+          "pad:tariq-lift-receiver:tariq-crate": false,
+          "pad:tariq-lift-receiver:ada-crate": false,
+          "inlet-belt:moving": false,
+          "inlet-belt:rising": false,
+          "inlet-feeder-belt:moving": false,
+          "inlet-feeder-belt:rising": false,
+          "conveyor-junction:moving": false,
+          "conveyor-junction:rising": false,
+          "ada-lift:rising": false,
+          "tariq-lift:rising": false
+        }
+      },
+      {
+        "key": "conveyor:carried:ada-crate",
+        "time": 0.016666666666666666,
+        "states": {
+          "conveyor-junction": "east",
+          "ada-lift:at:base": true,
+          "ada-lift:at:middle": false,
+          "ada-lift:at:upper": false,
+          "ada-lift": "base",
+          "ada-lift:moving": false,
+          "tariq-lift:at:base": true,
+          "tariq-lift:at:middle": false,
+          "tariq-lift:at:upper": false,
+          "tariq-lift": "base",
+          "tariq-lift:moving": false,
+          "pad:ada-lift-receiver:tariq-crate": false,
+          "pad:ada-lift-receiver:ada-crate": false,
+          "pad:tariq-lift-receiver:tariq-crate": false,
+          "pad:tariq-lift-receiver:ada-crate": false,
+          "inlet-belt:moving": false,
+          "inlet-belt:rising": false,
+          "inlet-feeder-belt:moving": false,
+          "inlet-feeder-belt:rising": false,
+          "conveyor-junction:moving": false,
+          "conveyor-junction:rising": false,
+          "ada-lift:rising": false,
+          "tariq-lift:rising": false
+        }
+      }
+    ]
+  },
+  "assistance": {
+    "hints": 0,
+    "translations": 0,
+    "retries": 0
+  },
+  "progress": {
+    "version": 2,
+    "highestUnlocked": 50,
+    "resumeLevel": 42,
+    "records": {},
+    "updatedAt": 1793124357476
+  },
+  "events": [
+    {
+      "type": "level-start",
+      "level": 42,
+      "time": 0,
+      "number": 42,
+      "contrast": false
+    }
+  ],
+  "pointerLocked": false,
+  "controls": {
+    "unlocked": true,
+    "sensitivity": 0.0022,
+    "invert": false,
+    "touchMode": false,
+    "reduced": true
+  },
+  "audio": {
+    "context": "running",
+    "paused": false,
+    "loopCount": 3,
+    "activeSfx": 0,
+    "cuesPlayed": 0,
+    "energy": false,
+    "chapter": 5,
+    "intensity": 0,
+    "recentCues": [],
+    "paired": false,
+    "bridge": false,
+    "ducked": false,
+    "gains": {
+      "master": 0.8,
+      "music": 0.7,
+      "sfx": 0.74,
+      "voice": 0.8
+    },
+    "loadedBuffers": 29,
+    "loadErrors": [],
+    "timeline": 0.8026666666666666
+  },
+  "renderer": {
+    "software": false,
+    "drawCalls": 150,
+    "triangles": 21588,
+    "geometries": 188,
+    "textures": 12
+  }
+}

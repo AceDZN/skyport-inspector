@@ -1,0 +1,408 @@
+{
+  "title": "Rift Runner",
+  "version": "campaign-physical-draft-1",
+  "mode": "playing",
+  "level": 48,
+  "contrast": false,
+  "world": {
+    "coordinateSystem": "+Y up, -Z beyond glass, +X east. Player position is capsule center; eye +0.65Y.",
+    "room": "level-48",
+    "mission": "Power the hub with the control cell. If the recorded cargo is the diamond crate, use east. If it is the triangle crate, use west.",
+    "player": {
+      "position": [
+        0,
+        0.85,
+        12
+      ],
+      "velocity": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "pitch": -0.12000000000000001,
+      "grounded": true,
+      "crossings": 0
+    },
+    "portals": [
+      null,
+      null
+    ],
+    "crates": [
+      {
+        "id": "triangle-crate",
+        "label": "TRIANGLE CRATE",
+        "shape": "triangle",
+        "size": "small",
+        "start": "front",
+        "position": [
+          7,
+          0.42,
+          9
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      },
+      {
+        "id": "diamond-crate",
+        "label": "DIAMOND CRATE",
+        "shape": "diamond",
+        "size": "small",
+        "start": "front",
+        "position": [
+          -3.7858066666666654,
+          0.91,
+          9
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      },
+      {
+        "id": "control-cell",
+        "label": "CONTROL CELL",
+        "shape": "triangle",
+        "size": "small",
+        "start": "front",
+        "position": [
+          5,
+          1.02,
+          9
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      }
+    ],
+    "pads": [
+      {
+        "id": "record-plinth",
+        "label": "RECORD PLINTH",
+        "position": [
+          -5.6,
+          0.14,
+          9
+        ],
+        "crate": null
+      },
+      {
+        "id": "hub-socket",
+        "label": "HUB SOCKET",
+        "position": [
+          4,
+          0.14,
+          6
+        ],
+        "crate": null
+      }
+    ],
+    "bridges": [],
+    "guide": {
+      "actor": "Rook",
+      "position": [
+        -3.7858066666666654,
+        0.010000000000000009,
+        8.1
+      ],
+      "carrying": "diamond-crate",
+      "phase": "carry",
+      "beaconBlinking": true
+    },
+    "held": null,
+    "lastBridge": null,
+    "outcome": null,
+    "respawns": 0,
+    "launchUsed": false,
+    "events": [],
+    "number": 48,
+    "name": "If the Record Says",
+    "family": "bridge-rotunda",
+    "devices": [
+      {
+        "id": "hub-emitter",
+        "kind": "relay",
+        "label": "HUB EMITTER",
+        "position": [
+          5,
+          1.2,
+          10
+        ],
+        "size": [
+          0.65,
+          1,
+          0.65
+        ],
+        "active": true,
+        "progress": 0,
+        "choice": "hub-receiver",
+        "angle": 0,
+        "powered": null,
+        "blocked": true
+      },
+      {
+        "id": "hub-receiver",
+        "kind": "receiver",
+        "label": "HUB RECEIVER",
+        "position": [
+          5,
+          2.2,
+          3
+        ],
+        "size": [
+          0.7,
+          0.7,
+          0.25
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "hub-lift",
+        "kind": "lift",
+        "label": "HUB LIFT",
+        "position": [
+          0,
+          -0.2,
+          2
+        ],
+        "size": [
+          3.4,
+          0.4,
+          3.4
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": "base",
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "junction",
+        "kind": "junction",
+        "label": "JUNCTION",
+        "position": [
+          0,
+          3.25,
+          -2
+        ],
+        "size": [
+          9,
+          0.3,
+          2.6
+        ],
+        "active": true,
+        "progress": 0,
+        "choice": "east",
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      }
+    ],
+    "exits": [
+      {
+        "id": "east-hub-exit",
+        "label": "EAST HUB EXIT",
+        "position": [
+          10,
+          4.25,
+          -2
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      },
+      {
+        "id": "west-hub-exit",
+        "label": "WEST HUB EXIT",
+        "position": [
+          -10,
+          4.25,
+          -2
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      },
+      {
+        "id": "north-lookout-exit",
+        "label": "NORTH LOOKOUT EXIT",
+        "position": [
+          0,
+          4.25,
+          -12
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "id": "record-side-panel",
+        "position": [
+          -7.8,
+          1.7,
+          7
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "record-return-panel",
+        "position": [
+          7.8,
+          1.7,
+          5
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ]
+      }
+    ],
+    "controlPoints": [
+      {
+        "id": "hub-emitter",
+        "position": [
+          5,
+          1.2,
+          10
+        ]
+      },
+      {
+        "id": "hub-lift",
+        "position": [
+          -1.4,
+          0.7,
+          3.5
+        ]
+      },
+      {
+        "id": "junction",
+        "position": [
+          -1,
+          4.15,
+          0
+        ]
+      }
+    ],
+    "result": null,
+    "observedEvents": [
+      {
+        "key": "actor:Rook:carried:diamond-crate",
+        "time": 0.008333333333333333,
+        "states": {
+          "hub-emitter": "unpowered",
+          "hub-receiver": false,
+          "hub-lift:at:base": true,
+          "hub-lift:at:upper": false,
+          "hub-lift": "base",
+          "hub-lift:moving": false,
+          "junction": "moving",
+          "pad:record-plinth:triangle-crate": false,
+          "pad:record-plinth:diamond-crate": false,
+          "pad:record-plinth:control-cell": false,
+          "pad:hub-socket:triangle-crate": false,
+          "pad:hub-socket:diamond-crate": false,
+          "pad:hub-socket:control-cell": false,
+          "hub-emitter:moving": false,
+          "hub-emitter:rising": false,
+          "hub-receiver:moving": false,
+          "hub-receiver:rising": false,
+          "hub-receiver:unpowered": true,
+          "hub-lift:rising": false,
+          "junction:moving": false,
+          "junction:rising": false,
+          "actor:Rook:carrying:diamond-crate": true
+        }
+      }
+    ]
+  },
+  "assistance": {
+    "hints": 0,
+    "translations": 0,
+    "retries": 0
+  },
+  "progress": {
+    "version": 2,
+    "highestUnlocked": 50,
+    "resumeLevel": 48,
+    "records": {},
+    "updatedAt": 1793124365583
+  },
+  "events": [
+    {
+      "type": "level-start",
+      "level": 48,
+      "time": 0,
+      "number": 48,
+      "contrast": false
+    }
+  ],
+  "pointerLocked": false,
+  "controls": {
+    "unlocked": true,
+    "sensitivity": 0.0022,
+    "invert": false,
+    "touchMode": false,
+    "reduced": true
+  },
+  "audio": {
+    "context": "running",
+    "paused": false,
+    "loopCount": 3,
+    "activeSfx": 0,
+    "cuesPlayed": 0,
+    "energy": false,
+    "chapter": 5,
+    "intensity": 0,
+    "recentCues": [],
+    "paired": false,
+    "bridge": false,
+    "ducked": false,
+    "gains": {
+      "master": 0.8,
+      "music": 0.7,
+      "sfx": 0.74,
+      "voice": 0.8
+    },
+    "loadedBuffers": 29,
+    "loadErrors": [],
+    "timeline": 0.8133333333333334
+  },
+  "renderer": {
+    "software": false,
+    "drawCalls": 157,
+    "triangles": 47416,
+    "geometries": 142,
+    "textures": 23
+  }
+}

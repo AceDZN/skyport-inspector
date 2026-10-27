@@ -1,0 +1,296 @@
+{
+  "title": "Rift Runner",
+  "version": "campaign-physical-draft-1",
+  "mode": "playing",
+  "level": 37,
+  "contrast": false,
+  "world": {
+    "coordinateSystem": "+Y up, -Z beyond glass, +X east. Player position is capsule center; eye +0.65Y.",
+    "room": "level-37",
+    "mission": "If both outer platforms hold a crate, the freight lift rises. Keep both occupied and use the top exit.",
+    "player": {
+      "position": [
+        0,
+        0.85,
+        10
+      ],
+      "velocity": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "pitch": -0.12000000000000001,
+      "grounded": true,
+      "crossings": 0
+    },
+    "portals": [
+      null,
+      null
+    ],
+    "crates": [
+      {
+        "id": "cargo-a",
+        "label": "CARGO A",
+        "shape": "diamond",
+        "size": "small",
+        "start": "front",
+        "position": [
+          -2,
+          0.42,
+          10
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      },
+      {
+        "id": "cargo-b",
+        "label": "CARGO B",
+        "shape": "triangle",
+        "size": "small",
+        "start": "front",
+        "position": [
+          2,
+          0.42,
+          10
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      }
+    ],
+    "pads": [
+      {
+        "id": "lower-outer",
+        "label": "LOWER OUTER",
+        "position": [
+          -5,
+          0.14,
+          8
+        ],
+        "crate": null
+      },
+      {
+        "id": "middle-outer",
+        "label": "MIDDLE OUTER",
+        "position": [
+          -5,
+          3.54,
+          -2
+        ],
+        "crate": null
+      },
+      {
+        "id": "inner",
+        "label": "INNER",
+        "position": [
+          -1,
+          0.14,
+          8
+        ],
+        "crate": null
+      }
+    ],
+    "bridges": [],
+    "guide": null,
+    "held": null,
+    "lastBridge": null,
+    "outcome": null,
+    "respawns": 0,
+    "launchUsed": false,
+    "events": [],
+    "number": 37,
+    "name": "Both Means Both",
+    "family": "lift-shaft",
+    "devices": [
+      {
+        "id": "freight-lift",
+        "kind": "lift",
+        "label": "FREIGHT LIFT",
+        "position": [
+          3,
+          -0.2,
+          1
+        ],
+        "size": [
+          3.4,
+          0.4,
+          3.4
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": "base",
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "service-lift",
+        "kind": "lift",
+        "label": "SERVICE LIFT",
+        "position": [
+          -4,
+          -0.2,
+          3
+        ],
+        "size": [
+          3.4,
+          0.4,
+          3.4
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": "base",
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      }
+    ],
+    "exits": [
+      {
+        "id": "top-freight-exit",
+        "label": "TOP FREIGHT EXIT",
+        "position": [
+          5,
+          7.65,
+          -5.5
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      },
+      {
+        "id": "service-exit",
+        "label": "SERVICE EXIT",
+        "position": [
+          -5.5,
+          7.65,
+          -5.5
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "id": "base-panel",
+        "position": [
+          -6,
+          1.7,
+          2.2
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "id": "middle-panel",
+        "position": [
+          -7.8,
+          5.1,
+          -2
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ]
+      }
+    ],
+    "controlPoints": [
+      {
+        "id": "freight-lift",
+        "position": [
+          1.6,
+          0.7,
+          2.5
+        ]
+      },
+      {
+        "id": "service-lift",
+        "position": [
+          -5.4,
+          0.7,
+          4.5
+        ]
+      }
+    ],
+    "result": null,
+    "observedEvents": []
+  },
+  "assistance": {
+    "hints": 0,
+    "translations": 0,
+    "retries": 0
+  },
+  "progress": {
+    "version": 2,
+    "highestUnlocked": 50,
+    "resumeLevel": 37,
+    "records": {},
+    "updatedAt": 1793124350879
+  },
+  "events": [
+    {
+      "type": "level-start",
+      "level": 37,
+      "time": 0,
+      "number": 37,
+      "contrast": false
+    }
+  ],
+  "pointerLocked": false,
+  "controls": {
+    "unlocked": true,
+    "sensitivity": 0.0022,
+    "invert": false,
+    "touchMode": false,
+    "reduced": true
+  },
+  "audio": {
+    "context": "running",
+    "paused": false,
+    "loopCount": 3,
+    "activeSfx": 0,
+    "cuesPlayed": 0,
+    "energy": false,
+    "chapter": 4,
+    "intensity": 0,
+    "recentCues": [],
+    "paired": false,
+    "bridge": false,
+    "ducked": false,
+    "gains": {
+      "master": 0.8,
+      "music": 0.7,
+      "sfx": 0.74,
+      "voice": 0.8
+    },
+    "loadedBuffers": 29,
+    "loadErrors": [],
+    "timeline": 0.792
+  },
+  "renderer": {
+    "software": false,
+    "drawCalls": 140,
+    "triangles": 9020,
+    "geometries": 119,
+    "textures": 16
+  }
+}

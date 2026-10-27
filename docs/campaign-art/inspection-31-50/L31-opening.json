@@ -1,0 +1,330 @@
+{
+  "title": "Rift Runner",
+  "version": "campaign-physical-draft-1",
+  "mode": "playing",
+  "level": 31,
+  "contrast": false,
+  "world": {
+    "coordinateSystem": "+Y up, -Z beyond glass, +X east. Player position is capsule center; eye +0.65Y.",
+    "room": "level-31",
+    "mission": "Point the beam at the upper receiver. Keep the lower receiver unpowered.",
+    "player": {
+      "position": [
+        0,
+        0.85,
+        10
+      ],
+      "velocity": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "pitch": -0.12000000000000001,
+      "grounded": true,
+      "crossings": 0
+    },
+    "portals": [
+      null,
+      null
+    ],
+    "crates": [
+      {
+        "id": "beam-blocker",
+        "label": "MOVABLE BEAM SCREEN",
+        "shape": "triangle",
+        "size": "large",
+        "start": "front",
+        "position": [
+          0,
+          1.15,
+          3.15
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      }
+    ],
+    "pads": [],
+    "bridges": [],
+    "guide": null,
+    "held": null,
+    "lastBridge": null,
+    "outcome": null,
+    "respawns": 0,
+    "launchUsed": false,
+    "events": [],
+    "number": 31,
+    "name": "A Line of Light",
+    "family": "relay-garden",
+    "devices": [
+      {
+        "id": "garden-emitter",
+        "kind": "relay",
+        "label": "GARDEN EMITTER",
+        "position": [
+          0,
+          1.2,
+          4.2
+        ],
+        "size": [
+          0.65,
+          1,
+          0.65
+        ],
+        "active": true,
+        "progress": 0,
+        "choice": "upper",
+        "angle": 0,
+        "powered": null,
+        "blocked": true
+      },
+      {
+        "id": "upper",
+        "kind": "receiver",
+        "label": "UPPER",
+        "position": [
+          4,
+          5.8,
+          -4.2
+        ],
+        "size": [
+          0.7,
+          0.7,
+          0.25
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "lower",
+        "kind": "receiver",
+        "label": "LOWER",
+        "position": [
+          -4,
+          1.9,
+          -4.2
+        ],
+        "size": [
+          0.7,
+          0.7,
+          0.25
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "upper-gate",
+        "kind": "shutter",
+        "label": "UPPER GATE",
+        "position": [
+          5,
+          4.9,
+          -6
+        ],
+        "size": [
+          3,
+          3,
+          0.35
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "lower-gate",
+        "kind": "shutter",
+        "label": "LOWER GATE",
+        "position": [
+          -5,
+          1.5,
+          -6
+        ],
+        "size": [
+          3,
+          3,
+          0.35
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "garden-lift",
+        "kind": "lift",
+        "label": "GARDEN LIFT",
+        "position": [
+          5,
+          -0.2,
+          1
+        ],
+        "size": [
+          3.4,
+          0.4,
+          3.4
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": "base",
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      }
+    ],
+    "exits": [
+      {
+        "id": "upper-garden-exit",
+        "label": "UPPER GARDEN EXIT",
+        "position": [
+          5,
+          4.25,
+          -10
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      },
+      {
+        "id": "lower-garden-exit",
+        "label": "LOWER GARDEN EXIT",
+        "position": [
+          -5,
+          0.85,
+          -10
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "id": "garden-panel",
+        "position": [
+          -6,
+          1.7,
+          4.2
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "id": "island-panel",
+        "position": [
+          7.8,
+          5.1,
+          -9
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ]
+      }
+    ],
+    "controlPoints": [
+      {
+        "id": "garden-emitter",
+        "position": [
+          0,
+          1.2,
+          4.2
+        ]
+      },
+      {
+        "id": "garden-lift",
+        "position": [
+          3.6,
+          0.7,
+          2.5
+        ]
+      }
+    ],
+    "result": null,
+    "observedEvents": []
+  },
+  "assistance": {
+    "hints": 0,
+    "translations": 0,
+    "retries": 0
+  },
+  "progress": {
+    "version": 2,
+    "highestUnlocked": 50,
+    "resumeLevel": 31,
+    "records": {},
+    "updatedAt": 1793124342305
+  },
+  "events": [
+    {
+      "type": "level-start",
+      "level": 31,
+      "time": 0,
+      "number": 31,
+      "contrast": false
+    }
+  ],
+  "pointerLocked": false,
+  "controls": {
+    "unlocked": true,
+    "sensitivity": 0.0022,
+    "invert": false,
+    "touchMode": false,
+    "reduced": true
+  },
+  "audio": {
+    "context": "running",
+    "paused": false,
+    "loopCount": 3,
+    "activeSfx": 0,
+    "cuesPlayed": 0,
+    "energy": false,
+    "chapter": 4,
+    "intensity": 0,
+    "recentCues": [],
+    "paired": false,
+    "bridge": false,
+    "ducked": false,
+    "gains": {
+      "master": 0.8,
+      "music": 0.7,
+      "sfx": 0.74,
+      "voice": 0.8
+    },
+    "loadedBuffers": 29,
+    "loadErrors": [],
+    "timeline": 1.272
+  },
+  "renderer": {
+    "software": false,
+    "drawCalls": 214,
+    "triangles": 37418,
+    "geometries": 142,
+    "textures": 20
+  }
+}

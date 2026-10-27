@@ -1,0 +1,186 @@
+{
+  "title": "Rift Runner",
+  "version": "campaign-physical-draft-1",
+  "mode": "playing",
+  "level": 32,
+  "contrast": false,
+  "world": {
+    "coordinateSystem": "+Y up, -Z beyond glass, +X east. Player position is capsule center; eye +0.65Y.",
+    "room": "level-32",
+    "mission": "Reach the balcony above the canal through the floor rift. Then use the east door.",
+    "player": {
+      "position": [
+        0,
+        0.85,
+        11
+      ],
+      "velocity": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "pitch": -0.12000000000000001,
+      "grounded": true,
+      "crossings": 0
+    },
+    "portals": [
+      null,
+      null
+    ],
+    "crates": [
+      {
+        "id": "scale-module",
+        "label": "SCALE MODULE",
+        "shape": "triangle",
+        "size": "small",
+        "start": "front",
+        "position": [
+          -4,
+          0.42,
+          9
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      }
+    ],
+    "pads": [],
+    "bridges": [],
+    "guide": null,
+    "held": null,
+    "lastBridge": null,
+    "outcome": null,
+    "respawns": 0,
+    "launchUsed": false,
+    "events": [],
+    "number": 32,
+    "name": "First Launch",
+    "family": "launch-spire",
+    "devices": [],
+    "exits": [
+      {
+        "id": "east-balcony-door",
+        "label": "EAST BALCONY DOOR",
+        "position": [
+          4.7,
+          4.25,
+          -2.2
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      },
+      {
+        "id": "west-balcony-door",
+        "label": "WEST BALCONY DOOR",
+        "position": [
+          -4.7,
+          4.25,
+          -2.2
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "id": "floor-rift",
+        "position": [
+          3,
+          -2.975,
+          6
+        ],
+        "normal": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "id": "high-rift",
+        "position": [
+          0,
+          6,
+          -12
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ]
+      }
+    ],
+    "controlPoints": [],
+    "result": null,
+    "observedEvents": []
+  },
+  "assistance": {
+    "hints": 0,
+    "translations": 0,
+    "retries": 0
+  },
+  "progress": {
+    "version": 2,
+    "highestUnlocked": 50,
+    "resumeLevel": 32,
+    "records": {},
+    "updatedAt": 1793124344322
+  },
+  "events": [
+    {
+      "type": "level-start",
+      "level": 32,
+      "time": 0,
+      "number": 32,
+      "contrast": false
+    }
+  ],
+  "pointerLocked": false,
+  "controls": {
+    "unlocked": true,
+    "sensitivity": 0.0022,
+    "invert": false,
+    "touchMode": false,
+    "reduced": true
+  },
+  "audio": {
+    "context": "running",
+    "paused": false,
+    "loopCount": 3,
+    "activeSfx": 0,
+    "cuesPlayed": 0,
+    "energy": false,
+    "chapter": 4,
+    "intensity": 0,
+    "recentCues": [],
+    "paired": false,
+    "bridge": false,
+    "ducked": false,
+    "gains": {
+      "master": 0.8,
+      "music": 0.7,
+      "sfx": 0.74,
+      "voice": 0.8
+    },
+    "loadedBuffers": 29,
+    "loadErrors": [],
+    "timeline": 0.7599999999999999
+  },
+  "renderer": {
+    "software": false,
+    "drawCalls": 86,
+    "triangles": 1594,
+    "geometries": 93,
+    "textures": 10
+  }
+}

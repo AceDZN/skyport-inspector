@@ -1,0 +1,360 @@
+{
+  "title": "Rift Runner",
+  "version": "campaign-physical-draft-1",
+  "mode": "playing",
+  "level": 38,
+  "contrast": false,
+  "world": {
+    "coordinateSystem": "+Y up, -Z beyond glass, +X east. Player position is capsule center; eye +0.65Y.",
+    "room": "level-38",
+    "mission": "If you connect the northern receiver, the side gate will open. Take the cargo through that gate.",
+    "player": {
+      "position": [
+        0,
+        0.85,
+        10
+      ],
+      "velocity": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "pitch": -0.14004000000000005,
+      "grounded": true,
+      "crossings": 0
+    },
+    "portals": [
+      null,
+      null
+    ],
+    "crates": [
+      {
+        "id": "cargo-1",
+        "label": "CARGO 1",
+        "shape": "diamond",
+        "size": "small",
+        "start": "front",
+        "position": [
+          0,
+          0.42,
+          9
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      },
+      {
+        "id": "reserve-module",
+        "label": "RESERVE MODULE",
+        "shape": "triangle",
+        "size": "small",
+        "start": "front",
+        "position": [
+          4,
+          0.42,
+          9
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      },
+      {
+        "id": "beam-screen",
+        "label": "BEAM SCREEN",
+        "shape": "triangle",
+        "size": "large",
+        "start": "front",
+        "position": [
+          -4,
+          1.15,
+          6
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      }
+    ],
+    "pads": [
+      {
+        "id": "side-receiver",
+        "label": "SIDE RECEIVER",
+        "position": [
+          3,
+          0.14,
+          -8
+        ],
+        "crate": null
+      },
+      {
+        "id": "main-receiver",
+        "label": "MAIN RECEIVER",
+        "position": [
+          4,
+          0.14,
+          1
+        ],
+        "crate": null
+      }
+    ],
+    "bridges": [],
+    "guide": null,
+    "held": null,
+    "lastBridge": null,
+    "outcome": null,
+    "respawns": 0,
+    "launchUsed": false,
+    "events": [],
+    "number": 38,
+    "name": "The Next Result",
+    "family": "l-gallery",
+    "devices": [
+      {
+        "id": "beam-emitter",
+        "kind": "relay",
+        "label": "BEAM EMITTER",
+        "position": [
+          -4,
+          1.2,
+          7
+        ],
+        "size": [
+          0.65,
+          1,
+          0.65
+        ],
+        "active": true,
+        "progress": 0,
+        "choice": "north",
+        "angle": 0,
+        "powered": null,
+        "blocked": true
+      },
+      {
+        "id": "north",
+        "kind": "receiver",
+        "label": "NORTH",
+        "position": [
+          -4,
+          2,
+          -3.4
+        ],
+        "size": [
+          0.7,
+          0.7,
+          0.25
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "south",
+        "kind": "receiver",
+        "label": "SOUTH",
+        "position": [
+          4,
+          1.8,
+          4.6
+        ],
+        "size": [
+          0.7,
+          0.7,
+          0.25
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "side-gate",
+        "kind": "shutter",
+        "label": "SIDE GATE",
+        "position": [
+          -4,
+          1.5,
+          -4
+        ],
+        "size": [
+          3,
+          3,
+          0.35
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "main-gate",
+        "kind": "shutter",
+        "label": "MAIN GATE",
+        "position": [
+          4,
+          1.5,
+          4
+        ],
+        "size": [
+          3,
+          3,
+          0.35
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      }
+    ],
+    "exits": [
+      {
+        "id": "side-gate-exit",
+        "label": "SIDE GATE EXIT",
+        "position": [
+          7,
+          0.85,
+          -9
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      },
+      {
+        "id": "main-gate-exit",
+        "label": "MAIN GATE EXIT",
+        "position": [
+          6,
+          0.85,
+          -1
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "id": "south-panel",
+        "position": [
+          -6.8,
+          1.7,
+          9
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "north-panel",
+        "position": [
+          8.8,
+          1.7,
+          -8
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ]
+      }
+    ],
+    "controlPoints": [
+      {
+        "id": "beam-emitter",
+        "position": [
+          -4,
+          1.2,
+          7
+        ]
+      }
+    ],
+    "result": null,
+    "observedEvents": []
+  },
+  "assistance": {
+    "hints": 0,
+    "translations": 0,
+    "retries": 0
+  },
+  "progress": {
+    "version": 2,
+    "highestUnlocked": 50,
+    "resumeLevel": 38,
+    "records": {},
+    "updatedAt": 1793124352217
+  },
+  "events": [
+    {
+      "type": "level-start",
+      "level": 38,
+      "time": 0,
+      "number": 38,
+      "contrast": false
+    }
+  ],
+  "pointerLocked": false,
+  "controls": {
+    "unlocked": true,
+    "sensitivity": 0.0022,
+    "invert": false,
+    "touchMode": false,
+    "reduced": true
+  },
+  "audio": {
+    "context": "running",
+    "paused": false,
+    "loopCount": 3,
+    "activeSfx": 0,
+    "cuesPlayed": 0,
+    "energy": false,
+    "chapter": 4,
+    "intensity": 0,
+    "recentCues": [],
+    "paired": false,
+    "bridge": false,
+    "ducked": false,
+    "gains": {
+      "master": 0.8,
+      "music": 0.7,
+      "sfx": 0.74,
+      "voice": 0.8
+    },
+    "loadedBuffers": 29,
+    "loadErrors": [],
+    "timeline": 0.7973333333333334
+  },
+  "renderer": {
+    "software": false,
+    "drawCalls": 222,
+    "triangles": 47258,
+    "geometries": 165,
+    "textures": 19
+  }
+}

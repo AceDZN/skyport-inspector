@@ -77,3 +77,22 @@ Hashes use the fetched module Markdown with trailing whitespace trimmed and one 
 - `present-simple-passive-reference` — SHA-256 `5fd56820345376d1ca0df90b182ff0eeba7b36670e133ed0f1ba4cf8928c8ca3`; canonical source: https://english.workbook.co.il/grade-8/chapter-10/present-simple-passive-reference
 - `conditionals-reference` — SHA-256 `69a88e8720cf42f8ff505d258348c52892aed2ca3d61e14f7eff0699e4e322b3`; canonical source: https://english.workbook.co.il/grade-9/chapter-11/conditionals-reference
 - `adjectives-and-comparison` — SHA-256 `e5e57540e264052672308cbc167d366edce1036a3df3a36bd3a6b0b9d9558636`; canonical source: https://english.workbook.co.il/grade-8/chapter-11/adjectives-and-comparison
+
+
+## Canonical action audit, draft-2
+
+The canonical and draft catalogues now use `draft-2-semantic-action-audit`. All fifty base/changed meanings were reviewed against their complete sentences. Finite evaluator witnesses test each meaning and reject the other meaning; deleting a requested event must reject an otherwise matching final state. These are semantic unit checks, not physical play evidence.
+
+Explicit bridge/gate/floor actions now require the actual body's traversal event in levels1/4/9/12/18/32/33/34/35/38/40. Portal entry records the surface or any real entry as requested; portal A/B colour is never the answer. Level35 requires cargo traversal of the wide/narrow physical bridge, rather than merely a player exit. Edge touches and portal jumps must not count as full bridge crossing.
+
+Level27 now tests **rising**, not merely moving: descending movement fails. Its changed instruction requests loading while the other lift rises, so an additional simultaneous start is not required unless the sentence asks for it. Level19's direct prohibition is persistent attempt history: unloading before the relevant arrival cannot be erased by a later correct delivery. Positive sequence tasks can recover by completing a valid later sequence; forbidden actions remain in the attempt ledger.
+
+Generic crate tasks7/9/11/14/16/17/18/19/27 accept equivalent real spare cargo. Object identity must not silently be inferred from JSON order, initial side, or an unspoken target ID. Identity-bearing shape/history/owner tasks retain the named identity. Equivalent assignments remain valid in13/37 and either outer destination remains valid in16. Positional answer-bias diagnostics therefore sample only missions that actually choose one object.
+
+Removed final lift/ferry-state locks when the English only asks for a completed ride/delivery and the real arrival/disembark history proves it. Calling a lift back after a correct delivery is not a grammar error. Level36 asks to open the referenced vault, so an unstated cargo-pad chore is not an English gate. Level42 keeps owner/destination reference without an unrelated final junction/lift-state lock.
+
+Original-plan references39/48 are now standalone, and34 explicitly identifies its loading task. Level45 names the printed TODAY CARGO object;46 states the receiving platform after its gate interval;50 explicitly states the upper socket and launch-receiver steps. Hebrew missions match these additions. All provenance URLs remain the selected sources already read.
+
+Physical-equivalence review:41 uses one real return belt plus the portal return loop;42 uses an inlet belt plus a rotating fork;40 uses a cell/socket/shutter energy path;50 has two belt reaches linked by the return route. These are authored geometry contracts, not a promise that every earlier proposed conveyor count is necessary. A wrong beam receiver may leave the requested door closed; every **required** receiver must actuate real machinery.
+
+All implementation/verification status remains PLANNED until the matching normal-input campaign and constant-world contrast checks pass. See PHYSICAL_AUDIT.md and the in-progress run manifest for current evidence.

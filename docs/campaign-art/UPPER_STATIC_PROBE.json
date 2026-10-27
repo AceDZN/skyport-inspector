@@ -1,0 +1,1377 @@
+{
+  "status": "Static geometry and idle runtime probes; no played wins",
+  "levels": [
+    {
+      "number": 31,
+      "rays": [
+        {
+          "emitter": "garden-emitter",
+          "receiver": "upper",
+          "permanentWallHits": []
+        },
+        {
+          "emitter": "garden-emitter",
+          "receiver": "lower",
+          "permanentWallHits": []
+        }
+      ],
+      "initial": [
+        {
+          "id": "garden-emitter",
+          "kind": "relay",
+          "label": "GARDEN EMITTER",
+          "position": [
+            0,
+            1.2,
+            4.2
+          ],
+          "size": [
+            0.65,
+            1,
+            0.65
+          ],
+          "active": true,
+          "progress": 0,
+          "choice": "upper",
+          "angle": 0,
+          "powered": null,
+          "blocked": true
+        }
+      ],
+      "cargo": [
+        {
+          "id": "beam-blocker",
+          "initial": [
+            0,
+            1.16,
+            3.15
+          ],
+          "afterQuarterSecond": [
+            0,
+            1.15,
+            3.15
+          ],
+          "grounded": true
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "rays": [],
+      "initial": [],
+      "cargo": [
+        {
+          "id": "scale-module",
+          "initial": [
+            -4,
+            0.43,
+            9
+          ],
+          "afterQuarterSecond": [
+            -4,
+            0.42,
+            9
+          ],
+          "grounded": true
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "rays": [
+        {
+          "emitter": "main-emitter",
+          "receiver": "lift-receiver",
+          "permanentWallHits": []
+        },
+        {
+          "emitter": "main-emitter",
+          "receiver": "gate-receiver",
+          "permanentWallHits": []
+        }
+      ],
+      "initial": [
+        {
+          "id": "main-emitter",
+          "kind": "relay",
+          "label": "MAIN EMITTER",
+          "position": [
+            -0.6,
+            2.7,
+            3
+          ],
+          "size": [
+            0.65,
+            1,
+            0.65
+          ],
+          "active": true,
+          "progress": 0,
+          "choice": "lift-receiver",
+          "angle": 0,
+          "powered": null,
+          "blocked": true
+        }
+      ],
+      "cargo": [
+        {
+          "id": "cargo-1",
+          "initial": [
+            5.5,
+            0.43,
+            10
+          ],
+          "afterQuarterSecond": [
+            5.5,
+            0.42,
+            10
+          ],
+          "grounded": true
+        },
+        {
+          "id": "beam-screen",
+          "initial": [
+            -0.6,
+            2.56,
+            1.9
+          ],
+          "afterQuarterSecond": [
+            -0.6,
+            2.55,
+            1.9
+          ],
+          "grounded": true
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "rays": [],
+      "initial": [],
+      "cargo": [
+        {
+          "id": "spare-cargo",
+          "initial": [
+            3,
+            0.43,
+            8
+          ],
+          "afterQuarterSecond": [
+            3,
+            0.42,
+            8
+          ],
+          "grounded": true
+        },
+        {
+          "id": "reserve-cargo",
+          "initial": [
+            0,
+            0.43,
+            8
+          ],
+          "afterQuarterSecond": [
+            0,
+            0.42,
+            8
+          ],
+          "grounded": true
+        },
+        {
+          "id": "control-cargo",
+          "initial": [
+            -2,
+            0.43,
+            8
+          ],
+          "afterQuarterSecond": [
+            -2,
+            0.42,
+            8
+          ],
+          "grounded": true
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "rays": [],
+      "initial": [],
+      "cargo": [
+        {
+          "id": "small-cargo",
+          "initial": [
+            3,
+            0.43,
+            8
+          ],
+          "afterQuarterSecond": [
+            3,
+            0.42,
+            8
+          ],
+          "grounded": true
+        },
+        {
+          "id": "reserve-module",
+          "initial": [
+            -3,
+            0.43,
+            8
+          ],
+          "afterQuarterSecond": [
+            -3,
+            0.42,
+            8
+          ],
+          "grounded": true
+        },
+        {
+          "id": "wide-cargo",
+          "initial": [
+            0,
+            0.56,
+            8
+          ],
+          "afterQuarterSecond": [
+            0,
+            0.55,
+            8
+          ],
+          "grounded": true
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "rays": [
+        {
+          "emitter": "upper-emitter",
+          "receiver": "north-receiver",
+          "permanentWallHits": []
+        },
+        {
+          "emitter": "upper-emitter",
+          "receiver": "south-receiver",
+          "permanentWallHits": []
+        },
+        {
+          "emitter": "lower-emitter",
+          "receiver": "north-receiver",
+          "permanentWallHits": []
+        },
+        {
+          "emitter": "lower-emitter",
+          "receiver": "south-receiver",
+          "permanentWallHits": []
+        }
+      ],
+      "initial": [
+        {
+          "id": "upper-emitter",
+          "kind": "relay",
+          "label": "UPPER EMITTER",
+          "position": [
+            0,
+            4.2,
+            0
+          ],
+          "size": [
+            0.65,
+            1,
+            0.65
+          ],
+          "active": true,
+          "progress": 0,
+          "choice": "north-receiver",
+          "angle": 0,
+          "powered": null,
+          "blocked": true
+        },
+        {
+          "id": "lower-emitter",
+          "kind": "relay",
+          "label": "LOWER EMITTER",
+          "position": [
+            -6,
+            1.2,
+            0
+          ],
+          "size": [
+            0.65,
+            1,
+            0.65
+          ],
+          "active": true,
+          "progress": 0,
+          "choice": "north-receiver",
+          "angle": 0,
+          "powered": null,
+          "blocked": true
+        }
+      ],
+      "cargo": [
+        {
+          "id": "upper-screen",
+          "initial": [
+            0.75,
+            3.76,
+            0
+          ],
+          "afterQuarterSecond": [
+            0.75,
+            3.75,
+            0
+          ],
+          "grounded": true
+        },
+        {
+          "id": "lower-screen",
+          "initial": [
+            -5.25,
+            0.96,
+            0
+          ],
+          "afterQuarterSecond": [
+            -5.25,
+            0.9500000000000001,
+            0
+          ],
+          "grounded": true
+        },
+        {
+          "id": "cargo-1",
+          "initial": [
+            2,
+            0.43,
+            0
+          ],
+          "afterQuarterSecond": [
+            2,
+            0.42,
+            0
+          ],
+          "grounded": true
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "rays": [],
+      "initial": [],
+      "cargo": [
+        {
+          "id": "cargo-a",
+          "initial": [
+            -2,
+            0.43,
+            10
+          ],
+          "afterQuarterSecond": [
+            -2,
+            0.42,
+            10
+          ],
+          "grounded": true
+        },
+        {
+          "id": "cargo-b",
+          "initial": [
+            2,
+            0.43,
+            10
+          ],
+          "afterQuarterSecond": [
+            2,
+            0.42,
+            10
+          ],
+          "grounded": true
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "rays": [
+        {
+          "emitter": "beam-emitter",
+          "receiver": "north",
+          "permanentWallHits": []
+        },
+        {
+          "emitter": "beam-emitter",
+          "receiver": "south",
+          "permanentWallHits": []
+        }
+      ],
+      "initial": [
+        {
+          "id": "beam-emitter",
+          "kind": "relay",
+          "label": "BEAM EMITTER",
+          "position": [
+            -4,
+            1.2,
+            7
+          ],
+          "size": [
+            0.65,
+            1,
+            0.65
+          ],
+          "active": true,
+          "progress": 0,
+          "choice": "north",
+          "angle": 0,
+          "powered": null,
+          "blocked": true
+        }
+      ],
+      "cargo": [
+        {
+          "id": "cargo-1",
+          "initial": [
+            0,
+            0.43,
+            9
+          ],
+          "afterQuarterSecond": [
+            0,
+            0.42,
+            9
+          ],
+          "grounded": true
+        },
+        {
+          "id": "reserve-module",
+          "initial": [
+            4,
+            0.43,
+            9
+          ],
+          "afterQuarterSecond": [
+            4,
+            0.42,
+            9
+          ],
+          "grounded": true
+        },
+        {
+          "id": "beam-screen",
+          "initial": [
+            -4,
+            1.16,
+            6
+          ],
+          "afterQuarterSecond": [
+            -4,
+            1.15,
+            6
+          ],
+          "grounded": true
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "rays": [],
+      "initial": [],
+      "cargo": [
+        {
+          "id": "spare-cargo",
+          "initial": [
+            3,
+            0.43,
+            10
+          ],
+          "afterQuarterSecond": [
+            3,
+            0.42,
+            10
+          ],
+          "grounded": true
+        },
+        {
+          "id": "cargo-1",
+          "initial": [
+            -3,
+            0.43,
+            10
+          ],
+          "afterQuarterSecond": [
+            -3,
+            0.42,
+            10
+          ],
+          "grounded": true
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "rays": [
+        {
+          "emitter": "launch-emitter",
+          "receiver": "launch-receiver",
+          "permanentWallHits": []
+        }
+      ],
+      "initial": [
+        {
+          "id": "launch-emitter",
+          "kind": "relay",
+          "label": "LAUNCH EMITTER",
+          "position": [
+            -6,
+            4,
+            3
+          ],
+          "size": [
+            0.65,
+            1,
+            0.65
+          ],
+          "active": false,
+          "progress": 0,
+          "choice": "launch-receiver",
+          "angle": 0,
+          "powered": null,
+          "blocked": false
+        }
+      ],
+      "cargo": [
+        {
+          "id": "spare-cargo",
+          "initial": [
+            5,
+            0.43,
+            10
+          ],
+          "afterQuarterSecond": [
+            5,
+            0.42,
+            10
+          ],
+          "grounded": true
+        },
+        {
+          "id": "power-cell",
+          "initial": [
+            -5,
+            0.43,
+            10
+          ],
+          "afterQuarterSecond": [
+            -5,
+            0.42,
+            10
+          ],
+          "grounded": true
+        },
+        {
+          "id": "reserve-module",
+          "initial": [
+            0,
+            0.43,
+            10
+          ],
+          "afterQuarterSecond": [
+            0,
+            0.42,
+            10
+          ],
+          "grounded": true
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "rays": [],
+      "initial": [],
+      "cargo": [
+        {
+          "id": "mina-crate",
+          "initial": [
+            10.7,
+            0.63,
+            -6
+          ],
+          "afterQuarterSecond": [
+            10.7,
+            0.62,
+            -5.661666666666665
+          ],
+          "grounded": true
+        },
+        {
+          "id": "oren-crate",
+          "initial": [
+            9.3,
+            0.63,
+            -6
+          ],
+          "afterQuarterSecond": [
+            9.3,
+            0.62,
+            -5.661666666666665
+          ],
+          "grounded": true
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "rays": [],
+      "initial": [],
+      "cargo": [
+        {
+          "id": "tariq-crate",
+          "initial": [
+            -9,
+            0.63,
+            0.5
+          ],
+          "afterQuarterSecond": [
+            -8.63750000000002,
+            0.62,
+            0.5
+          ],
+          "grounded": true
+        },
+        {
+          "id": "ada-crate",
+          "initial": [
+            -12,
+            0.63,
+            0.5
+          ],
+          "afterQuarterSecond": [
+            -11.63750000000002,
+            0.62,
+            0.5
+          ],
+          "grounded": true
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "rays": [],
+      "initial": [],
+      "cargo": [
+        {
+          "id": "crate-a",
+          "initial": [
+            -4.5,
+            3.83,
+            2
+          ],
+          "afterQuarterSecond": [
+            -4.5,
+            3.8200000000000003,
+            2
+          ],
+          "grounded": true
+        },
+        {
+          "id": "crate-b",
+          "initial": [
+            -1.5,
+            3.83,
+            2
+          ],
+          "afterQuarterSecond": [
+            -1.2833333333333334,
+            4.3100000000000005,
+            2
+          ],
+          "grounded": false
+        }
+      ],
+      "history": {
+        "facts": [
+          "actor:Rook:carried:crate-b",
+          "actor:Rook:delivered:crate-b",
+          "actor:Rook:stood-beside:crate-a",
+          "actor:Rook:stood-beside:after-flash:crate-a"
+        ],
+        "cargo": [
+          {
+            "id": "crate-a",
+            "pos": [
+              -4.5,
+              3.8200000000000003,
+              2
+            ],
+            "grounded": true
+          },
+          {
+            "id": "crate-b",
+            "pos": [
+              1.099999999999993,
+              3.8200000000000003,
+              2
+            ],
+            "grounded": true
+          }
+        ]
+      }
+    },
+    {
+      "number": 44,
+      "rays": [
+        {
+          "emitter": "garden-emitter",
+          "receiver": "upper",
+          "permanentWallHits": []
+        },
+        {
+          "emitter": "garden-emitter",
+          "receiver": "lower",
+          "permanentWallHits": []
+        }
+      ],
+      "initial": [
+        {
+          "id": "garden-emitter",
+          "kind": "relay",
+          "label": "GARDEN EMITTER",
+          "position": [
+            0,
+            1.2,
+            6
+          ],
+          "size": [
+            0.65,
+            1,
+            0.65
+          ],
+          "active": true,
+          "progress": 0,
+          "choice": "upper",
+          "angle": 0,
+          "powered": null,
+          "blocked": true
+        }
+      ],
+      "cargo": [
+        {
+          "id": "oren-crate",
+          "initial": [
+            3,
+            0.43,
+            9
+          ],
+          "afterQuarterSecond": [
+            3,
+            0.42,
+            9
+          ],
+          "grounded": true
+        },
+        {
+          "id": "mina-crate",
+          "initial": [
+            -3,
+            0.43,
+            9
+          ],
+          "afterQuarterSecond": [
+            -3,
+            0.42,
+            9
+          ],
+          "grounded": true
+        },
+        {
+          "id": "beam-screen",
+          "initial": [
+            0,
+            1.16,
+            5
+          ],
+          "afterQuarterSecond": [
+            0,
+            1.15,
+            5
+          ],
+          "grounded": true
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "rays": [],
+      "initial": [],
+      "cargo": [
+        {
+          "id": "tomorrow-cargo",
+          "initial": [
+            -2,
+            0.43,
+            9
+          ],
+          "afterQuarterSecond": [
+            -2,
+            0.42,
+            9
+          ],
+          "grounded": true
+        },
+        {
+          "id": "reserve-cargo",
+          "initial": [
+            -7.5,
+            0.43,
+            9
+          ],
+          "afterQuarterSecond": [
+            -7.5,
+            0.42,
+            9
+          ],
+          "grounded": true
+        },
+        {
+          "id": "today-cargo",
+          "initial": [
+            -5,
+            0.43,
+            9
+          ],
+          "afterQuarterSecond": [
+            -5,
+            0.42,
+            9
+          ],
+          "grounded": true
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "rays": [
+        {
+          "emitter": "main-emitter",
+          "receiver": "main",
+          "permanentWallHits": []
+        },
+        {
+          "emitter": "main-emitter",
+          "receiver": "auxiliary",
+          "permanentWallHits": []
+        }
+      ],
+      "initial": [
+        {
+          "id": "main-emitter",
+          "kind": "relay",
+          "label": "MAIN EMITTER",
+          "position": [
+            0,
+            1.2,
+            6
+          ],
+          "size": [
+            0.65,
+            1,
+            0.65
+          ],
+          "active": true,
+          "progress": 0,
+          "choice": "main",
+          "angle": 0,
+          "powered": null,
+          "blocked": true
+        }
+      ],
+      "cargo": [
+        {
+          "id": "cargo-1",
+          "initial": [
+            5.5,
+            0.43,
+            10
+          ],
+          "afterQuarterSecond": [
+            5.5,
+            0.42,
+            10
+          ],
+          "grounded": true
+        },
+        {
+          "id": "screen",
+          "initial": [
+            0,
+            1.16,
+            5
+          ],
+          "afterQuarterSecond": [
+            0,
+            1.15,
+            5
+          ],
+          "grounded": true
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "rays": [],
+      "initial": [],
+      "cargo": [
+        {
+          "id": "oren-crate",
+          "initial": [
+            2,
+            0.43,
+            10
+          ],
+          "afterQuarterSecond": [
+            2,
+            0.42,
+            10
+          ],
+          "grounded": true
+        },
+        {
+          "id": "mina-crate",
+          "initial": [
+            -3.5,
+            0.43,
+            8
+          ],
+          "afterQuarterSecond": [
+            -3.5,
+            0.42,
+            8
+          ],
+          "grounded": true
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "rays": [
+        {
+          "emitter": "hub-emitter",
+          "receiver": "hub-receiver",
+          "permanentWallHits": []
+        }
+      ],
+      "initial": [
+        {
+          "id": "hub-emitter",
+          "kind": "relay",
+          "label": "HUB EMITTER",
+          "position": [
+            5,
+            1.2,
+            10
+          ],
+          "size": [
+            0.65,
+            1,
+            0.65
+          ],
+          "active": true,
+          "progress": 0,
+          "choice": "hub-receiver",
+          "angle": 0,
+          "powered": null,
+          "blocked": true
+        }
+      ],
+      "cargo": [
+        {
+          "id": "triangle-crate",
+          "initial": [
+            7,
+            0.43,
+            9
+          ],
+          "afterQuarterSecond": [
+            7,
+            0.42,
+            9
+          ],
+          "grounded": true
+        },
+        {
+          "id": "diamond-crate",
+          "initial": [
+            -3,
+            0.43,
+            9
+          ],
+          "afterQuarterSecond": [
+            -3.216666666666667,
+            0.91,
+            9
+          ],
+          "grounded": false
+        },
+        {
+          "id": "control-cell",
+          "initial": [
+            5,
+            1.03,
+            9
+          ],
+          "afterQuarterSecond": [
+            5,
+            1.02,
+            9
+          ],
+          "grounded": true
+        }
+      ],
+      "history": {
+        "facts": [
+          "actor:Rook:carried:diamond-crate",
+          "actor:Rook:delivered:diamond-crate",
+          "actor:Rook:stood-beside:triangle-crate",
+          "actor:Rook:stood-beside:after-flash:triangle-crate"
+        ],
+        "cargo": [
+          {
+            "id": "triangle-crate",
+            "pos": [
+              7,
+              0.42,
+              9
+            ],
+            "grounded": true
+          },
+          {
+            "id": "diamond-crate",
+            "pos": [
+              -5.5999999999999925,
+              0.56,
+              9
+            ],
+            "grounded": true
+          },
+          {
+            "id": "control-cell",
+            "pos": [
+              5,
+              1.02,
+              9
+            ],
+            "grounded": true
+          }
+        ]
+      }
+    },
+    {
+      "number": 49,
+      "rays": [
+        {
+          "emitter": "middle-emitter",
+          "receiver": "middle",
+          "permanentWallHits": []
+        }
+      ],
+      "initial": [
+        {
+          "id": "middle-emitter",
+          "kind": "relay",
+          "label": "MIDDLE EMITTER",
+          "position": [
+            2.5,
+            4.6,
+            -5.8
+          ],
+          "size": [
+            0.65,
+            1,
+            0.65
+          ],
+          "active": true,
+          "progress": 0,
+          "choice": "middle",
+          "angle": 0,
+          "powered": null,
+          "blocked": true
+        }
+      ],
+      "cargo": [
+        {
+          "id": "middle-screen",
+          "initial": [
+            2.5,
+            4.43,
+            -6.4
+          ],
+          "afterQuarterSecond": [
+            2.5,
+            4.42,
+            -6.4
+          ],
+          "grounded": true
+        },
+        {
+          "id": "spare-cargo",
+          "initial": [
+            -1.6,
+            0.43,
+            14
+          ],
+          "afterQuarterSecond": [
+            -1.6,
+            0.42,
+            14
+          ],
+          "grounded": true
+        },
+        {
+          "id": "large-cargo",
+          "initial": [
+            0,
+            0.56,
+            14
+          ],
+          "afterQuarterSecond": [
+            0,
+            0.55,
+            14
+          ],
+          "grounded": true
+        },
+        {
+          "id": "reserve-cargo",
+          "initial": [
+            1.6,
+            0.43,
+            14
+          ],
+          "afterQuarterSecond": [
+            1.6,
+            0.42,
+            14
+          ],
+          "grounded": true
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "rays": [
+        {
+          "emitter": "gallery-emitter",
+          "receiver": "launch-shutter",
+          "permanentWallHits": []
+        },
+        {
+          "emitter": "gallery-emitter",
+          "receiver": "garden-receiver",
+          "permanentWallHits": []
+        }
+      ],
+      "initial": [
+        {
+          "id": "gallery-emitter",
+          "kind": "relay",
+          "label": "GALLERY EMITTER",
+          "position": [
+            6,
+            4,
+            -1
+          ],
+          "size": [
+            0.65,
+            1,
+            0.65
+          ],
+          "active": false,
+          "progress": 0,
+          "choice": "launch-shutter",
+          "angle": 0,
+          "powered": null,
+          "blocked": false
+        }
+      ],
+      "cargo": [
+        {
+          "id": "oren-crate",
+          "initial": [
+            -13,
+            0.43,
+            10
+          ],
+          "afterQuarterSecond": [
+            -13,
+            0.42,
+            10
+          ],
+          "grounded": true
+        },
+        {
+          "id": "relay-cell",
+          "initial": [
+            1,
+            0.43,
+            9
+          ],
+          "afterQuarterSecond": [
+            1,
+            0.42,
+            9
+          ],
+          "grounded": true
+        },
+        {
+          "id": "mina-crate",
+          "initial": [
+            -8,
+            0.43,
+            10
+          ],
+          "afterQuarterSecond": [
+            -8,
+            0.42,
+            10
+          ],
+          "grounded": true
+        },
+        {
+          "id": "gallery-screen",
+          "initial": [
+            6.15,
+            3.76,
+            -2
+          ],
+          "afterQuarterSecond": [
+            6.15,
+            3.75,
+            -2
+          ],
+          "grounded": true
+        }
+      ]
+    }
+  ],
+  "candidateBalance": {
+    "rows": [
+      {
+        "number": 33,
+        "id": "cargo-1",
+        "side": "right",
+        "inventory": 1,
+        "nearest": true
+      },
+      {
+        "number": 34,
+        "id": "control-cargo",
+        "side": "left",
+        "inventory": 3,
+        "nearest": false
+      },
+      {
+        "number": 35,
+        "id": "wide-cargo",
+        "side": "middle",
+        "inventory": 3,
+        "nearest": true
+      },
+      {
+        "number": 38,
+        "id": "cargo-1",
+        "side": "middle",
+        "inventory": 1,
+        "nearest": true
+      },
+      {
+        "number": 39,
+        "id": "cargo-1",
+        "side": "left",
+        "inventory": 2,
+        "nearest": true
+      },
+      {
+        "number": 40,
+        "id": "power-cell",
+        "side": "left",
+        "inventory": 2,
+        "nearest": false
+      },
+      {
+        "number": 41,
+        "id": "mina-crate",
+        "side": "right",
+        "inventory": 1,
+        "nearest": false
+      },
+      {
+        "number": 42,
+        "id": "tariq-crate",
+        "side": "right",
+        "inventory": 1,
+        "nearest": false
+      },
+      {
+        "number": 43,
+        "id": "crate-b",
+        "side": "right",
+        "inventory": 2,
+        "nearest": false
+      },
+      {
+        "number": 44,
+        "id": "mina-crate",
+        "side": "left",
+        "inventory": 2,
+        "nearest": true
+      },
+      {
+        "number": 45,
+        "id": "today-cargo",
+        "side": "middle",
+        "inventory": 3,
+        "nearest": true
+      },
+      {
+        "number": 46,
+        "id": "cargo-1",
+        "side": "right",
+        "inventory": 1,
+        "nearest": false
+      },
+      {
+        "number": 47,
+        "id": "mina-crate",
+        "side": "left",
+        "inventory": 2,
+        "nearest": false
+      },
+      {
+        "number": 48,
+        "id": "control-cell",
+        "side": "middle",
+        "inventory": 3,
+        "nearest": false
+      },
+      {
+        "number": 49,
+        "id": "large-cargo",
+        "side": "middle",
+        "inventory": 3,
+        "nearest": true
+      }
+    ],
+    "sides": {
+      "left": 5,
+      "middle": 5,
+      "right": 5
+    },
+    "inventory": {
+      "1": 5,
+      "2": 5,
+      "3": 5
+    },
+    "nearest": 7,
+    "total": 15
+  }
+}

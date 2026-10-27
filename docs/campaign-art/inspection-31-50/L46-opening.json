@@ -1,0 +1,370 @@
+{
+  "title": "Rift Runner",
+  "version": "campaign-physical-draft-1",
+  "mode": "playing",
+  "level": 46,
+  "contrast": false,
+  "world": {
+    "coordinateSystem": "+Y up, -Z beyond glass, +X east. Player position is capsule center; eye +0.65Y.",
+    "room": "level-46",
+    "mission": "Leave the auxiliary receiver disconnected while you move the crate through the main gate. Then put it on the main-vault platform.",
+    "player": {
+      "position": [
+        0,
+        0.85,
+        9
+      ],
+      "velocity": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "pitch": -0.1400399999999998,
+      "grounded": true,
+      "crossings": 0
+    },
+    "portals": [
+      null,
+      null
+    ],
+    "crates": [
+      {
+        "id": "cargo-1",
+        "label": "CARGO 1",
+        "shape": "diamond",
+        "size": "small",
+        "start": "front",
+        "position": [
+          5.5,
+          0.42,
+          10
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      },
+      {
+        "id": "screen",
+        "label": "SCREEN",
+        "shape": "triangle",
+        "size": "large",
+        "start": "front",
+        "position": [
+          0,
+          1.15,
+          5
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      }
+    ],
+    "pads": [
+      {
+        "id": "main-vault",
+        "label": "MAIN VAULT",
+        "position": [
+          -4,
+          0.14,
+          -6
+        ],
+        "crate": null
+      },
+      {
+        "id": "auxiliary-vault",
+        "label": "AUXILIARY VAULT",
+        "position": [
+          4,
+          0.14,
+          -6
+        ],
+        "crate": null
+      }
+    ],
+    "bridges": [],
+    "guide": null,
+    "held": null,
+    "lastBridge": null,
+    "outcome": null,
+    "respawns": 0,
+    "launchUsed": false,
+    "events": [],
+    "number": 46,
+    "name": "Leave One Disconnected",
+    "family": "dual-vault",
+    "devices": [
+      {
+        "id": "main-emitter",
+        "kind": "relay",
+        "label": "MAIN EMITTER",
+        "position": [
+          0,
+          1.2,
+          6
+        ],
+        "size": [
+          0.65,
+          1,
+          0.65
+        ],
+        "active": true,
+        "progress": 0,
+        "choice": "main",
+        "angle": 0,
+        "powered": null,
+        "blocked": true
+      },
+      {
+        "id": "main",
+        "kind": "receiver",
+        "label": "MAIN",
+        "position": [
+          -4,
+          2,
+          0.8
+        ],
+        "size": [
+          0.7,
+          0.7,
+          0.25
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "auxiliary",
+        "kind": "receiver",
+        "label": "AUXILIARY",
+        "position": [
+          4,
+          2,
+          0.8
+        ],
+        "size": [
+          0.7,
+          0.7,
+          0.25
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "beam-reset",
+        "kind": "switch",
+        "label": "BEAM RESET / DISCONNECT",
+        "position": [
+          -3,
+          0.8,
+          9
+        ],
+        "size": [
+          0.6,
+          1,
+          0.55
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "main-gate",
+        "kind": "shutter",
+        "label": "MAIN GATE",
+        "position": [
+          -4,
+          1.5,
+          0
+        ],
+        "size": [
+          3,
+          3,
+          0.35
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "auxiliary-gate",
+        "kind": "shutter",
+        "label": "AUXILIARY GATE",
+        "position": [
+          4,
+          1.5,
+          0
+        ],
+        "size": [
+          3,
+          3,
+          0.35
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      }
+    ],
+    "exits": [
+      {
+        "id": "main-vault-exit",
+        "label": "MAIN VAULT EXIT",
+        "position": [
+          -4,
+          0.85,
+          -10
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      },
+      {
+        "id": "auxiliary-vault-exit",
+        "label": "AUXILIARY VAULT EXIT",
+        "position": [
+          4,
+          0.85,
+          -10
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "id": "control-west-panel",
+        "position": [
+          -7.8,
+          1.7,
+          7
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "control-east-panel",
+        "position": [
+          7.8,
+          1.7,
+          2
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ]
+      }
+    ],
+    "controlPoints": [
+      {
+        "id": "main-emitter",
+        "position": [
+          0,
+          1.2,
+          6
+        ]
+      },
+      {
+        "id": "beam-reset",
+        "position": [
+          -3,
+          0.8,
+          9
+        ]
+      }
+    ],
+    "result": null,
+    "observedEvents": []
+  },
+  "assistance": {
+    "hints": 0,
+    "translations": 0,
+    "retries": 0
+  },
+  "progress": {
+    "version": 2,
+    "highestUnlocked": 50,
+    "resumeLevel": 46,
+    "records": {},
+    "updatedAt": 1793124362935
+  },
+  "events": [
+    {
+      "type": "level-start",
+      "level": 46,
+      "time": 0,
+      "number": 46,
+      "contrast": false
+    }
+  ],
+  "pointerLocked": false,
+  "controls": {
+    "unlocked": true,
+    "sensitivity": 0.0022,
+    "invert": false,
+    "touchMode": false,
+    "reduced": true
+  },
+  "audio": {
+    "context": "running",
+    "paused": false,
+    "loopCount": 3,
+    "activeSfx": 0,
+    "cuesPlayed": 0,
+    "energy": false,
+    "chapter": 5,
+    "intensity": 0,
+    "recentCues": [],
+    "paired": false,
+    "bridge": false,
+    "ducked": false,
+    "gains": {
+      "master": 0.8,
+      "music": 0.7,
+      "sfx": 0.74,
+      "voice": 0.8
+    },
+    "loadedBuffers": 29,
+    "loadErrors": [],
+    "timeline": 0.792
+  },
+  "renderer": {
+    "software": false,
+    "drawCalls": 199,
+    "triangles": 34012,
+    "geometries": 151,
+    "textures": 18
+  }
+}

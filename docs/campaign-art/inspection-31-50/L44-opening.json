@@ -1,0 +1,396 @@
+{
+  "title": "Rift Runner",
+  "version": "campaign-physical-draft-1",
+  "mode": "playing",
+  "level": 44,
+  "contrast": false,
+  "world": {
+    "coordinateSystem": "+Y up, -Z beyond glass, +X east. Player position is capsule center; eye +0.65Y.",
+    "room": "level-44",
+    "mission": "Keep Mina’s crate and the north exit from the original plan. Today’s update changes only the receiver: use the lower one.",
+    "player": {
+      "position": [
+        0,
+        0.85,
+        10
+      ],
+      "velocity": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "pitch": -0.14004000000000005,
+      "grounded": true,
+      "crossings": 0
+    },
+    "portals": [
+      null,
+      null
+    ],
+    "crates": [
+      {
+        "id": "oren-crate",
+        "label": "OREN CRATE",
+        "shape": "triangle",
+        "size": "small",
+        "start": "front",
+        "owner": "Oren",
+        "position": [
+          3,
+          0.42,
+          9
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      },
+      {
+        "id": "mina-crate",
+        "label": "MINA CRATE",
+        "shape": "diamond",
+        "size": "small",
+        "start": "front",
+        "owner": "Mina",
+        "position": [
+          -3,
+          0.42,
+          9
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      },
+      {
+        "id": "beam-screen",
+        "label": "BEAM SCREEN",
+        "shape": "triangle",
+        "size": "large",
+        "start": "front",
+        "position": [
+          0,
+          1.15,
+          5
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      }
+    ],
+    "pads": [
+      {
+        "id": "shared-upper",
+        "label": "SHARED UPPER",
+        "position": [
+          0,
+          3.54,
+          -9
+        ],
+        "crate": null
+      }
+    ],
+    "bridges": [],
+    "guide": null,
+    "held": null,
+    "lastBridge": null,
+    "outcome": null,
+    "respawns": 0,
+    "launchUsed": false,
+    "events": [],
+    "number": 44,
+    "name": "One New Receiver",
+    "family": "relay-garden",
+    "devices": [
+      {
+        "id": "garden-emitter",
+        "kind": "relay",
+        "label": "GARDEN EMITTER",
+        "position": [
+          0,
+          1.2,
+          6
+        ],
+        "size": [
+          0.65,
+          1,
+          0.65
+        ],
+        "active": true,
+        "progress": 0,
+        "choice": "upper",
+        "angle": 0,
+        "powered": null,
+        "blocked": true
+      },
+      {
+        "id": "upper",
+        "kind": "receiver",
+        "label": "UPPER",
+        "position": [
+          -4,
+          3.2,
+          2.7
+        ],
+        "size": [
+          0.7,
+          0.7,
+          0.25
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "lower",
+        "kind": "receiver",
+        "label": "LOWER",
+        "position": [
+          4,
+          1.5,
+          2.7
+        ],
+        "size": [
+          0.7,
+          0.7,
+          0.25
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "upper-branch-gate",
+        "kind": "shutter",
+        "label": "UPPER BRANCH GATE",
+        "position": [
+          -4,
+          1.5,
+          2
+        ],
+        "size": [
+          3,
+          3,
+          0.35
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "lower-branch-gate",
+        "kind": "shutter",
+        "label": "LOWER BRANCH GATE",
+        "position": [
+          4,
+          1.5,
+          2
+        ],
+        "size": [
+          3,
+          3,
+          0.35
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "west-branch-lift",
+        "kind": "lift",
+        "label": "WEST BRANCH LIFT",
+        "position": [
+          -4,
+          -0.2,
+          -4
+        ],
+        "size": [
+          3.4,
+          0.4,
+          3.4
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": "base",
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "east-branch-lift",
+        "kind": "lift",
+        "label": "EAST BRANCH LIFT",
+        "position": [
+          4,
+          -0.2,
+          -4
+        ],
+        "size": [
+          3.4,
+          0.4,
+          3.4
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": "base",
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      }
+    ],
+    "exits": [
+      {
+        "id": "north-exit",
+        "label": "NORTH EXIT",
+        "position": [
+          0,
+          4.25,
+          -12
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "id": "garden-entry-panel",
+        "position": [
+          -7.8,
+          1.7,
+          8
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "east-base-panel",
+        "position": [
+          6.8,
+          1.7,
+          -5
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ]
+      }
+    ],
+    "controlPoints": [
+      {
+        "id": "garden-emitter",
+        "position": [
+          0,
+          1.2,
+          6
+        ]
+      },
+      {
+        "id": "west-branch-lift",
+        "position": [
+          -5.4,
+          0.7,
+          -2.5
+        ]
+      },
+      {
+        "id": "east-branch-lift",
+        "position": [
+          2.6,
+          0.7,
+          -2.5
+        ]
+      }
+    ],
+    "result": null,
+    "observedEvents": []
+  },
+  "assistance": {
+    "hints": 0,
+    "translations": 0,
+    "retries": 0
+  },
+  "progress": {
+    "version": 2,
+    "highestUnlocked": 50,
+    "resumeLevel": 44,
+    "records": {},
+    "updatedAt": 1793124360238
+  },
+  "events": [
+    {
+      "type": "level-start",
+      "level": 44,
+      "time": 0,
+      "number": 44,
+      "contrast": false
+    }
+  ],
+  "pointerLocked": false,
+  "controls": {
+    "unlocked": true,
+    "sensitivity": 0.0022,
+    "invert": false,
+    "touchMode": false,
+    "reduced": true
+  },
+  "audio": {
+    "context": "running",
+    "paused": false,
+    "loopCount": 3,
+    "activeSfx": 0,
+    "cuesPlayed": 0,
+    "energy": false,
+    "chapter": 5,
+    "intensity": 0,
+    "recentCues": [],
+    "paired": false,
+    "bridge": false,
+    "ducked": false,
+    "gains": {
+      "master": 0.8,
+      "music": 0.7,
+      "sfx": 0.74,
+      "voice": 0.8
+    },
+    "loadedBuffers": 29,
+    "loadErrors": [],
+    "timeline": 0.8186666666666665
+  },
+  "renderer": {
+    "software": false,
+    "drawCalls": 243,
+    "triangles": 41388,
+    "geometries": 154,
+    "textures": 18
+  }
+}

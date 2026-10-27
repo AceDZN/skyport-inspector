@@ -1,0 +1,360 @@
+{
+  "title": "Rift Runner",
+  "version": "campaign-physical-draft-1",
+  "mode": "playing",
+  "level": 33,
+  "contrast": false,
+  "world": {
+    "coordinateSystem": "+Y up, -Z beyond glass, +X east. Player position is capsule center; eye +0.65Y.",
+    "room": "level-33",
+    "mission": "Power the lift before you power the gate. Take the crate through the upper gate.",
+    "player": {
+      "position": [
+        0,
+        0.85,
+        10
+      ],
+      "velocity": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "pitch": -0.12000000000000001,
+      "grounded": true,
+      "crossings": 0
+    },
+    "portals": [
+      null,
+      null
+    ],
+    "crates": [
+      {
+        "id": "cargo-1",
+        "label": "CARGO 1",
+        "shape": "diamond",
+        "size": "small",
+        "start": "front",
+        "position": [
+          5.5,
+          0.42,
+          10
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      },
+      {
+        "id": "beam-screen",
+        "label": "BEAM SCREEN",
+        "shape": "triangle",
+        "size": "large",
+        "start": "front",
+        "position": [
+          -0.6,
+          2.55,
+          1.9
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      }
+    ],
+    "pads": [
+      {
+        "id": "upper-receiver",
+        "label": "UPPER RECEIVER",
+        "position": [
+          4,
+          3.54,
+          -8.8
+        ],
+        "crate": null
+      }
+    ],
+    "bridges": [],
+    "guide": null,
+    "held": null,
+    "lastBridge": null,
+    "outcome": null,
+    "respawns": 0,
+    "launchUsed": false,
+    "events": [],
+    "number": 33,
+    "name": "Lift, Then Gate",
+    "family": "relay-garden",
+    "devices": [
+      {
+        "id": "main-emitter",
+        "kind": "relay",
+        "label": "MAIN EMITTER",
+        "position": [
+          -0.6,
+          2.7,
+          3
+        ],
+        "size": [
+          0.65,
+          1,
+          0.65
+        ],
+        "active": true,
+        "progress": 0,
+        "choice": "lift-receiver",
+        "angle": 0,
+        "powered": null,
+        "blocked": true
+      },
+      {
+        "id": "lift-receiver",
+        "kind": "receiver",
+        "label": "LIFT RECEIVER",
+        "position": [
+          -0.6,
+          2.7,
+          -3
+        ],
+        "size": [
+          0.7,
+          0.7,
+          0.25
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "gate-receiver",
+        "kind": "receiver",
+        "label": "GATE RECEIVER",
+        "position": [
+          -0.6,
+          4.8,
+          -7
+        ],
+        "size": [
+          0.7,
+          0.7,
+          0.25
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "cargo-lift",
+        "kind": "lift",
+        "label": "CARGO LIFT",
+        "position": [
+          3,
+          -0.2,
+          4
+        ],
+        "size": [
+          3.4,
+          0.4,
+          3.4
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": "base",
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "upper-gate",
+        "kind": "shutter",
+        "label": "UPPER GATE",
+        "position": [
+          4,
+          4.9,
+          -6
+        ],
+        "size": [
+          3,
+          3,
+          0.35
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "lower-gate",
+        "kind": "shutter",
+        "label": "LOWER GATE",
+        "position": [
+          -4,
+          1.5,
+          -6
+        ],
+        "size": [
+          3,
+          3,
+          0.35
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      }
+    ],
+    "exits": [
+      {
+        "id": "upper-gate-exit",
+        "label": "UPPER GATE EXIT",
+        "position": [
+          4,
+          4.25,
+          -11
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      },
+      {
+        "id": "lower-gate-exit",
+        "label": "LOWER GATE EXIT",
+        "position": [
+          -4,
+          0.85,
+          -11
+        ],
+        "size": [
+          1.8,
+          1.8,
+          1.8
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "id": "lower-return-panel",
+        "position": [
+          -7.7,
+          1.7,
+          7
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "upper-return-panel",
+        "position": [
+          7.7,
+          5.1,
+          7
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ]
+      }
+    ],
+    "controlPoints": [
+      {
+        "id": "main-emitter",
+        "position": [
+          -0.6,
+          2.7,
+          3
+        ]
+      },
+      {
+        "id": "cargo-lift",
+        "position": [
+          1.6,
+          0.7,
+          5.5
+        ]
+      }
+    ],
+    "result": null,
+    "observedEvents": []
+  },
+  "assistance": {
+    "hints": 0,
+    "translations": 0,
+    "retries": 0
+  },
+  "progress": {
+    "version": 2,
+    "highestUnlocked": 50,
+    "resumeLevel": 33,
+    "records": {},
+    "updatedAt": 1793124345589
+  },
+  "events": [
+    {
+      "type": "level-start",
+      "level": 33,
+      "time": 0,
+      "number": 33,
+      "contrast": false
+    }
+  ],
+  "pointerLocked": false,
+  "controls": {
+    "unlocked": true,
+    "sensitivity": 0.0022,
+    "invert": false,
+    "touchMode": false,
+    "reduced": true
+  },
+  "audio": {
+    "context": "running",
+    "paused": false,
+    "loopCount": 3,
+    "activeSfx": 0,
+    "cuesPlayed": 0,
+    "energy": false,
+    "chapter": 4,
+    "intensity": 0,
+    "recentCues": [],
+    "paired": false,
+    "bridge": false,
+    "ducked": false,
+    "gains": {
+      "master": 0.8,
+      "music": 0.7,
+      "sfx": 0.74,
+      "voice": 0.8
+    },
+    "loadedBuffers": 29,
+    "loadErrors": [],
+    "timeline": 0.808
+  },
+  "renderer": {
+    "software": false,
+    "drawCalls": 182,
+    "triangles": 36728,
+    "geometries": 119,
+    "textures": 19
+  }
+}

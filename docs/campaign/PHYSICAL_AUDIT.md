@@ -2,7 +2,7 @@
 
 All50 exported physical drafts were inspected against base/contrast/alternative goals. This is **not** a campaign playthrough or verified completion claim. Tests intentionally fail on missing fulfilment; fixture files were not edited by this helper.
 
-Export version: base campaign-physical-draft-1, upper 2 (runtime override priority). Base SHA256: 9f44138e08910e7f500398b8be67590c9d370c21631103b4d7715f43d4efa22b; upper SHA256: 8f8f935b5ae99efc6dc9d19dbfd283d39f6372484b715005ad7fa9c89ea0aee9. Static findings: 22; levels with findings: 10. Categories: {"integrity":0,"references":16,"inventory":0,"geometry":0,"fidelity":4,"wiring":2}.
+Export version: base campaign-physical-draft-1, upper 2 (runtime override priority). Base SHA256: c03e6735cc61fc80857fed64c6fea58c9a44d080353607507e88141d0fee47b3; upper SHA256: 39b98b53bde3eecf2c9279b8c83e1f92eba068a78a0b915accf491b9a8a7cb29. Static findings: 0; levels with findings: 0. Categories: {"integrity":0,"references":0,"inventory":0,"geometry":0,"fidelity":0,"wiring":0}.
 
 Runtime makeBlueprint loads by number and its base/contrast equality is tested independently. That architectural invariant does not establish physical fidelity, reachable goals, functional machines or enjoyment.
 
@@ -19,13 +19,13 @@ Runtime makeBlueprint loads by number and its base/contrast equality is tested i
 |9|Opposite Landing|No static defect detected; runtime/fidelity play still unverified.|
 |10|The Way Back|No static defect detected; runtime/fidelity play still unverified.|
 |11|Lift Welcome|No static defect detected; runtime/fidelity play still unverified.|
-|12|Today at the Hub|**EVENT_ROUTE**: Event route:west-bridge names absent route<br>**EVENT_ROUTE**: Event route:east-bridge names absent route|
+|12|Today at the Hub|No static defect detected; runtime/fidelity play still unverified.|
 |13|Two Gardens|No static defect detected; runtime/fidelity play still unverified.|
 |14|The Higher Dock|No static defect detected; runtime/fidelity play still unverified.|
 |15|Lock Before Release|No static defect detected; runtime/fidelity play still unverified.|
 |16|Either Outer Path|No static defect detected; runtime/fidelity play still unverified.|
 |17|Receiver, Not Sender|No static defect detected; runtime/fidelity play still unverified.|
-|18|Follow It Up|**EVENT_CARGO_GATE**: Event cargo:cargo-1:cross:north-gate has no actual gate north-gate<br>**EVENT_CARGO_GATE**: Event cargo:spare-cargo:cross:north-gate has no actual gate north-gate<br>**EVENT_CARGO_GATE**: Event cargo:cargo-1:cross:south-gate has no actual gate south-gate<br>**EVENT_CARGO_GATE**: Event cargo:spare-cargo:cross:south-gate has no actual gate south-gate|
+|18|Follow It Up|No static defect detected; runtime/fidelity play still unverified.|
 |19|Keep It on Board|No static defect detected; runtime/fidelity play still unverified.|
 |20|Weights and Ways|No static defect detected; runtime/fidelity play still unverified.|
 |21|Garden Ferry|No static defect detected; runtime/fidelity play still unverified.|
@@ -41,27 +41,27 @@ Runtime makeBlueprint loads by number and its base/contrast equality is tested i
 |31|A Line of Light|No static defect detected; runtime/fidelity play still unverified.|
 |32|First Launch|No static defect detected; runtime/fidelity play still unverified.|
 |33|Lift, Then Gate|No static defect detected; runtime/fidelity play still unverified.|
-|34|Safe Now|**EVENT_ROUTE**: Event route:east-bridge names absent route<br>**EVENT_ROUTE**: Event route:west-bridge names absent route|
+|34|Safe Now|No static defect detected; runtime/fidelity play still unverified.|
 |35|Today’s Capacity|No static defect detected; runtime/fidelity play still unverified.|
 |36|Which Receiver Is Powered?|No static defect detected; runtime/fidelity play still unverified.|
 |37|Both Means Both|No static defect detected; runtime/fidelity play still unverified.|
 |38|The Next Result|No static defect detected; runtime/fidelity play still unverified.|
 |39|Same Floor, New Landing|No static defect detected; runtime/fidelity play still unverified.|
-|40|Forge Transfer|**MISSING_SYSTEM**: Plan requires >=1 relay; fixture has 0|
-|41|Her Parcel, Your Route|**MISSING_SYSTEM**: Plan requires >=3 conveyor; fixture has 1|
-|42|Beside Her Lift|**MISSING_SYSTEM**: Plan requires >=2 conveyor; fixture has 1|
+|40|Forge Transfer|No static defect detected; runtime/fidelity play still unverified.|
+|41|Her Parcel, Your Route|No static defect detected; runtime/fidelity play still unverified.|
+|42|Beside Her Lift|No static defect detected; runtime/fidelity play still unverified.|
 |43|The Report Matches|No static defect detected; runtime/fidelity play still unverified.|
 |44|One New Receiver|No static defect detected; runtime/fidelity play still unverified.|
-|45|Today, Not Tomorrow|**GOAL_CARGO**: Goal2 refers to absent cargo spare-cargo<br>**GOAL_CARGO**: Goal5 refers to absent cargo spare-cargo|
-|46|Leave One Disconnected|**GOAL_CARGO**: Goal2 refers to absent cargo spare-cargo<br>**EVENT_CARGO**: Event cargo:spare-cargo:enter:main-gate names absent cargo<br>**EVENT_CARGO**: Event cargo:spare-cargo:leave:main-gate names absent cargo<br>**GOAL_CARGO**: Goal5 refers to absent cargo spare-cargo<br>**EVENT_CARGO**: Event cargo:spare-cargo:enter:auxiliary-gate names absent cargo<br>**EVENT_CARGO**: Event cargo:spare-cargo:leave:auxiliary-gate names absent cargo|
+|45|Today, Not Tomorrow|No static defect detected; runtime/fidelity play still unverified.|
+|46|Leave One Disconnected|No static defect detected; runtime/fidelity play still unverified.|
 |47|The Current Manifest|No static defect detected; runtime/fidelity play still unverified.|
 |48|If the Record Says|No static defect detected; runtime/fidelity play still unverified.|
-|49|Two Arcs|**INERT_RECEIVER**: middle-emitter→side drives no physical door/bridge/lift circuit|
-|50|The Living Relay|**MISSING_SYSTEM**: Plan requires >=3 conveyor; fixture has 2<br>**INERT_RECEIVER**: gallery-emitter→garden-receiver drives no physical door/bridge/lift circuit|
+|49|Two Arcs|No static defect detected; runtime/fidelity play still unverified.|
+|50|The Living Relay|No static defect detected; runtime/fidelity play still unverified.|
 
 ## Candidate position bias
 
-{"sampleCount":24,"firstInventory":8,"leftmost":12,"nearest":16}. Only tasks that actually select one cargo identity are sampled; generic crate tasks accept equivalent alternatives. Leftmost/nearest use actual spawn positions; the catalogue requires alternatives rather than repeated positional answers. Array order is diagnostic only because the game does not expose a cargo list.
+{"sampleCount":26,"firstInventory":8,"leftmost":10,"nearest":14}. Only tasks that actually select one cargo identity are sampled; generic crate tasks accept equivalent alternatives. Leftmost/nearest use actual spawn positions; the catalogue requires alternatives rather than repeated positional answers. Array order is diagnostic only because the game does not expose a cargo list.
 
 ## Runtime producer checks
 
