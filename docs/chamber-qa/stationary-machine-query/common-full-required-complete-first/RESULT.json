@@ -1,0 +1,349 @@
+{
+  "status": "PASS",
+  "scope": "Isolated full required native contracts only; no browser/build/runtime integration. Authored routes retain original assertions; metrics-only observers on24/26. Synthetic guards are safety units.",
+  "worldSha256": "19db676a53b8111a4220967f0a4d956b61e0c998af60d80bee61b8236afc83e1",
+  "summary": {
+    "tests": 487,
+    "suites": 0,
+    "pass": 487,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "sourceCount": 133,
+  "sourceExactMatch": true,
+  "activeOriginalsExactMatch": true,
+  "elapsedSeconds": 2348.9898178577423,
+  "heldStateTotals": {
+    "24": {
+      "routesAndFixtureInstances": 7,
+      "counts": {
+        "character": 13470,
+        "native": 13470,
+        "physics": 13470,
+        "held": 408,
+        "portal": 10,
+        "violations": 0
+      },
+      "heldRoutes": 3,
+      "heldSamples": 6
+    },
+    "26": {
+      "routesAndFixtureInstances": 5,
+      "counts": {
+        "character": 11108,
+        "native": 11108,
+        "physics": 11108,
+        "held": 966,
+        "portal": 6,
+        "violations": 0
+      },
+      "heldRoutes": 3,
+      "heldSamples": 6
+    }
+  },
+  "heldRows": [
+    {
+      "file": "held-observer/24-manual-passage-contrast-1793218240583.json",
+      "sha256": "12952ae10505e62464b875da2691c9437493bdef34f9ec4770982ec6e0a68429",
+      "number": 24,
+      "id": "manual-passage",
+      "contrast": true,
+      "error": null,
+      "counts": {
+        "character": 1877,
+        "native": 1877,
+        "physics": 1877,
+        "held": 102,
+        "portal": 2,
+        "violations": 0
+      },
+      "nativeTypes": {
+        "timer:1": 1877,
+        "switch:1": 1877,
+        "shutter:2": 388,
+        "shutter:1": 3366
+      },
+      "heldSamples": 2
+    },
+    {
+      "file": "held-observer/24-next-window-base-1793218248279.json",
+      "sha256": "b6ab6eb1c9e1e3cb2edf498e0a08dd263d73274a58f615aa02aad12e8f753872",
+      "number": 24,
+      "id": "next-window",
+      "contrast": false,
+      "error": null,
+      "counts": {
+        "character": 3035,
+        "native": 3035,
+        "physics": 3035,
+        "held": 0,
+        "portal": 2,
+        "violations": 0
+      },
+      "nativeTypes": {
+        "timer:1": 3035,
+        "switch:1": 3035,
+        "shutter:2": 485,
+        "shutter:1": 5585
+      },
+      "heldSamples": 0
+    },
+    {
+      "file": "held-observer/24-powered-manual-recovery-contrast-1793218241712.json",
+      "sha256": "e4ac28e657b3d4348019ae153cef25ee2b7885e1bc314508e12bd224dd04540e",
+      "number": 24,
+      "id": "powered-manual-recovery",
+      "contrast": true,
+      "error": null,
+      "counts": {
+        "character": 2061,
+        "native": 2061,
+        "physics": 2061,
+        "held": 99,
+        "portal": 2,
+        "violations": 0
+      },
+      "nativeTypes": {
+        "timer:1": 2061,
+        "switch:1": 2061,
+        "shutter:2": 482,
+        "shutter:1": 3640
+      },
+      "heldSamples": 2
+    },
+    {
+      "file": "held-observer/24-route-base-1793218238460.json",
+      "sha256": "6f3dc28afa3f1a985a2bb6e596137eddb968180908df8144cd2c33cd294c4284",
+      "number": 24,
+      "id": "route",
+      "contrast": false,
+      "error": null,
+      "counts": {
+        "character": 60,
+        "native": 60,
+        "physics": 60,
+        "held": 0,
+        "portal": 0,
+        "violations": 0
+      },
+      "nativeTypes": {
+        "timer:1": 60,
+        "switch:1": 60,
+        "shutter:2": 60,
+        "shutter:1": 60
+      },
+      "heldSamples": 0
+    },
+    {
+      "file": "held-observer/24-route-contrast-1793218238461.json",
+      "sha256": "8d687b2d51eff56790e2fcde7d4cbde88d1c50ce61efd4b36877dfd442afa09d",
+      "number": 24,
+      "id": "route",
+      "contrast": true,
+      "error": null,
+      "counts": {
+        "character": 60,
+        "native": 60,
+        "physics": 60,
+        "held": 0,
+        "portal": 0,
+        "violations": 0
+      },
+      "nativeTypes": {
+        "timer:1": 60,
+        "switch:1": 60,
+        "shutter:2": 60,
+        "shutter:1": 60
+      },
+      "heldSamples": 0
+    },
+    {
+      "file": "held-observer/24-timer-passage-base-1793218239073.json",
+      "sha256": "e71f5a5e4d810a6d2b2d1d89e9ba4adbfef5cb3db77494b9eb96e313544998c7",
+      "number": 24,
+      "id": "timer-passage",
+      "contrast": false,
+      "error": null,
+      "counts": {
+        "character": 1597,
+        "native": 1597,
+        "physics": 1597,
+        "held": 0,
+        "portal": 2,
+        "violations": 0
+      },
+      "nativeTypes": {
+        "timer:1": 1597,
+        "switch:1": 1597,
+        "shutter:2": 291,
+        "shutter:1": 2903
+      },
+      "heldSamples": 0
+    },
+    {
+      "file": "held-observer/24-wrong-manual-recovery-base-1793218243682.json",
+      "sha256": "9d0444cd578f9944275ae86eb9f08d4dc66d2b40303d297fe7f3912ba6bb353e",
+      "number": 24,
+      "id": "wrong-manual-recovery",
+      "contrast": false,
+      "error": null,
+      "counts": {
+        "character": 4780,
+        "native": 4780,
+        "physics": 4780,
+        "held": 207,
+        "portal": 2,
+        "violations": 0
+      },
+      "nativeTypes": {
+        "timer:1": 4780,
+        "switch:1": 4780,
+        "shutter:2": 781,
+        "shutter:1": 8779
+      },
+      "heldSamples": 2
+    },
+    {
+      "file": "held-observer/26-route-base-1793217637699.json",
+      "sha256": "326b25d6029489ee515662b0d59cc1065d54cefdfa975821bb7ee4a51777f96a",
+      "number": 26,
+      "id": "route",
+      "contrast": false,
+      "error": null,
+      "counts": {
+        "character": 60,
+        "native": 60,
+        "physics": 60,
+        "held": 0,
+        "portal": 0,
+        "violations": 0
+      },
+      "nativeTypes": {
+        "shutter:1": 300,
+        "switch:1": 180,
+        "timer:1": 60,
+        "receiver:1": 180
+      },
+      "heldSamples": 0
+    },
+    {
+      "file": "held-observer/26-route-contrast-1793217637716.json",
+      "sha256": "dec684773ca5a9abbd3f6e23e42f5f832ce8ffe611996093fc7d45edf66100e2",
+      "number": 26,
+      "id": "route",
+      "contrast": true,
+      "error": null,
+      "counts": {
+        "character": 60,
+        "native": 60,
+        "physics": 60,
+        "held": 0,
+        "portal": 0,
+        "violations": 0
+      },
+      "nativeTypes": {
+        "shutter:1": 300,
+        "switch:1": 180,
+        "timer:1": 60,
+        "receiver:1": 180
+      },
+      "heldSamples": 0
+    },
+    {
+      "file": "held-observer/26-test-closed-B-contrast-1793217663370.json",
+      "sha256": "36d8f20732b09262362c4fe1db4b89eb5e3485b75d6ebdb7d0dd79f08f4e2057",
+      "number": 26,
+      "id": "test-closed-B",
+      "contrast": true,
+      "error": null,
+      "counts": {
+        "character": 2898,
+        "native": 2898,
+        "physics": 2898,
+        "held": 322,
+        "portal": 2,
+        "violations": 0
+      },
+      "nativeTypes": {
+        "shutter:1": 14005,
+        "switch:1": 8694,
+        "timer:1": 2898,
+        "receiver:1": 8694,
+        "shutter:2": 485
+      },
+      "heldSamples": 2
+    },
+    {
+      "file": "held-observer/26-test-open-A-base-1793217655957.json",
+      "sha256": "4a2bf49eaf66a240d36dd8c297d8905cd2b5ec6787a84bfd10172b286ea0ab1e",
+      "number": 26,
+      "id": "test-open-A",
+      "contrast": false,
+      "error": null,
+      "counts": {
+        "character": 3256,
+        "native": 3256,
+        "physics": 3256,
+        "held": 322,
+        "portal": 2,
+        "violations": 0
+      },
+      "nativeTypes": {
+        "shutter:1": 15795,
+        "switch:1": 9768,
+        "timer:1": 3256,
+        "receiver:1": 9768,
+        "shutter:2": 485
+      },
+      "heldSamples": 2
+    },
+    {
+      "file": "held-observer/26-wrong-B-reselect-A-base-1793217677132.json",
+      "sha256": "7bbd8999f9c9b1832259fa96fa65c5831931ec531f7d4e5f6b2b008cccd06a01",
+      "number": 26,
+      "id": "wrong-B-reselect-A",
+      "contrast": false,
+      "error": null,
+      "counts": {
+        "character": 4834,
+        "native": 4834,
+        "physics": 4834,
+        "held": 322,
+        "portal": 2,
+        "violations": 0
+      },
+      "nativeTypes": {
+        "shutter:1": 23297,
+        "switch:1": 14502,
+        "timer:1": 4834,
+        "receiver:1": 14502,
+        "shutter:2": 873
+      },
+      "heldSamples": 2
+    }
+  ],
+  "strictReceipt": "strict-job.json (targeted changed helper/observer and final narrow tests only)",
+  "preservedFull49StrictFailure": "../common-full-required-first/strict-job.json (missing copied helper + unchanged legacy type errors)",
+  "nativeReceipt": "native-job.json",
+  "allOptionalRiftFlagsScrubbed": true,
+  "saveFixtures": {
+    "docs/chamber-qa/level3-run/earned-game-only-storage.json": "14df522347b78272069eb6b60d8a957e2bff1d0416cdfbd24e6c6d1b20ff7efd",
+    "docs/chamber-qa/level3-affected-replay/earned-game-only-storage.json": "2507f04ef7acd7afe9ef6ccce1a9f1f7f31b017c7fb0d76a0774578c5e83dc89",
+    "docs/chamber-qa/clean-five-run/earned-game-only-storage.json": "ce10106f720dccd9fd22dc7773524a3e385b460f2b705bac67c35f5196677556",
+    "docs/chamber-qa/final-controls-replay/earned-game-only-storage.json": "b17e530a79c5e51fc4077880fe906a50d1cdc1bc64f17bdfb7806c61d6190fb2"
+  },
+  "handoffSourceFiles": {
+    "src/core/world.ts": "19db676a53b8111a4220967f0a4d956b61e0c998af60d80bee61b8236afc83e1",
+    "tests/core-stationary-common-classes.test.ts": "80aef6a30d4730de89ba6da388e784572e8875ec8302e5b99729d2f8576fb9e0",
+    "tests/core-stationary-query-guards.test.ts": "fbe37953fe4ba78a47f279bccbce9cfb48a61b2cfc6be2e00737d91b7675aa45",
+    "tests/core-timer-pedestal-recovery-feedback.test.ts": "5c224981793628261a66d4e8d73007a79c1eeb85a26223393f7d47d67427108f",
+    "tests/helpers/machine-query-state-observer.ts": "8508abaf740f84c5c7348cbe1fffa0c44ce14e17c84352802fa67ea721e968f4",
+    "tests/helpers/authored-held-state-observer.ts": "32d93e2ebf3bb9986c1797d9699a3ece7dfe58fe13ef467f49fd80ff3c99f60f",
+    "tests/helpers/reference-route.ts": "93c8302f741c33ce04ce7d2c242adbaba6ba9069c3e439801100390fed025458",
+    "tests/helpers/event-route.ts": "abcfbaa80553ec5b30e361d3aecabb09bd24a5e9d4bfbbb740e69bd68c6fff8d"
+  },
+  "slotStatus": "RELEASED; all native/compiler/read processes closed",
+  "summaryScriptExitCode": 0
+}

@@ -86,3 +86,7 @@ The50-room candidate uses Scene `45805a6c744ab03b7e18966dfaa7b6d22f3b1c15e36cf0b
 ## Held v3 review finish
 
 The later frozen `/fifty-v3/` uses Scene `46bb5b3d01be8d920c84f3e75a9406d151e723223bc0b48c1b3aacd5d0ae98ad`. Its only Scene difference from the preceding50 snapshot is C43: two actual slabs retain exact geometry/top UVs/targets while edges and undersides receive their appropriate existing finishes; the same three practical-light roles move to backed warm fascia strips and broad soft spots. No new texture/model/material or native collider was added. [The bounded source probe](docs/chamber-art/C43_FINISH_PROBE.json) checks unchanged geometry and light/resource ownership; matched actual review remains separately recorded. V3 additionally clarifies first-room aiming help and the English-reading menu purpose. All three required GLBs and hero-loader bytes remain unchanged. These source/build facts do not claim a fresh50 playthrough or subjective audio review.
+
+## Frozen v4 common repair
+
+The new `/fifty-v4/` retains exact v3 Scene, hero loader, models, materials, English and audio bytes. Only `src/core/world.ts` changes to fix recovery from genuinely stationary machine contact while preserving actual/queued motion and native state outside character queries. [V4 BUILD](docs/chamber-qa/fifty-timer-v4/BUILD.json) binds full runtime build and actual HTTP bundle/three-model hashes. No new asset or generation was needed. Native487/487 and1374 invoked held-state checks pass; actual v4 browser/fresh50 acceptance remains pending.

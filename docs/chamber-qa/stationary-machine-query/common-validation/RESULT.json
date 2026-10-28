@@ -1,0 +1,1583 @@
+{
+  "status": "NARROW AUTHORED COMMON CANDIDATE PASS; ONE SYNTHETIC ANGULAR SETUP UNPROVEN",
+  "activeRuntimeUnchanged": true,
+  "baselineWorld": "e04f8690ddfb9306c9602a25a104b5e47dbe6829b937cf53da82debf52be3d94",
+  "candidateWorld": "19db676a53b8111a4220967f0a4d956b61e0c998af60d80bee61b8236afc83e1",
+  "jobs": {
+    "baseline-classes-first": {
+      "native-job.json": {
+        "command": [
+          "/Users/acedzn/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "node_modules/tsx/dist/cli.mjs",
+          "--test",
+          "--test-concurrency=1",
+          "tests/core-stationary-common-classes.test.ts"
+        ],
+        "env": {
+          "RIFT_STATIONARY_COMMON_CLASSES": "1",
+          "RIFT_COMMON_CLASSES_OUT": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-machine-query/common-validation/baseline-classes-first"
+        },
+        "cwd": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/work/chamber-qa/stationary-common-validation/baseline/sources",
+        "exitCode": 1,
+        "elapsedSeconds": 25.536850929260254,
+        "sourceCount": 127,
+        "sourceExactMatch": true,
+        "activeOriginalsExactMatch": true
+      },
+      "strict-confirmed-job.json": {
+        "command": [
+          "/Users/acedzn/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "node_modules/typescript/bin/tsc",
+          "--noEmit",
+          "--strict",
+          "--skipLibCheck",
+          "--target",
+          "ES2022",
+          "--module",
+          "ESNext",
+          "--moduleResolution",
+          "Bundler",
+          "--lib",
+          "ES2022,DOM",
+          "--allowImportingTsExtensions",
+          "--resolveJsonModule",
+          "--esModuleInterop",
+          "--types",
+          "node",
+          "--typeRoots",
+          "/Users/acedzn/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/@types,./node_modules/@types",
+          "tests/core-stationary-common-classes.test.ts",
+          "tests/core-stationary-query-guards.test.ts",
+          "tests/core-timer-pedestal-recovery-feedback.test.ts"
+        ],
+        "env": {},
+        "cwd": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/work/chamber-qa/stationary-common-validation/baseline/sources",
+        "exitCode": 0,
+        "elapsedSeconds": 18.553864002227783,
+        "sourceCount": 127,
+        "sourceExactMatch": true,
+        "activeOriginalsExactMatch": true
+      }
+    },
+    "common-timer-first": {
+      "native-job.json": {
+        "command": [
+          "/Users/acedzn/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "node_modules/tsx/dist/cli.mjs",
+          "--test",
+          "--test-concurrency=1",
+          "tests/core-timer-pedestal-recovery-feedback.test.ts"
+        ],
+        "env": {
+          "RIFT_C12_TIMER_RECOVERY_FEEDBACK": "1",
+          "RIFT_C12_TIMER_OUT": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-machine-query/common-validation/common-timer-first"
+        },
+        "cwd": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/work/chamber-qa/stationary-common-validation/candidate/sources",
+        "exitCode": 0,
+        "elapsedSeconds": 11.517821073532104,
+        "sourceCount": 127,
+        "sourceExactMatch": true,
+        "activeOriginalsExactMatch": true
+      },
+      "strict-job.json": {
+        "command": [
+          "/Users/acedzn/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "node_modules/typescript/bin/tsc",
+          "--noEmit",
+          "--strict",
+          "--skipLibCheck",
+          "--target",
+          "ES2022",
+          "--module",
+          "ESNext",
+          "--moduleResolution",
+          "Bundler",
+          "--lib",
+          "ES2022,DOM",
+          "--allowImportingTsExtensions",
+          "--resolveJsonModule",
+          "--esModuleInterop",
+          "--types",
+          "node",
+          "--typeRoots",
+          "/Users/acedzn/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/@types,./node_modules/@types",
+          "tests/core-stationary-common-classes.test.ts",
+          "tests/core-stationary-query-guards.test.ts",
+          "tests/core-timer-pedestal-recovery-feedback.test.ts"
+        ],
+        "env": {},
+        "cwd": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/work/chamber-qa/stationary-common-validation/candidate/sources",
+        "exitCode": 0,
+        "elapsedSeconds": 25.44100522994995,
+        "sourceCount": 127,
+        "sourceExactMatch": true,
+        "activeOriginalsExactMatch": true
+      }
+    },
+    "common-classes-first": {
+      "native-job.json": {
+        "command": [
+          "/Users/acedzn/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "node_modules/tsx/dist/cli.mjs",
+          "--test",
+          "--test-concurrency=1",
+          "tests/core-stationary-common-classes.test.ts"
+        ],
+        "env": {
+          "RIFT_STATIONARY_COMMON_CLASSES": "1",
+          "RIFT_COMMON_CLASSES_OUT": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-machine-query/common-validation/common-classes-first"
+        },
+        "cwd": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/work/chamber-qa/stationary-common-validation/candidate/sources",
+        "exitCode": 0,
+        "elapsedSeconds": 16.088077068328857,
+        "sourceCount": 127,
+        "sourceExactMatch": true,
+        "activeOriginalsExactMatch": true
+      }
+    },
+    "common-guards-first": {
+      "native-job.json": {
+        "command": [
+          "/Users/acedzn/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "node_modules/tsx/dist/cli.mjs",
+          "--test",
+          "--test-concurrency=1",
+          "tests/core-stationary-query-guards.test.ts"
+        ],
+        "env": {
+          "RIFT_STATIONARY_QUERY_GUARDS": "1",
+          "RIFT_COMMON_GUARD_OUT": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-machine-query/common-validation/common-guards-first"
+        },
+        "cwd": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/work/chamber-qa/stationary-common-validation/candidate/sources",
+        "exitCode": 1,
+        "elapsedSeconds": 6.462692975997925,
+        "sourceCount": 127,
+        "sourceExactMatch": true,
+        "activeOriginalsExactMatch": true
+      }
+    }
+  },
+  "authoredClasses": {
+    "switch": {
+      "baseline-classes-first": {
+        "error": null,
+        "trials": [
+          {
+            "direction": "A",
+            "seconds": 0.5,
+            "start": [
+              6.505033016204834,
+              0.864884078502655,
+              7.994060039520264
+            ],
+            "end": [
+              6.694027423858643,
+              0.8651000261306763,
+              6.290277481079102
+            ],
+            "distance": 1.7142327552599455,
+            "clear": true,
+            "grounded": true
+          },
+          {
+            "direction": "S",
+            "seconds": 0.5,
+            "start": [
+              6.505042552947998,
+              0.8649654388427734,
+              7.999033451080322
+            ],
+            "end": [
+              4.798792839050293,
+              0.8646955490112305,
+              7.9990739822387695
+            ],
+            "distance": 1.7062497357243154,
+            "clear": true,
+            "grounded": true
+          }
+        ],
+        "S400": [],
+        "counts": {
+          "character": 733,
+          "native": 733,
+          "physics": 733,
+          "held": 0,
+          "portal": 2,
+          "violations": 0
+        },
+        "nativeTypes": {
+          "timer:2": 733,
+          "switch:2": 733,
+          "shutter:2": 2932,
+          "moving-platform:1": 733
+        }
+      },
+      "common-classes-first": {
+        "error": null,
+        "trials": [
+          {
+            "direction": "A",
+            "seconds": 0.5,
+            "start": [
+              6.504900932312012,
+              0.864780604839325,
+              7.994054794311523
+            ],
+            "end": [
+              6.552084922790527,
+              0.8649500012397766,
+              5.8943023681640625
+            ],
+            "distance": 2.1002825068939575,
+            "clear": true,
+            "grounded": true
+          },
+          {
+            "direction": "S",
+            "seconds": 0.5,
+            "start": [
+              6.504968643188477,
+              0.8647274374961853,
+              7.996108531951904
+            ],
+            "end": [
+              4.577516555786133,
+              0.8654364347457886,
+              7.996138572692871
+            ],
+            "distance": 1.927452218035819,
+            "clear": true,
+            "grounded": true
+          }
+        ],
+        "S400": [],
+        "counts": {
+          "character": 718,
+          "native": 718,
+          "physics": 718,
+          "held": 0,
+          "portal": 2,
+          "violations": 0
+        },
+        "nativeTypes": {
+          "timer:1": 718,
+          "switch:1": 718,
+          "shutter:2": 74,
+          "shutter:1": 2798,
+          "moving-platform:1": 718
+        }
+      }
+    },
+    "closed-shutter": {
+      "baseline-classes-first": {
+        "error": "AssertionError [ERR_ASSERTION]: A remained pinned",
+        "trials": [
+          {
+            "direction": "A",
+            "seconds": 0.75,
+            "start": [
+              7.2173171043396,
+              0.8649116158485413,
+              4.524908065795898
+            ],
+            "end": [
+              7.025256633758545,
+              0.8648754358291626,
+              4.524843692779541
+            ],
+            "distance": 0.19206048477678903,
+            "clear": false,
+            "grounded": true
+          },
+          {
+            "direction": "S",
+            "seconds": 0.5,
+            "start": [
+              7.022678375244141,
+              0.86491858959198,
+              4.524843692779541
+            ],
+            "end": [
+              7.022678375244141,
+              0.8649381399154663,
+              4.529490947723389
+            ],
+            "distance": 0.0046472960663449135,
+            "clear": false,
+            "grounded": true
+          }
+        ],
+        "S400": [],
+        "counts": {
+          "character": 639,
+          "native": 639,
+          "physics": 639,
+          "held": 0,
+          "portal": 2,
+          "violations": 0
+        },
+        "nativeTypes": {
+          "timer:2": 639,
+          "switch:2": 639,
+          "shutter:2": 2556,
+          "moving-platform:1": 639
+        }
+      },
+      "common-classes-first": {
+        "error": null,
+        "trials": [
+          {
+            "direction": "A",
+            "seconds": 0.75,
+            "start": [
+              7.21738862991333,
+              0.8650999069213867,
+              4.525035858154297
+            ],
+            "end": [
+              3.9690842628479004,
+              0.864950954914093,
+              4.525131702423096
+            ],
+            "distance": 3.2483043718945375,
+            "clear": true,
+            "grounded": true
+          },
+          {
+            "direction": "S",
+            "seconds": 0.5,
+            "start": [
+              7.209266185760498,
+              0.8650931119918823,
+              4.524796962738037
+            ],
+            "end": [
+              7.209354877471924,
+              0.8650148510932922,
+              6.43201208114624
+            ],
+            "distance": 1.9072151220761133,
+            "clear": true,
+            "grounded": true
+          }
+        ],
+        "S400": [],
+        "counts": {
+          "character": 824,
+          "native": 824,
+          "physics": 824,
+          "held": 0,
+          "portal": 2,
+          "violations": 0
+        },
+        "nativeTypes": {
+          "timer:1": 824,
+          "switch:1": 824,
+          "shutter:2": 164,
+          "shutter:1": 3132,
+          "moving-platform:1": 824
+        }
+      }
+    },
+    "authored-C1": {
+      "baseline-classes-first": {
+        "error": "AssertionError [ERR_ASSERTION]: S400 remains pinned against exit-door",
+        "trials": null,
+        "S400": [
+          {
+            "label": "actual-S400-recovery-measurement",
+            "distance": 4.293359428026648e-05,
+            "start": [
+              -7.675039291381836,
+              0.8649191856384277,
+              11.01066780090332
+            ],
+            "end": [
+              -7.675082206726074,
+              0.8649179339408875,
+              11.01066780090332
+            ]
+          }
+        ],
+        "counts": {
+          "character": 365,
+          "native": 365,
+          "physics": 365,
+          "held": 0,
+          "portal": 0,
+          "violations": 0
+        },
+        "nativeTypes": {
+          "shutter:2": 365
+        }
+      },
+      "common-classes-first": {
+        "error": null,
+        "trials": null,
+        "S400": [
+          {
+            "label": "actual-S400-recovery-measurement",
+            "distance": 1.4546613750522737,
+            "start": [
+              -7.675102233886719,
+              0.8649193048477173,
+              11.010926246643066
+            ],
+            "end": [
+              -6.220440864562988,
+              0.8650482296943665,
+              11.010932922363281
+            ]
+          }
+        ],
+        "counts": {
+          "character": 365,
+          "native": 365,
+          "physics": 365,
+          "held": 0,
+          "portal": 0,
+          "violations": 0
+        },
+        "nativeTypes": {
+          "shutter:1": 365
+        }
+      }
+    },
+    "authored-C13": {
+      "baseline-classes-first": {
+        "error": "AssertionError [ERR_ASSERTION]: S400 remains pinned against belt-power",
+        "trials": null,
+        "S400": [
+          {
+            "label": "actual-S400-recovery-measurement",
+            "distance": 0.0007598736752251765,
+            "start": [
+              2.0416338443756104,
+              0.8650894165039062,
+              6.144867897033691
+            ],
+            "end": [
+              2.0416338443756104,
+              0.8643295764923096,
+              6.144860744476318
+            ]
+          }
+        ],
+        "counts": {
+          "character": 1759,
+          "native": 1759,
+          "physics": 1759,
+          "held": 0,
+          "portal": 2,
+          "violations": 0
+        },
+        "nativeTypes": {
+          "conveyor:1": 1759,
+          "switch:2": 3518,
+          "shutter:2": 5277
+        }
+      },
+      "common-classes-first": {
+        "error": null,
+        "trials": null,
+        "S400": [
+          {
+            "label": "actual-S400-recovery-measurement",
+            "distance": 1.4833560575016456,
+            "start": [
+              2.0416553020477295,
+              0.8649920225143433,
+              6.145097732543945
+            ],
+            "end": [
+              2.041285514831543,
+              0.86518394947052,
+              7.628453731536865
+            ]
+          }
+        ],
+        "counts": {
+          "character": 1759,
+          "native": 1759,
+          "physics": 1759,
+          "held": 0,
+          "portal": 2,
+          "violations": 0
+        },
+        "nativeTypes": {
+          "conveyor:1": 1759,
+          "switch:1": 3518,
+          "shutter:2": 37,
+          "shutter:1": 5240
+        }
+      }
+    }
+  },
+  "syntheticGuards": {
+    "eligible": {
+      "error": null,
+      "before": {
+        "type": 2,
+        "pose": {
+          "position": {
+            "x": 0,
+            "y": 1,
+            "z": 0
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          }
+        },
+        "next": {
+          "position": {
+            "x": 0,
+            "y": 1,
+            "z": 0
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          }
+        },
+        "linear": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "angular": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "negativeZeroComponents": []
+      },
+      "after": {
+        "type": 2,
+        "pose": {
+          "position": {
+            "x": 0,
+            "y": 1,
+            "z": 0
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          }
+        },
+        "next": {
+          "position": {
+            "x": 0,
+            "y": 1,
+            "z": 0
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          }
+        },
+        "linear": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "angular": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "negativeZeroComponents": []
+      },
+      "readings": [
+        {
+          "stage": "inside-actual-native-character-query",
+          "state": {
+            "type": 1,
+            "pose": {
+              "position": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              }
+            },
+            "next": {
+              "position": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              }
+            },
+            "linear": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "angular": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "negativeZeroComponents": []
+          }
+        },
+        {
+          "stage": "restored-before-native-integration",
+          "state": {
+            "type": 2,
+            "pose": {
+              "position": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              }
+            },
+            "next": {
+              "position": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              }
+            },
+            "linear": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "angular": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "negativeZeroComponents": []
+          }
+        }
+      ],
+      "final": {
+        "type": 2,
+        "pose": {
+          "position": {
+            "x": 0,
+            "y": 1,
+            "z": 0
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          }
+        },
+        "next": {
+          "position": {
+            "x": 0,
+            "y": 1,
+            "z": 0
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          }
+        },
+        "linear": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "angular": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "negativeZeroComponents": []
+      }
+    },
+    "queued-translation": {
+      "error": null,
+      "before": {
+        "type": 2,
+        "pose": {
+          "position": {
+            "x": 0,
+            "y": 1,
+            "z": 0
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          }
+        },
+        "next": {
+          "position": {
+            "x": 0.25,
+            "y": 1,
+            "z": 0
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          }
+        },
+        "linear": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "angular": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "negativeZeroComponents": []
+      },
+      "after": {
+        "type": 2,
+        "pose": {
+          "position": {
+            "x": 0,
+            "y": 1,
+            "z": 0
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          }
+        },
+        "next": {
+          "position": {
+            "x": 0.25,
+            "y": 1,
+            "z": 0
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          }
+        },
+        "linear": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "angular": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "negativeZeroComponents": []
+      },
+      "readings": [
+        {
+          "stage": "inside-actual-native-character-query",
+          "state": {
+            "type": 2,
+            "pose": {
+              "position": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              }
+            },
+            "next": {
+              "position": {
+                "x": 0.25,
+                "y": 1,
+                "z": 0
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              }
+            },
+            "linear": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "angular": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "negativeZeroComponents": []
+          }
+        },
+        {
+          "stage": "restored-before-native-integration",
+          "state": {
+            "type": 2,
+            "pose": {
+              "position": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              }
+            },
+            "next": {
+              "position": {
+                "x": 0.25,
+                "y": 1,
+                "z": 0
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              }
+            },
+            "linear": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "angular": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "negativeZeroComponents": []
+          }
+        },
+        {
+          "stage": "actual-native-translated",
+          "state": {
+            "type": 2,
+            "pose": {
+              "position": {
+                "x": 0.25,
+                "y": 1,
+                "z": 0
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              }
+            },
+            "next": {
+              "position": {
+                "x": 0.25,
+                "y": 1,
+                "z": 0
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              }
+            },
+            "linear": {
+              "x": 29.999998092651367,
+              "y": 0,
+              "z": 0
+            },
+            "angular": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "negativeZeroComponents": []
+          }
+        }
+      ],
+      "final": {
+        "type": 2,
+        "pose": {
+          "position": {
+            "x": 0.25,
+            "y": 1,
+            "z": 0
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          }
+        },
+        "next": {
+          "position": {
+            "x": 0.25,
+            "y": 1,
+            "z": 0
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          }
+        },
+        "linear": {
+          "x": 29.999998092651367,
+          "y": 0,
+          "z": 0
+        },
+        "angular": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "negativeZeroComponents": []
+      }
+    },
+    "queued-rotation": {
+      "error": null,
+      "before": {
+        "type": 2,
+        "pose": {
+          "position": {
+            "x": 0,
+            "y": 1,
+            "z": 0
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          }
+        },
+        "next": {
+          "position": {
+            "x": 0,
+            "y": 1,
+            "z": 0
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0.0998334139585495,
+            "z": 0,
+            "w": 0.9950041770935059
+          }
+        },
+        "linear": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "angular": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "negativeZeroComponents": []
+      },
+      "after": {
+        "type": 2,
+        "pose": {
+          "position": {
+            "x": 0,
+            "y": 1,
+            "z": 0
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          }
+        },
+        "next": {
+          "position": {
+            "x": 0,
+            "y": 1,
+            "z": 0
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0.0998334139585495,
+            "z": 0,
+            "w": 0.9950041770935059
+          }
+        },
+        "linear": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "angular": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "negativeZeroComponents": []
+      },
+      "readings": [
+        {
+          "stage": "inside-actual-native-character-query",
+          "state": {
+            "type": 2,
+            "pose": {
+              "position": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              }
+            },
+            "next": {
+              "position": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0.0998334139585495,
+                "z": 0,
+                "w": 0.9950041770935059
+              }
+            },
+            "linear": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "angular": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "negativeZeroComponents": []
+          }
+        },
+        {
+          "stage": "restored-before-native-integration",
+          "state": {
+            "type": 2,
+            "pose": {
+              "position": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              }
+            },
+            "next": {
+              "position": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0.0998334139585495,
+                "z": 0,
+                "w": 0.9950041770935059
+              }
+            },
+            "linear": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "angular": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "negativeZeroComponents": []
+          }
+        },
+        {
+          "stage": "actual-native-rotated",
+          "state": {
+            "type": 2,
+            "pose": {
+              "position": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0.0998334139585495,
+                "z": 0,
+                "w": 0.9950041770935059
+              }
+            },
+            "next": {
+              "position": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0.0998334139585495,
+                "z": 0,
+                "w": 0.9950041770935059
+              }
+            },
+            "linear": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "angular": {
+              "x": 0,
+              "y": 23.999996185302734,
+              "z": 0
+            },
+            "negativeZeroComponents": []
+          }
+        }
+      ],
+      "final": {
+        "type": 2,
+        "pose": {
+          "position": {
+            "x": 0,
+            "y": 1,
+            "z": 0
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0.0998334139585495,
+            "z": 0,
+            "w": 0.9950041770935059
+          }
+        },
+        "next": {
+          "position": {
+            "x": 0,
+            "y": 1,
+            "z": 0
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0.0998334139585495,
+            "z": 0,
+            "w": 0.9950041770935059
+          }
+        },
+        "linear": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "angular": {
+          "x": 0,
+          "y": 23.999996185302734,
+          "z": 0
+        },
+        "negativeZeroComponents": []
+      }
+    },
+    "residual-linear": {
+      "error": null,
+      "before": {
+        "type": 2,
+        "pose": {
+          "position": {
+            "x": 9.999999960041972e-13,
+            "y": 1,
+            "z": 0
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          }
+        },
+        "next": {
+          "position": {
+            "x": 9.999999960041972e-13,
+            "y": 1,
+            "z": 0
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          }
+        },
+        "linear": {
+          "x": 1.199999960510567e-10,
+          "y": 0,
+          "z": 0
+        },
+        "angular": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "negativeZeroComponents": []
+      },
+      "after": {
+        "type": 2,
+        "pose": {
+          "position": {
+            "x": 9.999999960041972e-13,
+            "y": 1,
+            "z": 0
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          }
+        },
+        "next": {
+          "position": {
+            "x": 9.999999960041972e-13,
+            "y": 1,
+            "z": 0
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          }
+        },
+        "linear": {
+          "x": 1.199999960510567e-10,
+          "y": 0,
+          "z": 0
+        },
+        "angular": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "negativeZeroComponents": []
+      },
+      "readings": [
+        {
+          "stage": "inside-actual-native-character-query",
+          "state": {
+            "type": 2,
+            "pose": {
+              "position": {
+                "x": 9.999999960041972e-13,
+                "y": 1,
+                "z": 0
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              }
+            },
+            "next": {
+              "position": {
+                "x": 9.999999960041972e-13,
+                "y": 1,
+                "z": 0
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              }
+            },
+            "linear": {
+              "x": 1.199999960510567e-10,
+              "y": 0,
+              "z": 0
+            },
+            "angular": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "negativeZeroComponents": []
+          }
+        },
+        {
+          "stage": "restored-before-native-integration",
+          "state": {
+            "type": 2,
+            "pose": {
+              "position": {
+                "x": 9.999999960041972e-13,
+                "y": 1,
+                "z": 0
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              }
+            },
+            "next": {
+              "position": {
+                "x": 9.999999960041972e-13,
+                "y": 1,
+                "z": 0
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              }
+            },
+            "linear": {
+              "x": 1.199999960510567e-10,
+              "y": 0,
+              "z": 0
+            },
+            "angular": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "negativeZeroComponents": []
+          }
+        }
+      ],
+      "final": {
+        "type": 2,
+        "pose": {
+          "position": {
+            "x": 9.999999960041972e-13,
+            "y": 1,
+            "z": 0
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          }
+        },
+        "next": {
+          "position": {
+            "x": 9.999999960041972e-13,
+            "y": 1,
+            "z": 0
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          }
+        },
+        "linear": {
+          "x": 1.199999960510567e-10,
+          "y": 0,
+          "z": 0
+        },
+        "angular": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "negativeZeroComponents": []
+      }
+    },
+    "residual-angular": {
+      "error": "AssertionError [ERR_ASSERTION]: Real prior native step must produce a small residual angular velocity",
+      "before": null,
+      "after": null,
+      "readings": [],
+      "final": {
+        "type": 2,
+        "pose": {
+          "position": {
+            "x": 0,
+            "y": 1,
+            "z": 0
+          },
+          "rotation": {
+            "x": 0,
+            "y": 4.999999980020986e-13,
+            "z": 0,
+            "w": 1
+          }
+        },
+        "next": {
+          "position": {
+            "x": 0,
+            "y": 1,
+            "z": 0
+          },
+          "rotation": {
+            "x": 0,
+            "y": 4.999999980020986e-13,
+            "z": 0,
+            "w": 1
+          }
+        },
+        "linear": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "angular": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "negativeZeroComponents": []
+      }
+    }
+  },
+  "scopeLimits": [
+    "No browser or build; copied source only.",
+    "No authored actor/cargo pose, velocity, machine/clock/goal/history/save writes.",
+    "All selected controls have held queries0; installed hooks do not prove actual held restoration.",
+    "Synthetic safety units are not authored play.",
+    "Residual-angular yaw1e-12 prior-step setup produced omega0, failed before candidate query; first evidence retained.",
+    "Expired compiler session first strict.txt empty; completion unknown. Explicit strict-confirmed receipt separately exited0.",
+    "Earlier interval-observer failure retained; actual physics integration retires old prephysics snapshot."
+  ],
+  "commonTimer": {
+    "error": null,
+    "trials": [
+      {
+        "name": "A-retained-diagonal-heading",
+        "start": [
+          0.5049006938934326,
+          0.8644940853118896,
+          4.360429763793945
+        ],
+        "end": [
+          0.15112236142158508,
+          0.8645605444908142,
+          11.469903945922852
+        ],
+        "distance": 7.118271016145766,
+        "clear": true,
+        "grounded": true
+      },
+      {
+        "name": "S-retained-diagonal-heading",
+        "start": [
+          0.504931628704071,
+          0.8649762272834778,
+          4.334615230560303
+        ],
+        "end": [
+          -0.5182379484176636,
+          0.8650744557380676,
+          4.764060020446777
+        ],
+        "distance": 1.1096390497621003,
+        "clear": true,
+        "grounded": true
+      },
+      {
+        "name": "W-facing-west-back-out",
+        "start": [
+          0.5049012899398804,
+          0.8645175099372864,
+          4.348221302032471
+        ],
+        "end": [
+          -0.5049000978469849,
+          0.8650106191635132,
+          4.348101615905762
+        ],
+        "distance": 1.009801515278006,
+        "clear": true,
+        "grounded": true
+      },
+      {
+        "name": "A-facing-north-strafe-away",
+        "start": [
+          0.5049324631690979,
+          0.8643947243690491,
+          4.33134126663208
+        ],
+        "end": [
+          -0.5049000382423401,
+          0.864764392375946,
+          4.331573009490967
+        ],
+        "distance": 1.0098325956642862,
+        "clear": true,
+        "grounded": true
+      }
+    ],
+    "counts": {
+      "characterQueries": 1688,
+      "nativeCharacterQueries": 1688,
+      "nativeFixedTimerObservations": 3376,
+      "nativeKinematicTimerObservations": 0,
+      "restoredBeforePhysics": 1688,
+      "restoredBeforeHeld": 0,
+      "portalPlacementChecks": 2,
+      "stateViolations": 0
+    }
+  }
+}

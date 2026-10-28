@@ -1,5 +1,7 @@
 # Stationary timer contact: isolated repair proposal
 
+Historical timer-only proposal. Its corrected control comparison later passes, but actual C1 closed-door and C13 switch browser failures require the [common guarded candidate](../stationary-machine-query/README.md). Do not freeze the timer-only71e prototype as final v4. The original proposal and all first failures below remain preserved.
+
 Status: proposal only. Active `src/core/world.ts`, all immutable preview files and v3 remain unchanged. The independent first strict0/native0-of-1 failure is preserved in `first/`; it establishes a real recovery pin, not merely pushing into a blocked direction.
 
 At `CoreWorld.computeCharacterMovement`, the existing guarded query-only stationary-frame treatment includes lift, moving-platform and conveyor. The actual stationary timer is excluded, although its native body is also KinematicPositionBased and the stuck contact reports zero current/next movement and zero velocity. Proposed bounded delta: add `timer` to that existing filter. Keep exact planned delta zero, native linear/angular velocity guard, original body-type capture and `finally` restoration before held-cargo query/native integration. Do not alter machine time, pulse period, collider geometry, character motion, native pose/velocity, cargo, portals, goal or save state.

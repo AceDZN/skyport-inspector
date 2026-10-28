@@ -1,0 +1,59 @@
+✔ native authored stationary switch contact has ordinary A S recovery and exact native state (5615.866333ms)
+✖ native authored stationary closed-shutter contact has ordinary A S recovery and exact native state (2510.159417ms)
+✖ native authored C1 inactive closed control keeps W600 solid and S400 recovers (1150.144ms)
+✖ native authored C13 inactive closed control keeps W600 solid and S400 recovers (4374.598833ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 1
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 23491.933
+
+✖ failing tests:
+
+test at tests/core-stationary-common-classes.test.ts:13:59
+✖ native authored stationary closed-shutter contact has ordinary A S recovery and exact native state (2510.159417ms)
+  AssertionError [ERR_ASSERTION]: A remained pinned
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/work/chamber-qa/stationary-common-validation/baseline/sources/tests/core-stationary-common-classes.test.ts:41:119)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/core-stationary-common-classes.test.ts:48:37
+✖ native authored C1 inactive closed control keeps W600 solid and S400 recovers (1150.144ms)
+  AssertionError [ERR_ASSERTION]: S400 remains pinned against exit-door
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/work/chamber-qa/stationary-common-validation/baseline/sources/tests/core-stationary-common-classes.test.ts:67:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/core-stationary-common-classes.test.ts:48:37
+✖ native authored C13 inactive closed control keeps W600 solid and S400 recovers (4374.598833ms)
+  AssertionError [ERR_ASSERTION]: S400 remains pinned against belt-power
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/work/chamber-qa/stationary-common-validation/baseline/sources/tests/core-stationary-common-classes.test.ts:67:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

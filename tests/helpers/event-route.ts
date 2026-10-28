@@ -1,3 +1,4 @@
+import {observeAuthoredHeldState} from './authored-held-state-observer';
 /** Authored-spawn native input driver, not browser/progression evidence.
  * Actor/cargo/machine/history/save setters are deliberately absent.
  */
@@ -17,6 +18,7 @@ export class EventRoute {
  constructor(readonly number:26|27|28|29|30,readonly contrast=false,readonly id='route'){
   const level=draftEventLevels.find(l=>l.number===number);assert.ok(level);
   this.w=new CoreWorld(number,(type,data)=>this.events.push({type,...data}),level,contrast);
+  if(number===26)observeAuthoredHeldState(this.w,number,id,contrast,this.events);
   assert.ok(this.w.player.pos.distanceTo(V(...this.w.blueprint.spawn))<.05);
   for(const c of this.w.blueprint.cargo)assert.ok(this.cube(c.spec.id).pos.distanceTo(V(...c.position))<.05);
   this.tick(.5);this.note('actual-authored-spawn');

@@ -1,0 +1,30 @@
+✔ synthetic safety stationary query eligible preserves actual native state/motion (203.698208ms)
+✔ synthetic safety stationary query queued-translation preserves actual native state/motion (7.416041ms)
+✔ synthetic safety stationary query queued-rotation preserves actual native state/motion (7.305667ms)
+✔ synthetic safety stationary query residual-linear preserves actual native state/motion (2.772458ms)
+✖ synthetic safety stationary query residual-angular preserves actual native state/motion (5.284792ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 4
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5044.559167
+
+✖ failing tests:
+
+test at tests/core-stationary-query-guards.test.ts:13:121
+✖ synthetic safety stationary query residual-angular preserves actual native state/motion (5.284792ms)
+  AssertionError [ERR_ASSERTION]: Real prior native step must produce a small residual angular velocity
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/work/chamber-qa/stationary-common-validation/candidate/sources/tests/core-stationary-query-guards.test.ts:25:143)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

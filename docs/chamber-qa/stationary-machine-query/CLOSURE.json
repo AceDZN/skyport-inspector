@@ -1,0 +1,71 @@
+{
+  "scope": "Lead-verified common repair native closure; not browser/fresh campaign acceptance. Full49 native487/487 with real authored24/26 held state. First failures and targeted strict scope remain separate.",
+  "verifiedAt": "2026-10-28T20:30:46.317938+00:00",
+  "worldSHA256": "19db676a53b8111a4220967f0a4d956b61e0c998af60d80bee61b8236afc83e1",
+  "requiredNativeExit": 0,
+  "nativeSourceExact": true,
+  "fullNativeFailed": 0,
+  "fullNativePassed": 487,
+  "fullNativeSkipped": 0,
+  "timerRecoveryPassed": true,
+  "stationarySwitchPassed": true,
+  "closedShutterPassed": true,
+  "heldTimerRestorationChecks": 1374,
+  "characterNativePhysicsChecks": 24578,
+  "timerStateViolations": 0,
+  "physicalFixturesUnchanged": true,
+  "runtimeDeltaFromV3": [
+    "src/core/world.ts"
+  ],
+  "allOther103RuntimeAssetHashesExact": true,
+  "nativeReceipt": "docs/chamber-qa/stationary-machine-query/common-full-required-complete-first/native-job.json",
+  "nativeResult": "docs/chamber-qa/stationary-machine-query/common-full-required-complete-first/RESULT.json",
+  "targetedStrictReceipt": "strict-job.json (targeted changed helper/observer and final narrow tests only)",
+  "legacyFull49StrictFailurePreserved": true,
+  "retiredOriginalTest": {
+    "original": "tests/core-timer-pedestal-recovery.test.ts",
+    "archive": "docs/chamber-qa/C12-timer-pedestal-recovery-v3/ORIGINAL_FIRST_TEST.ts.txt",
+    "sha256": "2a7d47eb94921f509f0c247383cb9a6d034757d51a32bbd6ac8e9e2b93770c36",
+    "reason": "Historical first reproduction includes setup assumptions invalid after correct portal escape; exact bytes preserved, accepted feedback regression is current."
+  },
+  "integratedValidatedFiles": [
+    {
+      "path": "src/core/world.ts",
+      "sha256": "19db676a53b8111a4220967f0a4d956b61e0c998af60d80bee61b8236afc83e1"
+    },
+    {
+      "path": "tests/core-timer-pedestal-recovery-feedback.test.ts",
+      "sha256": "5c224981793628261a66d4e8d73007a79c1eeb85a26223393f7d47d67427108f"
+    },
+    {
+      "path": "tests/core-stationary-common-classes.test.ts",
+      "sha256": "80aef6a30d4730de89ba6da388e784572e8875ec8302e5b99729d2f8576fb9e0"
+    },
+    {
+      "path": "tests/core-stationary-query-guards.test.ts",
+      "sha256": "fbe37953fe4ba78a47f279bccbce9cfb48a61b2cfc6be2e00737d91b7675aa45"
+    },
+    {
+      "path": "tests/helpers/timer-query-state-observer.ts",
+      "sha256": "2e1fec16819ba8a8077f3f4fa7f38f444b5a3b5a9ea032ed71ddba9c7828ccb3"
+    },
+    {
+      "path": "tests/helpers/machine-query-state-observer.ts",
+      "sha256": "8508abaf740f84c5c7348cbe1fffa0c44ce14e17c84352802fa67ea721e968f4"
+    },
+    {
+      "path": "tests/helpers/authored-held-state-observer.ts",
+      "sha256": "32d93e2ebf3bb9986c1797d9699a3ece7dfe58fe13ef467f49fd80ff3c99f60f"
+    },
+    {
+      "path": "tests/helpers/reference-route.ts",
+      "sha256": "93c8302f741c33ce04ce7d2c242adbaba6ba9069c3e439801100390fed025458"
+    },
+    {
+      "path": "tests/helpers/event-route.ts",
+      "sha256": "abcfbaa80553ec5b30e361d3aecabb09bd24a5e9d4bfbbb740e69bd68c6fff8d"
+    }
+  ],
+  "oldPreviewsUnchanged": true,
+  "freshCampaignVerified": false
+}
