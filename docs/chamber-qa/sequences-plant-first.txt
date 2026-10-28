@@ -1,0 +1,1892 @@
+✔ native S14 base/contrast use identical actual geometry and machinery (88.373166ms)
+✖ native S14 real cube pressure energizes beam and maintains actual lift-to-upper route (86.474625ms)
+✖ native S14 dark contrast keeps pressure, uses an offset traversable pair and west inspection (54.573709ms)
+✖ native S14 unlit placement is allowed, removing actual pressure brakes and replacement recovers (28.646958ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 1
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1040.511292
+
+✖ failing tests:
+
+test at tests/core-sequence-routes.test.ts:51:1
+✖ native S14 real cube pressure energizes beam and maintains actual lift-to-upper route (86.474625ms)
+  AssertionError [ERR_ASSERTION]: Native ray obstructed before -5,1.55,-13.985; {"world":{"room":"chamber-14","number":14,"mission":"Put the cube on POWER before you connect the beam. Keep the receiver lit while the lift moves. Use the upper exit.","physics":"Rapier3D 0.21 · capsule KCC + dynamic rigid cubes","player":{"position":[5.050629615783691,0.8648033142089844,11.002214431762695],"velocity":[0.5797831325236051,0,0.025562223010046452],"yaw":0.38242808147373575,"pitch":0.0013068324820431005,"grounded":true,"crossings":0},"portals":[{"surface":"power-source","position":[10.959999999999999,1.55,9],"normal":[-1,0,0]},null],"crates":[{"id":"power-cube","position":[-3.0848515033721924,0.6899020671844482,8.003625869750977],"velocity":[0,0,0],"rotation":[0.000008137818440445699,-0.00008858866203809157,-6.260951863623632e-7,1],"angularVelocity":[0,0,0],"held":false,"crossings":0}],"pads":[{"id":"power-button","position":[-3,0.14,8],"pressed":true,"crate":"power-cube"}],"devices":[{"id":"plant-access","kind":"shutter","label":"POWERED ACCESS","position":[6,1.5,1],"size":[3.2,3,0.35],"active":false,"progress":0,"choice":0,"angle":0,"powered":null,"blocked":false},{"id":"plant-lift","kind":"lift","label":"POWER LIFT","position":[6,-0.2,-4],"size":[4,0.4,4],"active":false,"progress":0,"choice":0,"angle":0,"powered":null,"blocked":false},{"id":"inspection-door","kind":"shutter","label":"WEST INSPECTION","position":[-11.12,5,-10],"size":[0.3,3,2.8],"active":true,"progress":1,"choice":0,"angle":0,"powered":null,"blocked":false},{"id":"upper-door","kind":"shutter","label":"UPPER","position":[6,5.7,-14.12],"size":[2.8,3,0.3],"active":false,"progress":0,"choice":0,"angle":0,"powered":null,"blocked":false}],"panels":[{"id":"power-source","position":[10.985,1.55,9],"normal":[-1,0,0],"width":7,"height":3.1},{"id":"power-return","position":[-5,1.55,-13.985],"normal":[0,0,1],"width":6,"height":3.1}],"exits":[{"id":"inspection-exit","label":"EXIT","position":[-13,1.5,-10],"size":[4.359999999999999,3,2.7600000000000016]},{"id":"upper-exit","label":"EXIT","position":[6,5.7,-16],"size":[2.7600000000000016,3,4.359999999999999]}],"result":null,"held":null,"holdSpaceTransform":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],"launchUsed":false,"respawns":0,"beams":{"plant-emitter":{"segments":[{"from":[5,0.9,9],"to":[11,0.9,9]}],"stop":"obstacle","obstacle":"plant-east-wall","hops":0}},"signals":{"power-button":true,"safety:plant-access":false,"door-safety":false,"moving:plant-access":false,"moving:plant-lift":false,"safety:inspection-door":false,"moving:inspection-door":false,"safety:upper-door":false,"moving:upper-door":false,"plant-light":false},"events":[{"type":"footstep","time":933},{"type":"footstep","time":1358},{"type":"footstep","time":1783},{"type":"pickup","time":2225,"body":"power-cube"},{"type":"footstep","time":2242},{"type":"shutter-open","time":2667,"id":"inspection-door"},{"type":"pad","time":2667,"pad":"power-button","crate":"power-cube"},{"type":"drop","time":2825,"body":"power-cube"},{"type":"footstep","time":3642},{"type":"footstep","time":4067},{"type":"footstep","time":4492},{"type":"footstep","time":4917},{"type":"footstep","time":5342},{"type":"footstep","time":5767},{"type":"footstep","time":6192},{"type":"portalA","time":6483,"surface":"power-source","point":[10.959999999999999,1.55,9]}]},"contacts":[{"id":"plant-south-ground","normal":{"x":0.00029672373784705997,"y":0.9999999403953552,"z":0},"toi":0.0008982695871964097,"witness":{"x":5.055236339569092,"y":-0.000015020370483398438,"z":11.002408981323242},"applied":{"x":0.0008746118401177227,"y":-0.00020113540813326836,"z":0.00003856101102428511},"remaining":{"x":0.003956913948059082,"y":-0.0009099757298827171,"z":0.0001744575274642557}}],"kcc":{"offset":0.014999999664723873,"stepHeight":0.23000000417232513,"stepWidth":0.25}}
+  + actual - expected
+  
+  + PI {
+  +   collider: <ref *2> tg {
+  +     _parent: null,
+  +     _shape: Cg {
+  +       halfExtents: DI {
+  +         x: 0.34999999999999964,
+  +         y: 0.9,
+  +         z: 0.40000000000000036
+  +       },
+  +       type: 1
+  +     },
+  +     colliderSet: <ref *1> rg {
+  +       map: bI {
+  +         data: [
+  +           tg {
+  +             _parent: xI {
+  +               colliderSet: [Circular *1],
+  +               handle: 0,
+  +               rawSet: l {
+  +                 __wbg_ptr: 1187408
+  +               },
+  +               userData: undefined
+  +             },
+  +             _shape: Bg {
+  +               halfHeight: 0.57,
+  +               radius: 0.28,
+  +               type: 2
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 0
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 7.5,
+  +                 y: 0.3,
+  +                 z: 14
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 5e-324
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 1.5,
+  +                 y: 0.3,
+  +                 z: 14
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 2,
+  +                 y: 0.3,
+  +                 z: 8
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.5e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 2,
+  +                 y: 0.3,
+  +                 z: 4
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 2e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 11,
+  +                 y: 0.2999999999999998,
+  +                 z: 14
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 2.5e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 11.4,
+  +                 y: 0.1999999999999993,
+  +                 z: 14.4
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 3e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.1999999999999993,
+  +                 y: 8.2,
+  +                 z: 14.4
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 3.5e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 11.4,
+  +                 y: 8.2,
+  +                 z: 0.1999999999999993
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 4e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.1999999999999993,
+  +                 y: 8.2,
+  +                 z: 1.3000000000000007
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 4.4e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.1999999999999993,
+  +                 y: 8.2,
+  +                 z: 11.3
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 5e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.1999999999999993,
+  +                 y: 4.5,
+  +                 z: 1.4000000000000004
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 5.4e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.1999999999999993,
+  +                 y: 2.2,
+  +                 z: 1.4000000000000004
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 6e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 7.8,
+  +                 y: 8.2,
+  +                 z: 0.1999999999999993
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 6.4e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 1.8000000000000003,
+  +                 y: 8.2,
+  +                 z: 0.1999999999999993
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 7e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 1.4000000000000004,
+  +                 y: 2.4000000000000004,
+  +                 z: 0.1999999999999993
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 7.4e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 1.4000000000000004,
+  +                 y: 4.300000000000001,
+  +                 z: 0.1999999999999993
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 8e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 7.7,
+  +                 y: 6,
+  +                 z: 0.08000000000000002
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 8.4e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 1.6999999999999997,
+  +                 y: 6,
+  +                 z: 0.08000000000000002
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 9e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 1.5999999999999996,
+  +                 y: 4.5,
+  +                 z: 0.17500000000000004
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 9.4e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 4.5,
+  +                 y: 2.1,
+  +                 z: 4
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.1499999999999999,
+  +                 y: 4.9,
+  +                 z: 0.20000000000000018
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.04e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.15000000000000036,
+  +                 y: 4.9,
+  +                 z: 0.20000000000000018
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.1e-322
+  +           },
+  +           [Circular *2],
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.7000000000000002,
+  +                 y: 1.5,
+  +                 z: 0.20000000000000018
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.2e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.40000000000000036,
+  +                 y: 0.4,
+  +                 z: 0.19999999999999973
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.24e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 2.1999999999999993,
+  +                 y: 0.3,
+  +                 z: 1.4000000000000004
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.3e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 2.3000000000000007,
+  +                 y: 0.1999999999999993,
+  +                 z: 1.8000000000000007
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.33e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 2.3000000000000007,
+  +                 y: 6,
+  +                 z: 0.1999999999999993
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.4e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 2.3000000000000007,
+  +                 y: 6,
+  +                 z: 0.1999999999999993
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.43e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.1999999999999993,
+  +                 y: 6,
+  +                 z: 1.8000000000000007
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.5e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 1.4000000000000004,
+  +                 y: 0.2999999999999998,
+  +                 z: 2.1999999999999993
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.53e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 1.7999999999999998,
+  +                 y: 0.1999999999999993,
+  +                 z: 2.3000000000000007
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.6e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.20000000000000018,
+  +                 y: 3.9000000000000004,
+  +                 z: 2.3000000000000007
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.63e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.20000000000000018,
+  +                 y: 3.9000000000000004,
+  +                 z: 2.3000000000000007
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.7e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 1.7999999999999998,
+  +                 y: 3.9000000000000004,
+  +                 z: 0.1999999999999993
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.73e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Mg {
+  +               halfHeight: 0.07,
+  +               radius: 0.96,
+  +               type: 10
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.8e-322
+  +           },
+  +           tg {
+  +             _parent: xI {
+  +               colliderSet: [Circular *1],
+  +               handle: 5e-324,
+  +               rawSet: l {
+  +                 __wbg_ptr: 1187408
+  +               },
+  +               userData: undefined
+  +             },
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 1.6,
+  +                 y: 1.5,
+  +                 z: 0.175
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.83e-322
+  +           },
+  +           tg {
+  +             _parent: xI {
+  +               colliderSet: [Circular *1],
+  +               handle: 1e-323,
+  +               rawSet: l {
+  +                 __wbg_ptr: 1187408
+  +               },
+  +               userData: undefined
+  +             },
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 2,
+  +                 y: 0.2,
+  +                 z: 2
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.9e-322
+  +           },
+  +           tg {
+  +             _parent: xI {
+  +               colliderSet: [Circular *1],
+  +               handle: 1.5e-323,
+  +               rawSet: l {
+  +                 __wbg_ptr: 1187408
+  +               },
+  +               userData: undefined
+  +             },
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.15,
+  +                 y: 1.5,
+  +                 z: 1.4
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.93e-322
+  +           },
+  +           tg {
+  +             _parent: xI {
+  +               colliderSet: [Circular *1],
+  +               handle: 2e-323,
+  +               rawSet: l {
+  +                 __wbg_ptr: 1187408
+  +               },
+  +               userData: undefined
+  +             },
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 1.4,
+  +                 y: 1.5,
+  +                 z: 0.15
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 2e-322
+  +           },
+  +           tg {
+  +             _parent: xI {
+  +               colliderSet: [Circular *1],
+  +               handle: 2.5e-323,
+  +               rawSet: l {
+  +                 __wbg_ptr: 1187408
+  +               },
+  +               userData: undefined
+  +             },
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.55,
+  +                 y: 0.55,
+  +                 z: 0.55
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 2.03e-322
+  +           }
+  +         ],
+  +         fconv: Float64Array(1) [
+  +           1.5e-323
+  +         ],
+  +         size: 42,
+  +         uconv: Uint32Array(2) [
+  +           3,
+  +           0
+  +         ]
+  +       },
+  +       raw: C {
+  +         __wbg_ptr: 1188936
+  +       }
+  +     },
+  +     handle: 1.14e-322
+  +   },
+  +   timeOfImpact: 1.7269699573516846
+  + }
+  - null
+  
+      at SequenceRoute.clearRay (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/helpers/sequence-route.ts:26:553)
+      at SequenceRoute.shot (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/helpers/sequence-route.ts:27:182)
+      at plantPair (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-sequence-routes.test.ts:22:131)
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-sequence-routes.test.ts:52:70)
+      at route (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/helpers/sequence-route.ts:39:161)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-sequence-routes.test.ts:51:98)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: { collider: { colliderSet: [Object], handle: 1.14e-322, _parent: null, _shape: [Object] }, timeOfImpact: 1.7269699573516846 },
+    expected: null,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/core-sequence-routes.test.ts:54:1
+✖ native S14 dark contrast keeps pressure, uses an offset traversable pair and west inspection (54.573709ms)
+  AssertionError [ERR_ASSERTION]: Native ray obstructed before -5,1.55,-13.985; {"world":{"room":"chamber-14","number":14,"mission":"Put the cube on POWER. Leave the receiver dark. Use west inspection.","physics":"Rapier3D 0.21 · capsule KCC + dynamic rigid cubes","player":{"position":[5.050629615783691,0.8648033142089844,11.002214431762695],"velocity":[0.5797831325236051,0,0.025562223010046452],"yaw":0.38242808147373575,"pitch":0.0013068324820431005,"grounded":true,"crossings":0},"portals":[{"surface":"power-source","position":[10.959999999999999,1.55,11],"normal":[-1,0,0]},null],"crates":[{"id":"power-cube","position":[-3.0848515033721924,0.6899020671844482,8.003625869750977],"velocity":[0,0,0],"rotation":[0.000008137818440445699,-0.00008858866203809157,-6.260951863623632e-7,1],"angularVelocity":[0,0,0],"held":false,"crossings":0}],"pads":[{"id":"power-button","position":[-3,0.14,8],"pressed":true,"crate":"power-cube"}],"devices":[{"id":"plant-access","kind":"shutter","label":"POWERED ACCESS","position":[6,1.5,1],"size":[3.2,3,0.35],"active":false,"progress":0,"choice":0,"angle":0,"powered":null,"blocked":false},{"id":"plant-lift","kind":"lift","label":"POWER LIFT","position":[6,-0.2,-4],"size":[4,0.4,4],"active":false,"progress":0,"choice":0,"angle":0,"powered":null,"blocked":false},{"id":"inspection-door","kind":"shutter","label":"WEST INSPECTION","position":[-11.12,5,-10],"size":[0.3,3,2.8],"active":true,"progress":1,"choice":0,"angle":0,"powered":null,"blocked":false},{"id":"upper-door","kind":"shutter","label":"UPPER","position":[6,5.7,-14.12],"size":[2.8,3,0.3],"active":false,"progress":0,"choice":0,"angle":0,"powered":null,"blocked":false}],"panels":[{"id":"power-source","position":[10.985,1.55,9],"normal":[-1,0,0],"width":7,"height":3.1},{"id":"power-return","position":[-5,1.55,-13.985],"normal":[0,0,1],"width":6,"height":3.1}],"exits":[{"id":"inspection-exit","label":"EXIT","position":[-13,1.5,-10],"size":[4.359999999999999,3,2.7600000000000016]},{"id":"upper-exit","label":"EXIT","position":[6,5.7,-16],"size":[2.7600000000000016,3,4.359999999999999]}],"result":null,"held":null,"holdSpaceTransform":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],"launchUsed":false,"respawns":0,"beams":{"plant-emitter":{"segments":[{"from":[5,0.9,9],"to":[11,0.9,9]}],"stop":"obstacle","obstacle":"plant-east-wall","hops":0}},"signals":{"power-button":true,"safety:plant-access":false,"door-safety":false,"moving:plant-access":false,"moving:plant-lift":false,"safety:inspection-door":false,"moving:inspection-door":false,"safety:upper-door":false,"moving:upper-door":false,"plant-light":false},"events":[{"type":"footstep","time":933},{"type":"footstep","time":1358},{"type":"footstep","time":1783},{"type":"pickup","time":2225,"body":"power-cube"},{"type":"footstep","time":2242},{"type":"shutter-open","time":2667,"id":"inspection-door"},{"type":"pad","time":2667,"pad":"power-button","crate":"power-cube"},{"type":"drop","time":2825,"body":"power-cube"},{"type":"footstep","time":3642},{"type":"footstep","time":4067},{"type":"footstep","time":4492},{"type":"footstep","time":4917},{"type":"footstep","time":5342},{"type":"footstep","time":5767},{"type":"footstep","time":6192},{"type":"portalA","time":6483,"surface":"power-source","point":[10.959999999999999,1.55,11]}]},"contacts":[{"id":"plant-south-ground","normal":{"x":0.00029672373784705997,"y":0.9999999403953552,"z":0},"toi":0.0008982695871964097,"witness":{"x":5.055236339569092,"y":-0.000015020370483398438,"z":11.002408981323242},"applied":{"x":0.0008746118401177227,"y":-0.00020113540813326836,"z":0.00003856101102428511},"remaining":{"x":0.003956913948059082,"y":-0.0009099757298827171,"z":0.0001744575274642557}}],"kcc":{"offset":0.014999999664723873,"stepHeight":0.23000000417232513,"stepWidth":0.25}}
+  + actual - expected
+  
+  + PI {
+  +   collider: <ref *2> tg {
+  +     _parent: null,
+  +     _shape: Cg {
+  +       halfExtents: DI {
+  +         x: 0.34999999999999964,
+  +         y: 0.9,
+  +         z: 0.40000000000000036
+  +       },
+  +       type: 1
+  +     },
+  +     colliderSet: <ref *1> rg {
+  +       map: bI {
+  +         data: [
+  +           tg {
+  +             _parent: xI {
+  +               colliderSet: [Circular *1],
+  +               handle: 0,
+  +               rawSet: l {
+  +                 __wbg_ptr: 1187408
+  +               },
+  +               userData: undefined
+  +             },
+  +             _shape: Bg {
+  +               halfHeight: 0.57,
+  +               radius: 0.28,
+  +               type: 2
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 0
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 7.5,
+  +                 y: 0.3,
+  +                 z: 14
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 5e-324
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 1.5,
+  +                 y: 0.3,
+  +                 z: 14
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 2,
+  +                 y: 0.3,
+  +                 z: 8
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.5e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 2,
+  +                 y: 0.3,
+  +                 z: 4
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 2e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 11,
+  +                 y: 0.2999999999999998,
+  +                 z: 14
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 2.5e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 11.4,
+  +                 y: 0.1999999999999993,
+  +                 z: 14.4
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 3e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.1999999999999993,
+  +                 y: 8.2,
+  +                 z: 14.4
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 3.5e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 11.4,
+  +                 y: 8.2,
+  +                 z: 0.1999999999999993
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 4e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.1999999999999993,
+  +                 y: 8.2,
+  +                 z: 1.3000000000000007
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 4.4e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.1999999999999993,
+  +                 y: 8.2,
+  +                 z: 11.3
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 5e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.1999999999999993,
+  +                 y: 4.5,
+  +                 z: 1.4000000000000004
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 5.4e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.1999999999999993,
+  +                 y: 2.2,
+  +                 z: 1.4000000000000004
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 6e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 7.8,
+  +                 y: 8.2,
+  +                 z: 0.1999999999999993
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 6.4e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 1.8000000000000003,
+  +                 y: 8.2,
+  +                 z: 0.1999999999999993
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 7e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 1.4000000000000004,
+  +                 y: 2.4000000000000004,
+  +                 z: 0.1999999999999993
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 7.4e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 1.4000000000000004,
+  +                 y: 4.300000000000001,
+  +                 z: 0.1999999999999993
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 8e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 7.7,
+  +                 y: 6,
+  +                 z: 0.08000000000000002
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 8.4e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 1.6999999999999997,
+  +                 y: 6,
+  +                 z: 0.08000000000000002
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 9e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 1.5999999999999996,
+  +                 y: 4.5,
+  +                 z: 0.17500000000000004
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 9.4e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 4.5,
+  +                 y: 2.1,
+  +                 z: 4
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.1499999999999999,
+  +                 y: 4.9,
+  +                 z: 0.20000000000000018
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.04e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.15000000000000036,
+  +                 y: 4.9,
+  +                 z: 0.20000000000000018
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.1e-322
+  +           },
+  +           [Circular *2],
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.7000000000000002,
+  +                 y: 1.5,
+  +                 z: 0.20000000000000018
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.2e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.40000000000000036,
+  +                 y: 0.4,
+  +                 z: 0.19999999999999973
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.24e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 2.1999999999999993,
+  +                 y: 0.3,
+  +                 z: 1.4000000000000004
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.3e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 2.3000000000000007,
+  +                 y: 0.1999999999999993,
+  +                 z: 1.8000000000000007
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.33e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 2.3000000000000007,
+  +                 y: 6,
+  +                 z: 0.1999999999999993
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.4e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 2.3000000000000007,
+  +                 y: 6,
+  +                 z: 0.1999999999999993
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.43e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.1999999999999993,
+  +                 y: 6,
+  +                 z: 1.8000000000000007
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.5e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 1.4000000000000004,
+  +                 y: 0.2999999999999998,
+  +                 z: 2.1999999999999993
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.53e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 1.7999999999999998,
+  +                 y: 0.1999999999999993,
+  +                 z: 2.3000000000000007
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.6e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.20000000000000018,
+  +                 y: 3.9000000000000004,
+  +                 z: 2.3000000000000007
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.63e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.20000000000000018,
+  +                 y: 3.9000000000000004,
+  +                 z: 2.3000000000000007
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.7e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 1.7999999999999998,
+  +                 y: 3.9000000000000004,
+  +                 z: 0.1999999999999993
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.73e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Mg {
+  +               halfHeight: 0.07,
+  +               radius: 0.96,
+  +               type: 10
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.8e-322
+  +           },
+  +           tg {
+  +             _parent: xI {
+  +               colliderSet: [Circular *1],
+  +               handle: 5e-324,
+  +               rawSet: l {
+  +                 __wbg_ptr: 1187408
+  +               },
+  +               userData: undefined
+  +             },
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 1.6,
+  +                 y: 1.5,
+  +                 z: 0.175
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.83e-322
+  +           },
+  +           tg {
+  +             _parent: xI {
+  +               colliderSet: [Circular *1],
+  +               handle: 1e-323,
+  +               rawSet: l {
+  +                 __wbg_ptr: 1187408
+  +               },
+  +               userData: undefined
+  +             },
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 2,
+  +                 y: 0.2,
+  +                 z: 2
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.9e-322
+  +           },
+  +           tg {
+  +             _parent: xI {
+  +               colliderSet: [Circular *1],
+  +               handle: 1.5e-323,
+  +               rawSet: l {
+  +                 __wbg_ptr: 1187408
+  +               },
+  +               userData: undefined
+  +             },
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.15,
+  +                 y: 1.5,
+  +                 z: 1.4
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.93e-322
+  +           },
+  +           tg {
+  +             _parent: xI {
+  +               colliderSet: [Circular *1],
+  +               handle: 2e-323,
+  +               rawSet: l {
+  +                 __wbg_ptr: 1187408
+  +               },
+  +               userData: undefined
+  +             },
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 1.4,
+  +                 y: 1.5,
+  +                 z: 0.15
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 2e-322
+  +           },
+  +           tg {
+  +             _parent: xI {
+  +               colliderSet: [Circular *1],
+  +               handle: 2.5e-323,
+  +               rawSet: l {
+  +                 __wbg_ptr: 1187408
+  +               },
+  +               userData: undefined
+  +             },
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.55,
+  +                 y: 0.55,
+  +                 z: 0.55
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 2.03e-322
+  +           }
+  +         ],
+  +         fconv: Float64Array(1) [
+  +           1.5e-323
+  +         ],
+  +         size: 42,
+  +         uconv: Uint32Array(2) [
+  +           3,
+  +           0
+  +         ]
+  +       },
+  +       raw: C {
+  +         __wbg_ptr: 1188936
+  +       }
+  +     },
+  +     handle: 1.14e-322
+  +   },
+  +   timeOfImpact: 1.7269699573516846
+  + }
+  - null
+  
+      at SequenceRoute.clearRay (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/helpers/sequence-route.ts:26:553)
+      at SequenceRoute.shot (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/helpers/sequence-route.ts:27:182)
+      at plantPair (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-sequence-routes.test.ts:22:131)
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-sequence-routes.test.ts:55:16)
+      at route (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/helpers/sequence-route.ts:39:161)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-sequence-routes.test.ts:54:105)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: { collider: { colliderSet: [Object], handle: 1.14e-322, _parent: null, _shape: [Object] }, timeOfImpact: 1.7269699573516846 },
+    expected: null,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/core-sequence-routes.test.ts:57:1
+✖ native S14 unlit placement is allowed, removing actual pressure brakes and replacement recovers (28.646958ms)
+  AssertionError [ERR_ASSERTION]: Native ray obstructed before -5,1.55,-13.985; {"world":{"room":"chamber-14","number":14,"mission":"Put the cube on POWER before you connect the beam. Keep the receiver lit while the lift moves. Use the upper exit.","physics":"Rapier3D 0.21 · capsule KCC + dynamic rigid cubes","player":{"position":[5.0526018142700195,0.8648266792297363,11.002781867980957],"velocity":[0.5795193323519948,0,0.030971786444129117],"yaw":0.3824881532299716,"pitch":0.001305903739595222,"grounded":true,"crossings":0},"portals":[{"surface":"power-source","position":[10.959999999999999,1.55,9],"normal":[-1,0,0]},null],"crates":[{"id":"power-cube","position":[-6.000002861022949,0.5498895645141602,7.999998569488525],"velocity":[0,0,0],"rotation":[2.0004284806418582e-7,3.890211069945693e-12,-2.26985022777626e-7,1],"angularVelocity":[0,0,0],"held":false,"crossings":0}],"pads":[{"id":"power-button","position":[-3,0.14,8],"pressed":false,"crate":null}],"devices":[{"id":"plant-access","kind":"shutter","label":"POWERED ACCESS","position":[6,1.5,1],"size":[3.2,3,0.35],"active":false,"progress":0,"choice":0,"angle":0,"powered":null,"blocked":false},{"id":"plant-lift","kind":"lift","label":"POWER LIFT","position":[6,-0.2,-4],"size":[4,0.4,4],"active":false,"progress":0,"choice":0,"angle":0,"powered":null,"blocked":false},{"id":"inspection-door","kind":"shutter","label":"WEST INSPECTION","position":[-11.12,1.5,-10],"size":[0.3,3,2.8],"active":false,"progress":0,"choice":0,"angle":0,"powered":null,"blocked":false},{"id":"upper-door","kind":"shutter","label":"UPPER","position":[6,5.7,-14.12],"size":[2.8,3,0.3],"active":false,"progress":0,"choice":0,"angle":0,"powered":null,"blocked":false}],"panels":[{"id":"power-source","position":[10.985,1.55,9],"normal":[-1,0,0],"width":7,"height":3.1},{"id":"power-return","position":[-5,1.55,-13.985],"normal":[0,0,1],"width":6,"height":3.1}],"exits":[{"id":"inspection-exit","label":"EXIT","position":[-13,1.5,-10],"size":[4.359999999999999,3,2.7600000000000016]},{"id":"upper-exit","label":"EXIT","position":[6,5.7,-16],"size":[2.7600000000000016,3,4.359999999999999]}],"result":null,"held":null,"holdSpaceTransform":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],"launchUsed":false,"respawns":0,"beams":{},"signals":{"power-button":false,"safety:plant-access":false,"door-safety":false,"moving:plant-access":false,"moving:plant-lift":false,"safety:inspection-door":false,"moving:inspection-door":false,"safety:upper-door":false,"moving:upper-door":false,"plant-light":false},"events":[{"type":"land","time":8},{"type":"footstep","time":508},{"type":"footstep","time":933},{"type":"footstep","time":1358},{"type":"footstep","time":1783},{"type":"footstep","time":2208},{"type":"footstep","time":2633},{"type":"footstep","time":3058},{"type":"footstep","time":3483},{"type":"portalA","time":3933,"surface":"power-source","point":[10.959999999999999,1.55,9]}]},"contacts":[{"id":"plant-south-ground","normal":{"x":-0.002327446825802326,"y":0.9999411106109619,"z":-0.01059246901422739},"toi":0.00039711693534627557,"witness":{"x":5.057351112365723,"y":-0.000013738870620727539,"z":11.002376556396484},"applied":{"x":0.0003864821046590805,"y":-0.00008892016194295138,"z":0.000020655119442380965},"remaining":{"x":0.004442845471203327,"y":-0.0010221910197287798,"z":0.00023744309146422893}}],"kcc":{"offset":0.014999999664723873,"stepHeight":0.23000000417232513,"stepWidth":0.25}}
+  + actual - expected
+  
+  + PI {
+  +   collider: <ref *2> tg {
+  +     _parent: null,
+  +     _shape: Cg {
+  +       halfExtents: DI {
+  +         x: 0.34999999999999964,
+  +         y: 0.9,
+  +         z: 0.40000000000000036
+  +       },
+  +       type: 1
+  +     },
+  +     colliderSet: <ref *1> rg {
+  +       map: bI {
+  +         data: [
+  +           tg {
+  +             _parent: xI {
+  +               colliderSet: [Circular *1],
+  +               handle: 0,
+  +               rawSet: l {
+  +                 __wbg_ptr: 1187408
+  +               },
+  +               userData: undefined
+  +             },
+  +             _shape: Bg {
+  +               halfHeight: 0.57,
+  +               radius: 0.28,
+  +               type: 2
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 0
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 7.5,
+  +                 y: 0.3,
+  +                 z: 14
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 5e-324
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 1.5,
+  +                 y: 0.3,
+  +                 z: 14
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 2,
+  +                 y: 0.3,
+  +                 z: 8
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.5e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 2,
+  +                 y: 0.3,
+  +                 z: 4
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 2e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 11,
+  +                 y: 0.2999999999999998,
+  +                 z: 14
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 2.5e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 11.4,
+  +                 y: 0.1999999999999993,
+  +                 z: 14.4
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 3e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.1999999999999993,
+  +                 y: 8.2,
+  +                 z: 14.4
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 3.5e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 11.4,
+  +                 y: 8.2,
+  +                 z: 0.1999999999999993
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 4e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.1999999999999993,
+  +                 y: 8.2,
+  +                 z: 1.3000000000000007
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 4.4e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.1999999999999993,
+  +                 y: 8.2,
+  +                 z: 11.3
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 5e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.1999999999999993,
+  +                 y: 4.5,
+  +                 z: 1.4000000000000004
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 5.4e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.1999999999999993,
+  +                 y: 2.2,
+  +                 z: 1.4000000000000004
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 6e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 7.8,
+  +                 y: 8.2,
+  +                 z: 0.1999999999999993
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 6.4e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 1.8000000000000003,
+  +                 y: 8.2,
+  +                 z: 0.1999999999999993
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 7e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 1.4000000000000004,
+  +                 y: 2.4000000000000004,
+  +                 z: 0.1999999999999993
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 7.4e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 1.4000000000000004,
+  +                 y: 4.300000000000001,
+  +                 z: 0.1999999999999993
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 8e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 7.7,
+  +                 y: 6,
+  +                 z: 0.08000000000000002
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 8.4e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 1.6999999999999997,
+  +                 y: 6,
+  +                 z: 0.08000000000000002
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 9e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 1.5999999999999996,
+  +                 y: 4.5,
+  +                 z: 0.17500000000000004
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 9.4e-323
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 4.5,
+  +                 y: 2.1,
+  +                 z: 4
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.1499999999999999,
+  +                 y: 4.9,
+  +                 z: 0.20000000000000018
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.04e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.15000000000000036,
+  +                 y: 4.9,
+  +                 z: 0.20000000000000018
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.1e-322
+  +           },
+  +           [Circular *2],
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.7000000000000002,
+  +                 y: 1.5,
+  +                 z: 0.20000000000000018
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.2e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.40000000000000036,
+  +                 y: 0.4,
+  +                 z: 0.19999999999999973
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.24e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 2.1999999999999993,
+  +                 y: 0.3,
+  +                 z: 1.4000000000000004
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.3e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 2.3000000000000007,
+  +                 y: 0.1999999999999993,
+  +                 z: 1.8000000000000007
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.33e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 2.3000000000000007,
+  +                 y: 6,
+  +                 z: 0.1999999999999993
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.4e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 2.3000000000000007,
+  +                 y: 6,
+  +                 z: 0.1999999999999993
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.43e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.1999999999999993,
+  +                 y: 6,
+  +                 z: 1.8000000000000007
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.5e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 1.4000000000000004,
+  +                 y: 0.2999999999999998,
+  +                 z: 2.1999999999999993
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.53e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 1.7999999999999998,
+  +                 y: 0.1999999999999993,
+  +                 z: 2.3000000000000007
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.6e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.20000000000000018,
+  +                 y: 3.9000000000000004,
+  +                 z: 2.3000000000000007
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.63e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.20000000000000018,
+  +                 y: 3.9000000000000004,
+  +                 z: 2.3000000000000007
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.7e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 1.7999999999999998,
+  +                 y: 3.9000000000000004,
+  +                 z: 0.1999999999999993
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.73e-322
+  +           },
+  +           tg {
+  +             _parent: null,
+  +             _shape: Mg {
+  +               halfHeight: 0.07,
+  +               radius: 0.96,
+  +               type: 10
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.8e-322
+  +           },
+  +           tg {
+  +             _parent: xI {
+  +               colliderSet: [Circular *1],
+  +               handle: 5e-324,
+  +               rawSet: l {
+  +                 __wbg_ptr: 1187408
+  +               },
+  +               userData: undefined
+  +             },
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 1.6,
+  +                 y: 1.5,
+  +                 z: 0.175
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.83e-322
+  +           },
+  +           tg {
+  +             _parent: xI {
+  +               colliderSet: [Circular *1],
+  +               handle: 1e-323,
+  +               rawSet: l {
+  +                 __wbg_ptr: 1187408
+  +               },
+  +               userData: undefined
+  +             },
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 2,
+  +                 y: 0.2,
+  +                 z: 2
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.9e-322
+  +           },
+  +           tg {
+  +             _parent: xI {
+  +               colliderSet: [Circular *1],
+  +               handle: 1.5e-323,
+  +               rawSet: l {
+  +                 __wbg_ptr: 1187408
+  +               },
+  +               userData: undefined
+  +             },
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.15,
+  +                 y: 1.5,
+  +                 z: 1.4
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 1.93e-322
+  +           },
+  +           tg {
+  +             _parent: xI {
+  +               colliderSet: [Circular *1],
+  +               handle: 2e-323,
+  +               rawSet: l {
+  +                 __wbg_ptr: 1187408
+  +               },
+  +               userData: undefined
+  +             },
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 1.4,
+  +                 y: 1.5,
+  +                 z: 0.15
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 2e-322
+  +           },
+  +           tg {
+  +             _parent: xI {
+  +               colliderSet: [Circular *1],
+  +               handle: 2.5e-323,
+  +               rawSet: l {
+  +                 __wbg_ptr: 1187408
+  +               },
+  +               userData: undefined
+  +             },
+  +             _shape: Cg {
+  +               halfExtents: DI {
+  +                 x: 0.55,
+  +                 y: 0.55,
+  +                 z: 0.55
+  +               },
+  +               type: 1
+  +             },
+  +             colliderSet: [Circular *1],
+  +             handle: 2.03e-322
+  +           }
+  +         ],
+  +         fconv: Float64Array(1) [
+  +           1.5e-323
+  +         ],
+  +         size: 42,
+  +         uconv: Uint32Array(2) [
+  +           3,
+  +           0
+  +         ]
+  +       },
+  +       raw: C {
+  +         __wbg_ptr: 1188936
+  +       }
+  +     },
+  +     handle: 1.14e-322
+  +   },
+  +   timeOfImpact: 1.7276232242584229
+  + }
+  - null
+  
+      at SequenceRoute.clearRay (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/helpers/sequence-route.ts:26:553)
+      at SequenceRoute.shot (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/helpers/sequence-route.ts:27:182)
+      at plantPair (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-sequence-routes.test.ts:22:131)
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-sequence-routes.test.ts:58:2)
+      at route (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/helpers/sequence-route.ts:39:161)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-sequence-routes.test.ts:57:108)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: { collider: { colliderSet: [Object], handle: 1.14e-322, _parent: null, _shape: [Object] }, timeOfImpact: 1.7276232242584229 },
+    expected: null,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

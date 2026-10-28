@@ -1,0 +1,219 @@
+{
+  "scope": "Native isolated fixture setup, not browser proof. Fixed120Hz; initial rotated-cube setup only, no recovery pose/velocity assignment.",
+  "engine": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/work/chamber-qa/contact-fit-baseline/world.ts",
+  "error": null,
+  "trace": [
+    {
+      "label": "actual-side-contact",
+      "time": 0.37500000000000033,
+      "position": [
+        0.7049000263214111,
+        1.4817302227020264,
+        -6.340529523640726e-8
+      ],
+      "velocity": [
+        2.198666666666667,
+        3.9999999999999942,
+        -1.3462950478626568e-16
+      ],
+      "grounded": false,
+      "computed": {
+        "x": 0.011266786605119705,
+        "y": 0.03333333507180214,
+        "z": -1.1219125094311844e-18
+      },
+      "contacts": [
+        {
+          "id": "side-wall",
+          "normal": {
+            "x": -0.9999999403953552,
+            "y": 0,
+            "z": 0
+          },
+          "toi": 0.02359750308096409,
+          "applied": {
+            "x": 0.011366785503923893,
+            "y": 0.0206794161349535,
+            "z": -6.960148413144355e-19
+          },
+          "remaining": {
+            "x": 0.006955436430871487,
+            "y": 0.01265391893684864,
+            "z": -4.258976681167489e-19
+          }
+        }
+      ],
+      "world": {
+        "room": "chamber-97",
+        "number": 97,
+        "mission": "Isolated native contact contract",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            0.7049000263214111,
+            1.4817302227020264,
+            -6.340529523640726e-8
+          ],
+          "velocity": [
+            2.198666666666667,
+            3.9999999999999942,
+            -1.3462950478626568e-16
+          ],
+          "yaw": -1.5707963267948966,
+          "pitch": 0,
+          "grounded": false,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [],
+        "panels": [],
+        "exits": [],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {},
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "jump",
+            "time": 258
+          }
+        ]
+      }
+    }
+  ],
+  "final": {
+    "label": "final",
+    "time": 0.5000000000000007,
+    "position": [
+      0.7049015164375305,
+      1.8484348058700562,
+      -0.00032270493102259934
+    ],
+    "velocity": [
+      3.19866666666667,
+      1.9999999999999947,
+      -1.9586184474363333e-16
+    ],
+    "grounded": false,
+    "computed": {
+      "x": -0.00005930291081313044,
+      "y": 0.01666705124080181,
+      "z": -3.1749561912874924e-7
+    },
+    "contacts": [
+      {
+        "id": "side-wall",
+        "normal": {
+          "x": -1,
+          "y": 0.000014360568457050249,
+          "z": -0.000011884608284162823
+        },
+        "toi": 0.000047716381232021376,
+        "applied": {
+          "x": 0.000040458668081555516,
+          "y": 0.000025297209504060447,
+          "z": -2.477378873511825e-21
+        },
+        "remaining": {
+          "x": 0.026615096256136894,
+          "y": 0.016641370952129364,
+          "z": -1.6297046254070747e-18
+        }
+      }
+    ],
+    "world": {
+      "room": "chamber-97",
+      "number": 97,
+      "mission": "Isolated native contact contract",
+      "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+      "player": {
+        "position": [
+          0.7049015164375305,
+          1.8484348058700562,
+          -0.00032270493102259934
+        ],
+        "velocity": [
+          3.19866666666667,
+          1.9999999999999947,
+          -1.9586184474363333e-16
+        ],
+        "yaw": -1.5707963267948966,
+        "pitch": 0,
+        "grounded": false,
+        "crossings": 0
+      },
+      "portals": [
+        null,
+        null
+      ],
+      "crates": [],
+      "pads": [],
+      "devices": [],
+      "panels": [],
+      "exits": [],
+      "result": null,
+      "held": null,
+      "holdSpaceTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "launchUsed": false,
+      "respawns": 0,
+      "beams": {},
+      "signals": {},
+      "events": [
+        {
+          "type": "land",
+          "time": 8
+        },
+        {
+          "type": "jump",
+          "time": 258
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,681 @@
+{
+  "number": 14,
+  "contrast": false,
+  "id": "pressure-interruption",
+  "scope": "Unregistered authored-spawn native route. Camera/WASD/E/ray-checked portals only; no actor/cargo/machine/goal/history/save assignments. Decorative glazing visibility and browser completion remain unverified.",
+  "error": "AssertionError [ERR_ASSERTION]: Native ray obstructed before -5,1.55,-13.985; {\"world\":{\"room\":\"chamber-14\",\"number\":14,\"mission\":\"Put the cube on POWER before you connect the beam. Keep the receiver lit while the lift moves. Use the upper exit.\",\"physics\":\"Rapier3D 0.21 · capsule KCC + dynamic rigid cubes\",\"player\":{\"position\":[5.0526018142700195,0.8648266792297363,11.002781867980957],\"velocity\":[0.5795193323519948,0,0.030971786444129117],\"yaw\":0.3824881532299716,\"pitch\":0.001305903739595222,\"grounded\":true,\"crossings\":0},\"portals\":[{\"surface\":\"power-source\",\"position\":[10.959999999999999,1.55,9],\"normal\":[-1,0,0]},null],\"crates\":[{\"id\":\"power-cube\",\"position\":[-6.000002861022949,0.5498895645141602,7.999998569488525],\"velocity\":[0,0,0],\"rotation\":[2.0004284806418582e-7,3.890211069945693e-12,-2.26985022777626e-7,1],\"angularVelocity\":[0,0,0],\"held\":false,\"crossings\":0}],\"pads\":[{\"id\":\"power-button\",\"position\":[-3,0.14,8],\"pressed\":false,\"crate\":null}],\"devices\":[{\"id\":\"plant-access\",\"kind\":\"shutter\",\"label\":\"POWERED ACCESS\",\"position\":[6,1.5,1],\"size\":[3.2,3,0.35],\"active\":false,\"progress\":0,\"choice\":0,\"angle\":0,\"powered\":null,\"blocked\":false},{\"id\":\"plant-lift\",\"kind\":\"lift\",\"label\":\"POWER LIFT\",\"position\":[6,-0.2,-4],\"size\":[4,0.4,4],\"active\":false,\"progress\":0,\"choice\":0,\"angle\":0,\"powered\":null,\"blocked\":false},{\"id\":\"inspection-door\",\"kind\":\"shutter\",\"label\":\"WEST INSPECTION\",\"position\":[-11.12,1.5,-10],\"size\":[0.3,3,2.8],\"active\":false,\"progress\":0,\"choice\":0,\"angle\":0,\"powered\":null,\"blocked\":false},{\"id\":\"upper-door\",\"kind\":\"shutter\",\"label\":\"UPPER\",\"position\":[6,5.7,-14.12],\"size\":[2.8,3,0.3],\"active\":false,\"progress\":0,\"choice\":0,\"angle\":0,\"powered\":null,\"blocked\":false}],\"panels\":[{\"id\":\"power-source\",\"position\":[10.985,1.55,9],\"normal\":[-1,0,0],\"width\":7,\"height\":3.1},{\"id\":\"power-return\",\"position\":[-5,1.55,-13.985],\"normal\":[0,0,1],\"width\":6,\"height\":3.1}],\"exits\":[{\"id\":\"inspection-exit\",\"label\":\"EXIT\",\"position\":[-13,1.5,-10],\"size\":[4.359999999999999,3,2.7600000000000016]},{\"id\":\"upper-exit\",\"label\":\"EXIT\",\"position\":[6,5.7,-16],\"size\":[2.7600000000000016,3,4.359999999999999]}],\"result\":null,\"held\":null,\"holdSpaceTransform\":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],\"launchUsed\":false,\"respawns\":0,\"beams\":{},\"signals\":{\"power-button\":false,\"safety:plant-access\":false,\"door-safety\":false,\"moving:plant-access\":false,\"moving:plant-lift\":false,\"safety:inspection-door\":false,\"moving:inspection-door\":false,\"safety:upper-door\":false,\"moving:upper-door\":false,\"plant-light\":false},\"events\":[{\"type\":\"land\",\"time\":8},{\"type\":\"footstep\",\"time\":508},{\"type\":\"footstep\",\"time\":933},{\"type\":\"footstep\",\"time\":1358},{\"type\":\"footstep\",\"time\":1783},{\"type\":\"footstep\",\"time\":2208},{\"type\":\"footstep\",\"time\":2633},{\"type\":\"footstep\",\"time\":3058},{\"type\":\"footstep\",\"time\":3483},{\"type\":\"portalA\",\"time\":3933,\"surface\":\"power-source\",\"point\":[10.959999999999999,1.55,9]}]},\"contacts\":[{\"id\":\"plant-south-ground\",\"normal\":{\"x\":-0.002327446825802326,\"y\":0.9999411106109619,\"z\":-0.01059246901422739},\"toi\":0.00039711693534627557,\"witness\":{\"x\":5.057351112365723,\"y\":-0.000013738870620727539,\"z\":11.002376556396484},\"applied\":{\"x\":0.0003864821046590805,\"y\":-0.00008892016194295138,\"z\":0.000020655119442380965},\"remaining\":{\"x\":0.004442845471203327,\"y\":-0.0010221910197287798,\"z\":0.00023744309146422893}}],\"kcc\":{\"offset\":0.014999999664723873,\"stepHeight\":0.23000000417232513,\"stepWidth\":0.25}}\n+ actual - expected\n\n+ PI {\n+   collider: <ref *2> tg {\n+     _parent: null,\n+     _shape: Cg {\n+       halfExtents: DI {\n+         x: 0.34999999999999964,\n+         y: 0.9,\n+         z: 0.40000000000000036\n+       },\n+       type: 1\n+     },\n+     colliderSet: <ref *1> rg {\n+       map: bI {\n+         data: [\n+           tg {\n+             _parent: xI {\n+               colliderSet: [Circular *1],\n+               handle: 0,\n+               rawSet: l {\n+                 __wbg_ptr: 1187408\n+               },\n+               userData: undefined\n+             },\n+             _shape: Bg {\n+               halfHeight: 0.57,\n+               radius: 0.28,\n+               type: 2\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 0\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 7.5,\n+                 y: 0.3,\n+                 z: 14\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 5e-324\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 1.5,\n+                 y: 0.3,\n+                 z: 14\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 1e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 2,\n+                 y: 0.3,\n+                 z: 8\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 1.5e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 2,\n+                 y: 0.3,\n+                 z: 4\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 2e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 11,\n+                 y: 0.2999999999999998,\n+                 z: 14\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 2.5e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 11.4,\n+                 y: 0.1999999999999993,\n+                 z: 14.4\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 3e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 0.1999999999999993,\n+                 y: 8.2,\n+                 z: 14.4\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 3.5e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 11.4,\n+                 y: 8.2,\n+                 z: 0.1999999999999993\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 4e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 0.1999999999999993,\n+                 y: 8.2,\n+                 z: 1.3000000000000007\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 4.4e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 0.1999999999999993,\n+                 y: 8.2,\n+                 z: 11.3\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 5e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 0.1999999999999993,\n+                 y: 4.5,\n+                 z: 1.4000000000000004\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 5.4e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 0.1999999999999993,\n+                 y: 2.2,\n+                 z: 1.4000000000000004\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 6e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 7.8,\n+                 y: 8.2,\n+                 z: 0.1999999999999993\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 6.4e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 1.8000000000000003,\n+                 y: 8.2,\n+                 z: 0.1999999999999993\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 7e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 1.4000000000000004,\n+                 y: 2.4000000000000004,\n+                 z: 0.1999999999999993\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 7.4e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 1.4000000000000004,\n+                 y: 4.300000000000001,\n+                 z: 0.1999999999999993\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 8e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 7.7,\n+                 y: 6,\n+                 z: 0.08000000000000002\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 8.4e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 1.6999999999999997,\n+                 y: 6,\n+                 z: 0.08000000000000002\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 9e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 1.5999999999999996,\n+                 y: 4.5,\n+                 z: 0.17500000000000004\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 9.4e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 4.5,\n+                 y: 2.1,\n+                 z: 4\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 1e-322\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 0.1499999999999999,\n+                 y: 4.9,\n+                 z: 0.20000000000000018\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 1.04e-322\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 0.15000000000000036,\n+                 y: 4.9,\n+                 z: 0.20000000000000018\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 1.1e-322\n+           },\n+           [Circular *2],\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 0.7000000000000002,\n+                 y: 1.5,\n+                 z: 0.20000000000000018\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 1.2e-322\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 0.40000000000000036,\n+                 y: 0.4,\n+                 z: 0.19999999999999973\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 1.24e-322\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 2.1999999999999993,\n+                 y: 0.3,\n+                 z: 1.4000000000000004\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 1.3e-322\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 2.3000000000000007,\n+                 y: 0.1999999999999993,\n+                 z: 1.8000000000000007\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 1.33e-322\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 2.3000000000000007,\n+                 y: 6,\n+                 z: 0.1999999999999993\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 1.4e-322\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 2.3000000000000007,\n+                 y: 6,\n+                 z: 0.1999999999999993\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 1.43e-322\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 0.1999999999999993,\n+                 y: 6,\n+                 z: 1.8000000000000007\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 1.5e-322\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 1.4000000000000004,\n+                 y: 0.2999999999999998,\n+                 z: 2.1999999999999993\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 1.53e-322\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 1.7999999999999998,\n+                 y: 0.1999999999999993,\n+                 z: 2.3000000000000007\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 1.6e-322\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 0.20000000000000018,\n+                 y: 3.9000000000000004,\n+                 z: 2.3000000000000007\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 1.63e-322\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 0.20000000000000018,\n+                 y: 3.9000000000000004,\n+                 z: 2.3000000000000007\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 1.7e-322\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 1.7999999999999998,\n+                 y: 3.9000000000000004,\n+                 z: 0.1999999999999993\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 1.73e-322\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Mg {\n+               halfHeight: 0.07,\n+               radius: 0.96,\n+               type: 10\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 1.8e-322\n+           },\n+           tg {\n+             _parent: xI {\n+               colliderSet: [Circular *1],\n+               handle: 5e-324,\n+               rawSet: l {\n+                 __wbg_ptr: 1187408\n+               },\n+               userData: undefined\n+             },\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 1.6,\n+                 y: 1.5,\n+                 z: 0.175\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 1.83e-322\n+           },\n+           tg {\n+             _parent: xI {\n+               colliderSet: [Circular *1],\n+               handle: 1e-323,\n+               rawSet: l {\n+                 __wbg_ptr: 1187408\n+               },\n+               userData: undefined\n+             },\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 2,\n+                 y: 0.2,\n+                 z: 2\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 1.9e-322\n+           },\n+           tg {\n+             _parent: xI {\n+               colliderSet: [Circular *1],\n+               handle: 1.5e-323,\n+               rawSet: l {\n+                 __wbg_ptr: 1187408\n+               },\n+               userData: undefined\n+             },\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 0.15,\n+                 y: 1.5,\n+                 z: 1.4\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 1.93e-322\n+           },\n+           tg {\n+             _parent: xI {\n+               colliderSet: [Circular *1],\n+               handle: 2e-323,\n+               rawSet: l {\n+                 __wbg_ptr: 1187408\n+               },\n+               userData: undefined\n+             },\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 1.4,\n+                 y: 1.5,\n+                 z: 0.15\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 2e-322\n+           },\n+           tg {\n+             _parent: xI {\n+               colliderSet: [Circular *1],\n+               handle: 2.5e-323,\n+               rawSet: l {\n+                 __wbg_ptr: 1187408\n+               },\n+               userData: undefined\n+             },\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 0.55,\n+                 y: 0.55,\n+                 z: 0.55\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 2.03e-322\n+           }\n+         ],\n+         fconv: Float64Array(1) [\n+           1.5e-323\n+         ],\n+         size: 42,\n+         uconv: Uint32Array(2) [\n+           3,\n+           0\n+         ]\n+       },\n+       raw: C {\n+         __wbg_ptr: 1188936\n+       }\n+     },\n+     handle: 1.14e-322\n+   },\n+   timeOfImpact: 1.7276232242584229\n+ }\n- null\n",
+  "ridingFrames": {},
+  "events": [
+    {
+      "type": "land",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "portalA",
+      "data": {
+        "surface": "power-source",
+        "point": [
+          10.959999999999999,
+          1.55,
+          9
+        ]
+      }
+    }
+  ],
+  "checkpoints": [
+    {
+      "label": "actual-authored-spawn",
+      "state": {
+        "room": "chamber-14",
+        "number": 14,
+        "mission": "Put the cube on POWER before you connect the beam. Keep the receiver lit while the lift moves. Use the upper exit.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            0.0000016185637150556431,
+            0.8636021018028259,
+            12.000001907348633
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [
+          {
+            "id": "power-cube",
+            "position": [
+              -6.000002861022949,
+              0.5498895645141602,
+              7.999998569488525
+            ],
+            "velocity": [
+              -0.000005070446150057251,
+              -7.474910717064631e-7,
+              -0.000004319822437537368
+            ],
+            "rotation": [
+              2.0004284806418582e-7,
+              3.890211069945693e-12,
+              -2.26985022777626e-7,
+              1
+            ],
+            "angularVelocity": [
+              -0.000007810795068508014,
+              -9.630912841047164e-15,
+              0.000009168018550553825
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "power-button",
+            "position": [
+              -3,
+              0.14,
+              8
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "plant-access",
+            "kind": "shutter",
+            "label": "POWERED ACCESS",
+            "position": [
+              6,
+              1.5,
+              1
+            ],
+            "size": [
+              3.2,
+              3,
+              0.35
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "plant-lift",
+            "kind": "lift",
+            "label": "POWER LIFT",
+            "position": [
+              6,
+              -0.2,
+              -4
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "inspection-door",
+            "kind": "shutter",
+            "label": "WEST INSPECTION",
+            "position": [
+              -11.12,
+              1.5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "upper-door",
+            "kind": "shutter",
+            "label": "UPPER",
+            "position": [
+              6,
+              5.7,
+              -14.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "power-source",
+            "position": [
+              10.985,
+              1.55,
+              9
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 7,
+            "height": 3.1
+          },
+          {
+            "id": "power-return",
+            "position": [
+              -5,
+              1.55,
+              -13.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 6,
+            "height": 3.1
+          }
+        ],
+        "exits": [
+          {
+            "id": "inspection-exit",
+            "label": "EXIT",
+            "position": [
+              -13,
+              1.5,
+              -10
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          },
+          {
+            "id": "upper-exit",
+            "label": "EXIT",
+            "position": [
+              6,
+              5.7,
+              -16
+            ],
+            "size": [
+              2.7600000000000016,
+              3,
+              4.359999999999999
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "power-button": false,
+          "safety:plant-access": false,
+          "door-safety": false,
+          "moving:plant-access": false,
+          "moving:plant-lift": false,
+          "safety:inspection-door": false,
+          "moving:inspection-door": false,
+          "safety:upper-door": false,
+          "moving:upper-door": false,
+          "plant-light": false
+        },
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "plant-west-ground",
+          "normal": {
+            "x": -0.00001759554106683936,
+            "y": 1,
+            "z": 0
+          },
+          "toi": 0.000039572481909999624,
+          "witness": {
+            "x": -0.0000324249267578125,
+            "y": 0,
+            "z": 11.99815559387207
+          },
+          "applied": {
+            "x": 0,
+            "y": -0.000039572481909999624,
+            "z": 0
+          },
+          "remaining": {
+            "x": 0,
+            "y": -0.0010715386597439647,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "failure",
+      "state": {
+        "room": "chamber-14",
+        "number": 14,
+        "mission": "Put the cube on POWER before you connect the beam. Keep the receiver lit while the lift moves. Use the upper exit.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            5.0526018142700195,
+            0.8648266792297363,
+            11.002781867980957
+          ],
+          "velocity": [
+            0.5795193323519948,
+            0,
+            0.030971786444129117
+          ],
+          "yaw": 0.3824881532299716,
+          "pitch": 0.001305903739595222,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "power-source",
+            "position": [
+              10.959999999999999,
+              1.55,
+              9
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ]
+          },
+          null
+        ],
+        "crates": [
+          {
+            "id": "power-cube",
+            "position": [
+              -6.000002861022949,
+              0.5498895645141602,
+              7.999998569488525
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              2.0004284806418582e-7,
+              3.890211069945693e-12,
+              -2.26985022777626e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "power-button",
+            "position": [
+              -3,
+              0.14,
+              8
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "plant-access",
+            "kind": "shutter",
+            "label": "POWERED ACCESS",
+            "position": [
+              6,
+              1.5,
+              1
+            ],
+            "size": [
+              3.2,
+              3,
+              0.35
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "plant-lift",
+            "kind": "lift",
+            "label": "POWER LIFT",
+            "position": [
+              6,
+              -0.2,
+              -4
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "inspection-door",
+            "kind": "shutter",
+            "label": "WEST INSPECTION",
+            "position": [
+              -11.12,
+              1.5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "upper-door",
+            "kind": "shutter",
+            "label": "UPPER",
+            "position": [
+              6,
+              5.7,
+              -14.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "power-source",
+            "position": [
+              10.985,
+              1.55,
+              9
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 7,
+            "height": 3.1
+          },
+          {
+            "id": "power-return",
+            "position": [
+              -5,
+              1.55,
+              -13.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 6,
+            "height": 3.1
+          }
+        ],
+        "exits": [
+          {
+            "id": "inspection-exit",
+            "label": "EXIT",
+            "position": [
+              -13,
+              1.5,
+              -10
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          },
+          {
+            "id": "upper-exit",
+            "label": "EXIT",
+            "position": [
+              6,
+              5.7,
+              -16
+            ],
+            "size": [
+              2.7600000000000016,
+              3,
+              4.359999999999999
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "power-button": false,
+          "safety:plant-access": false,
+          "door-safety": false,
+          "moving:plant-access": false,
+          "moving:plant-lift": false,
+          "safety:inspection-door": false,
+          "moving:inspection-door": false,
+          "safety:upper-door": false,
+          "moving:upper-door": false,
+          "plant-light": false
+        },
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "footstep",
+            "time": 508
+          },
+          {
+            "type": "footstep",
+            "time": 933
+          },
+          {
+            "type": "footstep",
+            "time": 1358
+          },
+          {
+            "type": "footstep",
+            "time": 1783
+          },
+          {
+            "type": "footstep",
+            "time": 2208
+          },
+          {
+            "type": "footstep",
+            "time": 2633
+          },
+          {
+            "type": "footstep",
+            "time": 3058
+          },
+          {
+            "type": "footstep",
+            "time": 3483
+          },
+          {
+            "type": "portalA",
+            "time": 3933,
+            "surface": "power-source",
+            "point": [
+              10.959999999999999,
+              1.55,
+              9
+            ]
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "plant-south-ground",
+          "normal": {
+            "x": -0.002327446825802326,
+            "y": 0.9999411106109619,
+            "z": -0.01059246901422739
+          },
+          "toi": 0.00039711693534627557,
+          "witness": {
+            "x": 5.057351112365723,
+            "y": -0.000013738870620727539,
+            "z": 11.002376556396484
+          },
+          "applied": {
+            "x": 0.0003864821046590805,
+            "y": -0.00008892016194295138,
+            "z": 0.000020655119442380965
+          },
+          "remaining": {
+            "x": 0.004442845471203327,
+            "y": -0.0010221910197287798,
+            "z": 0.00023744309146422893
+          }
+        }
+      ]
+    }
+  ]
+}

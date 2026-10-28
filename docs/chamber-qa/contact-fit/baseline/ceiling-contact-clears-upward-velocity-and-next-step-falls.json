@@ -1,0 +1,219 @@
+{
+  "scope": "Native isolated fixture setup, not browser proof. Fixed120Hz; initial rotated-cube setup only, no recovery pose/velocity assignment.",
+  "engine": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/work/chamber-qa/contact-fit-baseline/world.ts",
+  "error": "AssertionError [ERR_ASSERTION]: Real ceiling clips displacement but stored upward velocity remains 4.533333333333329",
+  "trace": [
+    {
+      "label": "actual-downward-normal-ceiling-hit",
+      "time": 0.3416666666666669,
+      "position": [
+        0,
+        1.334930419921875,
+        0
+      ],
+      "velocity": [
+        0,
+        4.533333333333329,
+        0
+      ],
+      "grounded": false,
+      "computed": {
+        "x": 0,
+        "y": 0.030972199514508247,
+        "z": 0
+      },
+      "contacts": [
+        {
+          "id": "ceiling",
+          "normal": {
+            "x": 0,
+            "y": -1,
+            "z": 0
+          },
+          "toi": 0.03107219934463501,
+          "applied": {
+            "x": 0,
+            "y": 0.03107219934463501,
+            "z": 0
+          },
+          "remaining": {
+            "x": 0,
+            "y": 0.006705578416585922,
+            "z": 0
+          }
+        }
+      ],
+      "world": {
+        "room": "chamber-97",
+        "number": 97,
+        "mission": "Isolated native contact contract",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            0,
+            1.334930419921875,
+            0
+          ],
+          "velocity": [
+            0,
+            4.533333333333329,
+            0
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": false,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [],
+        "panels": [],
+        "exits": [],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {},
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "jump",
+            "time": 258
+          }
+        ]
+      }
+    }
+  ],
+  "final": {
+    "label": "final",
+    "time": 0.3416666666666669,
+    "position": [
+      0,
+      1.334930419921875,
+      0
+    ],
+    "velocity": [
+      0,
+      4.533333333333329,
+      0
+    ],
+    "grounded": false,
+    "computed": {
+      "x": 0,
+      "y": 0.030972199514508247,
+      "z": 0
+    },
+    "contacts": [
+      {
+        "id": "ceiling",
+        "normal": {
+          "x": 0,
+          "y": -1,
+          "z": 0
+        },
+        "toi": 0.03107219934463501,
+        "applied": {
+          "x": 0,
+          "y": 0.03107219934463501,
+          "z": 0
+        },
+        "remaining": {
+          "x": 0,
+          "y": 0.006705578416585922,
+          "z": 0
+        }
+      }
+    ],
+    "world": {
+      "room": "chamber-97",
+      "number": 97,
+      "mission": "Isolated native contact contract",
+      "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+      "player": {
+        "position": [
+          0,
+          1.334930419921875,
+          0
+        ],
+        "velocity": [
+          0,
+          4.533333333333329,
+          0
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "grounded": false,
+        "crossings": 0
+      },
+      "portals": [
+        null,
+        null
+      ],
+      "crates": [],
+      "pads": [],
+      "devices": [],
+      "panels": [],
+      "exits": [],
+      "result": null,
+      "held": null,
+      "holdSpaceTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "launchUsed": false,
+      "respawns": 0,
+      "beams": {},
+      "signals": {},
+      "events": [
+        {
+          "type": "land",
+          "time": 8
+        },
+        {
+          "type": "jump",
+          "time": 258
+        }
+      ]
+    }
+  }
+}

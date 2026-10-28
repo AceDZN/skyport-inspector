@@ -1,0 +1,37 @@
+✔ render fractions produce only fixed physical ticks and retain elapsed time (2.299084ms)
+✔ render fractions produce only fixed physical ticks and retain elapsed time (0.7785ms)
+✔ render fractions produce only fixed physical ticks and retain elapsed time (0.355042ms)
+✔ pause/reset cannot carry old input time into a new room (0.335167ms)
+✖ genuine continuous cycle does not report brakes at mixed tiny positive steps (9.866375ms)
+✔ fixed render cadence retains real power brake resume and physical arrival events (1.924542ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 5
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 606.615292
+
+✖ failing tests:
+
+test at tests/core-fixed-clock.test.ts:19:1
+✖ genuine continuous cycle does not report brakes at mixed tiny positive steps (9.866375ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-fixed-clock.test.ts:22:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:897:18)
+      at Test.postRun (node:internal/test_runner/test:1447:19)
+      at Test.run (node:internal/test_runner/test:1372:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

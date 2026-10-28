@@ -1,0 +1,31 @@
+✖ native comparison intermediate-air profile 9.5 (231.045208ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1339.26
+
+✖ failing tests:
+
+test at tests/core-comparisons-routes.test.ts:181:114
+✖ native comparison intermediate-air profile 9.5 (231.045208ms)
+  AssertionError [ERR_ASSERTION]: Legal intermediate profile stages or directly reaches actual far route {"player":{"position":[39.841793060302734,-3.135000228881836,5.970866680145264],"velocity":[4.799795884782203,0,0.04426583161342697],"yaw":-1.5800207398255954,"pitch":0,"grounded":true,"crossings":1},"portals":[{"surface":"shallow-floor","position":[-5,-2.95,-2.2],"normal":[0,1,0]},{"surface":"launch-white","position":[-7.96,9,6],"normal":[1,0,0]}],"respawns":0,"result":{"goalMatched":true,"physicalComplete":true,"exit":"far-exit","reason":"","events":[{"type":"land","time":8},{"type":"footstep","time":425},{"type":"footstep","time":850},{"type":"footstep","time":1275},{"type":"footstep","time":1700},{"type":"footstep","time":2242},{"type":"portalA","time":2567,"surface":"shallow-floor","point":[-5,-2.95,-2.2]},{"type":"portalB","time":2567,"surface":"launch-white","point":[-7.96,9,6]},{"type":"footstep","time":2667},{"type":"footstep","time":3092},{"type":"jump","time":3283},{"type":"launch","time":4433,"speed":15.736446029948686},{"type":"enter","time":4433,"body":"player","from":0,"to":1,"fromSurface":"shallow-floor","toSurface":"launch-white","speed":15.736446029948686,"exitSpeed":15.736446029948688,"held":null},{"type":"land","time":6400},{"type":"footstep","time":6400},{"type":"footstep","time":6825},{"type":"footstep","time":7250},{"type":"footstep","time":7675},{"type":"footstep","time":8100},{"type":"footstep","time":8525},{"type":"footstep","time":8950},{"type":"footstep","time":9375},{"type":"footstep","time":9800}],"mechanisms":["momentum","portals"]},"contacts":[{"id":"far-vestibule-floor","normal":{"x":0.0000032040074984251987,"y":1,"z":0},"witness":{"x":39.81820297241211,"y":-4,"z":5.97063684463501},"applied":{"x":0.016366396099328995,"y":-0.00045464144204743207,"z":0.0001509381108917296},"remaining":{"x":0.023631904274225235,"y":-0.0006564697250723839,"z":0.00021794383064843714}}],"events":[{"type":"footstep","time":7.25000000000015},{"type":"footstep","time":7.675000000000171},{"type":"footstep","time":8.10000000000018},{"type":"footstep","time":8.525000000000157},{"type":"footstep","time":8.950000000000133},{"type":"footstep","time":9.375000000000108},{"type":"footstep","time":9.800000000000084},{"type":"complete","time":10.183333333333396,"chamber":17}]}
+  
+  true !== false
+  
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:187:137)
+      at run (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:64:144)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:181:176)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

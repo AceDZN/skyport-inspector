@@ -1,0 +1,3331 @@
+{
+  "number": 13,
+  "contrast": true,
+  "id": "east-direction",
+  "scope": "Unregistered authored-spawn native route. Camera/WASD/E/ray-checked portals only; no actor/cargo/machine/goal/history/save assignments. Decorative glazing visibility and browser completion remain unverified.",
+  "error": null,
+  "ridingFrames": {},
+  "events": [
+    {
+      "type": "shutter-open",
+      "data": {
+        "id": "reverse-cover"
+      }
+    },
+    {
+      "type": "land",
+      "data": {}
+    },
+    {
+      "type": "portalA",
+      "data": {
+        "surface": "source-south",
+        "point": [
+          7.55,
+          1.55,
+          11.959999999999999
+        ]
+      }
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "portalB",
+      "data": {
+        "surface": "booth-white",
+        "point": [
+          1,
+          1.55,
+          9.459999999999999
+        ]
+      }
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "enter",
+      "data": {
+        "body": "player",
+        "from": 0,
+        "to": 1,
+        "fromSurface": "source-south",
+        "toSurface": "booth-white",
+        "speed": 4.7897391990989036,
+        "exitSpeed": 4.7897391990989036,
+        "held": null
+      }
+    },
+    {
+      "type": "land",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "switch-toggle",
+      "data": {
+        "id": "belt-power",
+        "value": true
+      }
+    },
+    {
+      "type": "conveyor-clutch",
+      "data": {
+        "id": "return-belt",
+        "value": true
+      }
+    },
+    {
+      "type": "shutter-close",
+      "data": {
+        "id": "reverse-cover"
+      }
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "shutter-open",
+      "data": {
+        "id": "east-door"
+      }
+    },
+    {
+      "type": "pad",
+      "data": {
+        "pad": "east-receiver",
+        "crate": "cargo"
+      }
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "enter",
+      "data": {
+        "body": "player",
+        "from": 1,
+        "to": 0,
+        "fromSurface": "booth-white",
+        "toSurface": "source-south",
+        "speed": 4.78850772587354,
+        "exitSpeed": 4.78850772587354,
+        "held": null
+      }
+    },
+    {
+      "type": "land",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "complete",
+      "data": {
+        "chamber": 13
+      }
+    }
+  ],
+  "checkpoints": [
+    {
+      "label": "actual-authored-spawn",
+      "state": {
+        "room": "chamber-13",
+        "number": 13,
+        "mission": "Keep the east direction. Switch the belt on. Use the east exit after the cube arrives.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            7.000002384185791,
+            0.8641840219497681,
+            11.000001907348633
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [
+          {
+            "id": "cargo",
+            "position": [
+              8.340277872775914e-7,
+              0.5499123930931091,
+              -2.598881678750331e-7
+            ],
+            "velocity": [
+              9.63769934969605e-7,
+              9.063606398740376e-7,
+              3.6595423580365605e-8
+            ],
+            "rotation": [
+              -3.9543479601888976e-9,
+              -1.049713484538306e-12,
+              7.690497483281433e-8,
+              1
+            ],
+            "angularVelocity": [
+              6.602360969054644e-8,
+              7.619407627621269e-14,
+              -0.0000017426556269128923
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "west-receiver",
+            "position": [
+              -7.8,
+              0,
+              0
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "east-receiver",
+            "position": [
+              7.8,
+              0,
+              0
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "return-belt",
+            "kind": "conveyor",
+            "label": "CARGO BELT",
+            "position": [
+              0,
+              -0.15,
+              0
+            ],
+            "size": [
+              17,
+              0.3,
+              6
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "belt-power",
+            "kind": "switch",
+            "label": "BELT POWER",
+            "position": [
+              2,
+              1.25,
+              5.7
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "reverse",
+            "kind": "switch",
+            "label": "REVERSE",
+            "position": [
+              -2,
+              1.3,
+              5.85
+            ],
+            "size": [
+              0.4,
+              0.6,
+              0.25
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "reverse-cover",
+            "kind": "shutter",
+            "label": "STOP TO REVERSE",
+            "position": [
+              -2,
+              2.4375,
+              6.35
+            ],
+            "size": [
+              1.4,
+              1,
+              0.2
+            ],
+            "active": true,
+            "progress": 0.6249999999999999,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "west-door",
+            "kind": "shutter",
+            "label": "WEST",
+            "position": [
+              -11.12,
+              1.5,
+              8
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "east-door",
+            "kind": "shutter",
+            "label": "EAST",
+            "position": [
+              11.12,
+              1.5,
+              8
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "booth-white",
+            "position": [
+              0,
+              1.75,
+              9.485
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "source-south",
+            "position": [
+              7,
+              1.75,
+              11.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "west-exit",
+            "label": "EXIT",
+            "position": [
+              -13,
+              1.5,
+              8
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          },
+          {
+            "id": "east-exit",
+            "label": "EXIT",
+            "position": [
+              13,
+              1.5,
+              8
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "west-receiver": false,
+          "east-receiver": false,
+          "moving:return-belt": false,
+          "moving:belt-power": false,
+          "moving:reverse": false,
+          "safety:reverse-cover": false,
+          "door-safety": false,
+          "moving:reverse-cover": true,
+          "safety:west-door": false,
+          "moving:west-door": false,
+          "safety:east-door": false,
+          "moving:east-door": false
+        },
+        "events": [
+          {
+            "type": "shutter-open",
+            "time": 8,
+            "id": "reverse-cover"
+          },
+          {
+            "type": "land",
+            "time": 8
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "return-floor",
+          "normal": {
+            "x": 0,
+            "y": 1,
+            "z": -0.0000042241708797519095
+          },
+          "toi": 0,
+          "witness": {
+            "x": 7.000245571136475,
+            "y": 2.9802322387695312e-8,
+            "z": 10.996410369873047
+          },
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": 0,
+            "y": -0.0011111111380159855,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-booth-entry",
+      "state": {
+        "room": "chamber-13",
+        "number": 13,
+        "mission": "Keep the east direction. Switch the belt on. Use the east exit after the cube arrives.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            1.0527896881103516,
+            0.8649636507034302,
+            9.204769134521484
+          ],
+          "velocity": [
+            -0.0022189011793314903,
+            0,
+            -0.15778523736503358
+          ],
+          "yaw": 0.014352399930289472,
+          "pitch": 0.010675455983859444,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "source-south",
+            "position": [
+              7.55,
+              1.55,
+              11.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "booth-white",
+            "position": [
+              1,
+              1.55,
+              9.459999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "cargo",
+            "position": [
+              8.340277872775914e-7,
+              0.5499123930931091,
+              -2.598881678750331e-7
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -3.9543479601888976e-9,
+              -1.049713484538306e-12,
+              7.690497483281433e-8,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "west-receiver",
+            "position": [
+              -7.8,
+              0,
+              0
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "east-receiver",
+            "position": [
+              7.8,
+              0,
+              0
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "return-belt",
+            "kind": "conveyor",
+            "label": "CARGO BELT",
+            "position": [
+              0,
+              -0.15,
+              0
+            ],
+            "size": [
+              17,
+              0.3,
+              6
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "belt-power",
+            "kind": "switch",
+            "label": "BELT POWER",
+            "position": [
+              2,
+              1.25,
+              5.7
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "reverse",
+            "kind": "switch",
+            "label": "REVERSE",
+            "position": [
+              -2,
+              1.3,
+              5.85
+            ],
+            "size": [
+              0.4,
+              0.6,
+              0.25
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "reverse-cover",
+            "kind": "shutter",
+            "label": "STOP TO REVERSE",
+            "position": [
+              -2,
+              3,
+              6.35
+            ],
+            "size": [
+              1.4,
+              1,
+              0.2
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "west-door",
+            "kind": "shutter",
+            "label": "WEST",
+            "position": [
+              -11.12,
+              1.5,
+              8
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "east-door",
+            "kind": "shutter",
+            "label": "EAST",
+            "position": [
+              11.12,
+              1.5,
+              8
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "booth-white",
+            "position": [
+              0,
+              1.75,
+              9.485
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "source-south",
+            "position": [
+              7,
+              1.75,
+              11.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "west-exit",
+            "label": "EXIT",
+            "position": [
+              -13,
+              1.5,
+              8
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          },
+          {
+            "id": "east-exit",
+            "label": "EXIT",
+            "position": [
+              13,
+              1.5,
+              8
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "west-receiver": false,
+          "east-receiver": false,
+          "moving:return-belt": false,
+          "moving:belt-power": false,
+          "moving:reverse": false,
+          "safety:reverse-cover": false,
+          "door-safety": false,
+          "moving:reverse-cover": false,
+          "safety:west-door": false,
+          "moving:west-door": false,
+          "safety:east-door": false,
+          "moving:east-door": false
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 7000
+          },
+          {
+            "type": "footstep",
+            "time": 7425
+          },
+          {
+            "type": "footstep",
+            "time": 7850
+          },
+          {
+            "type": "footstep",
+            "time": 8275
+          },
+          {
+            "type": "footstep",
+            "time": 8700
+          },
+          {
+            "type": "footstep",
+            "time": 9125
+          },
+          {
+            "type": "footstep",
+            "time": 9550
+          },
+          {
+            "type": "footstep",
+            "time": 9975
+          },
+          {
+            "type": "footstep",
+            "time": 10400
+          },
+          {
+            "type": "footstep",
+            "time": 10825
+          },
+          {
+            "type": "footstep",
+            "time": 11250
+          },
+          {
+            "type": "footstep",
+            "time": 11675
+          },
+          {
+            "type": "footstep",
+            "time": 12100
+          },
+          {
+            "type": "footstep",
+            "time": 12575
+          },
+          {
+            "type": "enter",
+            "time": 12883,
+            "body": "player",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "source-south",
+            "toSurface": "booth-white",
+            "speed": 4.7897391990989036,
+            "exitSpeed": 4.7897391990989036,
+            "held": null
+          },
+          {
+            "type": "land",
+            "time": 12892
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "return-floor",
+          "normal": {
+            "x": 0.0020207837224006653,
+            "y": 0.9999978542327881,
+            "z": -0.0005051959306001663
+          },
+          "toi": 0.00018290859588887542,
+          "witness": {
+            "x": 1.052720308303833,
+            "y": -8.642673492431641e-7,
+            "z": 9.203877449035645
+          },
+          "applied": {
+            "x": -0.000001964561306522228,
+            "y": -0.00011805009125964716,
+            "z": -0.0001396992156514898
+          },
+          "remaining": {
+            "x": -0.000016526282706763595,
+            "y": -0.000993060995824635,
+            "z": -0.0011751777492463589
+          }
+        }
+      ]
+    },
+    {
+      "label": "powered-cover-physically-blocks-reverse",
+      "state": {
+        "room": "chamber-13",
+        "number": 13,
+        "mission": "Keep the east direction. Switch the belt on. Use the east exit after the cube arrives.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -2.030259609222412,
+            0.8649834990501404,
+            7.70188570022583
+          ],
+          "velocity": [
+            -0.6814358805772007,
+            0,
+            0.04250782314586561
+          ],
+          "yaw": -0.018316173624484823,
+          "pitch": -0.12939543146878638,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "source-south",
+            "position": [
+              7.55,
+              1.55,
+              11.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "booth-white",
+            "position": [
+              1,
+              1.55,
+              9.459999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "cargo",
+            "position": [
+              0.8809520602226257,
+              0.5499122738838196,
+              -0.0000017037014004017692
+            ],
+            "velocity": [
+              0.4366162419319153,
+              8.620471021458798e-7,
+              -4.795031713911158e-7
+            ],
+            "rotation": [
+              -1.3864781545080973e-10,
+              4.665017677707439e-11,
+              -0.0000649460416752845,
+              1
+            ],
+            "angularVelocity": [
+              1.3412798693934747e-7,
+              9.678432236421078e-14,
+              -0.000001500702069279214
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "west-receiver",
+            "position": [
+              -7.8,
+              0,
+              0
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "east-receiver",
+            "position": [
+              7.8,
+              0,
+              0
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "return-belt",
+            "kind": "conveyor",
+            "label": "CARGO BELT",
+            "position": [
+              0,
+              -0.15,
+              0
+            ],
+            "size": [
+              17,
+              0.3,
+              6
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "belt-power",
+            "kind": "switch",
+            "label": "BELT POWER",
+            "position": [
+              2,
+              1.25,
+              5.7
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "reverse",
+            "kind": "switch",
+            "label": "REVERSE",
+            "position": [
+              -2,
+              1.3,
+              5.85
+            ],
+            "size": [
+              0.4,
+              0.6,
+              0.25
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "reverse-cover",
+            "kind": "shutter",
+            "label": "STOP TO REVERSE",
+            "position": [
+              -2,
+              1.5,
+              6.35
+            ],
+            "size": [
+              1.4,
+              1,
+              0.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "west-door",
+            "kind": "shutter",
+            "label": "WEST",
+            "position": [
+              -11.12,
+              1.5,
+              8
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "east-door",
+            "kind": "shutter",
+            "label": "EAST",
+            "position": [
+              11.12,
+              1.5,
+              8
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "booth-white",
+            "position": [
+              0,
+              1.75,
+              9.485
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "source-south",
+            "position": [
+              7,
+              1.75,
+              11.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "west-exit",
+            "label": "EXIT",
+            "position": [
+              -13,
+              1.5,
+              8
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          },
+          {
+            "id": "east-exit",
+            "label": "EXIT",
+            "position": [
+              13,
+              1.5,
+              8
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "west-receiver": false,
+          "east-receiver": false,
+          "moving:return-belt": false,
+          "moving:belt-power": false,
+          "moving:reverse": false,
+          "safety:reverse-cover": false,
+          "door-safety": false,
+          "moving:reverse-cover": false,
+          "safety:west-door": false,
+          "moving:west-door": false,
+          "safety:east-door": false,
+          "moving:east-door": false
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 10400
+          },
+          {
+            "type": "footstep",
+            "time": 10825
+          },
+          {
+            "type": "footstep",
+            "time": 11250
+          },
+          {
+            "type": "footstep",
+            "time": 11675
+          },
+          {
+            "type": "footstep",
+            "time": 12100
+          },
+          {
+            "type": "footstep",
+            "time": 12575
+          },
+          {
+            "type": "enter",
+            "time": 12883,
+            "body": "player",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "source-south",
+            "toSurface": "booth-white",
+            "speed": 4.7897391990989036,
+            "exitSpeed": 4.7897391990989036,
+            "held": null
+          },
+          {
+            "type": "land",
+            "time": 12892
+          },
+          {
+            "type": "footstep",
+            "time": 13075
+          },
+          {
+            "type": "footstep",
+            "time": 13500
+          },
+          {
+            "type": "switch-toggle",
+            "time": 13617,
+            "id": "belt-power",
+            "value": true
+          },
+          {
+            "type": "conveyor-clutch",
+            "time": 13617,
+            "id": "return-belt",
+            "value": true
+          },
+          {
+            "type": "shutter-close",
+            "time": 13617,
+            "id": "reverse-cover"
+          },
+          {
+            "type": "footstep",
+            "time": 14525
+          },
+          {
+            "type": "footstep",
+            "time": 14950
+          },
+          {
+            "type": "footstep",
+            "time": 15375
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "return-floor",
+          "normal": {
+            "x": -0.011622412130236626,
+            "y": 0.9999193549156189,
+            "z": 0.005116659682244062
+          },
+          "toi": 0.0005178764695301652,
+          "witness": {
+            "x": -2.02522349357605,
+            "y": 7.152557373046875e-7,
+            "z": 7.702114582061768
+          },
+          "applied": {
+            "x": -0.0005072891945019364,
+            "y": -0.00009925888298312202,
+            "z": 0.00003164459121762775
+          },
+          "remaining": {
+            "x": -0.005171343218535185,
+            "y": -0.0010118522914126515,
+            "z": 0.00032258726423606277
+          }
+        }
+      ]
+    },
+    {
+      "label": "maintained-east-receiving-pressure",
+      "state": {
+        "room": "chamber-13",
+        "number": 13,
+        "mission": "Keep the east direction. Switch the belt on. Use the east exit after the cube arrives.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -2.0570249557495117,
+            0.8644713163375854,
+            7.703564643859863
+          ],
+          "velocity": [
+            -4.309870038684671e-127,
+            0,
+            2.688487627491704e-128
+          ],
+          "yaw": -0.018316173624484823,
+          "pitch": -0.12939543146878638,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "source-south",
+            "position": [
+              7.55,
+              1.55,
+              11.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "booth-white",
+            "position": [
+              1,
+              1.55,
+              9.459999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "cargo",
+            "position": [
+              7.270226001739502,
+              0.5499634146690369,
+              -0.00019239116227254272
+            ],
+            "velocity": [
+              0.37997516989707947,
+              -0.000001624668243493943,
+              0.008790827356278896
+            ],
+            "rotation": [
+              0.000007753408681310248,
+              0.0001084786927094683,
+              -0.00004422490019351244,
+              1
+            ],
+            "angularVelocity": [
+              -0.00023998389951884747,
+              -2.2849617309361747e-8,
+              0.001399586908519268
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "west-receiver",
+            "position": [
+              -7.8,
+              0,
+              0
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "east-receiver",
+            "position": [
+              7.8,
+              0,
+              0
+            ],
+            "pressed": true,
+            "crate": "cargo"
+          }
+        ],
+        "devices": [
+          {
+            "id": "return-belt",
+            "kind": "conveyor",
+            "label": "CARGO BELT",
+            "position": [
+              0,
+              -0.15,
+              0
+            ],
+            "size": [
+              17,
+              0.3,
+              6
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "belt-power",
+            "kind": "switch",
+            "label": "BELT POWER",
+            "position": [
+              2,
+              1.25,
+              5.7
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "reverse",
+            "kind": "switch",
+            "label": "REVERSE",
+            "position": [
+              -2,
+              1.3,
+              5.85
+            ],
+            "size": [
+              0.4,
+              0.6,
+              0.25
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "reverse-cover",
+            "kind": "shutter",
+            "label": "STOP TO REVERSE",
+            "position": [
+              -2,
+              1.5,
+              6.35
+            ],
+            "size": [
+              1.4,
+              1,
+              0.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "west-door",
+            "kind": "shutter",
+            "label": "WEST",
+            "position": [
+              -11.12,
+              1.5,
+              8
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "east-door",
+            "kind": "shutter",
+            "label": "EAST",
+            "position": [
+              11.12,
+              5,
+              8
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "booth-white",
+            "position": [
+              0,
+              1.75,
+              9.485
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "source-south",
+            "position": [
+              7,
+              1.75,
+              11.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "west-exit",
+            "label": "EXIT",
+            "position": [
+              -13,
+              1.5,
+              8
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          },
+          {
+            "id": "east-exit",
+            "label": "EXIT",
+            "position": [
+              13,
+              1.5,
+              8
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "west-receiver": false,
+          "east-receiver": true,
+          "moving:return-belt": false,
+          "moving:belt-power": false,
+          "moving:reverse": false,
+          "safety:reverse-cover": false,
+          "door-safety": false,
+          "moving:reverse-cover": false,
+          "safety:west-door": false,
+          "moving:west-door": false,
+          "safety:east-door": false,
+          "moving:east-door": false
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 11250
+          },
+          {
+            "type": "footstep",
+            "time": 11675
+          },
+          {
+            "type": "footstep",
+            "time": 12100
+          },
+          {
+            "type": "footstep",
+            "time": 12575
+          },
+          {
+            "type": "enter",
+            "time": 12883,
+            "body": "player",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "source-south",
+            "toSurface": "booth-white",
+            "speed": 4.7897391990989036,
+            "exitSpeed": 4.7897391990989036,
+            "held": null
+          },
+          {
+            "type": "land",
+            "time": 12892
+          },
+          {
+            "type": "footstep",
+            "time": 13075
+          },
+          {
+            "type": "footstep",
+            "time": 13500
+          },
+          {
+            "type": "switch-toggle",
+            "time": 13617,
+            "id": "belt-power",
+            "value": true
+          },
+          {
+            "type": "conveyor-clutch",
+            "time": 13617,
+            "id": "return-belt",
+            "value": true
+          },
+          {
+            "type": "shutter-close",
+            "time": 13617,
+            "id": "reverse-cover"
+          },
+          {
+            "type": "footstep",
+            "time": 14525
+          },
+          {
+            "type": "footstep",
+            "time": 14950
+          },
+          {
+            "type": "footstep",
+            "time": 15375
+          },
+          {
+            "type": "shutter-open",
+            "time": 28392,
+            "id": "east-door"
+          },
+          {
+            "type": "pad",
+            "time": 28392,
+            "pad": "east-receiver",
+            "crate": "cargo"
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "return-floor",
+          "normal": {
+            "x": 0.0003079785674344748,
+            "y": 0.9999992847442627,
+            "z": -0.0011917621595785022
+          },
+          "toi": 0.00020005567057523876,
+          "witness": {
+            "x": -2.0433850288391113,
+            "y": -0.000031948089599609375,
+            "z": 7.701732635498047
+          },
+          "applied": {
+            "x": 0,
+            "y": -0.00020005567057523876,
+            "z": 0
+          },
+          "remaining": {
+            "x": 0,
+            "y": -0.000911055481992662,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-physical-completion",
+      "state": {
+        "room": "chamber-13",
+        "number": 13,
+        "mission": "Keep the east direction. Switch the belt on. Use the east exit after the cube arrives.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            10.83110523223877,
+            0.8663393259048462,
+            7.93090295791626
+          ],
+          "velocity": [
+            4.7794398050114015,
+            0,
+            0.11133122411068005
+          ],
+          "yaw": -1.5948664746599612,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 2
+        },
+        "portals": [
+          {
+            "surface": "source-south",
+            "position": [
+              7.55,
+              1.55,
+              11.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "booth-white",
+            "position": [
+              1,
+              1.55,
+              9.459999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "cargo",
+            "position": [
+              7.800186634063721,
+              0.5499504804611206,
+              0.0011813632445409894
+            ],
+            "velocity": [
+              -0.00003768207898247056,
+              0.000009287909051636234,
+              0.00002076026976283174
+            ],
+            "rotation": [
+              -0.000002668281240403303,
+              -0.00007866280793678015,
+              0.00002628628681122791,
+              1
+            ],
+            "angularVelocity": [
+              0.00003753521014004946,
+              -1.0720416554477197e-8,
+              0.00006812983338022605
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "west-receiver",
+            "position": [
+              -7.8,
+              0,
+              0
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "east-receiver",
+            "position": [
+              7.8,
+              0,
+              0
+            ],
+            "pressed": true,
+            "crate": "cargo"
+          }
+        ],
+        "devices": [
+          {
+            "id": "return-belt",
+            "kind": "conveyor",
+            "label": "CARGO BELT",
+            "position": [
+              0,
+              -0.15,
+              0
+            ],
+            "size": [
+              17,
+              0.3,
+              6
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "belt-power",
+            "kind": "switch",
+            "label": "BELT POWER",
+            "position": [
+              2,
+              1.25,
+              5.7
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "reverse",
+            "kind": "switch",
+            "label": "REVERSE",
+            "position": [
+              -2,
+              1.3,
+              5.85
+            ],
+            "size": [
+              0.4,
+              0.6,
+              0.25
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "reverse-cover",
+            "kind": "shutter",
+            "label": "STOP TO REVERSE",
+            "position": [
+              -2,
+              1.5,
+              6.35
+            ],
+            "size": [
+              1.4,
+              1,
+              0.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "west-door",
+            "kind": "shutter",
+            "label": "WEST",
+            "position": [
+              -11.12,
+              1.5,
+              8
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "east-door",
+            "kind": "shutter",
+            "label": "EAST",
+            "position": [
+              11.12,
+              5,
+              8
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "booth-white",
+            "position": [
+              0,
+              1.75,
+              9.485
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "source-south",
+            "position": [
+              7,
+              1.75,
+              11.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "west-exit",
+            "label": "EXIT",
+            "position": [
+              -13,
+              1.5,
+              8
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          },
+          {
+            "id": "east-exit",
+            "label": "EXIT",
+            "position": [
+              13,
+              1.5,
+              8
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          }
+        ],
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "east-exit",
+          "reason": "",
+          "events": [
+            {
+              "type": "shutter-open",
+              "time": 8,
+              "id": "reverse-cover"
+            },
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "portalA",
+              "time": 500,
+              "surface": "source-south",
+              "point": [
+                7.55,
+                1.55,
+                11.959999999999999
+              ]
+            },
+            {
+              "type": "footstep",
+              "time": 517
+            },
+            {
+              "type": "footstep",
+              "time": 942
+            },
+            {
+              "type": "footstep",
+              "time": 1367
+            },
+            {
+              "type": "footstep",
+              "time": 1792
+            },
+            {
+              "type": "footstep",
+              "time": 2217
+            },
+            {
+              "type": "footstep",
+              "time": 2642
+            },
+            {
+              "type": "footstep",
+              "time": 3067
+            },
+            {
+              "type": "footstep",
+              "time": 3492
+            },
+            {
+              "type": "footstep",
+              "time": 3917
+            },
+            {
+              "type": "footstep",
+              "time": 4342
+            },
+            {
+              "type": "footstep",
+              "time": 4767
+            },
+            {
+              "type": "footstep",
+              "time": 5192
+            },
+            {
+              "type": "footstep",
+              "time": 5617
+            },
+            {
+              "type": "footstep",
+              "time": 6042
+            },
+            {
+              "type": "portalB",
+              "time": 6558,
+              "surface": "booth-white",
+              "point": [
+                1,
+                1.55,
+                9.459999999999999
+              ]
+            },
+            {
+              "type": "footstep",
+              "time": 6575
+            },
+            {
+              "type": "footstep",
+              "time": 7000
+            },
+            {
+              "type": "footstep",
+              "time": 7425
+            },
+            {
+              "type": "footstep",
+              "time": 7850
+            },
+            {
+              "type": "footstep",
+              "time": 8275
+            },
+            {
+              "type": "footstep",
+              "time": 8700
+            },
+            {
+              "type": "footstep",
+              "time": 9125
+            },
+            {
+              "type": "footstep",
+              "time": 9550
+            },
+            {
+              "type": "footstep",
+              "time": 9975
+            },
+            {
+              "type": "footstep",
+              "time": 10400
+            },
+            {
+              "type": "footstep",
+              "time": 10825
+            },
+            {
+              "type": "footstep",
+              "time": 11250
+            },
+            {
+              "type": "footstep",
+              "time": 11675
+            },
+            {
+              "type": "footstep",
+              "time": 12100
+            },
+            {
+              "type": "footstep",
+              "time": 12575
+            },
+            {
+              "type": "enter",
+              "time": 12883,
+              "body": "player",
+              "from": 0,
+              "to": 1,
+              "fromSurface": "source-south",
+              "toSurface": "booth-white",
+              "speed": 4.7897391990989036,
+              "exitSpeed": 4.7897391990989036,
+              "held": null
+            },
+            {
+              "type": "land",
+              "time": 12892
+            },
+            {
+              "type": "footstep",
+              "time": 13075
+            },
+            {
+              "type": "footstep",
+              "time": 13500
+            },
+            {
+              "type": "switch-toggle",
+              "time": 13617,
+              "id": "belt-power",
+              "value": true
+            },
+            {
+              "type": "conveyor-clutch",
+              "time": 13617,
+              "id": "return-belt",
+              "value": true
+            },
+            {
+              "type": "shutter-close",
+              "time": 13617,
+              "id": "reverse-cover"
+            },
+            {
+              "type": "footstep",
+              "time": 14525
+            },
+            {
+              "type": "footstep",
+              "time": 14950
+            },
+            {
+              "type": "footstep",
+              "time": 15375
+            },
+            {
+              "type": "shutter-open",
+              "time": 28392,
+              "id": "east-door"
+            },
+            {
+              "type": "pad",
+              "time": 28392,
+              "pad": "east-receiver",
+              "crate": "cargo"
+            },
+            {
+              "type": "footstep",
+              "time": 30400
+            },
+            {
+              "type": "footstep",
+              "time": 30825
+            },
+            {
+              "type": "footstep",
+              "time": 31250
+            },
+            {
+              "type": "enter",
+              "time": 31492,
+              "body": "player",
+              "from": 1,
+              "to": 0,
+              "fromSurface": "booth-white",
+              "toSurface": "source-south",
+              "speed": 4.78850772587354,
+              "exitSpeed": 4.78850772587354,
+              "held": null
+            },
+            {
+              "type": "land",
+              "time": 31500
+            },
+            {
+              "type": "footstep",
+              "time": 31683
+            },
+            {
+              "type": "footstep",
+              "time": 32108
+            },
+            {
+              "type": "footstep",
+              "time": 32533
+            },
+            {
+              "type": "footstep",
+              "time": 33033
+            }
+          ],
+          "mechanisms": [
+            "shutters",
+            "portals",
+            "switches",
+            "conveyors",
+            "buttons"
+          ]
+        },
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "west-receiver": false,
+          "east-receiver": true,
+          "moving:return-belt": false,
+          "moving:belt-power": false,
+          "moving:reverse": false,
+          "safety:reverse-cover": false,
+          "door-safety": true,
+          "moving:reverse-cover": false,
+          "safety:west-door": false,
+          "moving:west-door": false,
+          "safety:east-door": true,
+          "moving:east-door": false
+        },
+        "events": [
+          {
+            "type": "shutter-close",
+            "time": 13617,
+            "id": "reverse-cover"
+          },
+          {
+            "type": "footstep",
+            "time": 14525
+          },
+          {
+            "type": "footstep",
+            "time": 14950
+          },
+          {
+            "type": "footstep",
+            "time": 15375
+          },
+          {
+            "type": "shutter-open",
+            "time": 28392,
+            "id": "east-door"
+          },
+          {
+            "type": "pad",
+            "time": 28392,
+            "pad": "east-receiver",
+            "crate": "cargo"
+          },
+          {
+            "type": "footstep",
+            "time": 30400
+          },
+          {
+            "type": "footstep",
+            "time": 30825
+          },
+          {
+            "type": "footstep",
+            "time": 31250
+          },
+          {
+            "type": "enter",
+            "time": 31492,
+            "body": "player",
+            "from": 1,
+            "to": 0,
+            "fromSurface": "booth-white",
+            "toSurface": "source-south",
+            "speed": 4.78850772587354,
+            "exitSpeed": 4.78850772587354,
+            "held": null
+          },
+          {
+            "type": "land",
+            "time": 31500
+          },
+          {
+            "type": "footstep",
+            "time": 31683
+          },
+          {
+            "type": "footstep",
+            "time": 32108
+          },
+          {
+            "type": "footstep",
+            "time": 32533
+          },
+          {
+            "type": "footstep",
+            "time": 33033
+          },
+          {
+            "type": "complete",
+            "time": 33308,
+            "chamber": 13
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "east-exit-floor",
+          "normal": {
+            "x": -0.03425605967640877,
+            "y": 0.9994130730628967,
+            "z": 0
+          },
+          "toi": 0.0031359002459794283,
+          "witness": {
+            "x": 10.800233840942383,
+            "y": 0.00000616908073425293,
+            "z": 7.930095672607422
+          },
+          "applied": {
+            "x": 0.0031338310800492764,
+            "y": -0.00008742533827899024,
+            "z": 0.00007299877324840054
+          },
+          "remaining": {
+            "x": 0.036694835871458054,
+            "y": -0.0010236857924610376,
+            "z": 0.0008547614561393857
+          }
+        }
+      ]
+    },
+    {
+      "label": "final",
+      "state": {
+        "room": "chamber-13",
+        "number": 13,
+        "mission": "Keep the east direction. Switch the belt on. Use the east exit after the cube arrives.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            10.83110523223877,
+            0.8663393259048462,
+            7.93090295791626
+          ],
+          "velocity": [
+            4.7794398050114015,
+            0,
+            0.11133122411068005
+          ],
+          "yaw": -1.5948664746599612,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 2
+        },
+        "portals": [
+          {
+            "surface": "source-south",
+            "position": [
+              7.55,
+              1.55,
+              11.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "booth-white",
+            "position": [
+              1,
+              1.55,
+              9.459999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "cargo",
+            "position": [
+              7.800186634063721,
+              0.5499504804611206,
+              0.0011813632445409894
+            ],
+            "velocity": [
+              -0.00003768207898247056,
+              0.000009287909051636234,
+              0.00002076026976283174
+            ],
+            "rotation": [
+              -0.000002668281240403303,
+              -0.00007866280793678015,
+              0.00002628628681122791,
+              1
+            ],
+            "angularVelocity": [
+              0.00003753521014004946,
+              -1.0720416554477197e-8,
+              0.00006812983338022605
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "west-receiver",
+            "position": [
+              -7.8,
+              0,
+              0
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "east-receiver",
+            "position": [
+              7.8,
+              0,
+              0
+            ],
+            "pressed": true,
+            "crate": "cargo"
+          }
+        ],
+        "devices": [
+          {
+            "id": "return-belt",
+            "kind": "conveyor",
+            "label": "CARGO BELT",
+            "position": [
+              0,
+              -0.15,
+              0
+            ],
+            "size": [
+              17,
+              0.3,
+              6
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "belt-power",
+            "kind": "switch",
+            "label": "BELT POWER",
+            "position": [
+              2,
+              1.25,
+              5.7
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "reverse",
+            "kind": "switch",
+            "label": "REVERSE",
+            "position": [
+              -2,
+              1.3,
+              5.85
+            ],
+            "size": [
+              0.4,
+              0.6,
+              0.25
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "reverse-cover",
+            "kind": "shutter",
+            "label": "STOP TO REVERSE",
+            "position": [
+              -2,
+              1.5,
+              6.35
+            ],
+            "size": [
+              1.4,
+              1,
+              0.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "west-door",
+            "kind": "shutter",
+            "label": "WEST",
+            "position": [
+              -11.12,
+              1.5,
+              8
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "east-door",
+            "kind": "shutter",
+            "label": "EAST",
+            "position": [
+              11.12,
+              5,
+              8
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "booth-white",
+            "position": [
+              0,
+              1.75,
+              9.485
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "source-south",
+            "position": [
+              7,
+              1.75,
+              11.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "west-exit",
+            "label": "EXIT",
+            "position": [
+              -13,
+              1.5,
+              8
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          },
+          {
+            "id": "east-exit",
+            "label": "EXIT",
+            "position": [
+              13,
+              1.5,
+              8
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          }
+        ],
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "east-exit",
+          "reason": "",
+          "events": [
+            {
+              "type": "shutter-open",
+              "time": 8,
+              "id": "reverse-cover"
+            },
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "portalA",
+              "time": 500,
+              "surface": "source-south",
+              "point": [
+                7.55,
+                1.55,
+                11.959999999999999
+              ]
+            },
+            {
+              "type": "footstep",
+              "time": 517
+            },
+            {
+              "type": "footstep",
+              "time": 942
+            },
+            {
+              "type": "footstep",
+              "time": 1367
+            },
+            {
+              "type": "footstep",
+              "time": 1792
+            },
+            {
+              "type": "footstep",
+              "time": 2217
+            },
+            {
+              "type": "footstep",
+              "time": 2642
+            },
+            {
+              "type": "footstep",
+              "time": 3067
+            },
+            {
+              "type": "footstep",
+              "time": 3492
+            },
+            {
+              "type": "footstep",
+              "time": 3917
+            },
+            {
+              "type": "footstep",
+              "time": 4342
+            },
+            {
+              "type": "footstep",
+              "time": 4767
+            },
+            {
+              "type": "footstep",
+              "time": 5192
+            },
+            {
+              "type": "footstep",
+              "time": 5617
+            },
+            {
+              "type": "footstep",
+              "time": 6042
+            },
+            {
+              "type": "portalB",
+              "time": 6558,
+              "surface": "booth-white",
+              "point": [
+                1,
+                1.55,
+                9.459999999999999
+              ]
+            },
+            {
+              "type": "footstep",
+              "time": 6575
+            },
+            {
+              "type": "footstep",
+              "time": 7000
+            },
+            {
+              "type": "footstep",
+              "time": 7425
+            },
+            {
+              "type": "footstep",
+              "time": 7850
+            },
+            {
+              "type": "footstep",
+              "time": 8275
+            },
+            {
+              "type": "footstep",
+              "time": 8700
+            },
+            {
+              "type": "footstep",
+              "time": 9125
+            },
+            {
+              "type": "footstep",
+              "time": 9550
+            },
+            {
+              "type": "footstep",
+              "time": 9975
+            },
+            {
+              "type": "footstep",
+              "time": 10400
+            },
+            {
+              "type": "footstep",
+              "time": 10825
+            },
+            {
+              "type": "footstep",
+              "time": 11250
+            },
+            {
+              "type": "footstep",
+              "time": 11675
+            },
+            {
+              "type": "footstep",
+              "time": 12100
+            },
+            {
+              "type": "footstep",
+              "time": 12575
+            },
+            {
+              "type": "enter",
+              "time": 12883,
+              "body": "player",
+              "from": 0,
+              "to": 1,
+              "fromSurface": "source-south",
+              "toSurface": "booth-white",
+              "speed": 4.7897391990989036,
+              "exitSpeed": 4.7897391990989036,
+              "held": null
+            },
+            {
+              "type": "land",
+              "time": 12892
+            },
+            {
+              "type": "footstep",
+              "time": 13075
+            },
+            {
+              "type": "footstep",
+              "time": 13500
+            },
+            {
+              "type": "switch-toggle",
+              "time": 13617,
+              "id": "belt-power",
+              "value": true
+            },
+            {
+              "type": "conveyor-clutch",
+              "time": 13617,
+              "id": "return-belt",
+              "value": true
+            },
+            {
+              "type": "shutter-close",
+              "time": 13617,
+              "id": "reverse-cover"
+            },
+            {
+              "type": "footstep",
+              "time": 14525
+            },
+            {
+              "type": "footstep",
+              "time": 14950
+            },
+            {
+              "type": "footstep",
+              "time": 15375
+            },
+            {
+              "type": "shutter-open",
+              "time": 28392,
+              "id": "east-door"
+            },
+            {
+              "type": "pad",
+              "time": 28392,
+              "pad": "east-receiver",
+              "crate": "cargo"
+            },
+            {
+              "type": "footstep",
+              "time": 30400
+            },
+            {
+              "type": "footstep",
+              "time": 30825
+            },
+            {
+              "type": "footstep",
+              "time": 31250
+            },
+            {
+              "type": "enter",
+              "time": 31492,
+              "body": "player",
+              "from": 1,
+              "to": 0,
+              "fromSurface": "booth-white",
+              "toSurface": "source-south",
+              "speed": 4.78850772587354,
+              "exitSpeed": 4.78850772587354,
+              "held": null
+            },
+            {
+              "type": "land",
+              "time": 31500
+            },
+            {
+              "type": "footstep",
+              "time": 31683
+            },
+            {
+              "type": "footstep",
+              "time": 32108
+            },
+            {
+              "type": "footstep",
+              "time": 32533
+            },
+            {
+              "type": "footstep",
+              "time": 33033
+            }
+          ],
+          "mechanisms": [
+            "shutters",
+            "portals",
+            "switches",
+            "conveyors",
+            "buttons"
+          ]
+        },
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "west-receiver": false,
+          "east-receiver": true,
+          "moving:return-belt": false,
+          "moving:belt-power": false,
+          "moving:reverse": false,
+          "safety:reverse-cover": false,
+          "door-safety": true,
+          "moving:reverse-cover": false,
+          "safety:west-door": false,
+          "moving:west-door": false,
+          "safety:east-door": true,
+          "moving:east-door": false
+        },
+        "events": [
+          {
+            "type": "shutter-close",
+            "time": 13617,
+            "id": "reverse-cover"
+          },
+          {
+            "type": "footstep",
+            "time": 14525
+          },
+          {
+            "type": "footstep",
+            "time": 14950
+          },
+          {
+            "type": "footstep",
+            "time": 15375
+          },
+          {
+            "type": "shutter-open",
+            "time": 28392,
+            "id": "east-door"
+          },
+          {
+            "type": "pad",
+            "time": 28392,
+            "pad": "east-receiver",
+            "crate": "cargo"
+          },
+          {
+            "type": "footstep",
+            "time": 30400
+          },
+          {
+            "type": "footstep",
+            "time": 30825
+          },
+          {
+            "type": "footstep",
+            "time": 31250
+          },
+          {
+            "type": "enter",
+            "time": 31492,
+            "body": "player",
+            "from": 1,
+            "to": 0,
+            "fromSurface": "booth-white",
+            "toSurface": "source-south",
+            "speed": 4.78850772587354,
+            "exitSpeed": 4.78850772587354,
+            "held": null
+          },
+          {
+            "type": "land",
+            "time": 31500
+          },
+          {
+            "type": "footstep",
+            "time": 31683
+          },
+          {
+            "type": "footstep",
+            "time": 32108
+          },
+          {
+            "type": "footstep",
+            "time": 32533
+          },
+          {
+            "type": "footstep",
+            "time": 33033
+          },
+          {
+            "type": "complete",
+            "time": 33308,
+            "chamber": 13
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "east-exit-floor",
+          "normal": {
+            "x": -0.03425605967640877,
+            "y": 0.9994130730628967,
+            "z": 0
+          },
+          "toi": 0.0031359002459794283,
+          "witness": {
+            "x": 10.800233840942383,
+            "y": 0.00000616908073425293,
+            "z": 7.930095672607422
+          },
+          "applied": {
+            "x": 0.0031338310800492764,
+            "y": -0.00008742533827899024,
+            "z": 0.00007299877324840054
+          },
+          "remaining": {
+            "x": 0.036694835871458054,
+            "y": -0.0010236857924610376,
+            "z": 0.0008547614561393857
+          }
+        }
+      ]
+    }
+  ]
+}

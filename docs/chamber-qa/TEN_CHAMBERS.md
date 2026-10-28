@@ -1,6 +1,6 @@
 # Ten-room mechanics review
 
-Ten rooms are registered. Exactly50 authored rooms, complete per-room visual/controls/audio review, remaining language counterexamples, and the final fresh sequential1→50 normal-input proof remain open. This checkpoint is not the requested finish.
+Ten rooms are registered at this reviewed checkpoint. Later fifteen/twenty-room evidence is tracked separately in `fifteen-parent-review/` and `TWENTY_CHAMBERS.md`. Exactly50 authored rooms, complete per-room visual/controls/audio review, remaining language counterexamples, and the final fresh sequential1→50 normal-input proof remain open. This checkpoint is not the requested finish.
 
 ## Actual browser evidence
 

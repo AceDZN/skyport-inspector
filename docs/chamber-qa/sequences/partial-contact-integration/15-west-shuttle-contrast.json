@@ -1,0 +1,4203 @@
+{
+  "number": 15,
+  "contrast": true,
+  "id": "west-shuttle",
+  "scope": "Unregistered authored-spawn native route. Camera/WASD/E/ray-checked portals only; no actor/cargo/machine/goal/history/save assignments. Decorative glazing visibility and browser completion remain unverified.",
+  "nativeParameters": {
+    "beltSpeeds": [
+      {
+        "id": "clearance-belt",
+        "speed": 3
+      }
+    ],
+    "controllerOffset": 0.014999999664723873,
+    "normalNudge": 0.00009999999747378752
+  },
+  "error": null,
+  "ridingFrames": {
+    "clearance-shuttle": 600
+  },
+  "events": [
+    {
+      "type": "land",
+      "data": {}
+    },
+    {
+      "type": "portalA",
+      "data": {
+        "surface": "clearance-source",
+        "point": [
+          -10.959999999999999,
+          1.55,
+          11.45
+        ]
+      }
+    },
+    {
+      "type": "portalB",
+      "data": {
+        "surface": "clearance-return",
+        "point": [
+          0.55,
+          1.55,
+          13.959999999999999
+        ]
+      }
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "switch-toggle",
+      "data": {
+        "id": "reverse",
+        "value": true
+      }
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "switch-toggle",
+      "data": {
+        "id": "belt-power",
+        "value": true
+      }
+    },
+    {
+      "type": "conveyor-clutch",
+      "data": {
+        "id": "clearance-belt",
+        "value": true
+      }
+    },
+    {
+      "type": "receiver-power",
+      "data": {
+        "id": "transfer-light"
+      }
+    },
+    {
+      "type": "contact",
+      "data": {
+        "body": "cargo",
+        "speed": 1.921816945076224
+      }
+    },
+    {
+      "type": "shutter-open",
+      "data": {
+        "id": "west-door"
+      }
+    },
+    {
+      "type": "pad",
+      "data": {
+        "pad": "west-receiver",
+        "crate": "cargo"
+      }
+    },
+    {
+      "type": "contact",
+      "data": {
+        "body": "cargo",
+        "speed": 1.8807092159586287
+      }
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "lift-motor",
+      "data": {
+        "id": "clearance-shuttle"
+      }
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "lift-arrival",
+      "data": {
+        "id": "clearance-shuttle",
+        "value": "FAR DOCK"
+      }
+    },
+    {
+      "type": "lift-motor",
+      "data": {
+        "id": "clearance-shuttle"
+      }
+    },
+    {
+      "type": "lift-arrival",
+      "data": {
+        "id": "clearance-shuttle",
+        "value": "base"
+      }
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "lift-motor",
+      "data": {
+        "id": "clearance-shuttle"
+      }
+    },
+    {
+      "type": "lift-arrival",
+      "data": {
+        "id": "clearance-shuttle",
+        "value": "FAR DOCK"
+      }
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "complete",
+      "data": {
+        "chamber": 15
+      }
+    }
+  ],
+  "checkpoints": [
+    {
+      "label": "actual-authored-spawn",
+      "state": {
+        "room": "chamber-15",
+        "number": 15,
+        "mission": "Send the cube west before you cross. Keep the beam clear while the platform moves. Use the west exit.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            6.999999046325684,
+            0.8641180992126465,
+            12.499998092651367
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [
+          {
+            "id": "cargo",
+            "position": [
+              8.340597332789912e-7,
+              0.5499123930931091,
+              7.000000953674316
+            ],
+            "velocity": [
+              0.0000010419616955914535,
+              9.081360872187361e-7,
+              9.81951373546508e-8
+            ],
+            "rotation": [
+              -3.79460818322741e-9,
+              -1.7172193571626804e-12,
+              7.685940772717004e-8,
+              1
+            ],
+            "angularVelocity": [
+              1.7762299364676437e-7,
+              5.941585792161932e-14,
+              -0.0000018841165001504123
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "west-receiver",
+            "position": [
+              -7.8,
+              0,
+              7
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "east-receiver",
+            "position": [
+              7.8,
+              0,
+              7
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "clearance-belt",
+            "kind": "conveyor",
+            "label": "CARGO BELT",
+            "position": [
+              0,
+              -0.15,
+              7
+            ],
+            "size": [
+              17,
+              0.3,
+              6
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "belt-power",
+            "kind": "switch",
+            "label": "BELT POWER",
+            "position": [
+              7.3,
+              1.25,
+              12
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "reverse",
+            "kind": "switch",
+            "label": "REVERSE",
+            "position": [
+              4.8,
+              1.25,
+              12
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "clearance-shuttle",
+            "kind": "lift",
+            "label": "TRANSFER",
+            "position": [
+              4,
+              -0.2,
+              0
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "east-door",
+            "kind": "shutter",
+            "label": "EAST",
+            "position": [
+              11.12,
+              1.5,
+              -11
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "west-door",
+            "kind": "shutter",
+            "label": "WEST",
+            "position": [
+              -11.12,
+              1.5,
+              -11
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "clearance-source",
+            "position": [
+              -10.985,
+              1.55,
+              12
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 3.4,
+            "height": 3.1
+          },
+          {
+            "id": "clearance-return",
+            "position": [
+              0,
+              1.55,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 4,
+            "height": 3.1
+          }
+        ],
+        "exits": [
+          {
+            "id": "east-exit",
+            "label": "EXIT",
+            "position": [
+              13,
+              1.5,
+              -11
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          },
+          {
+            "id": "west-exit",
+            "label": "EXIT",
+            "position": [
+              -13,
+              1.5,
+              -11
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "clearance-emitter": {
+            "segments": [
+              {
+                "from": [
+                  -5,
+                  0.65,
+                  12
+                ],
+                "to": [
+                  -11,
+                  0.65,
+                  12
+                ]
+              }
+            ],
+            "stop": "obstacle",
+            "obstacle": "clearance-west-boundary-south",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "west-receiver": false,
+          "east-receiver": false,
+          "moving:clearance-belt": false,
+          "moving:belt-power": false,
+          "moving:reverse": false,
+          "moving:clearance-shuttle": false,
+          "safety:east-door": false,
+          "door-safety": false,
+          "moving:east-door": false,
+          "safety:west-door": false,
+          "moving:west-door": false,
+          "transfer-light": false
+        },
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "clearance-near-bank",
+          "normal": {
+            "x": -0.00003391777499928139,
+            "y": 1,
+            "z": 0.000012719165169983171
+          },
+          "toi": 0,
+          "witness": {
+            "x": 6.999209403991699,
+            "y": 2.9802322387695312e-8,
+            "z": 12.496444702148438
+          },
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": 0,
+            "y": -0.0011111111380159855,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-initial-cargo-blocks-routed-beam",
+      "state": {
+        "room": "chamber-15",
+        "number": 15,
+        "mission": "Send the cube west before you cross. Keep the beam clear while the platform moves. Use the west exit.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            6.999999046325684,
+            0.8641180992126465,
+            12.499998092651367
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "yaw": 1.7970858906298086,
+          "pitch": 0.005436316165191431,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "clearance-source",
+            "position": [
+              -10.959999999999999,
+              1.55,
+              11.45
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "clearance-return",
+            "position": [
+              0.55,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "cargo",
+            "position": [
+              8.340597332789912e-7,
+              0.5499123930931091,
+              7.000000953674316
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -3.79460818322741e-9,
+              -1.7172193571626804e-12,
+              7.685940772717004e-8,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "west-receiver",
+            "position": [
+              -7.8,
+              0,
+              7
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "east-receiver",
+            "position": [
+              7.8,
+              0,
+              7
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "clearance-belt",
+            "kind": "conveyor",
+            "label": "CARGO BELT",
+            "position": [
+              0,
+              -0.15,
+              7
+            ],
+            "size": [
+              17,
+              0.3,
+              6
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "belt-power",
+            "kind": "switch",
+            "label": "BELT POWER",
+            "position": [
+              7.3,
+              1.25,
+              12
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "reverse",
+            "kind": "switch",
+            "label": "REVERSE",
+            "position": [
+              4.8,
+              1.25,
+              12
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "clearance-shuttle",
+            "kind": "lift",
+            "label": "TRANSFER",
+            "position": [
+              4,
+              -0.2,
+              0
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "east-door",
+            "kind": "shutter",
+            "label": "EAST",
+            "position": [
+              11.12,
+              1.5,
+              -11
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "west-door",
+            "kind": "shutter",
+            "label": "WEST",
+            "position": [
+              -11.12,
+              1.5,
+              -11
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "clearance-source",
+            "position": [
+              -10.985,
+              1.55,
+              12
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 3.4,
+            "height": 3.1
+          },
+          {
+            "id": "clearance-return",
+            "position": [
+              0,
+              1.55,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 4,
+            "height": 3.1
+          }
+        ],
+        "exits": [
+          {
+            "id": "east-exit",
+            "label": "EXIT",
+            "position": [
+              13,
+              1.5,
+              -11
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          },
+          {
+            "id": "west-exit",
+            "label": "EXIT",
+            "position": [
+              -13,
+              1.5,
+              -11
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "clearance-emitter": {
+            "segments": [
+              {
+                "from": [
+                  -5,
+                  0.65,
+                  12
+                ],
+                "to": [
+                  -10.959999999999999,
+                  0.65,
+                  12
+                ],
+                "portal": "0"
+              },
+              {
+                "from": [
+                  -6.661338147750939e-16,
+                  0.65,
+                  13.959
+                ],
+                "to": [
+                  -6.661338147750939e-16,
+                  0.65,
+                  7.550001510620117
+                ]
+              }
+            ],
+            "stop": "obstacle",
+            "obstacle": "cargo",
+            "hops": 1
+          }
+        },
+        "signals": {
+          "west-receiver": false,
+          "east-receiver": false,
+          "moving:clearance-belt": false,
+          "moving:belt-power": false,
+          "moving:reverse": false,
+          "moving:clearance-shuttle": false,
+          "safety:east-door": false,
+          "door-safety": false,
+          "moving:east-door": false,
+          "safety:west-door": false,
+          "moving:west-door": false,
+          "transfer-light": false
+        },
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "portalA",
+            "time": 500,
+            "surface": "clearance-source",
+            "point": [
+              -10.959999999999999,
+              1.55,
+              11.45
+            ]
+          },
+          {
+            "type": "portalB",
+            "time": 508,
+            "surface": "clearance-return",
+            "point": [
+              0.55,
+              1.55,
+              13.959999999999999
+            ]
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "clearance-near-bank",
+          "normal": {
+            "x": -0.00003391777499928139,
+            "y": 1,
+            "z": 0.000012719165169983171
+          },
+          "toi": 0,
+          "witness": {
+            "x": 6.999209403991699,
+            "y": 2.9802322387695312e-8,
+            "z": 12.496444702148438
+          },
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": 0,
+            "y": -0.0011111111380159855,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "beam-clear-alone-does-not-start-shuttle",
+      "state": {
+        "room": "chamber-15",
+        "number": 15,
+        "mission": "Send the cube west before you cross. Keep the beam clear while the platform moves. Use the west exit.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            7.39127254486084,
+            0.8649948835372925,
+            12.999258995056152
+          ],
+          "velocity": [
+            0.0005354011236314846,
+            0,
+            -0.000004313510419885412
+          ],
+          "yaw": 0.07433153329205151,
+          "pitch": -0.319273919554086,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "clearance-source",
+            "position": [
+              -10.959999999999999,
+              1.55,
+              11.45
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "clearance-return",
+            "position": [
+              0.55,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "cargo",
+            "position": [
+              -0.5817915201187134,
+              0.5499123930931091,
+              7.000000953674316
+            ],
+            "velocity": [
+              -1.9041107892990112,
+              8.209853490370733e-7,
+              -1.581169755127121e-7
+            ],
+            "rotation": [
+              -2.1460527577232824e-8,
+              -1.0027949998159258e-10,
+              0.00006476337148342282,
+              1
+            ],
+            "angularVelocity": [
+              1.9406969897772797e-7,
+              -1.2583057713871264e-15,
+              -0.0000017285468629779643
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "west-receiver",
+            "position": [
+              -7.8,
+              0,
+              7
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "east-receiver",
+            "position": [
+              7.8,
+              0,
+              7
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "clearance-belt",
+            "kind": "conveyor",
+            "label": "CARGO BELT",
+            "position": [
+              0,
+              -0.15,
+              7
+            ],
+            "size": [
+              17,
+              0.3,
+              6
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "belt-power",
+            "kind": "switch",
+            "label": "BELT POWER",
+            "position": [
+              7.3,
+              1.25,
+              12
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "reverse",
+            "kind": "switch",
+            "label": "REVERSE",
+            "position": [
+              4.8,
+              1.25,
+              12
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "clearance-shuttle",
+            "kind": "lift",
+            "label": "TRANSFER",
+            "position": [
+              4,
+              -0.2,
+              0
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "east-door",
+            "kind": "shutter",
+            "label": "EAST",
+            "position": [
+              11.12,
+              1.5,
+              -11
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "west-door",
+            "kind": "shutter",
+            "label": "WEST",
+            "position": [
+              -11.12,
+              1.5,
+              -11
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "clearance-source",
+            "position": [
+              -10.985,
+              1.55,
+              12
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 3.4,
+            "height": 3.1
+          },
+          {
+            "id": "clearance-return",
+            "position": [
+              0,
+              1.55,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 4,
+            "height": 3.1
+          }
+        ],
+        "exits": [
+          {
+            "id": "east-exit",
+            "label": "EXIT",
+            "position": [
+              13,
+              1.5,
+              -11
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          },
+          {
+            "id": "west-exit",
+            "label": "EXIT",
+            "position": [
+              -13,
+              1.5,
+              -11
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "clearance-emitter": {
+            "segments": [
+              {
+                "from": [
+                  -5,
+                  0.65,
+                  12
+                ],
+                "to": [
+                  -10.959999999999999,
+                  0.65,
+                  12
+                ],
+                "portal": "0"
+              },
+              {
+                "from": [
+                  -6.661338147750939e-16,
+                  0.65,
+                  13.959
+                ],
+                "to": [
+                  -6.661338147750939e-16,
+                  0.65,
+                  3.7300000000000058
+                ]
+              }
+            ],
+            "stop": "receiver",
+            "receiver": "transfer-light",
+            "hops": 1
+          }
+        },
+        "signals": {
+          "west-receiver": false,
+          "east-receiver": false,
+          "moving:clearance-belt": false,
+          "moving:belt-power": false,
+          "moving:reverse": false,
+          "moving:clearance-shuttle": false,
+          "safety:east-door": false,
+          "door-safety": false,
+          "moving:east-door": false,
+          "safety:west-door": false,
+          "moving:west-door": false,
+          "transfer-light": true
+        },
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "portalA",
+            "time": 500,
+            "surface": "clearance-source",
+            "point": [
+              -10.959999999999999,
+              1.55,
+              11.45
+            ]
+          },
+          {
+            "type": "portalB",
+            "time": 508,
+            "surface": "clearance-return",
+            "point": [
+              0.55,
+              1.55,
+              13.959999999999999
+            ]
+          },
+          {
+            "type": "footstep",
+            "time": 725
+          },
+          {
+            "type": "footstep",
+            "time": 1150
+          },
+          {
+            "type": "switch-toggle",
+            "time": 1333,
+            "id": "reverse",
+            "value": true
+          },
+          {
+            "type": "footstep",
+            "time": 1575
+          },
+          {
+            "type": "switch-toggle",
+            "time": 2008,
+            "id": "belt-power",
+            "value": true
+          },
+          {
+            "type": "conveyor-clutch",
+            "time": 2008,
+            "id": "clearance-belt",
+            "value": true
+          },
+          {
+            "type": "receiver-power",
+            "time": 2367,
+            "id": "transfer-light"
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "clearance-near-bank",
+          "normal": {
+            "x": 0,
+            "y": 0.9999992847442627,
+            "z": 0.0011108967009931803
+          },
+          "toi": 0.00012407716712914407,
+          "witness": {
+            "x": 7.388286590576172,
+            "y": -0.0000040531158447265625,
+            "z": 12.9943208694458
+          },
+          "applied": {
+            "x": 4.982288714927563e-7,
+            "y": -0.00012407616304699332,
+            "z": -4.014028665011438e-9
+          },
+          "remaining": {
+            "x": 0.000003963446943089366,
+            "y": -0.0009870349895209074,
+            "z": -3.193189002104191e-8
+          }
+        }
+      ]
+    },
+    {
+      "label": "maintained-west-receiving-pressure",
+      "state": {
+        "room": "chamber-15",
+        "number": 15,
+        "mission": "Send the cube west before you cross. Keep the beam clear while the platform moves. Use the west exit.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            7.391326904296875,
+            0.8642101883888245,
+            12.99925708770752
+          ],
+          "velocity": [
+            6.913925862085802e-55,
+            0,
+            -5.570270575104298e-57
+          ],
+          "yaw": 0.07433153329205151,
+          "pitch": -0.319273919554086,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "clearance-source",
+            "position": [
+              -10.959999999999999,
+              1.55,
+              11.45
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "clearance-return",
+            "position": [
+              0.55,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "cargo",
+            "position": [
+              -7.800142288208008,
+              0.5499594211578369,
+              6.993096828460693
+            ],
+            "velocity": [
+              -0.00012172236893093213,
+              0.000018692300727707334,
+              -0.000010642059351084754
+            ],
+            "rotation": [
+              0.000028880833269795403,
+              0.0001640138798393309,
+              0.000005988075827190187,
+              1
+            ],
+            "angularVelocity": [
+              -0.00001924116259033326,
+              -1.9250640193035906e-8,
+              0.0002200758463004604
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "west-receiver",
+            "position": [
+              -7.8,
+              0,
+              7
+            ],
+            "pressed": true,
+            "crate": "cargo"
+          },
+          {
+            "id": "east-receiver",
+            "position": [
+              7.8,
+              0,
+              7
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "clearance-belt",
+            "kind": "conveyor",
+            "label": "CARGO BELT",
+            "position": [
+              0,
+              -0.15,
+              7
+            ],
+            "size": [
+              17,
+              0.3,
+              6
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "belt-power",
+            "kind": "switch",
+            "label": "BELT POWER",
+            "position": [
+              7.3,
+              1.25,
+              12
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "reverse",
+            "kind": "switch",
+            "label": "REVERSE",
+            "position": [
+              4.8,
+              1.25,
+              12
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "clearance-shuttle",
+            "kind": "lift",
+            "label": "TRANSFER",
+            "position": [
+              4,
+              -0.2,
+              0
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "east-door",
+            "kind": "shutter",
+            "label": "EAST",
+            "position": [
+              11.12,
+              1.5,
+              -11
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "west-door",
+            "kind": "shutter",
+            "label": "WEST",
+            "position": [
+              -11.12,
+              5,
+              -11
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "clearance-source",
+            "position": [
+              -10.985,
+              1.55,
+              12
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 3.4,
+            "height": 3.1
+          },
+          {
+            "id": "clearance-return",
+            "position": [
+              0,
+              1.55,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 4,
+            "height": 3.1
+          }
+        ],
+        "exits": [
+          {
+            "id": "east-exit",
+            "label": "EXIT",
+            "position": [
+              13,
+              1.5,
+              -11
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          },
+          {
+            "id": "west-exit",
+            "label": "EXIT",
+            "position": [
+              -13,
+              1.5,
+              -11
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "clearance-emitter": {
+            "segments": [
+              {
+                "from": [
+                  -5,
+                  0.65,
+                  12
+                ],
+                "to": [
+                  -10.959999999999999,
+                  0.65,
+                  12
+                ],
+                "portal": "0"
+              },
+              {
+                "from": [
+                  -6.661338147750939e-16,
+                  0.65,
+                  13.959
+                ],
+                "to": [
+                  -6.661338147750939e-16,
+                  0.65,
+                  3.7300000000000058
+                ]
+              }
+            ],
+            "stop": "receiver",
+            "receiver": "transfer-light",
+            "hops": 1
+          }
+        },
+        "signals": {
+          "west-receiver": true,
+          "east-receiver": false,
+          "moving:clearance-belt": false,
+          "moving:belt-power": false,
+          "moving:reverse": false,
+          "moving:clearance-shuttle": false,
+          "safety:east-door": false,
+          "door-safety": false,
+          "moving:east-door": false,
+          "safety:west-door": false,
+          "moving:west-door": false,
+          "transfer-light": true
+        },
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "portalA",
+            "time": 500,
+            "surface": "clearance-source",
+            "point": [
+              -10.959999999999999,
+              1.55,
+              11.45
+            ]
+          },
+          {
+            "type": "portalB",
+            "time": 508,
+            "surface": "clearance-return",
+            "point": [
+              0.55,
+              1.55,
+              13.959999999999999
+            ]
+          },
+          {
+            "type": "footstep",
+            "time": 725
+          },
+          {
+            "type": "footstep",
+            "time": 1150
+          },
+          {
+            "type": "switch-toggle",
+            "time": 1333,
+            "id": "reverse",
+            "value": true
+          },
+          {
+            "type": "footstep",
+            "time": 1575
+          },
+          {
+            "type": "switch-toggle",
+            "time": 2008,
+            "id": "belt-power",
+            "value": true
+          },
+          {
+            "type": "conveyor-clutch",
+            "time": 2008,
+            "id": "clearance-belt",
+            "value": true
+          },
+          {
+            "type": "receiver-power",
+            "time": 2367,
+            "id": "transfer-light"
+          },
+          {
+            "type": "contact",
+            "time": 5267,
+            "body": "cargo",
+            "speed": 1.921816945076224
+          },
+          {
+            "type": "shutter-open",
+            "time": 6375,
+            "id": "west-door"
+          },
+          {
+            "type": "pad",
+            "time": 6375,
+            "pad": "west-receiver",
+            "crate": "cargo"
+          },
+          {
+            "type": "contact",
+            "time": 7108,
+            "body": "cargo",
+            "speed": 1.8807092159586287
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "clearance-near-bank",
+          "normal": {
+            "x": 0,
+            "y": 1,
+            "z": 0.000008422755854553543
+          },
+          "toi": 0,
+          "witness": {
+            "x": 7.390802383422852,
+            "y": 0,
+            "z": 12.995171546936035
+          },
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": 0,
+            "y": -0.0011111111380159855,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "real-clearance-shuttle-boarding",
+      "state": {
+        "room": "chamber-15",
+        "number": 15,
+        "mission": "Send the cube west before you cross. Keep the beam clear while the platform moves. Use the west exit.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            4.001471996307373,
+            0.8651000261306763,
+            -0.04448740929365158
+          ],
+          "velocity": [
+            0.022576020559105122,
+            0,
+            -0.6823814270018743
+          ],
+          "yaw": -0.033070009535610526,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "clearance-source",
+            "position": [
+              -10.959999999999999,
+              1.55,
+              11.45
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "clearance-return",
+            "position": [
+              0.55,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "cargo",
+            "position": [
+              -7.80014181137085,
+              0.5499588251113892,
+              6.9931321144104
+            ],
+            "velocity": [
+              -0.00010711956565501168,
+              0.000014534676665789448,
+              -0.000021925827240920626
+            ],
+            "rotation": [
+              0.000029260185328894295,
+              0.00016549151041544974,
+              0.0000058310965869168285,
+              1
+            ],
+            "angularVelocity": [
+              -0.00003964242205256596,
+              -2.3837310791918753e-8,
+              0.0001936739427037537
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "west-receiver",
+            "position": [
+              -7.8,
+              0,
+              7
+            ],
+            "pressed": true,
+            "crate": "cargo"
+          },
+          {
+            "id": "east-receiver",
+            "position": [
+              7.8,
+              0,
+              7
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "clearance-belt",
+            "kind": "conveyor",
+            "label": "CARGO BELT",
+            "position": [
+              0,
+              -0.15,
+              7
+            ],
+            "size": [
+              17,
+              0.3,
+              6
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "belt-power",
+            "kind": "switch",
+            "label": "BELT POWER",
+            "position": [
+              7.3,
+              1.25,
+              12
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "reverse",
+            "kind": "switch",
+            "label": "REVERSE",
+            "position": [
+              4.8,
+              1.25,
+              12
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "clearance-shuttle",
+            "kind": "lift",
+            "label": "TRANSFER",
+            "position": [
+              4,
+              -0.2,
+              0
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "east-door",
+            "kind": "shutter",
+            "label": "EAST",
+            "position": [
+              11.12,
+              1.5,
+              -11
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "west-door",
+            "kind": "shutter",
+            "label": "WEST",
+            "position": [
+              -11.12,
+              5,
+              -11
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "clearance-source",
+            "position": [
+              -10.985,
+              1.55,
+              12
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 3.4,
+            "height": 3.1
+          },
+          {
+            "id": "clearance-return",
+            "position": [
+              0,
+              1.55,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 4,
+            "height": 3.1
+          }
+        ],
+        "exits": [
+          {
+            "id": "east-exit",
+            "label": "EXIT",
+            "position": [
+              13,
+              1.5,
+              -11
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          },
+          {
+            "id": "west-exit",
+            "label": "EXIT",
+            "position": [
+              -13,
+              1.5,
+              -11
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "clearance-emitter": {
+            "segments": [
+              {
+                "from": [
+                  -5,
+                  0.65,
+                  12
+                ],
+                "to": [
+                  -10.959999999999999,
+                  0.65,
+                  12
+                ],
+                "portal": "0"
+              },
+              {
+                "from": [
+                  -6.661338147750939e-16,
+                  0.65,
+                  13.959
+                ],
+                "to": [
+                  -6.661338147750939e-16,
+                  0.65,
+                  3.7300000000000058
+                ]
+              }
+            ],
+            "stop": "receiver",
+            "receiver": "transfer-light",
+            "hops": 1
+          }
+        },
+        "signals": {
+          "west-receiver": true,
+          "east-receiver": false,
+          "moving:clearance-belt": false,
+          "moving:belt-power": false,
+          "moving:reverse": false,
+          "moving:clearance-shuttle": false,
+          "safety:east-door": false,
+          "door-safety": false,
+          "moving:east-door": false,
+          "safety:west-door": false,
+          "moving:west-door": false,
+          "transfer-light": true
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 8383
+          },
+          {
+            "type": "footstep",
+            "time": 8808
+          },
+          {
+            "type": "footstep",
+            "time": 9233
+          },
+          {
+            "type": "footstep",
+            "time": 9658
+          },
+          {
+            "type": "footstep",
+            "time": 10083
+          },
+          {
+            "type": "footstep",
+            "time": 10508
+          },
+          {
+            "type": "footstep",
+            "time": 10933
+          },
+          {
+            "type": "footstep",
+            "time": 11358
+          },
+          {
+            "type": "lift-motor",
+            "time": 11375,
+            "id": "clearance-shuttle"
+          },
+          {
+            "type": "footstep",
+            "time": 11783
+          },
+          {
+            "type": "footstep",
+            "time": 12208
+          },
+          {
+            "type": "lift-arrival",
+            "time": 16375,
+            "id": "clearance-shuttle",
+            "value": "FAR DOCK"
+          },
+          {
+            "type": "lift-motor",
+            "time": 21375,
+            "id": "clearance-shuttle"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 26375,
+            "id": "clearance-shuttle",
+            "value": "base"
+          },
+          {
+            "type": "footstep",
+            "time": 26383
+          },
+          {
+            "type": "footstep",
+            "time": 26808
+          }
+        ]
+      },
+      "contacts": []
+    },
+    {
+      "label": "actual-far-bank-landing",
+      "state": {
+        "room": "chamber-15",
+        "number": 15,
+        "mission": "Send the cube west before you cross. Keep the beam clear while the platform moves. Use the west exit.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            3.999906539916992,
+            0.8649816513061523,
+            -9.044011116027832
+          ],
+          "velocity": [
+            -0.0005697528841740156,
+            0,
+            -0.6827576872697921
+          ],
+          "yaw": 0.0007963576216858199,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "clearance-source",
+            "position": [
+              -10.959999999999999,
+              1.55,
+              11.45
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "clearance-return",
+            "position": [
+              0.55,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "cargo",
+            "position": [
+              -7.800142288208008,
+              0.5499591827392578,
+              6.993190288543701
+            ],
+            "velocity": [
+              -0.0001243986189365387,
+              0.000019300357962492853,
+              -0.00001025313940772321
+            ],
+            "rotation": [
+              0.000029484943297575228,
+              0.00016444332140963525,
+              0.000006004523584124399,
+              1
+            ],
+            "angularVelocity": [
+              -0.000018537823052611202,
+              -4.223340965836542e-8,
+              0.0002249138633487746
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "west-receiver",
+            "position": [
+              -7.8,
+              0,
+              7
+            ],
+            "pressed": true,
+            "crate": "cargo"
+          },
+          {
+            "id": "east-receiver",
+            "position": [
+              7.8,
+              0,
+              7
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "clearance-belt",
+            "kind": "conveyor",
+            "label": "CARGO BELT",
+            "position": [
+              0,
+              -0.15,
+              7
+            ],
+            "size": [
+              17,
+              0.3,
+              6
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "belt-power",
+            "kind": "switch",
+            "label": "BELT POWER",
+            "position": [
+              7.3,
+              1.25,
+              12
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "reverse",
+            "kind": "switch",
+            "label": "REVERSE",
+            "position": [
+              4.8,
+              1.25,
+              12
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "clearance-shuttle",
+            "kind": "lift",
+            "label": "TRANSFER",
+            "position": [
+              4,
+              -0.2,
+              -6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "east-door",
+            "kind": "shutter",
+            "label": "EAST",
+            "position": [
+              11.12,
+              1.5,
+              -11
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "west-door",
+            "kind": "shutter",
+            "label": "WEST",
+            "position": [
+              -11.12,
+              5,
+              -11
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "clearance-source",
+            "position": [
+              -10.985,
+              1.55,
+              12
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 3.4,
+            "height": 3.1
+          },
+          {
+            "id": "clearance-return",
+            "position": [
+              0,
+              1.55,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 4,
+            "height": 3.1
+          }
+        ],
+        "exits": [
+          {
+            "id": "east-exit",
+            "label": "EXIT",
+            "position": [
+              13,
+              1.5,
+              -11
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          },
+          {
+            "id": "west-exit",
+            "label": "EXIT",
+            "position": [
+              -13,
+              1.5,
+              -11
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "clearance-emitter": {
+            "segments": [
+              {
+                "from": [
+                  -5,
+                  0.65,
+                  12
+                ],
+                "to": [
+                  -10.959999999999999,
+                  0.65,
+                  12
+                ],
+                "portal": "0"
+              },
+              {
+                "from": [
+                  -6.661338147750939e-16,
+                  0.65,
+                  13.959
+                ],
+                "to": [
+                  -6.661338147750939e-16,
+                  0.65,
+                  3.7300000000000058
+                ]
+              }
+            ],
+            "stop": "receiver",
+            "receiver": "transfer-light",
+            "hops": 1
+          }
+        },
+        "signals": {
+          "west-receiver": true,
+          "east-receiver": false,
+          "moving:clearance-belt": false,
+          "moving:belt-power": false,
+          "moving:reverse": false,
+          "moving:clearance-shuttle": false,
+          "safety:east-door": false,
+          "door-safety": false,
+          "moving:east-door": false,
+          "safety:west-door": false,
+          "moving:west-door": false,
+          "transfer-light": true
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 10083
+          },
+          {
+            "type": "footstep",
+            "time": 10508
+          },
+          {
+            "type": "footstep",
+            "time": 10933
+          },
+          {
+            "type": "footstep",
+            "time": 11358
+          },
+          {
+            "type": "lift-motor",
+            "time": 11375,
+            "id": "clearance-shuttle"
+          },
+          {
+            "type": "footstep",
+            "time": 11783
+          },
+          {
+            "type": "footstep",
+            "time": 12208
+          },
+          {
+            "type": "lift-arrival",
+            "time": 16375,
+            "id": "clearance-shuttle",
+            "value": "FAR DOCK"
+          },
+          {
+            "type": "lift-motor",
+            "time": 21375,
+            "id": "clearance-shuttle"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 26375,
+            "id": "clearance-shuttle",
+            "value": "base"
+          },
+          {
+            "type": "footstep",
+            "time": 26383
+          },
+          {
+            "type": "footstep",
+            "time": 26808
+          },
+          {
+            "type": "lift-motor",
+            "time": 31375,
+            "id": "clearance-shuttle"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 36375,
+            "id": "clearance-shuttle",
+            "value": "FAR DOCK"
+          },
+          {
+            "type": "footstep",
+            "time": 36383
+          },
+          {
+            "type": "footstep",
+            "time": 36808
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "clearance-far-bank",
+          "normal": {
+            "x": -0.02437724359333515,
+            "y": 0.9997028112411499,
+            "z": 0
+          },
+          "toi": 0.0001020975032588467,
+          "witness": {
+            "x": 4.000614643096924,
+            "y": -0.000001519918441772461,
+            "z": -9.043045043945312
+          },
+          "applied": {
+            "x": -8.361951131519163e-8,
+            "y": -0.000019568602510844357,
+            "z": -0.00010020460467785597
+          },
+          "remaining": {
+            "x": -0.000004664321295422269,
+            "y": -0.0010915425373241305,
+            "z": -0.005589442793279886
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-physical-completion",
+      "state": {
+        "room": "chamber-15",
+        "number": 15,
+        "mission": "Send the cube west before you cross. Keep the beam clear while the platform moves. Use the west exit.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -10.826751708984375,
+            0.8661758303642273,
+            -11.009284973144531
+          ],
+          "velocity": [
+            -4.78065022068987,
+            0,
+            0.014824060985518842
+          ],
+          "yaw": 1.5740262838010792,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "clearance-source",
+            "position": [
+              -10.959999999999999,
+              1.55,
+              11.45
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "clearance-return",
+            "position": [
+              0.55,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "cargo",
+            "position": [
+              -7.800140857696533,
+              0.5499593615531921,
+              6.993191242218018
+            ],
+            "velocity": [
+              -0.00012341220281086862,
+              0.000018819226170307957,
+              -0.000012440757018339355
+            ],
+            "rotation": [
+              0.00002881604632420931,
+              0.00016396337014157325,
+              0.0000061711239141004626,
+              1
+            ],
+            "angularVelocity": [
+              -0.000022493120923172683,
+              -4.2345636330765046e-8,
+              0.00022313145746011287
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "west-receiver",
+            "position": [
+              -7.8,
+              0,
+              7
+            ],
+            "pressed": true,
+            "crate": "cargo"
+          },
+          {
+            "id": "east-receiver",
+            "position": [
+              7.8,
+              0,
+              7
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "clearance-belt",
+            "kind": "conveyor",
+            "label": "CARGO BELT",
+            "position": [
+              0,
+              -0.15,
+              7
+            ],
+            "size": [
+              17,
+              0.3,
+              6
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "belt-power",
+            "kind": "switch",
+            "label": "BELT POWER",
+            "position": [
+              7.3,
+              1.25,
+              12
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "reverse",
+            "kind": "switch",
+            "label": "REVERSE",
+            "position": [
+              4.8,
+              1.25,
+              12
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "clearance-shuttle",
+            "kind": "lift",
+            "label": "TRANSFER",
+            "position": [
+              4,
+              -0.2,
+              -6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "east-door",
+            "kind": "shutter",
+            "label": "EAST",
+            "position": [
+              11.12,
+              1.5,
+              -11
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "west-door",
+            "kind": "shutter",
+            "label": "WEST",
+            "position": [
+              -11.12,
+              5,
+              -11
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "clearance-source",
+            "position": [
+              -10.985,
+              1.55,
+              12
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 3.4,
+            "height": 3.1
+          },
+          {
+            "id": "clearance-return",
+            "position": [
+              0,
+              1.55,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 4,
+            "height": 3.1
+          }
+        ],
+        "exits": [
+          {
+            "id": "east-exit",
+            "label": "EXIT",
+            "position": [
+              13,
+              1.5,
+              -11
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          },
+          {
+            "id": "west-exit",
+            "label": "EXIT",
+            "position": [
+              -13,
+              1.5,
+              -11
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          }
+        ],
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "west-exit",
+          "reason": "",
+          "events": [
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "portalA",
+              "time": 500,
+              "surface": "clearance-source",
+              "point": [
+                -10.959999999999999,
+                1.55,
+                11.45
+              ]
+            },
+            {
+              "type": "portalB",
+              "time": 508,
+              "surface": "clearance-return",
+              "point": [
+                0.55,
+                1.55,
+                13.959999999999999
+              ]
+            },
+            {
+              "type": "footstep",
+              "time": 725
+            },
+            {
+              "type": "footstep",
+              "time": 1150
+            },
+            {
+              "type": "switch-toggle",
+              "time": 1333,
+              "id": "reverse",
+              "value": true
+            },
+            {
+              "type": "footstep",
+              "time": 1575
+            },
+            {
+              "type": "switch-toggle",
+              "time": 2008,
+              "id": "belt-power",
+              "value": true
+            },
+            {
+              "type": "conveyor-clutch",
+              "time": 2008,
+              "id": "clearance-belt",
+              "value": true
+            },
+            {
+              "type": "receiver-power",
+              "time": 2367,
+              "id": "transfer-light"
+            },
+            {
+              "type": "contact",
+              "time": 5267,
+              "body": "cargo",
+              "speed": 1.921816945076224
+            },
+            {
+              "type": "shutter-open",
+              "time": 6375,
+              "id": "west-door"
+            },
+            {
+              "type": "pad",
+              "time": 6375,
+              "pad": "west-receiver",
+              "crate": "cargo"
+            },
+            {
+              "type": "contact",
+              "time": 7108,
+              "body": "cargo",
+              "speed": 1.8807092159586287
+            },
+            {
+              "type": "footstep",
+              "time": 8383
+            },
+            {
+              "type": "footstep",
+              "time": 8808
+            },
+            {
+              "type": "footstep",
+              "time": 9233
+            },
+            {
+              "type": "footstep",
+              "time": 9658
+            },
+            {
+              "type": "footstep",
+              "time": 10083
+            },
+            {
+              "type": "footstep",
+              "time": 10508
+            },
+            {
+              "type": "footstep",
+              "time": 10933
+            },
+            {
+              "type": "footstep",
+              "time": 11358
+            },
+            {
+              "type": "lift-motor",
+              "time": 11375,
+              "id": "clearance-shuttle"
+            },
+            {
+              "type": "footstep",
+              "time": 11783
+            },
+            {
+              "type": "footstep",
+              "time": 12208
+            },
+            {
+              "type": "lift-arrival",
+              "time": 16375,
+              "id": "clearance-shuttle",
+              "value": "FAR DOCK"
+            },
+            {
+              "type": "lift-motor",
+              "time": 21375,
+              "id": "clearance-shuttle"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 26375,
+              "id": "clearance-shuttle",
+              "value": "base"
+            },
+            {
+              "type": "footstep",
+              "time": 26383
+            },
+            {
+              "type": "footstep",
+              "time": 26808
+            },
+            {
+              "type": "lift-motor",
+              "time": 31375,
+              "id": "clearance-shuttle"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 36375,
+              "id": "clearance-shuttle",
+              "value": "FAR DOCK"
+            },
+            {
+              "type": "footstep",
+              "time": 36383
+            },
+            {
+              "type": "footstep",
+              "time": 36808
+            },
+            {
+              "type": "footstep",
+              "time": 37233
+            },
+            {
+              "type": "footstep",
+              "time": 37658
+            },
+            {
+              "type": "footstep",
+              "time": 38083
+            },
+            {
+              "type": "footstep",
+              "time": 38508
+            },
+            {
+              "type": "footstep",
+              "time": 38933
+            },
+            {
+              "type": "footstep",
+              "time": 39358
+            },
+            {
+              "type": "footstep",
+              "time": 39783
+            },
+            {
+              "type": "footstep",
+              "time": 40208
+            }
+          ],
+          "mechanisms": [
+            "switches",
+            "conveyors",
+            "beams",
+            "shutters",
+            "buttons",
+            "lifts"
+          ]
+        },
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "clearance-emitter": {
+            "segments": [
+              {
+                "from": [
+                  -5,
+                  0.65,
+                  12
+                ],
+                "to": [
+                  -10.959999999999999,
+                  0.65,
+                  12
+                ],
+                "portal": "0"
+              },
+              {
+                "from": [
+                  -6.661338147750939e-16,
+                  0.65,
+                  13.959
+                ],
+                "to": [
+                  -6.661338147750939e-16,
+                  0.65,
+                  3.7300000000000058
+                ]
+              }
+            ],
+            "stop": "receiver",
+            "receiver": "transfer-light",
+            "hops": 1
+          }
+        },
+        "signals": {
+          "west-receiver": true,
+          "east-receiver": false,
+          "moving:clearance-belt": false,
+          "moving:belt-power": false,
+          "moving:reverse": false,
+          "moving:clearance-shuttle": false,
+          "safety:east-door": false,
+          "door-safety": true,
+          "moving:east-door": false,
+          "safety:west-door": true,
+          "moving:west-door": false,
+          "transfer-light": true
+        },
+        "events": [
+          {
+            "type": "lift-arrival",
+            "time": 26375,
+            "id": "clearance-shuttle",
+            "value": "base"
+          },
+          {
+            "type": "footstep",
+            "time": 26383
+          },
+          {
+            "type": "footstep",
+            "time": 26808
+          },
+          {
+            "type": "lift-motor",
+            "time": 31375,
+            "id": "clearance-shuttle"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 36375,
+            "id": "clearance-shuttle",
+            "value": "FAR DOCK"
+          },
+          {
+            "type": "footstep",
+            "time": 36383
+          },
+          {
+            "type": "footstep",
+            "time": 36808
+          },
+          {
+            "type": "footstep",
+            "time": 37233
+          },
+          {
+            "type": "footstep",
+            "time": 37658
+          },
+          {
+            "type": "footstep",
+            "time": 38083
+          },
+          {
+            "type": "footstep",
+            "time": 38508
+          },
+          {
+            "type": "footstep",
+            "time": 38933
+          },
+          {
+            "type": "footstep",
+            "time": 39358
+          },
+          {
+            "type": "footstep",
+            "time": 39783
+          },
+          {
+            "type": "footstep",
+            "time": 40208
+          },
+          {
+            "type": "complete",
+            "time": 40467,
+            "chamber": 15
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "west-exit-floor",
+          "normal": {
+            "x": 0.03386939316987991,
+            "y": 0.9994263052940369,
+            "z": 0
+          },
+          "toi": 0.007734056096524,
+          "witness": {
+            "x": -10.800239562988281,
+            "y": 0.000005841255187988281,
+            "z": -11.00943660736084
+          },
+          "applied": {
+            "x": -0.007731012534350157,
+            "y": -0.0002156195550924167,
+            "z": 0.00002397268144704867
+          },
+          "remaining": {
+            "x": -0.03210774064064026,
+            "y": -0.0008954915683716536,
+            "z": 0.00009956116264220327
+          }
+        }
+      ]
+    },
+    {
+      "label": "final",
+      "state": {
+        "room": "chamber-15",
+        "number": 15,
+        "mission": "Send the cube west before you cross. Keep the beam clear while the platform moves. Use the west exit.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -10.826751708984375,
+            0.8661758303642273,
+            -11.009284973144531
+          ],
+          "velocity": [
+            -4.78065022068987,
+            0,
+            0.014824060985518842
+          ],
+          "yaw": 1.5740262838010792,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "clearance-source",
+            "position": [
+              -10.959999999999999,
+              1.55,
+              11.45
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "clearance-return",
+            "position": [
+              0.55,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "cargo",
+            "position": [
+              -7.800140857696533,
+              0.5499593615531921,
+              6.993191242218018
+            ],
+            "velocity": [
+              -0.00012341220281086862,
+              0.000018819226170307957,
+              -0.000012440757018339355
+            ],
+            "rotation": [
+              0.00002881604632420931,
+              0.00016396337014157325,
+              0.0000061711239141004626,
+              1
+            ],
+            "angularVelocity": [
+              -0.000022493120923172683,
+              -4.2345636330765046e-8,
+              0.00022313145746011287
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "west-receiver",
+            "position": [
+              -7.8,
+              0,
+              7
+            ],
+            "pressed": true,
+            "crate": "cargo"
+          },
+          {
+            "id": "east-receiver",
+            "position": [
+              7.8,
+              0,
+              7
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "clearance-belt",
+            "kind": "conveyor",
+            "label": "CARGO BELT",
+            "position": [
+              0,
+              -0.15,
+              7
+            ],
+            "size": [
+              17,
+              0.3,
+              6
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "belt-power",
+            "kind": "switch",
+            "label": "BELT POWER",
+            "position": [
+              7.3,
+              1.25,
+              12
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "reverse",
+            "kind": "switch",
+            "label": "REVERSE",
+            "position": [
+              4.8,
+              1.25,
+              12
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "clearance-shuttle",
+            "kind": "lift",
+            "label": "TRANSFER",
+            "position": [
+              4,
+              -0.2,
+              -6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "east-door",
+            "kind": "shutter",
+            "label": "EAST",
+            "position": [
+              11.12,
+              1.5,
+              -11
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "west-door",
+            "kind": "shutter",
+            "label": "WEST",
+            "position": [
+              -11.12,
+              5,
+              -11
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "clearance-source",
+            "position": [
+              -10.985,
+              1.55,
+              12
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 3.4,
+            "height": 3.1
+          },
+          {
+            "id": "clearance-return",
+            "position": [
+              0,
+              1.55,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 4,
+            "height": 3.1
+          }
+        ],
+        "exits": [
+          {
+            "id": "east-exit",
+            "label": "EXIT",
+            "position": [
+              13,
+              1.5,
+              -11
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          },
+          {
+            "id": "west-exit",
+            "label": "EXIT",
+            "position": [
+              -13,
+              1.5,
+              -11
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          }
+        ],
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "west-exit",
+          "reason": "",
+          "events": [
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "portalA",
+              "time": 500,
+              "surface": "clearance-source",
+              "point": [
+                -10.959999999999999,
+                1.55,
+                11.45
+              ]
+            },
+            {
+              "type": "portalB",
+              "time": 508,
+              "surface": "clearance-return",
+              "point": [
+                0.55,
+                1.55,
+                13.959999999999999
+              ]
+            },
+            {
+              "type": "footstep",
+              "time": 725
+            },
+            {
+              "type": "footstep",
+              "time": 1150
+            },
+            {
+              "type": "switch-toggle",
+              "time": 1333,
+              "id": "reverse",
+              "value": true
+            },
+            {
+              "type": "footstep",
+              "time": 1575
+            },
+            {
+              "type": "switch-toggle",
+              "time": 2008,
+              "id": "belt-power",
+              "value": true
+            },
+            {
+              "type": "conveyor-clutch",
+              "time": 2008,
+              "id": "clearance-belt",
+              "value": true
+            },
+            {
+              "type": "receiver-power",
+              "time": 2367,
+              "id": "transfer-light"
+            },
+            {
+              "type": "contact",
+              "time": 5267,
+              "body": "cargo",
+              "speed": 1.921816945076224
+            },
+            {
+              "type": "shutter-open",
+              "time": 6375,
+              "id": "west-door"
+            },
+            {
+              "type": "pad",
+              "time": 6375,
+              "pad": "west-receiver",
+              "crate": "cargo"
+            },
+            {
+              "type": "contact",
+              "time": 7108,
+              "body": "cargo",
+              "speed": 1.8807092159586287
+            },
+            {
+              "type": "footstep",
+              "time": 8383
+            },
+            {
+              "type": "footstep",
+              "time": 8808
+            },
+            {
+              "type": "footstep",
+              "time": 9233
+            },
+            {
+              "type": "footstep",
+              "time": 9658
+            },
+            {
+              "type": "footstep",
+              "time": 10083
+            },
+            {
+              "type": "footstep",
+              "time": 10508
+            },
+            {
+              "type": "footstep",
+              "time": 10933
+            },
+            {
+              "type": "footstep",
+              "time": 11358
+            },
+            {
+              "type": "lift-motor",
+              "time": 11375,
+              "id": "clearance-shuttle"
+            },
+            {
+              "type": "footstep",
+              "time": 11783
+            },
+            {
+              "type": "footstep",
+              "time": 12208
+            },
+            {
+              "type": "lift-arrival",
+              "time": 16375,
+              "id": "clearance-shuttle",
+              "value": "FAR DOCK"
+            },
+            {
+              "type": "lift-motor",
+              "time": 21375,
+              "id": "clearance-shuttle"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 26375,
+              "id": "clearance-shuttle",
+              "value": "base"
+            },
+            {
+              "type": "footstep",
+              "time": 26383
+            },
+            {
+              "type": "footstep",
+              "time": 26808
+            },
+            {
+              "type": "lift-motor",
+              "time": 31375,
+              "id": "clearance-shuttle"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 36375,
+              "id": "clearance-shuttle",
+              "value": "FAR DOCK"
+            },
+            {
+              "type": "footstep",
+              "time": 36383
+            },
+            {
+              "type": "footstep",
+              "time": 36808
+            },
+            {
+              "type": "footstep",
+              "time": 37233
+            },
+            {
+              "type": "footstep",
+              "time": 37658
+            },
+            {
+              "type": "footstep",
+              "time": 38083
+            },
+            {
+              "type": "footstep",
+              "time": 38508
+            },
+            {
+              "type": "footstep",
+              "time": 38933
+            },
+            {
+              "type": "footstep",
+              "time": 39358
+            },
+            {
+              "type": "footstep",
+              "time": 39783
+            },
+            {
+              "type": "footstep",
+              "time": 40208
+            }
+          ],
+          "mechanisms": [
+            "switches",
+            "conveyors",
+            "beams",
+            "shutters",
+            "buttons",
+            "lifts"
+          ]
+        },
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "clearance-emitter": {
+            "segments": [
+              {
+                "from": [
+                  -5,
+                  0.65,
+                  12
+                ],
+                "to": [
+                  -10.959999999999999,
+                  0.65,
+                  12
+                ],
+                "portal": "0"
+              },
+              {
+                "from": [
+                  -6.661338147750939e-16,
+                  0.65,
+                  13.959
+                ],
+                "to": [
+                  -6.661338147750939e-16,
+                  0.65,
+                  3.7300000000000058
+                ]
+              }
+            ],
+            "stop": "receiver",
+            "receiver": "transfer-light",
+            "hops": 1
+          }
+        },
+        "signals": {
+          "west-receiver": true,
+          "east-receiver": false,
+          "moving:clearance-belt": false,
+          "moving:belt-power": false,
+          "moving:reverse": false,
+          "moving:clearance-shuttle": false,
+          "safety:east-door": false,
+          "door-safety": true,
+          "moving:east-door": false,
+          "safety:west-door": true,
+          "moving:west-door": false,
+          "transfer-light": true
+        },
+        "events": [
+          {
+            "type": "lift-arrival",
+            "time": 26375,
+            "id": "clearance-shuttle",
+            "value": "base"
+          },
+          {
+            "type": "footstep",
+            "time": 26383
+          },
+          {
+            "type": "footstep",
+            "time": 26808
+          },
+          {
+            "type": "lift-motor",
+            "time": 31375,
+            "id": "clearance-shuttle"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 36375,
+            "id": "clearance-shuttle",
+            "value": "FAR DOCK"
+          },
+          {
+            "type": "footstep",
+            "time": 36383
+          },
+          {
+            "type": "footstep",
+            "time": 36808
+          },
+          {
+            "type": "footstep",
+            "time": 37233
+          },
+          {
+            "type": "footstep",
+            "time": 37658
+          },
+          {
+            "type": "footstep",
+            "time": 38083
+          },
+          {
+            "type": "footstep",
+            "time": 38508
+          },
+          {
+            "type": "footstep",
+            "time": 38933
+          },
+          {
+            "type": "footstep",
+            "time": 39358
+          },
+          {
+            "type": "footstep",
+            "time": 39783
+          },
+          {
+            "type": "footstep",
+            "time": 40208
+          },
+          {
+            "type": "complete",
+            "time": 40467,
+            "chamber": 15
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "west-exit-floor",
+          "normal": {
+            "x": 0.03386939316987991,
+            "y": 0.9994263052940369,
+            "z": 0
+          },
+          "toi": 0.007734056096524,
+          "witness": {
+            "x": -10.800239562988281,
+            "y": 0.000005841255187988281,
+            "z": -11.00943660736084
+          },
+          "applied": {
+            "x": -0.007731012534350157,
+            "y": -0.0002156195550924167,
+            "z": 0.00002397268144704867
+          },
+          "remaining": {
+            "x": -0.03210774064064026,
+            "y": -0.0008954915683716536,
+            "z": 0.00009956116264220327
+          }
+        }
+      ]
+    }
+  ]
+}

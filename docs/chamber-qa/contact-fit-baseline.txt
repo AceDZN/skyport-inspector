@@ -1,0 +1,91 @@
+✖ focused ceiling contact clears upward velocity and next step falls (59.530333ms)
+✔ focused ordinary free jump retains normal height without a ceiling boost (13.502208ms)
+✔ focused vertical wall contact does not cancel a legitimate rising jump (5.40775ms)
+✖ focused floor valid player offset 0.839 cannot overhang upright wall exit and recenters safely (7.044917ms)
+✔ focused same dt centered player floor to wall crossing remains valid (3.9785ms)
+✖ focused rotated cube floor-valid horizontal offset requires real wall exit fit and recenter recovery (21.134041ms)
+✔ focused same dt centered rotated cube preserves genuine gravity crossing (8.012625ms)
+✖ focused combined corner source fit retains solid floor when mapped wall fit is invalid (2.802958ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 4
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1080.717833
+
+✖ failing tests:
+
+test at tests/core-ceiling-exit-fit.test.ts:17:90
+✖ focused ceiling contact clears upward velocity and next step falls (59.530333ms)
+  AssertionError [ERR_ASSERTION]: Real ceiling clips displacement but stored upward velocity remains 4.533333333333329
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-ceiling-exit-fit.test.ts:22:196)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-ceiling-exit-fit.test.ts:17:168)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/core-ceiling-exit-fit.test.ts:17:90
+✖ focused floor valid player offset 0.839 cannot overhang upright wall exit and recenters safely (7.044917ms)
+  AssertionError [ERR_ASSERTION]: Floor-valid but wall-invalid upright body traversed
+  
+  1 !== 0
+  
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-ceiling-exit-fit.test.ts:38:247)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-ceiling-exit-fit.test.ts:17:168)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/core-ceiling-exit-fit.test.ts:17:90
+✖ focused rotated cube floor-valid horizontal offset requires real wall exit fit and recenter recovery (21.134041ms)
+  AssertionError [ERR_ASSERTION]: Rotated cube crossed an exit narrower than its actual support
+  
+  1 !== 0
+  
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-ceiling-exit-fit.test.ts:43:234)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-ceiling-exit-fit.test.ts:17:168)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/core-ceiling-exit-fit.test.ts:17:90
+✖ focused combined corner source fit retains solid floor when mapped wall fit is invalid (2.802958ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 0
+  
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-ceiling-exit-fit.test.ts:50:87)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-ceiling-exit-fit.test.ts:17:168)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

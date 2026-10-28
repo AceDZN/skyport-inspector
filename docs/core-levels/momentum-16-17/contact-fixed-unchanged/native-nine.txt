@@ -1,0 +1,61 @@
+✔ native comparison running jump 16 (132.703334ms)
+✔ native comparison running jump 17 (32.222583ms)
+✔ native comparison optimized air 16 jump=false (25.324417ms)
+✔ native comparison optimized air 16 jump=true (24.967167ms)
+✔ native comparison optimized air 17 jump=false (25.841958ms)
+✔ native comparison optimized air 17 jump=true (22.939542ms)
+✖ native comparison floor-valid upright-wall boundary -0.84 (27.818208ms)
+✖ native comparison floor-valid upright-wall boundary 0.84 (27.10225ms)
+✔ native comparison C17 shallow-near lane cannot jump across to far (41.627959ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 7
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1060.161292
+
+✖ failing tests:
+
+test at tests/core-comparisons-routes.test.ts:117:29
+✖ native comparison floor-valid upright-wall boundary -0.84 (27.818208ms)
+  AssertionError [ERR_ASSERTION]: Actual fall did not traverse; inspect aperture alignment and blocked-exit events {"player":{"position":[-4.983765125274658,-2.8012442588806152,-1.8690634965896606],"velocity":[1.6552700677212628e-28,0,-4.8],"yaw":0,"pitch":0,"grounded":true,"crossings":0},"portals":[{"surface":"shallow-floor","position":[-5,-2.95,1.6100000000000003],"normal":[0,1,0]},{"surface":"launch-white","position":[-7.96,9,-6],"normal":[1,0,0]}],"respawns":0,"contacts":[{"id":"shallow-bottom","normal":{"x":0,"y":0.9999999403953552,"z":0},"witness":{"x":-4.983776569366455,"y":-3,"z":-1.8690648078918457},"applied":{"x":0,"y":0,"z":0},"remaining":{"x":1.3793917452944508e-30,"y":-0.0011111111380159855,"z":-0.03999999910593033}}],"events":[{"type":"land","time":3.7499999999999893},{"type":"footstep","time":3.7583333333333226},{"type":"footstep","time":4.183333333333331},{"type":"footstep","time":4.608333333333352},{"type":"footstep","time":5.033333333333373},{"type":"footstep","time":5.458333333333394},{"type":"footstep","time":5.8833333333334155},{"type":"footstep","time":6.308333333333437}]}
+  
+  0 !== 1
+  
+      at Route.flight (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:36:10)
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:118:39)
+      at run (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:54:133)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:117:96)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/core-comparisons-routes.test.ts:117:29
+✖ native comparison floor-valid upright-wall boundary 0.84 (27.10225ms)
+  AssertionError [ERR_ASSERTION]: Actual fall did not traverse; inspect aperture alignment and blocked-exit events {"player":{"position":[-4.983742713928223,-2.701643943786621,0.05092941224575043],"velocity":[2.056742186237635e-30,0,-4.8],"yaw":0,"pitch":0,"grounded":true,"crossings":0},"portals":[{"surface":"shallow-floor","position":[-5,-2.95,3.29],"normal":[0,1,0]},{"surface":"launch-white","position":[-7.96,9,-6],"normal":[1,0,0]}],"respawns":0,"contacts":[{"id":"shallow-bottom","normal":{"x":0,"y":0.9999999403953552,"z":0},"witness":{"x":-4.983741760253906,"y":-3,"z":0.05092906951904297},"applied":{"x":0,"y":0,"z":0},"remaining":{"x":1.713951872609102e-32,"y":-0.0011111111380159855,"z":-0.03999999910593033}}],"events":[{"type":"footstep","time":3.3999999999999906},{"type":"footstep","time":3.824999999999989},{"type":"footstep","time":4.250000000000001},{"type":"footstep","time":4.675000000000022},{"type":"footstep","time":5.100000000000043},{"type":"footstep","time":5.525000000000064},{"type":"footstep","time":5.950000000000085},{"type":"footstep","time":6.375000000000107}]}
+  
+  0 !== 1
+  
+      at Route.flight (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:36:10)
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:118:39)
+      at run (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:54:133)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:117:96)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -101,7 +101,7 @@ function returnBelt(){
  b.panel('booth-white','control-booth-back',[0,1.75,9.485],[0,0,-1],5,3.5);
  b.panel('source-south','return-south-wall',[7,1.75,11.985],[0,0,-1],5,3.5);
  b.device({id:'belt-power',kind:'switch',label:'BELT POWER',position:[2,1.25,5.7],size:[.4,.7,.3],controlOffset:[0,0,.2]});
- b.device({id:'reverse',kind:'switch',label:'REVERSE',position:[-2,1.3,5.85],size:[.4,.6,.25],controlOffset:[0,0,.2]});
+ b.device({id:'reverse',kind:'switch',label:'REVERSE',position:[-2,1.3,5.85],size:[.4,.6,.25],controlOffset:[0,0,.2],controlCover:{id:'reverse-cover',blockedHint:'Stop the belt to uncover REVERSE.',openingHint:'Wait for the REVERSE cover to open.'}});
  // Real opaque service cover hides the reverse control while powered; stop first to reopen it.
  b.box('reverse-cabinet-back',[-2,1.5,5.55],[1.8,3,.2]);
  for(const x of [-2.8,-1.2])b.box('reverse-cabinet-side-'+x,[x,1.5,5.95],[.2,3,.8]);

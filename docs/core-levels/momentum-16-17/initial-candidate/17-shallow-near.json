@@ -1,0 +1,1291 @@
+{
+  "scope": "Unregistered authored-spawn native trajectory/route; no pose/velocity/goal/save/reset injection, no browser claim.",
+  "number": 17,
+  "contrast": true,
+  "error": null,
+  "notes": [
+    {
+      "stage": "prepared",
+      "state": {
+        "room": "chamber-17",
+        "number": 17,
+        "mission": "Reach the nearer gallery. It is narrower than the farther one.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -4.986913681030273,
+            0.8650249242782593,
+            6.3288679122924805
+          ],
+          "velocity": [
+            0.04861515994274396,
+            0,
+            -0.40910139239452603
+          ],
+          "yaw": 0.23854595222498534,
+          "pitch": 0.5329732084381744,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "shallow-floor",
+            "position": [
+              -5,
+              -2.95,
+              3.1
+            ],
+            "normal": [
+              0,
+              1,
+              0
+            ]
+          },
+          {
+            "surface": "launch-white",
+            "position": [
+              -7.96,
+              9,
+              -6
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "recovery-lift",
+            "kind": "lift",
+            "label": "RETURN",
+            "position": [
+              -5,
+              -22.2,
+              10
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "BASIN",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "shallow-floor",
+            "position": [
+              -5,
+              -2.975,
+              1
+            ],
+            "normal": [
+              0,
+              1,
+              0
+            ],
+            "width": 4,
+            "height": 10
+          },
+          {
+            "id": "deep-floor",
+            "position": [
+              3,
+              -17.975,
+              1
+            ],
+            "normal": [
+              0,
+              1,
+              0
+            ],
+            "width": 4,
+            "height": 10
+          },
+          {
+            "id": "launch-white",
+            "position": [
+              -7.985,
+              9,
+              0
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 22,
+            "height": 3.1
+          }
+        ],
+        "exits": [
+          {
+            "id": "near-exit",
+            "label": "EXIT",
+            "position": [
+              42,
+              -2.5,
+              -6
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          },
+          {
+            "id": "far-exit",
+            "label": "EXIT",
+            "position": [
+              42,
+              -2.5,
+              6
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "moving:recovery-lift": false,
+          "at:recovery-lift:BASIN": true,
+          "at:recovery-lift:APPROACH": false
+        },
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "footstep",
+            "time": 425
+          },
+          {
+            "type": "footstep",
+            "time": 850
+          },
+          {
+            "type": "footstep",
+            "time": 1275
+          },
+          {
+            "type": "footstep",
+            "time": 1700
+          },
+          {
+            "type": "footstep",
+            "time": 2242
+          },
+          {
+            "type": "portalA",
+            "time": 2567,
+            "surface": "shallow-floor",
+            "point": [
+              -5,
+              -2.95,
+              3.1
+            ]
+          },
+          {
+            "type": "portalB",
+            "time": 2567,
+            "surface": "launch-white",
+            "point": [
+              -7.96,
+              9,
+              -6
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "stage": "flight",
+      "peak": 10.349072456359863,
+      "samples": [
+        {
+          "t": 0,
+          "p": [
+            -7.903626356124878,
+            9.649071788787841,
+            -5.983761787414551
+          ],
+          "v": [
+            10.800000000000002,
+            4.8,
+            0.0013614073301546625
+          ],
+          "grounded": false
+        },
+        {
+          "t": 0.1,
+          "p": [
+            -6.823624610900879,
+            10.042405128479004,
+            -5.983624458312988
+          ],
+          "v": [
+            10.800000000000002,
+            3.199999999999998,
+            0.0013614073301546625
+          ],
+          "grounded": false
+        },
+        {
+          "t": 0.2,
+          "p": [
+            -5.743622779846191,
+            10.275738716125488,
+            -5.983487129211426
+          ],
+          "v": [
+            10.800000000000002,
+            1.5999999999999983,
+            0.0013614073301546625
+          ],
+          "grounded": false
+        },
+        {
+          "t": 0.3,
+          "p": [
+            -4.663620948791504,
+            10.349072456359863,
+            -5.983349800109863
+          ],
+          "v": [
+            10.800000000000002,
+            -1.3877787807814457e-15,
+            0.0013614073301546625
+          ],
+          "grounded": false
+        },
+        {
+          "t": 0.4,
+          "p": [
+            -3.583620309829712,
+            10.262405395507812,
+            -5.983212471008301
+          ],
+          "v": [
+            10.800000000000002,
+            -1.6000000000000012,
+            0.0013614073301546625
+          ],
+          "grounded": false
+        },
+        {
+          "t": 0.5,
+          "p": [
+            -2.5036213397979736,
+            10.015738487243652,
+            -5.983075141906738
+          ],
+          "v": [
+            10.800000000000002,
+            -3.200000000000001,
+            0.0013614073301546625
+          ],
+          "grounded": false
+        },
+        {
+          "t": 0.6,
+          "p": [
+            -1.4236215353012085,
+            9.609071731567383,
+            -5.982937812805176
+          ],
+          "v": [
+            10.800000000000002,
+            -4.800000000000003,
+            0.0013614073301546625
+          ],
+          "grounded": false
+        },
+        {
+          "t": 0.7,
+          "p": [
+            -0.3436211943626404,
+            9.042405128479004,
+            -5.982800483703613
+          ],
+          "v": [
+            10.800000000000002,
+            -6.400000000000008,
+            0.0013614073301546625
+          ],
+          "grounded": false
+        },
+        {
+          "t": 0.8,
+          "p": [
+            0.7363789081573486,
+            8.315738677978516,
+            -5.982663154602051
+          ],
+          "v": [
+            10.800000000000002,
+            -8.000000000000012,
+            0.0013614073301546625
+          ],
+          "grounded": false
+        },
+        {
+          "t": 0.9,
+          "p": [
+            1.8163793087005615,
+            7.429073333740234,
+            -5.982525825500488
+          ],
+          "v": [
+            10.800000000000002,
+            -9.600000000000007,
+            0.0013614073301546625
+          ],
+          "grounded": false
+        },
+        {
+          "t": 1,
+          "p": [
+            2.896378517150879,
+            6.382406711578369,
+            -5.982388496398926
+          ],
+          "v": [
+            10.800000000000002,
+            -11.200000000000001,
+            0.0013614073301546625
+          ],
+          "grounded": false
+        },
+        {
+          "t": 1.1,
+          "p": [
+            3.976377487182617,
+            5.175739765167236,
+            -5.982251167297363
+          ],
+          "v": [
+            10.800000000000002,
+            -12.799999999999995,
+            0.0013614073301546625
+          ],
+          "grounded": false
+        },
+        {
+          "t": 1.2,
+          "p": [
+            5.056379318237305,
+            3.809072971343994,
+            -5.982113838195801
+          ],
+          "v": [
+            10.800000000000002,
+            -14.39999999999999,
+            0.0013614073301546625
+          ],
+          "grounded": false
+        },
+        {
+          "t": 1.3,
+          "p": [
+            6.136381149291992,
+            2.2824060916900635,
+            -5.981976509094238
+          ],
+          "v": [
+            10.800000000000002,
+            -15.999999999999984,
+            0.0013614073301546625
+          ],
+          "grounded": false
+        },
+        {
+          "t": 1.4,
+          "p": [
+            7.21638298034668,
+            0.5957393050193787,
+            -5.981839179992676
+          ],
+          "v": [
+            10.800000000000002,
+            -17.59999999999998,
+            0.0013614073301546625
+          ],
+          "grounded": false
+        },
+        {
+          "t": 1.5,
+          "p": [
+            8.296384811401367,
+            -1.250927448272705,
+            -5.981701850891113
+          ],
+          "v": [
+            10.800000000000002,
+            -19.199999999999974,
+            0.0013614073301546625
+          ],
+          "grounded": false
+        },
+        {
+          "t": 1.6,
+          "p": [
+            9.376384735107422,
+            -3.1348652839660645,
+            -5.981558322906494
+          ],
+          "v": [
+            10.800000000000002,
+            0,
+            0.0013614073301546625
+          ],
+          "grounded": true
+        }
+      ],
+      "entry": {
+        "type": "enter",
+        "time": 3.416666666666657,
+        "body": "player",
+        "from": 0,
+        "to": 1,
+        "fromSurface": "shallow-floor",
+        "toSurface": "launch-white",
+        "speed": 11.8186294405667,
+        "exitSpeed": 11.818629440566701,
+        "held": null
+      },
+      "exit": [
+        -7.903626356124878,
+        9.649071788787841,
+        -5.983761787414551
+      ],
+      "exitVelocity": [
+        10.800000000000002,
+        4.8,
+        0.0013614073301546625
+      ],
+      "land": [
+        9.376384735107422,
+        -3.1348652839660645,
+        -5.981558322906494
+      ],
+      "ground": "near-gallery",
+      "state": {
+        "room": "chamber-17",
+        "number": 17,
+        "mission": "Reach the nearer gallery. It is narrower than the farther one.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            9.376384735107422,
+            -3.1348652839660645,
+            -5.981558322906494
+          ],
+          "velocity": [
+            10.800000000000002,
+            0,
+            0.0013614073301546625
+          ],
+          "yaw": -1.5707963267948966,
+          "pitch": 1.4292568534704693,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "shallow-floor",
+            "position": [
+              -5,
+              -2.95,
+              3.1
+            ],
+            "normal": [
+              0,
+              1,
+              0
+            ]
+          },
+          {
+            "surface": "launch-white",
+            "position": [
+              -7.96,
+              9,
+              -6
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "recovery-lift",
+            "kind": "lift",
+            "label": "RETURN",
+            "position": [
+              -5,
+              -22.2,
+              10
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "BASIN",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "shallow-floor",
+            "position": [
+              -5,
+              -2.975,
+              1
+            ],
+            "normal": [
+              0,
+              1,
+              0
+            ],
+            "width": 4,
+            "height": 10
+          },
+          {
+            "id": "deep-floor",
+            "position": [
+              3,
+              -17.975,
+              1
+            ],
+            "normal": [
+              0,
+              1,
+              0
+            ],
+            "width": 4,
+            "height": 10
+          },
+          {
+            "id": "launch-white",
+            "position": [
+              -7.985,
+              9,
+              0
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 22,
+            "height": 3.1
+          }
+        ],
+        "exits": [
+          {
+            "id": "near-exit",
+            "label": "EXIT",
+            "position": [
+              42,
+              -2.5,
+              -6
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          },
+          {
+            "id": "far-exit",
+            "label": "EXIT",
+            "position": [
+              42,
+              -2.5,
+              6
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": true,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "moving:recovery-lift": false,
+          "at:recovery-lift:BASIN": true,
+          "at:recovery-lift:APPROACH": false
+        },
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "footstep",
+            "time": 425
+          },
+          {
+            "type": "footstep",
+            "time": 850
+          },
+          {
+            "type": "footstep",
+            "time": 1275
+          },
+          {
+            "type": "footstep",
+            "time": 1700
+          },
+          {
+            "type": "footstep",
+            "time": 2242
+          },
+          {
+            "type": "portalA",
+            "time": 2567,
+            "surface": "shallow-floor",
+            "point": [
+              -5,
+              -2.95,
+              3.1
+            ]
+          },
+          {
+            "type": "portalB",
+            "time": 2567,
+            "surface": "launch-white",
+            "point": [
+              -7.96,
+              9,
+              -6
+            ]
+          },
+          {
+            "type": "footstep",
+            "time": 2667
+          },
+          {
+            "type": "launch",
+            "time": 3417,
+            "speed": 11.8186294405667
+          },
+          {
+            "type": "enter",
+            "time": 3417,
+            "body": "player",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "shallow-floor",
+            "toSurface": "launch-white",
+            "speed": 11.8186294405667,
+            "exitSpeed": 11.818629440566701,
+            "held": null
+          },
+          {
+            "type": "land",
+            "time": 5017
+          }
+        ]
+      }
+    }
+  ],
+  "events": [
+    {
+      "type": "land",
+      "time": 0.008333333333333333
+    },
+    {
+      "type": "footstep",
+      "time": 0.4250000000000005
+    },
+    {
+      "type": "footstep",
+      "time": 0.8499999999999994
+    },
+    {
+      "type": "footstep",
+      "time": 1.274999999999998
+    },
+    {
+      "type": "footstep",
+      "time": 1.6999999999999964
+    },
+    {
+      "type": "footstep",
+      "time": 2.2416666666666614
+    },
+    {
+      "type": "portalA",
+      "time": 2.56666666666666,
+      "surface": "shallow-floor",
+      "point": [
+        -5,
+        -2.95,
+        3.1
+      ]
+    },
+    {
+      "type": "portalB",
+      "time": 2.56666666666666,
+      "surface": "launch-white",
+      "point": [
+        -7.96,
+        9,
+        -6
+      ]
+    },
+    {
+      "type": "footstep",
+      "time": 2.66666666666666
+    },
+    {
+      "type": "launch",
+      "time": 3.416666666666657,
+      "speed": 11.8186294405667
+    },
+    {
+      "type": "enter",
+      "time": 3.416666666666657,
+      "body": "player",
+      "from": 0,
+      "to": 1,
+      "fromSurface": "shallow-floor",
+      "toSurface": "launch-white",
+      "speed": 11.8186294405667,
+      "exitSpeed": 11.818629440566701,
+      "held": null
+    },
+    {
+      "type": "land",
+      "time": 5.016666666666706
+    },
+    {
+      "type": "footstep",
+      "time": 5.025000000000039
+    },
+    {
+      "type": "footstep",
+      "time": 5.450000000000061
+    },
+    {
+      "type": "footstep",
+      "time": 5.875000000000082
+    },
+    {
+      "type": "footstep",
+      "time": 6.300000000000103
+    },
+    {
+      "type": "footstep",
+      "time": 6.725000000000124
+    },
+    {
+      "type": "footstep",
+      "time": 7.150000000000145
+    },
+    {
+      "type": "footstep",
+      "time": 7.575000000000166
+    },
+    {
+      "type": "footstep",
+      "time": 8.000000000000187
+    },
+    {
+      "type": "footstep",
+      "time": 8.425000000000162
+    },
+    {
+      "type": "footstep",
+      "time": 8.850000000000138
+    },
+    {
+      "type": "footstep",
+      "time": 9.275000000000114
+    },
+    {
+      "type": "footstep",
+      "time": 9.70000000000009
+    },
+    {
+      "type": "footstep",
+      "time": 10.125000000000066
+    },
+    {
+      "type": "footstep",
+      "time": 10.550000000000042
+    },
+    {
+      "type": "footstep",
+      "time": 10.975000000000017
+    },
+    {
+      "type": "footstep",
+      "time": 11.399999999999993
+    },
+    {
+      "type": "complete",
+      "time": 11.474999999999989,
+      "chamber": 17
+    }
+  ],
+  "final": {
+    "room": "chamber-17",
+    "number": 17,
+    "mission": "Reach the nearer gallery. It is narrower than the farther one.",
+    "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+    "player": {
+      "position": [
+        39.848201751708984,
+        -3.134999990463257,
+        -5.99835205078125
+      ],
+      "velocity": [
+        4.799999358267416,
+        0,
+        -0.0024818518563613405
+      ],
+      "yaw": -1.5702735955768743,
+      "pitch": 0,
+      "grounded": true,
+      "crossings": 1
+    },
+    "portals": [
+      {
+        "surface": "shallow-floor",
+        "position": [
+          -5,
+          -2.95,
+          3.1
+        ],
+        "normal": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "surface": "launch-white",
+        "position": [
+          -7.96,
+          9,
+          -6
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ]
+      }
+    ],
+    "crates": [],
+    "pads": [],
+    "devices": [
+      {
+        "id": "recovery-lift",
+        "kind": "lift",
+        "label": "RETURN",
+        "position": [
+          -5,
+          -22.2,
+          10
+        ],
+        "size": [
+          4,
+          0.4,
+          4
+        ],
+        "active": true,
+        "progress": 0,
+        "choice": "BASIN",
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      }
+    ],
+    "panels": [
+      {
+        "id": "shallow-floor",
+        "position": [
+          -5,
+          -2.975,
+          1
+        ],
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "width": 4,
+        "height": 10
+      },
+      {
+        "id": "deep-floor",
+        "position": [
+          3,
+          -17.975,
+          1
+        ],
+        "normal": [
+          0,
+          1,
+          0
+        ],
+        "width": 4,
+        "height": 10
+      },
+      {
+        "id": "launch-white",
+        "position": [
+          -7.985,
+          9,
+          0
+        ],
+        "normal": [
+          1,
+          0,
+          0
+        ],
+        "width": 22,
+        "height": 3.1
+      }
+    ],
+    "exits": [
+      {
+        "id": "near-exit",
+        "label": "EXIT",
+        "position": [
+          42,
+          -2.5,
+          -6
+        ],
+        "size": [
+          4.359999999999999,
+          3,
+          2.7600000000000016
+        ]
+      },
+      {
+        "id": "far-exit",
+        "label": "EXIT",
+        "position": [
+          42,
+          -2.5,
+          6
+        ],
+        "size": [
+          4.359999999999999,
+          3,
+          2.7600000000000016
+        ]
+      }
+    ],
+    "result": {
+      "goalMatched": true,
+      "physicalComplete": true,
+      "exit": "near-exit",
+      "reason": "",
+      "events": [
+        {
+          "type": "land",
+          "time": 8
+        },
+        {
+          "type": "footstep",
+          "time": 425
+        },
+        {
+          "type": "footstep",
+          "time": 850
+        },
+        {
+          "type": "footstep",
+          "time": 1275
+        },
+        {
+          "type": "footstep",
+          "time": 1700
+        },
+        {
+          "type": "footstep",
+          "time": 2242
+        },
+        {
+          "type": "portalA",
+          "time": 2567,
+          "surface": "shallow-floor",
+          "point": [
+            -5,
+            -2.95,
+            3.1
+          ]
+        },
+        {
+          "type": "portalB",
+          "time": 2567,
+          "surface": "launch-white",
+          "point": [
+            -7.96,
+            9,
+            -6
+          ]
+        },
+        {
+          "type": "footstep",
+          "time": 2667
+        },
+        {
+          "type": "launch",
+          "time": 3417,
+          "speed": 11.8186294405667
+        },
+        {
+          "type": "enter",
+          "time": 3417,
+          "body": "player",
+          "from": 0,
+          "to": 1,
+          "fromSurface": "shallow-floor",
+          "toSurface": "launch-white",
+          "speed": 11.8186294405667,
+          "exitSpeed": 11.818629440566701,
+          "held": null
+        },
+        {
+          "type": "land",
+          "time": 5017
+        },
+        {
+          "type": "footstep",
+          "time": 5025
+        },
+        {
+          "type": "footstep",
+          "time": 5450
+        },
+        {
+          "type": "footstep",
+          "time": 5875
+        },
+        {
+          "type": "footstep",
+          "time": 6300
+        },
+        {
+          "type": "footstep",
+          "time": 6725
+        },
+        {
+          "type": "footstep",
+          "time": 7150
+        },
+        {
+          "type": "footstep",
+          "time": 7575
+        },
+        {
+          "type": "footstep",
+          "time": 8000
+        },
+        {
+          "type": "footstep",
+          "time": 8425
+        },
+        {
+          "type": "footstep",
+          "time": 8850
+        },
+        {
+          "type": "footstep",
+          "time": 9275
+        },
+        {
+          "type": "footstep",
+          "time": 9700
+        },
+        {
+          "type": "footstep",
+          "time": 10125
+        },
+        {
+          "type": "footstep",
+          "time": 10550
+        },
+        {
+          "type": "footstep",
+          "time": 10975
+        },
+        {
+          "type": "footstep",
+          "time": 11400
+        }
+      ],
+      "mechanisms": [
+        "momentum",
+        "portals"
+      ]
+    },
+    "held": null,
+    "holdSpaceTransform": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "launchUsed": true,
+    "respawns": 0,
+    "beams": {},
+    "signals": {
+      "moving:recovery-lift": false,
+      "at:recovery-lift:BASIN": true,
+      "at:recovery-lift:APPROACH": false
+    },
+    "events": [
+      {
+        "type": "footstep",
+        "time": 5450
+      },
+      {
+        "type": "footstep",
+        "time": 5875
+      },
+      {
+        "type": "footstep",
+        "time": 6300
+      },
+      {
+        "type": "footstep",
+        "time": 6725
+      },
+      {
+        "type": "footstep",
+        "time": 7150
+      },
+      {
+        "type": "footstep",
+        "time": 7575
+      },
+      {
+        "type": "footstep",
+        "time": 8000
+      },
+      {
+        "type": "footstep",
+        "time": 8425
+      },
+      {
+        "type": "footstep",
+        "time": 8850
+      },
+      {
+        "type": "footstep",
+        "time": 9275
+      },
+      {
+        "type": "footstep",
+        "time": 9700
+      },
+      {
+        "type": "footstep",
+        "time": 10125
+      },
+      {
+        "type": "footstep",
+        "time": 10550
+      },
+      {
+        "type": "footstep",
+        "time": 10975
+      },
+      {
+        "type": "footstep",
+        "time": 11400
+      },
+      {
+        "type": "complete",
+        "time": 11475,
+        "chamber": 17
+      }
+    ]
+  }
+}

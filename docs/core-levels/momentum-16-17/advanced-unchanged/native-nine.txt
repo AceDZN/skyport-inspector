@@ -1,0 +1,53 @@
+✔ native comparison running jump 16 (141.609708ms)
+✔ native comparison running jump 17 (31.423875ms)
+✔ native comparison optimized air 16 jump=false (25.082625ms)
+✖ native comparison optimized air 16 jump=true (23.52375ms)
+✔ native comparison optimized air 17 jump=false (24.38375ms)
+✖ native comparison optimized air 17 jump=true (24.207708ms)
+✔ native comparison floor-valid upright-wall boundary -0.84 (18.844875ms)
+✔ native comparison floor-valid upright-wall boundary 0.84 (16.416458ms)
+✔ native comparison C17 shallow-near lane cannot jump across to far (39.310917ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 7
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1072.393833
+
+✖ failing tests:
+
+test at tests/core-comparisons-routes.test.ts:114:69
+✖ native comparison optimized air 16 jump=true (23.52375ms)
+  AssertionError [ERR_ASSERTION]: Optimized legal air inputs bypass the candidate {"player":{"position":[14.510805130004883,5.888545989990234,-6.127452373504639],"velocity":[16.51119564851771,0,-0.05653636536185204],"yaw":-2.8448866807507573,"pitch":0.47123889803846924,"grounded":true,"crossings":1},"portals":[{"surface":"shallow-floor","position":[-5,-2.95,-1.9],"normal":[0,1,0]},{"surface":"launch-white","position":[-7.96,9,-6],"normal":[1,0,0]}],"respawns":0,"contacts":[],"events":[{"type":"portalB","time":2.56666666666666,"surface":"launch-white","point":[-7.96,9,-6]},{"type":"footstep","time":2.66666666666666},{"type":"footstep","time":3.0916666666666583},{"type":"jump","time":3.2833333333333243},{"type":"launch","time":4.433333333333343,"speed":16.32597377111238},{"type":"enter","time":4.433333333333343,"body":"player","from":0,"to":1,"fromSurface":"shallow-floor","toSurface":"launch-white","speed":16.32597377111238,"exitSpeed":16.325973771112384,"held":null},{"type":"land","time":5.966666666666753},{"type":"footstep","time":5.966666666666753}]}
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:115:217)
+      at run (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:54:133)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:114:134)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'higher-gallery',
+    expected: 'higher-gallery',
+    operator: 'notStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests/core-comparisons-routes.test.ts:114:69
+✖ native comparison optimized air 17 jump=true (24.207708ms)
+  AssertionError [ERR_ASSERTION]: Optimized legal air inputs bypass the candidate {"player":{"position":[23.048824310302734,-3.1348729133605957,5.8254714012146],"velocity":[17.61221320604623,0,-0.06390250187636079],"yaw":-2.8623399732707004,"pitch":0.47123889803846924,"grounded":true,"crossings":1},"portals":[{"surface":"shallow-floor","position":[-5,-2.95,-1.9],"normal":[0,1,0]},{"surface":"launch-white","position":[-7.96,9,6],"normal":[1,0,0]}],"respawns":0,"contacts":[{"id":"far-gallery","normal":{"x":-0.0000017894974462251412,"y":1,"z":-0.00001431597956980113},"witness":{"x":23.011966705322266,"y":-4,"z":5.825191497802734},"applied":{"x":0.10978074371814728,"y":-0.1375759392976761,"z":-0.0003983181668445468},"remaining":{"x":0.036987707018852234,"y":-0.04635255038738251,"z":-0.00013420270988717675}}],"events":[{"type":"portalB","time":2.56666666666666,"surface":"launch-white","point":[-7.96,9,6]},{"type":"footstep","time":2.66666666666666},{"type":"footstep","time":3.0916666666666583},{"type":"jump","time":3.2833333333333243},{"type":"launch","time":4.433333333333343,"speed":16.32597377111238},{"type":"enter","time":4.433333333333343,"body":"player","from":0,"to":1,"fromSurface":"shallow-floor","toSurface":"launch-white","speed":16.32597377111238,"exitSpeed":16.325973771112384,"held":null},{"type":"land","time":6.466666666666778},{"type":"footstep","time":6.466666666666778}]}
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:115:217)
+      at run (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:54:133)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:114:134)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'far-gallery',
+    expected: 'far-gallery',
+    operator: 'notStrictEqual',
+    diff: 'simple'
+  }

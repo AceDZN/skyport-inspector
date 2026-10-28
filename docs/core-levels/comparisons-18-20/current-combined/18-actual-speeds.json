@@ -1,0 +1,252 @@
+{
+  "scope": "Unregistered authored-spawn native trajectory/route; no pose/velocity/goal/save/reset injection, no browser claim.",
+  "number": 18,
+  "contrast": false,
+  "error": null,
+  "notes": [],
+  "events": [
+    {
+      "type": "land",
+      "time": 0.008333333333333333
+    },
+    {
+      "type": "lift-motor",
+      "time": 8.00833333333352,
+      "id": "inspection-carrier"
+    },
+    {
+      "type": "lift-motor",
+      "time": 8.00833333333352,
+      "id": "service-carrier"
+    }
+  ],
+  "barrierContacts": [],
+  "final": {
+    "room": "chamber-18",
+    "number": 18,
+    "mission": "Use the faster of the two carriers. The lanes are the same length.",
+    "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+    "player": {
+      "position": [
+        9.578006938681938e-7,
+        0.8647764921188354,
+        15
+      ],
+      "velocity": [
+        0,
+        0,
+        0
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "grounded": true,
+      "crossings": 0
+    },
+    "portals": [
+      null,
+      null
+    ],
+    "crates": [],
+    "pads": [],
+    "devices": [
+      {
+        "id": "inspection-carrier",
+        "kind": "moving-platform",
+        "label": "2 m/s",
+        "position": [
+          -6,
+          -0.2,
+          -2.5934809855243657e-13
+        ],
+        "size": [
+          4,
+          0.4,
+          4
+        ],
+        "active": true,
+        "progress": 0.16666666666668828,
+        "choice": "NEAR",
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "inspection-door",
+        "kind": "shutter",
+        "label": "INSPECTION",
+        "position": [
+          -6,
+          1.5,
+          -20.12
+        ],
+        "size": [
+          2.8,
+          3,
+          0.3
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "service-carrier",
+        "kind": "moving-platform",
+        "label": "1 m/s",
+        "position": [
+          6,
+          -0.2,
+          0.9999999999998703
+        ],
+        "size": [
+          4,
+          0.4,
+          4
+        ],
+        "active": true,
+        "progress": 0.08333333333334414,
+        "choice": "NEAR",
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "service-door",
+        "kind": "shutter",
+        "label": "SERVICE",
+        "position": [
+          6,
+          1.5,
+          -20.12
+        ],
+        "size": [
+          2.8,
+          3,
+          0.3
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      }
+    ],
+    "panels": [
+      {
+        "id": "carrier-source",
+        "position": [
+          0,
+          1.75,
+          17.985
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "width": 5,
+        "height": 3.5
+      },
+      {
+        "id": "carrier-waiting",
+        "position": [
+          0,
+          1.75,
+          5.665
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "width": 3.5,
+        "height": 3.5
+      }
+    ],
+    "exits": [
+      {
+        "id": "inspection-exit",
+        "label": "EXIT",
+        "position": [
+          -6,
+          1.5,
+          -22.39
+        ],
+        "size": [
+          2.76,
+          3,
+          3.580000000000002
+        ]
+      },
+      {
+        "id": "service-exit",
+        "label": "EXIT",
+        "position": [
+          6,
+          1.5,
+          -22.39
+        ],
+        "size": [
+          2.76,
+          3,
+          3.580000000000002
+        ]
+      }
+    ],
+    "result": null,
+    "held": null,
+    "holdSpaceTransform": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "launchUsed": false,
+    "respawns": 0,
+    "beams": {},
+    "signals": {
+      "moving:inspection-carrier": true,
+      "at:inspection-carrier:NEAR": false,
+      "at:inspection-carrier:FAR": false,
+      "safety:inspection-door": false,
+      "door-safety": false,
+      "moving:inspection-door": false,
+      "moving:service-carrier": true,
+      "at:service-carrier:NEAR": false,
+      "at:service-carrier:FAR": false,
+      "safety:service-door": false,
+      "moving:service-door": false
+    },
+    "events": [
+      {
+        "type": "land",
+        "time": 8
+      },
+      {
+        "type": "lift-motor",
+        "time": 8008,
+        "id": "inspection-carrier"
+      },
+      {
+        "type": "lift-motor",
+        "time": 8008,
+        "id": "service-carrier"
+      }
+    ]
+  }
+}

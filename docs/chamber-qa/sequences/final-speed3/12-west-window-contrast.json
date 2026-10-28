@@ -1,0 +1,1658 @@
+{
+  "number": 12,
+  "contrast": true,
+  "id": "west-window",
+  "scope": "Unregistered authored-spawn native route. Camera/WASD/E/ray-checked portals only; no actor/cargo/machine/goal/history/save assignments. Decorative glazing visibility and browser completion remain unverified.",
+  "nativeParameters": {
+    "beltSpeeds": [],
+    "controllerOffset": 0.014999999664723873,
+    "normalNudge": 0.00009999999747378752
+  },
+  "error": null,
+  "ridingFrames": {},
+  "events": [
+    {
+      "type": "timer-open",
+      "data": {
+        "id": "east-clock"
+      }
+    },
+    {
+      "type": "shutter-open",
+      "data": {
+        "id": "east-shutter"
+      }
+    },
+    {
+      "type": "land",
+      "data": {}
+    },
+    {
+      "type": "portalA",
+      "data": {
+        "surface": "booth-source",
+        "point": [
+          0.55,
+          1.55,
+          13.959999999999999
+        ]
+      }
+    },
+    {
+      "type": "portalB",
+      "data": {
+        "surface": "waiting-white",
+        "point": [
+          0.55,
+          1.55,
+          2.69
+        ]
+      }
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "enter",
+      "data": {
+        "body": "player",
+        "from": 0,
+        "to": 1,
+        "fromSurface": "booth-source",
+        "toSurface": "waiting-white",
+        "speed": 4.788050846214779,
+        "exitSpeed": 4.788050846214779,
+        "held": null
+      }
+    },
+    {
+      "type": "land",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "timer-close",
+      "data": {
+        "id": "east-clock"
+      }
+    },
+    {
+      "type": "timer-open",
+      "data": {
+        "id": "west-clock"
+      }
+    },
+    {
+      "type": "shutter-open",
+      "data": {
+        "id": "west-shutter"
+      }
+    },
+    {
+      "type": "shutter-close",
+      "data": {
+        "id": "east-shutter"
+      }
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "complete",
+      "data": {
+        "chamber": 12
+      }
+    }
+  ],
+  "checkpoints": [
+    {
+      "label": "actual-authored-spawn",
+      "state": {
+        "room": "chamber-12",
+        "number": 12,
+        "mission": "Wait for the west shutter to open. Cross before it closes.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -2.6489678361940605e-7,
+            0.8646140694618225,
+            11.00000286102295
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "east-clock",
+            "kind": "timer",
+            "label": "EAST CYCLE",
+            "position": [
+              1.2,
+              1.25,
+              4.5
+            ],
+            "size": [
+              0.8,
+              1.2,
+              0.35
+            ],
+            "active": true,
+            "progress": 0.03571428571428571,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "west-clock",
+            "kind": "timer",
+            "label": "WEST CYCLE",
+            "position": [
+              -1.2,
+              1.25,
+              4.5
+            ],
+            "size": [
+              0.8,
+              1.2,
+              0.35
+            ],
+            "active": false,
+            "progress": 0.5357142857142857,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "west-shutter",
+            "kind": "shutter",
+            "label": "WEST",
+            "position": [
+              -4,
+              1.5,
+              -2
+            ],
+            "size": [
+              3.2,
+              3,
+              0.35
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "east-shutter",
+            "kind": "shutter",
+            "label": "EAST",
+            "position": [
+              4,
+              3.6874999999999996,
+              -2
+            ],
+            "size": [
+              3.2,
+              3,
+              0.35
+            ],
+            "active": true,
+            "progress": 0.6249999999999999,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "booth-source",
+            "position": [
+              0,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "waiting-white",
+            "position": [
+              0,
+              1.75,
+              2.665
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "west-exit",
+            "label": "EXIT",
+            "position": [
+              -5.1000000000000005,
+              1.5,
+              -7.1000000000000005
+            ],
+            "size": [
+              9.76,
+              3,
+              9.76
+            ]
+          },
+          {
+            "id": "east-exit",
+            "label": "EXIT",
+            "position": [
+              5.1000000000000005,
+              1.5,
+              -7.1000000000000005
+            ],
+            "size": [
+              9.76,
+              3,
+              9.76
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "moving:east-clock": false,
+          "moving:west-clock": false,
+          "safety:west-shutter": false,
+          "door-safety": false,
+          "moving:west-shutter": false,
+          "safety:east-shutter": false,
+          "moving:east-shutter": true,
+          "east-clock": true,
+          "west-clock": false
+        },
+        "events": [
+          {
+            "type": "timer-open",
+            "time": 8,
+            "id": "east-clock"
+          },
+          {
+            "type": "shutter-open",
+            "time": 8,
+            "id": "east-shutter"
+          },
+          {
+            "type": "land",
+            "time": 8
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "pulse-floor",
+          "normal": {
+            "x": -0.00003282440593466163,
+            "y": 1,
+            "z": -0.000008206101483665407
+          },
+          "toi": 0,
+          "witness": {
+            "x": 0.0013141632080078125,
+            "y": 0,
+            "z": 10.998987197875977
+          },
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": 0,
+            "y": -0.0011111111380159855,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-waiting-side-west",
+      "state": {
+        "room": "chamber-12",
+        "number": 12,
+        "mission": "Wait for the west shutter to open. Cross before it closes.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -3.99941349029541,
+            0.8650999069213867,
+            -0.8384761214256287
+          ],
+          "velocity": [
+            0.010056059988320303,
+            0,
+            -0.6826863737398137
+          ],
+          "yaw": -0.014734528537225074,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "booth-source",
+            "position": [
+              0.55,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "waiting-white",
+            "position": [
+              0.55,
+              1.55,
+              2.69
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "east-clock",
+            "kind": "timer",
+            "label": "EAST CYCLE",
+            "position": [
+              1.2,
+              1.25,
+              4.5
+            ],
+            "size": [
+              0.8,
+              1.2,
+              0.35
+            ],
+            "active": true,
+            "progress": 0.2696428571428563,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "west-clock",
+            "kind": "timer",
+            "label": "WEST CYCLE",
+            "position": [
+              -1.2,
+              1.25,
+              4.5
+            ],
+            "size": [
+              0.8,
+              1.2,
+              0.35
+            ],
+            "active": false,
+            "progress": 0.7696428571428565,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "west-shutter",
+            "kind": "shutter",
+            "label": "WEST",
+            "position": [
+              -4,
+              1.5,
+              -2
+            ],
+            "size": [
+              3.2,
+              3,
+              0.35
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "east-shutter",
+            "kind": "shutter",
+            "label": "EAST",
+            "position": [
+              4,
+              5,
+              -2
+            ],
+            "size": [
+              3.2,
+              3,
+              0.35
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "booth-source",
+            "position": [
+              0,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "waiting-white",
+            "position": [
+              0,
+              1.75,
+              2.665
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "west-exit",
+            "label": "EXIT",
+            "position": [
+              -5.1000000000000005,
+              1.5,
+              -7.1000000000000005
+            ],
+            "size": [
+              9.76,
+              3,
+              9.76
+            ]
+          },
+          {
+            "id": "east-exit",
+            "label": "EXIT",
+            "position": [
+              5.1000000000000005,
+              1.5,
+              -7.1000000000000005
+            ],
+            "size": [
+              9.76,
+              3,
+              9.76
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "moving:east-clock": false,
+          "moving:west-clock": false,
+          "safety:west-shutter": false,
+          "door-safety": false,
+          "moving:west-shutter": false,
+          "safety:east-shutter": false,
+          "moving:east-shutter": false,
+          "east-clock": true,
+          "west-clock": false
+        },
+        "events": [
+          {
+            "type": "timer-open",
+            "time": 8,
+            "id": "east-clock"
+          },
+          {
+            "type": "shutter-open",
+            "time": 8,
+            "id": "east-shutter"
+          },
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "portalA",
+            "time": 500,
+            "surface": "booth-source",
+            "point": [
+              0.55,
+              1.55,
+              13.959999999999999
+            ]
+          },
+          {
+            "type": "portalB",
+            "time": 508,
+            "surface": "waiting-white",
+            "point": [
+              0.55,
+              1.55,
+              2.69
+            ]
+          },
+          {
+            "type": "footstep",
+            "time": 525
+          },
+          {
+            "type": "footstep",
+            "time": 1017
+          },
+          {
+            "type": "enter",
+            "time": 1308,
+            "body": "player",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "booth-source",
+            "toSurface": "waiting-white",
+            "speed": 4.788050846214779,
+            "exitSpeed": 4.788050846214779,
+            "held": null
+          },
+          {
+            "type": "land",
+            "time": 1317
+          },
+          {
+            "type": "footstep",
+            "time": 1500
+          },
+          {
+            "type": "footstep",
+            "time": 1925
+          },
+          {
+            "type": "footstep",
+            "time": 2350
+          },
+          {
+            "type": "footstep",
+            "time": 2775
+          },
+          {
+            "type": "footstep",
+            "time": 3200
+          },
+          {
+            "type": "footstep",
+            "time": 3625
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "pulse-floor",
+          "normal": {
+            "x": 0,
+            "y": 0.9999999403953552,
+            "z": 0
+          },
+          "toi": 0.0004828248347621411,
+          "witness": {
+            "x": -3.998950958251953,
+            "y": -2.980232238769531e-7,
+            "z": -0.8392343521118164
+          },
+          "applied": {
+            "x": 0.000006979460522416048,
+            "y": -0.00009254069300368428,
+            "z": -0.00047382203047163785
+          },
+          "remaining": {
+            "x": 0.00007682103750994429,
+            "y": -0.0010185705032199621,
+            "z": -0.005215231329202652
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-physical-completion",
+      "state": {
+        "room": "chamber-12",
+        "number": 12,
+        "mission": "Wait for the west shutter to open. Cross before it closes.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -3.9990482330322266,
+            0.8650904297828674,
+            -2.2441020011901855
+          ],
+          "velocity": [
+            -0.0006159955401447588,
+            0,
+            -4.792788914407529
+          ],
+          "yaw": 0.00013117234605167395,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "booth-source",
+            "position": [
+              0.55,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "waiting-white",
+            "position": [
+              0.55,
+              1.55,
+              2.69
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "east-clock",
+            "kind": "timer",
+            "label": "EAST CYCLE",
+            "position": [
+              1.2,
+              1.25,
+              4.5
+            ],
+            "size": [
+              0.8,
+              1.2,
+              0.35
+            ],
+            "active": false,
+            "progress": 0.5803571428571556,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "west-clock",
+            "kind": "timer",
+            "label": "WEST CYCLE",
+            "position": [
+              -1.2,
+              1.25,
+              4.5
+            ],
+            "size": [
+              0.8,
+              1.2,
+              0.35
+            ],
+            "active": true,
+            "progress": 0.08035714285715567,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "west-shutter",
+            "kind": "shutter",
+            "label": "WEST",
+            "position": [
+              -4,
+              5,
+              -2
+            ],
+            "size": [
+              3.2,
+              3,
+              0.35
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "east-shutter",
+            "kind": "shutter",
+            "label": "EAST",
+            "position": [
+              4,
+              1.5,
+              -2
+            ],
+            "size": [
+              3.2,
+              3,
+              0.35
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "booth-source",
+            "position": [
+              0,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "waiting-white",
+            "position": [
+              0,
+              1.75,
+              2.665
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "west-exit",
+            "label": "EXIT",
+            "position": [
+              -5.1000000000000005,
+              1.5,
+              -7.1000000000000005
+            ],
+            "size": [
+              9.76,
+              3,
+              9.76
+            ]
+          },
+          {
+            "id": "east-exit",
+            "label": "EXIT",
+            "position": [
+              5.1000000000000005,
+              1.5,
+              -7.1000000000000005
+            ],
+            "size": [
+              9.76,
+              3,
+              9.76
+            ]
+          }
+        ],
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "west-exit",
+          "reason": "",
+          "events": [
+            {
+              "type": "timer-open",
+              "time": 8,
+              "id": "east-clock"
+            },
+            {
+              "type": "shutter-open",
+              "time": 8,
+              "id": "east-shutter"
+            },
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "portalA",
+              "time": 500,
+              "surface": "booth-source",
+              "point": [
+                0.55,
+                1.55,
+                13.959999999999999
+              ]
+            },
+            {
+              "type": "portalB",
+              "time": 508,
+              "surface": "waiting-white",
+              "point": [
+                0.55,
+                1.55,
+                2.69
+              ]
+            },
+            {
+              "type": "footstep",
+              "time": 525
+            },
+            {
+              "type": "footstep",
+              "time": 1017
+            },
+            {
+              "type": "enter",
+              "time": 1308,
+              "body": "player",
+              "from": 0,
+              "to": 1,
+              "fromSurface": "booth-source",
+              "toSurface": "waiting-white",
+              "speed": 4.788050846214779,
+              "exitSpeed": 4.788050846214779,
+              "held": null
+            },
+            {
+              "type": "land",
+              "time": 1317
+            },
+            {
+              "type": "footstep",
+              "time": 1500
+            },
+            {
+              "type": "footstep",
+              "time": 1925
+            },
+            {
+              "type": "footstep",
+              "time": 2350
+            },
+            {
+              "type": "footstep",
+              "time": 2775
+            },
+            {
+              "type": "footstep",
+              "time": 3200
+            },
+            {
+              "type": "footstep",
+              "time": 3625
+            },
+            {
+              "type": "timer-close",
+              "time": 7000,
+              "id": "east-clock"
+            },
+            {
+              "type": "timer-open",
+              "time": 7000,
+              "id": "west-clock"
+            },
+            {
+              "type": "shutter-open",
+              "time": 7000,
+              "id": "west-shutter"
+            },
+            {
+              "type": "shutter-close",
+              "time": 7000,
+              "id": "east-shutter"
+            },
+            {
+              "type": "footstep",
+              "time": 7800
+            }
+          ],
+          "mechanisms": [
+            "shutters",
+            "portals"
+          ]
+        },
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "moving:east-clock": false,
+          "moving:west-clock": false,
+          "safety:west-shutter": true,
+          "door-safety": true,
+          "moving:west-shutter": false,
+          "safety:east-shutter": false,
+          "moving:east-shutter": false,
+          "east-clock": false,
+          "west-clock": true
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 525
+          },
+          {
+            "type": "footstep",
+            "time": 1017
+          },
+          {
+            "type": "enter",
+            "time": 1308,
+            "body": "player",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "booth-source",
+            "toSurface": "waiting-white",
+            "speed": 4.788050846214779,
+            "exitSpeed": 4.788050846214779,
+            "held": null
+          },
+          {
+            "type": "land",
+            "time": 1317
+          },
+          {
+            "type": "footstep",
+            "time": 1500
+          },
+          {
+            "type": "footstep",
+            "time": 1925
+          },
+          {
+            "type": "footstep",
+            "time": 2350
+          },
+          {
+            "type": "footstep",
+            "time": 2775
+          },
+          {
+            "type": "footstep",
+            "time": 3200
+          },
+          {
+            "type": "footstep",
+            "time": 3625
+          },
+          {
+            "type": "timer-close",
+            "time": 7000,
+            "id": "east-clock"
+          },
+          {
+            "type": "timer-open",
+            "time": 7000,
+            "id": "west-clock"
+          },
+          {
+            "type": "shutter-open",
+            "time": 7000,
+            "id": "west-shutter"
+          },
+          {
+            "type": "shutter-close",
+            "time": 7000,
+            "id": "east-shutter"
+          },
+          {
+            "type": "footstep",
+            "time": 7800
+          },
+          {
+            "type": "complete",
+            "time": 8125,
+            "chamber": 12
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "pulse-floor",
+          "normal": {
+            "x": 0,
+            "y": 1,
+            "z": 0
+          },
+          "toi": 0.00008791946311248466,
+          "witness": {
+            "x": -3.9980757236480713,
+            "y": 0,
+            "z": -2.2034196853637695
+          },
+          "applied": {
+            "x": -1.1295522739374064e-8,
+            "y": -0.0000024449359443678986,
+            "z": -0.00008788546256255358
+          },
+          "remaining": {
+            "x": -0.000005122000857227249,
+            "y": -0.0011086661834269762,
+            "z": -0.039852019399404526
+          }
+        }
+      ]
+    },
+    {
+      "label": "final",
+      "state": {
+        "room": "chamber-12",
+        "number": 12,
+        "mission": "Wait for the west shutter to open. Cross before it closes.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -3.9990482330322266,
+            0.8650904297828674,
+            -2.2441020011901855
+          ],
+          "velocity": [
+            -0.0006159955401447588,
+            0,
+            -4.792788914407529
+          ],
+          "yaw": 0.00013117234605167395,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "booth-source",
+            "position": [
+              0.55,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "waiting-white",
+            "position": [
+              0.55,
+              1.55,
+              2.69
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "east-clock",
+            "kind": "timer",
+            "label": "EAST CYCLE",
+            "position": [
+              1.2,
+              1.25,
+              4.5
+            ],
+            "size": [
+              0.8,
+              1.2,
+              0.35
+            ],
+            "active": false,
+            "progress": 0.5803571428571556,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "west-clock",
+            "kind": "timer",
+            "label": "WEST CYCLE",
+            "position": [
+              -1.2,
+              1.25,
+              4.5
+            ],
+            "size": [
+              0.8,
+              1.2,
+              0.35
+            ],
+            "active": true,
+            "progress": 0.08035714285715567,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "west-shutter",
+            "kind": "shutter",
+            "label": "WEST",
+            "position": [
+              -4,
+              5,
+              -2
+            ],
+            "size": [
+              3.2,
+              3,
+              0.35
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "east-shutter",
+            "kind": "shutter",
+            "label": "EAST",
+            "position": [
+              4,
+              1.5,
+              -2
+            ],
+            "size": [
+              3.2,
+              3,
+              0.35
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "booth-source",
+            "position": [
+              0,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "waiting-white",
+            "position": [
+              0,
+              1.75,
+              2.665
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "west-exit",
+            "label": "EXIT",
+            "position": [
+              -5.1000000000000005,
+              1.5,
+              -7.1000000000000005
+            ],
+            "size": [
+              9.76,
+              3,
+              9.76
+            ]
+          },
+          {
+            "id": "east-exit",
+            "label": "EXIT",
+            "position": [
+              5.1000000000000005,
+              1.5,
+              -7.1000000000000005
+            ],
+            "size": [
+              9.76,
+              3,
+              9.76
+            ]
+          }
+        ],
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "west-exit",
+          "reason": "",
+          "events": [
+            {
+              "type": "timer-open",
+              "time": 8,
+              "id": "east-clock"
+            },
+            {
+              "type": "shutter-open",
+              "time": 8,
+              "id": "east-shutter"
+            },
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "portalA",
+              "time": 500,
+              "surface": "booth-source",
+              "point": [
+                0.55,
+                1.55,
+                13.959999999999999
+              ]
+            },
+            {
+              "type": "portalB",
+              "time": 508,
+              "surface": "waiting-white",
+              "point": [
+                0.55,
+                1.55,
+                2.69
+              ]
+            },
+            {
+              "type": "footstep",
+              "time": 525
+            },
+            {
+              "type": "footstep",
+              "time": 1017
+            },
+            {
+              "type": "enter",
+              "time": 1308,
+              "body": "player",
+              "from": 0,
+              "to": 1,
+              "fromSurface": "booth-source",
+              "toSurface": "waiting-white",
+              "speed": 4.788050846214779,
+              "exitSpeed": 4.788050846214779,
+              "held": null
+            },
+            {
+              "type": "land",
+              "time": 1317
+            },
+            {
+              "type": "footstep",
+              "time": 1500
+            },
+            {
+              "type": "footstep",
+              "time": 1925
+            },
+            {
+              "type": "footstep",
+              "time": 2350
+            },
+            {
+              "type": "footstep",
+              "time": 2775
+            },
+            {
+              "type": "footstep",
+              "time": 3200
+            },
+            {
+              "type": "footstep",
+              "time": 3625
+            },
+            {
+              "type": "timer-close",
+              "time": 7000,
+              "id": "east-clock"
+            },
+            {
+              "type": "timer-open",
+              "time": 7000,
+              "id": "west-clock"
+            },
+            {
+              "type": "shutter-open",
+              "time": 7000,
+              "id": "west-shutter"
+            },
+            {
+              "type": "shutter-close",
+              "time": 7000,
+              "id": "east-shutter"
+            },
+            {
+              "type": "footstep",
+              "time": 7800
+            }
+          ],
+          "mechanisms": [
+            "shutters",
+            "portals"
+          ]
+        },
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "moving:east-clock": false,
+          "moving:west-clock": false,
+          "safety:west-shutter": true,
+          "door-safety": true,
+          "moving:west-shutter": false,
+          "safety:east-shutter": false,
+          "moving:east-shutter": false,
+          "east-clock": false,
+          "west-clock": true
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 525
+          },
+          {
+            "type": "footstep",
+            "time": 1017
+          },
+          {
+            "type": "enter",
+            "time": 1308,
+            "body": "player",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "booth-source",
+            "toSurface": "waiting-white",
+            "speed": 4.788050846214779,
+            "exitSpeed": 4.788050846214779,
+            "held": null
+          },
+          {
+            "type": "land",
+            "time": 1317
+          },
+          {
+            "type": "footstep",
+            "time": 1500
+          },
+          {
+            "type": "footstep",
+            "time": 1925
+          },
+          {
+            "type": "footstep",
+            "time": 2350
+          },
+          {
+            "type": "footstep",
+            "time": 2775
+          },
+          {
+            "type": "footstep",
+            "time": 3200
+          },
+          {
+            "type": "footstep",
+            "time": 3625
+          },
+          {
+            "type": "timer-close",
+            "time": 7000,
+            "id": "east-clock"
+          },
+          {
+            "type": "timer-open",
+            "time": 7000,
+            "id": "west-clock"
+          },
+          {
+            "type": "shutter-open",
+            "time": 7000,
+            "id": "west-shutter"
+          },
+          {
+            "type": "shutter-close",
+            "time": 7000,
+            "id": "east-shutter"
+          },
+          {
+            "type": "footstep",
+            "time": 7800
+          },
+          {
+            "type": "complete",
+            "time": 8125,
+            "chamber": 12
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "pulse-floor",
+          "normal": {
+            "x": 0,
+            "y": 1,
+            "z": 0
+          },
+          "toi": 0.00008791946311248466,
+          "witness": {
+            "x": -3.9980757236480713,
+            "y": 0,
+            "z": -2.2034196853637695
+          },
+          "applied": {
+            "x": -1.1295522739374064e-8,
+            "y": -0.0000024449359443678986,
+            "z": -0.00008788546256255358
+          },
+          "remaining": {
+            "x": -0.000005122000857227249,
+            "y": -0.0011086661834269762,
+            "z": -0.039852019399404526
+          }
+        }
+      ]
+    }
+  ]
+}

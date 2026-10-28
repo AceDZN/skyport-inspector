@@ -1,0 +1,1044 @@
+{
+  "scope": "Native isolated fixture setup, not browser proof. Fixed120Hz; initial rotated-cube setup only, no recovery pose/velocity assignment.",
+  "engine": "current runtime source",
+  "error": null,
+  "trace": [
+    {
+      "label": "fall-0",
+      "time": 0.008333333333333333,
+      "position": [
+        0,
+        0.9988889098167419,
+        0
+      ],
+      "velocity": [
+        0,
+        -0.13333333333333333,
+        0
+      ],
+      "grounded": false,
+      "computed": {
+        "x": 0,
+        "y": -0.0011111111380159855,
+        "z": 0
+      },
+      "contacts": [],
+      "world": {
+        "room": "chamber-97",
+        "number": 97,
+        "mission": "Isolated native contact contract",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            0,
+            0.9988889098167419,
+            0
+          ],
+          "velocity": [
+            0,
+            -0.13333333333333333,
+            0
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": false,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "floor-entry",
+            "position": [
+              0,
+              -2.95,
+              0
+            ],
+            "normal": [
+              0,
+              1,
+              0
+            ]
+          },
+          {
+            "surface": "wall-exit",
+            "position": [
+              0,
+              4,
+              -7.96
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [],
+        "panels": [
+          {
+            "id": "floor-entry",
+            "position": [
+              0,
+              -2.975,
+              0
+            ],
+            "normal": [
+              0,
+              1,
+              0
+            ],
+            "width": 4,
+            "height": 4
+          },
+          {
+            "id": "wall-exit",
+            "position": [
+              0,
+              4,
+              -7.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 8,
+            "height": 8
+          }
+        ],
+        "exits": [],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {},
+        "events": [
+          {
+            "type": "portalA",
+            "time": 0,
+            "surface": "floor-entry",
+            "point": [
+              0,
+              -2.95,
+              0
+            ]
+          },
+          {
+            "type": "portalB",
+            "time": 0,
+            "surface": "wall-exit",
+            "point": [
+              0,
+              4,
+              -7.96
+            ]
+          }
+        ]
+      },
+      "geometry": {
+        "sourceFits": true,
+        "mapped": [
+          0,
+          4,
+          -7.945
+        ],
+        "wallLocal": [
+          0,
+          0,
+          0.01499999999999968
+        ],
+        "halfX": 0.28,
+        "halfY": 0.85,
+        "independentExitFits": true,
+        "engineExitFits": true
+      }
+    },
+    {
+      "label": "fall-24",
+      "time": 0.20833333333333331,
+      "position": [
+        0,
+        0.6388888955116272,
+        0
+      ],
+      "velocity": [
+        0,
+        -3.333333333333333,
+        0
+      ],
+      "grounded": false,
+      "computed": {
+        "x": 0,
+        "y": -0.02777777798473835,
+        "z": 0
+      },
+      "contacts": [],
+      "world": {
+        "room": "chamber-97",
+        "number": 97,
+        "mission": "Isolated native contact contract",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            0,
+            0.6388888955116272,
+            0
+          ],
+          "velocity": [
+            0,
+            -3.333333333333333,
+            0
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": false,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "floor-entry",
+            "position": [
+              0,
+              -2.95,
+              0
+            ],
+            "normal": [
+              0,
+              1,
+              0
+            ]
+          },
+          {
+            "surface": "wall-exit",
+            "position": [
+              0,
+              4,
+              -7.96
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [],
+        "panels": [
+          {
+            "id": "floor-entry",
+            "position": [
+              0,
+              -2.975,
+              0
+            ],
+            "normal": [
+              0,
+              1,
+              0
+            ],
+            "width": 4,
+            "height": 4
+          },
+          {
+            "id": "wall-exit",
+            "position": [
+              0,
+              4,
+              -7.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 8,
+            "height": 8
+          }
+        ],
+        "exits": [],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {},
+        "events": [
+          {
+            "type": "portalA",
+            "time": 0,
+            "surface": "floor-entry",
+            "point": [
+              0,
+              -2.95,
+              0
+            ]
+          },
+          {
+            "type": "portalB",
+            "time": 0,
+            "surface": "wall-exit",
+            "point": [
+              0,
+              4,
+              -7.96
+            ]
+          }
+        ]
+      },
+      "geometry": {
+        "sourceFits": true,
+        "mapped": [
+          0,
+          4,
+          -7.945
+        ],
+        "wallLocal": [
+          0,
+          0,
+          0.01499999999999968
+        ],
+        "halfX": 0.28,
+        "halfY": 0.85,
+        "independentExitFits": true,
+        "engineExitFits": true
+      }
+    },
+    {
+      "label": "fall-48",
+      "time": 0.40833333333333377,
+      "position": [
+        0,
+        -0.3611110746860504,
+        0
+      ],
+      "velocity": [
+        0,
+        -6.53333333333334,
+        0
+      ],
+      "grounded": false,
+      "computed": {
+        "x": 0,
+        "y": -0.05444444343447685,
+        "z": 0
+      },
+      "contacts": [],
+      "world": {
+        "room": "chamber-97",
+        "number": 97,
+        "mission": "Isolated native contact contract",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            0,
+            -0.3611110746860504,
+            0
+          ],
+          "velocity": [
+            0,
+            -6.53333333333334,
+            0
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": false,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "floor-entry",
+            "position": [
+              0,
+              -2.95,
+              0
+            ],
+            "normal": [
+              0,
+              1,
+              0
+            ]
+          },
+          {
+            "surface": "wall-exit",
+            "position": [
+              0,
+              4,
+              -7.96
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [],
+        "panels": [
+          {
+            "id": "floor-entry",
+            "position": [
+              0,
+              -2.975,
+              0
+            ],
+            "normal": [
+              0,
+              1,
+              0
+            ],
+            "width": 4,
+            "height": 4
+          },
+          {
+            "id": "wall-exit",
+            "position": [
+              0,
+              4,
+              -7.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 8,
+            "height": 8
+          }
+        ],
+        "exits": [],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {},
+        "events": [
+          {
+            "type": "portalA",
+            "time": 0,
+            "surface": "floor-entry",
+            "point": [
+              0,
+              -2.95,
+              0
+            ]
+          },
+          {
+            "type": "portalB",
+            "time": 0,
+            "surface": "wall-exit",
+            "point": [
+              0,
+              4,
+              -7.96
+            ]
+          }
+        ]
+      },
+      "geometry": {
+        "sourceFits": true,
+        "mapped": [
+          0,
+          4,
+          -7.945
+        ],
+        "wallLocal": [
+          0,
+          0,
+          0.01499999999999968
+        ],
+        "halfX": 0.28,
+        "halfY": 0.85,
+        "independentExitFits": true,
+        "engineExitFits": true
+      }
+    },
+    {
+      "label": "fall-72",
+      "time": 0.6083333333333336,
+      "position": [
+        0,
+        -2.0011112689971924,
+        0
+      ],
+      "velocity": [
+        0,
+        -9.733333333333338,
+        0
+      ],
+      "grounded": false,
+      "computed": {
+        "x": 0,
+        "y": -0.0811111107468605,
+        "z": 0
+      },
+      "contacts": [],
+      "world": {
+        "room": "chamber-97",
+        "number": 97,
+        "mission": "Isolated native contact contract",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            0,
+            -2.0011112689971924,
+            0
+          ],
+          "velocity": [
+            0,
+            -9.733333333333338,
+            0
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": false,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "floor-entry",
+            "position": [
+              0,
+              -2.95,
+              0
+            ],
+            "normal": [
+              0,
+              1,
+              0
+            ]
+          },
+          {
+            "surface": "wall-exit",
+            "position": [
+              0,
+              4,
+              -7.96
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [],
+        "panels": [
+          {
+            "id": "floor-entry",
+            "position": [
+              0,
+              -2.975,
+              0
+            ],
+            "normal": [
+              0,
+              1,
+              0
+            ],
+            "width": 4,
+            "height": 4
+          },
+          {
+            "id": "wall-exit",
+            "position": [
+              0,
+              4,
+              -7.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 8,
+            "height": 8
+          }
+        ],
+        "exits": [],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {},
+        "events": [
+          {
+            "type": "portalA",
+            "time": 0,
+            "surface": "floor-entry",
+            "point": [
+              0,
+              -2.95,
+              0
+            ]
+          },
+          {
+            "type": "portalB",
+            "time": 0,
+            "surface": "wall-exit",
+            "point": [
+              0,
+              4,
+              -7.96
+            ]
+          }
+        ]
+      },
+      "geometry": {
+        "sourceFits": true,
+        "mapped": [
+          0,
+          4,
+          -7.945
+        ],
+        "wallLocal": [
+          0,
+          0,
+          0.01499999999999968
+        ],
+        "halfX": 0.28,
+        "halfY": 0.85,
+        "independentExitFits": true,
+        "engineExitFits": true
+      }
+    },
+    {
+      "label": "first-crossing",
+      "time": 0.7,
+      "position": [
+        -2.0410818916262613e-18,
+        4,
+        -7.94333330154419
+      ],
+      "velocity": [
+        -1.3716044150450355e-15,
+        1.7763568394002505e-15,
+        11.2
+      ],
+      "grounded": false,
+      "computed": {
+        "x": 0,
+        "y": -0.09333333373069763,
+        "z": 0
+      },
+      "contacts": [],
+      "world": {
+        "room": "chamber-97",
+        "number": 97,
+        "mission": "Isolated native contact contract",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -2.0410818916262613e-18,
+            4,
+            -7.94333330154419
+          ],
+          "velocity": [
+            -1.3716044150450355e-15,
+            1.7763568394002505e-15,
+            11.2
+          ],
+          "yaw": -3.141592653589793,
+          "pitch": 1.4292568534704693,
+          "grounded": false,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "floor-entry",
+            "position": [
+              0,
+              -2.95,
+              0
+            ],
+            "normal": [
+              0,
+              1,
+              0
+            ]
+          },
+          {
+            "surface": "wall-exit",
+            "position": [
+              0,
+              4,
+              -7.96
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [],
+        "panels": [
+          {
+            "id": "floor-entry",
+            "position": [
+              0,
+              -2.975,
+              0
+            ],
+            "normal": [
+              0,
+              1,
+              0
+            ],
+            "width": 4,
+            "height": 4
+          },
+          {
+            "id": "wall-exit",
+            "position": [
+              0,
+              4,
+              -7.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 8,
+            "height": 8
+          }
+        ],
+        "exits": [],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": true,
+        "respawns": 0,
+        "beams": {},
+        "signals": {},
+        "events": [
+          {
+            "type": "portalA",
+            "time": 0,
+            "surface": "floor-entry",
+            "point": [
+              0,
+              -2.95,
+              0
+            ]
+          },
+          {
+            "type": "portalB",
+            "time": 0,
+            "surface": "wall-exit",
+            "point": [
+              0,
+              4,
+              -7.96
+            ]
+          },
+          {
+            "type": "launch",
+            "time": 700,
+            "speed": 11.2
+          },
+          {
+            "type": "enter",
+            "time": 700,
+            "body": "player",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "floor-entry",
+            "toSurface": "wall-exit",
+            "speed": 11.2,
+            "exitSpeed": 11.2,
+            "held": null
+          }
+        ]
+      },
+      "geometry": {
+        "sourceFits": false,
+        "mapped": [
+          2.0410818916262613e-18,
+          11.94333330154419,
+          -7.945
+        ],
+        "wallLocal": [
+          2.0410818916262613e-18,
+          7.94333330154419,
+          0.01499999999999968
+        ],
+        "halfX": 0.28,
+        "halfY": 0.85,
+        "independentExitFits": false,
+        "engineExitFits": false
+      }
+    }
+  ],
+  "final": {
+    "label": "final",
+    "time": 0.7,
+    "position": [
+      -2.0410818916262613e-18,
+      4,
+      -7.94333330154419
+    ],
+    "velocity": [
+      -1.3716044150450355e-15,
+      1.7763568394002505e-15,
+      11.2
+    ],
+    "grounded": false,
+    "computed": {
+      "x": 0,
+      "y": -0.09333333373069763,
+      "z": 0
+    },
+    "contacts": [],
+    "world": {
+      "room": "chamber-97",
+      "number": 97,
+      "mission": "Isolated native contact contract",
+      "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+      "player": {
+        "position": [
+          -2.0410818916262613e-18,
+          4,
+          -7.94333330154419
+        ],
+        "velocity": [
+          -1.3716044150450355e-15,
+          1.7763568394002505e-15,
+          11.2
+        ],
+        "yaw": -3.141592653589793,
+        "pitch": 1.4292568534704693,
+        "grounded": false,
+        "crossings": 1
+      },
+      "portals": [
+        {
+          "surface": "floor-entry",
+          "position": [
+            0,
+            -2.95,
+            0
+          ],
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "surface": "wall-exit",
+          "position": [
+            0,
+            4,
+            -7.96
+          ],
+          "normal": [
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "crates": [],
+      "pads": [],
+      "devices": [],
+      "panels": [
+        {
+          "id": "floor-entry",
+          "position": [
+            0,
+            -2.975,
+            0
+          ],
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "width": 4,
+          "height": 4
+        },
+        {
+          "id": "wall-exit",
+          "position": [
+            0,
+            4,
+            -7.985
+          ],
+          "normal": [
+            0,
+            0,
+            1
+          ],
+          "width": 8,
+          "height": 8
+        }
+      ],
+      "exits": [],
+      "result": null,
+      "held": null,
+      "holdSpaceTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "launchUsed": true,
+      "respawns": 0,
+      "beams": {},
+      "signals": {},
+      "events": [
+        {
+          "type": "portalA",
+          "time": 0,
+          "surface": "floor-entry",
+          "point": [
+            0,
+            -2.95,
+            0
+          ]
+        },
+        {
+          "type": "portalB",
+          "time": 0,
+          "surface": "wall-exit",
+          "point": [
+            0,
+            4,
+            -7.96
+          ]
+        },
+        {
+          "type": "launch",
+          "time": 700,
+          "speed": 11.2
+        },
+        {
+          "type": "enter",
+          "time": 700,
+          "body": "player",
+          "from": 0,
+          "to": 1,
+          "fromSurface": "floor-entry",
+          "toSurface": "wall-exit",
+          "speed": 11.2,
+          "exitSpeed": 11.2,
+          "held": null
+        }
+      ]
+    }
+  }
+}

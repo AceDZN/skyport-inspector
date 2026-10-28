@@ -1,0 +1,443 @@
+{
+  "scope": "Unregistered authored-spawn native trajectory/route; no pose/velocity/goal/save/reset injection, no browser claim.",
+  "number": 20,
+  "contrast": true,
+  "error": "AssertionError [ERR_ASSERTION]: Native opaque ray blocked lower-return {\"player\":{\"position\":[8.616349220275879,0.8650954365730286,12.53481674194336],\"velocity\":[0.40172457983501164,0,0.12012519509580086],\"yaw\":0.47434214070433706,\"pitch\":0.0011708548042070185,\"grounded\":true,\"crossings\":0},\"portals\":[{\"surface\":\"beam-source\",\"position\":[10.959999999999999,1.55,8],\"normal\":[-1,0,0]},null],\"respawns\":0,\"contacts\":[{\"id\":\"receiver-floor\",\"normal\":{\"x\":-0.000015895264368737116,\"y\":1,\"z\":4.967270115230349e-7},\"witness\":{\"x\":8.613130569458008,\"y\":2.9802322387695312e-8,\"z\":12.5338134765625},\"applied\":{\"x\":0.000010197801202593837,\"y\":-0.000003384674073458882,\"z\":0.0000030493845315504586},\"remaining\":{\"x\":0.0033375071361660957,\"y\":-0.0011077264789491892,\"z\":0.0009979938622564077}}],\"events\":[{\"type\":\"footstep\",\"time\":4.916666666666701},{\"type\":\"footstep\",\"time\":5.341666666666722},{\"type\":\"footstep\",\"time\":5.766666666666743},{\"type\":\"footstep\",\"time\":6.191666666666764},{\"type\":\"footstep\",\"time\":6.616666666666785},{\"type\":\"footstep\",\"time\":7.041666666666806},{\"type\":\"footstep\",\"time\":7.4666666666668275},{\"type\":\"portalA\",\"time\":7.616666666666835,\"surface\":\"beam-source\",\"point\":[10.959999999999999,1.55,8]}]}\n+ actual - expected\n\n+ PI {\n+   collider: <ref *2> tg {\n+     _parent: null,\n+     _shape: Cg {\n+       halfExtents: DI {\n+         x: 0.25,\n+         y: 0.8,\n+         z: 0.34999999999999964\n+       },\n+       type: 1\n+     },\n+     colliderSet: <ref *1> rg {\n+       map: bI {\n+         data: [\n+           tg {\n+             _parent: xI {\n+               colliderSet: [Circular *1],\n+               handle: 0,\n+               rawSet: l {\n+                 __wbg_ptr: 1187408\n+               },\n+               userData: undefined\n+             },\n+             _shape: Bg {\n+               halfHeight: 0.57,\n+               radius: 0.28,\n+               type: 2\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 0\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 11,\n+                 y: 0.3,\n+                 z: 14\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 5e-324\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 11.4,\n+                 y: 0.1999999999999993,\n+                 z: 14.4\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 1e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 11.4,\n+                 y: 5,\n+                 z: 0.1999999999999993\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 1.5e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 11.4,\n+                 y: 5,\n+                 z: 0.1999999999999993\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 2e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 0.1999999999999993,\n+                 y: 5,\n+                 z: 1.3000000000000007\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 2.5e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 0.1999999999999993,\n+                 y: 5,\n+                 z: 11.3\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 3e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 0.1999999999999993,\n+                 y: 3.5,\n+                 z: 1.4000000000000004\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 3.5e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 2.1999999999999993,\n+                 y: 0.3,\n+                 z: 1.4000000000000004\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 4e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 2.4000000000000004,\n+                 y: 0.20000000000000018,\n+                 z: 1.8000000000000007\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 4.4e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 2.4000000000000004,\n+                 y: 1.5,\n+                 z: 0.1999999999999993\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 5e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 2.4000000000000004,\n+                 y: 1.5,\n+                 z: 0.1999999999999993\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 5.4e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 0.1999999999999993,\n+                 y: 1.5,\n+                 z: 1.8000000000000007\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 6e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 0.1999999999999993,\n+                 y: 5,\n+                 z: 1.3000000000000007\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 6.4e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 0.1999999999999993,\n+                 y: 5,\n+                 z: 11.3\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 7e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 0.1999999999999993,\n+                 y: 1.8000000000000003,\n+                 z: 1.4000000000000004\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 7.4e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 0.1999999999999993,\n+                 y: 1.7,\n+                 z: 1.4000000000000004\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 8e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 2.1999999999999993,\n+                 y: 0.2999999999999998,\n+                 z: 1.4000000000000004\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 8.4e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 2.4000000000000004,\n+                 y: 0.20000000000000018,\n+                 z: 1.8000000000000007\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 9e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 2.4000000000000004,\n+                 y: 1.5,\n+                 z: 0.1999999999999993\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 9.4e-323\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 2.4000000000000004,\n+                 y: 1.5,\n+                 z: 0.1999999999999993\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 1e-322\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 0.1999999999999993,\n+                 y: 1.5,\n+                 z: 1.8000000000000007\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 1.04e-322\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 5,\n+                 y: 1.7,\n+                 z: 4\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 1.1e-322\n+           },\n+           [Circular *2],\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 0.4500000000000002,\n+                 y: 0.85,\n+                 z: 0.25\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 1.2e-322\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 0.34999999999999964,\n+                 y: 0.35,\n+                 z: 0.20000000000000018\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 1.24e-322\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 0.4500000000000002,\n+                 y: 0.8499999999999999,\n+                 z: 0.25\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 1.3e-322\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 0.34999999999999964,\n+                 y: 0.34999999999999987,\n+                 z: 0.20000000000000018\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 1.33e-322\n+           },\n+           tg {\n+             _parent: null,\n+             _shape: Mg {\n+               halfHeight: 0.07,\n+               radius: 0.96,\n+               type: 10\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 1.4e-322\n+           },\n+           tg {\n+             _parent: xI {\n+               colliderSet: [Circular *1],\n+               handle: 5e-324,\n+               rawSet: l {\n+                 __wbg_ptr: 1187408\n+               },\n+               userData: undefined\n+             },\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 0.15,\n+                 y: 1.5,\n+                 z: 1.4\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 1.43e-322\n+           },\n+           tg {\n+             _parent: xI {\n+               colliderSet: [Circular *1],\n+               handle: 1e-323,\n+               rawSet: l {\n+                 __wbg_ptr: 1187408\n+               },\n+               userData: undefined\n+             },\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 0.15,\n+                 y: 1.5,\n+                 z: 1.4\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 1.5e-322\n+           },\n+           tg {\n+             _parent: xI {\n+               colliderSet: [Circular *1],\n+               handle: 1.5e-323,\n+               rawSet: l {\n+                 __wbg_ptr: 1187408\n+               },\n+               userData: undefined\n+             },\n+             _shape: Cg {\n+               halfExtents: DI {\n+                 x: 0.55,\n+                 y: 0.55,\n+                 z: 0.55\n+               },\n+               type: 1\n+             },\n+             colliderSet: [Circular *1],\n+             handle: 1.53e-322\n+           }\n+         ],\n+         fconv: Float64Array(1) [\n+           5e-324\n+         ],\n+         size: 32,\n+         uconv: Uint32Array(2) [\n+           1,\n+           0\n+         ]\n+       },\n+       raw: C {\n+         __wbg_ptr: 1188936\n+       }\n+     },\n+     handle: 1.14e-322\n+   },\n+   timeOfImpact: 4.704194068908691\n+ }\n- null\n",
+  "notes": [],
+  "events": [
+    {
+      "type": "land",
+      "time": 0.008333333333333333
+    },
+    {
+      "type": "footstep",
+      "time": 0.4250000000000005
+    },
+    {
+      "type": "footstep",
+      "time": 0.8499999999999994
+    },
+    {
+      "type": "footstep",
+      "time": 1.274999999999998
+    },
+    {
+      "type": "footstep",
+      "time": 1.7666666666666628
+    },
+    {
+      "type": "pickup",
+      "time": 1.7666666666666628,
+      "body": "power-cube"
+    },
+    {
+      "type": "footstep",
+      "time": 2.1916666666666615
+    },
+    {
+      "type": "footstep",
+      "time": 2.61666666666666
+    },
+    {
+      "type": "pad",
+      "time": 2.949999999999992,
+      "pad": "emitter-power",
+      "crate": "power-cube"
+    },
+    {
+      "type": "drop",
+      "time": 3.1499999999999915,
+      "body": "power-cube"
+    },
+    {
+      "type": "contact",
+      "time": 3.216666666666658,
+      "body": "power-cube",
+      "speed": 1.1198602035089353
+    },
+    {
+      "type": "footstep",
+      "time": 4.066666666666658
+    },
+    {
+      "type": "footstep",
+      "time": 4.49166666666668
+    },
+    {
+      "type": "contact",
+      "time": 4.8916666666666995,
+      "body": "power-cube",
+      "speed": 1.2508152392389524
+    },
+    {
+      "type": "footstep",
+      "time": 4.916666666666701
+    },
+    {
+      "type": "footstep",
+      "time": 5.341666666666722
+    },
+    {
+      "type": "footstep",
+      "time": 5.766666666666743
+    },
+    {
+      "type": "footstep",
+      "time": 6.191666666666764
+    },
+    {
+      "type": "footstep",
+      "time": 6.616666666666785
+    },
+    {
+      "type": "footstep",
+      "time": 7.041666666666806
+    },
+    {
+      "type": "footstep",
+      "time": 7.4666666666668275
+    },
+    {
+      "type": "portalA",
+      "time": 7.616666666666835,
+      "surface": "beam-source",
+      "point": [
+        10.959999999999999,
+        1.55,
+        8
+      ]
+    }
+  ],
+  "barrierContacts": [],
+  "final": {
+    "room": "chamber-20",
+    "number": 20,
+    "mission": "Open the door that is powered by the lower receiver.",
+    "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+    "player": {
+      "position": [
+        8.616349220275879,
+        0.8650954365730286,
+        12.53481674194336
+      ],
+      "velocity": [
+        0.40172457983501164,
+        0,
+        0.12012519509580086
+      ],
+      "yaw": 0.47434214070433706,
+      "pitch": 0.0011708548042070185,
+      "grounded": true,
+      "crossings": 0
+    },
+    "portals": [
+      {
+        "surface": "beam-source",
+        "position": [
+          10.959999999999999,
+          1.55,
+          8
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ]
+      },
+      null
+    ],
+    "crates": [
+      {
+        "id": "power-cube",
+        "position": [
+          -3.1690635681152344,
+          0.6882485747337341,
+          7.912158966064453
+        ],
+        "velocity": [
+          0.11811321973800659,
+          -0.01634206622838974,
+          -0.08538953214883804
+        ],
+        "rotation": [
+          -0.002980629913508892,
+          0.23623117804527283,
+          -0.009678318165242672,
+          0.9716441631317139
+        ],
+        "angularVelocity": [
+          -0.1544070541858673,
+          0.001986397895962,
+          -0.21397431194782257
+        ],
+        "held": false,
+        "crossings": 0
+      }
+    ],
+    "pads": [
+      {
+        "id": "emitter-power",
+        "position": [
+          -4,
+          0.14,
+          8
+        ],
+        "pressed": true,
+        "crate": "power-cube"
+      }
+    ],
+    "devices": [
+      {
+        "id": "lower-door",
+        "kind": "shutter",
+        "label": "LOWER",
+        "position": [
+          -11.12,
+          1.5,
+          -10
+        ],
+        "size": [
+          0.3,
+          3,
+          2.8
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "upper-door",
+        "kind": "shutter",
+        "label": "UPPER",
+        "position": [
+          11.12,
+          4.9,
+          -10
+        ],
+        "size": [
+          0.3,
+          3,
+          2.8
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      }
+    ],
+    "panels": [
+      {
+        "id": "beam-source",
+        "position": [
+          10.985,
+          1.75,
+          8
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ],
+        "width": 5,
+        "height": 3.5
+      },
+      {
+        "id": "lower-return",
+        "position": [
+          -5,
+          1.75,
+          -13.985
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "width": 5,
+        "height": 3.5
+      },
+      {
+        "id": "upper-return",
+        "position": [
+          5,
+          5.15,
+          -13.985
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "width": 5,
+        "height": 3.5
+      }
+    ],
+    "exits": [
+      {
+        "id": "lower-exit",
+        "label": "EXIT",
+        "position": [
+          -13.39,
+          1.5,
+          -10
+        ],
+        "size": [
+          3.58,
+          3,
+          2.759999999999998
+        ]
+      },
+      {
+        "id": "upper-exit",
+        "label": "EXIT",
+        "position": [
+          13.39,
+          4.9,
+          -10
+        ],
+        "size": [
+          3.58,
+          3,
+          2.759999999999998
+        ]
+      }
+    ],
+    "result": null,
+    "held": null,
+    "holdSpaceTransform": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "launchUsed": false,
+    "respawns": 0,
+    "beams": {
+      "comparison-emitter": {
+        "segments": [
+          {
+            "from": [
+              7,
+              0.9,
+              8
+            ],
+            "to": [
+              10.999999761581421,
+              0.9,
+              8
+            ]
+          }
+        ],
+        "stop": "obstacle",
+        "obstacle": "upper-door-south-jamb",
+        "hops": 0
+      }
+    },
+    "signals": {
+      "emitter-power": true,
+      "safety:lower-door": false,
+      "door-safety": false,
+      "moving:lower-door": false,
+      "safety:upper-door": false,
+      "moving:upper-door": false,
+      "lower-light": false,
+      "upper-light": false
+    },
+    "events": [
+      {
+        "type": "footstep",
+        "time": 2192
+      },
+      {
+        "type": "footstep",
+        "time": 2617
+      },
+      {
+        "type": "pad",
+        "time": 2950,
+        "pad": "emitter-power",
+        "crate": "power-cube"
+      },
+      {
+        "type": "drop",
+        "time": 3150,
+        "body": "power-cube"
+      },
+      {
+        "type": "contact",
+        "time": 3217,
+        "body": "power-cube",
+        "speed": 1.1198602035089353
+      },
+      {
+        "type": "footstep",
+        "time": 4067
+      },
+      {
+        "type": "footstep",
+        "time": 4492
+      },
+      {
+        "type": "contact",
+        "time": 4892,
+        "body": "power-cube",
+        "speed": 1.2508152392389524
+      },
+      {
+        "type": "footstep",
+        "time": 4917
+      },
+      {
+        "type": "footstep",
+        "time": 5342
+      },
+      {
+        "type": "footstep",
+        "time": 5767
+      },
+      {
+        "type": "footstep",
+        "time": 6192
+      },
+      {
+        "type": "footstep",
+        "time": 6617
+      },
+      {
+        "type": "footstep",
+        "time": 7042
+      },
+      {
+        "type": "footstep",
+        "time": 7467
+      },
+      {
+        "type": "portalA",
+        "time": 7617,
+        "surface": "beam-source",
+        "point": [
+          10.959999999999999,
+          1.55,
+          8
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+✖ native comparison legal low-entry air 16 (145.64575ms)
+✖ native comparison legal low-entry air 17 (45.811333ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 0
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1079.393
+
+✖ failing tests:
+
+test at tests/core-comparisons-routes.test.ts:155:79
+✖ native comparison legal low-entry air 16 (145.64575ms)
+  AssertionError [ERR_ASSERTION]: Actual fall did not traverse; inspect aperture alignment and blocked-exit events {"player":{"position":[-4.922602653503418,-21.135271072387695,-11.704901695251465],"velocity":[2.2590204789615873e-10,0,-4.800000017590985],"yaw":0,"pitch":0,"grounded":true,"crossings":0},"portals":[{"surface":"shallow-floor","position":[-5,-2.95,-2.85],"normal":[0,1,0]},{"surface":"launch-white","position":[-7.96,9,-6],"normal":[1,0,0]}],"respawns":0,"contacts":[{"id":"recovery-basin","normal":{"x":0.000016173267795238644,"y":1,"z":3.790609639509057e-7},"witness":{"x":-4.922492027282715,"y":-22,"z":-11.70234489440918},"applied":{"x":0,"y":0,"z":0},"remaining":{"x":1.882517145640472e-12,"y":-0.0011111111380159855,"z":-0.03999999910593033}},{"id":"north-enclosure","normal":{"x":0,"y":0,"z":1},"witness":{"x":-4.9227399826049805,"y":-20.610445022583008,"z":-12},"applied":{"x":4.893387084425882e-11,"y":2.4965586931102735e-7,"z":-0.00009984723874367774},"remaining":{"x":1.9554560637402574e-8,"y":0.00009976547880796716,"z":-0.039900150150060654}}],"events":[{"type":"land","time":4.35833333333334},{"type":"footstep","time":4.35833333333334},{"type":"invalid","time":4.608333333333352,"body":"player","reason":"Move toward the centre of the portal."},{"type":"land","time":4.641666666666687},{"type":"land","time":6.258333333333434},{"type":"footstep","time":6.258333333333434},{"type":"footstep","time":6.683333333333455},{"type":"footstep","time":7.108333333333476}]}
+  
+  0 !== 1
+  
+      at Route.flight (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:36:10)
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:156:60)
+      at run (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:54:133)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:155:136)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/core-comparisons-routes.test.ts:155:79
+✖ native comparison legal low-entry air 17 (45.811333ms)
+  AssertionError [ERR_ASSERTION]: Actual fall did not traverse; inspect aperture alignment and blocked-exit events {"player":{"position":[-4.9251251220703125,-21.135820388793945,-11.704901695251465],"velocity":[2.2590204789615873e-10,0,-4.800000017590985],"yaw":0,"pitch":0,"grounded":true,"crossings":0},"portals":[{"surface":"shallow-floor","position":[-5,-2.95,-2.85],"normal":[0,1,0]},{"surface":"launch-white","position":[-7.96,9,6],"normal":[1,0,0]}],"respawns":0,"contacts":[{"id":"recovery-basin","normal":{"x":0,"y":1,"z":-0.0000013123445796736632},"witness":{"x":-4.924921035766602,"y":-22,"z":-11.702109336853027},"applied":{"x":0,"y":0,"z":0},"remaining":{"x":1.882517145640472e-12,"y":-0.0011111111380159855,"z":-0.03999999910593033}},{"id":"north-enclosure","normal":{"x":0,"y":0,"z":1},"witness":{"x":-4.925176620483398,"y":-20.6110782623291,"z":-12},"applied":{"x":4.687688276693849e-15,"y":2.488809798251168e-7,"z":-0.00009960468742065132},"remaining":{"x":1.8778294891275138e-12,"y":0.00009969861275749281,"z":-0.03990039601922035}}],"events":[{"type":"land","time":4.35833333333334},{"type":"footstep","time":4.35833333333334},{"type":"invalid","time":4.608333333333352,"body":"player","reason":"Move toward the centre of the portal."},{"type":"land","time":4.641666666666687},{"type":"land","time":6.258333333333434},{"type":"footstep","time":6.258333333333434},{"type":"footstep","time":6.683333333333455},{"type":"footstep","time":7.108333333333476}]}
+  
+  0 !== 1
+  
+      at Route.flight (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:36:10)
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:156:60)
+      at run (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:54:133)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:155:136)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

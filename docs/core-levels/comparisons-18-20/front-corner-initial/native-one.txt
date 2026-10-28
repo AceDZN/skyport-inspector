@@ -1,0 +1,28 @@
+✖ native C18 actual front-corner air path cannot exchange arrival banks (207.440375ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1051.092291
+
+✖ failing tests:
+
+test at tests/core-comparisons-routes.test.ts:206:46
+✖ native C18 actual front-corner air path cannot exchange arrival banks (207.440375ms)
+  AssertionError [ERR_ASSERTION]: Corner takeoff must be fully supported on the real left bank {"player":{"position":[-2.5311436653137207,0.9134909510612488,-12.486116409301758],"velocity":[7.740849865761244,0,4.177039728779318],"yaw":-1.0646508437165412,"pitch":0,"grounded":true,"crossings":1},"portals":[{"surface":"carrier-source","position":[0,1.55,17.96],"normal":[0,0,-1]},{"surface":"carrier-waiting","position":[0.55,1.55,5.69],"normal":[0,0,1]}],"respawns":0,"contacts":[],"events":[{"type":"footstep","time":15.341666666666436},{"type":"footstep","time":15.766666666666412},{"type":"footstep","time":16.19166666666639},{"type":"footstep","time":16.616666666666365},{"type":"footstep","time":17.04166666666634},{"type":"jump","time":17.374999999999655},{"type":"land","time":18.099999999999614},{"type":"footstep","time":18.099999999999614}]}
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:214:96)
+      at run (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:65:144)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:206:127)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

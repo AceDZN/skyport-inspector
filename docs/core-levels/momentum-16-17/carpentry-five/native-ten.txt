@@ -1,0 +1,42 @@
+✔ native C16 comparison keeps identical physical alternatives (101.2445ms)
+✔ native C17 comparison keeps identical physical alternatives (14.3025ms)
+✔ native C16 deep fall really lands higher and reaches its vestibule (90.084167ms)
+✔ native C16 shallow fall really lands lower and reaches its vestibule (41.182416ms)
+✔ native C17 deep fall reaches the farther wider floor (33.628375ms)
+✔ native C17 shallow fall reaches the nearer narrower floor (55.465291ms)
+✔ native C16 changing-fit rim rejection keeps real support and recovers by elevator then recenters (114.285375ms)
+✔ native C16 a real missed deep aperture can walk out and return without resetting (113.200167ms)
+✖ native C17 revised east barrier physically rejects the old shallow staging route (24.176125ms)
+✔ native C17 revised divider physically blocks a full-supported near-to-far air jump (48.593333ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 9
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1259.764833
+
+✖ failing tests:
+
+test at tests/core-comparisons-routes.test.ts:171:2
+✖ native C17 revised east barrier physically rejects the old shallow staging route (24.176125ms)
+  AssertionError [ERR_ASSERTION]: Must really return to basin rather than merely miss the old3.2m support assertion
+  + actual - expected
+  
+  + 'shaft-sidewalk-east'
+  - 'recovery-basin'
+  
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:172:305)
+      at run (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:64:144)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:171:94)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'shaft-sidewalk-east',
+    expected: 'recovery-basin',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

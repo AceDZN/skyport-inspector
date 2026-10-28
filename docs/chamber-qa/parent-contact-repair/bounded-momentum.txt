@@ -1,0 +1,78 @@
+TAP version 13
+# Subtest: native C16 comparison keeps identical physical alternatives
+ok 1 - native C16 comparison keeps identical physical alternatives
+  ---
+  duration_ms: 68.467458
+  type: 'test'
+  ...
+# Subtest: native C17 comparison keeps identical physical alternatives
+ok 2 - native C17 comparison keeps identical physical alternatives
+  ---
+  duration_ms: 7.602125
+  type: 'test'
+  ...
+# Subtest: native C16 deep fall really lands higher and reaches its vestibule
+ok 3 - native C16 deep fall really lands higher and reaches its vestibule
+  ---
+  duration_ms: 62.724083
+  type: 'test'
+  ...
+# Subtest: native C16 shallow fall really lands lower and reaches its vestibule
+ok 4 - native C16 shallow fall really lands lower and reaches its vestibule
+  ---
+  duration_ms: 37.943542
+  type: 'test'
+  ...
+# Subtest: native C17 deep fall reaches the farther wider floor
+ok 5 - native C17 deep fall reaches the farther wider floor
+  ---
+  duration_ms: 28.478208
+  type: 'test'
+  ...
+# Subtest: native C17 shallow fall reaches the nearer narrower floor
+ok 6 - native C17 shallow fall reaches the nearer narrower floor
+  ---
+  duration_ms: 41.859459
+  type: 'test'
+  ...
+# Subtest: native C16 an offset jump attempt enters low and the real basin elevator recovers it
+not ok 7 - native C16 an offset jump attempt enters low and the real basin elevator recovers it
+  ---
+  duration_ms: 30.259083
+  type: 'test'
+  location: '/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:61:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Actual fall did not traverse; inspect aperture alignment and blocked-exit events {"player":{"position":[-4.943615913391113,-2.844058036804199,-1.6777247190475464],"velocity":[2.416307737663571e-24,0,-4.8],"yaw":0,"pitch":0,"grounded":true,"crossings":0},"portals":[{"surface":"shallow-floor","position":[-5,-2.95,0.9],"normal":[0,1,0]},{"surface":"launch-white","position":[-7.96,9,-6],"normal":[1,0,0]}],"respawns":0,"contacts":[{"id":"shallow-bottom","normal":{"x":0,"y":0.9999999403953552,"z":0},"witness":{"x":-4.94362735748291,"y":-3,"z":-1.6777265071868896},"applied":{"x":0,"y":0,"z":0},"remaining":{"x":2.0135898013639875e-26,"y":-0.0011111111380159855,"z":-0.03999999910593033}}],"events":[{"type":"footstep","time":3.6499999999999897},{"type":"land","time":3.9999999999999885},{"type":"footstep","time":4.074999999999992},{"type":"footstep","time":4.500000000000013},{"type":"footstep","time":4.9250000000000345},{"type":"footstep","time":5.350000000000056},{"type":"footstep","time":5.775000000000077},{"type":"footstep","time":6.200000000000098}]}
+    
+    0 !== 1
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    Route.flight (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:36:10)
+    <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:62:33)
+    run (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:54:133)
+    TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:61:97)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1306:25)
+    async Test.processPendingSubtests (node:internal/test_runner/test:897:7)
+  ...
+# Subtest: native C16 a real missed deep aperture can walk out and return without resetting
+ok 8 - native C16 a real missed deep aperture can walk out and return without resetting
+  ---
+  duration_ms: 87.869417
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 7
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1075.895916

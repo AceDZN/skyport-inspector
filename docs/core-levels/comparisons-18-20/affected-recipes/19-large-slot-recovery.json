@@ -1,0 +1,920 @@
+{
+  "scope": "Unregistered authored-spawn native trajectory/route; no pose/velocity/goal/save/reset injection, no browser claim.",
+  "number": 19,
+  "contrast": false,
+  "error": null,
+  "notes": [
+    {
+      "stage": "real-rotated-small-fullsize-recovery",
+      "cargo": [
+        {
+          "id": "small-cube",
+          "position": [
+            -4.915799140930176,
+            0.419988214969635,
+            13.118700981140137
+          ],
+          "velocity": [
+            2.9835236072540283,
+            0.011997145600616932,
+            -14.442533493041992
+          ],
+          "rotation": [
+            -0.6759404540061951,
+            0.2076236754655838,
+            -0.20762373507022858,
+            -0.6759358644485474
+          ],
+          "angularVelocity": [
+            0,
+            -0.0000035525945349945687,
+            0
+          ],
+          "held": true,
+          "crossings": 0
+        },
+        {
+          "id": "large-cube",
+          "position": [
+            4.106616973876953,
+            0.6199175715446472,
+            -0.8979068398475647
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0.0000127695047922316,
+            -0.0003650685539469123,
+            -0.000009763340131030418,
+            0.9999999403953552
+          ],
+          "angularVelocity": [
+            0,
+            0,
+            0
+          ],
+          "held": false,
+          "crossings": 0
+        }
+      ]
+    },
+    {
+      "stage": "actual-pressure-delivery",
+      "id": "small-cube",
+      "padId": "narrow-receiver",
+      "cargo": [
+        {
+          "id": "small-cube",
+          "position": [
+            -4.0176568031311035,
+            0.48988837003707886,
+            -1.3616971969604492
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            -0.6759398579597473,
+            0.20762546360492706,
+            -0.2076255828142166,
+            -0.6759353876113892
+          ],
+          "angularVelocity": [
+            0,
+            0,
+            0
+          ],
+          "held": false,
+          "crossings": 0
+        },
+        {
+          "id": "large-cube",
+          "position": [
+            4.106616973876953,
+            0.6199175715446472,
+            -0.8979068398475647
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0.0000127695047922316,
+            -0.0003650685539469123,
+            -0.000009763340131030418,
+            0.9999999403953552
+          ],
+          "angularVelocity": [
+            0,
+            0,
+            0
+          ],
+          "held": false,
+          "crossings": 0
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "land",
+      "time": 0.008333333333333333
+    },
+    {
+      "type": "footstep",
+      "time": 0.4250000000000005
+    },
+    {
+      "type": "footstep",
+      "time": 0.8499999999999994
+    },
+    {
+      "type": "footstep",
+      "time": 1.274999999999998
+    },
+    {
+      "type": "pickup",
+      "time": 1.4249999999999974,
+      "body": "large-cube"
+    },
+    {
+      "type": "footstep",
+      "time": 1.6999999999999964
+    },
+    {
+      "type": "footstep",
+      "time": 2.124999999999995
+    },
+    {
+      "type": "footstep",
+      "time": 2.5499999999999936
+    },
+    {
+      "type": "footstep",
+      "time": 2.974999999999992
+    },
+    {
+      "type": "footstep",
+      "time": 3.3999999999999906
+    },
+    {
+      "type": "footstep",
+      "time": 4.408333333333342
+    },
+    {
+      "type": "contact",
+      "time": 4.750000000000026,
+      "body": "small-cube",
+      "speed": 1.2311042924557223
+    },
+    {
+      "type": "footstep",
+      "time": 4.833333333333363
+    },
+    {
+      "type": "contact",
+      "time": 5.091666666666709,
+      "body": "small-cube",
+      "speed": 8.740726557212211
+    },
+    {
+      "type": "footstep",
+      "time": 5.258333333333384
+    },
+    {
+      "type": "contact",
+      "time": 5.433333333333393,
+      "body": "small-cube",
+      "speed": 5.997981153428792
+    },
+    {
+      "type": "footstep",
+      "time": 5.6833333333334055
+    },
+    {
+      "type": "contact",
+      "time": 5.725000000000074,
+      "body": "small-cube",
+      "speed": 3.4768947149349576
+    },
+    {
+      "type": "footstep",
+      "time": 6.108333333333427
+    },
+    {
+      "type": "footstep",
+      "time": 6.533333333333448
+    },
+    {
+      "type": "footstep",
+      "time": 7.033333333333473
+    },
+    {
+      "type": "shutter-open",
+      "time": 7.341666666666821,
+      "id": "service-door"
+    },
+    {
+      "type": "pad",
+      "time": 7.341666666666821,
+      "pad": "wide-receiver",
+      "crate": "large-cube"
+    },
+    {
+      "type": "footstep",
+      "time": 7.458333333333494
+    },
+    {
+      "type": "drop",
+      "time": 8.000000000000187,
+      "body": "large-cube"
+    },
+    {
+      "type": "contact",
+      "time": 8.050000000000184,
+      "body": "large-cube",
+      "speed": 0.90607036116808
+    },
+    {
+      "type": "footstep",
+      "time": 9.016666666666795
+    },
+    {
+      "type": "footstep",
+      "time": 9.441666666666771
+    },
+    {
+      "type": "footstep",
+      "time": 9.866666666666747
+    },
+    {
+      "type": "footstep",
+      "time": 10.291666666666723
+    },
+    {
+      "type": "footstep",
+      "time": 10.716666666666699
+    },
+    {
+      "type": "footstep",
+      "time": 11.141666666666675
+    },
+    {
+      "type": "footstep",
+      "time": 11.691666666666643
+    },
+    {
+      "type": "footstep",
+      "time": 12.11666666666662
+    },
+    {
+      "type": "pickup",
+      "time": 12.216666666666613,
+      "body": "small-cube"
+    },
+    {
+      "type": "footstep",
+      "time": 12.541666666666595
+    },
+    {
+      "type": "footstep",
+      "time": 12.96666666666657
+    },
+    {
+      "type": "footstep",
+      "time": 13.391666666666547
+    },
+    {
+      "type": "footstep",
+      "time": 13.816666666666523
+    },
+    {
+      "type": "footstep",
+      "time": 14.241666666666498
+    },
+    {
+      "type": "footstep",
+      "time": 14.666666666666474
+    },
+    {
+      "type": "footstep",
+      "time": 15.09166666666645
+    },
+    {
+      "type": "footstep",
+      "time": 15.516666666666426
+    },
+    {
+      "type": "footstep",
+      "time": 16.008333333333066
+    },
+    {
+      "type": "footstep",
+      "time": 16.433333333333042
+    },
+    {
+      "type": "footstep",
+      "time": 16.858333333333018
+    },
+    {
+      "type": "drop",
+      "time": 17.399999999999654,
+      "body": "small-cube"
+    },
+    {
+      "type": "shutter-open",
+      "time": 17.541666666666313,
+      "id": "sorter-door"
+    },
+    {
+      "type": "pad",
+      "time": 17.541666666666313,
+      "pad": "narrow-receiver",
+      "crate": "small-cube"
+    },
+    {
+      "type": "contact",
+      "time": 17.55833333333298,
+      "body": "small-cube",
+      "speed": 2.512634094753564
+    },
+    {
+      "type": "footstep",
+      "time": 18.61666666666625
+    },
+    {
+      "type": "footstep",
+      "time": 19.041666666666227
+    },
+    {
+      "type": "footstep",
+      "time": 19.466666666666203
+    },
+    {
+      "type": "footstep",
+      "time": 19.89166666666618
+    },
+    {
+      "type": "footstep",
+      "time": 20.316666666666155
+    },
+    {
+      "type": "footstep",
+      "time": 20.74166666666613
+    },
+    {
+      "type": "footstep",
+      "time": 21.166666666666107
+    },
+    {
+      "type": "footstep",
+      "time": 21.591666666666082
+    },
+    {
+      "type": "complete",
+      "time": 21.99166666666606,
+      "chamber": 19
+    }
+  ],
+  "barrierContacts": [],
+  "final": {
+    "room": "chamber-19",
+    "number": 19,
+    "mission": "Send the smaller cube through the narrow slot. Leave the larger cube at the wide receiver.",
+    "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+    "player": {
+      "position": [
+        0.02241397649049759,
+        0.8648635149002075,
+        -14.63479995727539
+      ],
+      "velocity": [
+        -0.04549060889897258,
+        0,
+        -4.799784433066692
+      ],
+      "yaw": 0.009476301974471888,
+      "pitch": 0,
+      "grounded": true,
+      "crossings": 0
+    },
+    "portals": [
+      null,
+      null
+    ],
+    "crates": [
+      {
+        "id": "small-cube",
+        "position": [
+          -4.0176568031311035,
+          0.48988837003707886,
+          -1.3616971969604492
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          -0.6759398579597473,
+          0.20762546360492706,
+          -0.2076255828142166,
+          -0.6759353876113892
+        ],
+        "angularVelocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      },
+      {
+        "id": "large-cube",
+        "position": [
+          4.106616973876953,
+          0.6199175715446472,
+          -0.8979068398475647
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0.0000127695047922316,
+          -0.0003650685539469123,
+          -0.000009763340131030418,
+          0.9999999403953552
+        ],
+        "angularVelocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      }
+    ],
+    "pads": [
+      {
+        "id": "narrow-receiver",
+        "position": [
+          -4,
+          0.07,
+          -1.4
+        ],
+        "pressed": true,
+        "crate": "small-cube"
+      },
+      {
+        "id": "wide-receiver",
+        "position": [
+          4,
+          0.07,
+          -1.4
+        ],
+        "pressed": true,
+        "crate": "large-cube"
+      }
+    ],
+    "devices": [
+      {
+        "id": "service-door",
+        "kind": "shutter",
+        "label": "SERVICE",
+        "position": [
+          0,
+          5,
+          0
+        ],
+        "size": [
+          2.8,
+          3,
+          0.3
+        ],
+        "active": true,
+        "progress": 1,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "sorter-door",
+        "kind": "shutter",
+        "label": "SORTER",
+        "position": [
+          0,
+          5,
+          -14.12
+        ],
+        "size": [
+          2.8,
+          3,
+          0.3
+        ],
+        "active": true,
+        "progress": 1,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      }
+    ],
+    "panels": [],
+    "exits": [
+      {
+        "id": "sorter-exit",
+        "label": "EXIT",
+        "position": [
+          0,
+          1.5,
+          -16.39
+        ],
+        "size": [
+          2.76,
+          3,
+          3.58
+        ]
+      }
+    ],
+    "result": {
+      "goalMatched": true,
+      "physicalComplete": true,
+      "exit": "sorter-exit",
+      "reason": "",
+      "events": [
+        {
+          "type": "land",
+          "time": 8
+        },
+        {
+          "type": "footstep",
+          "time": 425
+        },
+        {
+          "type": "footstep",
+          "time": 850
+        },
+        {
+          "type": "footstep",
+          "time": 1275
+        },
+        {
+          "type": "pickup",
+          "time": 1425,
+          "body": "large-cube"
+        },
+        {
+          "type": "footstep",
+          "time": 1700
+        },
+        {
+          "type": "footstep",
+          "time": 2125
+        },
+        {
+          "type": "footstep",
+          "time": 2550
+        },
+        {
+          "type": "footstep",
+          "time": 2975
+        },
+        {
+          "type": "footstep",
+          "time": 3400
+        },
+        {
+          "type": "footstep",
+          "time": 4408
+        },
+        {
+          "type": "contact",
+          "time": 4750,
+          "body": "small-cube",
+          "speed": 1.2311042924557223
+        },
+        {
+          "type": "footstep",
+          "time": 4833
+        },
+        {
+          "type": "contact",
+          "time": 5092,
+          "body": "small-cube",
+          "speed": 8.740726557212211
+        },
+        {
+          "type": "footstep",
+          "time": 5258
+        },
+        {
+          "type": "contact",
+          "time": 5433,
+          "body": "small-cube",
+          "speed": 5.997981153428792
+        },
+        {
+          "type": "footstep",
+          "time": 5683
+        },
+        {
+          "type": "contact",
+          "time": 5725,
+          "body": "small-cube",
+          "speed": 3.4768947149349576
+        },
+        {
+          "type": "footstep",
+          "time": 6108
+        },
+        {
+          "type": "footstep",
+          "time": 6533
+        },
+        {
+          "type": "footstep",
+          "time": 7033
+        },
+        {
+          "type": "shutter-open",
+          "time": 7342,
+          "id": "service-door"
+        },
+        {
+          "type": "pad",
+          "time": 7342,
+          "pad": "wide-receiver",
+          "crate": "large-cube"
+        },
+        {
+          "type": "footstep",
+          "time": 7458
+        },
+        {
+          "type": "drop",
+          "time": 8000,
+          "body": "large-cube"
+        },
+        {
+          "type": "contact",
+          "time": 8050,
+          "body": "large-cube",
+          "speed": 0.90607036116808
+        },
+        {
+          "type": "footstep",
+          "time": 9017
+        },
+        {
+          "type": "footstep",
+          "time": 9442
+        },
+        {
+          "type": "footstep",
+          "time": 9867
+        },
+        {
+          "type": "footstep",
+          "time": 10292
+        },
+        {
+          "type": "footstep",
+          "time": 10717
+        },
+        {
+          "type": "footstep",
+          "time": 11142
+        },
+        {
+          "type": "footstep",
+          "time": 11692
+        },
+        {
+          "type": "footstep",
+          "time": 12117
+        },
+        {
+          "type": "pickup",
+          "time": 12217,
+          "body": "small-cube"
+        },
+        {
+          "type": "footstep",
+          "time": 12542
+        },
+        {
+          "type": "footstep",
+          "time": 12967
+        },
+        {
+          "type": "footstep",
+          "time": 13392
+        },
+        {
+          "type": "footstep",
+          "time": 13817
+        },
+        {
+          "type": "footstep",
+          "time": 14242
+        },
+        {
+          "type": "footstep",
+          "time": 14667
+        },
+        {
+          "type": "footstep",
+          "time": 15092
+        },
+        {
+          "type": "footstep",
+          "time": 15517
+        },
+        {
+          "type": "footstep",
+          "time": 16008
+        },
+        {
+          "type": "footstep",
+          "time": 16433
+        },
+        {
+          "type": "footstep",
+          "time": 16858
+        },
+        {
+          "type": "drop",
+          "time": 17400,
+          "body": "small-cube"
+        },
+        {
+          "type": "shutter-open",
+          "time": 17542,
+          "id": "sorter-door"
+        },
+        {
+          "type": "pad",
+          "time": 17542,
+          "pad": "narrow-receiver",
+          "crate": "small-cube"
+        },
+        {
+          "type": "contact",
+          "time": 17558,
+          "body": "small-cube",
+          "speed": 2.512634094753564
+        },
+        {
+          "type": "footstep",
+          "time": 18617
+        },
+        {
+          "type": "footstep",
+          "time": 19042
+        },
+        {
+          "type": "footstep",
+          "time": 19467
+        },
+        {
+          "type": "footstep",
+          "time": 19892
+        },
+        {
+          "type": "footstep",
+          "time": 20317
+        },
+        {
+          "type": "footstep",
+          "time": 20742
+        },
+        {
+          "type": "footstep",
+          "time": 21167
+        },
+        {
+          "type": "footstep",
+          "time": 21592
+        }
+      ],
+      "mechanisms": [
+        "cargo",
+        "shutters",
+        "buttons"
+      ]
+    },
+    "held": null,
+    "holdSpaceTransform": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "launchUsed": false,
+    "respawns": 0,
+    "beams": {},
+    "signals": {
+      "narrow-receiver": true,
+      "wide-receiver": true,
+      "safety:service-door": false,
+      "door-safety": false,
+      "moving:service-door": false,
+      "safety:sorter-door": false,
+      "moving:sorter-door": false
+    },
+    "events": [
+      {
+        "type": "footstep",
+        "time": 16008
+      },
+      {
+        "type": "footstep",
+        "time": 16433
+      },
+      {
+        "type": "footstep",
+        "time": 16858
+      },
+      {
+        "type": "drop",
+        "time": 17400,
+        "body": "small-cube"
+      },
+      {
+        "type": "shutter-open",
+        "time": 17542,
+        "id": "sorter-door"
+      },
+      {
+        "type": "pad",
+        "time": 17542,
+        "pad": "narrow-receiver",
+        "crate": "small-cube"
+      },
+      {
+        "type": "contact",
+        "time": 17558,
+        "body": "small-cube",
+        "speed": 2.512634094753564
+      },
+      {
+        "type": "footstep",
+        "time": 18617
+      },
+      {
+        "type": "footstep",
+        "time": 19042
+      },
+      {
+        "type": "footstep",
+        "time": 19467
+      },
+      {
+        "type": "footstep",
+        "time": 19892
+      },
+      {
+        "type": "footstep",
+        "time": 20317
+      },
+      {
+        "type": "footstep",
+        "time": 20742
+      },
+      {
+        "type": "footstep",
+        "time": 21167
+      },
+      {
+        "type": "footstep",
+        "time": 21592
+      },
+      {
+        "type": "complete",
+        "time": 21992,
+        "chamber": 19
+      }
+    ]
+  }
+}

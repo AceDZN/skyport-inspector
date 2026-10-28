@@ -1,0 +1,2338 @@
+{
+  "number": 14,
+  "contrast": true,
+  "id": "dark-inspection",
+  "scope": "Unregistered authored-spawn native route. Camera/WASD/E/ray-checked portals only; no actor/cargo/machine/goal/history/save assignments. Decorative glazing visibility and browser completion remain unverified.",
+  "error": null,
+  "ridingFrames": {},
+  "events": [
+    {
+      "type": "land",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "pickup",
+      "data": {
+        "body": "power-cube"
+      }
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "shutter-open",
+      "data": {
+        "id": "inspection-door"
+      }
+    },
+    {
+      "type": "pad",
+      "data": {
+        "pad": "power-button",
+        "crate": "power-cube"
+      }
+    },
+    {
+      "type": "drop",
+      "data": {
+        "body": "power-cube"
+      }
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "portalA",
+      "data": {
+        "surface": "power-source",
+        "point": [
+          10.959999999999999,
+          1.55,
+          11
+        ]
+      }
+    },
+    {
+      "type": "portalB",
+      "data": {
+        "surface": "power-return",
+        "point": [
+          -5,
+          1.55,
+          -13.959999999999999
+        ]
+      }
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "enter",
+      "data": {
+        "body": "player",
+        "from": 0,
+        "to": 1,
+        "fromSurface": "power-source",
+        "toSurface": "power-return",
+        "speed": 4.786059787260872,
+        "exitSpeed": 4.786059787260872,
+        "held": null
+      }
+    },
+    {
+      "type": "land",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "footstep",
+      "data": {}
+    },
+    {
+      "type": "complete",
+      "data": {
+        "chamber": 14
+      }
+    }
+  ],
+  "checkpoints": [
+    {
+      "label": "actual-authored-spawn",
+      "state": {
+        "room": "chamber-14",
+        "number": 14,
+        "mission": "Put the cube on POWER. Leave the receiver dark. Use west inspection.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            0.0000016185637150556431,
+            0.8636021018028259,
+            12.000001907348633
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [
+          {
+            "id": "power-cube",
+            "position": [
+              -6.000002861022949,
+              0.5498895645141602,
+              7.999998569488525
+            ],
+            "velocity": [
+              -0.000005070446150057251,
+              -7.474910717064631e-7,
+              -0.000004319822437537368
+            ],
+            "rotation": [
+              2.0004284806418582e-7,
+              3.890211069945693e-12,
+              -2.26985022777626e-7,
+              1
+            ],
+            "angularVelocity": [
+              -0.000007810795068508014,
+              -9.630912841047164e-15,
+              0.000009168018550553825
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "power-button",
+            "position": [
+              -3,
+              0.14,
+              8
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "plant-access",
+            "kind": "shutter",
+            "label": "POWERED ACCESS",
+            "position": [
+              6,
+              1.5,
+              1
+            ],
+            "size": [
+              3.2,
+              3,
+              0.35
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "plant-lift",
+            "kind": "lift",
+            "label": "POWER LIFT",
+            "position": [
+              6,
+              -0.2,
+              -4
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "inspection-door",
+            "kind": "shutter",
+            "label": "WEST INSPECTION",
+            "position": [
+              -11.12,
+              1.5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "upper-door",
+            "kind": "shutter",
+            "label": "UPPER",
+            "position": [
+              6,
+              5.7,
+              -14.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "power-source",
+            "position": [
+              10.985,
+              1.55,
+              9
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 7,
+            "height": 3.1
+          },
+          {
+            "id": "power-return",
+            "position": [
+              -5,
+              1.55,
+              -13.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 6,
+            "height": 3.1
+          }
+        ],
+        "exits": [
+          {
+            "id": "inspection-exit",
+            "label": "EXIT",
+            "position": [
+              -13,
+              1.5,
+              -10
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          },
+          {
+            "id": "upper-exit",
+            "label": "EXIT",
+            "position": [
+              6,
+              5.7,
+              -16
+            ],
+            "size": [
+              2.7600000000000016,
+              3,
+              4.359999999999999
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "power-button": false,
+          "safety:plant-access": false,
+          "door-safety": false,
+          "moving:plant-access": false,
+          "moving:plant-lift": false,
+          "safety:inspection-door": false,
+          "moving:inspection-door": false,
+          "safety:upper-door": false,
+          "moving:upper-door": false,
+          "plant-light": false
+        },
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "plant-west-ground",
+          "normal": {
+            "x": -0.00001759554106683936,
+            "y": 1,
+            "z": 0
+          },
+          "toi": 0.000039572481909999624,
+          "witness": {
+            "x": -0.0000324249267578125,
+            "y": 0,
+            "z": 11.99815559387207
+          },
+          "applied": {
+            "x": 0,
+            "y": -0.000039572481909999624,
+            "z": 0
+          },
+          "remaining": {
+            "x": 0,
+            "y": -0.0010715386597439647,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-pressure-enables-plant-emitter",
+      "state": {
+        "room": "chamber-14",
+        "number": 14,
+        "mission": "Put the cube on POWER. Leave the receiver dark. Use west inspection.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -4.882121562957764,
+            0.8637892007827759,
+            8.004775047302246
+          ],
+          "velocity": [
+            -9.808995098886369e-11,
+            0,
+            1.1502606783772442e-11
+          ],
+          "yaw": -1.5701192350772513,
+          "pitch": -0.16851209677019433,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [
+          {
+            "id": "power-cube",
+            "position": [
+              -3.0848515033721924,
+              0.6899020671844482,
+              8.003625869750977
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0.000008137818440445699,
+              -0.00008858866203809157,
+              -6.260951863623632e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "power-button",
+            "position": [
+              -3,
+              0.14,
+              8
+            ],
+            "pressed": true,
+            "crate": "power-cube"
+          }
+        ],
+        "devices": [
+          {
+            "id": "plant-access",
+            "kind": "shutter",
+            "label": "POWERED ACCESS",
+            "position": [
+              6,
+              1.5,
+              1
+            ],
+            "size": [
+              3.2,
+              3,
+              0.35
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "plant-lift",
+            "kind": "lift",
+            "label": "POWER LIFT",
+            "position": [
+              6,
+              -0.2,
+              -4
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "inspection-door",
+            "kind": "shutter",
+            "label": "WEST INSPECTION",
+            "position": [
+              -11.12,
+              5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "upper-door",
+            "kind": "shutter",
+            "label": "UPPER",
+            "position": [
+              6,
+              5.7,
+              -14.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "power-source",
+            "position": [
+              10.985,
+              1.55,
+              9
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 7,
+            "height": 3.1
+          },
+          {
+            "id": "power-return",
+            "position": [
+              -5,
+              1.55,
+              -13.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 6,
+            "height": 3.1
+          }
+        ],
+        "exits": [
+          {
+            "id": "inspection-exit",
+            "label": "EXIT",
+            "position": [
+              -13,
+              1.5,
+              -10
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          },
+          {
+            "id": "upper-exit",
+            "label": "EXIT",
+            "position": [
+              6,
+              5.7,
+              -16
+            ],
+            "size": [
+              2.7600000000000016,
+              3,
+              4.359999999999999
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "plant-emitter": {
+            "segments": [
+              {
+                "from": [
+                  5,
+                  0.9,
+                  9
+                ],
+                "to": [
+                  11,
+                  0.9,
+                  9
+                ]
+              }
+            ],
+            "stop": "obstacle",
+            "obstacle": "plant-east-wall",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "power-button": true,
+          "safety:plant-access": false,
+          "door-safety": false,
+          "moving:plant-access": false,
+          "moving:plant-lift": false,
+          "safety:inspection-door": false,
+          "moving:inspection-door": false,
+          "safety:upper-door": false,
+          "moving:upper-door": false,
+          "plant-light": false
+        },
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "footstep",
+            "time": 508
+          },
+          {
+            "type": "footstep",
+            "time": 933
+          },
+          {
+            "type": "footstep",
+            "time": 1358
+          },
+          {
+            "type": "footstep",
+            "time": 1783
+          },
+          {
+            "type": "pickup",
+            "time": 2225,
+            "body": "power-cube"
+          },
+          {
+            "type": "footstep",
+            "time": 2242
+          },
+          {
+            "type": "shutter-open",
+            "time": 2667,
+            "id": "inspection-door"
+          },
+          {
+            "type": "pad",
+            "time": 2667,
+            "pad": "power-button",
+            "crate": "power-cube"
+          },
+          {
+            "type": "drop",
+            "time": 2825,
+            "body": "power-cube"
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "plant-west-ground",
+          "normal": {
+            "x": 0,
+            "y": 1,
+            "z": 0
+          },
+          "toi": 0.00009999721078202128,
+          "witness": {
+            "x": -4.88215970993042,
+            "y": 0,
+            "z": 8.004289627075195
+          },
+          "applied": {
+            "x": -7.356541455649443e-14,
+            "y": -0.00009999721078202128,
+            "z": 8.626714624495723e-15
+          },
+          "remaining": {
+            "x": -7.438508901717877e-13,
+            "y": -0.0010111138690263033,
+            "z": 8.722834737504015e-14
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-offset-pair-keeps-receiver-dark",
+      "state": {
+        "room": "chamber-14",
+        "number": 14,
+        "mission": "Put the cube on POWER. Leave the receiver dark. Use west inspection.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            7.0729475021362305,
+            0.8648282885551453,
+            11.002678871154785
+          ],
+          "velocity": [
+            1.1750456582902944e-8,
+            0,
+            4.3356400129601235e-10
+          ],
+          "yaw": 0.44920967345510393,
+          "pitch": 0.0012738918825214423,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "power-source",
+            "position": [
+              10.959999999999999,
+              1.55,
+              11
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "power-return",
+            "position": [
+              -5,
+              1.55,
+              -13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "power-cube",
+            "position": [
+              -3.0848515033721924,
+              0.6899020671844482,
+              8.003625869750977
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0.000008137818440445699,
+              -0.00008858866203809157,
+              -6.260951863623632e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "power-button",
+            "position": [
+              -3,
+              0.14,
+              8
+            ],
+            "pressed": true,
+            "crate": "power-cube"
+          }
+        ],
+        "devices": [
+          {
+            "id": "plant-access",
+            "kind": "shutter",
+            "label": "POWERED ACCESS",
+            "position": [
+              6,
+              1.5,
+              1
+            ],
+            "size": [
+              3.2,
+              3,
+              0.35
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "plant-lift",
+            "kind": "lift",
+            "label": "POWER LIFT",
+            "position": [
+              6,
+              -0.2,
+              -4
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "inspection-door",
+            "kind": "shutter",
+            "label": "WEST INSPECTION",
+            "position": [
+              -11.12,
+              5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "upper-door",
+            "kind": "shutter",
+            "label": "UPPER",
+            "position": [
+              6,
+              5.7,
+              -14.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "power-source",
+            "position": [
+              10.985,
+              1.55,
+              9
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 7,
+            "height": 3.1
+          },
+          {
+            "id": "power-return",
+            "position": [
+              -5,
+              1.55,
+              -13.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 6,
+            "height": 3.1
+          }
+        ],
+        "exits": [
+          {
+            "id": "inspection-exit",
+            "label": "EXIT",
+            "position": [
+              -13,
+              1.5,
+              -10
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          },
+          {
+            "id": "upper-exit",
+            "label": "EXIT",
+            "position": [
+              6,
+              5.7,
+              -16
+            ],
+            "size": [
+              2.7600000000000016,
+              3,
+              4.359999999999999
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "plant-emitter": {
+            "segments": [
+              {
+                "from": [
+                  5,
+                  0.9,
+                  9
+                ],
+                "to": [
+                  11,
+                  0.9,
+                  9
+                ]
+              }
+            ],
+            "stop": "obstacle",
+            "obstacle": "plant-east-wall",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "power-button": true,
+          "safety:plant-access": false,
+          "door-safety": false,
+          "moving:plant-access": false,
+          "moving:plant-lift": false,
+          "safety:inspection-door": false,
+          "moving:inspection-door": false,
+          "safety:upper-door": false,
+          "moving:upper-door": false,
+          "plant-light": false
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 1783
+          },
+          {
+            "type": "pickup",
+            "time": 2225,
+            "body": "power-cube"
+          },
+          {
+            "type": "footstep",
+            "time": 2242
+          },
+          {
+            "type": "shutter-open",
+            "time": 2667,
+            "id": "inspection-door"
+          },
+          {
+            "type": "pad",
+            "time": 2667,
+            "pad": "power-button",
+            "crate": "power-cube"
+          },
+          {
+            "type": "drop",
+            "time": 2825,
+            "body": "power-cube"
+          },
+          {
+            "type": "footstep",
+            "time": 3642
+          },
+          {
+            "type": "footstep",
+            "time": 4067
+          },
+          {
+            "type": "footstep",
+            "time": 4492
+          },
+          {
+            "type": "footstep",
+            "time": 4917
+          },
+          {
+            "type": "footstep",
+            "time": 5342
+          },
+          {
+            "type": "footstep",
+            "time": 5767
+          },
+          {
+            "type": "footstep",
+            "time": 6192
+          },
+          {
+            "type": "footstep",
+            "time": 6617
+          },
+          {
+            "type": "portalA",
+            "time": 6917,
+            "surface": "power-source",
+            "point": [
+              10.959999999999999,
+              1.55,
+              11
+            ]
+          },
+          {
+            "type": "portalB",
+            "time": 6925,
+            "surface": "power-return",
+            "point": [
+              -5,
+              1.55,
+              -13.959999999999999
+            ]
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "plant-south-ground",
+          "normal": {
+            "x": -0.0013594577321782708,
+            "y": 0.9999983906745911,
+            "z": -0.0011903246631845832
+          },
+          "toi": 0.00010014871804742143,
+          "witness": {
+            "x": 7.072471618652344,
+            "y": -0.000008732080459594727,
+            "z": 11.000886917114258
+          },
+          "applied": {
+            "x": 8.825948652479987e-12,
+            "y": -0.00010014871804742143,
+            "z": 3.256565752739887e-13
+          },
+          "remaining": {
+            "x": 8.909452342553692e-11,
+            "y": -0.0010109624126926064,
+            "z": 3.287376664287689e-12
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-physical-completion",
+      "state": {
+        "room": "chamber-14",
+        "number": 14,
+        "mission": "Put the cube on POWER. Leave the receiver dark. Use west inspection.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -10.854660987854004,
+            0.8650000095367432,
+            -9.968599319458008
+          ],
+          "velocity": [
+            -4.799692644825872,
+            0,
+            -0.05296937113611241
+          ],
+          "yaw": 1.559760891787618,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "power-source",
+            "position": [
+              10.959999999999999,
+              1.55,
+              11
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "power-return",
+            "position": [
+              -5,
+              1.55,
+              -13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "power-cube",
+            "position": [
+              -3.0848515033721924,
+              0.6899020671844482,
+              8.003625869750977
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0.000008137818440445699,
+              -0.00008858866203809157,
+              -6.260951863623632e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "power-button",
+            "position": [
+              -3,
+              0.14,
+              8
+            ],
+            "pressed": true,
+            "crate": "power-cube"
+          }
+        ],
+        "devices": [
+          {
+            "id": "plant-access",
+            "kind": "shutter",
+            "label": "POWERED ACCESS",
+            "position": [
+              6,
+              1.5,
+              1
+            ],
+            "size": [
+              3.2,
+              3,
+              0.35
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "plant-lift",
+            "kind": "lift",
+            "label": "POWER LIFT",
+            "position": [
+              6,
+              -0.2,
+              -4
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "inspection-door",
+            "kind": "shutter",
+            "label": "WEST INSPECTION",
+            "position": [
+              -11.12,
+              5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "upper-door",
+            "kind": "shutter",
+            "label": "UPPER",
+            "position": [
+              6,
+              5.7,
+              -14.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "power-source",
+            "position": [
+              10.985,
+              1.55,
+              9
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 7,
+            "height": 3.1
+          },
+          {
+            "id": "power-return",
+            "position": [
+              -5,
+              1.55,
+              -13.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 6,
+            "height": 3.1
+          }
+        ],
+        "exits": [
+          {
+            "id": "inspection-exit",
+            "label": "EXIT",
+            "position": [
+              -13,
+              1.5,
+              -10
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          },
+          {
+            "id": "upper-exit",
+            "label": "EXIT",
+            "position": [
+              6,
+              5.7,
+              -16
+            ],
+            "size": [
+              2.7600000000000016,
+              3,
+              4.359999999999999
+            ]
+          }
+        ],
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "inspection-exit",
+          "reason": "",
+          "events": [
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "footstep",
+              "time": 508
+            },
+            {
+              "type": "footstep",
+              "time": 933
+            },
+            {
+              "type": "footstep",
+              "time": 1358
+            },
+            {
+              "type": "footstep",
+              "time": 1783
+            },
+            {
+              "type": "pickup",
+              "time": 2225,
+              "body": "power-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 2242
+            },
+            {
+              "type": "shutter-open",
+              "time": 2667,
+              "id": "inspection-door"
+            },
+            {
+              "type": "pad",
+              "time": 2667,
+              "pad": "power-button",
+              "crate": "power-cube"
+            },
+            {
+              "type": "drop",
+              "time": 2825,
+              "body": "power-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 3642
+            },
+            {
+              "type": "footstep",
+              "time": 4067
+            },
+            {
+              "type": "footstep",
+              "time": 4492
+            },
+            {
+              "type": "footstep",
+              "time": 4917
+            },
+            {
+              "type": "footstep",
+              "time": 5342
+            },
+            {
+              "type": "footstep",
+              "time": 5767
+            },
+            {
+              "type": "footstep",
+              "time": 6192
+            },
+            {
+              "type": "footstep",
+              "time": 6617
+            },
+            {
+              "type": "portalA",
+              "time": 6917,
+              "surface": "power-source",
+              "point": [
+                10.959999999999999,
+                1.55,
+                11
+              ]
+            },
+            {
+              "type": "portalB",
+              "time": 6925,
+              "surface": "power-return",
+              "point": [
+                -5,
+                1.55,
+                -13.959999999999999
+              ]
+            },
+            {
+              "type": "footstep",
+              "time": 7842
+            },
+            {
+              "type": "footstep",
+              "time": 8267
+            },
+            {
+              "type": "footstep",
+              "time": 8692
+            },
+            {
+              "type": "enter",
+              "time": 8808,
+              "body": "player",
+              "from": 0,
+              "to": 1,
+              "fromSurface": "power-source",
+              "toSurface": "power-return",
+              "speed": 4.786059787260872,
+              "exitSpeed": 4.786059787260872,
+              "held": null
+            },
+            {
+              "type": "land",
+              "time": 8817
+            },
+            {
+              "type": "footstep",
+              "time": 9117
+            },
+            {
+              "type": "footstep",
+              "time": 9542
+            },
+            {
+              "type": "footstep",
+              "time": 9967
+            },
+            {
+              "type": "footstep",
+              "time": 10392
+            },
+            {
+              "type": "footstep",
+              "time": 10817
+            }
+          ],
+          "mechanisms": [
+            "cargo",
+            "shutters",
+            "buttons",
+            "portals"
+          ]
+        },
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "plant-emitter": {
+            "segments": [
+              {
+                "from": [
+                  5,
+                  0.9,
+                  9
+                ],
+                "to": [
+                  11,
+                  0.9,
+                  9
+                ]
+              }
+            ],
+            "stop": "obstacle",
+            "obstacle": "plant-east-wall",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "power-button": true,
+          "safety:plant-access": false,
+          "door-safety": true,
+          "moving:plant-access": false,
+          "moving:plant-lift": false,
+          "safety:inspection-door": true,
+          "moving:inspection-door": false,
+          "safety:upper-door": false,
+          "moving:upper-door": false,
+          "plant-light": false
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 5767
+          },
+          {
+            "type": "footstep",
+            "time": 6192
+          },
+          {
+            "type": "footstep",
+            "time": 6617
+          },
+          {
+            "type": "portalA",
+            "time": 6917,
+            "surface": "power-source",
+            "point": [
+              10.959999999999999,
+              1.55,
+              11
+            ]
+          },
+          {
+            "type": "portalB",
+            "time": 6925,
+            "surface": "power-return",
+            "point": [
+              -5,
+              1.55,
+              -13.959999999999999
+            ]
+          },
+          {
+            "type": "footstep",
+            "time": 7842
+          },
+          {
+            "type": "footstep",
+            "time": 8267
+          },
+          {
+            "type": "footstep",
+            "time": 8692
+          },
+          {
+            "type": "enter",
+            "time": 8808,
+            "body": "player",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "power-source",
+            "toSurface": "power-return",
+            "speed": 4.786059787260872,
+            "exitSpeed": 4.786059787260872,
+            "held": null
+          },
+          {
+            "type": "land",
+            "time": 8817
+          },
+          {
+            "type": "footstep",
+            "time": 9117
+          },
+          {
+            "type": "footstep",
+            "time": 9542
+          },
+          {
+            "type": "footstep",
+            "time": 9967
+          },
+          {
+            "type": "footstep",
+            "time": 10392
+          },
+          {
+            "type": "footstep",
+            "time": 10817
+          },
+          {
+            "type": "complete",
+            "time": 11025,
+            "chamber": 14
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "plant-west-ground",
+          "normal": {
+            "x": -0.000010390665011072997,
+            "y": 1,
+            "z": -0.00019000073370989412
+          },
+          "toi": 0.015831774100661278,
+          "witness": {
+            "x": -10.830472946166992,
+            "y": -8.940696716308594e-8,
+            "z": -9.968632698059082
+          },
+          "applied": {
+            "x": -0.015824705362319946,
+            "y": -0.00043960328912362456,
+            "z": -0.00017464131815358996
+          },
+          "remaining": {
+            "x": -0.02417273446917534,
+            "y": -0.0006715078488923609,
+            "z": -0.0002667701046448201
+          }
+        }
+      ]
+    },
+    {
+      "label": "final",
+      "state": {
+        "room": "chamber-14",
+        "number": 14,
+        "mission": "Put the cube on POWER. Leave the receiver dark. Use west inspection.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -10.854660987854004,
+            0.8650000095367432,
+            -9.968599319458008
+          ],
+          "velocity": [
+            -4.799692644825872,
+            0,
+            -0.05296937113611241
+          ],
+          "yaw": 1.559760891787618,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "power-source",
+            "position": [
+              10.959999999999999,
+              1.55,
+              11
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "power-return",
+            "position": [
+              -5,
+              1.55,
+              -13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "power-cube",
+            "position": [
+              -3.0848515033721924,
+              0.6899020671844482,
+              8.003625869750977
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0.000008137818440445699,
+              -0.00008858866203809157,
+              -6.260951863623632e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "power-button",
+            "position": [
+              -3,
+              0.14,
+              8
+            ],
+            "pressed": true,
+            "crate": "power-cube"
+          }
+        ],
+        "devices": [
+          {
+            "id": "plant-access",
+            "kind": "shutter",
+            "label": "POWERED ACCESS",
+            "position": [
+              6,
+              1.5,
+              1
+            ],
+            "size": [
+              3.2,
+              3,
+              0.35
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "plant-lift",
+            "kind": "lift",
+            "label": "POWER LIFT",
+            "position": [
+              6,
+              -0.2,
+              -4
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "inspection-door",
+            "kind": "shutter",
+            "label": "WEST INSPECTION",
+            "position": [
+              -11.12,
+              5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "upper-door",
+            "kind": "shutter",
+            "label": "UPPER",
+            "position": [
+              6,
+              5.7,
+              -14.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "power-source",
+            "position": [
+              10.985,
+              1.55,
+              9
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 7,
+            "height": 3.1
+          },
+          {
+            "id": "power-return",
+            "position": [
+              -5,
+              1.55,
+              -13.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 6,
+            "height": 3.1
+          }
+        ],
+        "exits": [
+          {
+            "id": "inspection-exit",
+            "label": "EXIT",
+            "position": [
+              -13,
+              1.5,
+              -10
+            ],
+            "size": [
+              4.359999999999999,
+              3,
+              2.7600000000000016
+            ]
+          },
+          {
+            "id": "upper-exit",
+            "label": "EXIT",
+            "position": [
+              6,
+              5.7,
+              -16
+            ],
+            "size": [
+              2.7600000000000016,
+              3,
+              4.359999999999999
+            ]
+          }
+        ],
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "inspection-exit",
+          "reason": "",
+          "events": [
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "footstep",
+              "time": 508
+            },
+            {
+              "type": "footstep",
+              "time": 933
+            },
+            {
+              "type": "footstep",
+              "time": 1358
+            },
+            {
+              "type": "footstep",
+              "time": 1783
+            },
+            {
+              "type": "pickup",
+              "time": 2225,
+              "body": "power-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 2242
+            },
+            {
+              "type": "shutter-open",
+              "time": 2667,
+              "id": "inspection-door"
+            },
+            {
+              "type": "pad",
+              "time": 2667,
+              "pad": "power-button",
+              "crate": "power-cube"
+            },
+            {
+              "type": "drop",
+              "time": 2825,
+              "body": "power-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 3642
+            },
+            {
+              "type": "footstep",
+              "time": 4067
+            },
+            {
+              "type": "footstep",
+              "time": 4492
+            },
+            {
+              "type": "footstep",
+              "time": 4917
+            },
+            {
+              "type": "footstep",
+              "time": 5342
+            },
+            {
+              "type": "footstep",
+              "time": 5767
+            },
+            {
+              "type": "footstep",
+              "time": 6192
+            },
+            {
+              "type": "footstep",
+              "time": 6617
+            },
+            {
+              "type": "portalA",
+              "time": 6917,
+              "surface": "power-source",
+              "point": [
+                10.959999999999999,
+                1.55,
+                11
+              ]
+            },
+            {
+              "type": "portalB",
+              "time": 6925,
+              "surface": "power-return",
+              "point": [
+                -5,
+                1.55,
+                -13.959999999999999
+              ]
+            },
+            {
+              "type": "footstep",
+              "time": 7842
+            },
+            {
+              "type": "footstep",
+              "time": 8267
+            },
+            {
+              "type": "footstep",
+              "time": 8692
+            },
+            {
+              "type": "enter",
+              "time": 8808,
+              "body": "player",
+              "from": 0,
+              "to": 1,
+              "fromSurface": "power-source",
+              "toSurface": "power-return",
+              "speed": 4.786059787260872,
+              "exitSpeed": 4.786059787260872,
+              "held": null
+            },
+            {
+              "type": "land",
+              "time": 8817
+            },
+            {
+              "type": "footstep",
+              "time": 9117
+            },
+            {
+              "type": "footstep",
+              "time": 9542
+            },
+            {
+              "type": "footstep",
+              "time": 9967
+            },
+            {
+              "type": "footstep",
+              "time": 10392
+            },
+            {
+              "type": "footstep",
+              "time": 10817
+            }
+          ],
+          "mechanisms": [
+            "cargo",
+            "shutters",
+            "buttons",
+            "portals"
+          ]
+        },
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "plant-emitter": {
+            "segments": [
+              {
+                "from": [
+                  5,
+                  0.9,
+                  9
+                ],
+                "to": [
+                  11,
+                  0.9,
+                  9
+                ]
+              }
+            ],
+            "stop": "obstacle",
+            "obstacle": "plant-east-wall",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "power-button": true,
+          "safety:plant-access": false,
+          "door-safety": true,
+          "moving:plant-access": false,
+          "moving:plant-lift": false,
+          "safety:inspection-door": true,
+          "moving:inspection-door": false,
+          "safety:upper-door": false,
+          "moving:upper-door": false,
+          "plant-light": false
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 5767
+          },
+          {
+            "type": "footstep",
+            "time": 6192
+          },
+          {
+            "type": "footstep",
+            "time": 6617
+          },
+          {
+            "type": "portalA",
+            "time": 6917,
+            "surface": "power-source",
+            "point": [
+              10.959999999999999,
+              1.55,
+              11
+            ]
+          },
+          {
+            "type": "portalB",
+            "time": 6925,
+            "surface": "power-return",
+            "point": [
+              -5,
+              1.55,
+              -13.959999999999999
+            ]
+          },
+          {
+            "type": "footstep",
+            "time": 7842
+          },
+          {
+            "type": "footstep",
+            "time": 8267
+          },
+          {
+            "type": "footstep",
+            "time": 8692
+          },
+          {
+            "type": "enter",
+            "time": 8808,
+            "body": "player",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "power-source",
+            "toSurface": "power-return",
+            "speed": 4.786059787260872,
+            "exitSpeed": 4.786059787260872,
+            "held": null
+          },
+          {
+            "type": "land",
+            "time": 8817
+          },
+          {
+            "type": "footstep",
+            "time": 9117
+          },
+          {
+            "type": "footstep",
+            "time": 9542
+          },
+          {
+            "type": "footstep",
+            "time": 9967
+          },
+          {
+            "type": "footstep",
+            "time": 10392
+          },
+          {
+            "type": "footstep",
+            "time": 10817
+          },
+          {
+            "type": "complete",
+            "time": 11025,
+            "chamber": 14
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "plant-west-ground",
+          "normal": {
+            "x": -0.000010390665011072997,
+            "y": 1,
+            "z": -0.00019000073370989412
+          },
+          "toi": 0.015831774100661278,
+          "witness": {
+            "x": -10.830472946166992,
+            "y": -8.940696716308594e-8,
+            "z": -9.968632698059082
+          },
+          "applied": {
+            "x": -0.015824705362319946,
+            "y": -0.00043960328912362456,
+            "z": -0.00017464131815358996
+          },
+          "remaining": {
+            "x": -0.02417273446917534,
+            "y": -0.0006715078488923609,
+            "z": -0.0002667701046448201
+          }
+        }
+      ]
+    }
+  ]
+}

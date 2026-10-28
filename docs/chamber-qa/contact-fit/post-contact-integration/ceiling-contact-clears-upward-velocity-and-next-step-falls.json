@@ -1,0 +1,887 @@
+{
+  "scope": "Native isolated fixture setup, not browser proof. Fixed120Hz; initial rotated-cube setup only, no recovery pose/velocity assignment.",
+  "engine": "current runtime source",
+  "error": null,
+  "trace": [
+    {
+      "label": "actual-downward-normal-ceiling-hit",
+      "time": 0.3416666666666669,
+      "position": [
+        0,
+        1.334930419921875,
+        0
+      ],
+      "velocity": [
+        0,
+        0,
+        0
+      ],
+      "grounded": false,
+      "computed": {
+        "x": 0,
+        "y": 0.030972199514508247,
+        "z": 0
+      },
+      "contacts": [
+        {
+          "id": "ceiling",
+          "normal": {
+            "x": 0,
+            "y": -1,
+            "z": 0
+          },
+          "toi": 0.03107219934463501,
+          "applied": {
+            "x": 0,
+            "y": 0.03107219934463501,
+            "z": 0
+          },
+          "remaining": {
+            "x": 0,
+            "y": 0.006705578416585922,
+            "z": 0
+          }
+        }
+      ],
+      "world": {
+        "room": "chamber-97",
+        "number": 97,
+        "mission": "Isolated native contact contract",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            0,
+            1.334930419921875,
+            0
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": false,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [],
+        "panels": [],
+        "exits": [],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {},
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "jump",
+            "time": 258
+          }
+        ]
+      }
+    },
+    {
+      "label": "post-ceiling-fall-0",
+      "time": 0.35000000000000026,
+      "position": [
+        0,
+        1.3338192701339722,
+        0
+      ],
+      "velocity": [
+        0,
+        -0.13333333333333333,
+        0
+      ],
+      "grounded": false,
+      "computed": {
+        "x": 0,
+        "y": -0.0011111111380159855,
+        "z": 0
+      },
+      "contacts": [],
+      "world": {
+        "room": "chamber-97",
+        "number": 97,
+        "mission": "Isolated native contact contract",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            0,
+            1.3338192701339722,
+            0
+          ],
+          "velocity": [
+            0,
+            -0.13333333333333333,
+            0
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": false,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [],
+        "panels": [],
+        "exits": [],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {},
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "jump",
+            "time": 258
+          }
+        ]
+      }
+    },
+    {
+      "label": "post-ceiling-fall-1",
+      "time": 0.3583333333333336,
+      "position": [
+        0,
+        1.331597089767456,
+        0
+      ],
+      "velocity": [
+        0,
+        -0.26666666666666666,
+        0
+      ],
+      "grounded": false,
+      "computed": {
+        "x": 0,
+        "y": -0.002222222276031971,
+        "z": 0
+      },
+      "contacts": [],
+      "world": {
+        "room": "chamber-97",
+        "number": 97,
+        "mission": "Isolated native contact contract",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            0,
+            1.331597089767456,
+            0
+          ],
+          "velocity": [
+            0,
+            -0.26666666666666666,
+            0
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": false,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [],
+        "panels": [],
+        "exits": [],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {},
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "jump",
+            "time": 258
+          }
+        ]
+      }
+    },
+    {
+      "label": "post-ceiling-fall-2",
+      "time": 0.366666666666667,
+      "position": [
+        0,
+        1.328263759613037,
+        0
+      ],
+      "velocity": [
+        0,
+        -0.4,
+        0
+      ],
+      "grounded": false,
+      "computed": {
+        "x": 0,
+        "y": -0.0033333334140479565,
+        "z": 0
+      },
+      "contacts": [],
+      "world": {
+        "room": "chamber-97",
+        "number": 97,
+        "mission": "Isolated native contact contract",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            0,
+            1.328263759613037,
+            0
+          ],
+          "velocity": [
+            0,
+            -0.4,
+            0
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": false,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [],
+        "panels": [],
+        "exits": [],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {},
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "jump",
+            "time": 258
+          }
+        ]
+      }
+    },
+    {
+      "label": "post-ceiling-fall-3",
+      "time": 0.37500000000000033,
+      "position": [
+        0,
+        1.3238192796707153,
+        0
+      ],
+      "velocity": [
+        0,
+        -0.5333333333333333,
+        0
+      ],
+      "grounded": false,
+      "computed": {
+        "x": 0,
+        "y": -0.004444444552063942,
+        "z": 0
+      },
+      "contacts": [],
+      "world": {
+        "room": "chamber-97",
+        "number": 97,
+        "mission": "Isolated native contact contract",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            0,
+            1.3238192796707153,
+            0
+          ],
+          "velocity": [
+            0,
+            -0.5333333333333333,
+            0
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": false,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [],
+        "panels": [],
+        "exits": [],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {},
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "jump",
+            "time": 258
+          }
+        ]
+      }
+    },
+    {
+      "label": "post-ceiling-fall-4",
+      "time": 0.3833333333333337,
+      "position": [
+        0,
+        1.3182637691497803,
+        0
+      ],
+      "velocity": [
+        0,
+        -0.6666666666666666,
+        0
+      ],
+      "grounded": false,
+      "computed": {
+        "x": 0,
+        "y": -0.0055555556900799274,
+        "z": 0
+      },
+      "contacts": [],
+      "world": {
+        "room": "chamber-97",
+        "number": 97,
+        "mission": "Isolated native contact contract",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            0,
+            1.3182637691497803,
+            0
+          ],
+          "velocity": [
+            0,
+            -0.6666666666666666,
+            0
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": false,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [],
+        "panels": [],
+        "exits": [],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {},
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "jump",
+            "time": 258
+          }
+        ]
+      }
+    },
+    {
+      "label": "post-ceiling-fall-5",
+      "time": 0.39166666666666705,
+      "position": [
+        0,
+        1.3115971088409424,
+        0
+      ],
+      "velocity": [
+        0,
+        -0.7999999999999999,
+        0
+      ],
+      "grounded": false,
+      "computed": {
+        "x": 0,
+        "y": -0.006666666828095913,
+        "z": 0
+      },
+      "contacts": [],
+      "world": {
+        "room": "chamber-97",
+        "number": 97,
+        "mission": "Isolated native contact contract",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            0,
+            1.3115971088409424,
+            0
+          ],
+          "velocity": [
+            0,
+            -0.7999999999999999,
+            0
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": false,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [],
+        "panels": [],
+        "exits": [],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {},
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "jump",
+            "time": 258
+          }
+        ]
+      }
+    },
+    {
+      "label": "post-ceiling-fall-6",
+      "time": 0.4000000000000004,
+      "position": [
+        0,
+        1.3038192987442017,
+        0
+      ],
+      "velocity": [
+        0,
+        -0.9333333333333332,
+        0
+      ],
+      "grounded": false,
+      "computed": {
+        "x": 0,
+        "y": -0.007777777966111898,
+        "z": 0
+      },
+      "contacts": [],
+      "world": {
+        "room": "chamber-97",
+        "number": 97,
+        "mission": "Isolated native contact contract",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            0,
+            1.3038192987442017,
+            0
+          ],
+          "velocity": [
+            0,
+            -0.9333333333333332,
+            0
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": false,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [],
+        "panels": [],
+        "exits": [],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {},
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "jump",
+            "time": 258
+          }
+        ]
+      }
+    },
+    {
+      "label": "post-ceiling-fall-7",
+      "time": 0.40833333333333377,
+      "position": [
+        0,
+        1.2949304580688477,
+        0
+      ],
+      "velocity": [
+        0,
+        -1.0666666666666667,
+        0
+      ],
+      "grounded": false,
+      "computed": {
+        "x": 0,
+        "y": -0.008888889104127884,
+        "z": 0
+      },
+      "contacts": [],
+      "world": {
+        "room": "chamber-97",
+        "number": 97,
+        "mission": "Isolated native contact contract",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            0,
+            1.2949304580688477,
+            0
+          ],
+          "velocity": [
+            0,
+            -1.0666666666666667,
+            0
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": false,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [],
+        "panels": [],
+        "exits": [],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {},
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "jump",
+            "time": 258
+          }
+        ]
+      }
+    }
+  ],
+  "final": {
+    "label": "final",
+    "time": 0.40833333333333377,
+    "position": [
+      0,
+      1.2949304580688477,
+      0
+    ],
+    "velocity": [
+      0,
+      -1.0666666666666667,
+      0
+    ],
+    "grounded": false,
+    "computed": {
+      "x": 0,
+      "y": -0.008888889104127884,
+      "z": 0
+    },
+    "contacts": [],
+    "world": {
+      "room": "chamber-97",
+      "number": 97,
+      "mission": "Isolated native contact contract",
+      "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+      "player": {
+        "position": [
+          0,
+          1.2949304580688477,
+          0
+        ],
+        "velocity": [
+          0,
+          -1.0666666666666667,
+          0
+        ],
+        "yaw": 0,
+        "pitch": 0,
+        "grounded": false,
+        "crossings": 0
+      },
+      "portals": [
+        null,
+        null
+      ],
+      "crates": [],
+      "pads": [],
+      "devices": [],
+      "panels": [],
+      "exits": [],
+      "result": null,
+      "held": null,
+      "holdSpaceTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "launchUsed": false,
+      "respawns": 0,
+      "beams": {},
+      "signals": {},
+      "events": [
+        {
+          "type": "land",
+          "time": 8
+        },
+        {
+          "type": "jump",
+          "time": 258
+        }
+      ]
+    }
+  }
+}

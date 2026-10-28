@@ -1,0 +1,29 @@
+✖ native S15 catch returns by actual authored treads without jump or reset (286.321833ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1033.549417
+
+✖ failing tests:
+
+test at tests/core-sequence-routes.test.ts:7:1
+✖ native S15 catch returns by actual authored treads without jump or reset (286.321833ms)
+  AssertionError [ERR_ASSERTION]: Native walk blocked toward 9.5,2.6999999999999993; {"world":{"room":"chamber-15","number":15,"mission":"Send the cube east before you cross. Keep the beam clear while the platform moves. Use the east exit.","physics":"Rapier3D 0.21 · capsule KCC + dynamic rigid cubes","player":{"position":[9.500085830688477,-3.02700138092041,-4.214199542999268],"velocity":[-0.00006547911516106656,0,4.799999999551232],"yaw":3.1415799641590056,"pitch":0,"grounded":true,"crossings":0},"portals":[null,null],"crates":[{"id":"cargo","position":[8.340597332789912e-7,0.5499123930931091,7.000000953674316],"velocity":[0,0,0],"rotation":[-3.79460818322741e-9,-1.7172193571626804e-12,7.685940772717004e-8,1],"angularVelocity":[0,0,0],"held":false,"crossings":0}],"pads":[{"id":"west-receiver","position":[-7.8,0,7],"pressed":false,"crate":null},{"id":"east-receiver","position":[7.8,0,7],"pressed":false,"crate":null}],"devices":[{"id":"clearance-belt","kind":"conveyor","label":"CARGO BELT","position":[0,-0.15,7],"size":[17,0.3,6],"active":false,"progress":0,"choice":0,"angle":0,"powered":null,"blocked":false},{"id":"belt-power","kind":"switch","label":"BELT POWER","position":[7.3,1.25,12],"size":[0.4,0.7,0.3],"active":false,"progress":0,"choice":0,"angle":0,"powered":null,"blocked":false},{"id":"reverse","kind":"switch","label":"REVERSE","position":[4.8,1.25,12],"size":[0.4,0.7,0.3],"active":false,"progress":0,"choice":0,"angle":0,"powered":null,"blocked":false},{"id":"clearance-shuttle","kind":"lift","label":"TRANSFER","position":[4,-0.2,0],"size":[4,0.4,4],"active":false,"progress":0,"choice":0,"angle":0,"powered":null,"blocked":false},{"id":"east-door","kind":"shutter","label":"EAST","position":[11.12,1.5,-11],"size":[0.3,3,2.8],"active":false,"progress":0,"choice":0,"angle":0,"powered":null,"blocked":false},{"id":"west-door","kind":"shutter","label":"WEST","position":[-11.12,1.5,-11],"size":[0.3,3,2.8],"active":false,"progress":0,"choice":0,"angle":0,"powered":null,"blocked":false}],"panels":[{"id":"clearance-source","position":[-10.985,1.55,12],"normal":[1,0,0],"width":3.4,"height":3.1},{"id":"clearance-return","position":[0,1.55,13.985],"normal":[0,0,-1],"width":4,"height":3.1}],"exits":[{"id":"east-exit","label":"EXIT","position":[13,1.5,-11],"size":[4.359999999999999,3,2.7600000000000016]},{"id":"west-exit","label":"EXIT","position":[-13,1.5,-11],"size":[4.359999999999999,3,2.7600000000000016]}],"result":null,"held":null,"holdSpaceTransform":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],"launchUsed":false,"respawns":0,"beams":{"clearance-emitter":{"segments":[{"from":[-5,0.65,12],"to":[-11,0.65,12]}],"stop":"obstacle","obstacle":"clearance-west-boundary-south","hops":0}},"signals":{"west-receiver":false,"east-receiver":false,"moving:clearance-belt":false,"moving:belt-power":false,"moving:reverse":false,"moving:clearance-shuttle":false,"safety:east-door":false,"door-safety":false,"moving:east-door":false,"safety:west-door":false,"moving:west-door":false,"transfer-light":false},"events":[{"type":"footstep","time":14083},{"type":"footstep","time":14508},{"type":"footstep","time":14933},{"type":"footstep","time":15358},{"type":"footstep","time":15783},{"type":"footstep","time":16208},{"type":"footstep","time":16633},{"type":"footstep","time":17058},{"type":"footstep","time":17483},{"type":"footstep","time":17908},{"type":"footstep","time":18333},{"type":"footstep","time":18758},{"type":"footstep","time":19183},{"type":"footstep","time":19608},{"type":"footstep","time":20033},{"type":"footstep","time":20458}]},"contacts":[{"id":"clearance-return-step-2","normal":{"x":-0.000017892964024213143,"y":0.6876881122589111,"z":-0.7260063290596008},"toi":0.0001343144685961306,"witness":{"x":9.499924659729004,"y":-3.799997568130493,"z":-3.999997615814209},"applied":{"x":-1.8315419181291759e-9,"y":-0.0000037295189940778073,"z":0.00013426267832983285},"remaining":{"x":-5.438277526081947e-7,"y":-0.0011073816567659378,"z":0.03986573591828346}}],"kcc":{"offset":0.014999999664723873,"stepHeight":0.23000000417232513,"stepWidth":0.25}}
+      at SequenceRoute.walk (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/helpers/sequence-route.ts:22:288)
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-sequence-routes.test.ts:11:76)
+      at route (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/helpers/sequence-route.ts:39:161)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-sequence-routes.test.ts:7:85)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'fail',
+    diff: 'simple'
+  }

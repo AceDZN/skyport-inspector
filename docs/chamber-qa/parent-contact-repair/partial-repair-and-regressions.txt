@@ -1,0 +1,322 @@
+TAP version 13
+# Subtest: focused ceiling contact clears upward velocity and next step falls
+ok 1 - focused ceiling contact clears upward velocity and next step falls
+  ---
+  duration_ms: 67.249334
+  type: 'test'
+  ...
+# Subtest: focused ordinary free jump retains normal height without a ceiling boost
+ok 2 - focused ordinary free jump retains normal height without a ceiling boost
+  ---
+  duration_ms: 11.701833
+  type: 'test'
+  ...
+# Subtest: focused vertical wall contact does not cancel a legitimate rising jump
+ok 3 - focused vertical wall contact does not cancel a legitimate rising jump
+  ---
+  duration_ms: 5.620125
+  type: 'test'
+  ...
+# Subtest: focused floor valid player offset 0.839 cannot overhang upright wall exit and recenters safely
+ok 4 - focused floor valid player offset 0.839 cannot overhang upright wall exit and recenters safely
+  ---
+  duration_ms: 20.471709
+  type: 'test'
+  ...
+# Subtest: focused same dt centered player floor to wall crossing remains valid
+ok 5 - focused same dt centered player floor to wall crossing remains valid
+  ---
+  duration_ms: 8.014584
+  type: 'test'
+  ...
+# Subtest: focused rotated cube floor-valid horizontal offset requires real wall exit fit and recenter recovery
+ok 6 - focused rotated cube floor-valid horizontal offset requires real wall exit fit and recenter recovery
+  ---
+  duration_ms: 17.604791
+  type: 'test'
+  ...
+# Subtest: focused same dt centered rotated cube preserves genuine gravity crossing
+ok 7 - focused same dt centered rotated cube preserves genuine gravity crossing
+  ---
+  duration_ms: 8.197917
+  type: 'test'
+  ...
+# Subtest: focused combined corner source fit retains solid floor when mapped wall fit is invalid
+ok 8 - focused combined corner source fit retains solid floor when mapped wall fit is invalid
+  ---
+  duration_ms: 5.084833
+  type: 'test'
+  ...
+# Subtest: native capsule can leave lower lift edge onto coplanar floor, cycle=false
+ok 9 - native capsule can leave lower lift edge onto coplanar floor, cycle=false
+  ---
+  duration_ms: 145.700459
+  type: 'test'
+  ...
+# Subtest: native capsule can leave lower lift edge onto coplanar floor, cycle=true
+ok 10 - native capsule can leave lower lift edge onto coplanar floor, cycle=true
+  ---
+  duration_ms: 103.341167
+  type: 'test'
+  ...
+# Subtest: actual interior rider can use E up/down and disembark normally at the lower dock
+ok 11 - actual interior rider can use E up/down and disembark normally at the lower dock
+  ---
+  duration_ms: 69.506958
+  type: 'test'
+  ...
+# Subtest: captured v2 lower-dock pose can walk away instead of retaining a zero-movement floor contact
+ok 12 - captured v2 lower-dock pose can walk away instead of retaining a zero-movement floor contact
+  ---
+  duration_ms: 6.039042
+  type: 'test'
+  ...
+# Subtest: partial C16 floor entry losing mapped wall fit retains solid support and recovers through real basin lift
+ok 13 - partial C16 floor entry losing mapped wall fit retains solid support and recovers through real basin lift
+  ---
+  duration_ms: 235.315959
+  type: 'test'
+  ...
+# Subtest: C3 north exit accepts a usable doorway approach at x=-5.05
+ok 14 - C3 north exit accepts a usable doorway approach at x=-5.05
+  ---
+  duration_ms: 90.439416
+  type: 'test'
+  ...
+# Subtest: C3 north exit accepts a usable doorway approach at x=-4.8
+ok 15 - C3 north exit accepts a usable doorway approach at x=-4.8
+  ---
+  duration_ms: 24.184041
+  type: 'test'
+  ...
+# Subtest: C3 north exit accepts a usable doorway approach at x=-4
+ok 16 - C3 north exit accepts a usable doorway approach at x=-4
+  ---
+  duration_ms: 21.600417
+  type: 'test'
+  ...
+# Subtest: C3 north exit accepts a usable doorway approach at x=-3.2
+ok 17 - C3 north exit accepts a usable doorway approach at x=-3.2
+  ---
+  duration_ms: 13.630083
+  type: 'test'
+  ...
+# Subtest: C3 north exit accepts a usable doorway approach at x=-2.95
+ok 18 - C3 north exit accepts a usable doorway approach at x=-2.95
+  ---
+  duration_ms: 10.810917
+  type: 'test'
+  ...
+# Subtest: C2 gallery exit accepts a usable doorway approach at x=4
+ok 19 - C2 gallery exit accepts a usable doorway approach at x=4
+  ---
+  duration_ms: 7.692542
+  type: 'test'
+  ...
+# Subtest: C2 gallery exit accepts a usable doorway approach at x=4.3
+ok 20 - C2 gallery exit accepts a usable doorway approach at x=4.3
+  ---
+  duration_ms: 6.849917
+  type: 'test'
+  ...
+# Subtest: C2 gallery exit accepts a usable doorway approach at x=5
+ok 21 - C2 gallery exit accepts a usable doorway approach at x=5
+  ---
+  duration_ms: 6.65075
+  type: 'test'
+  ...
+# Subtest: C2 gallery exit accepts a usable doorway approach at x=5.7
+ok 22 - C2 gallery exit accepts a usable doorway approach at x=5.7
+  ---
+  duration_ms: 3.907125
+  type: 'test'
+  ...
+# Subtest: C2 gallery exit accepts a usable doorway approach at x=6
+ok 23 - C2 gallery exit accepts a usable doorway approach at x=6
+  ---
+  duration_ms: 5.677417
+  type: 'test'
+  ...
+# Subtest: expanded C3 north goal stays behind its real closed shutter at x=-5.05
+ok 24 - expanded C3 north goal stays behind its real closed shutter at x=-5.05
+  ---
+  duration_ms: 35.661667
+  type: 'test'
+  ...
+# Subtest: expanded C3 north goal stays behind its real closed shutter at x=-4
+ok 25 - expanded C3 north goal stays behind its real closed shutter at x=-4
+  ---
+  duration_ms: 64.75575
+  type: 'test'
+  ...
+# Subtest: expanded C3 north goal stays behind its real closed shutter at x=-2.95
+ok 26 - expanded C3 north goal stays behind its real closed shutter at x=-2.95
+  ---
+  duration_ms: 46.822833
+  type: 'test'
+  ...
+# Subtest: expanded C1 goal stays behind its unpowered exit
+ok 27 - expanded C1 goal stays behind its unpowered exit
+  ---
+  duration_ms: 61.360958
+  type: 'test'
+  ...
+# Subtest: expanded C4 goal stays behind its unpowered exit
+ok 28 - expanded C4 goal stays behind its unpowered exit
+  ---
+  duration_ms: 43.938959
+  type: 'test'
+  ...
+# Subtest: expanded C5 goal stays behind its unpowered exit
+ok 29 - expanded C5 goal stays behind its unpowered exit
+  ---
+  duration_ms: 43.644125
+  type: 'test'
+  ...
+# Subtest: walk off pressure button without a contact pin: split=false, yaw=0
+ok 30 - walk off pressure button without a contact pin: split=false, yaw=0
+  ---
+  duration_ms: 72.590334
+  type: 'test'
+  ...
+# Subtest: walk off pressure button without a contact pin: split=false, yaw=1.5707963267948966
+ok 31 - walk off pressure button without a contact pin: split=false, yaw=1.5707963267948966
+  ---
+  duration_ms: 13.280208
+  type: 'test'
+  ...
+# Subtest: walk off pressure button without a contact pin: split=false, yaw=3.141592653589793
+ok 32 - walk off pressure button without a contact pin: split=false, yaw=3.141592653589793
+  ---
+  duration_ms: 10.414209
+  type: 'test'
+  ...
+# Subtest: walk off pressure button without a contact pin: split=false, yaw=-1.5707963267948966
+ok 33 - walk off pressure button without a contact pin: split=false, yaw=-1.5707963267948966
+  ---
+  duration_ms: 14.652458
+  type: 'test'
+  ...
+# Subtest: walk off pressure button without a contact pin: split=true, yaw=0
+ok 34 - walk off pressure button without a contact pin: split=true, yaw=0
+  ---
+  duration_ms: 9.179709
+  type: 'test'
+  ...
+# Subtest: walk off pressure button without a contact pin: split=true, yaw=1.5707963267948966
+ok 35 - walk off pressure button without a contact pin: split=true, yaw=1.5707963267948966
+  ---
+  duration_ms: 8.801583
+  type: 'test'
+  ...
+# Subtest: walk off pressure button without a contact pin: split=true, yaw=3.141592653589793
+ok 36 - walk off pressure button without a contact pin: split=true, yaw=3.141592653589793
+  ---
+  duration_ms: 6.668125
+  type: 'test'
+  ...
+# Subtest: walk off pressure button without a contact pin: split=true, yaw=-1.5707963267948966
+ok 37 - walk off pressure button without a contact pin: split=true, yaw=-1.5707963267948966
+  ---
+  duration_ms: 4.949208
+  type: 'test'
+  ...
+# Subtest: walk across coplanar fixed-floor seam: yaw=1.5707963267948966
+ok 38 - walk across coplanar fixed-floor seam: yaw=1.5707963267948966
+  ---
+  duration_ms: 4.96675
+  type: 'test'
+  ...
+# Subtest: walk across coplanar fixed-floor seam: yaw=-1.5707963267948966
+ok 39 - walk across coplanar fixed-floor seam: yaw=-1.5707963267948966
+  ---
+  duration_ms: 5.6725
+  type: 'test'
+  ...
+# Subtest: walk from clear floor gap slightly below controller margin: yaw=0
+ok 40 - walk from clear floor gap slightly below controller margin: yaw=0
+  ---
+  duration_ms: 3.721292
+  type: 'test'
+  ...
+# Subtest: walk from clear floor gap slightly below controller margin: yaw=1.5707963267948966
+ok 41 - walk from clear floor gap slightly below controller margin: yaw=1.5707963267948966
+  ---
+  duration_ms: 4.512875
+  type: 'test'
+  ...
+# Subtest: walk from clear floor gap slightly below controller margin: yaw=3.141592653589793
+ok 42 - walk from clear floor gap slightly below controller margin: yaw=3.141592653589793
+  ---
+  duration_ms: 3.115834
+  type: 'test'
+  ...
+# Subtest: walk from clear floor gap slightly below controller margin: yaw=-1.5707963267948966
+ok 43 - walk from clear floor gap slightly below controller margin: yaw=-1.5707963267948966
+  ---
+  duration_ms: 4.730208
+  type: 'test'
+  ...
+# Subtest: walk onto a pressure button from floor: yaw=0
+ok 44 - walk onto a pressure button from floor: yaw=0
+  ---
+  duration_ms: 4.131042
+  type: 'test'
+  ...
+# Subtest: walk onto a pressure button from floor: yaw=1.5707963267948966
+ok 45 - walk onto a pressure button from floor: yaw=1.5707963267948966
+  ---
+  duration_ms: 3.541625
+  type: 'test'
+  ...
+# Subtest: walk onto a pressure button from floor: yaw=3.141592653589793
+ok 46 - walk onto a pressure button from floor: yaw=3.141592653589793
+  ---
+  duration_ms: 3.330083
+  type: 'test'
+  ...
+# Subtest: walk onto a pressure button from floor: yaw=-1.5707963267948966
+ok 47 - walk onto a pressure button from floor: yaw=-1.5707963267948966
+  ---
+  duration_ms: 3.50525
+  type: 'test'
+  ...
+# Subtest: a real vertical lift carries an idle capsule and loose cube up and down
+ok 48 - a real vertical lift carries an idle capsule and loose cube up and down
+  ---
+  duration_ms: 124.092416
+  type: 'test'
+  ...
+# Subtest: a horizontal deck carries both bodies without walking input
+ok 49 - a horizontal deck carries both bodies without walking input
+  ---
+  duration_ms: 26.140625
+  type: 'test'
+  ...
+# Subtest: jumping detaches the capsule from its rising support
+ok 50 - jumping detaches the capsule from its rising support
+  ---
+  duration_ms: 28.0705
+  type: 'test'
+  ...
+# Subtest: powering a cyclic deck midway through the clock cannot teleport it across the room
+ok 51 - powering a cyclic deck midway through the clock cannot teleport it across the room
+  ---
+  duration_ms: 5.94725
+  type: 'test'
+  ...
+# Subtest: power interruption brakes midway in place and restoration resumes without an arrival claim
+ok 52 - power interruption brakes midway in place and restoration resumes without an arrival claim
+  ---
+  duration_ms: 14.656417
+  type: 'test'
+  ...
+1..52
+# tests 52
+# suites 0
+# pass 52
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 6545.872792

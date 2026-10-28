@@ -147,7 +147,26 @@ export class CoreWorld {
     forward() { return V(-Math.sin(this.yaw) * Math.cos(this.pitch), Math.sin(this.pitch), -Math.cos(this.yaw) * Math.cos(this.pitch)); }
     eye() { return this.player.pos.clone().add(V(0, .65, 0)); }
     aperture(body: Body, p: Portal, position=body.pos, rotation?:Quaternion) { const local = position.clone().applyMatrix4(p.matrix.clone().invert()), floor = Math.abs(p.normal.y) > .8, right = V().setFromMatrixColumn(p.matrix, 0), up = V().setFromMatrixColumn(p.matrix, 1), halfX = this.normalSupport(body, right, rotation), halfY = this.normalSupport(body, up, rotation); return Math.abs(local.x) < (floor ? 1.15 : .9) - halfX + .015 && Math.abs(local.y) < (floor ? 1.15 : 1.55) - halfY + .015; }
-    apertureIgnores(body: Body, s: Solid) { return this.portals.every(Boolean) && this.portals.some(p => p && this.blockedEntry.get(body.id) !== p.index && (body.cooldown <= 0 || this.exitPortal.get(body.id) === p.index) && this.surfaces.find(s => s.id === p.surfaceId)?.solidId === s.id && body.pos.clone().sub(p.center).dot(p.normal) > -.7 && this.aperture(body, p)); }
+    private exitApertureFits(body:Body,entry:Portal,position=body.pos,previousRotation?:Quaternion){
+        const exit=this.portals[1-entry.index];if(!exit)return false;
+        const matrix=portalMatrix(entry,exit),target=position.clone().applyMatrix4(matrix);
+        // The character remains upright after crossing. Cubes retain their real
+        // transformed orientation, so each destination needs its actual support.
+        const rotation=body===this.player?undefined:(previousRotation??(body as RigidCube).rotation).clone().premultiply(new Quaternion().setFromRotationMatrix(matrix));
+        return this.aperture(body,exit,target,rotation);
+    }
+    private overlapsPortalHost(body:Body,entry:Portal){
+        const host=this.surfaces.find(s=>s.id===entry.surfaceId)?.solidId;
+        const cube=body===this.player?undefined:body as RigidCube;
+        const shape=cube?new RAPIER.Cuboid(body.half.x,body.half.y,body.half.z):new RAPIER.Capsule(.57,.28);
+        let overlap=false;
+        this.physics.intersectionsWithShape(body.pos,cube?.rotation??Q,shape,c=>{
+            if(this.fixed.get(c.handle)?.id!==host)return true;
+            overlap=true;return false;
+        });
+        return overlap;
+    }
+    apertureIgnores(body: Body, s: Solid) { return this.portals.every(Boolean) && this.portals.some(p => p && this.blockedEntry.get(body.id) !== p.index && (body.cooldown <= 0 || this.exitPortal.get(body.id) === p.index) && this.surfaces.find(s => s.id === p.surfaceId)?.solidId === s.id && body.pos.clone().sub(p.center).dot(p.normal) > -.7 && this.aperture(body, p) && this.exitApertureFits(body,p)); }
     activeSolids() { return [...this.solids, ...this.machines.devices.map(d => ({ id: d.spec.id, min: d.position.clone().sub(V(...d.spec.size).multiplyScalar(.5)), max: d.position.clone().add(V(...d.spec.size).multiplyScalar(.5)), kind: 'wall' as const }))]; }
     place(index: number, id: string, point: Vector3) {
         const s = this.surfaces.find(s => s.id === id);
@@ -197,7 +216,7 @@ export class CoreWorld {
     private queryAllows(body: Body, collider: RAPIER.Collider) { if (collider.handle === this.characterCollider.handle && body !== this.player)
         return false; const held = this.crates.find(c => c.id === this.heldId); if (body === this.player && collider.handle === held?.collider.handle)
         return false; const s = this.fixed.get(collider.handle); return !s || !this.apertureIgnores(body, s); }
-    private exitClear(body: Body, pos: Vector3, rotation: Quaternion, exit: Portal) { let blocked = false; const host = this.surfaces.find(s => s.id === exit.surfaceId)?.solidId, shape = body === this.player ? new RAPIER.Capsule(.57, .28) : new RAPIER.Cuboid(body.half.x * .98, body.half.y * .98, body.half.z * .98); this.physics.intersectionsWithShape(pos, body === this.player ? Q : rotation, shape, c => { const s = this.fixed.get(c.handle); if (s?.id === host)
+    private exitClear(body: Body, pos: Vector3, rotation: Quaternion, exit: Portal) { if(!this.aperture(body,exit,pos,rotation))return false;let blocked = false; const host = this.surfaces.find(s => s.id === exit.surfaceId)?.solidId, shape = body === this.player ? new RAPIER.Capsule(.57, .28) : new RAPIER.Cuboid(body.half.x * .98, body.half.y * .98, body.half.z * .98); this.physics.intersectionsWithShape(pos, body === this.player ? Q : rotation, shape, c => { const s = this.fixed.get(c.handle); if (s?.id === host)
         return true; if (s && s.kind === 'floor' && pos.y - this.normalSupport(body, V(0, 1, 0), rotation) >= s.max.y - .015)
         return true; if (c.handle === this.characterCollider.handle && (body === this.player || (body as RigidCube).held))
         return true; if (this.crates.some(b => b.id === body.id && b.collider.handle === c.handle))
@@ -231,6 +250,14 @@ export class CoreWorld {
             return false;
         for (let i = 0; i < 2; i++) {
             const entry = this.portals[i]!, exit = this.portals[1 - i]!, from = before.clone().sub(entry.center).dot(entry.normal), to = body.pos.clone().sub(entry.center).dot(entry.normal);
+            // Fit can be lost while only the leading part of a body is through.
+            // Restore that body's previous fitted side before the solid host
+            // reappears around it; a centre-plane crossing is not required.
+            if(from>0&&to>0&&(!this.aperture(body,entry)||!this.exitApertureFits(body,entry))&&this.aperture(body,entry,before,previousRotation)&&this.exitApertureFits(body,entry,before,previousRotation)&&this.overlapsPortalHost(body,entry)){
+                this.rollbackCrossing(body,before,entry,previousRotation);
+                if(this.time-(this.contactCooldown.get('fit:'+body.id)??-1)>.15){this.contactCooldown.set('fit:'+body.id,this.time);this.event('invalid',{body:body.id,reason:body===this.player?'Move toward the centre of the portal.':'Keep the whole cube inside the portal opening.'});}
+                return false;
+            }
             if (from <= 0 || to > 0) continue;
             if(!this.aperture(body,entry)){
                 // Only this aperture was open at the previous physical pose. A
@@ -317,11 +344,23 @@ export class CoreWorld {
         const eye=this.eye(),forward=this.forward();
         return this.machines.devices.filter(d=>!d.spec.automatic&&['switch','relay','junction','lift'].includes(d.spec.kind)).map(d=>({device:d,point:(d.spec.kind==='lift'?d.position.clone():V(...d.spec.position)).add(V(...(d.spec.controlOffset??[0,0,0])))})).filter(({point})=>{const delta=point.clone().sub(eye);return delta.length()<2.8&&delta.normalize().dot(forward)>.6;}).sort((a,b)=>a.point.distanceTo(eye)-b.point.distanceTo(eye)).find(({device,point})=>{const delta=point.clone().sub(eye),distance=delta.length(),ray=new Ray(eye,delta.normalize());return !this.activeSolids().some(s=>{if(s.id===device.spec.id)return false;const hit=ray.intersectBox(new Box3(s.min,s.max),V());return hit&&hit.distanceTo(eye)<distance-.1;});})?.device;
     }
-    interactionHint(){return this.heldId?'E · Drop':this.nearbyControl()?'E · Use '+this.nearbyControl()!.spec.label:this.grabbableCube()?'E · Pick up':'';}
+    private coveredControlHint(){
+        const eye=this.eye(),forward=this.forward();
+        for(const d of this.machines.devices){
+            const relation=d.spec.controlCover;if(!relation||d.spec.automatic)continue;
+            const point=(d.spec.kind==='lift'?d.position.clone():V(...d.spec.position)).add(V(...(d.spec.controlOffset??[0,0,0]))),delta=point.clone().sub(eye),distance=delta.length();
+            if(distance>=2.8||delta.normalize().dot(forward)<=.6)continue;
+            const ray=new Ray(eye,delta),hits=this.activeSolids().filter(s=>s.id!==d.spec.id).map(s=>({id:s.id,point:ray.intersectBox(new Box3(s.min,s.max),V())})).filter(h=>h.point&&h.point.distanceTo(eye)<distance-.1).sort((a,b)=>a.point!.distanceToSquared(eye)-b.point!.distanceToSquared(eye));
+            const cover=this.machines.devices.find(c=>c.spec.id===relation.id&&c.spec.kind==='shutter');
+            if(cover&&hits[0]?.id===cover.spec.id)return cover.on?(relation.openingHint??'Wait for the cover to open.'):relation.blockedHint;
+        }
+        return undefined;
+    }
+    interactionHint(){return this.heldId?'E · Drop':this.nearbyControl()?'E · Use '+this.nearbyControl()!.spec.label:this.grabbableCube()?'E · Pick up':this.coveredControlHint()??'';}
     heldFootprint(){const cube=this.crates.find(c=>c.id===this.heldId);return cube?queryHeldFootprint(this.physics,cube,this.portals,c=>this.fixed.get(c.handle)?.id??this.bodyForCollider(c.handle)?.id??[...this.doors].find(([,body])=>body.collider.handle===c.handle)?.[0]??'support:'+c.handle):null;}
     grabDrop() {
         if(this.heldId){const c=this.crates.find(c=>c.id===this.heldId)!;this.heldId=undefined;this.holdMap.identity();c.held=false;c.rigid.setBodyType(RAPIER.RigidBodyType.Dynamic,true);c.rigid.setLinvel(this.player.vel.clone().addScaledVector(this.forward(),.5),true);this.event('drop',{body:c.id});return;}
-        const c=this.grabbableCube();if(!c){this.event('invalid',{reason:'Move closer and look at the cube.'});return;}
+        const c=this.grabbableCube();if(!c){this.event('invalid',{reason:this.coveredControlHint()??'Move closer and look at the cube.'});return;}
         this.heldId=c.id;this.holdMap.identity();c.held=true;c.rigid.setBodyType(RAPIER.RigidBodyType.KinematicPositionBased,true);c.rigid.setLinvel(V(),true);c.rigid.setAngvel(V(),true);this.event('pickup',{body:c.id});
     }
     interact() { if(this.heldId)return false;const d=this.nearbyControl();return d?this.machines.interact(d.spec.id):false; }
@@ -444,6 +483,11 @@ export class CoreWorld {
         if(platform&&this.player.vel.y<=0)requested.y=platform.position.y+platform.spec.size[1]/2+this.player.half.y+this.controller.offset()+this.controller.normalNudgeFactor()-this.player.pos.y;
         this.computeCharacterMovement(requested,platformCollider);
         const movement = this.controller.computedMovement();
+        if(this.player.vel.y>0&&requested.y>0&&movement.y<requested.y-1e-6){
+            for(let i=0;i<this.controller.numComputedCollisions();i++){
+                if(this.controller.computedCollision(i)!.normal1.y<-.5){this.player.vel.y=0;break;}
+            }
+        }
         const next = this.player.pos.clone().add(movement);
         this.character.setNextKinematicTranslation(next);
         this.player.grounded = this.controller.computedGrounded()||!!(platform&&this.player.vel.y<=0&&Math.abs(next.y-.85-(platform.position.y+platform.spec.size[1]/2))<.08&&Math.abs(next.x-platform.position.x)<platform.spec.size[0]/2-.01&&Math.abs(next.z-platform.position.z)<platform.spec.size[2]/2-.01);

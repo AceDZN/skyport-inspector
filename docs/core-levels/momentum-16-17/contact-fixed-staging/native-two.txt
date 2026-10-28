@@ -1,0 +1,52 @@
+✖ native comparison C17 shallow glazing-top jump cannot stage into far (125.351625ms)
+✖ native comparison C17 full-supported near-edge air jump cannot reach far (51.204792ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 0
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1033.533708
+
+✖ failing tests:
+
+test at tests/core-comparisons-routes.test.ts:132:2
+✖ native comparison C17 shallow glazing-top jump cannot stage into far (125.351625ms)
+  AssertionError [ERR_ASSERTION]: Actual shallow fling→glazing-top→ordinary jump bypasses far comparison {"player":{"position":[27.661636352539062,-3.134519577026367,5.8766093254089355],"velocity":[13.97213031936271,0,-0.05918829500486987],"yaw":-1.5707963267948966,"pitch":0,"grounded":true,"crossings":1},"portals":[{"surface":"shallow-floor","position":[-5,-2.95,1.15],"normal":[0,1,0]},{"surface":"launch-white","position":[-7.96,9,6],"normal":[1,0,0]}],"respawns":0,"contacts":[{"id":"far-gallery","normal":{"x":0,"y":1,"z":-0.000013075714377919212},"witness":{"x":27.6299991607666,"y":-4.000000953674316,"z":5.877319812774658},"applied":{"x":0.08500988781452179,"y":-0.09897041320800781,"z":-0.00036011618794873357},"remaining":{"x":0.03142452985048294,"y":-0.036585137248039246,"z":-0.00013311958173289895}},{"id":"far-gallery","normal":{"x":-0.012192845344543457,"y":0.9999210238456726,"z":0.0030482113361358643},"witness":{"x":27.63245391845703,"y":-3.9999990463256836,"z":5.877134323120117},"applied":{"x":0.08717681467533112,"y":-0.09896351397037506,"z":-0.0003693287435453385},"remaining":{"x":0.029257602989673615,"y":0.00009310434688813984,"z":-0.00012438673002179712}}],"events":[{"type":"jump","time":3.2833333333333243},{"type":"launch","time":4.433333333333343,"speed":13.421044834316215},{"type":"enter","time":4.433333333333343,"body":"player","from":0,"to":1,"fromSurface":"shallow-floor","toSurface":"launch-white","speed":13.421044834316215,"exitSpeed":13.421044834316218,"held":null},{"type":"land","time":5.575000000000067},{"type":"footstep","time":5.575000000000067},{"type":"jump","time":5.5833333333334005},{"type":"land","time":6.966666666666803},{"type":"footstep","time":6.966666666666803}]}
+  
+  true !== false
+  
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:137:85)
+      at run (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:54:133)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:132:82)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/core-comparisons-routes.test.ts:139:2
+✖ native comparison C17 full-supported near-edge air jump cannot reach far (51.204792ms)
+  AssertionError [ERR_ASSERTION]: Fully supported shallow→near takeoff with legal air input reaches far {"player":{"position":[27.974411010742188,-3.0862858295440674,1.6823362112045288],"velocity":[-0.2523261775307289,0,8.792464082222356],"yaw":2.111848394913139,"pitch":0,"grounded":true,"crossings":1},"portals":[{"surface":"shallow-floor","position":[-5,-2.95,3.1],"normal":[0,1,0]},{"surface":"launch-white","position":[-7.96,9,-6],"normal":[1,0,0]}],"respawns":0,"contacts":[],"events":[{"type":"footstep","time":7.575000000000166},{"type":"footstep","time":8.000000000000187},{"type":"footstep","time":8.425000000000162},{"type":"footstep","time":8.850000000000138},{"type":"footstep","time":9.275000000000114},{"type":"jump","time":9.658333333333426},{"type":"land","time":10.383333333333384},{"type":"footstep","time":10.383333333333384}]}
+  
+  true !== false
+  
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:148:85)
+      at run (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:54:133)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:139:86)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

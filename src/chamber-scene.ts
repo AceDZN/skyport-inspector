@@ -13,7 +13,7 @@ import type {DeviceState} from './systems';
 type Batch={geometry:T.BufferGeometry;material:T.Material;matrices:T.Matrix4[]};
 type DoorArt={state:DeviceState;leaf:T.Group;indicators:T.MeshStandardMaterial[];inputs:{id:string;lamp:T.MeshStandardMaterial}[]};
 type CratePieces={source:T.Material[];copies:{group:T.Group;materials:T.Material[]}[]};
-type ButtonArt={top:T.Mesh;lights:T.MeshStandardMaterial;restY:number;plungers:T.Group;plungerRestY:number};
+type ButtonArt={top:T.Mesh;lights:T.MeshStandardMaterial;restY:number;plungers?:T.Group;plungerRestY:number;flush?:boolean};
 type MachineDisplay={canvas:HTMLCanvasElement;texture:T.CanvasTexture;key:string;title:string};
 type BeltArt={canvas:HTMLCanvasElement;texture:T.CanvasTexture;direction:T.Vector3;reversed:boolean;lastTime:number;rollers:T.Mesh[];radius:number};
 type MachineArt={state:DeviceState;body:T.Group;display:MachineDisplay;lever?:T.Group;lamp:T.MeshStandardMaterial;belt?:BeltArt};
@@ -86,19 +86,28 @@ export class ChamberScene extends RiftScene {
   return{map:make(base,true),roughnessMap:make(rough),normalMap:make(normal)};
  }
  private prepareFinishes(){
-  const wall=this.surfaceTextures(),floor=this.surfaceTextures(true);
+  const wall=this.surfaceTextures(),floor=this.surfaceTextures(true),finished=this.core.number>=6,service=finished?this.serviceTextures():{normalMap:wall.normalMap},panelColors:Record<string,number>={'l-gallery':0x7d8587,'bridge-rotunda':0x748088,'lift-shaft':0x828684,'dual-vault':0x78847d};
   this.finishes={
-   ceramic:this.material(new T.MeshStandardMaterial({...wall,color:0xffffff,roughness:.78,metalness:.03,normalScale:new T.Vector2(.6,.6)})),
-   white:this.material(new T.MeshStandardMaterial({...wall,color:0xe7e8e0,roughness:.62,metalness:.04,normalScale:new T.Vector2(.35,.35)})),
-   floor:this.material(new T.MeshStandardMaterial({...floor,color:0xffffff,roughness:this.core.number===5?.54:.7,metalness:this.core.number===5?.36:.42,normalScale:new T.Vector2(this.core.number===5?.62:.8,this.core.number===5?.62:.8)})),
+   ceramic:this.material(new T.MeshStandardMaterial({...wall,color:finished?0xf0f7ff:0xffffff,roughness:.78,metalness:.03,normalScale:new T.Vector2(.6,.6)})),
+   white:this.material(new T.MeshStandardMaterial({...wall,color:finished?0xebf4fc:0xe7e8e0,roughness:.62,metalness:.04,normalScale:new T.Vector2(.35,.35)})),
+   floor:this.material(new T.MeshStandardMaterial({...floor,color:0xffffff,roughness:this.core.number===5?.54:finished?.65:.7,metalness:this.core.number===5?.36:finished?.26:.42,normalScale:new T.Vector2(this.core.number===5?.62:finished?.55:.8,this.core.number===5?.62:finished?.55:.8)})),
+   panel:this.material(new T.MeshStandardMaterial({...service,color:panelColors[this.core.blueprint.family]??0x7c8583,roughness:.88,metalness:.06,normalScale:new T.Vector2(.45,.45)})),
+   machine:this.material(new T.MeshStandardMaterial({color:0x737c77,roughness:.48,metalness:.56})),
    graphite:this.material(new T.MeshStandardMaterial({color:0x20262c,roughness:.44,metalness:.72})),
    recess:this.material(new T.MeshStandardMaterial({color:0x10161b,roughness:.8,metalness:.28})),
    aluminum:this.material(new T.MeshStandardMaterial({color:0x77858b,roughness:.31,metalness:.86})),
    rubber:this.material(new T.MeshStandardMaterial({color:0x10151a,roughness:.9,metalness:0})),
    red:this.material(new T.MeshStandardMaterial({color:0x7c2623,roughness:.38,metalness:.2})),
-   light:this.material(new T.MeshStandardMaterial({color:this.core.number===5?0xffeed8:0xe9f0ed,emissive:this.core.number===5?0xffd49b:0xd9f0ff,emissiveIntensity:3.4,roughness:.4})),
+   light:this.material(new T.MeshStandardMaterial({color:this.core.number===5?0xffeed8:0xe9f0ed,emissive:this.core.number===5?0xffd49b:0xd9edf6,emissiveIntensity:3.4,roughness:.4})),
    warm:this.material(new T.MeshStandardMaterial({color:0xe4bd72,emissive:0xffbe59,emissiveIntensity:1.8,roughness:.4})),
   };
+ }
+ private serviceTextures(){
+  // Original shallow pressed-metal ribs: distinct material language, not new collision geometry.
+  const n=256,base=document.createElement('canvas'),normal=document.createElement('canvas');base.width=normal.width=base.height=normal.height=n;const b=base.getContext('2d')!,c=normal.getContext('2d')!,color=b.createImageData(n,n),vectors=c.createImageData(n,n),height=new Float32Array(n),tone=new Float32Array(n);
+  for(let x=0;x<n;x++){const phase=(x%16)/16,trough=Math.exp(-Math.pow((phase-.10)/.085,2));height[x]=.012*(1-trough);tone[x]=216-75*trough+10*Math.exp(-Math.pow((phase-.28)/.08,2));}
+  for(let y=0;y<n;y++)for(let x=0;x<n;x++){const i=(y*n+x)*4,v=tone[x]+((x*17+y*13)%11-5)*.3,direction=V((height[(x+n-1)%n]-height[(x+1)%n])*18,0,1).normalize();color.data.set([v,v,v,255],i);vectors.data.set([128+direction.x*127,128,128+direction.z*127,255],i);}
+  b.putImageData(color,0,0);c.putImageData(vectors,0,0);const map=this.texture(new T.CanvasTexture(base)),normalMap=this.texture(new T.CanvasTexture(normal));map.colorSpace=T.SRGBColorSpace;for(const texture of[map,normalMap]){texture.wrapS=texture.wrapT=T.RepeatWrapping;texture.anisotropy=Math.min(8,this.renderer.capabilities.getMaxAnisotropy());}return{map,normalMap};
  }
  private floorGeometry(size:T.Vector3,pos:T.Vector3){const g=this.geo(new T.BoxGeometry(size.x,size.y,size.z)),a=g.getAttribute('position'),uv=g.getAttribute('uv'),normal=g.getAttribute('normal');for(let i=0;i<a.count;i++){if(Math.abs(normal.getY(i))>.5)uv.setXY(i,(a.getX(i)+pos.x)/2,(a.getZ(i)+pos.z)/2);else uv.setXY(i,(a.getX(i)+pos.x)/2,(a.getY(i)+pos.y)/2);}return g;}
  private wallCladding(min:T.Vector3,max:T.Vector3,axis:'x'|'z',sign:number){
@@ -111,8 +120,8 @@ export class ChamberScene extends RiftScene {
    const behindPortal=regions.some(r=>us[u]>=r.u1-.001&&us[u+1]<=r.u2+.001&&ys[v]>=r.y1-.001&&ys[v+1]<=r.y2+.001);
    const ceramic=this.core.level.architecture.style==='ceramic';
    if(!ceramic&&behindPortal)continue;
-   const p=axis==='x'?[plane+sign*.015,py,pu]:[pu,py,plane+sign*.015],gap=Math.min(.025,cw*.1,ch*.1),sz=axis==='x'?[.045,ch-gap,cw-gap]:[cw-gap,ch-gap,.045];this.staticPart(p,sz,ceramic&&(this.core.number===1||behindPortal)?this.finishes.ceramic:this.finishes.graphite,undefined,true);
-   if(cw>1.2&&ch>1.2){for(const su of[-1,1])for(const sy of[-1,1]){const bolt=axis==='x'?[plane+sign*.042,py+sy*(ch/2-.09),pu+su*(cw/2-.09)]:[pu+su*(cw/2-.09),py+sy*(ch/2-.09),plane+sign*.042];this.staticPart(bolt,axis==='x'?[.009,.022,.022]:[.022,.022,.009],this.finishes.graphite);}}
+   const p=axis==='x'?[plane+sign*.015,py,pu]:[pu,py,plane+sign*.015],gap=Math.min(.025,cw*.1,ch*.1),sz=axis==='x'?[.045,ch-gap,cw-gap]:[cw-gap,ch-gap,.045];this.staticPart(p,sz,ceramic&&(this.core.number===1||behindPortal)?this.finishes.ceramic:this.core.number>=6?this.finishes.panel:this.finishes.graphite,undefined,true);
+   if(cw>1.2&&ch>1.2&&(this.core.number<6||behindPortal)){for(const su of[-1,1])for(const sy of[-1,1]){const bolt=axis==='x'?[plane+sign*.042,py+sy*(ch/2-.09),pu+su*(cw/2-.09)]:[pu+su*(cw/2-.09),py+sy*(ch/2-.09),plane+sign*.042];this.staticPart(bolt,axis==='x'?[.009,.022,.022]:[.022,.022,.009],this.finishes.graphite);}}
   }
   // Continuous kick plate and top service channel, in the same physical wall plane.
   for(const [y,h]of[[Math.max(y1+.23,.23),.42],[y2-.25,.45]]){
@@ -134,7 +143,7 @@ export class ChamberScene extends RiftScene {
   const f=this.finishes,b=this.core.blueprint,{height,halfWidth:half,style}=this.core.level.architecture;
   for(const s of this.core.solids){const size=s.max.clone().sub(s.min),p=s.min.clone().add(s.max).multiplyScalar(.5);
    if(s.kind==='glass'){const m=this.material(new T.MeshPhysicalMaterial({color:0xc3d3d8,transparent:true,opacity:.10,roughness:.08,metalness:.1,clearcoat:1,envMapIntensity:.75,depthWrite:false,side:T.DoubleSide}));const pane=this.mesh(this.geo(new T.BoxGeometry(size.x,size.y,size.z)),m);pane.position.copy(p);pane.castShadow=false;continue;}
-   const ceiling=/ceiling/.test(s.id),raised=s.kind==='floor'&&size.y>1&&s.id!=='raised-cube-alcove',opticalHousing=/emitter-housing|receiver-pillar|receiver-optic-body/.test(s.id),mat=s.kind==='floor'?(raised?f.graphite:f.floor):ceiling?f.recess:f.graphite;const mesh=this.mesh(s.kind==='floor'?this.floorGeometry(size,p):opticalHousing?this.rounded(size.x,size.y,size.z,.035):this.geo(new T.BoxGeometry(size.x,size.y,size.z)),mat);mesh.position.copy(p);mesh.userData.solid=s.id;this.targets.push(mesh);
+   const ceiling=/ceiling/.test(s.id),raised=s.kind==='floor'&&size.y>1&&s.id!=='raised-cube-alcove',guide=/guide/.test(s.id)&&size.y>2&&size.x<1&&size.z<1,opticalHousing=/emitter-housing|receiver-pillar|receiver-optic-body/.test(s.id),mat=s.kind==='floor'?(raised?f.graphite:f.floor):ceiling?f.recess:guide&&this.core.number>=6?f.machine:f.graphite;const mesh=this.mesh(s.kind==='floor'?this.floorGeometry(size,p):opticalHousing?this.rounded(size.x,size.y,size.z,.035):this.geo(new T.BoxGeometry(size.x,size.y,size.z)),mat);mesh.position.copy(p);mesh.userData.solid=s.id;this.targets.push(mesh);
    if(raised){
     // A raised gallery is built architecture: metal walking surface over a panelled retaining structure.
     for(const axis of['x','z']as const)for(const sign of[-1,1]){if(this.core.number===5&&s.id==='upper-gallery'&&axis==='z'&&sign===1)continue;this.wallCladding(s.min,s.max,axis,sign);}
@@ -145,7 +154,7 @@ export class ChamberScene extends RiftScene {
     if(this.core.number!==5||s.id!=='upper-gallery')this.staticPart([p.x,s.max.y-.06,s.max.z+.035],[size.x-.15,.025,.022],f.warm);
    }
    if(s.id==='raised-cube-alcove'){this.wallCladding(s.min,s.max,'z',1);this.staticPart([p.x,s.max.y-.04,s.max.z+.04],[size.x,.12,.16],f.graphite);for(const x of[s.min.x+.08,s.max.x-.08])this.staticPart([x,p.y,s.max.z+.055],[.14,size.y,.14],f.graphite);}
-   if(/guide/.test(s.id)&&size.y>2&&size.x<1&&size.z<1){this.staticPart([p.x,p.y,s.max.z+.012],[Math.min(.09,size.x*.4),size.y-.1,.025],f.aluminum);for(let y=s.min.y+.3;y<s.max.y;y+=.6)this.staticPart([p.x,y,s.max.z+.028],[Math.min(.16,size.x*.65),.035,.025],f.graphite);}
+   if(guide){const face=this.mesh(this.geo(new T.PlaneGeometry(size.x*.42,size.y-.1)),f.graphite);face.position.set(p.x,p.y,s.max.z+.001);for(let y=s.min.y+.3;y<s.max.y;y+=.6){const band=this.mesh(this.geo(new T.PlaneGeometry(size.x*.82,.035)),f.aluminum);band.position.set(p.x,y,s.max.z+.002);}}
    if(!ceiling&&s.kind==='wall'&&!s.id.startsWith('vestibule')&&!s.id.includes('service-inlay')){if(size.x<.7&&size.z>.8){this.wallCladding(s.min,s.max,'x',1);this.wallCladding(s.min,s.max,'x',-1);}else if(size.z<.7&&size.x>.8){this.wallCladding(s.min,s.max,'z',1);this.wallCladding(s.min,s.max,'z',-1);}}
   }
   // Ceiling coffers have real depth and recessed perforated service lanes.
@@ -236,6 +245,16 @@ export class ChamberScene extends RiftScene {
    this.doors.push({state:d,leaf,indicators:[status,frameStatus],inputs});
   }
   for(const p of this.core.pads){
+   const flush=this.core.machines.devices.some(d=>d.spec.kind==='conveyor'&&Math.abs(d.position.y+d.spec.size[1]/2-p.pos.y)<.005&&Math.abs(p.pos.x-d.position.x)<d.spec.size[0]/2&&Math.abs(p.pos.z-d.position.z)<d.spec.size[2]/2);
+   if(flush){
+    // The belt's visible skin is already +1mm: paint sits +2mm, below the native +4/+7mm cue.
+    const red=this.material(f.red.clone()),top=this.mesh(this.geo(new T.CircleGeometry(.83,48)),red);top.rotation.x=-Math.PI/2;top.position.copy(p.pos).add(V(0,.002,0));top.name='flush-load-cell:'+p.id;top.castShadow=false;
+    const rim=this.mesh(this.geo(new T.RingGeometry(.83,.96,48)),f.aluminum);rim.rotation.x=-Math.PI/2;rim.position.copy(p.pos).add(V(0,.002,0));rim.castShadow=false;
+    const glow=this.material(new T.MeshStandardMaterial({color:0xb48a45,emissive:0xffb747,emissiveIntensity:.25}));
+    for(let i=0;i<8;i++){const a=i*Math.PI/4,lamp=this.mesh(this.geo(new T.PlaneGeometry(.08,.025)),glow),point=p.pos.clone().add(V(Math.sin(a)*.9,.0028,Math.cos(a)*.9));lamp.matrix.copy(poseMatrix(point,V(0,1,0),V(Math.sin(a),0,Math.cos(a))));lamp.matrix.decompose(lamp.position,lamp.quaternion,lamp.scale);lamp.castShadow=false;}
+    this.buttons.set(p.id,{top,lights:glow,restY:p.pos.y+.002,plungerRestY:p.pos.y,flush:true});
+    const dummy=new T.Mesh(this.geo(new T.PlaneGeometry(.01,.01)),this.material(new T.MeshStandardMaterial()));dummy.visible=false;this.padVisuals.set(p.id,dummy);continue;
+   }
    const base=this.mesh(this.geo(new T.CylinderGeometry(1.04,1.09,.14,48)),f.graphite);base.position.copy(p.pos).add(V(0,-.08,0));
    // Fixed contact disk and real annulus meet the native cylinder top exactly at p.y.
    const rim=this.mesh(this.geo(new T.CylinderGeometry(.96,1,.07,48,1,true)),f.aluminum);rim.position.copy(p.pos).add(V(0,-.035,0));
@@ -296,7 +315,7 @@ export class ChamberScene extends RiftScene {
     const material=this.material(new T.MeshStandardMaterial({map:texture,color:0xffffff,roughness:.82,metalness:.12})),surface=this.mesh(this.geo(new T.PlaneGeometry(w-.12,d-.12)),material,body);surface.rotation.x=-Math.PI/2;surface.position.y=h/2+.001;const panel=new T.Group();panel.position.set(0,0,d/2-.072);body.add(panel);display=this.machineDisplay(panel,s.label,.62,.16);
    }else{
     // Every visible deck top/edge follows the exact native collider, with a clear boarding centre.
-    this.part(body,[0,-.02,0],[w,Math.max(.04,h-.04),d],f.graphite,.035);
+    this.part(body,[0,-.02,0],[w,Math.max(.04,h-.04),d],this.core.number>=6?f.machine:f.graphite,.035);
     for(const x of[-1,1])for(const z of[-1,1])this.part(body,[x*w/4,h/2-.015,z*d/4],[w/2-.11,.03,d/2-.11],f.floor,.008);
     for(const x of[-w/2+.045,w/2-.045])this.part(body,[x,h/2-.025,0],[.045,.05,d-.08],f.aluminum,.008);
     for(const z of[-d/2+.045,d/2-.045])this.part(body,[0,h/2-.025,z],[w-.08,.05,.045],f.aluminum,.008);
@@ -351,15 +370,49 @@ export class ChamberScene extends RiftScene {
   }
   for(let i=used;i<this.beamPieces.length;i++){const piece=this.beamPieces[i];piece.core.visible=piece.halo.visible=piece.impact.visible=false;}
  }
+ private architecturePracticals(){
+  const f=this.finishes;let sources=0;
+  // Resolve the visible architectural skin once at build time; core faces can sit behind cladding/coffers.
+  this.root.updateMatrixWorld(true);const mounts:T.Object3D[]=[],ray=new T.Raycaster();this.root.traverse(o=>{if(o instanceof T.Mesh&&(o.userData.solid||o instanceof T.InstancedMesh))mounts.push(o);});
+  const overlapsWhite=(point:T.Vector3,normal:T.Vector3,w:number,h:number)=>this.core.surfaces.some(s=>{if(s.normal.dot(normal)<.98||Math.abs(point.clone().sub(s.center).dot(s.normal))>.15)return false;const delta=point.clone().sub(s.center),right=s.up.clone().cross(s.normal).normalize();return Math.abs(delta.dot(right))<s.width/2+w/2+.02&&Math.abs(delta.dot(s.up))<s.height/2+h/2+.02;});
+  const fixture=(point:T.Vector3,normal:T.Vector3,w:number,h:number,landing?:{id:string;mount:string;target:T.Vector3})=>{
+   if(sources>=4)return;
+   // Hardware belongs on real opaque masses, never across an authored white host.
+   if(overlapsWhite(point,normal,w+.05,h+.05))return;
+   const up=Math.abs(normal.y)>.9?V(0,0,1):V(0,1,0),right=up.clone().cross(normal).normalize(),samples=[point,...[-.5,.5].flatMap(x=>[-.5,.5].map(y=>point.clone().addScaledVector(right,x*(w+.05)).addScaledVector(up,y*(h+.05))))];let projection=0;
+   // Centre-only mounting can fall inside a panel seam; clear the entire plate footprint.
+   for(const sample of samples){ray.set(sample.clone().addScaledVector(normal,.75),normal.clone().negate());ray.near=0;ray.far=1.5;const hit=ray.intersectObjects(mounts,false)[0];if(hit)projection=Math.max(projection,hit.point.clone().sub(sample).dot(normal));}
+   const mount=point.clone().addScaledVector(normal,projection);if(overlapsWhite(mount,normal,w+.05,h+.05))return;
+   const pose=(bias:number)=>poseMatrix(mount.clone().addScaledVector(normal,bias),normal,up);
+   for(const[width,height,material,bias]of[[w+.05,h+.05,f.graphite,.001],[w,h,f.warm,.003]]as const){const face=this.mesh(this.geo(new T.PlaneGeometry(width,height)),material);face.matrix.copy(pose(bias));face.matrix.decompose(face.position,face.quaternion,face.scale);face.castShadow=false;}
+   const distance=landing?mount.distanceTo(landing.target):0,light=landing?new T.SpotLight(0xffd19a,Math.max(70,distance*distance*1.3),distance+10,.72,.85,2):new T.PointLight(0xffd19a,4.5,5.5,2);light.position.copy(mount).addScaledVector(normal,.16);light.userData.practicalMount={physicalPoint:point.toArray(),visiblePoint:mount.toArray(),normal:normal.toArray()};
+   if(landing&&light instanceof T.SpotLight){light.target.position.copy(landing.target);light.target.userData.chamberLight=true;this.scene.add(light.target);light.userData.landingPractical={floor:landing.id,mount:landing.mount,physicalMountPoint:point.toArray(),mountPoint:mount.toArray(),target:landing.target.toArray()};}
+   this.scene.add(light);sources++;
+  };
+  // Authored opaque gallery spine and real service-corridor walls need light at walking height.
+  for(const s of this.core.solids){if(s.id==='gallery-spine')fixture(V(s.min.x,(s.min.y+s.max.y)/2,s.max.z-.65),V(-1,0,0),.055,.48);if(s.id.startsWith('side-gallery-wall-')){const sign=(s.min.z+s.max.z)>0?-1:1;fixture(V((s.min.x+s.max.x)/2,s.min.y+1.45,sign>0?s.max.z:s.min.z),V(0,0,sign),.055,.48);}}
+  const receiving=(id:string)=>/(?:^|-)(?:receiving|landing|dock|gallery)(?:-|$)/.test(id)&&!/(?:source|approach|spawn)/.test(id);
+  const floors=this.core.solids.filter(s=>{const size=s.max.clone().sub(s.min);return s.kind==='floor'&&size.x>2&&size.z>2&&(s.max.y>1.5||this.core.solids.some(lower=>lower.kind==='floor'&&lower.max.y<s.min.y-.5&&lower.min.x<s.max.x&&lower.max.x>s.min.x&&lower.min.z<s.max.z&&lower.max.z>s.min.z));}).sort((a,b)=>Number(receiving(b.id))-Number(receiving(a.id))||b.max.y-a.max.y||(b.max.x-b.min.x)*(b.max.z-b.min.z)-(a.max.x-a.min.x)*(a.max.z-a.min.z)).slice(0,2);
+  for(const s of floors){const size=s.max.clone().sub(s.min),x=(s.min.x+s.max.x)/2;
+   if(this.core.blueprint.family==='launch-spire'&&receiving(s.id))for(const fraction of[.25,.75]){
+    const px=s.min.x+size.x*fraction,pz=(s.min.z+s.max.z)/2,overhead=this.core.solids.filter(roof=>roof!==s&&roof.kind!=='glass'&&roof.min.y>s.max.y+.5&&px>roof.min.x+.05&&px<roof.max.x-.05&&pz>roof.min.z+.05&&pz<roof.max.z-.05).sort((a,b)=>a.min.y-b.min.y)[0];
+    if(overhead)fixture(V(px,overhead.min.y,pz),V(0,-1,0),.65,.08,{id:s.id,mount:overhead.id,target:V(px,s.max.y,pz)});
+   }
+   else if(size.y>1){for(const fraction of[.22,.78])fixture(V(s.min.x+size.x*fraction,s.max.y-.18,s.max.z),V(0,0,1),Math.min(.65,size.x*.15),.035);}
+   else for(const fraction of(size.x>6?[.25,.75]:[.5]))fixture(V(s.min.x+size.x*fraction,s.min.y,s.max.z-.18),V(0,-1,0),Math.min(.6,size.x*.18),.045);
+   if(!overlapsWhite(V(x,s.max.y,s.max.z-.05),V(0,1,0),size.x-.16,.035)){const edge=this.mesh(this.geo(new T.PlaneGeometry(size.x-.16,.035)),f.aluminum);edge.rotation.x=-Math.PI/2;edge.position.set(x,s.max.y+.002,s.max.z-.05);edge.castShadow=false;}
+  }
+ }
  private lighting(){
   for(const child of [...this.scene.children])if(child instanceof T.Light||child.userData.chamberLight){if(child instanceof T.SpotLight||child instanceof T.DirectionalLight)child.shadow.dispose();this.scene.remove(child);}
-  const split=this.core.number===5;RectAreaLightUniformsLib.init();this.scene.background=new T.Color(0x10151a);this.scene.fog=new T.Fog(0x10151a,38,70);this.scene.environmentIntensity=split?.38:.48;this.renderer.toneMappingExposure=1.08;
-  this.scene.add(new T.HemisphereLight(split?0xe4d9c9:0xcbdce5,0x3b3028,split?.34:.48));
+  const split=this.core.number===5,finished=this.core.number>=6,warm=split||finished;RectAreaLightUniformsLib.init();this.scene.background=new T.Color(0x10151a);this.scene.fog=new T.Fog(0x10151a,38,70);this.scene.environmentIntensity=split?.38:finished?.44:.48;this.renderer.toneMappingExposure=1.08;
+  this.scene.add(new T.HemisphereLight(split?0xe4d9c9:finished?0xd4dce2:0xcbdce5,0x3b3028,split?.34:finished?.42:.48));
   const ceiling=this.core.level.architecture.height;
-  if(this.software){const key=new T.DirectionalLight(split?0xffe1b5:0xdce8ed,split?1.1:1.55);key.position.set(-4,10,5);this.scene.add(key);const fill=new T.DirectionalLight(0xffdcaf,split?.5:.65);fill.position.set(5,6,-8);this.scene.add(fill);}
-  for(const x of(this.software?[]:[-4.2,4.2]))for(const z of[-9,-1,8]){const area=new T.RectAreaLight(split?0xffe6c7:0xe2edf5,split?5.8:6.8,3.8,1.1);area.position.set(x,ceiling-.45,z);area.rotation.x=-Math.PI/2;this.scene.add(area);}
-  const key=new T.SpotLight(split?0xffd9a8:0xffedcf,this.software?0:150,28,.92,.7,2);key.position.set(-4,ceiling-.55,5);key.target.position.set(0,0,-3);key.castShadow=!this.software;key.shadow.mapSize.set(1024,1024);key.shadow.bias=-.0001;key.shadow.normalBias=.025;this.scene.add(key,key.target);key.userData.chamberLight=true;key.target.userData.chamberLight=true;
-  for(const x of[-7.6,7.6]){const fill=new T.PointLight(0xffce8a,14,9,2);fill.position.set(x,.7,-8);this.scene.add(fill);}
+  if(this.software){const key=new T.DirectionalLight(split?0xffe5c4:finished?0xe3e9ed:0xdce8ed,split?1.1:finished?1.3:1.55);key.position.set(-4,10,5);this.scene.add(key);const fill=new T.DirectionalLight(finished?0xe0e6e9:0xffdcaf,split?.5:finished?.52:.65);fill.position.set(5,6,-8);this.scene.add(fill);}
+  for(const x of(this.software?[]:[-4.2,4.2]))for(const z of[-9,-1,8]){const area=new T.RectAreaLight(split?0xffe6c7:finished?0xe2e9ed:0xe2edf5,split?5.8:6.8,3.8,1.1);area.position.set(x,ceiling-.45,z);area.rotation.x=-Math.PI/2;this.scene.add(area);}
+  const key=new T.SpotLight(split?0xffd9a8:finished?0xf1f4f5:0xffedcf,this.software?0:150,28,.92,.7,2);key.position.set(-4,ceiling-.55,5);key.target.position.set(0,0,-3);key.castShadow=!this.software;key.shadow.mapSize.set(1024,1024);key.shadow.bias=-.0001;key.shadow.normalBias=.025;this.scene.add(key,key.target);key.userData.chamberLight=true;key.target.userData.chamberLight=true;
+  if(!finished)for(const x of[-7.6,7.6]){const fill=new T.PointLight(0xffce8a,14,9,2);fill.position.set(x,.7,-8);this.scene.add(fill);}
+  if(finished)this.architecturePracticals();
   if(split){
    // Practical pools shape the near floor, retaining facade and the whole existing eligible upper bay.
    for(const[p,target,intensity,range,angle]of[[[-4,ceiling-.55,5],[-4,0,4],125,17,.68],[[6.5,ceiling-.55,-4],[5,5.4,-11.9],190,18,.72]]as const){const light=new T.SpotLight(0xffcf91,intensity,range,angle,.85,2);light.position.set(p[0],p[1],p[2]);light.target.position.set(target[0],target[1],target[2]);light.userData.chamberLight=light.target.userData.chamberLight=true;this.scene.add(light,light.target);}
@@ -449,7 +502,7 @@ export class ChamberScene extends RiftScene {
   if(dt===0)this.refreshLinkedViews=true;
   this.artClock=(this.artClock??0)+dt;const signature=this.core.portals.map(p=>p?p.surfaceId+':'+p.center.toArray().map(v=>v.toFixed(2)).join(','):'').join('|');if(this.lastPortalSignature!==undefined&&signature!==this.lastPortalSignature)this.recoil=.035;this.lastPortalSignature=signature;this.recoil=Math.max(0,(this.recoil??0)-dt*.17);
   for(const d of this.doors){d.leaf.position.copy(d.state.position);for(const m of d.indicators){m.color.set(d.state.progress>.85?0x96c7a1:0xedb54f);m.emissive.set(d.state.progress>.85?0x68bb88:0xffb437);}for(const input of d.inputs){const on=this.core.machines.flag(input.id);input.lamp.color.set(on?0xc0d6b8:0x354047);input.lamp.emissive.set(on?0x6fba8c:0);input.lamp.emissiveIntensity=on?1.8:0;}}
-  for(const p of this.core.pads){const art=this.buttons.get(p.id)!,pressed=this.pressed(p),target=art.plungerRestY-(pressed?.025:0);art.top.position.y=art.restY;art.plungers.position.y=this.reducedMotion||dt===0?target:T.MathUtils.damp(art.plungers.position.y,target,22,Math.max(0,dt));art.lights.emissiveIntensity=pressed?2:.22;}
+  for(const p of this.core.pads){const art=this.buttons.get(p.id)!,pressed=this.pressed(p),target=art.plungerRestY-(pressed?.025:0);art.top.position.y=art.restY;if(art.plungers)art.plungers.position.y=this.reducedMotion||dt===0?target:T.MathUtils.damp(art.plungers.position.y,target,22,Math.max(0,dt));art.lights.emissiveIntensity=pressed?2:.22;}
   for(const trace of this.circuitTraces)trace.material.emissiveIntensity=this.pressed(this.core.pads.find(p=>p.id===trace.pad)!)?2.6:.10;
   this.updateNativeMachineProps(dt);
   this.updateOpticalProps();

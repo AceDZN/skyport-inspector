@@ -4,6 +4,7 @@ import { ChamberScene, type ChamberSceneWorld } from '../chamber-scene';
 import { RiftAudio } from '../audio';
 import { CampaignProgress, CAMPAIGN_LENGTH, type Store } from '../progression';
 import { coreLevels, getCoreLevel } from './levels';
+import { FixedStepClock } from './fixed-step';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 app.innerHTML = '<canvas id="world" tabindex="0" aria-label="Rift Runner test chamber"></canvas><div id="hud"></div><div id="crosshair"><i></i><b></b></div><div id="hint"></div><div id="toast" role="status"></div><div id="overlay"></div>';
@@ -25,6 +26,7 @@ let number = 1, mode = 'loading', last = performance.now(), started = false, sce
 let dragLook = false, sensitivity = .0022, toastTimer = 0, assistance = 0, alternate = false;
 let settingsBack = 'menu', previewTicket = 0;
 const keys = new Set<string>();
+const physicsClock = new FixedStepClock();
 let drag: { x: number; y: number } | undefined;
 let moved = false;
 try { dragLook = storage?.getItem('rift-core-drag') === 'true'; } catch { }
@@ -34,7 +36,7 @@ const continueLevel = () => coreLevels.filter(level => progress.canPlay(level.nu
 const completed = () => coreLevels.filter(level => progress.status(level.number) === 'completed').map(level => level.number);
 function dismissMessage() { clearTimeout(toastTimer); toastEl.classList.remove('visible'); toastEl.textContent = ''; }
 function message(s: string) { toastEl.textContent = s; toastEl.classList.add('visible'); clearTimeout(toastTimer); toastTimer = window.setTimeout(dismissMessage, 4000); }
-function release() { previewTicket++; keys.clear(); drag = undefined; audio.setAirSpeed(0); if (document.pointerLockElement) document.exitPointerLock(); }
+function release() { previewTicket++; keys.clear(); physicsClock.reset(); drag = undefined; audio.setAirSpeed(0); if (document.pointerLockElement) document.exitPointerLock(); }
 async function lock() {
     if (dragLook) return;
     try { await canvas.requestPointerLock(); }
@@ -173,13 +175,13 @@ window.addEventListener('storage', e => {
 });
 function step(ms: number) {
     if (mode !== 'playing') return;
-    let left = Math.min(ms / 1000, 8);
-    while (left > 0 && mode === 'playing') {
-        const dt = Math.min(1 / 120, left);
+    physicsClock.add(ms);
+    while (mode === 'playing') {
+        const dt = physicsClock.take();
+        if (dt === undefined) break;
         world.yaw += ((keys.has('KeyJ') ? 1 : 0) - (keys.has('KeyL') ? 1 : 0)) * dt * 1.5;
         world.pitch = Math.max(-1.48,Math.min(1.48,world.pitch + ((keys.has('KeyI') ? 1 : 0) - (keys.has('KeyK') ? 1 : 0)) * dt * 1.2));
         world.step(dt, {forward:Number(keys.has('KeyW') || keys.has('ArrowUp')) - Number(keys.has('KeyS') || keys.has('ArrowDown')),strafe:Number(keys.has('KeyD') || keys.has('ArrowRight')) - Number(keys.has('KeyA') || keys.has('ArrowLeft')),jump:keys.has('Space')});
-        left -= dt;
     }
     audio.setAirSpeed(world.player.grounded ? 0 : world.player.vel.length());
 }

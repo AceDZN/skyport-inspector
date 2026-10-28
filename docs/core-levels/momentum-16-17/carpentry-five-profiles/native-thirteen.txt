@@ -1,0 +1,44 @@
+✔ native C16 comparison keeps identical physical alternatives (95.067292ms)
+✔ native C17 comparison keeps identical physical alternatives (10.000292ms)
+✔ native C16 deep fall really lands higher and reaches its vestibule (88.887916ms)
+✔ native C16 shallow fall really lands lower and reaches its vestibule (50.68725ms)
+✔ native C17 deep fall reaches the farther wider floor (36.094792ms)
+✔ native C17 shallow fall reaches the nearer narrower floor (57.087667ms)
+✔ native C16 changing-fit rim rejection keeps real support and recovers by elevator then recenters (127.878958ms)
+✔ native C16 a real missed deep aperture can walk out and return without resetting (96.818542ms)
+✔ native C17 revised east barrier physically rejects the old shallow staging route (62.238167ms)
+✔ native C17 revised divider physically blocks a full-supported near-to-far air jump (48.63875ms)
+✔ native comparison intermediate-air profile 6.2 (30.832792ms)
+✔ native comparison intermediate-air profile 8.5 (26.493583ms)
+✖ native comparison intermediate-air profile 9.5 (31.432ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 12
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1342.324042
+
+✖ failing tests:
+
+test at tests/core-comparisons-routes.test.ts:181:114
+✖ native comparison intermediate-air profile 9.5 (31.432ms)
+  AssertionError [ERR_ASSERTION]: Actual fall did not traverse; inspect aperture alignment and blocked-exit events {"player":{"position":[-4.9560723304748535,-21.135822296142578,-11.704901695251465],"velocity":[6.86638313029208e-11,0,-4.800000006035333],"yaw":0,"pitch":0,"grounded":true,"crossings":0},"portals":[{"surface":"shallow-floor","position":[-5,-2.95,-2.4],"normal":[0,1,0]},{"surface":"launch-white","position":[-7.96,9,6],"normal":[1,0,0]}],"respawns":0,"contacts":[{"id":"recovery-basin","normal":{"x":0,"y":1,"z":-2.62516152815806e-7},"witness":{"x":-4.955863952636719,"y":-22,"z":-11.702266693115234},"applied":{"x":0,"y":0,"z":0},"remaining":{"x":5.721985927610584e-13,"y":-0.0011111111380159855,"z":-0.03999999910593033}},{"id":"north-enclosure","normal":{"x":0,"y":0.000005425511517387349,"z":1},"witness":{"x":-4.955713272094727,"y":-20.6092586517334,"z":-12},"applied":{"x":1.424791897114972e-15,"y":2.4897693151615385e-7,"z":-0.00009960121678886935},"remaining":{"x":5.707737884760866e-13,"y":0.00009974054410122335,"z":-0.03990039974451065}}],"events":[{"type":"land","time":4.35833333333334},{"type":"footstep","time":4.35833333333334},{"type":"invalid","time":4.516666666666681,"body":"player","reason":"Move toward the centre of the portal."},{"type":"land","time":4.550000000000016},{"type":"land","time":6.225000000000099},{"type":"footstep","time":6.225000000000099},{"type":"footstep","time":6.65000000000012},{"type":"footstep","time":7.075000000000141}]}
+  
+  0 !== 1
+  
+      at Route.flight (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:46:10)
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:182:47)
+      at run (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:64:144)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-comparisons-routes.test.ts:181:176)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -1,0 +1,9 @@
+# DNt actual finish inspection — incomplete, operator-aborted
+
+One bounded context imported only the parent's genuine earned1–10 storage. Root main-DNtMvFwn.js SHA256 `c2df3a94b18789cda6c26e64e766644e67dd47202e4a6f8e9a66306c94393941` and audio-35I0HhLJ.js SHA256 `87f1c0f0f2836ee7bfc79f17e66160c19cee3ad555f3685be4a08f7a772f86b9` were recorded in `run/manifest.json`. All inputs used the existing public-input QA client; no body, portal, win or unlock injection. No video recorded.
+
+Valid actual frames inspected:002C6entry,003normal linked pair,004actual gallery arrival after a physical portal crossing,005C8entry. They show substantially more readable walls/facades than the old DiK black finish. They also expose two remaining art defects: the broad beige service finish remains too close to the eligible ivory, and C6's practical plate is buried behind the visible cladding while its point light creates an isolated hotspot. These frames do not establish target parity or final portal-affordance clarity.
+
+The23-command session stopped on an operator's malformed JSON number `.55` instead of `0.55`. The strict driver retained006blocked/fatal state and closed context/browser in `finally`; process exited1. Manifest page/console error arrays are empty, so this operator parsing error is not presented as an engine error. C8rider/screen, down/offset cue, C10bridge and13/15flush views were **not inspected** in this run. No new completion is claimed. The slot was explicitly released to the parent.
+
+Source correction for v2 is separately documented in `../VISIBLE_RIBBED_V2_REVIEW.md`. All subsequent input segments are generated through JSON serialization and parsed offline before a new bounded context. `../recipes/manifest.json` records the unexecuted recipe and its genuine earned15/build/slot prerequisites.

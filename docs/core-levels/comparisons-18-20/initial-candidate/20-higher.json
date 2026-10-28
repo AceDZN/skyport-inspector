@@ -1,0 +1,784 @@
+{
+  "scope": "Unregistered authored-spawn native trajectory/route; no pose/velocity/goal/save/reset injection, no browser claim.",
+  "number": 20,
+  "contrast": false,
+  "error": null,
+  "notes": [],
+  "events": [
+    {
+      "type": "land",
+      "time": 0.008333333333333333
+    },
+    {
+      "type": "footstep",
+      "time": 0.4250000000000005
+    },
+    {
+      "type": "footstep",
+      "time": 0.8499999999999994
+    },
+    {
+      "type": "footstep",
+      "time": 1.274999999999998
+    },
+    {
+      "type": "footstep",
+      "time": 1.7666666666666628
+    },
+    {
+      "type": "pickup",
+      "time": 1.7666666666666628,
+      "body": "power-cube"
+    },
+    {
+      "type": "footstep",
+      "time": 2.1916666666666615
+    },
+    {
+      "type": "footstep",
+      "time": 2.61666666666666
+    },
+    {
+      "type": "pad",
+      "time": 2.949999999999992,
+      "pad": "emitter-power",
+      "crate": "power-cube"
+    },
+    {
+      "type": "drop",
+      "time": 3.1499999999999915,
+      "body": "power-cube"
+    },
+    {
+      "type": "contact",
+      "time": 3.216666666666658,
+      "body": "power-cube",
+      "speed": 1.1198602035089353
+    },
+    {
+      "type": "footstep",
+      "time": 4.066666666666658
+    },
+    {
+      "type": "footstep",
+      "time": 4.49166666666668
+    },
+    {
+      "type": "contact",
+      "time": 4.8916666666666995,
+      "body": "power-cube",
+      "speed": 1.2508152392389524
+    },
+    {
+      "type": "footstep",
+      "time": 4.916666666666701
+    },
+    {
+      "type": "footstep",
+      "time": 5.341666666666722
+    },
+    {
+      "type": "footstep",
+      "time": 5.766666666666743
+    },
+    {
+      "type": "footstep",
+      "time": 6.191666666666764
+    },
+    {
+      "type": "footstep",
+      "time": 6.616666666666785
+    },
+    {
+      "type": "footstep",
+      "time": 7.041666666666806
+    },
+    {
+      "type": "footstep",
+      "time": 7.4666666666668275
+    },
+    {
+      "type": "portalA",
+      "time": 7.616666666666835,
+      "surface": "beam-source",
+      "point": [
+        10.959999999999999,
+        1.55,
+        8
+      ]
+    },
+    {
+      "type": "portalB",
+      "time": 7.616666666666835,
+      "surface": "upper-return",
+      "point": [
+        5,
+        4.95,
+        -13.959999999999999
+      ]
+    },
+    {
+      "type": "receiver-power",
+      "time": 7.625000000000169,
+      "id": "upper-light"
+    },
+    {
+      "type": "shutter-open",
+      "time": 7.625000000000169,
+      "id": "upper-door"
+    },
+    {
+      "type": "footstep",
+      "time": 7.891666666666849
+    },
+    {
+      "type": "footstep",
+      "time": 8.316666666666835
+    },
+    {
+      "type": "footstep",
+      "time": 8.741666666666811
+    },
+    {
+      "type": "beam-blocked",
+      "time": 8.816666666666807,
+      "id": "upper-light"
+    },
+    {
+      "type": "shutter-close",
+      "time": 8.816666666666807,
+      "id": "upper-door"
+    },
+    {
+      "type": "footstep",
+      "time": 9.166666666666787
+    },
+    {
+      "type": "enter",
+      "time": 9.333333333333444,
+      "body": "player",
+      "from": 0,
+      "to": 1,
+      "fromSurface": "beam-source",
+      "toSurface": "upper-return",
+      "speed": 4.794863958528701,
+      "exitSpeed": 4.794863958528701,
+      "held": null
+    },
+    {
+      "type": "receiver-power",
+      "time": 9.341666666666777,
+      "id": "upper-light"
+    },
+    {
+      "type": "land",
+      "time": 9.341666666666777
+    },
+    {
+      "type": "beam-blocked",
+      "time": 9.35000000000011,
+      "id": "upper-light"
+    },
+    {
+      "type": "footstep",
+      "time": 9.591666666666763
+    },
+    {
+      "type": "receiver-power",
+      "time": 9.625000000000094,
+      "id": "upper-light"
+    },
+    {
+      "type": "footstep",
+      "time": 10.016666666666739
+    },
+    {
+      "type": "footstep",
+      "time": 11.125000000000009
+    },
+    {
+      "type": "footstep",
+      "time": 11.549999999999985
+    },
+    {
+      "type": "footstep",
+      "time": 11.97499999999996
+    },
+    {
+      "type": "complete",
+      "time": 12.391666666666604,
+      "chamber": 20
+    }
+  ],
+  "barrierContacts": [],
+  "final": {
+    "room": "chamber-20",
+    "number": 20,
+    "mission": "Open the door that is powered by the higher receiver.",
+    "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+    "player": {
+      "position": [
+        11.625417709350586,
+        4.264999866485596,
+        -9.946723937988281
+      ],
+      "velocity": [
+        4.798755132050399,
+        0,
+        -0.10763869795938677
+      ],
+      "yaw": -1.5483644280800641,
+      "pitch": 0,
+      "grounded": true,
+      "crossings": 1
+    },
+    "portals": [
+      {
+        "surface": "beam-source",
+        "position": [
+          10.959999999999999,
+          1.55,
+          8
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ]
+      },
+      {
+        "surface": "upper-return",
+        "position": [
+          5,
+          4.95,
+          -13.959999999999999
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ]
+      }
+    ],
+    "crates": [
+      {
+        "id": "power-cube",
+        "position": [
+          -3.1751229763031006,
+          0.6899133920669556,
+          7.915950775146484
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          -0.000012571044862852432,
+          0.23617461323738098,
+          -0.00008288136450573802,
+          0.9717106819152832
+        ],
+        "angularVelocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 0
+      }
+    ],
+    "pads": [
+      {
+        "id": "emitter-power",
+        "position": [
+          -4,
+          0.14,
+          8
+        ],
+        "pressed": true,
+        "crate": "power-cube"
+      }
+    ],
+    "devices": [
+      {
+        "id": "lower-door",
+        "kind": "shutter",
+        "label": "LOWER",
+        "position": [
+          -11.12,
+          1.5,
+          -10
+        ],
+        "size": [
+          0.3,
+          3,
+          2.8
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "upper-door",
+        "kind": "shutter",
+        "label": "UPPER",
+        "position": [
+          11.12,
+          8.4,
+          -10
+        ],
+        "size": [
+          0.3,
+          3,
+          2.8
+        ],
+        "active": true,
+        "progress": 1,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      }
+    ],
+    "panels": [
+      {
+        "id": "beam-source",
+        "position": [
+          10.985,
+          1.75,
+          8
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ],
+        "width": 5,
+        "height": 3.5
+      },
+      {
+        "id": "lower-return",
+        "position": [
+          -5,
+          1.75,
+          -13.985
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "width": 5,
+        "height": 3.5
+      },
+      {
+        "id": "upper-return",
+        "position": [
+          5,
+          5.15,
+          -13.985
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "width": 5,
+        "height": 3.5
+      }
+    ],
+    "exits": [
+      {
+        "id": "lower-exit",
+        "label": "EXIT",
+        "position": [
+          -13.39,
+          1.5,
+          -10
+        ],
+        "size": [
+          3.58,
+          3,
+          2.759999999999998
+        ]
+      },
+      {
+        "id": "upper-exit",
+        "label": "EXIT",
+        "position": [
+          13.39,
+          4.9,
+          -10
+        ],
+        "size": [
+          3.58,
+          3,
+          2.759999999999998
+        ]
+      }
+    ],
+    "result": {
+      "goalMatched": true,
+      "physicalComplete": true,
+      "exit": "upper-exit",
+      "reason": "",
+      "events": [
+        {
+          "type": "land",
+          "time": 8
+        },
+        {
+          "type": "footstep",
+          "time": 425
+        },
+        {
+          "type": "footstep",
+          "time": 850
+        },
+        {
+          "type": "footstep",
+          "time": 1275
+        },
+        {
+          "type": "footstep",
+          "time": 1767
+        },
+        {
+          "type": "pickup",
+          "time": 1767,
+          "body": "power-cube"
+        },
+        {
+          "type": "footstep",
+          "time": 2192
+        },
+        {
+          "type": "footstep",
+          "time": 2617
+        },
+        {
+          "type": "pad",
+          "time": 2950,
+          "pad": "emitter-power",
+          "crate": "power-cube"
+        },
+        {
+          "type": "drop",
+          "time": 3150,
+          "body": "power-cube"
+        },
+        {
+          "type": "contact",
+          "time": 3217,
+          "body": "power-cube",
+          "speed": 1.1198602035089353
+        },
+        {
+          "type": "footstep",
+          "time": 4067
+        },
+        {
+          "type": "footstep",
+          "time": 4492
+        },
+        {
+          "type": "contact",
+          "time": 4892,
+          "body": "power-cube",
+          "speed": 1.2508152392389524
+        },
+        {
+          "type": "footstep",
+          "time": 4917
+        },
+        {
+          "type": "footstep",
+          "time": 5342
+        },
+        {
+          "type": "footstep",
+          "time": 5767
+        },
+        {
+          "type": "footstep",
+          "time": 6192
+        },
+        {
+          "type": "footstep",
+          "time": 6617
+        },
+        {
+          "type": "footstep",
+          "time": 7042
+        },
+        {
+          "type": "footstep",
+          "time": 7467
+        },
+        {
+          "type": "portalA",
+          "time": 7617,
+          "surface": "beam-source",
+          "point": [
+            10.959999999999999,
+            1.55,
+            8
+          ]
+        },
+        {
+          "type": "portalB",
+          "time": 7617,
+          "surface": "upper-return",
+          "point": [
+            5,
+            4.95,
+            -13.959999999999999
+          ]
+        },
+        {
+          "type": "receiver-power",
+          "time": 7625,
+          "id": "upper-light"
+        },
+        {
+          "type": "shutter-open",
+          "time": 7625,
+          "id": "upper-door"
+        },
+        {
+          "type": "footstep",
+          "time": 7892
+        },
+        {
+          "type": "footstep",
+          "time": 8317
+        },
+        {
+          "type": "footstep",
+          "time": 8742
+        },
+        {
+          "type": "beam-blocked",
+          "time": 8817,
+          "id": "upper-light"
+        },
+        {
+          "type": "shutter-close",
+          "time": 8817,
+          "id": "upper-door"
+        },
+        {
+          "type": "footstep",
+          "time": 9167
+        },
+        {
+          "type": "enter",
+          "time": 9333,
+          "body": "player",
+          "from": 0,
+          "to": 1,
+          "fromSurface": "beam-source",
+          "toSurface": "upper-return",
+          "speed": 4.794863958528701,
+          "exitSpeed": 4.794863958528701,
+          "held": null
+        },
+        {
+          "type": "receiver-power",
+          "time": 9342,
+          "id": "upper-light"
+        },
+        {
+          "type": "land",
+          "time": 9342
+        },
+        {
+          "type": "beam-blocked",
+          "time": 9350,
+          "id": "upper-light"
+        },
+        {
+          "type": "footstep",
+          "time": 9592
+        },
+        {
+          "type": "receiver-power",
+          "time": 9625,
+          "id": "upper-light"
+        },
+        {
+          "type": "footstep",
+          "time": 10017
+        },
+        {
+          "type": "footstep",
+          "time": 11125
+        },
+        {
+          "type": "footstep",
+          "time": 11550
+        },
+        {
+          "type": "footstep",
+          "time": 11975
+        }
+      ],
+      "mechanisms": [
+        "cargo",
+        "buttons",
+        "beams",
+        "shutters",
+        "portals"
+      ]
+    },
+    "held": null,
+    "holdSpaceTransform": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "launchUsed": false,
+    "respawns": 0,
+    "beams": {
+      "comparison-emitter": {
+        "segments": [
+          {
+            "from": [
+              7,
+              0.9,
+              8
+            ],
+            "to": [
+              10.959999999999999,
+              0.9,
+              8
+            ],
+            "portal": "0"
+          },
+          {
+            "from": [
+              5,
+              4.3,
+              -13.959
+            ],
+            "to": [
+              5,
+              4.3,
+              -7.840000000000001
+            ]
+          }
+        ],
+        "stop": "receiver",
+        "receiver": "upper-light",
+        "hops": 1
+      }
+    },
+    "signals": {
+      "emitter-power": true,
+      "safety:lower-door": false,
+      "door-safety": false,
+      "moving:lower-door": false,
+      "safety:upper-door": false,
+      "moving:upper-door": false,
+      "lower-light": false,
+      "upper-light": true
+    },
+    "events": [
+      {
+        "type": "footstep",
+        "time": 8317
+      },
+      {
+        "type": "footstep",
+        "time": 8742
+      },
+      {
+        "type": "beam-blocked",
+        "time": 8817,
+        "id": "upper-light"
+      },
+      {
+        "type": "shutter-close",
+        "time": 8817,
+        "id": "upper-door"
+      },
+      {
+        "type": "footstep",
+        "time": 9167
+      },
+      {
+        "type": "enter",
+        "time": 9333,
+        "body": "player",
+        "from": 0,
+        "to": 1,
+        "fromSurface": "beam-source",
+        "toSurface": "upper-return",
+        "speed": 4.794863958528701,
+        "exitSpeed": 4.794863958528701,
+        "held": null
+      },
+      {
+        "type": "receiver-power",
+        "time": 9342,
+        "id": "upper-light"
+      },
+      {
+        "type": "land",
+        "time": 9342
+      },
+      {
+        "type": "beam-blocked",
+        "time": 9350,
+        "id": "upper-light"
+      },
+      {
+        "type": "footstep",
+        "time": 9592
+      },
+      {
+        "type": "receiver-power",
+        "time": 9625,
+        "id": "upper-light"
+      },
+      {
+        "type": "footstep",
+        "time": 10017
+      },
+      {
+        "type": "footstep",
+        "time": 11125
+      },
+      {
+        "type": "footstep",
+        "time": 11550
+      },
+      {
+        "type": "footstep",
+        "time": 11975
+      },
+      {
+        "type": "complete",
+        "time": 12392,
+        "chamber": 20
+      }
+    ]
+  }
+}
