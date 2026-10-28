@@ -1,0 +1,11 @@
+{"action":"assert","path":"mode","equals":"menu"}
+{"action":"assert","path":"progress.completed","equals":[]}
+{"action":"assert","path":"progress.registered","equals":50}
+{"action":"click","selector":"[data-action=start]"}
+{"action":"assert","path":"mode","equals":"playing"}
+{"action":"assert","path":"level","equals":1}
+{"action":"assert","path":"assets.heroes.ready","equals":true}
+{"action":"assert","path":"assets.heroes.assets.projector.liveInstances","equals":1}
+{"action":"assert","path":"assets.heroes.assets.projector.verifiedSHA256","equals":"2215cbd530dd2e7b84b16dbc54efa69b9a57b38d92e19b26ef689287cfbde087"}
+{"action":"capture","name":"default-v5-new-player-real-Tripo-heroes"}
+{"action":"close"}

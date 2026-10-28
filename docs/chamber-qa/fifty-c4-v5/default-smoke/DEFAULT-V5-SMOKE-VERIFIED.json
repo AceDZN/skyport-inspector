@@ -1,0 +1,275 @@
+{
+  "scope": "Own empty-profile default URL rendering/model/bootstrap smoke after exact artifact publication; not whole campaign acceptance. Native user save untouched.",
+  "actualProcessExit": 0,
+  "actions": 10,
+  "captures": 2,
+  "mode": "playing",
+  "registered": 50,
+  "assets": {
+    "ready": true,
+    "assets": {
+      "projector": {
+        "phase": "ready",
+        "url": "./models/hero-projector.glb",
+        "expectedSHA256": "2215cbd530dd2e7b84b16dbc54efa69b9a57b38d92e19b26ef689287cfbde087",
+        "task": "5c64d549-c131-4da2-8688-38d6a22ce0a6",
+        "liveInstances": 1,
+        "resident": true,
+        "bytes": 1049404,
+        "verifiedSHA256": "2215cbd530dd2e7b84b16dbc54efa69b9a57b38d92e19b26ef689287cfbde087",
+        "meshes": 1,
+        "vertices": 11877,
+        "triangles": 18780,
+        "materials": 1,
+        "textures": 3,
+        "sourceBounds": {
+          "min": [
+            -0.5000000596046448,
+            0,
+            -0.1503143459558487
+          ],
+          "max": [
+            0.5000000596046448,
+            0.486053466796875,
+            0.1503143459558487
+          ]
+        },
+        "normalizedBounds": {
+          "min": [
+            -0.15031434595584872,
+            -0.22,
+            -0.6400000596046448
+          ],
+          "max": [
+            0.15031434595584872,
+            0.266053466796875,
+            0.36000005960464476
+          ]
+        },
+        "alignment": [
+          6.123233995736766e-17,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1,
+          0,
+          6.123233995736766e-17,
+          0,
+          -8.572527594031473e-18,
+          -0.22,
+          -0.14,
+          1
+        ],
+        "fitPolicy": "Rigid rotation/translation; uniform view scale",
+        "lensMaskVertices": 137,
+        "muzzleSource": [
+          -0.320448,
+          0.29,
+          0
+        ],
+        "axisSource": [
+          -1,
+          0,
+          0
+        ],
+        "muzzleLocal": [
+          -2.819430846869003e-17,
+          0.06999999999999998,
+          -0.460448
+        ],
+        "axisLocal": [
+          -6.123233995736766e-17,
+          0,
+          -1
+        ]
+      },
+      "cargo": {
+        "phase": "ready",
+        "url": "./models/hero-weighted-cargo.glb",
+        "expectedSHA256": "143129e2a3439cf4b074f57d9b22b9b52b8e008078e1975647a50e88fdf90053",
+        "task": "b4902fc0-bae7-42b6-8452-fc9b6876ca40",
+        "liveInstances": 1,
+        "resident": true,
+        "bytes": 991240,
+        "verifiedSHA256": "143129e2a3439cf4b074f57d9b22b9b52b8e008078e1975647a50e88fdf90053",
+        "meshes": 1,
+        "vertices": 12498,
+        "triangles": 18933,
+        "materials": 1,
+        "textures": 3,
+        "sourceBounds": {
+          "min": [
+            -0.4521484971046448,
+            0,
+            -0.5000000596046448
+          ],
+          "max": [
+            0.4521484971046448,
+            0.96966552734375,
+            0.5000000596046448
+          ]
+        },
+        "normalizedBounds": {
+          "min": [
+            -0.5,
+            -0.49999999999999994,
+            -0.5
+          ],
+          "max": [
+            0.5,
+            0.49999999999999994,
+            0.5
+          ]
+        },
+        "alignment": [
+          1.1058313877006662,
+          0,
+          0,
+          0,
+          0,
+          1.0312834392899854,
+          0,
+          0,
+          0,
+          0,
+          0.9999998807907247,
+          0,
+          0,
+          -0.49999999999999994,
+          0,
+          1
+        ],
+        "fitPolicy": "Per-axis canonical cube for six-face native contact; original GLB unchanged",
+        "lensMaskVertices": 0
+      }
+    },
+    "gun": {
+      "attached": true,
+      "meshes": [
+        {
+          "id": 373,
+          "uuid": "ba31acda-12b8-46f4-8917-ba032c50cd05",
+          "name": "tripo_node_611cc53a-6c26-4668-b0d4-7120f3c09134",
+          "source": "tripo_node_611cc53a-6c26-4668-b0d4-7120f3c09134",
+          "asset": "projector",
+          "vertices": 11877,
+          "triangles": 18780
+        }
+      ],
+      "muzzleInView": [
+        0.36806545397658474,
+        -0.32526416840948125,
+        -1.21468672
+      ],
+      "muzzleInWorld": [
+        0.368067133018969,
+        1.188904892774448,
+        8.785314233674317
+      ],
+      "axisInView": [
+        -6.11446350050489e-17,
+        3.2761359486433146e-18,
+        -1
+      ],
+      "axisInWorld": [
+        -6.11446350050489e-17,
+        3.2761359486433146e-18,
+        -1
+      ]
+    },
+    "cargo": [
+      {
+        "id": "weighted-cube",
+        "meshes": [
+          {
+            "id": 317,
+            "uuid": "ca073eb4-a908-422f-a8c0-0ff66fc77b29",
+            "name": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+            "source": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+            "asset": "cargo",
+            "vertices": 12498,
+            "triangles": 18933
+          }
+        ],
+        "portalCopies": [
+          {
+            "visible": false,
+            "meshes": [
+              {
+                "id": 322,
+                "uuid": "9542a244-f9c3-44f1-8e5e-cc57df88535a",
+                "name": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                "source": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                "asset": "cargo",
+                "vertices": 12498,
+                "triangles": 18933
+              }
+            ]
+          },
+          {
+            "visible": false,
+            "meshes": [
+              {
+                "id": 327,
+                "uuid": "c190ca5e-1de3-4d8a-a651-440e31a6a214",
+                "name": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                "source": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                "asset": "cargo",
+                "vertices": 12498,
+                "triangles": 18933
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "versions": [
+    {
+      "graphics": {
+        "available": true,
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Max, Unspecified Version)",
+        "vendor": "Google Inc. (Apple)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+        "attributes": {
+          "alpha": true,
+          "antialias": true,
+          "depth": true,
+          "desynchronized": false,
+          "failIfMajorPerformanceCaveat": false,
+          "powerPreference": "default",
+          "premultipliedAlpha": true,
+          "preserveDrawingBuffer": false,
+          "stencil": false,
+          "xrCompatible": false
+        },
+        "maxTextureSize": 16384,
+        "pixelRatio": 1
+      },
+      "at": "2026-10-28T21:49:36.366Z",
+      "url": "http://localhost:4261/",
+      "scripts": [
+        {
+          "url": "http://localhost:4261/assets/main-JsffBW03.js",
+          "sha256": "6118b7babda0b016488965b14826a9d94c1c8a26528b0fda355bf3c624e6c1c1"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "modelResponses": [
+    {
+      "url": "http://localhost:4261/models/hero-projector.glb",
+      "status": 200
+    },
+    {
+      "url": "http://localhost:4261/models/hero-weighted-cargo.glb",
+      "status": 200
+    }
+  ]
+}
