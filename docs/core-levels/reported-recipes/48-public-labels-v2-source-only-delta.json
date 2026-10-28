@@ -1,0 +1,73 @@
+{
+  "status": "UNEXECUTED labels-only companion, original packet unchanged",
+  "original": {
+    "path": "docs/core-levels/reported-recipes/48-base-final-client-UNEXECUTED.jsonl",
+    "sha256": "d10ea689a9b38706b70c0367d8ebe7a672d122c173fe3688d8048b4581da3e84"
+  },
+  "companion": {
+    "path": "docs/core-levels/reported-recipes/48-base-final-client-public-labels-v2-UNEXECUTED.jsonl",
+    "sha256": "4eb2251d897cc67d5e75b6581015fdc9f409b34dfb29fbe81ec0704dd9d2c65c",
+    "commands": 53
+  },
+  "onlyCommandChanges": [
+    {
+      "line": 28,
+      "before": {
+        "action": "assert",
+        "path": "world.devices",
+        "equals": 1,
+        "id": "question-freight-lift",
+        "field": "choice"
+      },
+      "after": {
+        "action": "assert",
+        "path": "world.devices",
+        "equals": "LOADING",
+        "id": "question-freight-lift",
+        "field": "choice"
+      }
+    },
+    {
+      "line": 39,
+      "before": {
+        "action": "assert",
+        "path": "world.devices",
+        "equals": 0,
+        "id": "question-freight-lift",
+        "field": "choice"
+      },
+      "after": {
+        "action": "assert",
+        "path": "world.devices",
+        "equals": "GALLERY",
+        "id": "question-freight-lift",
+        "field": "choice"
+      }
+    }
+  ],
+  "parentLabelsPlanReadOnly": {
+    "path": "/Users/acedzn/idea-plotter/reports/rift-final-campaign-review/planned-base-48-final-v3-public-labels.jsonl",
+    "sha256": "fc16d90c243664621ef2dfa425004baac5c2280ced9890e422540e0388050593",
+    "publicChoiceAssertions": [
+      {
+        "action": "assert",
+        "path": "world.devices",
+        "equals": "LOADING",
+        "id": "question-freight-lift",
+        "field": "choice"
+      },
+      {
+        "action": "assert",
+        "path": "world.devices",
+        "equals": "GALLERY",
+        "id": "question-freight-lift",
+        "field": "choice"
+      }
+    ]
+  },
+  "actualBoundaryFromParent": "E physically selected the correct actual stop. Public world.devices.choice returns LOADING/GALLERY labels; the original native-index1/0 assertions failed. Parent corrected assertions in the same context and reports actual FREIGHT upper completion with0respawns. This source-only author did not execute or independently inspect the parent full browser run.",
+  "recoveryWarning": "Do not repeat E merely to repair a failed label assertion when the actual choice is already correct. The future companion executes each intended E once and asserts the public label.",
+  "originalAfterSha256": "d10ea689a9b38706b70c0367d8ebe7a672d122c173fe3688d8048b4581da3e84",
+  "runtimeModuleReadOnlySha256": "a652b9dbd8879d94aa4de245ffba09afba7c8ae6a64cec51901e4f2e0f34945c",
+  "noExecution": "No browser/compiler/native/build or runtime source edit."
+}

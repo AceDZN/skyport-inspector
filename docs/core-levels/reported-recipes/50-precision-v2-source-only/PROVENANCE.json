@@ -1,0 +1,30 @@
+{
+  "createdAt": "2026-10-28T17:41:57.891521+00:00",
+  "status": "UNEXECUTED source-only precision alternative; no browser/compiler/native/build or recipe execution.",
+  "original": {
+    "path": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/core-levels/reported-recipes/50-base-segment.jsonl",
+    "sha256": "effc6c99c49781ed8762ef63a61f2454c4e82fc01954d9505979d51cf60f80c3",
+    "preservedCopy": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/core-levels/reported-recipes/50-precision-v2-source-only/50-original.jsonl"
+  },
+  "alternative": {
+    "path": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/core-levels/reported-recipes/50-base-segment-precision-v2-UNEXECUTED.jsonl",
+    "sha256": "a4448a28e31819f6eb839c45a6bd8b3b8f6f74bc2cae19571a53564dbcc50d67",
+    "actions": 105
+  },
+  "onlyChangedLine1based": 12,
+  "before": {
+    "action": "walk",
+    "x": 3,
+    "z": 6.45,
+    "stop": 0.12
+  },
+  "after": {
+    "action": "walk",
+    "x": 3,
+    "z": 6.45,
+    "stop": 0.025
+  },
+  "rationale": "Parent v3 C46 first deep shot stopped at Z6.5483 with generic tolerance, remained on observation-source after invalid placement, and paused before W. C50 uses the same proven deep shooting-lip coordinate (3,6.45); original50 stop .12 can retain a similarly distant stance. Tighten only ordinary walk stopping tolerance to .025. No runtime defect, successful retry, altered route or actual50 execution is claimed.",
+  "parentReport": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/fifty-final-v3/PLAY_HANDOFF.md",
+  "unchanged": "Every other JSONL command, target, order, assertions and original packet byte."
+}

@@ -1,0 +1,105 @@
+{"action": "clock", "mode": "realtime"}
+{"action": "assert", "path": "mode", "equals": "playing"}
+{"action": "assert", "path": "level", "equals": 50}
+{"action": "assert", "path": "alternate", "equals": false}
+{"action": "assert", "path": "world.result", "equals": null}
+{"action": "assert", "path": "world.respawns", "equals": 0}
+{"action": "assert", "path": "world.player.crossings", "equals": 0}
+{"action": "wait-audio-ready"}
+{"action": "capture", "name": "50-source-plan-initial-if-executed"}
+{"action": "walk", "x": 3, "z": 12.5, "stop": 0.12}
+{"action": "walk", "x": 3, "z": 7.3, "stop": 0.12}
+{"action": "walk", "x": 3, "z": 6.45, "stop": 0.025}
+{"action": "aim", "target": [3, -17.975, -1.1]}
+{"action": "place", "index": 0}
+{"action": "assert", "path": "world.portals.0.surface", "equals": "vault-deep-floor"}
+{"action": "aim", "target": [-7.985, 9, -6]}
+{"action": "place", "index": 1}
+{"action": "assert", "path": "world.portals.1.surface", "equals": "vault-launch"}
+{"action": "aim", "target": [3, 1.515, -8]}
+{"action": "key-until", "code": "KeyW", "conditions": [{"path": "world.player.crossings", "min": 1}], "timeoutMs": 5000}
+{"action": "wait-for", "conditions": [{"path": "world.player.grounded", "equals": true}, {"path": "world.player.position.1", "min": 5.8, "max": 5.94}, {"path": "world.player.position.0", "min": 15.4, "max": 29.6}, {"path": "world.player.position.2", "min": -9.6, "max": -2.4}], "timeoutMs": 10000, "stableMs": 160}
+{"action": "assert", "path": "world.respawns", "equals": 0}
+{"action": "capture", "name": "50-actual-unladen-whole-high-landing-if-executed"}
+{"action": "walk", "x": 16.5, "z": -6, "stop": 0.12}
+{"action": "assert", "path": "world.pads", "equals": false, "id": "return-pressure", "field": "pressed"}
+{"action": "walk", "x": 20, "z": -3.5, "stop": 0.12}
+{"action": "walk", "x": 24.2, "z": -3.5, "stop": 0.12}
+{"action": "walk", "x": 24.2, "z": -6, "stop": 0.12}
+{"action": "aim-crate", "id": "vault-cube"}
+{"action": "press", "code": "KeyE"}
+{"action": "assert", "path": "world.held", "equals": "vault-cube"}
+{"action": "walk", "x": 24.8, "z": -6, "stop": 0.12}
+{"action": "aim", "target": [23, 6.39, -6]}
+{"action": "wait", "ms": 400}
+{"action": "press", "code": "KeyE"}
+{"action": "wait-for", "conditions": [{"path": "world.pads", "equals": "vault-cube", "id": "return-pressure", "field": "crate"}], "timeoutMs": 15000, "stableMs": 800}
+{"action": "assert", "path": "world.held", "equals": null}
+{"action": "wait-device", "id": "vault-return-cover", "position": [29.6, 10.8, -6], "tolerance": 0.015, "settled": true, "stableMs": 160, "timeoutMs": 10000}
+{"action": "wait-for", "conditions": [{"path": "world.journal.now", "equals": "OPEN", "id": "vault-return-cover", "field": "state"}], "timeoutMs": 15000, "stableMs": 160}
+{"action": "capture", "name": "50-real-cargo-release-full-return-opening-if-executed"}
+{"action": "walk", "x": 24.8, "z": -3.5, "stop": 0.12}
+{"action": "walk", "x": 16.5, "z": -3.5, "stop": 0.12}
+{"action": "walk", "x": 16.5, "z": -6, "stop": 0.12}
+{"action": "aim", "target": [1, 1.55, 13.985]}
+{"action": "place", "index": 0}
+{"action": "assert", "path": "world.portals.0.surface", "equals": "vault-return-wall"}
+{"action": "aim", "target": [29.985, 6.55, -6]}
+{"action": "place", "index": 1}
+{"action": "assert", "path": "world.portals.1.surface", "equals": "vault-upper-return"}
+{"action": "walk", "x": 16.5, "z": -3.5, "stop": 0.12}
+{"action": "walk", "x": 24.8, "z": -3.5, "stop": 0.12}
+{"action": "walk", "x": 24.8, "z": -6, "stop": 0.12}
+{"action": "aim-crate", "id": "vault-cube"}
+{"action": "press", "code": "KeyE"}
+{"action": "assert", "path": "world.held", "equals": "vault-cube"}
+{"action": "aim", "target": [23, 6.85, -6]}
+{"action": "wait", "ms": 400}
+{"action": "wait-for", "conditions": [{"path": "world.pads", "equals": false, "id": "return-pressure", "field": "pressed"}, {"path": "world.journal.now", "equals": "OPEN", "id": "vault-return-cover", "field": "state"}], "timeoutMs": 15000, "stableMs": 160}
+{"action": "walk", "x": 24.8, "z": -3.5, "stop": 0.12}
+{"action": "walk", "x": 27.5, "z": -3.5, "stop": 0.12}
+{"action": "walk", "x": 27.5, "z": -6, "stop": 0.12}
+{"action": "walk", "x": 28.5, "z": -6, "stop": 0.12}
+{"action": "aim", "target": [31.985, 6.55, -6]}
+{"action": "key-until", "code": "KeyW", "conditions": [{"path": "world.player.crossings", "min": 2}], "timeoutMs": 4500}
+{"action": "key", "code": "KeyW", "ms": 180}
+{"action": "wait-for", "conditions": [{"path": "world.player.grounded", "equals": true}, {"path": "world.player.position.1", "min": 0.8, "max": 0.94}, {"path": "world.held", "equals": "vault-cube"}, {"path": "world.crates", "min": 1, "id": "vault-cube", "field": "crossings"}, {"path": "world.crates", "max": 3, "id": "vault-cube", "field": "position.1"}], "timeoutMs": 15000, "stableMs": 160}
+{"action": "capture", "name": "50-full-walking-body-and-current-cargo-return-if-executed"}
+{"action": "walk", "x": 3, "z": 12, "stop": 0.12}
+{"action": "walk", "x": 5, "z": 11.5, "stop": 0.12}
+{"action": "walk", "x": 5, "z": 16, "stop": 0.12}
+{"action": "walk", "x": -3.2, "z": 19, "stop": 0.12}
+{"action": "aim", "target": [-5, 1.39, 19]}
+{"action": "wait", "ms": 400}
+{"action": "press", "code": "KeyE"}
+{"action": "wait-for", "conditions": [{"path": "world.pads", "equals": "vault-cube", "id": "freight-store", "field": "crate"}], "timeoutMs": 15000, "stableMs": 800}
+{"action": "assert", "path": "world.held", "equals": null}
+{"action": "assert", "path": "world.pads", "equals": false, "id": "archive-store", "field": "pressed"}
+{"action": "walk", "x": 8, "z": 16, "stop": 0.12}
+{"action": "walk", "x": 8, "z": 19.2, "stop": 0.12}
+{"action": "aim", "target": [14.985, 1.55, 18]}
+{"action": "place", "index": 0}
+{"action": "assert", "path": "world.portals.0.surface", "equals": "transfer-source"}
+{"action": "aim", "target": [-7.985, 1.55, 17]}
+{"action": "place", "index": 1}
+{"action": "assert", "path": "world.portals.1.surface", "equals": "freight-return"}
+{"action": "wait-for", "conditions": [{"path": "world.signals.freight-light", "equals": true}, {"path": "world.signals.archive-light", "equals": false}], "timeoutMs": 15000, "stableMs": 160}
+{"action": "capture", "name": "50-current-FREIGHT-group-pressure-and-light-if-executed"}
+{"action": "walk", "x": -3, "z": 19.3, "stop": 0.12}
+{"action": "aim", "target": [-3, 1.515, 25]}
+{"action": "key-when", "code": "KeyW", "when": [{"path": "world.signals.at:final-ferry:NEAR", "equals": true}, {"path": "world.signals.moving:final-ferry", "equals": false}, {"path": "world.devices", "min": 21.985, "max": 22.015, "id": "final-ferry", "field": "position.2"}, {"path": "world.player.grounded", "equals": true}, {"path": "world.player.position.0", "min": -3.35, "max": -2.65}, {"path": "world.player.position.2", "min": 19.0, "max": 19.55}, {"path": "world.player.position.1", "min": 0.8, "max": 0.94}], "until": [{"path": "world.player.grounded", "equals": true}, {"path": "world.player.position.0", "min": -3.35, "max": -2.65}, {"path": "world.player.position.2", "min": 21.8, "max": 22.3}, {"path": "world.player.position.1", "min": 0.8, "max": 0.94}], "freshArrival": true, "stableMs": 160, "waitTimeoutMs": 45000, "moveTimeoutMs": 4000}
+{"action": "assert", "path": "world.respawns", "equals": 0}
+{"action": "aim", "target": [-3, 1.515, 44]}
+{"action": "key-when", "code": "KeyW", "when": [{"path": "world.signals.at:final-ferry:FAR", "equals": true}, {"path": "world.signals.moving:final-ferry", "equals": false}, {"path": "world.devices", "min": 33.985, "max": 34.015, "id": "final-ferry", "field": "position.2"}, {"path": "world.player.grounded", "equals": true}, {"path": "world.player.position.0", "min": -3.35, "max": -2.65}, {"path": "world.player.position.2", "min": 33.5, "max": 34.5}, {"path": "world.player.position.1", "min": 0.8, "max": 0.94}], "until": [{"path": "world.player.grounded", "equals": true}, {"path": "world.player.position.0", "min": -3.35, "max": -2.65}, {"path": "world.player.position.2", "min": 36.7, "max": 37.2}, {"path": "world.player.position.1", "min": 0.8, "max": 0.94}], "freshArrival": false, "stableMs": 160, "waitTimeoutMs": 45000, "moveTimeoutMs": 4000}
+{"action": "capture", "name": "50-real-FAR-support-to-far-bank-if-executed"}
+{"action": "aim", "target": [-3, 1.515, 44]}
+{"action": "key-when", "code": "KeyW", "when": [{"path": "world.signals.clear:freight-final-door", "equals": true}, {"path": "world.signals.at:final-ferry:FAR", "equals": true}, {"path": "world.signals.moving:final-ferry", "equals": false}], "until": [{"path": "mode", "equals": "result"}], "freshArrival": false, "stableMs": 80, "waitTimeoutMs": 45000, "moveTimeoutMs": 6000}
+{"action": "assert", "path": "mode", "equals": "result"}
+{"action": "assert", "path": "world.result.goalMatched", "equals": true}
+{"action": "assert", "path": "world.result.exit", "equals": "freight-exit"}
+{"action": "assert", "path": "world.respawns", "equals": 0}
+{"action": "assert", "path": "progress.records.50.completed", "equals": true}
+{"action": "assert", "path": "progress.highestUnlocked", "equals": 50}
+{"action": "assert", "path": "progress.resumeLevel", "equals": 50}
+{"action": "capture", "name": "50-requested-physical-result-if-executed"}
+{"action": "export-earned-save"}

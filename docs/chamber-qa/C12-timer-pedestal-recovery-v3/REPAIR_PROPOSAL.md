@@ -1,0 +1,9 @@
+# Stationary timer contact: isolated repair proposal
+
+Status: proposal only. Active `src/core/world.ts`, all immutable preview files and v3 remain unchanged. The independent first strict0/native0-of-1 failure is preserved in `first/`; it establishes a real recovery pin, not merely pushing into a blocked direction.
+
+At `CoreWorld.computeCharacterMovement`, the existing guarded query-only stationary-frame treatment includes lift, moving-platform and conveyor. The actual stationary timer is excluded, although its native body is also KinematicPositionBased and the stuck contact reports zero current/next movement and zero velocity. Proposed bounded delta: add `timer` to that existing filter. Keep exact planned delta zero, native linear/angular velocity guard, original body-type capture and `finally` restoration before held-cargo query/native integration. Do not alter machine time, pulse period, collider geometry, character motion, native pose/velocity, cargo, portals, goal or save state.
+
+Before integrating or rebuilding, validate a separate source snapshot with only that one literal added. Run the unchanged bounded12 recovery case first, with distinct output directory/source receipt and native-restoration observation. A passing case must show ordinary separation with the same genuine contact history and support. If it fails, preserve the first candidate outcome and diagnose that result before broadening. Active v3 and its ongoing engineering campaign must remain frozen.
+
+After a concrete isolated pass, review timer state/type restoration and affected timer/transport/held/portal contracts on the exact candidate. Only a repaired, fully built and hash-bound new artifact can become the next final-review build; preserve v3/failures and repeat the required final fresh campaign on the settled repaired build. This proposal is not a successful repair, build or browser acceptance.

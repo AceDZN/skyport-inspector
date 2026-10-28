@@ -1,0 +1,18 @@
+{"action": "wait", "ms": 1800}
+{"action": "audio-stop", "name": "actual50-capstone-SFX-music-victory"}
+{"action": "capture", "name": "50-actual-final-physical-freight-result"}
+{"action": "reload"}
+{"action": "assert", "path": "progress.completed", "equals": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50]}
+{"action": "assert", "path": "progress.highestUnlocked", "equals": 50}
+{"action": "assert", "path": "progress.resumeLevel", "equals": 50}
+{"action": "export-earned-save"}
+{"action": "click", "selector": "[data-action=continue]"}
+{"action": "assert", "path": "level", "equals": 50}
+{"action": "assert", "path": "mode", "equals": "playing"}
+{"action": "performance-sample", "ms": 2000}
+{"action": "capture", "name": "50-actual-Continue-after-earned-all50-reload"}
+{"action": "press", "code": "Escape"}
+{"action": "paused-observation", "ms": 600}
+{"action": "click", "selector": "[data-action=home]"}
+{"action": "capture", "name": "50-actual-earned-all50-menu"}
+{"action": "export-earned-save"}

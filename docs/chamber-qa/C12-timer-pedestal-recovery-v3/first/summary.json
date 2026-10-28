@@ -1,0 +1,423 @@
+{
+  "scope": "ONE frozen-v3 source native C12 actual-spawn contact/recovery history. Not browser completion.",
+  "result": "CONFIRMED_STATIONARY_TIMER_RECOVERY_PIN",
+  "strictExit": 0,
+  "nativePass": 0,
+  "nativeFail": 1,
+  "sourceExact": true,
+  "initialOld750msEndpoint": {
+    "player": [
+      0.4644525945186615,
+      0.864281415939331,
+      4.73567533493042
+    ],
+    "native": {
+      "x": 0.4644525945186615,
+      "y": 0.864281415939331,
+      "z": 4.73567533493042
+    },
+    "grounded": true,
+    "computed": {
+      "x": 1.7200971549891086e-11,
+      "y": 9.99999901978299e-05,
+      "z": -3.1103650471181465e-12
+    }
+  },
+  "trials": [
+    {
+      "name": "A-retained-diagonal-heading",
+      "start": [
+        0.5050037503242493,
+        0.8638777732849121,
+        4.608963966369629
+      ],
+      "end": [
+        0.5050037503242493,
+        0.8638777732849121,
+        4.608963966369629
+      ],
+      "distance": 0,
+      "clear": false,
+      "grounded": true
+    },
+    {
+      "name": "S-retained-diagonal-heading",
+      "start": [
+        0.5050037503242493,
+        0.8638777732849121,
+        4.608963966369629
+      ],
+      "end": [
+        0.5050037503242493,
+        0.8641774654388428,
+        4.613887786865234
+      ],
+      "distance": 0.0049329325618816325,
+      "clear": false,
+      "grounded": true
+    },
+    {
+      "name": "W-facing-west-back-out",
+      "start": [
+        0.5050037503242493,
+        0.8641774654388428,
+        4.613887786865234
+      ],
+      "end": [
+        0.5050037503242493,
+        0.8641774654388428,
+        4.613887786865234
+      ],
+      "distance": 0,
+      "clear": false,
+      "grounded": true
+    },
+    {
+      "name": "A-facing-north-strafe-away",
+      "start": [
+        0.5050037503242493,
+        0.8641774654388428,
+        4.613887786865234
+      ],
+      "end": [
+        0.5050037503242493,
+        0.8641774654388428,
+        4.613887786865234
+      ],
+      "distance": 0,
+      "clear": false,
+      "grounded": true
+    }
+  ],
+  "actualControlTelemetry": [
+    {
+      "name": "A-retained-diagonal-heading",
+      "frames": 120,
+      "input": {
+        "forward": 0,
+        "strafe": -1,
+        "jump": false
+      },
+      "yaw": -1.4157300054049742,
+      "pitch": 0,
+      "computedEnd": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "terminalContactCount": 20,
+      "terminalFirstPerCollider": [
+        {
+          "id": "pulse-floor",
+          "normal": {
+            "x": 1.7168418708024547e-05,
+            "y": 0.9999999403953552,
+            "z": 0
+          },
+          "toi": 0,
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": -0.006177824921905994,
+            "y": -0.0011111111380159855,
+            "z": -0.03952005133032799
+          }
+        },
+        {
+          "id": "east-clock",
+          "normal": {
+            "x": -1,
+            "y": -4.965843345416943e-06,
+            "z": 4.419600736582652e-05
+          },
+          "toi": 0,
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": -1.0113361537111842e-11,
+            "y": 0.0001001064374577254,
+            "z": -0.03952005133032799
+          }
+        }
+      ],
+      "timer": {
+        "position": [
+          1.2,
+          1.25,
+          4.5
+        ],
+        "native": {
+          "x": 1.2000000476837158,
+          "y": 1.25,
+          "z": 4.5
+        },
+        "next": {
+          "x": 1.2000000476837158,
+          "y": 1.25,
+          "z": 4.5
+        },
+        "linear": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "type": 2,
+        "on": true
+      }
+    },
+    {
+      "name": "S-retained-diagonal-heading",
+      "frames": 120,
+      "input": {
+        "forward": -1,
+        "strafe": 0,
+        "jump": false
+      },
+      "yaw": -1.3982893328033317,
+      "pitch": 0,
+      "computedEnd": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "terminalContactCount": 20,
+      "terminalFirstPerCollider": [
+        {
+          "id": "pulse-floor",
+          "normal": {
+            "x": 0,
+            "y": 0.9999999403953552,
+            "z": 0
+          },
+          "toi": 0,
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": -0.03940629959106445,
+            "y": -0.0011111111380159855,
+            "z": 0.006866106763482094
+          }
+        },
+        {
+          "id": "east-clock",
+          "normal": {
+            "x": -1,
+            "y": -6.950872375455219e-06,
+            "z": -4.964908839610871e-07
+          },
+          "toi": 0,
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": 2.0205215972568524e-11,
+            "y": 9.99999901978299e-05,
+            "z": 2.5515673294026424e-19
+          }
+        }
+      ],
+      "timer": {
+        "position": [
+          1.2,
+          1.25,
+          4.5
+        ],
+        "native": {
+          "x": 1.2000000476837158,
+          "y": 1.25,
+          "z": 4.5
+        },
+        "next": {
+          "x": 1.2000000476837158,
+          "y": 1.25,
+          "z": 4.5
+        },
+        "linear": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "type": 2,
+        "on": true
+      }
+    },
+    {
+      "name": "W-facing-west-back-out",
+      "frames": 120,
+      "input": {
+        "forward": 1,
+        "strafe": 0,
+        "jump": false
+      },
+      "yaw": 1.5707963267948966,
+      "pitch": 0,
+      "computedEnd": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "terminalContactCount": 20,
+      "terminalFirstPerCollider": [
+        {
+          "id": "pulse-floor",
+          "normal": {
+            "x": 0,
+            "y": 0.9999999403953552,
+            "z": 0
+          },
+          "toi": 0,
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": -0.03999999910593033,
+            "y": -0.0011111111380159855,
+            "z": -2.3462221748760115e-11
+          }
+        },
+        {
+          "id": "east-clock",
+          "normal": {
+            "x": -1,
+            "y": -6.950872375455219e-06,
+            "z": -4.964908839610871e-07
+          },
+          "toi": 0,
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": 2.0205215972568524e-11,
+            "y": 9.99999901978299e-05,
+            "z": 2.5515673294026424e-19
+          }
+        }
+      ],
+      "timer": {
+        "position": [
+          1.2,
+          1.25,
+          4.5
+        ],
+        "native": {
+          "x": 1.2000000476837158,
+          "y": 1.25,
+          "z": 4.5
+        },
+        "next": {
+          "x": 1.2000000476837158,
+          "y": 1.25,
+          "z": 4.5
+        },
+        "linear": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "type": 2,
+        "on": false
+      }
+    },
+    {
+      "name": "A-facing-north-strafe-away",
+      "frames": 120,
+      "input": {
+        "forward": 0,
+        "strafe": -1,
+        "jump": false
+      },
+      "yaw": 0,
+      "pitch": 0,
+      "computedEnd": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "terminalContactCount": 20,
+      "terminalFirstPerCollider": [
+        {
+          "id": "pulse-floor",
+          "normal": {
+            "x": 0,
+            "y": 0.9999999403953552,
+            "z": 0
+          },
+          "toi": 0,
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": -0.03999999910593033,
+            "y": -0.0011111111380159855,
+            "z": -2.346238307804338e-11
+          }
+        },
+        {
+          "id": "east-clock",
+          "normal": {
+            "x": -1,
+            "y": -6.950872375455219e-06,
+            "z": -4.964908839610871e-07
+          },
+          "toi": 0,
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": 2.0205215972568524e-11,
+            "y": 9.99999901978299e-05,
+            "z": 2.5515673294026424e-19
+          }
+        }
+      ],
+      "timer": {
+        "position": [
+          1.2,
+          1.25,
+          4.5
+        ],
+        "native": {
+          "x": 1.2000000476837158,
+          "y": 1.25,
+          "z": 4.5
+        },
+        "next": {
+          "x": 1.2000000476837158,
+          "y": 1.25,
+          "z": 4.5
+        },
+        "linear": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "type": 2,
+        "on": false
+      }
+    }
+  ],
+  "jumpEvents": 0,
+  "respawns": 0,
+  "crossings": 1,
+  "error": "AssertionError [ERR_ASSERTION]: A-retained-diagonal-heading did not produce ordinary movement",
+  "noRepair": "No source/runtime/fixture/controller/cargo/pose/velocity/device/save/clock-machine repair attempted. Sole native slot released after closed first0/1."
+}

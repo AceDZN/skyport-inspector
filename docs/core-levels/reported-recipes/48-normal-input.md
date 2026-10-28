@@ -1,6 +1,6 @@
 #48 ordinary-input handoff · UNEXECUTED
 
-Prerequisite: genuine earned47→48 progression, or visible replay after actually completing48. This browser plan is unexecuted. FIRST48 strict0/native8/8 and Root's later integration are source-native evidence only. Use normal mouse/WASD/E and read-only public current states; no pose, machine, selected-stop, goal, save or clock writes. There is no cargo in48. Both instructions use the same hardware.
+Prerequisite: genuine earned47→48 progression, or visible replay after actually completing48. This browser plan was unexecuted at authoring; the later parent label-assertion boundary and reported completion are appended below. FIRST48 strict0/native8/8 and Root's later integration remain separate source-native evidence. Use normal mouse/WASD/E and read-only public current states; no pose, machine, selected-stop, goal, save or clock writes. There is no cargo in48. Both instructions use the same hardware.
 
 ## Shared observation access
 
@@ -29,3 +29,9 @@ Wrong SERVICE under FREIGHT instructions returns along the same still-parked dec
 An optional actual SERVICE-edge miss walks from its parked centre `[9,-4]` toward `[9,0]` into the real catch. After grounded catch support near Y−3.535, use `[8,-8.7] → [-11.5,-8.7] → [-11.5,6]` through the cut22-step well. Require actual near-bank support near Y.865, with no jump/reset. Return around the booth via `[-8,6] → [-3.8,2] → [2.2,-4]`; parked SERVICE still permits the normal crossing. This is recovery, not an extra mission requirement.
 
 Native tests also prove an actual premature crossing contacts the closed leaf and that departing from an earlier dock invalidates the old current contact until recall. They do not certify universal route exclusion or browser visuals. Preserve actual frame/body support, models/audio, marks, errors and saved progression during the eventual frozen run; final fresh earned1→50 remains open.
+
+## Later parent v3 public-label boundary
+
+The parent reports the actual E controls selected correctly, but the original packet incorrectly asserted native indices`1/0` against **public** `world.devices.choice`, which exposes labels`LOADING/GALLERY`. The assertion failure was repaired in the same browser context; it was not a failed physical selection or a runtime defect. Do not repeat E just to repair an assertion when the selected actual destination is already correct. The parent then reports actual FREIGHT upper completion with0respawns. This source-only author did not run or independently inspect that full browser evidence; it does not imply a full fresh1→50 result.
+
+Preserve the original packet/hash`d10ea689…`. The separate future-use `48-base-final-client-public-labels-v2-UNEXECUTED.jsonl` changes only those two assertion values, at lines28/39, to`LOADING/GALLERY`. All53 inputs, earned-prefix prerequisites, actual stopped/whole-body support and exit checks otherwise remain identical. Companion SHA`4eb2251d897cc67d5e75b6581015fdc9f409b34dfb29fbe81ec0704dd9d2c65c`; exact before/after plus the read-only parent corrected-plan hash are in`48-public-labels-v2-source-only-delta.json`. Companion publication is atomic; no browser/compiler/native/build or runtime edit accompanied it.
