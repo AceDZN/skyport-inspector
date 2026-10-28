@@ -1,0 +1,9 @@
+# Actual v4 ordinary-input recovery probes
+
+Both parent-owned standard-UI browser probes closed0 on exact `main-DQOCgSow.js`, SHA256 `4736e8868fd357eec805dd007d7a40b3adfbf03dfcab817628bb142461f90be7`:102 actual commands/14 captures, zero command/page/console errors. [Parent receipt](V4-RECOVERY-PROBES-VERIFIED.json) retains movements and final states; [copy provenance](COPY_PROVENANCE.json) binds37 original files with exact raw/stored hashes. Manifests/actions/checkpoints are lossless gzip, PNGs are unchanged. Original v3 failing contexts are preserved alongside v4.
+
+C1's closed exit and C13's inactive BELT POWER switch allow ordinary trusted S400 back-out by2.3187m/1.5832m while the door stays closed and switch stays inactive. C12 allows ordinary A4001.0099m then S4001.0558m, grounded without jump/reset, followed by a real requested EAST completion. The old-v3 back-out failures remain their own actual browser evidence. Input durations are recorded commands; measured browser displacement includes the real execution/RAF timing and is not a calibrated speed claim.
+
+These scoped engineering contexts imported the earlier genuinely earned50 profile. They are separate from the NEW empty-context fresh1→50 run and cannot award its acceptance. Full487 native contracts, state-restoration checks and TypeScript/Vite build are separately bound by [the v4 build record](../fifty-timer-v4/BUILD.json).
+
+Root read the compact parent receipt/copy hashes and inspected actual frames `v4-other-machine-run/003-v4-actual-ordinary-back-out-from-still-closed-door.png` and `v4-timer-run/004-actual-v4-ordinary-S-escape-no-jump-or-reset.png` offline. They show the closed door, visible real projector and linked-portal room context. Two crops do not establish whole-room target parity or a full campaign. Parent owns the ordinary browser execution and final acceptance.

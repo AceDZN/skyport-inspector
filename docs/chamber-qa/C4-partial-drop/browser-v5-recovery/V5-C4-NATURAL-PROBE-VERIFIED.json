@@ -1,0 +1,218 @@
+{
+  "scope": "Actual browser reproduction and recovery from human C4 portal cargo jam on exact frozen v5. Genuine prior earned50 storage used only for scoped engineering access. Native user room untouched. Full new empty-source50 acceptance remains pending.",
+  "actualProcessExit": 0,
+  "sha256": "6118b7babda0b016488965b14826a9d94c1c8a26528b0fda355bf3c624e6c1c1",
+  "script": "main-JsffBW03.js",
+  "manifestSHA256": "2c423f9528f54bb3ee1c6e62ad1f31f1cffbfcdb1babd8dc53c4ce170792e6de",
+  "plan": "c4-seam-natural-pullback-positive-plan.jsonl",
+  "actions": 68,
+  "captures": 10,
+  "actionFailures": [],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "actualGoalMatched": true,
+  "exit": "exit",
+  "respawns": 0,
+  "jumpInputs": 0,
+  "blocked": {
+    "player": {
+      "position": [
+        -3.996690273284912,
+        0.8649945259094238,
+        -11.70490550994873
+      ],
+      "velocity": [
+        1.5e-323,
+        0,
+        -1.5e-323
+      ],
+      "yaw": 6.282492530408212,
+      "pitch": 1.8041124150158794e-16,
+      "grounded": true,
+      "crossings": 1
+    },
+    "held": null,
+    "cargo": [
+      {
+        "id": "cube",
+        "position": [
+          -7.263774871826172,
+          0.5498899221420288,
+          5.980161190032959
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          -5.456421980909454e-9,
+          -0.7071069478988647,
+          -2.492563169198547e-7,
+          0.7071067094802856
+        ],
+        "angularVelocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 1
+      }
+    ]
+  },
+  "pullback": {
+    "player": {
+      "position": [
+        -3.970374584197998,
+        0.8648364543914795,
+        -5.851045608520508
+      ],
+      "velocity": [
+        1.5e-323,
+        0,
+        1.5e-323
+      ],
+      "yaw": 6.287627296033212,
+      "pitch": -0.913281402587891,
+      "grounded": true,
+      "crossings": 1
+    },
+    "held": "cube",
+    "cargo": [
+      {
+        "id": "cube",
+        "position": [
+          -3.9752516746520996,
+          0.5620998740196228,
+          -6.951146602630615
+        ],
+        "velocity": [
+          0.00020007151761092246,
+          0,
+          0
+        ],
+        "rotation": [
+          -1.8010908320320596e-7,
+          -1.6858737694747106e-7,
+          -1.7239254646028712e-7,
+          1
+        ],
+        "angularVelocity": [
+          0,
+          0,
+          0
+        ],
+        "held": true,
+        "crossings": 2
+      }
+    ]
+  },
+  "carry": {
+    "player": {
+      "position": [
+        -7.039210319519043,
+        0.8649787306785583,
+        5.976934909820557
+      ],
+      "velocity": [
+        2.503681679283949e-211,
+        0,
+        -1.638982546353371e-218
+      ],
+      "yaw": -1.5707962613320001,
+      "pitch": 2.7755575615628914e-16,
+      "grounded": true,
+      "crossings": 2
+    },
+    "held": "cube",
+    "cargo": [
+      {
+        "id": "cube",
+        "position": [
+          -5.23921012878418,
+          1.0149787664413452,
+          5.976934909820557
+        ],
+        "velocity": [
+          -0.00005716329178540036,
+          -0.011989999562501907,
+          0.00005716329178540036
+        ],
+        "rotation": [
+          -5.456415319571306e-9,
+          -0.70710688829422,
+          -2.492562884981453e-7,
+          0.7071066498756409
+        ],
+        "angularVelocity": [
+          0,
+          0,
+          0
+        ],
+        "held": true,
+        "crossings": 5
+      }
+    ]
+  },
+  "selectedScreens": [
+    {
+      "label": "C4-actual-blocked-body-and-dropped-portal-cargo-before-E",
+      "path": "C4-seam-repair-evidence/005-C4-actual-blocked-body-and-dropped-portal-cargo-before-E.png"
+    },
+    {
+      "label": "C4-actual-E-pullback-returns-remote-cargo-through-portal",
+      "path": "C4-seam-repair-evidence/006-C4-actual-E-pullback-returns-remote-cargo-through-portal.png"
+    },
+    {
+      "label": "C4-body-and-retrieved-cargo-clear-portal-after-jam-recovery",
+      "path": "C4-seam-repair-evidence/007-C4-body-and-retrieved-cargo-clear-portal-after-jam-recovery.png"
+    },
+    {
+      "label": "C4-real-goal-after-drop-seam-regrab-pullback-and-carry",
+      "path": "C4-seam-repair-evidence/010-C4-real-goal-after-drop-seam-regrab-pullback-and-carry.png"
+    }
+  ],
+  "versions": [
+    {
+      "graphics": {
+        "available": true,
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Max, Unspecified Version)",
+        "vendor": "Google Inc. (Apple)",
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+        "attributes": {
+          "alpha": true,
+          "antialias": true,
+          "depth": true,
+          "desynchronized": false,
+          "failIfMajorPerformanceCaveat": false,
+          "powerPreference": "default",
+          "premultipliedAlpha": true,
+          "preserveDrawingBuffer": false,
+          "stencil": false,
+          "xrCompatible": false
+        },
+        "maxTextureSize": 16384,
+        "pixelRatio": 1
+      },
+      "at": "2026-10-28T21:29:02.976Z",
+      "url": "http://localhost:4261/fifty-v5/",
+      "scripts": [
+        {
+          "url": "http://localhost:4261/fifty-v5/assets/main-JsffBW03.js",
+          "sha256": "6118b7babda0b016488965b14826a9d94c1c8a26528b0fda355bf3c624e6c1c1"
+        }
+      ]
+    }
+  ],
+  "models": [
+    {
+      "url": "http://localhost:4261/fifty-v5/models/hero-projector.glb",
+      "status": 200
+    },
+    {
+      "url": "http://localhost:4261/fifty-v5/models/hero-weighted-cargo.glb",
+      "status": 200
+    }
+  ]
+}
