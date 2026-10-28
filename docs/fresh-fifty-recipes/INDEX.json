@@ -1,5 +1,5 @@
 {
-  "scope": "Ready source-only fresh21\u201335 packets. Schema/prefix/hash validation only; no browser, game, compiler, native test or build executed. Existing parent fresh context remains authoritative.",
+  "scope": "Ready source-only fresh21–35 packets. Schema/prefix/hash validation only; no browser, game, compiler, native test or build executed. Existing parent fresh context remains authoritative.",
   "recordedAt": "2026-10-28T17:58:14.304048+00:00",
   "frozenV3Sha256": "6d5d6ab5195bc83aec76f510d23f289f09f76916635ab6ce05ae968b5be1a80b",
   "clientCompatibility": "Root0d3b6c5d (parent actual driver retains its own fail-pause/audio extensions); no client replacement required.",
@@ -41,8 +41,8 @@
       "level": 24,
       "path": "docs/fresh-fifty-recipes/24.jsonl",
       "actions": 49,
-      "sha256": "dc602f2eb058f876569c75182b0804ec14e511c248de6667ae3b901625d6e9ee",
-      "status": "UNEXECUTED; source-only prepared ordinary-input packet"
+      "sha256": "30b6b5057e6c431a57ffde2e16889e60a530d0c7c12f3d5685f60175c9b29c89",
+      "status": "Same-frame guard corrected from actual v5 device state; full standalone packet not replayed and no earned-goal claim."
     },
     {
       "level": 25,
@@ -120,6 +120,15 @@
       "actions": 73,
       "sha256": "a8afaee3175721fe711be5baa9ecb9ca61da3550a5b6425c61cf2ecb310209c1",
       "status": "UNEXECUTED; source-only prepared ordinary-input packet"
+    }
+  ],
+  "corrections": [
+    {
+      "level": 24,
+      "record": "CORRECTION-24-DEVICE-STATE.json",
+      "oldSHA256": "dc602f2eb058f876569c75182b0804ec14e511c248de6667ae3b901625d6e9ee",
+      "newSHA256": "30b6b5057e6c431a57ffde2e16889e60a530d0c7c12f3d5685f60175c9b29c89",
+      "scope": "Public device.active false replaces absent optional signal false; no runtime change or full-packet execution claim."
     }
   ]
 }

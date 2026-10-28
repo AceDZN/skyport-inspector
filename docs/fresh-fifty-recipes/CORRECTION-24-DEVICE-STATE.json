@@ -1,0 +1,27 @@
+{
+  "scope": "QA recipe guard correction only; no game/runtime/native/browser/build action. Actual Parent C24 recovery/goal still pending. Original packet/index retained byte-exact in history/.",
+  "recordedAt": "2026-10-28T23:50:35.603509+00:00",
+  "packet": "24.jsonl",
+  "packetRow": 34,
+  "parentFailedIndex": 1093,
+  "oldSHA256": "dc602f2eb058f876569c75182b0804ec14e511c248de6667ae3b901625d6e9ee",
+  "newSHA256": "30b6b5057e6c431a57ffde2e16889e60a530d0c7c12f3d5685f60175c9b29c89",
+  "actionsUnchanged": 49,
+  "onlyChangedPredicate": {
+    "before": {
+      "path": "world.signals.opening-manual",
+      "equals": false
+    },
+    "after": {
+      "path": "world.devices",
+      "id": "opening-manual",
+      "field": "active",
+      "equals": false
+    }
+  },
+  "allOtherGuardsInputsDurationsAndUntilUnchanged": true,
+  "oldPacket": "history/24-before-v5-device-guard.jsonl",
+  "oldIndex": "history/INDEX-before-v5-c24-device-guard.json",
+  "preparedReceiptSHA256": "44b4660f0eb80d656575e9447d8f733deadf22ca0c9b419f82a3949934ef1150",
+  "runtimeUnchanged": true
+}

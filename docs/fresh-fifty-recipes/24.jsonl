@@ -31,7 +31,7 @@
 {"action":"walk","x":-5,"z":-8.5}
 {"action":"aim","target":[-5,1.515,-20]}
 {"action":"face","direction":[0,0,-1]}
-{"action":"key-when","code":"KeyW","when":[{"path":"world.devices","id":"timed-opening","field":"progress","min":0.999},{"path":"world.signals.opening-clock","equals":true},{"path":"world.pads","id":"timer-pressure","field":"crate","equals":"timer-cube"},{"path":"world.signals.opening-manual","equals":false},{"path":"world.player.position.0","min":-5.36,"max":-4.64},{"path":"world.player.position.1","min":0.765,"max":0.965},{"path":"world.player.position.2","min":-8.86,"max":-8.14},{"path":"world.player.grounded","equals":true}],"until":[{"path":"world.result.goalMatched","equals":true}],"freshArrival":true,"stableMs":160,"waitTimeoutMs":30000,"moveTimeoutMs":6000}
+{"action":"key-when","code":"KeyW","when":[{"path":"world.devices","id":"timed-opening","field":"progress","min":0.999},{"path":"world.signals.opening-clock","equals":true},{"path":"world.pads","id":"timer-pressure","field":"crate","equals":"timer-cube"},{"path":"world.devices","id":"opening-manual","field":"active","equals":false},{"path":"world.player.position.0","min":-5.36,"max":-4.64},{"path":"world.player.position.1","min":0.765,"max":0.965},{"path":"world.player.position.2","min":-8.86,"max":-8.14},{"path":"world.player.grounded","equals":true}],"until":[{"path":"world.result.goalMatched","equals":true}],"freshArrival":true,"stableMs":160,"waitTimeoutMs":30000,"moveTimeoutMs":6000}
 {"action":"assert-range","path":"world.player.position.2","max":-10.55}
 {"action":"assert","path":"world.result.goalMatched","equals":true}
 {"action":"assert","path":"world.result.physicalComplete","equals":true}

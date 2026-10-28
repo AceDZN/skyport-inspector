@@ -1,0 +1,236 @@
+{
+  "scope": "QA-driver correction prepared, not yet executed. Same browser/context/earned1–23 retained, no app/source/body/clock/save writes. The old condition wrongly required an absent optional signal to equalfalse. The actual inactive manual device wasfalse and timed shutter open/close events occurred during the wait. Correct device state guard, then original1094..end. First failure preserved.",
+  "failedIndex": 1093,
+  "gameLevel": 24,
+  "earnedPrefix": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "oldCommand": {
+    "action": "key-when",
+    "code": "KeyW",
+    "when": [
+      {
+        "path": "world.devices",
+        "id": "timed-opening",
+        "field": "progress",
+        "min": 0.999
+      },
+      {
+        "path": "world.signals.opening-clock",
+        "equals": true
+      },
+      {
+        "path": "world.pads",
+        "id": "timer-pressure",
+        "field": "crate",
+        "equals": "timer-cube"
+      },
+      {
+        "path": "world.signals.opening-manual",
+        "equals": false
+      },
+      {
+        "path": "world.player.position.0",
+        "min": -5.36,
+        "max": -4.64
+      },
+      {
+        "path": "world.player.position.1",
+        "min": 0.765,
+        "max": 0.965
+      },
+      {
+        "path": "world.player.position.2",
+        "min": -8.86,
+        "max": -8.14
+      },
+      {
+        "path": "world.player.grounded",
+        "equals": true
+      }
+    ],
+    "until": [
+      {
+        "path": "world.result.goalMatched",
+        "equals": true
+      }
+    ],
+    "freshArrival": true,
+    "stableMs": 160,
+    "waitTimeoutMs": 30000,
+    "moveTimeoutMs": 6000
+  },
+  "fixedCommand": {
+    "action": "key-when",
+    "code": "KeyW",
+    "when": [
+      {
+        "path": "world.devices",
+        "id": "timed-opening",
+        "field": "progress",
+        "min": 0.999
+      },
+      {
+        "path": "world.signals.opening-clock",
+        "equals": true
+      },
+      {
+        "path": "world.pads",
+        "id": "timer-pressure",
+        "field": "crate",
+        "equals": "timer-cube"
+      },
+      {
+        "path": "world.devices",
+        "id": "opening-manual",
+        "field": "active",
+        "equals": false
+      },
+      {
+        "path": "world.player.position.0",
+        "min": -5.36,
+        "max": -4.64
+      },
+      {
+        "path": "world.player.position.1",
+        "min": 0.765,
+        "max": 0.965
+      },
+      {
+        "path": "world.player.position.2",
+        "min": -8.86,
+        "max": -8.14
+      },
+      {
+        "path": "world.player.grounded",
+        "equals": true
+      }
+    ],
+    "until": [
+      {
+        "path": "world.result.goalMatched",
+        "equals": true
+      }
+    ],
+    "freshArrival": true,
+    "stableMs": 160,
+    "waitTimeoutMs": 30000,
+    "moveTimeoutMs": 6000
+  },
+  "actualManualDevice": {
+    "id": "opening-manual",
+    "kind": "switch",
+    "label": "MANUAL",
+    "position": [
+      6,
+      1.3,
+      10.7
+    ],
+    "size": [
+      0.4,
+      0.7,
+      0.3
+    ],
+    "active": false,
+    "progress": 0,
+    "choice": 0,
+    "angle": 0,
+    "powered": null,
+    "blocked": false
+  },
+  "signalKeys": [
+    "timer-pressure",
+    "moving:opening-clock",
+    "moving:opening-manual",
+    "closed:timed-opening",
+    "clear:timed-opening",
+    "safety:timed-opening",
+    "door-safety",
+    "moving:timed-opening",
+    "closed:manual-opening",
+    "clear:manual-opening",
+    "safety:manual-opening",
+    "moving:manual-opening",
+    "opening-clock"
+  ],
+  "recentTimerEvents": [
+    {
+      "type": "timer-close",
+      "time": 66008,
+      "id": "opening-clock"
+    },
+    {
+      "type": "shutter-close",
+      "time": 66008,
+      "id": "timed-opening"
+    },
+    {
+      "type": "timer-open",
+      "time": 72000,
+      "id": "opening-clock"
+    },
+    {
+      "type": "shutter-open",
+      "time": 72000,
+      "id": "timed-opening"
+    },
+    {
+      "type": "timer-close",
+      "time": 78000,
+      "id": "opening-clock"
+    },
+    {
+      "type": "shutter-close",
+      "time": 78000,
+      "id": "timed-opening"
+    },
+    {
+      "type": "timer-open",
+      "time": 84000,
+      "id": "opening-clock"
+    },
+    {
+      "type": "shutter-open",
+      "time": 84000,
+      "id": "timed-opening"
+    },
+    {
+      "type": "timer-close",
+      "time": 90000,
+      "id": "opening-clock"
+    },
+    {
+      "type": "shutter-close",
+      "time": 90000,
+      "id": "timed-opening"
+    }
+  ],
+  "gameErrors": [],
+  "consoleErrors": [],
+  "respawns": 0,
+  "plan": "v5-recovery24-device-state-and-tail.jsonl",
+  "commands": 1829,
+  "sha256": "4d5c4700d0b16b3803105c769bf1b146e7cffb1dd14fce53292d4345bfc181a8"
+}
