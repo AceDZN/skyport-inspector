@@ -1,0 +1,9 @@
+
+> skyport-inspector@1.0.0 build
+> tsc --noEmit && vite build
+
+src/core/levels/references.ts(82,41): error TS2322: Type '"beam-vault"' is not assignable to type 'Family'.
+src/core/levels/references.ts(98,126): error TS2322: Type '{ readonly all: readonly ["screen-light"]; } | { readonly all: readonly ["closed:input-screen"]; readonly not: readonly ["screen-light"]; }' is not assignable to type 'Circuit | undefined'.
+  Type '{ readonly all: readonly ["screen-light"]; }' is not assignable to type 'Circuit'.
+    Types of property 'all' are incompatible.
+      The type 'readonly ["screen-light"]' is 'readonly' and cannot be assigned to the mutable type 'string[]'.

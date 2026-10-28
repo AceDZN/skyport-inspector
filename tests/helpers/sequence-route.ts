@@ -7,12 +7,13 @@ import RAPIER from '@dimforge/rapier3d-compat';
 import {Vector3}from'three';
 import {CoreWorld}from'../../src/core/world';
 import {draftSequenceLevels}from'../../src/core/levels/sequences';
+import type {CoreLevel} from '../../src/core/level';
 import{V,type Input}from'../../src/physics';
 export const idle:Input={forward:0,strafe:0,jump:false},forward:Input={...idle,forward:1};
 export class SequenceRoute{
  readonly w:CoreWorld;readonly events:{type:string;data:Record<string,unknown>}[]=[];readonly checkpoints:any[]=[];readonly ridingFrames=new Map<string,number>();
- constructor(readonly number:number,readonly contrast=false,readonly id='route'){
-  const level=draftSequenceLevels.find(l=>l.number===number);assert.ok(level);this.w=new CoreWorld(number,(type,data)=>this.events.push({type,data:data??{}}),level,contrast);
+ constructor(readonly number:number,readonly contrast=false,readonly id='route',definition?:CoreLevel){
+  const level=definition??draftSequenceLevels.find(l=>l.number===number);assert.ok(level);this.w=new CoreWorld(number,(type,data)=>this.events.push({type,data:data??{}}),level,contrast);
   assert.ok(this.w.player.pos.distanceTo(V(...this.w.blueprint.spawn))<.05);for(const authored of this.w.blueprint.cargo)assert.ok(this.cube(authored.spec.id).pos.distanceTo(V(...authored.position))<.05);this.tick(.5);this.note('actual-authored-spawn');
  }
  step(input=idle){this.w.step(1/120,input);for(const d of this.w.machines.devices.filter(d=>['lift','moving-platform'].includes(d.spec.kind)&&d.moving)){const p=this.w.player,top=d.position.y+d.spec.size[1]/2;if(p.grounded&&Math.abs(p.pos.y-p.half.y-top)<.08&&Math.abs(p.pos.x-d.position.x)<d.spec.size[0]/2&&Math.abs(p.pos.z-d.position.z)<d.spec.size[2]/2)this.ridingFrames.set(d.spec.id,(this.ridingFrames.get(d.spec.id)??0)+1);}}

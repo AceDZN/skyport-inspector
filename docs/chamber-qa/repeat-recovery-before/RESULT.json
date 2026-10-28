@@ -1,0 +1,183 @@
+{
+  "scope": "Unregistered authored-spawn native trajectory/route; no pose/velocity/goal/save/reset injection, no browser claim.",
+  "error": "AssertionError [ERR_ASSERTION]: Real visible recovery E did not reach riding panel {\"player\":{\"position\":[-5.101461410522461,-21.135021209716797,9.997025489807129],\"velocity\":[-0.4191273319842776,0,-0.012039792819344142],\"yaw\":-2.3197937764763927,\"pitch\":1.4807131717182556,\"grounded\":true,\"crossings\":0},\"portals\":[{\"surface\":\"deep-floor\",\"position\":[3,-17.950000000000003,-1.1],\"normal\":[0,1,0]},{\"surface\":\"launch-white\",\"position\":[-7.96,9,-6],\"normal\":[1,0,0]}],\"respawns\":0,\"contacts\":[{\"id\":\"recovery-basin\",\"normal\":{\"x\":0,\"y\":1,\"z\":0},\"witness\":{\"x\":-5.097805023193359,\"y\":-22,\"z\":9.99454116821289},\"applied\":{\"x\":-0.0003537985903676599,\"y\":-0.00011255086428718641,\"z\":-0.000010163167644350324},\"remaining\":{\"x\":-0.003138929372653365,\"y\":-0.0009985602227970958,\"z\":-0.00009016843978315592}}],\"events\":[{\"type\":\"footstep\",\"time\":39.86666666666505},{\"type\":\"footstep\",\"time\":40.29166666666502},{\"type\":\"footstep\",\"time\":40.716666666665},{\"type\":\"footstep\",\"time\":41.141666666664975},{\"type\":\"footstep\",\"time\":41.56666666666495},{\"type\":\"footstep\",\"time\":41.991666666664926},{\"type\":\"footstep\",\"time\":42.4166666666649},{\"type\":\"footstep\",\"time\":42.84166666666488}]}",
+  "sourceStable": true,
+  "checkpoints": [
+    {
+      "stage": "before-real-return-attempt",
+      "attempt": 1,
+      "player": {
+        "position": [
+          4.092238903045654,
+          -21.13491439819336,
+          -7.817014217376709
+        ],
+        "velocity": [
+          -9.52753237559624e-11,
+          0,
+          -2.3129769204718833e-9
+        ],
+        "yaw": 0.041206818493455394,
+        "pitch": 0,
+        "grounded": true,
+        "crossings": 0
+      },
+      "lift": {
+        "id": "recovery-lift",
+        "kind": "lift",
+        "label": "RETURN",
+        "position": [
+          -5,
+          -22.2,
+          10
+        ],
+        "size": [
+          4,
+          0.4,
+          4
+        ],
+        "active": true,
+        "progress": 0,
+        "choice": "BASIN",
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      "respawns": 0
+    },
+    {
+      "stage": "recovered",
+      "player": {
+        "position": [
+          -0.8989647626876831,
+          0.8649987578392029,
+          10.000114440917969
+        ],
+        "velocity": [
+          0.4193000370141563,
+          0,
+          0.00041033260880456114
+        ],
+        "yaw": -1.5717576535224314,
+        "pitch": 0,
+        "grounded": true,
+        "crossings": 0
+      },
+      "lift": {
+        "id": "recovery-lift",
+        "kind": "lift",
+        "label": "RETURN",
+        "position": [
+          -5,
+          -0.2,
+          10
+        ],
+        "size": [
+          4,
+          0.4,
+          4
+        ],
+        "active": true,
+        "progress": 1,
+        "choice": "APPROACH",
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      "respawns": 0
+    },
+    {
+      "stage": "before-real-return-attempt",
+      "attempt": 2,
+      "player": {
+        "position": [
+          4.093338489532471,
+          -21.13491439819336,
+          -7.821317672729492
+        ],
+        "velocity": [
+          -9.425410275264891e-11,
+          0,
+          -2.3130187613708283e-9
+        ],
+        "yaw": 0.04077478188234687,
+        "pitch": 0,
+        "grounded": true,
+        "crossings": 0
+      },
+      "lift": {
+        "id": "recovery-lift",
+        "kind": "lift",
+        "label": "RETURN",
+        "position": [
+          -5,
+          -0.2,
+          10
+        ],
+        "size": [
+          4,
+          0.4,
+          4
+        ],
+        "active": true,
+        "progress": 1,
+        "choice": "APPROACH",
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      "respawns": 0
+    }
+  ],
+  "final": {
+    "player": {
+      "position": [
+        -5.101461410522461,
+        -21.135021209716797,
+        9.997025489807129
+      ],
+      "velocity": [
+        -0.4191273319842776,
+        0,
+        -0.012039792819344142
+      ],
+      "yaw": -2.3197937764763927,
+      "pitch": 1.4807131717182556,
+      "grounded": true,
+      "crossings": 0
+    },
+    "lift": {
+      "id": "recovery-lift",
+      "kind": "lift",
+      "label": "RETURN",
+      "position": [
+        -5,
+        -0.2,
+        10
+      ],
+      "size": [
+        4,
+        0.4,
+        4
+      ],
+      "active": true,
+      "progress": 1,
+      "choice": "APPROACH",
+      "angle": 0,
+      "powered": null,
+      "blocked": false
+    },
+    "actualControlPoint": [
+      -3.7,
+      0.7,
+      11.3
+    ],
+    "eyeToControlDistance": 21.271270773405774,
+    "allowedControlDistance": 2.8,
+    "respawns": 0
+  },
+  "raw": {
+    "file": "reports/rift-repeat-recovery/native-run/16-repeat-return.json",
+    "sha256": "924efabff8ec3115aadadabd5d70f88e5ba54e1cd7c7fab0da80f9395da4c7a9"
+  }
+}

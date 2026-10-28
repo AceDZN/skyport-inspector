@@ -1,0 +1,14 @@
+{
+  "original": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/normal-input.mjs",
+  "originalHash": "7f3eef689309d257a977376ff75b951c951f45c9b79e090707306d169ffa7b5a",
+  "modifiedHash": "8f202bb918987b6b486305b4f24301390b31813ddb40752646c171f11f1ec87f",
+  "changes": [
+    "Resolve installed Playwright from the builder package without changing it",
+    "Keep parent QA recordings under this report",
+    "Clarify continuation status text",
+    "Add wait-device using public snapshots and real wall-clock polling only; optional fresh-arrival observation, no device/body/clock/goal writes",
+    "Add key-until: hold ordinary keyboard keys until a public snapshot condition, then release in finally, including on timeout. No physics or pose assignments.",
+    "Record existing WebGL context renderer/vendor/capabilities as read-only version metadata after public loading finishes. No context attributes or renderer/game settings are changed."
+  ],
+  "scope": "Actual controls remain mouse/keyboard UI inputs; ordinary earned storage import is explicitly declared. Not game code or a private-state solver."
+}

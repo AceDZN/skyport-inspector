@@ -1,0 +1,597 @@
+{
+  "status": "Source-only geometry/material/light probe, not pixel or route evidence",
+  "rooms": [
+    {
+      "level": 6,
+      "family": "l-gallery",
+      "ribbedCells": 277,
+      "quietCells": 381,
+      "lights": 6,
+      "exitWashes": [
+        {
+          "device": "north-door",
+          "mount": [
+            -4,
+            6,
+            -11.535
+          ],
+          "normal": [
+            0,
+            0,
+            1
+          ],
+          "floorY": 2.8,
+          "target": [
+            -4,
+            2.92,
+            -10.87
+          ],
+          "intensity": 62,
+          "range": 8
+        },
+        {
+          "device": "south-door",
+          "mount": [
+            4,
+            3.2,
+            11.535
+          ],
+          "normal": [
+            0,
+            0,
+            -1
+          ],
+          "floorY": 0,
+          "target": [
+            4,
+            0.12,
+            10.87
+          ],
+          "intensity": 62,
+          "range": 8
+        }
+      ],
+      "landingLights": []
+    },
+    {
+      "level": 8,
+      "family": "lift-shaft",
+      "ribbedCells": 418,
+      "quietCells": 790,
+      "lights": 5,
+      "exitWashes": [
+        {
+          "device": "upper-door",
+          "mount": [
+            -5,
+            7.4,
+            -9.535
+          ],
+          "normal": [
+            0,
+            0,
+            1
+          ],
+          "floorY": 4.2,
+          "target": [
+            -5,
+            4.32,
+            -8.87
+          ],
+          "intensity": 62,
+          "range": 8
+        },
+        {
+          "device": "lower-door",
+          "mount": [
+            8.535,
+            3.2,
+            7
+          ],
+          "normal": [
+            -1,
+            0,
+            0
+          ],
+          "floorY": 0,
+          "target": [
+            7.869999999999999,
+            0.12,
+            7
+          ],
+          "intensity": 62,
+          "range": 8
+        }
+      ],
+      "landingLights": []
+    },
+    {
+      "level": 10,
+      "family": "lift-shaft",
+      "ribbedCells": 574,
+      "quietCells": 1038,
+      "lights": 6,
+      "exitWashes": [
+        {
+          "device": "upper-door",
+          "mount": [
+            -11.535,
+            7.4,
+            -5
+          ],
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "floorY": 4.2,
+          "target": [
+            -10.87,
+            4.32,
+            -5
+          ],
+          "intensity": 62,
+          "range": 8
+        },
+        {
+          "device": "side-door",
+          "mount": [
+            11.535,
+            7.4,
+            0
+          ],
+          "normal": [
+            -1,
+            0,
+            0
+          ],
+          "floorY": 4.2,
+          "target": [
+            10.87,
+            4.32,
+            0
+          ],
+          "intensity": 62,
+          "range": 8
+        }
+      ],
+      "landingLights": []
+    },
+    {
+      "level": 13,
+      "family": "conveyor-bay",
+      "ribbedCells": 618,
+      "quietCells": 281,
+      "lights": 2,
+      "exitWashes": [
+        {
+          "device": "west-door",
+          "mount": [
+            -10.535,
+            3.2,
+            8
+          ],
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "floorY": 0,
+          "target": [
+            -9.87,
+            0.12,
+            8
+          ],
+          "intensity": 62,
+          "range": 8
+        },
+        {
+          "device": "east-door",
+          "mount": [
+            10.535,
+            3.2,
+            8
+          ],
+          "normal": [
+            -1,
+            0,
+            0
+          ],
+          "floorY": 0,
+          "target": [
+            9.87,
+            0.12,
+            8
+          ],
+          "intensity": 62,
+          "range": 8
+        }
+      ],
+      "landingLights": []
+    },
+    {
+      "level": 15,
+      "family": "conveyor-bay",
+      "ribbedCells": 882,
+      "quietCells": 492,
+      "lights": 6,
+      "exitWashes": [
+        {
+          "device": "east-door",
+          "mount": [
+            10.535,
+            3.2,
+            -11
+          ],
+          "normal": [
+            -1,
+            0,
+            0
+          ],
+          "floorY": 0,
+          "target": [
+            9.87,
+            0.12,
+            -11
+          ],
+          "intensity": 62,
+          "range": 8
+        },
+        {
+          "device": "west-door",
+          "mount": [
+            -10.535,
+            3.2,
+            -11
+          ],
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "floorY": 0,
+          "target": [
+            -9.87,
+            0.12,
+            -11
+          ],
+          "intensity": 62,
+          "range": 8
+        }
+      ],
+      "landingLights": []
+    },
+    {
+      "level": 16,
+      "family": "launch-spire",
+      "ribbedCells": 905,
+      "quietCells": 1759,
+      "lights": 4,
+      "exitWashes": [],
+      "landingLights": [
+        {
+          "floor": "higher-gallery",
+          "mount": "twin-shaft-ceiling",
+          "physicalMountPoint": [
+            18.75,
+            13,
+            -6
+          ],
+          "mountPoint": [
+            18.75,
+            12.579999811947346,
+            -6
+          ],
+          "target": [
+            18.75,
+            5,
+            -6
+          ],
+          "position": [
+            18.75,
+            12.419999811947346,
+            -6
+          ],
+          "intensity": 143.6409928728045,
+          "angle": 0.6012788416894741
+        },
+        {
+          "floor": "higher-gallery",
+          "mount": "twin-shaft-ceiling",
+          "physicalMountPoint": [
+            26.25,
+            13,
+            -6
+          ],
+          "mountPoint": [
+            26.25,
+            12.579999811947346,
+            -6
+          ],
+          "target": [
+            26.25,
+            5,
+            -6
+          ],
+          "position": [
+            26.25,
+            12.419999811947346,
+            -6
+          ],
+          "intensity": 143.6409928728045,
+          "angle": 0.6012788416894741
+        },
+        {
+          "floor": "lower-gallery",
+          "mount": "twin-shaft-ceiling",
+          "physicalMountPoint": [
+            12,
+            13,
+            -6
+          ],
+          "mountPoint": [
+            12,
+            12.579999811947346,
+            -6
+          ],
+          "target": [
+            12,
+            -8,
+            -6
+          ],
+          "position": [
+            12,
+            12.419999811947346,
+            -6
+          ],
+          "intensity": 1058.840980649382,
+          "angle": 0.24749237115439515
+        },
+        {
+          "floor": "lower-gallery",
+          "mount": "higher-gallery",
+          "physicalMountPoint": [
+            24,
+            4.4,
+            -6
+          ],
+          "mountPoint": [
+            24,
+            4.399999988079071,
+            -6
+          ],
+          "target": [
+            24,
+            -8,
+            -6
+          ],
+          "position": [
+            24,
+            4.239999988079071,
+            -6
+          ],
+          "intensity": 384.3999992609024,
+          "angle": 0.3970794455678409
+        }
+      ]
+    },
+    {
+      "level": 17,
+      "family": "launch-spire",
+      "ribbedCells": 1007,
+      "quietCells": 1862,
+      "lights": 4,
+      "exitWashes": [],
+      "landingLights": [
+        {
+          "floor": "near-gallery",
+          "mount": "twin-shaft-ceiling",
+          "physicalMountPoint": [
+            16,
+            11.5,
+            -6
+          ],
+          "mountPoint": [
+            16,
+            11.079999811947346,
+            -6
+          ],
+          "target": [
+            16,
+            -4,
+            -6
+          ],
+          "position": [
+            16,
+            10.919999811947346,
+            -6
+          ],
+          "intensity": 568.5159858208299,
+          "angle": 0.2530756551875033
+        },
+        {
+          "floor": "near-gallery",
+          "mount": "twin-shaft-ceiling",
+          "physicalMountPoint": [
+            32,
+            11.5,
+            -6
+          ],
+          "mountPoint": [
+            32,
+            11.079999811947346,
+            -6
+          ],
+          "target": [
+            32,
+            -4,
+            -6
+          ],
+          "position": [
+            32,
+            10.919999811947346,
+            -6
+          ],
+          "intensity": 568.5159858208299,
+          "angle": 0.2530756551875033
+        },
+        {
+          "floor": "far-gallery",
+          "mount": "twin-shaft-ceiling",
+          "physicalMountPoint": [
+            28,
+            11.5,
+            6
+          ],
+          "mountPoint": [
+            28,
+            11.079999811947346,
+            6
+          ],
+          "target": [
+            28,
+            -4,
+            6
+          ],
+          "position": [
+            28,
+            10.919999811947346,
+            6
+          ],
+          "intensity": 568.5159858208299,
+          "angle": 0.34972906564010897
+        },
+        {
+          "floor": "far-gallery",
+          "mount": "twin-shaft-ceiling",
+          "physicalMountPoint": [
+            36,
+            11.5,
+            6
+          ],
+          "mountPoint": [
+            36,
+            11.079999811947346,
+            6
+          ],
+          "target": [
+            36,
+            -4,
+            6
+          ],
+          "position": [
+            36,
+            10.919999811947346,
+            6
+          ],
+          "intensity": 568.5159858208299,
+          "angle": 0.34972906564010897
+        }
+      ]
+    },
+    {
+      "level": 18,
+      "family": "bridge-rotunda",
+      "ribbedCells": 720,
+      "quietCells": 826,
+      "lights": 5,
+      "exitWashes": [
+        {
+          "device": "inspection-door",
+          "mount": [
+            -6,
+            3.2,
+            -19.535
+          ],
+          "normal": [
+            0,
+            0,
+            1
+          ],
+          "floorY": 0,
+          "target": [
+            -6,
+            0.12,
+            -18.87
+          ],
+          "intensity": 62,
+          "range": 8
+        },
+        {
+          "device": "service-door",
+          "mount": [
+            6,
+            3.2,
+            -19.535
+          ],
+          "normal": [
+            0,
+            0,
+            1
+          ],
+          "floorY": 0,
+          "target": [
+            6,
+            0.12,
+            -18.87
+          ],
+          "intensity": 62,
+          "range": 8
+        }
+      ],
+      "landingLights": []
+    },
+    {
+      "level": 20,
+      "family": "relay-garden",
+      "ribbedCells": 253,
+      "quietCells": 466,
+      "lights": 5,
+      "exitWashes": [
+        {
+          "device": "lower-door",
+          "mount": [
+            -10.535,
+            3.2,
+            -10
+          ],
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "floorY": 0,
+          "target": [
+            -9.87,
+            0.12,
+            -10
+          ],
+          "intensity": 62,
+          "range": 8
+        },
+        {
+          "device": "upper-door",
+          "mount": [
+            10.535,
+            6.6000000000000005,
+            -10
+          ],
+          "normal": [
+            -1,
+            0,
+            0
+          ],
+          "floorY": 3.4000000000000004,
+          "target": [
+            9.87,
+            3.5200000000000005,
+            -10
+          ],
+          "intensity": 62,
+          "range": 8
+        }
+      ],
+      "landingLights": []
+    }
+  ]
+}

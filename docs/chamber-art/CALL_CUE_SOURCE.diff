@@ -1,0 +1,32 @@
+--- finish-v3-de0554/chamber-scene.ts
++++ source-call-cue/chamber-scene.ts
+@@ -336,6 +336,11 @@
+   for(const art of this.nativeMachines){const d=art.state,s=d.spec;art.body.position.copy(d.position);let text=d.on?'ON':'OFF',detail=s.kind==='switch'?'TOGGLE':'';
+    if(s.kind==='switch'&&art.lever)art.lever.rotation.x=T.MathUtils.damp(art.lever.rotation.x,d.on?-.48:.48,16,Math.max(0,dt));
+    if(s.kind==='lift'){const stops=s.stops??[{label:'lower',position:s.position},...(s.target?[{label:s.targetLabel??'upper',position:s.target}]:[])],at=stops.find(stop=>d.position.distanceTo(V(...stop.position))<.03),stop=stops[d.on?d.choice:0]?.label??s.states?.[d.on?d.choice:0]??(d.on?s.targetLabel:'LOWER')??'';text=at?'AT '+at.label.toUpperCase():d.moving?(s.automatic?'MOVING':'TO '+stop.toUpperCase()):'PAUSED';if(s.automatic)detail=d.on?'AUTOMATIC':'NO POWER';else{const next=(d.choice+1)%Math.max(2,s.stops?.length??s.states?.length??2),nextStop=s.stops?.[next],name=nextStop?.label??s.states?.[next];if(name)detail=this.core.machines.circuit(nextStop?.guard)?'NEXT '+name.toUpperCase():name.toUpperCase()+' · LOCKED';}}
++   if(s.kind==='switch'&&s.calls){
++    const target=this.core.machines.devices.find(device=>device.spec.id===s.calls!.device&&device.spec.kind==='lift'),stop=target?.spec.stops?.[s.calls.stop];
++    if(target&&stop){const at=!target.moving&&target.position.distanceTo(V(...stop.position))<.03; text=(at?'AT ':'CALL ')+stop.label.toUpperCase();detail=at?'READY':target.choice===s.calls.stop?(target.moving?'RETURNING':'WAITING'):'PRESS E';}
++    else{text='UNLINKED';detail='NO LIFT';}
++   }
+    if(s.kind==='moving-platform')text=d.moving?'MOVING':d.on?'DOCKED':'STOPPED';
+    if(s.kind==='conveyor'&&art.belt){const reverse=!!s.controls&&this.core.machines.flag(s.controls);if(reverse!==art.belt.reversed)this.paintBelt(art.belt,reverse);const actual=art.belt.direction.clone().multiplyScalar(reverse?-1:1),elapsed=Math.max(0,this.core.time-art.belt.lastTime);art.belt.lastTime=this.core.time;if(d.on){art.belt.texture.offset.x=(art.belt.texture.offset.x-actual.x*(s.speed??1.7)*elapsed)%1;art.belt.texture.offset.y=(art.belt.texture.offset.y+actual.z*(s.speed??1.7)*elapsed)%1;for(const roller of art.belt.rollers)roller.rotateY((actual.x?-actual.x:actual.z)*(s.speed??1.7)*elapsed/art.belt.radius);}text=d.on?'RUNNING':'STOPPED';detail=Math.abs(actual.x)>.5?(actual.x>0?'EAST':'WEST'):(actual.z>0?'SOUTH':'NORTH');}
+    if(s.kind==='timer'){const enabled=this.core.machines.circuit(s.circuit);art.lamp.color.set(enabled?(d.on?0x9ddce0:0xd9b26b):0x39484a);art.lamp.emissive.set(enabled?(d.on?0x45b6c7:0xaf7224):0);art.lamp.emissiveIntensity=enabled?.8:0;this.paintTimer(art.display,d);continue;}
+@@ -444,7 +449,7 @@
+   const geometry=this.geo(new T.BufferGeometry());geometry.setAttribute('position',new T.BufferAttribute(new Float32Array(64*9*3),3).setUsage(T.DynamicDrawUsage));geometry.setAttribute('color',new T.BufferAttribute(new Float32Array(64*9*4),4).setUsage(T.DynamicDrawUsage));geometry.setDrawRange(0,0);
+   const patch=new T.Mesh(geometry,this.material(new T.MeshBasicMaterial({color:0x20272b,vertexColors:true,transparent:true,opacity:0,depthWrite:false,toneMapped:false,side:T.DoubleSide,polygonOffset:true,polygonOffsetFactor:-1,polygonOffsetUnits:-1})));this.root.add(patch);patch.name='held-cargo-support-patch';patch.castShadow=patch.receiveShadow=false;patch.frustumCulled=false;patch.renderOrder=1;patch.visible=false;
+   const edges=this.geo(new T.BufferGeometry());edges.setAttribute('position',new T.BufferAttribute(new Float32Array(2048*3),3).setUsage(T.DynamicDrawUsage));edges.setDrawRange(0,0);
+-  const outline=new T.LineSegments(edges,this.material(new T.LineBasicMaterial({color:0xaeb6b6,transparent:true,opacity:0,depthWrite:false,toneMapped:false})));outline.name='held-cargo-support-outline';outline.frustumCulled=false;outline.renderOrder=2;outline.visible=false;this.root.add(outline);
++  const outline=new T.LineSegments(edges,this.material(new T.LineBasicMaterial({color:0xc8ceca,transparent:true,opacity:0,depthWrite:false,toneMapped:false})));outline.name='held-cargo-support-outline';outline.frustumCulled=false;outline.renderOrder=2;outline.visible=false;this.root.add(outline);
+   this.heldFootprintArt={patch,outline,opacity:0,key:'',centre:V()};
+  }
+  private updateHeldFootprint(dt:number){
+@@ -462,7 +467,7 @@
+    const a=hit.polygon[i],b=hit.polygon[(i+1)%hit.polygon.length];vertex(art.centre,false,1);vertex(a,true,.65);vertex(b,true,.65);vertex(a,true,.65);vertex(a,false,0);vertex(b,false,0);vertex(a,true,.65);vertex(b,false,0);vertex(b,true,.65);
+    const length=a.distanceTo(b);for(let start=.025;start<length&&edgeCount+2<=edges.count;start+=.17){for(const distance of[start,Math.min(length,start+.10)]){const t=distance/length;edges.setXYZ(edgeCount++,a.x+(b.x-a.x)*t+normal.x*.007,a.y+(b.y-a.y)*t+normal.y*.007,a.z+(b.z-a.z)*t+normal.z*.007);}}
+   }
+-  positions.needsUpdate=colors.needsUpdate=edges.needsUpdate=true;art.patch.geometry.setDrawRange(0,count);art.outline.geometry.setDrawRange(0,edgeCount);art.patch.material.opacity=.20*art.opacity;art.outline.material.opacity=.36*art.opacity;
++  positions.needsUpdate=colors.needsUpdate=edges.needsUpdate=true;art.patch.geometry.setDrawRange(0,count);art.outline.geometry.setDrawRange(0,edgeCount);art.patch.material.opacity=.26*art.opacity;art.outline.material.opacity=.58*art.opacity;
+  }
+  override build(){
+   this.portalRenderer?.dispose();this.portalRenderer=undefined;

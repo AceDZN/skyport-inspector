@@ -1,0 +1,43 @@
+✖ recovery 16 second miss can call the parked deck and ride again without reset (313.236ms)
+✖ recovery 17 second miss can call the parked deck and ride again without reset (177.78825ms)
+✔ call station respects the target stop guard and selection never teleports its lift (0.304167ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 1
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1153.141917
+
+✖ failing tests:
+
+test at tests/core-recovery-call.test.ts:13:29
+✖ recovery 16 second miss can call the parked deck and ride again without reset (313.236ms)
+  AssertionError [ERR_ASSERTION]: Call teleports the deck instead of actual motor travel
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-recovery-call.test.ts:20:111)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/core-recovery-call.test.ts:13:29
+✖ recovery 17 second miss can call the parked deck and ride again without reset (177.78825ms)
+  AssertionError [ERR_ASSERTION]: Call teleports the deck instead of actual motor travel
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-recovery-call.test.ts:20:111)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

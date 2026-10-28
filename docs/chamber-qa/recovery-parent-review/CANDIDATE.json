@@ -1,0 +1,101 @@
+{
+  "createdAt": "2026-10-28T01:45:19.408216+00:00",
+  "candidate": "twenty-v3-call-cue",
+  "url": "http://localhost:4261/",
+  "registeredCandidate": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "status": "Frozen for bounded actual visual/call review; not accepted from source or native tests. Exactly50 remains open.",
+  "scripts": [
+    {
+      "file": "dist/assets/main-BqX4M6WM.js",
+      "sha256": "aabfe1edb6d14912d32c27ec4af35f9057ff905c6d7672713e3a7c43437218b0"
+    },
+    {
+      "file": "dist/assets/audio-CBQImJPh.js",
+      "sha256": "5e6dab1738c0f5140ed676a3ce97b39805c3acb02794f8f9bf8888110719c9ed"
+    }
+  ],
+  "sourceHashes": {
+    "src/audio.ts": "9a8240ba7b139276b6ef5411587a677dc13021ef89531d31190e12bb85b6a158",
+    "src/campaign-blueprint.ts": "09d56b648ca5ba4992b3f744baed7b894dd3c916725e0e68f8ef13ab398233c4",
+    "src/campaign-main.ts": "181deabd7e3af1bd6600d7a3d18db4c6d84bf6277f47bf9d84ce94ded179fa67",
+    "src/campaign-scene.ts": "bf9d5c85fd6cd06c622717abd9803d97f3f2e23bedb75b08c58b2566f1925383",
+    "src/campaign-types.ts": "7580857cd708ccd1e2fb511472c070a2a43b8e8a16413cae74e533564cadf602",
+    "src/campaign-world.ts": "01c64cf184ddc934bdfe4d626e51858b0ada72b8d28c5bf7d640fa23267b3484",
+    "src/chamber-scene.ts": "e9dca35ac66545b19e7e86494411a6c01a015fa13ad68b554df38d9677bc8da8",
+    "src/content.ts": "99b554a74eed2936beb7ebba4224aaf80c8e0272b0612d1a110deb29d2d83ce6",
+    "src/core/chambers.ts": "490bd904cdfd51f254a215f4b0f3965de9fde26e6c06744b92f609f2df8108fb",
+    "src/core/fixed-step.ts": "d505bba0e7ffe0a9471db7a45cd99d1bd4b7b7de2742c1901343d7c168ce29c9",
+    "src/core/held-footprint.ts": "8a3e251338eae13503ee54601bd86322e6e8a9f92c50c7c9e28ea2fb03afb0ef",
+    "src/core/level-kit.ts": "4f7b4c12e2816a838cb2653943e2a44fa3bed1f9272b13a34d795e325cbbf694",
+    "src/core/level.ts": "f25bc3ec6d3e148a684f7a1779a365869153db994c28ce7065a4920cbf73dd61",
+    "src/core/levels/comparisons-english.ts": "798c3bde950ad937c10839e7235254af96a3e16527c56d9432eea94af421cadb",
+    "src/core/levels/comparisons.ts": "90fe73e68d60f6fab0a11f65df9d1b1a4dbc6c40817f21c75ff376c58b6d4edd",
+    "src/core/levels/early-english.ts": "61740c410a53b1b2affa34e8031ef05fec2c7ebf8b831abc728e3d7c9bb1b609",
+    "src/core/levels/early.ts": "85fbe5b5357d8b3b43a9c45adccd815e297a0446960580f43cb2b8fb17159b2b",
+    "src/core/levels/events-english.ts": "17e56e3ba32955d1243f9591c5c2d7e33b4528310e0e6168813e0a9b2093cdf2",
+    "src/core/levels/events.ts": "cd8e0adec410b7ab5b73a393cab9901ac2e8f40c440d7681d60760aaf3822e66",
+    "src/core/levels/index.ts": "d9f60648bd0d5e51d0067407e158add7a485142eec6cc6aa93ef11214bc4cbc0",
+    "src/core/levels/optics.ts": "b5cfe4a7dd850d2418920f7499993d82dfd502d5e549d38a13864c2510744f2e",
+    "src/core/levels/passive-english.ts": "4ef55562633eb7219aada787fa49b9a252adad7db8928d7b95ee86c8a7fd90bd",
+    "src/core/levels/passive.ts": "1341f6d835c7139c3c2dafcd2aeb3b3cca50bb9dd3aaf1572eca929559628c82",
+    "src/core/levels/permissions-english.ts": "479fc2a5f7a6129470b15ed8c14485327b5e9183f20c524c98955fe4f7541496",
+    "src/core/levels/permissions.ts": "d998d5f000106395562fe7bfce9291f97fbb40abcf0caad29c379e7feb138520",
+    "src/core/levels/references-english.ts": "76bb7425708a8d4be1f52828ea0d110f4436507ae7f088552c784b6168849f55",
+    "src/core/levels/references.ts": "ad5c85d491f6d117961c21224bf1981fb84d2b76d51edc28b05d76b9be68654d",
+    "src/core/levels/sequences.ts": "3cddec295a0b564f9eea66f51f1bd8062e94df3227ead36c33ea57649dc747a1",
+    "src/core/main.ts": "bcc734d1b642e8a49b8482d3538590995d82d52198de4ca57fb2992db3f2e7e7",
+    "src/core/portal-beam.ts": "b8ad12db0dc3e98fbc7e9691106d3bc2a42b24344cafb490932cefdb808f83a7",
+    "src/core/portal-renderer.ts": "514662c88f9dd625246650b2a07f6d30c55db1cf22f5e47f5cb1b35324d6effb",
+    "src/core/world.ts": "c5ebb23832591c9ac03485e981b3855b03d7c87c16cc909d970bd261df8417bc",
+    "src/machinery-visuals.ts": "8e8c68c143c82e7497d6491b4bcc6088edd4af81274cf4d63fae77564252c614",
+    "src/main.ts": "fd7550262108608d12d84012326d9c2dd1fa0c9c25ad038363ccb894860a7f10",
+    "src/physics.ts": "a6dadd039ea5ef703681ab5276cb4c14f48c72bebb7d34d86013f35b4bf870b4",
+    "src/progression.ts": "badb48570138148749ba7cf6a8829caa743fcaa46204256ba32e24eadcca9221",
+    "src/scene.ts": "e9e3d56a2f9ecef576fe289b9b2a70be38706121c14569870092e01f996767c7",
+    "src/systems.ts": "b53edc09e8fd038b506b4504443ca24073e2d02be8ae807d56000354b30b7716"
+  },
+  "entryHash": "505966f009bbbcc636fdde7161dbd60c0cac1a38ac3170c147b65f18a5275c4e",
+  "archive": "work/frozen-builds/main-BqX4M6WM",
+  "changes": [
+    "Art V3 family finish + neutral cue contrast and real call target caption, Scene e9dca35a",
+    "Fixed basin CALL RETURN for16/17 and4m/s recovery-only manual speed; ordinary1.2 default preserved",
+    "C8 FREIGHT controlFacing west (-X), renderer-only retained Art metadata change",
+    "Original SVGfavicon linked. Historical headed404 cause is unverified. Next diagnostics must record failed URLs and console locations."
+  ],
+  "nativeRecoveryEvidence": "recovery-call-fast.txt4/4; real two miss\u2192call\u2192second ridden return in each16/17,5.5s trips,0reset; independent actual browser pending.",
+  "sourceOnlyLater": "Unregistered21\u201335 authoring source is archived for source identity, not registered or playable in this artifact.",
+  "affectedIntegration": {
+    "file": "docs/chamber-qa/twenty-v3-integration.txt",
+    "result": "242/242 pass; 30.72s; no browser/earned progress",
+    "included": "core foundations, contact, optical, controller, machinery, save, sequence and repeated-call checks; draft21+ route suites excluded",
+    "runtimeSourceMatch": {
+      "src/core/world.ts": true,
+      "src/core/main.ts": true,
+      "src/systems.ts": true,
+      "src/core/levels/comparisons.ts": true,
+      "src/core/levels/permissions.ts": true,
+      "src/chamber-scene.ts": true
+    }
+  }
+}

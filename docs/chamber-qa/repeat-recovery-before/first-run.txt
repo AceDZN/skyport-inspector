@@ -1,0 +1,29 @@
+✖ C16 repeated ordinary missed-aperture recovery can recall RETURN from the basin twice (243.881209ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1088.782
+
+✖ failing tests:
+
+test at reports/rift-repeat-recovery/repeat-return.test.ts:69:1
+✖ C16 repeated ordinary missed-aperture recovery can recall RETURN from the basin twice (243.881209ms)
+  AssertionError [ERR_ASSERTION]: Real visible recovery E did not reach riding panel {"player":{"position":[-5.101461410522461,-21.135021209716797,9.997025489807129],"velocity":[-0.4191273319842776,0,-0.012039792819344142],"yaw":-2.3197937764763927,"pitch":1.4807131717182556,"grounded":true,"crossings":0},"portals":[{"surface":"deep-floor","position":[3,-17.950000000000003,-1.1],"normal":[0,1,0]},{"surface":"launch-white","position":[-7.96,9,-6],"normal":[1,0,0]}],"respawns":0,"contacts":[{"id":"recovery-basin","normal":{"x":0,"y":1,"z":0},"witness":{"x":-5.097805023193359,"y":-22,"z":9.99454116821289},"applied":{"x":-0.0003537985903676599,"y":-0.00011255086428718641,"z":-0.000010163167644350324},"remaining":{"x":-0.003138929372653365,"y":-0.0009985602227970958,"z":-0.00009016843978315592}}],"events":[{"type":"footstep","time":39.86666666666505},{"type":"footstep","time":40.29166666666502},{"type":"footstep","time":40.716666666665},{"type":"footstep","time":41.141666666664975},{"type":"footstep","time":41.56666666666495},{"type":"footstep","time":41.991666666664926},{"type":"footstep","time":42.4166666666649},{"type":"footstep","time":42.84166666666488}]}
+      at Route.recover (/Users/acedzn/idea-plotter/reports/rift-repeat-recovery/repeat-return.test.ts:63:198)
+      at <anonymous> (/Users/acedzn/idea-plotter/reports/rift-repeat-recovery/repeat-return.test.ts:77:5)
+      at run (/Users/acedzn/idea-plotter/reports/rift-repeat-recovery/repeat-return.test.ts:66:144)
+      at TestContext.<anonymous> (/Users/acedzn/idea-plotter/reports/rift-repeat-recovery/repeat-return.test.ts:69:98)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

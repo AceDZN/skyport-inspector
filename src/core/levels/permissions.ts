@@ -162,7 +162,7 @@ function upperFreight(){
  b.box('upper-receiving-gallery',[0,2.1,-7.5],[18,4.2,5],'floor');
  b.floor('upper-landing-arm',-2,2,-5,-2,4.2);
  for(const x of [-2.7,2.7])b.box('freight-guide-'+x,[x,4.5,-.6],[.3,9,.4]);
- b.device({id:'freight-lift',kind:'lift',label:'FREIGHT',position:[0,-.15,0],size:[4,.3,4],target:[0,4.05,0],stops:[{label:'lower',position:[0,-.15,0]},{label:'upper',position:[0,4.05,0]}],controlOffset:[1.3,.9,1.3],controlFacing:[0,0,1]});
+ b.device({id:'freight-lift',kind:'lift',label:'FREIGHT',position:[0,-.15,0],size:[4,.3,4],target:[0,4.05,0],stops:[{label:'lower',position:[0,-.15,0]},{label:'upper',position:[0,4.05,0]}],controlOffset:[1.3,.9,1.3],controlFacing:[-1,0,0]});
  b.button('lower-button',[-5,.14,3]);b.button('upper-button',[5,4.34,-7]);b.cube('cube',[-5,.55,7]);
  b.device({id:'upper-door',kind:'shutter',label:'UPPER',position:[-5,5.7,-10.12],size:[2.8,3,.3],target:[-5,9.2,-10.12],direction:[0,0,1],circuit:{all:['upper-button']}});
  b.device({id:'lower-door',kind:'shutter',label:'LOWER',position:[9.12,1.5,7],size:[.3,3,2.8],target:[9.12,5,7],direction:[-1,0,0],circuit:{all:['lower-button']}});
