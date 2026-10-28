@@ -1,5 +1,11 @@
 # Rift Runner curriculum and action evidence
 
+The active numbered50-room Rapier campaign is documented in [current curriculum scope](docs/core-levels/CURRICULUM_SCOPE.md), with exact per-entry sources in `src/core/levels/`. It has no grade gate. Selected reading practice and source provenance are distinct from browser completion and learning mastery; final fresh-campaign acceptance remains in progress.
+
+## Historical nine-room campaign
+
+The `g7/g8/g9` table and rubric below describe an earlier replacement and are preserved as source history. They do not describe current room numbers1–50 or establish current curriculum coverage.
+
 Active Portal-style replacement,27 October2026. The nine-room pack was authored only after an independently played first-room portal/carry/pad/bridge/exit/fall/retry proof. Historical ticket-desk fixtures and evidence-pair rubrics do not count as replacement coverage.
 
 All scenarios are original game missions grounded in saved Workbook content. Exact additional modules were discovered through list_curriculum_filters and fetched/read through get_curriculum_content before fixture authoring; those snapshots are in docs/rift-qa/curriculum. Existing mixed-tense, practical-source, current-status and reported-speech snapshots remain in docs/curriculum.

@@ -1,0 +1,31 @@
+--- work/art/source-snapshots/chamber-scene-before-C43-finish-45805a6c.ts
++++ src/chamber-scene.ts
+@@ -206,11 +206,17 @@
+    this.staticPart([p.x,p.y-.26,p.z],[3.8,.22,1.1],f.aluminum,undefined,true);this.staticPart([p.x,p.y-.375,p.z],[3.66,.035,.98],f.light);
+   }
+  }
++ private finishArchiveFloor(mesh:T.Mesh<T.BufferGeometry,T.Material>){
++  const g=mesh.geometry,index=g.getIndex()!,groups=g.groups.map(group=>({...group})),indices:number[]=[];g.clearGroups();
++  // Reuse every original triangle/vertex/UV: only the two named C43 slabs need a distinct service underside.
++  for(const[materialIndex,faces]of[[0,[2]],[1,[0,1,4,5]],[2,[3]]]as const){const start=indices.length;for(const group of groups)if(faces.some(face=>face===group.materialIndex))for(let i=group.start;i<group.start+group.count;i++)indices.push(index.getX(i));g.addGroup(start,indices.length-start,materialIndex);}
++  g.setIndex(indices);(mesh as T.Mesh<T.BufferGeometry,T.Material|T.Material[]>).material=[this.finishes.floor,this.finishes.graphite,this.finishes.panelQuiet];
++ }
+  private architecture(){
+   const f=this.finishes,b=this.core.blueprint,{height,halfWidth:half,style}=this.core.level.architecture,freightSteps:{mesh:T.Mesh;min:T.Vector3;max:T.Vector3;id:string}[]=[];
+   for(const s of this.core.solids){const size=s.max.clone().sub(s.min),p=s.min.clone().add(s.max).multiplyScalar(.5);
+    if(s.kind==='glass'){const m=this.material(new T.MeshPhysicalMaterial({color:0xc3d3d8,transparent:true,opacity:.10,roughness:.08,metalness:.1,clearcoat:1,envMapIntensity:.75,depthWrite:false,side:T.DoubleSide}));const pane=this.mesh(this.geo(new T.BoxGeometry(size.x,size.y,size.z)),m);pane.position.copy(p);pane.castShadow=false;continue;}
+-   const ceiling=/ceiling/.test(s.id),raised=s.kind==='floor'&&size.y>1&&s.id!=='raised-cube-alcove',guide=/guide/.test(s.id)&&size.y>2&&size.x<1&&size.z<1,opticalHousing=/emitter-housing|receiver-pillar|receiver-optic-body/.test(s.id),mat=s.kind==='floor'?(raised?f.graphite:f.floor):ceiling?(this.core.number>=6?f.panelQuiet:f.recess):guide&&this.core.number>=6?f.machine:f.graphite;const mesh=this.mesh(s.kind==='floor'?this.floorGeometry(size,p):opticalHousing?this.rounded(size.x,size.y,size.z,.035):this.geo(new T.BoxGeometry(size.x,size.y,size.z)),mat);mesh.position.copy(p);mesh.userData.solid=s.id;this.targets.push(mesh);
++   const ceiling=/ceiling/.test(s.id),raised=s.kind==='floor'&&size.y>1&&s.id!=='raised-cube-alcove',guide=/guide/.test(s.id)&&size.y>2&&size.x<1&&size.z<1,opticalHousing=/emitter-housing|receiver-pillar|receiver-optic-body/.test(s.id),mat=s.kind==='floor'?(raised?f.graphite:f.floor):ceiling?(this.core.number>=6?f.panelQuiet:f.recess):guide&&this.core.number>=6?f.machine:f.graphite;const mesh=this.mesh(s.kind==='floor'?this.floorGeometry(size,p):opticalHousing?this.rounded(size.x,size.y,size.z,.035):this.geo(new T.BoxGeometry(size.x,size.y,size.z)),mat);mesh.position.copy(p);mesh.userData.solid=s.id;this.targets.push(mesh);if(this.core.number===43&&(s.id==='negative-archive-gallery'||s.id==='negative-archive-vestibule'))this.finishArchiveFloor(mesh);
+    if(this.core.number===25&&s.id.startsWith('freight-return-step-')){mesh.visible=false;mesh.name='aim-only:'+s.id;mesh.userData.aimOnly=true;freightSteps.push({mesh,min:s.min,max:s.max,id:s.id});}
+    if(raised){
+     // A raised gallery is built architecture: metal walking surface over a panelled retaining structure.
+@@ -537,7 +543,8 @@
+   const receiving=(id:string)=>(this.core.number===50&&id==='retrieval-vault')||(/(?:^|-)(?:receiving|landing|dock|gallery)(?:-|$)/.test(id)&&!/(?:source|approach|spawn)/.test(id));
+   const floors=this.core.solids.filter(s=>{const size=s.max.clone().sub(s.min);return s.kind==='floor'&&size.x>2&&size.z>2&&(s.max.y>1.5||this.core.solids.some(lower=>lower.kind==='floor'&&lower.max.y<s.min.y-.5&&lower.min.x<s.max.x&&lower.max.x>s.min.x&&lower.min.z<s.max.z&&lower.max.z>s.min.z));}).sort((a,b)=>Number(receiving(b.id))-Number(receiving(a.id))||b.max.y-a.max.y||(b.max.x-b.min.x)*(b.max.z-b.min.z)-(a.max.x-a.min.x)*(a.max.z-a.min.z)).slice(0,this.core.number===25?1:2);
+   for(const s of floors){const size=s.max.clone().sub(s.min),x=(s.min.x+s.max.x)/2;
+-   if(this.core.blueprint.family==='launch-spire'&&receiving(s.id))for(const fraction of[.25,.75]){
++   if(this.core.number===43&&(s.id==='negative-archive-gallery'||s.id==='negative-archive-vestibule')){const xs=s.id==='negative-archive-gallery'?[3.5,10.5]:[8];for(const px of xs)fixture(V(px,6.3,-8),V(0,0,1),.60,.045,{id:s.id,mount:'negative-archive-gallery-front-fascia',target:V(px,.12,px===8?-4.8:-5),reach:3,power:62,range:9});}
++   else if(this.core.blueprint.family==='launch-spire'&&receiving(s.id))for(const fraction of[.25,.75]){
+     const px=s.min.x+size.x*fraction,pz=(s.min.z+s.max.z)/2,overhead=this.core.solids.filter(roof=>roof!==s&&roof.kind!=='glass'&&roof.min.y>s.max.y+.5&&px>roof.min.x+.05&&px<roof.max.x-.05&&pz>roof.min.z+.05&&pz<roof.max.z-.05).sort((a,b)=>a.min.y-b.min.y)[0];
+     if(overhead)fixture(V(px,overhead.min.y,pz),V(0,-1,0),.65,.08,{id:s.id,mount:overhead.id,target:V(px,s.max.y,pz),reach:Math.min(5.5,Math.max(3,size.z*.65))});
+    }

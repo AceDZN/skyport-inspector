@@ -1,0 +1,13 @@
+# Fresh21–35 input packets — ready, unexecuted
+
+All fifteen complete packets are published. [INDEX.json](INDEX.json) records exact hashes/action counts and lane provenance. This is an ordinary-input plan, not earned progress or a successful timing test. Parent owns the sole fresh browser context and should continue its existing genuinely earned prefix on held `/fifty-v3/` (main SHA `6d5d6ab5195bc83aec76f510d23f289f09f76916635ab6ce05ae968b5be1a80b`). No runtime, GLB, source build or default preview was changed.
+
+Run21.jsonl,22.jsonl,…35.jsonl in sequence through the existing driver after genuine20 has completed and reloaded to the menu. Each packet verifies the exact prior earned prefix/unlock, uses the actual Levels menu/base room, requires the physical requested goal, reloads, checks the persisted new prefix and exports that earned state. Keep RIFT_STORAGE unset; these packets neither import storage nor award completions. Retain the parent driver's current fail-pause/audio extensions. Root's reference0d3b6c5d records only compatible action grammar.
+
+Implicit auto lifts have no authored at:BASE/UPPER signals.21–25 and31–35 were audited against actual public pose/moving/support fields.27/30 use genuine journal NOW dock observations plus XYZ/!moving/body support;28/29 explicit stops have native NOW cross-checks. Transport boarding/disembark and the24 timed-leaf move use same-frame public-condition/input gates where specified. These prepared checks still need actual execution; a selected stop or old report is insufficient support.
+
+26 includes optional paused TEST/LOG inspection at rows58–70.27 distinguishes a released latch from current power allocation.28 uses genuine bidirectional receipt/reversal.29 uses the actual persistent TRANSFER stop.30 stages cargo on the floor before unheld optical relinking and current-pose regrasp.32 preserves the repaired current-cargo aim.33/35 preserve same-frame dock/support inputs;34 preserves genuine shutter windows.
+
+All first failed commands and ordinary-input recovery belong in the final raw record. If a checkpoint fails, stop/pause before further movement, inspect current public state and repair the input hypothesis. Fresh retries/respawns are actual metrics; historical engineering retry counts must not be copied into fresh assertions. No packet permits body, portal, machine, win, clock-step or unlock injection.
+
+[21–25 provenance](21-25-NOTES.md) · [26–30 provenance](26-30-PROVENANCE.md) · [31–35 provenance](31-35-PROVENANCE.md). Shared index publication follows all lane-ready publications; no browser/compiler/native/build work was performed by this index.

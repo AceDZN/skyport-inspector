@@ -1,5 +1,7 @@
 # Fifty-room engineering checkpoint
 
+The paragraphs below preserve the first50-room snapshot. The later held v3 build and current pending fresh-campaign status are [fifty-final-v3/BUILD.json](fifty-final-v3/BUILD.json) and [RELEASE_STATUS.md](fifty-final-v3/RELEASE_STATUS.md). Its source differs only by C43 finish and first-room/menu wording; native fixtures and required models remain exact. All50 now have parent-reported actual engineering completions across contexts; final fresh50 and final acceptance remain open.
+
 Exactly50 authored rooms are registered in the saved campaign. The immutable local candidate is `/fifty/`, `main-DgQ4zEmP.js`, SHA256 `b4e1a5675f5b56bdcd51d93bcf4b64f4354e00156ab7ca93d4041b8feb4a76b6`. Full tsc+Vite passed with all watched source/model bytes unchanged. Its archive is `work/frozen-builds/fifty-final-candidate/`; [fifty-integration/BUILD.json](fifty-integration/BUILD.json) records exact hashes and scope. Default D2 and `/forty-five/` remain unchanged for ongoing playtesting.
 
 The committed source is staged from that exact archive, preserving the review artifact. Models retain accepted actual GLB bytes: gun2215cbd5, cargo143129e2, optical insertf7cf372a. Hero loader91ab46ce and the actual mesh/clip/copy paths remain unchanged under the later Scene finish. Current Scene45805a6c adds fitted blueprint labels/floor orientation, supported46/48/50 coffers/four existing lights and47/50 static-floor paint instead of unsupported circuit tubes. These have bounded CPU support/font proofs; actual final all-room pixels remain pending.

@@ -1,0 +1,11 @@
+# C43 source finish handoff
+
+Source frozen SHA `46bb5b3d01be8d920c84f3e75a9406d151e723223bc0b48c1b3aacd5d0ae98ad` (104,548B). Exact snapshot `work/art/source-snapshots/chamber-scene-C43-finish-46bb5b3d.ts`. Before `45805a6c` and both immutable45/fifty artifacts remain unchanged. Scope and measured camera are in `C43_FINISH_PROPOSAL.md`; actual old evidence remains in `CANDIDATE45_OFFLINE_REVIEW.md`.
+
+Only two named C43 box meshes now use three material groups: original +Y walking faces/UVs keep f.floor; four edge faces use f.graphite; −Y underside uses existing f.panelQuiet. Exact original triangles/vertices/normals/bounds are retained, as are userData.solid and the same mesh entries in targets. No extra skin or aim hole. Same2 meshes/geometries; +4 material draws, zero new materials/textures. Existing aluminum top-edge strips remain.
+
+The same three underside practical roles become the approved backed gallery-fascia strips, using existing soft landing SpotLights. Physical mounts(3.5,6.3,−8),(8,6.3,−8),(10.5,6.3,−8), normal+Z. Actual CPU-mounted sources are .16m in front of the fascia; targets(3.5,.12,−5),(8,.12,−4.8),(10.5,.12,−5). Color0xffd19a, power62, range9, reach3-derived cones, penumbra.72, shadows off. Three lights/six fixture planes remain three/six; three non-rendering target Object3Ds are tagged for existing cleanup. Area/key/destination lighting remains unchanged.
+
+Bounded CPU probe `work/art/check-C43-finish.ts` closed exit0: actual blueprints, actual floorGeometry/finishArchiveFloor helpers and actual architecturePracticals construction with Three meshes/Raycaster; no WebGL or World/native construction. It verifies all original UV/vertex/normal/index-triangle data, full face coverage/groups, bounds, IDs/targets, actual full fixture backing, real ground targets, light/plate counts and cleanup eligibility/removal. Removing only the approved helper/call/C43 branch restores the before source byte-for-byte. Blueprint serialization is unchanged. Exact receipt `C43_FINISH_PROBE.json`; diff `C43_FINISH_SOURCE.diff`.
+
+No full compiler/native/browser/GPU/build ran. Actual pixel acceptance remains open: Root's separate v2 must repeat the real050 pose plus normal boarding/walking view before fresh1→50 acceptance. Numerical construction/support does not prove softer gradients, material quality or target parity.

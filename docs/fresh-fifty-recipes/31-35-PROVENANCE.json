@@ -1,0 +1,2228 @@
+{
+  "status": "UNEXECUTED fresh31\u201335 source-only translations; no browser/compiler/native/build",
+  "scope": "Only docs/fresh-fifty-recipes/31.jsonl \u202635.jsonl and scoped provenance notes. Parent reports/inventory read-only. No runtime/build/asset changes.",
+  "compatibleClient": "docs/chamber-qa/final-campaign/browser-client.mjs",
+  "compatibleClientSha256": "0d3b6c5d822a8900e59ceca6453dfbb46772f4807b27765708316b58f097d8f6",
+  "heldV3MainSha256": "6d5d6ab5195bc83aec76f510d23f289f09f76916635ab6ce05ae968b5be1a80b",
+  "inventorySha256": "0cff148d6850742b9624185b10055fb2a0fe952678a0276aa497bd2253004bd3",
+  "levels": [
+    {
+      "level": 31,
+      "output": "docs/fresh-fifty-recipes/31.jsonl",
+      "status": "UNEXECUTED",
+      "commands": 58,
+      "sha256": "4013a9a63debb629d12fd530111502ac61bbb116df4e4957c941455b13734fea",
+      "sourceSmallPlan": "/Users/acedzn/idea-plotter/reports/rift-core-parent-release8/planned-base-31.jsonl",
+      "sourceSmallPlanSha256": "9d5fde71f1a90acad2db66e3832197d8b1761721a307b4b559d9af04483a52bb",
+      "actualContextId": "R8C26",
+      "actualRawActionsReadOnly": "/Users/acedzn/idea-plotter/reports/rift-core-parent-release8/tripo-continuation-26/actions.raw.jsonl",
+      "actualActionRange0basedInclusive": [
+        309,
+        354
+      ],
+      "manifestReadOnly": "/Users/acedzn/idea-plotter/reports/rift-core-parent-release8/tripo-continuation-26/manifest.json",
+      "inventoryRecordedManifestSha256": "3f4fac834dd3cd271b19335487b872f499e1b8ba5cacab38b5bb58fc1b53e48e",
+      "historicalImportedStorageNotUsedByPacket": "/Users/acedzn/idea-plotter/reports/rift-core-parent-release7/continuation-22/earned-game-only-storage.json",
+      "historicalBuild": {
+        "url": "http://localhost:4261/hero-repair/assets/main-D2DMbgrH.js",
+        "sha256": "48cb251e7280e8ce8d6589c87e161e20f00da08d10259ac4369cc71f5d689761"
+      },
+      "actualInputsExactlyMatchSmallPlanExcludingTwoMenuClicks": true,
+      "observedHistoricalResult": {
+        "action": 349,
+        "level": 31,
+        "alternate": false,
+        "mode": "result",
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "button-exit",
+          "reason": "",
+          "events": [
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "portalA",
+              "time": 2850,
+              "surface": "cargo-source",
+              "point": [
+                5.999999957042992,
+                1.55,
+                13.959999999999999
+              ]
+            },
+            {
+              "type": "portalB",
+              "time": 4500,
+              "surface": "cargo-return",
+              "point": [
+                -11.959999999999999,
+                1.55,
+                8.001333501696426
+              ]
+            },
+            {
+              "type": "footstep",
+              "time": 7900
+            },
+            {
+              "type": "footstep",
+              "time": 9183
+            },
+            {
+              "type": "enter",
+              "time": 9500,
+              "body": "player",
+              "from": 0,
+              "to": 1,
+              "fromSurface": "cargo-source",
+              "toSurface": "cargo-return",
+              "speed": 4.79151641661719,
+              "exitSpeed": 4.79151641661719,
+              "held": null
+            },
+            {
+              "type": "land",
+              "time": 9508
+            },
+            {
+              "type": "footstep",
+              "time": 9683
+            },
+            {
+              "type": "footstep",
+              "time": 11067
+            },
+            {
+              "type": "pickup",
+              "time": 12492,
+              "body": "supply-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 14742
+            },
+            {
+              "type": "footstep",
+              "time": 15167
+            },
+            {
+              "type": "enter",
+              "time": 15950,
+              "body": "supply-cube",
+              "from": 1,
+              "to": 0,
+              "fromSurface": "cargo-return",
+              "toSurface": "cargo-source",
+              "speed": 17.982001808125773,
+              "exitSpeed": 17.982001808125773,
+              "held": "supply-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 16183
+            },
+            {
+              "type": "enter",
+              "time": 16475,
+              "body": "player",
+              "from": 1,
+              "to": 0,
+              "fromSurface": "cargo-return",
+              "toSurface": "cargo-source",
+              "speed": 4.786185901091835,
+              "exitSpeed": 4.786185901091835,
+              "held": "supply-cube"
+            },
+            {
+              "type": "land",
+              "time": 16483
+            },
+            {
+              "type": "footstep",
+              "time": 16608
+            },
+            {
+              "type": "footstep",
+              "time": 17533
+            },
+            {
+              "type": "footstep",
+              "time": 17958
+            },
+            {
+              "type": "footstep",
+              "time": 18383
+            },
+            {
+              "type": "footstep",
+              "time": 18833
+            },
+            {
+              "type": "footstep",
+              "time": 19258
+            },
+            {
+              "type": "shutter-open",
+              "time": 21192,
+              "id": "button-hatch"
+            },
+            {
+              "type": "pad",
+              "time": 21192,
+              "pad": "floor-button",
+              "crate": "supply-cube"
+            },
+            {
+              "type": "drop",
+              "time": 21758,
+              "body": "supply-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 24850
+            },
+            {
+              "type": "footstep",
+              "time": 25275
+            },
+            {
+              "type": "footstep",
+              "time": 25700
+            },
+            {
+              "type": "footstep",
+              "time": 26125
+            },
+            {
+              "type": "footstep",
+              "time": 26617
+            },
+            {
+              "type": "footstep",
+              "time": 27217
+            },
+            {
+              "type": "enter",
+              "time": 27508,
+              "body": "player",
+              "from": 0,
+              "to": 1,
+              "fromSurface": "cargo-source",
+              "toSurface": "cargo-return",
+              "speed": 4.786188643291378,
+              "exitSpeed": 4.786188643291378,
+              "held": null
+            },
+            {
+              "type": "land",
+              "time": 27517
+            },
+            {
+              "type": "footstep",
+              "time": 27642
+            },
+            {
+              "type": "footstep",
+              "time": 29267
+            },
+            {
+              "type": "footstep",
+              "time": 29692
+            },
+            {
+              "type": "footstep",
+              "time": 30117
+            },
+            {
+              "type": "footstep",
+              "time": 30542
+            },
+            {
+              "type": "footstep",
+              "time": 30967
+            },
+            {
+              "type": "footstep",
+              "time": 31392
+            },
+            {
+              "type": "footstep",
+              "time": 31817
+            },
+            {
+              "type": "footstep",
+              "time": 32667
+            },
+            {
+              "type": "footstep",
+              "time": 33092
+            },
+            {
+              "type": "footstep",
+              "time": 33517
+            },
+            {
+              "type": "footstep",
+              "time": 33967
+            },
+            {
+              "type": "footstep",
+              "time": 35867
+            },
+            {
+              "type": "footstep",
+              "time": 36292
+            },
+            {
+              "type": "footstep",
+              "time": 37300
+            },
+            {
+              "type": "footstep",
+              "time": 37725
+            }
+          ],
+          "mechanisms": [
+            "portals",
+            "cargo",
+            "shutters",
+            "buttons"
+          ]
+        },
+        "respawns": 0
+      },
+      "newCommand1basedToHistoricalAction0based": {
+        "10": 309,
+        "11": 310,
+        "12": 311,
+        "13": 312,
+        "14": 313,
+        "15": 314,
+        "16": 315,
+        "17": 316,
+        "18": 317,
+        "19": 318,
+        "20": 319,
+        "21": 320,
+        "22": 321,
+        "23": 322,
+        "24": 323,
+        "25": 324,
+        "26": 325,
+        "27": 326,
+        "28": 327,
+        "29": 328,
+        "30": 329,
+        "31": 330,
+        "32": 331,
+        "33": 332,
+        "34": 333,
+        "35": 334,
+        "36": 335,
+        "37": 336,
+        "38": 337,
+        "39": 338,
+        "40": 339,
+        "41": 340,
+        "42": 341,
+        "43": 342,
+        "44": 343,
+        "45": 344,
+        "46": 345,
+        "47": 346,
+        "48": 347,
+        "49": 348,
+        "50": 349,
+        "51": 350,
+        "54": 351,
+        "55": 352,
+        "57": 353,
+        "58": 354
+      },
+      "onlyChanges": "Fresh menu/prior exact prefix/unlock/base wrappers; explicit exit and zero-respawn assertions after existing goal assertion; menu assertion after existing reload. Actual movement, aim, moving-cargo pickup, key-when, timer waits, captures and reload/prefix/export tail preserved exactly."
+    },
+    {
+      "level": 32,
+      "output": "docs/fresh-fifty-recipes/32.jsonl",
+      "status": "UNEXECUTED",
+      "commands": 62,
+      "sha256": "b8cb0297cf18fe9b604e6e11258d9aa2f830e0bb452e0c39516fe180f2d835a8",
+      "sourceSmallPlan": "/Users/acedzn/idea-plotter/reports/rift-core-parent-release8/planned-base-32-actual-cargo.jsonl",
+      "sourceSmallPlanSha256": "3a16cb2b416d06fba2c2b5148348a1ffbd539dc16292d368d89adec1a327ab2f",
+      "actualContextId": "R8C32",
+      "actualRawActionsReadOnly": "/Users/acedzn/idea-plotter/reports/rift-core-parent-release8/tripo-continuation-32/actions.raw.jsonl",
+      "actualActionRange0basedInclusive": [
+        2,
+        51
+      ],
+      "manifestReadOnly": "/Users/acedzn/idea-plotter/reports/rift-core-parent-release8/tripo-continuation-32/manifest.json",
+      "inventoryRecordedManifestSha256": "0004b4413ef1512e14386ca3c123f5e7c97b1eb34d6481f2393535b63549e06b",
+      "historicalImportedStorageNotUsedByPacket": "/Users/acedzn/idea-plotter/reports/rift-core-parent-release8/tripo-continuation-26/earned-game-only-storage.json",
+      "historicalBuild": {
+        "url": "http://localhost:4261/hero-repair/assets/main-D2DMbgrH.js",
+        "sha256": "48cb251e7280e8ce8d6589c87e161e20f00da08d10259ac4369cc71f5d689761"
+      },
+      "actualInputsExactlyMatchSmallPlanExcludingTwoMenuClicks": true,
+      "observedHistoricalResult": {
+        "action": 46,
+        "level": 32,
+        "alternate": false,
+        "mode": "result",
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "freight-exit",
+          "reason": "",
+          "events": [
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "pad",
+              "time": 8,
+              "pad": "carrier-power",
+              "crate": "power-cube"
+            },
+            {
+              "type": "portalA",
+              "time": 3217,
+              "surface": "freight-source",
+              "point": [
+                6.999999879949606,
+                1.55,
+                13.959999999999999
+              ]
+            },
+            {
+              "type": "portalB",
+              "time": 4600,
+              "surface": "freight-return",
+              "point": [
+                -11.959999999999999,
+                1.55,
+                10.99999879358354
+              ]
+            },
+            {
+              "type": "footstep",
+              "time": 5883
+            },
+            {
+              "type": "lift-motor",
+              "time": 6008,
+              "id": "freight-carrier"
+            },
+            {
+              "type": "pad",
+              "time": 6167,
+              "pad": "service-pressure",
+              "crate": "player"
+            },
+            {
+              "type": "footstep",
+              "time": 6308
+            },
+            {
+              "type": "button-release",
+              "time": 6667,
+              "pad": "service-pressure",
+              "crate": "player"
+            },
+            {
+              "type": "footstep",
+              "time": 6733
+            },
+            {
+              "type": "footstep",
+              "time": 7158
+            },
+            {
+              "type": "footstep",
+              "time": 7583
+            },
+            {
+              "type": "footstep",
+              "time": 9350
+            },
+            {
+              "type": "footstep",
+              "time": 9775
+            },
+            {
+              "type": "lift-arrival",
+              "time": 11008,
+              "id": "freight-carrier",
+              "value": "NEAR"
+            },
+            {
+              "type": "footstep",
+              "time": 11833
+            },
+            {
+              "type": "lift-motor",
+              "time": 17008,
+              "id": "freight-carrier"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 22008,
+              "id": "freight-carrier",
+              "value": "base"
+            },
+            {
+              "type": "lift-motor",
+              "time": 28008,
+              "id": "freight-carrier"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 33008,
+              "id": "freight-carrier",
+              "value": "NEAR"
+            },
+            {
+              "type": "footstep",
+              "time": 33617
+            },
+            {
+              "type": "pickup",
+              "time": 35442,
+              "body": "carried-cube"
+            },
+            {
+              "type": "lift-motor",
+              "time": 39008,
+              "id": "freight-carrier"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 44008,
+              "id": "freight-carrier",
+              "value": "base"
+            },
+            {
+              "type": "lift-motor",
+              "time": 50008,
+              "id": "freight-carrier"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 55008,
+              "id": "freight-carrier",
+              "value": "NEAR"
+            },
+            {
+              "type": "footstep",
+              "time": 59058
+            },
+            {
+              "type": "footstep",
+              "time": 59483
+            },
+            {
+              "type": "lift-motor",
+              "time": 61008,
+              "id": "freight-carrier"
+            },
+            {
+              "type": "footstep",
+              "time": 62842
+            },
+            {
+              "type": "footstep",
+              "time": 63267
+            },
+            {
+              "type": "footstep",
+              "time": 63692
+            },
+            {
+              "type": "footstep",
+              "time": 65925
+            },
+            {
+              "type": "lift-arrival",
+              "time": 66008,
+              "id": "freight-carrier",
+              "value": "base"
+            },
+            {
+              "type": "footstep",
+              "time": 66350
+            },
+            {
+              "type": "footstep",
+              "time": 66775
+            },
+            {
+              "type": "footstep",
+              "time": 67200
+            },
+            {
+              "type": "footstep",
+              "time": 68167
+            },
+            {
+              "type": "pad",
+              "time": 68242,
+              "pad": "service-pressure",
+              "crate": "player"
+            },
+            {
+              "type": "footstep",
+              "time": 68592
+            },
+            {
+              "type": "footstep",
+              "time": 69567
+            },
+            {
+              "type": "button-release",
+              "time": 69592,
+              "pad": "service-pressure",
+              "crate": "player"
+            },
+            {
+              "type": "footstep",
+              "time": 69992
+            },
+            {
+              "type": "enter",
+              "time": 70367,
+              "body": "carried-cube",
+              "from": 0,
+              "to": 1,
+              "fromSurface": "freight-source",
+              "toSurface": "freight-return",
+              "speed": 3.4923235247399087,
+              "exitSpeed": 3.4923235247399087,
+              "held": "carried-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 70417
+            },
+            {
+              "type": "footstep",
+              "time": 71408
+            },
+            {
+              "type": "enter",
+              "time": 71692,
+              "body": "player",
+              "from": 0,
+              "to": 1,
+              "fromSurface": "freight-source",
+              "toSurface": "freight-return",
+              "speed": 4.783748119055417,
+              "exitSpeed": 4.783748119055417,
+              "held": "carried-cube"
+            },
+            {
+              "type": "land",
+              "time": 71700
+            },
+            {
+              "type": "footstep",
+              "time": 71892
+            },
+            {
+              "type": "lift-motor",
+              "time": 72008,
+              "id": "freight-carrier"
+            },
+            {
+              "type": "footstep",
+              "time": 74092
+            },
+            {
+              "type": "contact",
+              "time": 74908,
+              "body": "power-cube",
+              "speed": 2.1194328576965416
+            },
+            {
+              "type": "contact",
+              "time": 75083,
+              "body": "power-cube",
+              "speed": 1.7484332872182193
+            },
+            {
+              "type": "lift-brake",
+              "time": 75142,
+              "id": "freight-carrier"
+            },
+            {
+              "type": "button-release",
+              "time": 75142,
+              "pad": "carrier-power",
+              "crate": "player"
+            },
+            {
+              "type": "lift-motor",
+              "time": 75350,
+              "id": "freight-carrier"
+            },
+            {
+              "type": "pad",
+              "time": 75350,
+              "pad": "carrier-power",
+              "crate": "power-cube"
+            },
+            {
+              "type": "contact",
+              "time": 75358,
+              "body": "power-cube",
+              "speed": 1.1610288789046626
+            },
+            {
+              "type": "contact",
+              "time": 75492,
+              "body": "power-cube",
+              "speed": 1.177884314938167
+            },
+            {
+              "type": "contact",
+              "time": 75700,
+              "body": "power-cube",
+              "speed": 0.8662126863956047
+            },
+            {
+              "type": "footstep",
+              "time": 75775
+            },
+            {
+              "type": "contact",
+              "time": 76025,
+              "body": "power-cube",
+              "speed": 0.7220304009634555
+            },
+            {
+              "type": "footstep",
+              "time": 76200
+            },
+            {
+              "type": "footstep",
+              "time": 76625
+            },
+            {
+              "type": "lift-arrival",
+              "time": 77217,
+              "id": "freight-carrier",
+              "value": "NEAR"
+            },
+            {
+              "type": "footstep",
+              "time": 77325
+            },
+            {
+              "type": "shutter-open",
+              "time": 78900,
+              "id": "freight-upper-door"
+            },
+            {
+              "type": "pad",
+              "time": 78900,
+              "pad": "release-pressure",
+              "crate": "carried-cube"
+            },
+            {
+              "type": "drop",
+              "time": 79483,
+              "body": "carried-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 83042
+            },
+            {
+              "type": "lift-motor",
+              "time": 83217,
+              "id": "freight-carrier"
+            },
+            {
+              "type": "footstep",
+              "time": 83467
+            },
+            {
+              "type": "footstep",
+              "time": 83892
+            },
+            {
+              "type": "footstep",
+              "time": 84792
+            },
+            {
+              "type": "lift-motor",
+              "time": 84900,
+              "id": "release-lift"
+            },
+            {
+              "type": "footstep",
+              "time": 85658
+            },
+            {
+              "type": "footstep",
+              "time": 87642
+            },
+            {
+              "type": "footstep",
+              "time": 88067
+            },
+            {
+              "type": "lift-arrival",
+              "time": 88217,
+              "id": "freight-carrier",
+              "value": "base"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 88400,
+              "id": "release-lift",
+              "value": "GALLERY"
+            },
+            {
+              "type": "lift-motor",
+              "time": 94217,
+              "id": "freight-carrier"
+            },
+            {
+              "type": "lift-motor",
+              "time": 94400,
+              "id": "release-lift"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 97900,
+              "id": "release-lift",
+              "value": "base"
+            },
+            {
+              "type": "footstep",
+              "time": 98342
+            },
+            {
+              "type": "footstep",
+              "time": 98767
+            },
+            {
+              "type": "lift-arrival",
+              "time": 99217,
+              "id": "freight-carrier",
+              "value": "NEAR"
+            },
+            {
+              "type": "lift-motor",
+              "time": 103900,
+              "id": "release-lift"
+            },
+            {
+              "type": "lift-motor",
+              "time": 105217,
+              "id": "freight-carrier"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 107400,
+              "id": "release-lift",
+              "value": "GALLERY"
+            },
+            {
+              "type": "footstep",
+              "time": 107775
+            },
+            {
+              "type": "footstep",
+              "time": 108200
+            },
+            {
+              "type": "footstep",
+              "time": 109158
+            },
+            {
+              "type": "footstep",
+              "time": 109583
+            }
+          ],
+          "mechanisms": [
+            "buttons",
+            "lifts",
+            "cargo",
+            "portals",
+            "shutters"
+          ]
+        },
+        "respawns": 0
+      },
+      "newCommand1basedToHistoricalAction0based": {
+        "10": 2,
+        "11": 3,
+        "12": 4,
+        "13": 5,
+        "14": 6,
+        "15": 7,
+        "16": 8,
+        "17": 9,
+        "18": 10,
+        "19": 11,
+        "20": 12,
+        "21": 13,
+        "22": 14,
+        "23": 15,
+        "24": 16,
+        "25": 17,
+        "26": 18,
+        "27": 19,
+        "28": 20,
+        "29": 21,
+        "30": 22,
+        "31": 23,
+        "32": 24,
+        "33": 25,
+        "34": 26,
+        "35": 27,
+        "36": 28,
+        "37": 29,
+        "38": 30,
+        "39": 31,
+        "40": 32,
+        "41": 33,
+        "42": 34,
+        "43": 35,
+        "44": 36,
+        "45": 37,
+        "46": 38,
+        "47": 39,
+        "48": 40,
+        "49": 41,
+        "50": 42,
+        "51": 43,
+        "52": 44,
+        "53": 45,
+        "54": 46,
+        "55": 47,
+        "58": 48,
+        "59": 49,
+        "61": 50,
+        "62": 51
+      },
+      "onlyChanges": "Fresh menu/prior exact prefix/unlock/base wrappers; explicit exit and zero-respawn assertions after existing goal assertion; menu assertion after existing reload. Actual movement, aim, moving-cargo pickup, key-when, timer waits, captures and reload/prefix/export tail preserved exactly."
+    },
+    {
+      "level": 33,
+      "output": "docs/fresh-fifty-recipes/33.jsonl",
+      "status": "UNEXECUTED",
+      "commands": 60,
+      "sha256": "e30534fcbff4db443b0647efbae028647007648e7b328a8a73dac1bfc26246e0",
+      "sourceSmallPlan": "/Users/acedzn/idea-plotter/reports/rift-core-parent-release8/planned-base-33-browser-window.jsonl",
+      "sourceSmallPlanSha256": "5222a24bd216a9d32a3ff8ee31942f3a2e5818e229959d1a2ea2f72c8fc156a6",
+      "actualContextId": "R8C33",
+      "actualRawActionsReadOnly": "/Users/acedzn/idea-plotter/reports/rift-core-parent-release8/tripo-continuation-33/actions.raw.jsonl",
+      "actualActionRange0basedInclusive": [
+        2,
+        49
+      ],
+      "manifestReadOnly": "/Users/acedzn/idea-plotter/reports/rift-core-parent-release8/tripo-continuation-33/manifest.json",
+      "inventoryRecordedManifestSha256": "7789a39c02b72f6450c8ab2625d68bb3b3a8bbf2a9503751e07418ea99cef3f4",
+      "historicalImportedStorageNotUsedByPacket": "/Users/acedzn/idea-plotter/reports/rift-core-parent-release8/tripo-continuation-32/earned-game-only-storage.json",
+      "historicalBuild": {
+        "url": "http://localhost:4261/hero-repair/assets/main-D2DMbgrH.js",
+        "sha256": "48cb251e7280e8ce8d6589c87e161e20f00da08d10259ac4369cc71f5d689761"
+      },
+      "actualInputsExactlyMatchSmallPlanExcludingTwoMenuClicks": true,
+      "observedHistoricalResult": {
+        "action": 44,
+        "level": 33,
+        "alternate": false,
+        "mode": "result",
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "powered-exit",
+          "reason": "",
+          "events": [
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "portalA",
+              "time": 8367,
+              "surface": "block-source",
+              "point": [
+                6.999999957043,
+                1.55,
+                13.959999999999999
+              ]
+            },
+            {
+              "type": "footstep",
+              "time": 11125
+            },
+            {
+              "type": "footstep",
+              "time": 11550
+            },
+            {
+              "type": "footstep",
+              "time": 11975
+            },
+            {
+              "type": "portalB",
+              "time": 13583,
+              "surface": "block-return",
+              "point": [
+                -11.959999999999999,
+                1.55,
+                0.002923811357925743
+              ]
+            },
+            {
+              "type": "footstep",
+              "time": 15467
+            },
+            {
+              "type": "footstep",
+              "time": 15892
+            },
+            {
+              "type": "footstep",
+              "time": 16317
+            },
+            {
+              "type": "footstep",
+              "time": 16742
+            },
+            {
+              "type": "footstep",
+              "time": 17633
+            },
+            {
+              "type": "enter",
+              "time": 17925,
+              "body": "player",
+              "from": 0,
+              "to": 1,
+              "fromSurface": "block-source",
+              "toSurface": "block-return",
+              "speed": 4.786185983610893,
+              "exitSpeed": 4.786185983610893,
+              "held": null
+            },
+            {
+              "type": "land",
+              "time": 17933
+            },
+            {
+              "type": "footstep",
+              "time": 18067
+            },
+            {
+              "type": "footstep",
+              "time": 20083
+            },
+            {
+              "type": "footstep",
+              "time": 20508
+            },
+            {
+              "type": "footstep",
+              "time": 20933
+            },
+            {
+              "type": "footstep",
+              "time": 21358
+            },
+            {
+              "type": "footstep",
+              "time": 22517
+            },
+            {
+              "type": "footstep",
+              "time": 22942
+            },
+            {
+              "type": "footstep",
+              "time": 23367
+            },
+            {
+              "type": "footstep",
+              "time": 23792
+            },
+            {
+              "type": "footstep",
+              "time": 24333
+            },
+            {
+              "type": "footstep",
+              "time": 24758
+            },
+            {
+              "type": "footstep",
+              "time": 25183
+            },
+            {
+              "type": "footstep",
+              "time": 25608
+            },
+            {
+              "type": "footstep",
+              "time": 26167
+            },
+            {
+              "type": "switch-toggle",
+              "time": 28017,
+              "id": "hatch-control",
+              "value": true
+            },
+            {
+              "type": "shutter-open",
+              "time": 28017,
+              "id": "cargo-hatch"
+            },
+            {
+              "type": "footstep",
+              "time": 32317
+            },
+            {
+              "type": "footstep",
+              "time": 32742
+            },
+            {
+              "type": "footstep",
+              "time": 33167
+            },
+            {
+              "type": "footstep",
+              "time": 33592
+            },
+            {
+              "type": "footstep",
+              "time": 35167
+            },
+            {
+              "type": "footstep",
+              "time": 35592
+            },
+            {
+              "type": "pickup",
+              "time": 36825,
+              "body": "block-cube"
+            },
+            {
+              "type": "receiver-power",
+              "time": 38025,
+              "id": "block-light"
+            },
+            {
+              "type": "shutter-open",
+              "time": 38025,
+              "id": "block-upper-door"
+            },
+            {
+              "type": "footstep",
+              "time": 40258
+            },
+            {
+              "type": "footstep",
+              "time": 40683
+            },
+            {
+              "type": "footstep",
+              "time": 42358
+            },
+            {
+              "type": "footstep",
+              "time": 42783
+            },
+            {
+              "type": "footstep",
+              "time": 43208
+            },
+            {
+              "type": "lift-motor",
+              "time": 44025,
+              "id": "block-lift"
+            },
+            {
+              "type": "drop",
+              "time": 46100,
+              "body": "block-cube"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 47525,
+              "id": "block-lift",
+              "value": "GALLERY"
+            },
+            {
+              "type": "footstep",
+              "time": 48625
+            },
+            {
+              "type": "footstep",
+              "time": 49050
+            },
+            {
+              "type": "footstep",
+              "time": 49475
+            },
+            {
+              "type": "footstep",
+              "time": 49925
+            },
+            {
+              "type": "footstep",
+              "time": 50350
+            },
+            {
+              "type": "footstep",
+              "time": 50775
+            },
+            {
+              "type": "contact",
+              "time": 50992,
+              "body": "block-cube",
+              "speed": 0.9307937026899334
+            },
+            {
+              "type": "footstep",
+              "time": 51292
+            },
+            {
+              "type": "footstep",
+              "time": 51717
+            },
+            {
+              "type": "footstep",
+              "time": 52142
+            },
+            {
+              "type": "footstep",
+              "time": 52608
+            },
+            {
+              "type": "lift-motor",
+              "time": 53525,
+              "id": "block-lift"
+            },
+            {
+              "type": "footstep",
+              "time": 54192
+            },
+            {
+              "type": "footstep",
+              "time": 54617
+            },
+            {
+              "type": "footstep",
+              "time": 55042
+            },
+            {
+              "type": "lift-arrival",
+              "time": 57025,
+              "id": "block-lift",
+              "value": "base"
+            },
+            {
+              "type": "footstep",
+              "time": 57208
+            },
+            {
+              "type": "footstep",
+              "time": 57633
+            },
+            {
+              "type": "footstep",
+              "time": 58058
+            },
+            {
+              "type": "footstep",
+              "time": 58483
+            },
+            {
+              "type": "lift-motor",
+              "time": 63025,
+              "id": "block-lift"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 66525,
+              "id": "block-lift",
+              "value": "GALLERY"
+            },
+            {
+              "type": "footstep",
+              "time": 66708
+            },
+            {
+              "type": "footstep",
+              "time": 67133
+            },
+            {
+              "type": "footstep",
+              "time": 69242
+            },
+            {
+              "type": "footstep",
+              "time": 69667
+            },
+            {
+              "type": "footstep",
+              "time": 70092
+            }
+          ],
+          "mechanisms": [
+            "portals",
+            "switches",
+            "shutters",
+            "cargo",
+            "beams",
+            "lifts"
+          ]
+        },
+        "respawns": 0
+      },
+      "newCommand1basedToHistoricalAction0based": {
+        "10": 2,
+        "11": 3,
+        "12": 4,
+        "13": 5,
+        "14": 6,
+        "15": 7,
+        "16": 8,
+        "17": 9,
+        "18": 10,
+        "19": 11,
+        "20": 12,
+        "21": 13,
+        "22": 14,
+        "23": 15,
+        "24": 16,
+        "25": 17,
+        "26": 18,
+        "27": 19,
+        "28": 20,
+        "29": 21,
+        "30": 22,
+        "31": 23,
+        "32": 24,
+        "33": 25,
+        "34": 26,
+        "35": 27,
+        "36": 28,
+        "37": 29,
+        "38": 30,
+        "39": 31,
+        "40": 32,
+        "41": 33,
+        "42": 34,
+        "43": 35,
+        "44": 36,
+        "45": 37,
+        "46": 38,
+        "47": 39,
+        "48": 40,
+        "49": 41,
+        "50": 42,
+        "51": 43,
+        "52": 44,
+        "53": 45,
+        "56": 46,
+        "57": 47,
+        "59": 48,
+        "60": 49
+      },
+      "onlyChanges": "Fresh menu/prior exact prefix/unlock/base wrappers; explicit exit and zero-respawn assertions after existing goal assertion; menu assertion after existing reload. Actual movement, aim, moving-cargo pickup, key-when, timer waits, captures and reload/prefix/export tail preserved exactly."
+    },
+    {
+      "level": 34,
+      "output": "docs/fresh-fifty-recipes/34.jsonl",
+      "status": "UNEXECUTED",
+      "commands": 37,
+      "sha256": "4bf8a675db7f8c730e0fe26710cc8152c000cef1a54e0786ed7b7312fd01e3b3",
+      "sourceSmallPlan": "/Users/acedzn/idea-plotter/reports/rift-core-parent-release8/planned-base-34-browser-window.jsonl",
+      "sourceSmallPlanSha256": "b6f9b3807f249143d02e4bc5032c47ba8b91ecc441ebe1f9c21a2f11691f6ad4",
+      "actualContextId": "R8C33",
+      "actualRawActionsReadOnly": "/Users/acedzn/idea-plotter/reports/rift-core-parent-release8/tripo-continuation-33/actions.raw.jsonl",
+      "actualActionRange0basedInclusive": [
+        52,
+        76
+      ],
+      "manifestReadOnly": "/Users/acedzn/idea-plotter/reports/rift-core-parent-release8/tripo-continuation-33/manifest.json",
+      "inventoryRecordedManifestSha256": "7789a39c02b72f6450c8ab2625d68bb3b3a8bbf2a9503751e07418ea99cef3f4",
+      "historicalImportedStorageNotUsedByPacket": "/Users/acedzn/idea-plotter/reports/rift-core-parent-release8/tripo-continuation-32/earned-game-only-storage.json",
+      "historicalBuild": {
+        "url": "http://localhost:4261/hero-repair/assets/main-D2DMbgrH.js",
+        "sha256": "48cb251e7280e8ce8d6589c87e161e20f00da08d10259ac4369cc71f5d689761"
+      },
+      "actualInputsExactlyMatchSmallPlanExcludingTwoMenuClicks": true,
+      "observedHistoricalResult": {
+        "action": 71,
+        "level": 34,
+        "alternate": false,
+        "mode": "result",
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "inspection-exit",
+          "reason": "",
+          "events": [
+            {
+              "type": "timer-open",
+              "time": 8,
+              "id": "inspection-clock"
+            },
+            {
+              "type": "shutter-open",
+              "time": 8,
+              "id": "inspection-first-leaf"
+            },
+            {
+              "type": "shutter-open",
+              "time": 8,
+              "id": "inspection-second-leaf"
+            },
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "portalA",
+              "time": 4133,
+              "surface": "process-source",
+              "point": [
+                0.5485257750877357,
+                1.55,
+                13.959999999999999
+              ]
+            },
+            {
+              "type": "timer-close",
+              "time": 7000,
+              "id": "inspection-clock"
+            },
+            {
+              "type": "shutter-close",
+              "time": 7000,
+              "id": "inspection-first-leaf"
+            },
+            {
+              "type": "shutter-close",
+              "time": 7000,
+              "id": "inspection-second-leaf"
+            },
+            {
+              "type": "portalB",
+              "time": 8133,
+              "surface": "process-return",
+              "point": [
+                0.5491751214067336,
+                1.55,
+                5.69
+              ]
+            },
+            {
+              "type": "footstep",
+              "time": 10575
+            },
+            {
+              "type": "footstep",
+              "time": 11508
+            },
+            {
+              "type": "enter",
+              "time": 11825,
+              "body": "player",
+              "from": 0,
+              "to": 1,
+              "fromSurface": "process-source",
+              "toSurface": "process-return",
+              "speed": 4.791516593612528,
+              "exitSpeed": 4.791516593612528,
+              "held": null
+            },
+            {
+              "type": "land",
+              "time": 11833
+            },
+            {
+              "type": "footstep",
+              "time": 11933
+            },
+            {
+              "type": "footstep",
+              "time": 13708
+            },
+            {
+              "type": "timer-open",
+              "time": 14008,
+              "id": "inspection-clock"
+            },
+            {
+              "type": "shutter-open",
+              "time": 14008,
+              "id": "inspection-first-leaf"
+            },
+            {
+              "type": "shutter-open",
+              "time": 14008,
+              "id": "inspection-second-leaf"
+            },
+            {
+              "type": "footstep",
+              "time": 14133
+            },
+            {
+              "type": "footstep",
+              "time": 14558
+            },
+            {
+              "type": "footstep",
+              "time": 14983
+            },
+            {
+              "type": "footstep",
+              "time": 15575
+            },
+            {
+              "type": "footstep",
+              "time": 17475
+            },
+            {
+              "type": "timer-close",
+              "time": 21008,
+              "id": "inspection-clock"
+            },
+            {
+              "type": "shutter-close",
+              "time": 21008,
+              "id": "inspection-first-leaf"
+            },
+            {
+              "type": "shutter-close",
+              "time": 21008,
+              "id": "inspection-second-leaf"
+            },
+            {
+              "type": "footstep",
+              "time": 21975
+            },
+            {
+              "type": "footstep",
+              "time": 22400
+            },
+            {
+              "type": "timer-open",
+              "time": 28008,
+              "id": "inspection-clock"
+            },
+            {
+              "type": "shutter-open",
+              "time": 28008,
+              "id": "inspection-first-leaf"
+            },
+            {
+              "type": "shutter-open",
+              "time": 28008,
+              "id": "inspection-second-leaf"
+            },
+            {
+              "type": "land",
+              "time": 28200
+            },
+            {
+              "type": "land",
+              "time": 28375
+            },
+            {
+              "type": "footstep",
+              "time": 28975
+            },
+            {
+              "type": "footstep",
+              "time": 29400
+            },
+            {
+              "type": "footstep",
+              "time": 29825
+            },
+            {
+              "type": "footstep",
+              "time": 30250
+            },
+            {
+              "type": "footstep",
+              "time": 30675
+            },
+            {
+              "type": "footstep",
+              "time": 31100
+            },
+            {
+              "type": "footstep",
+              "time": 31525
+            },
+            {
+              "type": "footstep",
+              "time": 31950
+            },
+            {
+              "type": "footstep",
+              "time": 32375
+            },
+            {
+              "type": "footstep",
+              "time": 32800
+            },
+            {
+              "type": "footstep",
+              "time": 33225
+            }
+          ],
+          "mechanisms": [
+            "shutters",
+            "portals"
+          ]
+        },
+        "respawns": 0
+      },
+      "newCommand1basedToHistoricalAction0based": {
+        "10": 52,
+        "11": 53,
+        "12": 54,
+        "13": 55,
+        "14": 56,
+        "15": 57,
+        "16": 58,
+        "17": 59,
+        "18": 60,
+        "19": 61,
+        "20": 62,
+        "21": 63,
+        "22": 64,
+        "23": 65,
+        "24": 66,
+        "25": 67,
+        "26": 68,
+        "27": 69,
+        "28": 70,
+        "29": 71,
+        "30": 72,
+        "33": 73,
+        "34": 74,
+        "36": 75,
+        "37": 76
+      },
+      "onlyChanges": "Fresh menu/prior exact prefix/unlock/base wrappers; explicit exit and zero-respawn assertions after existing goal assertion; menu assertion after existing reload. Actual movement, aim, moving-cargo pickup, key-when, timer waits, captures and reload/prefix/export tail preserved exactly."
+    },
+    {
+      "level": 35,
+      "output": "docs/fresh-fifty-recipes/35.jsonl",
+      "status": "UNEXECUTED",
+      "commands": 73,
+      "sha256": "a8afaee3175721fe711be5baa9ecb9ca61da3550a5b6425c61cf2ecb310209c1",
+      "sourceSmallPlan": "/Users/acedzn/idea-plotter/reports/rift-core-parent-release8/planned-base-35-browser-window.jsonl",
+      "sourceSmallPlanSha256": "6d47a0d30abec3edb4758ab0640732287444d28a3f5ac4d5e4056b6ad5632a50",
+      "actualContextId": "R8C33",
+      "actualRawActionsReadOnly": "/Users/acedzn/idea-plotter/reports/rift-core-parent-release8/tripo-continuation-33/actions.raw.jsonl",
+      "actualActionRange0basedInclusive": [
+        79,
+        139
+      ],
+      "manifestReadOnly": "/Users/acedzn/idea-plotter/reports/rift-core-parent-release8/tripo-continuation-33/manifest.json",
+      "inventoryRecordedManifestSha256": "7789a39c02b72f6450c8ab2625d68bb3b3a8bbf2a9503751e07418ea99cef3f4",
+      "historicalImportedStorageNotUsedByPacket": "/Users/acedzn/idea-plotter/reports/rift-core-parent-release8/tripo-continuation-32/earned-game-only-storage.json",
+      "historicalBuild": {
+        "url": "http://localhost:4261/hero-repair/assets/main-D2DMbgrH.js",
+        "sha256": "48cb251e7280e8ce8d6589c87e161e20f00da08d10259ac4369cc71f5d689761"
+      },
+      "actualInputsExactlyMatchSmallPlanExcludingTwoMenuClicks": true,
+      "observedHistoricalResult": {
+        "action": 134,
+        "level": 35,
+        "alternate": false,
+        "mode": "result",
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "control-exit",
+          "reason": "",
+          "events": [
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "portalA",
+              "time": 6275,
+              "surface": "loop-source",
+              "point": [
+                -12.00000004295701,
+                1.55,
+                9.959999999999999
+              ]
+            },
+            {
+              "type": "portalB",
+              "time": 8742,
+              "surface": "loop-return",
+              "point": [
+                -17.96,
+                1.55,
+                4.004009767540012
+              ]
+            },
+            {
+              "type": "footstep",
+              "time": 9942
+            },
+            {
+              "type": "pickup",
+              "time": 11050,
+              "body": "loop-near-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 12500
+            },
+            {
+              "type": "footstep",
+              "time": 12925
+            },
+            {
+              "type": "footstep",
+              "time": 13350
+            },
+            {
+              "type": "footstep",
+              "time": 13800
+            },
+            {
+              "type": "footstep",
+              "time": 14225
+            },
+            {
+              "type": "footstep",
+              "time": 14650
+            },
+            {
+              "type": "footstep",
+              "time": 15267
+            },
+            {
+              "type": "footstep",
+              "time": 15692
+            },
+            {
+              "type": "footstep",
+              "time": 16117
+            },
+            {
+              "type": "footstep",
+              "time": 16700
+            },
+            {
+              "type": "footstep",
+              "time": 17125
+            },
+            {
+              "type": "footstep",
+              "time": 17600
+            },
+            {
+              "type": "shutter-open",
+              "time": 19158,
+              "id": "loop-access-door"
+            },
+            {
+              "type": "pad",
+              "time": 19158,
+              "pad": "access-pressure",
+              "crate": "loop-near-cube"
+            },
+            {
+              "type": "drop",
+              "time": 20058,
+              "body": "loop-near-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 24883
+            },
+            {
+              "type": "footstep",
+              "time": 25308
+            },
+            {
+              "type": "footstep",
+              "time": 25733
+            },
+            {
+              "type": "footstep",
+              "time": 26167
+            },
+            {
+              "type": "footstep",
+              "time": 26592
+            },
+            {
+              "type": "footstep",
+              "time": 27017
+            },
+            {
+              "type": "footstep",
+              "time": 27442
+            },
+            {
+              "type": "footstep",
+              "time": 27967
+            },
+            {
+              "type": "footstep",
+              "time": 28392
+            },
+            {
+              "type": "footstep",
+              "time": 28817
+            },
+            {
+              "type": "footstep",
+              "time": 29242
+            },
+            {
+              "type": "footstep",
+              "time": 29817
+            },
+            {
+              "type": "footstep",
+              "time": 30667
+            },
+            {
+              "type": "enter",
+              "time": 31008,
+              "body": "player",
+              "from": 0,
+              "to": 1,
+              "fromSurface": "loop-source",
+              "toSurface": "loop-return",
+              "speed": 4.794790026671666,
+              "exitSpeed": 4.794790026671666,
+              "held": null
+            },
+            {
+              "type": "land",
+              "time": 31017
+            },
+            {
+              "type": "footstep",
+              "time": 31117
+            },
+            {
+              "type": "footstep",
+              "time": 32958
+            },
+            {
+              "type": "footstep",
+              "time": 33383
+            },
+            {
+              "type": "footstep",
+              "time": 33808
+            },
+            {
+              "type": "footstep",
+              "time": 34233
+            },
+            {
+              "type": "pickup",
+              "time": 35533,
+              "body": "loop-block-cube"
+            },
+            {
+              "type": "receiver-power",
+              "time": 36042,
+              "id": "loop-light"
+            },
+            {
+              "type": "shutter-open",
+              "time": 36042,
+              "id": "loop-upper-door"
+            },
+            {
+              "type": "footstep",
+              "time": 38150
+            },
+            {
+              "type": "footstep",
+              "time": 38575
+            },
+            {
+              "type": "footstep",
+              "time": 39000
+            },
+            {
+              "type": "footstep",
+              "time": 39425
+            },
+            {
+              "type": "footstep",
+              "time": 41267
+            },
+            {
+              "type": "lift-motor",
+              "time": 42042,
+              "id": "loop-lift"
+            },
+            {
+              "type": "enter",
+              "time": 43675,
+              "body": "loop-block-cube",
+              "from": 1,
+              "to": 0,
+              "fromSurface": "loop-return",
+              "toSurface": "loop-source",
+              "speed": 17.98195877380302,
+              "exitSpeed": 17.98195877380302,
+              "held": "loop-block-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 44017
+            },
+            {
+              "type": "enter",
+              "time": 44317,
+              "body": "player",
+              "from": 1,
+              "to": 0,
+              "fromSurface": "loop-return",
+              "toSurface": "loop-source",
+              "speed": 4.788258015877096,
+              "exitSpeed": 4.788258015877096,
+              "held": "loop-block-cube"
+            },
+            {
+              "type": "land",
+              "time": 44325
+            },
+            {
+              "type": "footstep",
+              "time": 44442
+            },
+            {
+              "type": "lift-arrival",
+              "time": 45542,
+              "id": "loop-lift",
+              "value": "GALLERY"
+            },
+            {
+              "type": "footstep",
+              "time": 46100
+            },
+            {
+              "type": "footstep",
+              "time": 46525
+            },
+            {
+              "type": "pad",
+              "time": 46908,
+              "pad": "loop-service",
+              "crate": "player"
+            },
+            {
+              "type": "footstep",
+              "time": 46950
+            },
+            {
+              "type": "footstep",
+              "time": 47500
+            },
+            {
+              "type": "button-release",
+              "time": 47783,
+              "pad": "loop-service",
+              "crate": "player"
+            },
+            {
+              "type": "footstep",
+              "time": 47925
+            },
+            {
+              "type": "footstep",
+              "time": 48350
+            },
+            {
+              "type": "drop",
+              "time": 50775,
+              "body": "loop-block-cube"
+            },
+            {
+              "type": "contact",
+              "time": 50808,
+              "body": "loop-block-cube",
+              "speed": 0.7104903952791243
+            },
+            {
+              "type": "lift-motor",
+              "time": 51542,
+              "id": "loop-lift"
+            },
+            {
+              "type": "footstep",
+              "time": 54825
+            },
+            {
+              "type": "lift-arrival",
+              "time": 55042,
+              "id": "loop-lift",
+              "value": "base"
+            },
+            {
+              "type": "footstep",
+              "time": 55250
+            },
+            {
+              "type": "footstep",
+              "time": 55675
+            },
+            {
+              "type": "footstep",
+              "time": 56242
+            },
+            {
+              "type": "footstep",
+              "time": 56667
+            },
+            {
+              "type": "footstep",
+              "time": 59175
+            },
+            {
+              "type": "footstep",
+              "time": 59600
+            },
+            {
+              "type": "footstep",
+              "time": 61025
+            },
+            {
+              "type": "lift-motor",
+              "time": 61042,
+              "id": "loop-lift"
+            },
+            {
+              "type": "footstep",
+              "time": 63642
+            },
+            {
+              "type": "footstep",
+              "time": 64067
+            },
+            {
+              "type": "footstep",
+              "time": 64492
+            },
+            {
+              "type": "lift-arrival",
+              "time": 64542,
+              "id": "loop-lift",
+              "value": "GALLERY"
+            },
+            {
+              "type": "footstep",
+              "time": 64917
+            },
+            {
+              "type": "footstep",
+              "time": 65392
+            },
+            {
+              "type": "footstep",
+              "time": 65817
+            },
+            {
+              "type": "footstep",
+              "time": 66358
+            },
+            {
+              "type": "footstep",
+              "time": 66783
+            },
+            {
+              "type": "footstep",
+              "time": 67225
+            },
+            {
+              "type": "footstep",
+              "time": 67650
+            },
+            {
+              "type": "footstep",
+              "time": 68125
+            },
+            {
+              "type": "footstep",
+              "time": 68550
+            },
+            {
+              "type": "lift-motor",
+              "time": 70542,
+              "id": "loop-lift"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 74042,
+              "id": "loop-lift",
+              "value": "base"
+            },
+            {
+              "type": "footstep",
+              "time": 74225
+            },
+            {
+              "type": "footstep",
+              "time": 74650
+            },
+            {
+              "type": "lift-motor",
+              "time": 80042,
+              "id": "loop-lift"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 83542,
+              "id": "loop-lift",
+              "value": "GALLERY"
+            },
+            {
+              "type": "footstep",
+              "time": 83725
+            },
+            {
+              "type": "footstep",
+              "time": 84150
+            },
+            {
+              "type": "footstep",
+              "time": 86125
+            },
+            {
+              "type": "footstep",
+              "time": 86550
+            },
+            {
+              "type": "footstep",
+              "time": 86975
+            },
+            {
+              "type": "footstep",
+              "time": 87675
+            },
+            {
+              "type": "footstep",
+              "time": 88100
+            },
+            {
+              "type": "footstep",
+              "time": 88525
+            }
+          ],
+          "mechanisms": [
+            "cargo",
+            "shutters",
+            "buttons",
+            "portals",
+            "beams",
+            "lifts"
+          ]
+        },
+        "respawns": 0
+      },
+      "newCommand1basedToHistoricalAction0based": {
+        "10": 79,
+        "11": 80,
+        "12": 81,
+        "13": 82,
+        "14": 83,
+        "15": 84,
+        "16": 85,
+        "17": 86,
+        "18": 87,
+        "19": 88,
+        "20": 89,
+        "21": 90,
+        "22": 91,
+        "23": 92,
+        "24": 93,
+        "25": 94,
+        "26": 95,
+        "27": 96,
+        "28": 97,
+        "29": 98,
+        "30": 99,
+        "31": 100,
+        "32": 101,
+        "33": 102,
+        "34": 103,
+        "35": 104,
+        "36": 105,
+        "37": 106,
+        "38": 107,
+        "39": 108,
+        "40": 109,
+        "41": 110,
+        "42": 111,
+        "43": 112,
+        "44": 113,
+        "45": 114,
+        "46": 115,
+        "47": 116,
+        "48": 117,
+        "49": 118,
+        "50": 119,
+        "51": 120,
+        "52": 121,
+        "53": 122,
+        "54": 123,
+        "55": 124,
+        "56": 125,
+        "57": 126,
+        "58": 127,
+        "59": 128,
+        "60": 129,
+        "61": 130,
+        "62": 131,
+        "63": 132,
+        "64": 133,
+        "65": 134,
+        "66": 135,
+        "69": 136,
+        "70": 137,
+        "72": 138,
+        "73": 139
+      },
+      "onlyChanges": "Fresh menu/prior exact prefix/unlock/base wrappers; explicit exit and zero-respawn assertions after existing goal assertion; menu assertion after existing reload. Actual movement, aim, moving-cargo pickup, key-when, timer waits, captures and reload/prefix/export tail preserved exactly."
+    }
+  ],
+  "readOnlyRuntimeHashes": {
+    "src/core/world.ts": "e04f8690ddfb9306c9602a25a104b5e47dbe6829b937cf53da82debf52be3d94",
+    "src/core/levels/passive.ts": "c24ebe3f3ff8b73d37069c9ad433caa82d692271485f9b51d8798b7d1b1cdb26",
+    "src/core/levels/passive-english.ts": "7602d364435c34e1babff01aa325175ffc433f9cc2891e6f92d1d5efa96a41d1"
+  },
+  "publication": {
+    "status": "READY / UNEXECUTED",
+    "method": "Complete sibling temp files atomically replaced, then every published SHA checked against the prepared receipt. No action was executed.",
+    "commands": [
+      58,
+      62,
+      60,
+      37,
+      73
+    ]
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "status": "READ_ONLY_STOP_SCHEMA_AUDIT_PASS_NO_RECIPE_CORRECTION",
+  "runtimeExecution": "NOT RUN",
+  "scope": "Implicit lifts use native public pose/stopped plus moving=false and full-body grounded support; no at:BASE/UPPER signal assumed. Explicit freight carrier also uses physical pose. Timer24 is a shutter progress/clock/pad gate.",
+  "sources": [
+    {
+      "path": "src/core/main.ts",
+      "sha256": "4f8f8a90314cc2f08172d7e3d83d4dfea90ac365ad210e043be3b4db3a51f6e0",
+      "contract": "line211 transportReadings maps every lift/moving-platform to Rapier rigid translation/linvel/stopped; fallback stop labels do not require flags"
+    },
+    {
+      "path": "src/core/world.ts",
+      "sha256": "e04f8690ddfb9306c9602a25a104b5e47dbe6829b937cf53da82debf52be3d94",
+      "contract": "line454 flags moving:id for every current device"
+    },
+    {
+      "path": "src/core/levels/references.ts",
+      "sha256": "f95bafa542e9a13043f5a43de68f3a11a51220fff4d20b3006ba42f04b3117be",
+      "contract": "job-lift/receiver-lift/balcony-lift omit authored stops; freight-carrier has LOADING/RETURN stops"
+    }
+  ],
+  "records": [
+    {
+      "level": 21,
+      "recipeSHA256": "a461f516a4c5690e0cac900902fa1e7924e7fe380d98cd117b6a85e0b5d1df6e",
+      "gates": [
+        {
+          "line": 54,
+          "physicalStopPredicates": [
+            {
+              "path": "transportMotion",
+              "id": "job-lift",
+              "field": "stopped",
+              "equals": true
+            },
+            {
+              "path": "transportMotion",
+              "id": "job-lift",
+              "field": "position.1",
+              "min": -0.21200000000000002,
+              "max": -0.188
+            }
+          ],
+          "hasGroundedSupport": true,
+          "noAtSignalAssumption": true
+        },
+        {
+          "line": 57,
+          "physicalStopPredicates": [
+            {
+              "path": "transportMotion",
+              "id": "job-lift",
+              "field": "stopped",
+              "equals": true
+            },
+            {
+              "path": "transportMotion",
+              "id": "job-lift",
+              "field": "position.1",
+              "min": 3.988,
+              "max": 4.012
+            }
+          ],
+          "hasGroundedSupport": true,
+          "noAtSignalAssumption": true
+        }
+      ],
+      "recipeChanged": false
+    },
+    {
+      "level": 22,
+      "recipeSHA256": "68983d476dba5aa40841b6cd47bbc6682d231561eaeefe853a6c00fd6e30491d",
+      "gates": [
+        {
+          "line": 31,
+          "physicalStopPredicates": [
+            {
+              "path": "transportMotion",
+              "id": "receiver-lift",
+              "field": "stopped",
+              "equals": true
+            },
+            {
+              "path": "transportMotion",
+              "id": "receiver-lift",
+              "field": "position.1",
+              "min": -0.21200000000000002,
+              "max": -0.188
+            }
+          ],
+          "hasGroundedSupport": true,
+          "noAtSignalAssumption": true
+        },
+        {
+          "line": 34,
+          "physicalStopPredicates": [
+            {
+              "path": "transportMotion",
+              "id": "receiver-lift",
+              "field": "stopped",
+              "equals": true
+            },
+            {
+              "path": "transportMotion",
+              "id": "receiver-lift",
+              "field": "position.1",
+              "min": 3.988,
+              "max": 4.012
+            }
+          ],
+          "hasGroundedSupport": true,
+          "noAtSignalAssumption": true
+        }
+      ],
+      "recipeChanged": false
+    },
+    {
+      "level": 23,
+      "recipeSHA256": "671b1f69f27973c4accc48622431d2468ea7d57e65ef53b18a046a720af313fb",
+      "gates": [],
+      "recipeChanged": false
+    },
+    {
+      "level": 24,
+      "recipeSHA256": "dc602f2eb058f876569c75182b0804ec14e511c248de6667ae3b901625d6e9ee",
+      "gates": [
+        {
+          "line": 34,
+          "physicalStopPredicates": [],
+          "hasGroundedSupport": true,
+          "noAtSignalAssumption": true
+        }
+      ],
+      "recipeChanged": false
+    },
+    {
+      "level": 25,
+      "recipeSHA256": "3efbbb20872fcad0df53234e7574258f87d537a113d0197148dfbea3061f498d",
+      "gates": [
+        {
+          "line": 31,
+          "physicalStopPredicates": [
+            {
+              "path": "transportMotion",
+              "id": "freight-carrier",
+              "field": "stopped",
+              "equals": true
+            },
+            {
+              "path": "transportMotion",
+              "id": "freight-carrier",
+              "field": "position.2",
+              "min": -8.012,
+              "max": -7.988
+            }
+          ],
+          "hasGroundedSupport": true,
+          "noAtSignalAssumption": true
+        },
+        {
+          "line": 37,
+          "physicalStopPredicates": [
+            {
+              "path": "transportMotion",
+              "id": "freight-carrier",
+              "field": "stopped",
+              "equals": true
+            },
+            {
+              "path": "transportMotion",
+              "id": "freight-carrier",
+              "field": "position.2",
+              "min": -8.012,
+              "max": -7.988
+            }
+          ],
+          "hasGroundedSupport": true,
+          "noAtSignalAssumption": true
+        },
+        {
+          "line": 61,
+          "physicalStopPredicates": [
+            {
+              "path": "transportMotion",
+              "id": "balcony-lift",
+              "field": "stopped",
+              "equals": true
+            },
+            {
+              "path": "transportMotion",
+              "id": "balcony-lift",
+              "field": "position.1",
+              "min": -0.21200000000000002,
+              "max": -0.188
+            }
+          ],
+          "hasGroundedSupport": true,
+          "noAtSignalAssumption": true
+        },
+        {
+          "line": 64,
+          "physicalStopPredicates": [
+            {
+              "path": "transportMotion",
+              "id": "balcony-lift",
+              "field": "stopped",
+              "equals": true
+            },
+            {
+              "path": "transportMotion",
+              "id": "balcony-lift",
+              "field": "position.1",
+              "min": 3.988,
+              "max": 4.012
+            }
+          ],
+          "hasGroundedSupport": true,
+          "noAtSignalAssumption": true
+        }
+      ],
+      "recipeChanged": false
+    }
+  ],
+  "browserCompilerNativeBuildGPU": "NOT RUN",
+  "runtimePreviewsAssets": "UNCHANGED"
+}
