@@ -1,0 +1,15 @@
+{"action":"clock","mode":"realtime"}
+{"action":"assert","path":"level","equals":32}
+{"action":"walk","x":8,"z":2.8}
+{"action":"aim","target":[8,1.52,-2]}
+{"action":"key","code":"KeyW","ms":800}
+{"action":"wait","ms":1500}
+{"action":"assert-range","path":"world.player.position.1","min":-3.7,"max":-3.3}
+{"action":"capture","name":"32-genuine-catch-landing"}
+{"action":"walk","x":-8,"z":-11.8}
+{"action":"walk","x":-10,"z":-11.8}
+{"action":"walk","x":-10,"z":3}
+{"action":"assert-range","path":"world.player.position.1","min":0.8,"max":1}
+{"action":"assert","path":"world.respawns","equals":0}
+{"action":"assert","path":"world.result","equals":null}
+{"action":"capture","name":"32-actual-low-end-stair-return"}

@@ -1,0 +1,41 @@
+{
+  "sequentialCommands": [
+    [
+      "node_modules/.bin/tsc",
+      "--noEmit"
+    ],
+    [
+      "node_modules/.bin/tsc",
+      "--noEmit",
+      "--target",
+      "ES2023",
+      "--module",
+      "ESNext",
+      "--moduleResolution",
+      "Bundler",
+      "--lib",
+      "ES2023,DOM",
+      "--strict",
+      "--skipLibCheck",
+      "--esModuleInterop",
+      "--types",
+      "node",
+      "--typeRoots",
+      "/Users/acedzn/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/@types,node_modules/@types",
+      "tests/portal-renderer.test.ts"
+    ],
+    [
+      "node_modules/.bin/tsx",
+      "--test",
+      "--test-concurrency=1",
+      "tests/portal-renderer.test.ts",
+      "tests/portal-beam.test.ts"
+    ]
+  ],
+  "exitCodes": [
+    0,
+    0,
+    0
+  ],
+  "scope": "Source/resource lifecycle tests only; actualWebGL/performance/visualproof stillpending"
+}

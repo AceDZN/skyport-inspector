@@ -1,0 +1,2641 @@
+{
+  "scope": "Unregistered authored-spawn native route. Camera/WASD/E/ray-clear portals only. Decorative visibility, realtime mouse and earned save remain pending.",
+  "number": 31,
+  "contrast": true,
+  "error": null,
+  "inputs": [
+    {
+      "action": "walk",
+      "x": 7,
+      "z": 1
+    },
+    {
+      "action": "aim",
+      "target": [
+        11.985,
+        1.55,
+        8.55
+      ]
+    },
+    {
+      "action": "place",
+      "index": 0
+    },
+    {
+      "action": "aim",
+      "target": [
+        0.55,
+        1.55,
+        3.985
+      ]
+    },
+    {
+      "action": "place",
+      "index": 1
+    },
+    {
+      "action": "walk",
+      "x": 7,
+      "z": -0.5
+    },
+    {
+      "action": "walk",
+      "x": 7,
+      "z": -4.5
+    },
+    {
+      "action": "walk",
+      "x": 7,
+      "z": -7.5
+    },
+    {
+      "action": "walk",
+      "x": 7,
+      "z": -12
+    },
+    {
+      "action": "walk",
+      "x": 7,
+      "z": -19
+    }
+  ],
+  "ridingFrames": {
+    "receiver-lift": 420
+  },
+  "events": [
+    {
+      "type": "land",
+      "time": 0.008333333333333333
+    },
+    {
+      "type": "footstep",
+      "time": 0.4250000000000005
+    },
+    {
+      "type": "footstep",
+      "time": 0.8499999999999994
+    },
+    {
+      "type": "shutter-open",
+      "time": 1.2166666666666648,
+      "id": "button-hatch"
+    },
+    {
+      "type": "pad",
+      "time": 1.2166666666666648,
+      "pad": "floor-button",
+      "crate": "player"
+    },
+    {
+      "type": "footstep",
+      "time": 1.274999999999998
+    },
+    {
+      "type": "button-release",
+      "time": 1.691666666666663,
+      "pad": "floor-button",
+      "crate": "player"
+    },
+    {
+      "type": "footstep",
+      "time": 1.6999999999999964
+    },
+    {
+      "type": "footstep",
+      "time": 2.124999999999995
+    },
+    {
+      "type": "portalA",
+      "time": 2.61666666666666,
+      "surface": "beam-source",
+      "point": [
+        11.959999999999999,
+        1.55,
+        8.55
+      ]
+    },
+    {
+      "type": "portalB",
+      "time": 2.6249999999999933,
+      "surface": "beam-return",
+      "point": [
+        0.55,
+        1.55,
+        3.96
+      ]
+    },
+    {
+      "type": "receiver-power",
+      "time": 2.6333333333333266,
+      "id": "wall-light"
+    },
+    {
+      "type": "shutter-open",
+      "time": 2.6333333333333266,
+      "id": "receiver-hatch"
+    },
+    {
+      "type": "shutter-open",
+      "time": 2.6333333333333266,
+      "id": "receiver-exit-door"
+    },
+    {
+      "type": "footstep",
+      "time": 3.6416666666666564
+    },
+    {
+      "type": "footstep",
+      "time": 4.083333333333326
+    },
+    {
+      "type": "footstep",
+      "time": 4.508333333333347
+    },
+    {
+      "type": "footstep",
+      "time": 4.933333333333368
+    },
+    {
+      "type": "lift-motor",
+      "time": 8.633333333333484,
+      "id": "receiver-lift"
+    },
+    {
+      "type": "lift-arrival",
+      "time": 12.133333333333285,
+      "id": "receiver-lift",
+      "value": "GALLERY"
+    },
+    {
+      "type": "lift-motor",
+      "time": 18.133333333332946,
+      "id": "receiver-lift"
+    },
+    {
+      "type": "lift-arrival",
+      "time": 21.633333333332747,
+      "id": "receiver-lift",
+      "value": "base"
+    },
+    {
+      "type": "footstep",
+      "time": 21.64166666666608
+    },
+    {
+      "type": "footstep",
+      "time": 22.066666666666055
+    },
+    {
+      "type": "lift-motor",
+      "time": 27.633333333332406,
+      "id": "receiver-lift"
+    },
+    {
+      "type": "footstep",
+      "time": 31.091666666665542
+    },
+    {
+      "type": "lift-arrival",
+      "time": 31.133333333332207,
+      "id": "receiver-lift",
+      "value": "GALLERY"
+    },
+    {
+      "type": "footstep",
+      "time": 31.516666666665518
+    },
+    {
+      "type": "footstep",
+      "time": 31.941666666665494
+    },
+    {
+      "type": "footstep",
+      "time": 32.36666666666547
+    },
+    {
+      "type": "footstep",
+      "time": 32.79166666666545
+    },
+    {
+      "type": "complete",
+      "time": 33.183333333332094,
+      "chamber": 31
+    }
+  ],
+  "checkpoints": [
+    {
+      "label": "actual-authored-spawn",
+      "state": {
+        "room": "chamber-31",
+        "number": 31,
+        "mission": "Use the hatch that is opened by the wall receiver. Keep the receiver lit.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            6,
+            0.8650867342948914,
+            11
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "yaw": 0.2,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [
+          {
+            "id": "supply-cube",
+            "position": [
+              -8,
+              0.5498895645141602,
+              9
+            ],
+            "velocity": [
+              -0.000004421958692546468,
+              -1.4878460774525593e-7,
+              -0.000004285005161364097
+            ],
+            "rotation": [
+              3.6461420904743136e-7,
+              3.898113169059636e-12,
+              -3.701345292483893e-7,
+              1
+            ],
+            "angularVelocity": [
+              -0.000007747840754745994,
+              -4.1019013704871244e-26,
+              0.000007995471605681814
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "floor-button",
+            "position": [
+              6,
+              0.14,
+              6
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "button-hatch",
+            "kind": "shutter",
+            "label": "BUTTON HATCH",
+            "position": [
+              -12.12,
+              1.5,
+              -9
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "receiver-hatch",
+            "kind": "shutter",
+            "label": "RECEIVER HATCH",
+            "position": [
+              7,
+              1.5,
+              -2
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "receiver-lift",
+            "kind": "lift",
+            "label": "RECEIVER GALLERY",
+            "position": [
+              7,
+              -0.2,
+              -8
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "receiver-exit-door",
+            "kind": "shutter",
+            "label": "RECEIVER EXIT",
+            "position": [
+              7,
+              5.7,
+              -16.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "cargo-source",
+            "position": [
+              6,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "cargo-return",
+            "position": [
+              -11.985,
+              1.75,
+              8
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          },
+          {
+            "id": "beam-source",
+            "position": [
+              11.985,
+              1.75,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "beam-return",
+            "position": [
+              0,
+              1.75,
+              3.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "button-exit",
+            "label": "EXIT",
+            "position": [
+              -14.54,
+              1.5,
+              -9
+            ],
+            "size": [
+              3.880000000000001,
+              3,
+              2.7600000000000007
+            ]
+          },
+          {
+            "id": "receiver-exit",
+            "label": "EXIT",
+            "position": [
+              7,
+              5.7,
+              -18.490000000000002
+            ],
+            "size": [
+              2.7600000000000007,
+              3,
+              3.7799999999999976
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "supply-emitter": {
+            "segments": [
+              {
+                "from": [
+                  9,
+                  0.9,
+                  8
+                ],
+                "to": [
+                  11.999999761581421,
+                  0.9,
+                  8
+                ]
+              }
+            ],
+            "stop": "obstacle",
+            "obstacle": "supply-east",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "floor-button": false,
+          "safety:button-hatch": false,
+          "door-safety": false,
+          "moving:button-hatch": false,
+          "safety:receiver-hatch": false,
+          "moving:receiver-hatch": false,
+          "moving:receiver-lift": false,
+          "safety:receiver-exit-door": false,
+          "moving:receiver-exit-door": false,
+          "wall-light": false
+        },
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "supply-floor",
+          "normal": {
+            "x": 0.000031809289794182405,
+            "y": 0.9999999403953552,
+            "z": -0.000007952322448545601
+          },
+          "witness": {
+            "x": 6.00071907043457,
+            "y": 0,
+            "z": 11.000015258789062
+          },
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": 0,
+            "y": -0.0011111111380159855,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-independent-wall-receiver",
+      "state": {
+        "room": "chamber-31",
+        "number": 31,
+        "mission": "Use the hatch that is opened by the wall receiver. Keep the receiver lit.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            7.010618209838867,
+            0.8650814294815063,
+            0.8900661468505859
+          ],
+          "velocity": [
+            9.876102840057359e-11,
+            0,
+            -1.0223914586072517e-9
+          ],
+          "yaw": 2.0157401318542743,
+          "pitch": 0.004892749067961317,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "beam-source",
+            "position": [
+              11.959999999999999,
+              1.55,
+              8.55
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "beam-return",
+            "position": [
+              0.55,
+              1.55,
+              3.96
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "supply-cube",
+            "position": [
+              -8,
+              0.5498895645141602,
+              9
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              1.9989172983514436e-7,
+              3.889230083820028e-12,
+              -2.2717266290328553e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "floor-button",
+            "position": [
+              6,
+              0.14,
+              6
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "button-hatch",
+            "kind": "shutter",
+            "label": "BUTTON HATCH",
+            "position": [
+              -12.12,
+              1.5,
+              -9
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "receiver-hatch",
+            "kind": "shutter",
+            "label": "RECEIVER HATCH",
+            "position": [
+              7,
+              5,
+              -2
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "receiver-lift",
+            "kind": "lift",
+            "label": "RECEIVER GALLERY",
+            "position": [
+              7,
+              -0.2,
+              -8
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "receiver-exit-door",
+            "kind": "shutter",
+            "label": "RECEIVER EXIT",
+            "position": [
+              7,
+              9.2,
+              -16.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "cargo-source",
+            "position": [
+              6,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "cargo-return",
+            "position": [
+              -11.985,
+              1.75,
+              8
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          },
+          {
+            "id": "beam-source",
+            "position": [
+              11.985,
+              1.75,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "beam-return",
+            "position": [
+              0,
+              1.75,
+              3.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "button-exit",
+            "label": "EXIT",
+            "position": [
+              -14.54,
+              1.5,
+              -9
+            ],
+            "size": [
+              3.880000000000001,
+              3,
+              2.7600000000000007
+            ]
+          },
+          {
+            "id": "receiver-exit",
+            "label": "EXIT",
+            "position": [
+              7,
+              5.7,
+              -18.490000000000002
+            ],
+            "size": [
+              2.7600000000000007,
+              3,
+              3.7799999999999976
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "supply-emitter": {
+            "segments": [
+              {
+                "from": [
+                  9,
+                  0.9,
+                  8
+                ],
+                "to": [
+                  11.959999999999999,
+                  0.9,
+                  8
+                ],
+                "portal": "0"
+              },
+              {
+                "from": [
+                  -6.661338147750939e-16,
+                  0.9,
+                  3.959
+                ],
+                "to": [
+                  -6.661338147750939e-16,
+                  0.9,
+                  -7.259999999999998
+                ]
+              }
+            ],
+            "stop": "receiver",
+            "receiver": "wall-light",
+            "hops": 1
+          }
+        },
+        "signals": {
+          "floor-button": false,
+          "safety:button-hatch": false,
+          "door-safety": false,
+          "moving:button-hatch": false,
+          "safety:receiver-hatch": false,
+          "moving:receiver-hatch": false,
+          "moving:receiver-lift": false,
+          "safety:receiver-exit-door": false,
+          "moving:receiver-exit-door": false,
+          "wall-light": true
+        },
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "footstep",
+            "time": 425
+          },
+          {
+            "type": "footstep",
+            "time": 850
+          },
+          {
+            "type": "shutter-open",
+            "time": 1217,
+            "id": "button-hatch"
+          },
+          {
+            "type": "pad",
+            "time": 1217,
+            "pad": "floor-button",
+            "crate": "player"
+          },
+          {
+            "type": "footstep",
+            "time": 1275
+          },
+          {
+            "type": "button-release",
+            "time": 1692,
+            "pad": "floor-button",
+            "crate": "player"
+          },
+          {
+            "type": "footstep",
+            "time": 1700
+          },
+          {
+            "type": "footstep",
+            "time": 2125
+          },
+          {
+            "type": "portalA",
+            "time": 2617,
+            "surface": "beam-source",
+            "point": [
+              11.959999999999999,
+              1.55,
+              8.55
+            ]
+          },
+          {
+            "type": "portalB",
+            "time": 2625,
+            "surface": "beam-return",
+            "point": [
+              0.55,
+              1.55,
+              3.96
+            ]
+          },
+          {
+            "type": "receiver-power",
+            "time": 2633,
+            "id": "wall-light"
+          },
+          {
+            "type": "shutter-open",
+            "time": 2633,
+            "id": "receiver-hatch"
+          },
+          {
+            "type": "shutter-open",
+            "time": 2633,
+            "id": "receiver-exit-door"
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "supply-floor",
+          "normal": {
+            "x": 0,
+            "y": 1,
+            "z": -0.000015897479897830635
+          },
+          "witness": {
+            "x": 7.008397102355957,
+            "y": -2.9802322387695312e-8,
+            "z": 0.8889007568359375
+          },
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": 8.23008544995063e-13,
+            "y": -0.0011111111380159855,
+            "z": -8.519928686168132e-12
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-receiver-lift-boarding",
+      "state": {
+        "room": "chamber-31",
+        "number": 31,
+        "mission": "Use the hatch that is opened by the wall receiver. Keep the receiver lit.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            7,
+            0.8651000261306763,
+            -7.602747440338135
+          ],
+          "velocity": [
+            -0.0000026042185601561276,
+            0,
+            -0.41929843882046036
+          ],
+          "yaw": 0.0000033086617455716903,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "beam-source",
+            "position": [
+              11.959999999999999,
+              1.55,
+              8.55
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "beam-return",
+            "position": [
+              0.55,
+              1.55,
+              3.96
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "supply-cube",
+            "position": [
+              -8,
+              0.5498895645141602,
+              9
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              1.9989172983514436e-7,
+              3.889230083820028e-12,
+              -2.2717266290328553e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "floor-button",
+            "position": [
+              6,
+              0.14,
+              6
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "button-hatch",
+            "kind": "shutter",
+            "label": "BUTTON HATCH",
+            "position": [
+              -12.12,
+              1.5,
+              -9
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "receiver-hatch",
+            "kind": "shutter",
+            "label": "RECEIVER HATCH",
+            "position": [
+              7,
+              5,
+              -2
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "receiver-lift",
+            "kind": "lift",
+            "label": "RECEIVER GALLERY",
+            "position": [
+              7,
+              -0.2,
+              -8
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "receiver-exit-door",
+            "kind": "shutter",
+            "label": "RECEIVER EXIT",
+            "position": [
+              7,
+              9.2,
+              -16.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "cargo-source",
+            "position": [
+              6,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "cargo-return",
+            "position": [
+              -11.985,
+              1.75,
+              8
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          },
+          {
+            "id": "beam-source",
+            "position": [
+              11.985,
+              1.75,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "beam-return",
+            "position": [
+              0,
+              1.75,
+              3.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "button-exit",
+            "label": "EXIT",
+            "position": [
+              -14.54,
+              1.5,
+              -9
+            ],
+            "size": [
+              3.880000000000001,
+              3,
+              2.7600000000000007
+            ]
+          },
+          {
+            "id": "receiver-exit",
+            "label": "EXIT",
+            "position": [
+              7,
+              5.7,
+              -18.490000000000002
+            ],
+            "size": [
+              2.7600000000000007,
+              3,
+              3.7799999999999976
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "supply-emitter": {
+            "segments": [
+              {
+                "from": [
+                  9,
+                  0.9,
+                  8
+                ],
+                "to": [
+                  11.959999999999999,
+                  0.9,
+                  8
+                ],
+                "portal": "0"
+              },
+              {
+                "from": [
+                  -6.661338147750939e-16,
+                  0.9,
+                  3.959
+                ],
+                "to": [
+                  -6.661338147750939e-16,
+                  0.9,
+                  -7.259999999999998
+                ]
+              }
+            ],
+            "stop": "receiver",
+            "receiver": "wall-light",
+            "hops": 1
+          }
+        },
+        "signals": {
+          "floor-button": false,
+          "safety:button-hatch": false,
+          "door-safety": false,
+          "moving:button-hatch": false,
+          "safety:receiver-hatch": false,
+          "moving:receiver-hatch": false,
+          "moving:receiver-lift": false,
+          "safety:receiver-exit-door": false,
+          "moving:receiver-exit-door": false,
+          "wall-light": true
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 2125
+          },
+          {
+            "type": "portalA",
+            "time": 2617,
+            "surface": "beam-source",
+            "point": [
+              11.959999999999999,
+              1.55,
+              8.55
+            ]
+          },
+          {
+            "type": "portalB",
+            "time": 2625,
+            "surface": "beam-return",
+            "point": [
+              0.55,
+              1.55,
+              3.96
+            ]
+          },
+          {
+            "type": "receiver-power",
+            "time": 2633,
+            "id": "wall-light"
+          },
+          {
+            "type": "shutter-open",
+            "time": 2633,
+            "id": "receiver-hatch"
+          },
+          {
+            "type": "shutter-open",
+            "time": 2633,
+            "id": "receiver-exit-door"
+          },
+          {
+            "type": "footstep",
+            "time": 3642
+          },
+          {
+            "type": "footstep",
+            "time": 4083
+          },
+          {
+            "type": "footstep",
+            "time": 4508
+          },
+          {
+            "type": "footstep",
+            "time": 4933
+          },
+          {
+            "type": "lift-motor",
+            "time": 8633,
+            "id": "receiver-lift"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 12133,
+            "id": "receiver-lift",
+            "value": "GALLERY"
+          },
+          {
+            "type": "lift-motor",
+            "time": 18133,
+            "id": "receiver-lift"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 21633,
+            "id": "receiver-lift",
+            "value": "base"
+          },
+          {
+            "type": "footstep",
+            "time": 21642
+          },
+          {
+            "type": "footstep",
+            "time": 22067
+          }
+        ]
+      },
+      "contacts": []
+    },
+    {
+      "label": "actual-requested-physical-completion",
+      "state": {
+        "room": "chamber-31",
+        "number": 31,
+        "mission": "Use the hatch that is opened by the wall receiver. Keep the receiver lit.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            6.999988555908203,
+            5.064981937408447,
+            -16.62055206298828
+          ],
+          "velocity": [
+            0.000019359349365009767,
+            0,
+            -4.799999989228897
+          ],
+          "yaw": -0.000004730040804450065,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "beam-source",
+            "position": [
+              11.959999999999999,
+              1.55,
+              8.55
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "beam-return",
+            "position": [
+              0.55,
+              1.55,
+              3.96
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "supply-cube",
+            "position": [
+              -8,
+              0.5498895645141602,
+              9
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              1.9989172983514436e-7,
+              3.889230083820028e-12,
+              -2.2717266290328553e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "floor-button",
+            "position": [
+              6,
+              0.14,
+              6
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "button-hatch",
+            "kind": "shutter",
+            "label": "BUTTON HATCH",
+            "position": [
+              -12.12,
+              1.5,
+              -9
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "receiver-hatch",
+            "kind": "shutter",
+            "label": "RECEIVER HATCH",
+            "position": [
+              7,
+              5,
+              -2
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "receiver-lift",
+            "kind": "lift",
+            "label": "RECEIVER GALLERY",
+            "position": [
+              7,
+              4,
+              -8
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "receiver-exit-door",
+            "kind": "shutter",
+            "label": "RECEIVER EXIT",
+            "position": [
+              7,
+              9.2,
+              -16.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "cargo-source",
+            "position": [
+              6,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "cargo-return",
+            "position": [
+              -11.985,
+              1.75,
+              8
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          },
+          {
+            "id": "beam-source",
+            "position": [
+              11.985,
+              1.75,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "beam-return",
+            "position": [
+              0,
+              1.75,
+              3.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "button-exit",
+            "label": "EXIT",
+            "position": [
+              -14.54,
+              1.5,
+              -9
+            ],
+            "size": [
+              3.880000000000001,
+              3,
+              2.7600000000000007
+            ]
+          },
+          {
+            "id": "receiver-exit",
+            "label": "EXIT",
+            "position": [
+              7,
+              5.7,
+              -18.490000000000002
+            ],
+            "size": [
+              2.7600000000000007,
+              3,
+              3.7799999999999976
+            ]
+          }
+        ],
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "receiver-exit",
+          "reason": "",
+          "events": [
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "footstep",
+              "time": 425
+            },
+            {
+              "type": "footstep",
+              "time": 850
+            },
+            {
+              "type": "shutter-open",
+              "time": 1217,
+              "id": "button-hatch"
+            },
+            {
+              "type": "pad",
+              "time": 1217,
+              "pad": "floor-button",
+              "crate": "player"
+            },
+            {
+              "type": "footstep",
+              "time": 1275
+            },
+            {
+              "type": "button-release",
+              "time": 1692,
+              "pad": "floor-button",
+              "crate": "player"
+            },
+            {
+              "type": "footstep",
+              "time": 1700
+            },
+            {
+              "type": "footstep",
+              "time": 2125
+            },
+            {
+              "type": "portalA",
+              "time": 2617,
+              "surface": "beam-source",
+              "point": [
+                11.959999999999999,
+                1.55,
+                8.55
+              ]
+            },
+            {
+              "type": "portalB",
+              "time": 2625,
+              "surface": "beam-return",
+              "point": [
+                0.55,
+                1.55,
+                3.96
+              ]
+            },
+            {
+              "type": "receiver-power",
+              "time": 2633,
+              "id": "wall-light"
+            },
+            {
+              "type": "shutter-open",
+              "time": 2633,
+              "id": "receiver-hatch"
+            },
+            {
+              "type": "shutter-open",
+              "time": 2633,
+              "id": "receiver-exit-door"
+            },
+            {
+              "type": "footstep",
+              "time": 3642
+            },
+            {
+              "type": "footstep",
+              "time": 4083
+            },
+            {
+              "type": "footstep",
+              "time": 4508
+            },
+            {
+              "type": "footstep",
+              "time": 4933
+            },
+            {
+              "type": "lift-motor",
+              "time": 8633,
+              "id": "receiver-lift"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 12133,
+              "id": "receiver-lift",
+              "value": "GALLERY"
+            },
+            {
+              "type": "lift-motor",
+              "time": 18133,
+              "id": "receiver-lift"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 21633,
+              "id": "receiver-lift",
+              "value": "base"
+            },
+            {
+              "type": "footstep",
+              "time": 21642
+            },
+            {
+              "type": "footstep",
+              "time": 22067
+            },
+            {
+              "type": "lift-motor",
+              "time": 27633,
+              "id": "receiver-lift"
+            },
+            {
+              "type": "footstep",
+              "time": 31092
+            },
+            {
+              "type": "lift-arrival",
+              "time": 31133,
+              "id": "receiver-lift",
+              "value": "GALLERY"
+            },
+            {
+              "type": "footstep",
+              "time": 31517
+            },
+            {
+              "type": "footstep",
+              "time": 31942
+            },
+            {
+              "type": "footstep",
+              "time": 32367
+            },
+            {
+              "type": "footstep",
+              "time": 32792
+            }
+          ],
+          "mechanisms": [
+            "shutters",
+            "buttons",
+            "beams",
+            "lifts"
+          ]
+        },
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "supply-emitter": {
+            "segments": [
+              {
+                "from": [
+                  9,
+                  0.9,
+                  8
+                ],
+                "to": [
+                  11.959999999999999,
+                  0.9,
+                  8
+                ],
+                "portal": "0"
+              },
+              {
+                "from": [
+                  -6.661338147750939e-16,
+                  0.9,
+                  3.959
+                ],
+                "to": [
+                  -6.661338147750939e-16,
+                  0.9,
+                  -7.259999999999998
+                ]
+              }
+            ],
+            "stop": "receiver",
+            "receiver": "wall-light",
+            "hops": 1
+          }
+        },
+        "signals": {
+          "floor-button": false,
+          "safety:button-hatch": false,
+          "door-safety": false,
+          "moving:button-hatch": false,
+          "safety:receiver-hatch": false,
+          "moving:receiver-hatch": false,
+          "moving:receiver-lift": false,
+          "safety:receiver-exit-door": false,
+          "moving:receiver-exit-door": false,
+          "wall-light": true
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 4508
+          },
+          {
+            "type": "footstep",
+            "time": 4933
+          },
+          {
+            "type": "lift-motor",
+            "time": 8633,
+            "id": "receiver-lift"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 12133,
+            "id": "receiver-lift",
+            "value": "GALLERY"
+          },
+          {
+            "type": "lift-motor",
+            "time": 18133,
+            "id": "receiver-lift"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 21633,
+            "id": "receiver-lift",
+            "value": "base"
+          },
+          {
+            "type": "footstep",
+            "time": 21642
+          },
+          {
+            "type": "footstep",
+            "time": 22067
+          },
+          {
+            "type": "lift-motor",
+            "time": 27633,
+            "id": "receiver-lift"
+          },
+          {
+            "type": "footstep",
+            "time": 31092
+          },
+          {
+            "type": "lift-arrival",
+            "time": 31133,
+            "id": "receiver-lift",
+            "value": "GALLERY"
+          },
+          {
+            "type": "footstep",
+            "time": 31517
+          },
+          {
+            "type": "footstep",
+            "time": 31942
+          },
+          {
+            "type": "footstep",
+            "time": 32367
+          },
+          {
+            "type": "footstep",
+            "time": 32792
+          },
+          {
+            "type": "complete",
+            "time": 33183,
+            "chamber": 31
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "receiver-vestibule",
+          "normal": {
+            "x": 0,
+            "y": 0.9999999403953552,
+            "z": -0.0000020026193396915914
+          },
+          "witness": {
+            "x": 6.999987602233887,
+            "y": 4.200000286102295,
+            "z": -16.5805606842041
+          },
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": 1.6132791813561198e-7,
+            "y": -0.0011111111380159855,
+            "z": -0.03999999910593033
+          }
+        }
+      ]
+    },
+    {
+      "label": "final",
+      "state": {
+        "room": "chamber-31",
+        "number": 31,
+        "mission": "Use the hatch that is opened by the wall receiver. Keep the receiver lit.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            6.999988555908203,
+            5.064981937408447,
+            -16.62055206298828
+          ],
+          "velocity": [
+            0.000019359349365009767,
+            0,
+            -4.799999989228897
+          ],
+          "yaw": -0.000004730040804450065,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "beam-source",
+            "position": [
+              11.959999999999999,
+              1.55,
+              8.55
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "beam-return",
+            "position": [
+              0.55,
+              1.55,
+              3.96
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "supply-cube",
+            "position": [
+              -8,
+              0.5498895645141602,
+              9
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              1.9989172983514436e-7,
+              3.889230083820028e-12,
+              -2.2717266290328553e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "floor-button",
+            "position": [
+              6,
+              0.14,
+              6
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "button-hatch",
+            "kind": "shutter",
+            "label": "BUTTON HATCH",
+            "position": [
+              -12.12,
+              1.5,
+              -9
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "receiver-hatch",
+            "kind": "shutter",
+            "label": "RECEIVER HATCH",
+            "position": [
+              7,
+              5,
+              -2
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "receiver-lift",
+            "kind": "lift",
+            "label": "RECEIVER GALLERY",
+            "position": [
+              7,
+              4,
+              -8
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "receiver-exit-door",
+            "kind": "shutter",
+            "label": "RECEIVER EXIT",
+            "position": [
+              7,
+              9.2,
+              -16.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "cargo-source",
+            "position": [
+              6,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "cargo-return",
+            "position": [
+              -11.985,
+              1.75,
+              8
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          },
+          {
+            "id": "beam-source",
+            "position": [
+              11.985,
+              1.75,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "beam-return",
+            "position": [
+              0,
+              1.75,
+              3.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "button-exit",
+            "label": "EXIT",
+            "position": [
+              -14.54,
+              1.5,
+              -9
+            ],
+            "size": [
+              3.880000000000001,
+              3,
+              2.7600000000000007
+            ]
+          },
+          {
+            "id": "receiver-exit",
+            "label": "EXIT",
+            "position": [
+              7,
+              5.7,
+              -18.490000000000002
+            ],
+            "size": [
+              2.7600000000000007,
+              3,
+              3.7799999999999976
+            ]
+          }
+        ],
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "receiver-exit",
+          "reason": "",
+          "events": [
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "footstep",
+              "time": 425
+            },
+            {
+              "type": "footstep",
+              "time": 850
+            },
+            {
+              "type": "shutter-open",
+              "time": 1217,
+              "id": "button-hatch"
+            },
+            {
+              "type": "pad",
+              "time": 1217,
+              "pad": "floor-button",
+              "crate": "player"
+            },
+            {
+              "type": "footstep",
+              "time": 1275
+            },
+            {
+              "type": "button-release",
+              "time": 1692,
+              "pad": "floor-button",
+              "crate": "player"
+            },
+            {
+              "type": "footstep",
+              "time": 1700
+            },
+            {
+              "type": "footstep",
+              "time": 2125
+            },
+            {
+              "type": "portalA",
+              "time": 2617,
+              "surface": "beam-source",
+              "point": [
+                11.959999999999999,
+                1.55,
+                8.55
+              ]
+            },
+            {
+              "type": "portalB",
+              "time": 2625,
+              "surface": "beam-return",
+              "point": [
+                0.55,
+                1.55,
+                3.96
+              ]
+            },
+            {
+              "type": "receiver-power",
+              "time": 2633,
+              "id": "wall-light"
+            },
+            {
+              "type": "shutter-open",
+              "time": 2633,
+              "id": "receiver-hatch"
+            },
+            {
+              "type": "shutter-open",
+              "time": 2633,
+              "id": "receiver-exit-door"
+            },
+            {
+              "type": "footstep",
+              "time": 3642
+            },
+            {
+              "type": "footstep",
+              "time": 4083
+            },
+            {
+              "type": "footstep",
+              "time": 4508
+            },
+            {
+              "type": "footstep",
+              "time": 4933
+            },
+            {
+              "type": "lift-motor",
+              "time": 8633,
+              "id": "receiver-lift"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 12133,
+              "id": "receiver-lift",
+              "value": "GALLERY"
+            },
+            {
+              "type": "lift-motor",
+              "time": 18133,
+              "id": "receiver-lift"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 21633,
+              "id": "receiver-lift",
+              "value": "base"
+            },
+            {
+              "type": "footstep",
+              "time": 21642
+            },
+            {
+              "type": "footstep",
+              "time": 22067
+            },
+            {
+              "type": "lift-motor",
+              "time": 27633,
+              "id": "receiver-lift"
+            },
+            {
+              "type": "footstep",
+              "time": 31092
+            },
+            {
+              "type": "lift-arrival",
+              "time": 31133,
+              "id": "receiver-lift",
+              "value": "GALLERY"
+            },
+            {
+              "type": "footstep",
+              "time": 31517
+            },
+            {
+              "type": "footstep",
+              "time": 31942
+            },
+            {
+              "type": "footstep",
+              "time": 32367
+            },
+            {
+              "type": "footstep",
+              "time": 32792
+            }
+          ],
+          "mechanisms": [
+            "shutters",
+            "buttons",
+            "beams",
+            "lifts"
+          ]
+        },
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "supply-emitter": {
+            "segments": [
+              {
+                "from": [
+                  9,
+                  0.9,
+                  8
+                ],
+                "to": [
+                  11.959999999999999,
+                  0.9,
+                  8
+                ],
+                "portal": "0"
+              },
+              {
+                "from": [
+                  -6.661338147750939e-16,
+                  0.9,
+                  3.959
+                ],
+                "to": [
+                  -6.661338147750939e-16,
+                  0.9,
+                  -7.259999999999998
+                ]
+              }
+            ],
+            "stop": "receiver",
+            "receiver": "wall-light",
+            "hops": 1
+          }
+        },
+        "signals": {
+          "floor-button": false,
+          "safety:button-hatch": false,
+          "door-safety": false,
+          "moving:button-hatch": false,
+          "safety:receiver-hatch": false,
+          "moving:receiver-hatch": false,
+          "moving:receiver-lift": false,
+          "safety:receiver-exit-door": false,
+          "moving:receiver-exit-door": false,
+          "wall-light": true
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 4508
+          },
+          {
+            "type": "footstep",
+            "time": 4933
+          },
+          {
+            "type": "lift-motor",
+            "time": 8633,
+            "id": "receiver-lift"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 12133,
+            "id": "receiver-lift",
+            "value": "GALLERY"
+          },
+          {
+            "type": "lift-motor",
+            "time": 18133,
+            "id": "receiver-lift"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 21633,
+            "id": "receiver-lift",
+            "value": "base"
+          },
+          {
+            "type": "footstep",
+            "time": 21642
+          },
+          {
+            "type": "footstep",
+            "time": 22067
+          },
+          {
+            "type": "lift-motor",
+            "time": 27633,
+            "id": "receiver-lift"
+          },
+          {
+            "type": "footstep",
+            "time": 31092
+          },
+          {
+            "type": "lift-arrival",
+            "time": 31133,
+            "id": "receiver-lift",
+            "value": "GALLERY"
+          },
+          {
+            "type": "footstep",
+            "time": 31517
+          },
+          {
+            "type": "footstep",
+            "time": 31942
+          },
+          {
+            "type": "footstep",
+            "time": 32367
+          },
+          {
+            "type": "footstep",
+            "time": 32792
+          },
+          {
+            "type": "complete",
+            "time": 33183,
+            "chamber": 31
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "receiver-vestibule",
+          "normal": {
+            "x": 0,
+            "y": 0.9999999403953552,
+            "z": -0.0000020026193396915914
+          },
+          "witness": {
+            "x": 6.999987602233887,
+            "y": 4.200000286102295,
+            "z": -16.5805606842041
+          },
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": 1.6132791813561198e-7,
+            "y": -0.0011111111380159855,
+            "z": -0.03999999910593033
+          }
+        }
+      ]
+    }
+  ]
+}

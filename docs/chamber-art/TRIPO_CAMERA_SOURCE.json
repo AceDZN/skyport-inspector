@@ -1,0 +1,32 @@
+{
+  "runtimeFile": "src/chamber-scene.ts",
+  "sha256": "43e0cf98a277a38836ff75955fcf812f7167a969f3a49b6f22e59b359975be70",
+  "bytes": 100088,
+  "snapshot": "work/art/source-snapshots/chamber-scene-owned-projector.ts",
+  "asset": {
+    "file": "public/models/owned-optical-projector.glb",
+    "bytes": 639492,
+    "sha256": "f7cf372aae3a68f57ed3799c99c966f8bff918aff922ef7fd6831e381edbd754",
+    "source": "/Users/acedzn/dev/AceDZN-exp/short-circuit/public/models/security-camera.glb",
+    "sourceTask": "12b2777c-65e2-4070-aca5-c34bbe0f552e",
+    "originalBytesUnchanged": true
+  },
+  "runtimeTouchedFiles": [
+    "src/chamber-scene.ts"
+  ],
+  "status": "Frozen source-only owned Tripo integration, actual GET/texture/shader/power pixels pending",
+  "diagnosticAPI": "scene.assetDiagnostics() returns plain serializable state/fallback/source hash/actual loaded meshIDs/pose/bounds/trim/lateDiscards",
+  "cleanupAPI": "scene.disposeOwnedAssets(); room build/reset already invokes guarded cleanup",
+  "validation": [
+    "TypeScript PASS",
+    "actual GLTF binary/geometry/PBR-material parse with fake bitmap decoder only PASS",
+    "aperture+axis native pose equality PASS",
+    "old housing/head-envelope bounds PASS",
+    "power mask limits real lens vertices, preserves body base tint PASS",
+    "active/stale/failure cleanup+fallback PASS",
+    "repaired cube depth/hulls/clip-material pools and responsive gun fit PASS",
+    "gun/cube/cue method blocks unchanged from9397"
+  ],
+  "GPUOrBrowserOrBuild": false,
+  "actualTripoUseFinalGate": "OPEN until frozen browser verifies successful local asset GET/hash, visible mesh/lens/beam power/occlusion, shader/no errors and room-change cleanup"
+}

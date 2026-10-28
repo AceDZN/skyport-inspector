@@ -1,0 +1,7 @@
+# E30 first native batch: 4/4 pass
+
+Assigned four-case process fully exited0,2496ms. Raw `native-four.txt`, as-run source digests and actual per-route records remain here. Current source World SHA256 is `054fe818b86b3eda9d17d240b1f0aeebaa960aff1afe4669003df8131a60af23`; the frozen browser bundle was not tested.
+
+Passed identical physical alternatives; actual optical connection releases cargo access, genuine relinking removes current gallery light, and the player retrieves actual cargo through the walking pair. Base restores the optical return, carries cargo through the pair again to GALLERY, maintains actual pressure/light, rides the loaded lift and walks through the upper leaf. Contrast retains the physically latched access, leaves current gallery light dark, delivers the same real cargo to SERVICE and reaches the lower route. A real source offset during mid-ascent removes light, brakes the current lift pose, then restoration resumes its phase smoothly before genuine upper completion.
+
+All route completions use0respawns. Real cargo crossings are observed; no body pose, velocity, cargo transform, machine choice, history, goal, save or unlock is assigned. No geometry/engine/assertion, registry, build, GPU, browser or parent storage changed. Metadata reads current sensors only; the paths do not force an interruption-count win condition or certify language mastery/all readout behavior. Public-input target/controls/audio/save acceptance remains pending. Process fully closed; native slot explicitly released to the next queued batch.

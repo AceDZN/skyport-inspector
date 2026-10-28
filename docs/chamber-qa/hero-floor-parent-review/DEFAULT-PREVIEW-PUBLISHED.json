@@ -1,0 +1,75 @@
+{
+  "scope": "Accepted immutable repair promoted to default preview, assets first/index last. No source rebuild or deletion; 35 registered levels remain.",
+  "url": "http://localhost:4261/",
+  "verified": [
+    {
+      "url": "http://localhost:4261/assets/main-D2DMbgrH.js",
+      "status": 200,
+      "bytes": 5582651,
+      "sha256": "48cb251e7280e8ce8d6589c87e161e20f00da08d10259ac4369cc71f5d689761"
+    },
+    {
+      "url": "http://localhost:4261/models/hero-projector.glb",
+      "status": 200,
+      "bytes": 1049404,
+      "sha256": "2215cbd530dd2e7b84b16dbc54efa69b9a57b38d92e19b26ef689287cfbde087"
+    },
+    {
+      "url": "http://localhost:4261/models/hero-weighted-cargo.glb",
+      "status": 200,
+      "bytes": 991240,
+      "sha256": "143129e2a3439cf4b074f57d9b22b9b52b8e008078e1975647a50e88fdf90053"
+    }
+  ],
+  "freshBrowserSmoke": {
+    "processExit": 0,
+    "actions": 5,
+    "models": [
+      {
+        "url": "http://localhost:4261/models/hero-projector.glb",
+        "status": 200
+      },
+      {
+        "url": "http://localhost:4261/models/hero-weighted-cargo.glb",
+        "status": 200
+      }
+    ],
+    "versions": [
+      {
+        "graphics": {
+          "available": true,
+          "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M2 Max, Unspecified Version)",
+          "vendor": "Google Inc. (Apple)",
+          "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+          "attributes": {
+            "alpha": true,
+            "antialias": true,
+            "depth": true,
+            "desynchronized": false,
+            "failIfMajorPerformanceCaveat": false,
+            "powerPreference": "default",
+            "premultipliedAlpha": true,
+            "preserveDrawingBuffer": false,
+            "stencil": false,
+            "xrCompatible": false
+          },
+          "maxTextureSize": 16384,
+          "pixelRatio": 1
+        },
+        "at": "2026-10-28T14:40:06.451Z",
+        "url": "http://localhost:4261/",
+        "scripts": [
+          {
+            "url": "http://localhost:4261/assets/main-D2DMbgrH.js",
+            "sha256": "48cb251e7280e8ce8d6589c87e161e20f00da08d10259ac4369cc71f5d689761"
+          }
+        ]
+      }
+    ],
+    "pageErrors": [],
+    "consoleErrors": [],
+    "freshProfileNoCompletedLevels": true,
+    "screenshot": "reports/rift-tripo-hero-repair/combined-evidence/default-preview-real-tripo-new-player.png",
+    "screenshotSHA256": "b9bfc7793b760765934faf79ebf14068aaac8c41d8a9820d54936274d6e6b27a"
+  }
+}

@@ -1,0 +1,415 @@
+/** Unregistered conditional41–45 authoring batch. One full route precedes expansion.
+ * Reuses independently inspected freight25/08 and reference22 construction kit.
+ * Geometry and circuits are explicit and never read English or expected exit.
+ */
+import type{CoreLevel}from'../level';
+import{ChamberBuilder}from'../level-kit';
+import{conditionalEnglish}from'./conditional-english';
+
+function together(){
+ const b=new ChamberBuilder(),w=b.world;w.family='dual-vault';w.spawn=[0,.87,11];
+ b.floor('together-near-bank',-14,14,2,14);b.floor('together-far-bank',-14,14,-14,-10);
+ b.floor('together-catch',-14,14,-14,14,-4.4);
+ b.box('together-roof',[0,11.2,0],[28.8,.4,28.8]);
+ b.box('together-east',[14.2,3.3,0],[.4,15.4,28.8]);
+ b.box('together-south',[0,3.3,14.2],[28.8,15.4,.4]);
+ // West inspection is a genuine opening in the remote cargo cubby boundary.
+ b.box('together-west-north',[-14.2,3.3,-4.3],[.4,15.4,19.4]);
+ b.box('together-west-south',[-14.2,3.3,11.3],[.4,15.4,5.4]);
+ b.box('inspection-header',[-14.2,7,7],[.4,8,3.2]);
+ b.device({id:'conditional-inspection-gate',kind:'shutter',label:'INSPECTION',position:[-14.12,1.5,7],size:[.3,3,3.2],target:[-14.12,5,7],direction:[1,0,0],circuit:{all:['conditional-service'],not:['conditional-power']}});
+ b.floor('conditional-inspection-vestibule',-18.4,-13.8,5.4,8.6);
+ b.box('conditional-inspection-roof',[-16.1,11.2,7],[5,.4,4]);
+ for(const z of [5.2,8.8])b.box('conditional-inspection-side-'+z,[-16.1,5.5,z],[5,11,.4]);
+ b.box('conditional-inspection-end',[-18.6,5.5,7],[.4,11,4]);
+ b.exitCorridor('inspection-exit','conditional-inspection-vestibule',{minX:-18.38,maxX:-14.6,minZ:5.42,maxZ:8.58});
+ // Cargo A is reached through a real glazed portal link, not a free open bay.
+ b.box('conditional-cubby-glass',[-8,5.5,10],[.16,11,8],'glass');
+ b.box('conditional-cubby-north',[-11,5.5,6],[6.4,11,.4]);
+ b.cube('conditional-cube-a',[-11,.55,10]);
+ b.panel('conditional-source','together-south',[0,1.75,13.985],[0,0,-1],5,3.5);
+ b.panel('conditional-return','together-west-south',[-13.985,1.75,11],[1,0,0],4.8,3.5);
+ // Cargo B really begins supported on an independently called2.4m deck.
+ // Both remote call stations select actual stops; no cargo pose is assigned.
+ b.device({id:'conditional-cargo-lift',kind:'lift',automatic:true,label:'CARGO LIFT',position:[9,2.2,7],size:[4,.4,4],stops:[{label:'UPPER',position:[9,2.2,7]},{label:'LOWER',position:[9,-.2,7]}],speed:1.2});
+ b.cube('conditional-cube-b',[9,2.95,7]);
+ for(const x of [6.8,11.2])b.box('cargo-lift-side-'+x,[x,5.5,7],[.16,11,4.4],'glass');
+ b.box('cargo-lift-rear',[9,5.5,4.8],[4.4,11,.16],'glass');
+ b.box('cargo-lift-header',[9,7,9.2],[4.4,8,.4]);
+ b.device({id:'cargo-retrieval-leaf',kind:'shutter',label:'CARGO ACCESS',position:[9,1.5,9.12],size:[4.4,3,.3],target:[9,5,9.12],direction:[0,0,1],circuit:{all:['at:conditional-cargo-lift:LOWER']}});
+ b.device({id:'cargo-call-lower',kind:'switch',label:'CARGO DOWN',position:[5.7,1.25,10.8],size:[.4,.7,.3],controlOffset:[0,0,.2],calls:{device:'conditional-cargo-lift',stop:1}});
+ b.device({id:'cargo-call-upper',kind:'switch',label:'CARGO UP',position:[12.3,1.25,10.8],size:[.4,.7,.3],controlOffset:[0,0,.2],calls:{device:'conditional-cargo-lift',stop:0}});
+ for(const[id,x,z,label]of [['conditional-power',-3,6,'POWER'],['conditional-aux',3,6,'AUX'],['conditional-service',-4,11,'SERVICE']]as const){b.button(id,[x,.14,z]);w.pads.at(-1)!.label=label;}
+ // The conjunction supplies actual motion, not merely the final sign. There is
+ // no intermediate pressure gate that can trap a player beyond its own source.
+ b.device({id:'conditional-ferry',kind:'moving-platform',automatic:true,label:'FREIGHT TRANSFER',position:[0,-.2,0],size:[4,.4,4],target:[0,-.2,-8],targetLabel:'FAR',period:5,dwell:6,stops:[{label:'NEAR',position:[0,-.2,0]},{label:'FAR',position:[0,-.2,-8]}],circuit:{all:['conditional-power','conditional-aux']}});
+ for(const x of [-1.3,1.3])b.box('conditional-ferry-guide-'+x,[x,-2.1,-4],[.16,.18,12]);
+ // A real stopped-dock leaf prevents a running corner jump from opening a
+ // nonaligned dock. The separate named freight gate follows the exact AND law.
+ for(const z of [-10.8,-14.2]){
+  const outer=z===-14.2;
+  b.box('freight-left-jamb-'+z,[-7.8,outer?3.3:5.5,z],[12.4,outer?15.4:11,.4]);
+  b.box('freight-right-jamb-'+z,[7.8,outer?3.3:5.5,z],[12.4,outer?15.4:11,.4]);
+  b.box('freight-header-'+z,[0,7,z],[3.2,8,.4]);
+ }
+ b.box('freight-exit-foundation',[0,-2.2,-14.2],[3.2,4.4,.4]);
+ b.device({id:'conditional-dock-leaf',kind:'shutter',label:'FAR DOCK',position:[0,1.5,-10.72],size:[3.2,3,.3],target:[0,5,-10.72],direction:[0,0,1],circuit:{all:['at:conditional-ferry:FAR']}});
+ b.device({id:'conditional-freight-gate',kind:'shutter',label:'FREIGHT',position:[0,1.5,-14.12],size:[3.2,3,.3],target:[0,5,-14.12],direction:[0,0,1],circuit:{all:['conditional-power','conditional-aux']}});
+ b.floor('conditional-freight-vestibule',-1.6,1.6,-18.4,-13.8);
+ b.box('conditional-freight-roof',[0,11.2,-16.1],[4,.4,5]);
+ for(const x of [-1.8,1.8])b.box('conditional-freight-side-'+x,[x,5.5,-16.1],[.4,11,5]);
+ b.box('conditional-freight-end',[0,5.5,-18.6],[4,11,.4]);
+ b.exitCorridor('freight-exit','conditional-freight-vestibule',{minX:-1.58,maxX:1.58,minZ:-18.38,maxZ:-14.6});
+ // The same bounded catch/low-end return carpentry gives a zero-reset recovery.
+ for(let i=0;i<22;i++){const top=-4.2+i*.2;b.box('conditional-return-step-'+i,[11,(top-4.7)/2,-10.9+i*.6],[2.5,top+4.7,.6],'floor');}
+ w.marks.push(
+  {text:'INSPECTION',position:[-13.94,3.35,7],normal:[1,0,0],width:2,height:.25},
+  {text:'FREIGHT',position:[0,3.35,-13.94],normal:[0,0,1],width:1.6,height:.25},
+  {text:'FAR DOCK',position:[0,3.35,-10.54],normal:[0,0,1],width:1.8,height:.25},
+  {text:'CARGO DOWN',position:[5.7,2.2,11.01],normal:[0,0,1],width:1.8,height:.25},
+ );
+ w.routePoints={spawn:[0,.87,11],'source-portal':[0,1.55,13.985],'return-portal':[-13.985,1.55,11],'cube-a-approach':[-12.8,.865,10],'power-drop':[-4.8,.865,6],'aux-drop':[4.8,.865,6],'service-drop':[-5.8,.865,11],'cargo-down-approach':[5.7,.865,12.6],'cargo-down-control':[5.7,1.25,11],'cargo-wait':[9,.865,10.8],'cube-b-approach':[9,.865,8.8],'ferry-wait':[0,.865,2.8],'ferry-near':[0,.865,0],'ferry-far':[0,.865,-8],'freight-exit':[0,.865,-17],'inspection-exit':[-17,.865,7],'catch-fall':[8,.865,2.8],'catch-low-end':[11,-3.535,-11.8]};
+ w.notes.push('Architecture family reuse before41: independently displayed/read references25 freight/catch and permissions08 lift, plus previously inspected22 independent transport sources. Original rectangular controls/diamond cargo/compact projector retained; raster carrier guides are not walkways, generated rail/measurement assumptions are rejected. No new paid target/model generation.',
+  'Metric delta:28x28m enclosed cross-vault with separate remote glazed cargo and a real2.4m cargo lowering shaft. Fixed DOWN/UP stations select physical lift stops; cargo ACCESS follows actual stopped LOWER pose. POWER and AUX are separate pressure inputs6m apart, not a touch counter. Their actual conjunction powers a4x4 horizontal ferry and the far FREIGHT gate; SERVICE with POWER absent opens a remote ground inspection vestibule.',
+  'A separate real FAR-dock leaf follows actual stopped alignment, not selected target or a previous arrival. All white hosts remain in the near/remote bay below3.5m. Carrier guides top−2.01 cannot bridge the bank-height well. Catch−4.4 and22 broad .6/.2m stairs return directly to near ground without a trapped intermediate gate. The inner dock begins at bank0 for low-end stair headroom; outer north jambs/foundation extend to−4.4 to close the catch perimeter.',
+  'Source/current conditional law, not a cargo identity, pressed-count, grammar match or use-history flag, determines real circuitry. Either cargo allocation is valid. One input alone cannot supply the freight route. All fixture geometry/inventory/calls/pressure/dock circuits stay identical under the changed instruction. Native actual-spawn/ray/E routes and public visibility/audio/save remain pending.');
+ return b.finish();
+}
+
+function anArrival(){
+ const b=new ChamberBuilder(),w=b.world;w.family='l-gallery';w.spawn=[7,.87,11];
+ b.floor('arrival-foyer',-2,14,-2,14);b.floor('arrival-gallery-ground',-2,14,-16,-2);
+ b.floor('arrival-service-near',-4,-2,-2,14);b.floor('arrival-service-far',-20,-16,-2,14);
+ b.floor('arrival-service-catch',-20,-2,-2,14,-4.4);
+ b.box('arrival-roof',[-3,11.2,-1],[34.8,.4,30.8]);
+ b.box('arrival-east',[14.2,3.3,-1],[.4,15.4,30.8]);
+ b.box('arrival-south',[-3,3.3,14.2],[34.8,15.4,.4]);
+ b.box('arrival-northwest-mass',[-11,3.3,-9],[18,15.4,14]);
+ // Both optical return faces stay in the common foyer, before all access.
+ // Balanced .55m lateral offsets preserve the real ray through each low slot.
+ b.box('arrival-emitter-housing',[8.55,.8,8],[.6,1.6,.8]);
+ b.panel('arrival-source','arrival-east',[13.985,1.75,8.55],[-1,0,0],5,3.5);
+ b.box('gallery-return-host',[0,1.75,4.2],[3.8,3.5,.4]);
+ b.panel('gallery-return','gallery-return-host',[.55,1.75,3.985],[0,0,-1],2.7,3.5);
+ b.box('service-return-host',[4.2,1.75,0],[.4,3.5,3.8]);
+ b.panel('service-return','service-return-host',[3.985,1.75,-.55],[-1,0,0],2.7,3.5);
+ // North gallery partition: true optical slot atX0 and body hatch atX7.
+ b.box('gallery-partition-west',[-1.2,5.5,-2],[1.6,11,.16],'glass');
+ b.box('gallery-slot-sill',[0,.25,-2],[.8,.5,.16]);
+ b.box('gallery-slot-header',[0,6.15,-2],[.8,9.7,.16]);
+ b.box('gallery-partition-middle',[3,5.5,-2],[5.2,11,.16],'glass');
+ b.box('gallery-partition-east',[11.2,5.5,-2],[5.6,11,.16],'glass');
+ b.box('gallery-access-header',[7,7,-2],[2.8,8,.35]);
+ b.device({id:'arrival-gallery-hatch',kind:'shutter',label:'GALLERY ACCESS',position:[7,1.5,-2],size:[2.8,3,.3],target:[7,5,-2],direction:[0,0,1],circuit:{all:['gallery-light']}});
+ b.box('gallery-receiver-pillar',[0,1.5,-8.2],[2.2,3,.4]);
+ b.box('gallery-receiver-body',[0,.9,-8.05],[.8,.8,.4]);
+ b.floor('arrival-upper-gallery',-2,14,-16,-10,4.2);
+ for(const x of [-1.6,13.6])b.box('arrival-gallery-pier-'+x,[x,1.8,-12],[.4,3.6,.8]);
+ b.device({id:'arrival-gallery-lift',kind:'lift',automatic:true,cycle:true,label:'GALLERY LIFT',position:[7,-.2,-8],size:[4,.4,4],target:[7,4,-8],targetLabel:'UPPER',period:3.5,dwell:6,stops:[{label:'BASE',position:[7,-.2,-8]},{label:'UPPER',position:[7,4,-8]}],circuit:{all:['gallery-light']}});
+ // Upper dock protection observes actual stopped support, never selected target.
+ b.box('gallery-dock-west',[1.8,7.6,-10.8],[7.6,6.8,.4]);
+ b.box('gallery-dock-east',[11.2,7.6,-10.8],[5.6,6.8,.4]);
+ b.box('gallery-dock-header',[7,9.1,-10.8],[2.8,3.8,.4]);
+ b.device({id:'arrival-gallery-dock',kind:'shutter',label:'UPPER DOCK',position:[7,5.7,-10.72],size:[2.8,3,.3],target:[7,9.2,-10.72],direction:[0,0,1],circuit:{all:['at:arrival-gallery-lift:UPPER']}});
+ b.box('arrival-north-west',[-7.2,5.5,-16.2],[25.6,11,.4]);
+ b.box('arrival-north-east',[11.2,5.5,-16.2],[5.6,11,.4]);
+ b.box('arrival-upper-sill',[7,2.1,-16.2],[2.8,4.2,.4]);
+ b.box('arrival-upper-header',[7,9.1,-16.2],[2.8,3.8,.4]);
+ b.device({id:'arrival-gallery-door',kind:'shutter',label:'GALLERY EXIT',position:[7,5.7,-16.12],size:[2.8,3,.3],target:[7,9.2,-16.12],direction:[0,0,1],circuit:{all:['gallery-light']}});
+ b.floor('arrival-gallery-vestibule',5.6,8.4,-20.4,-15.8,4.2);
+ b.box('arrival-gallery-roof',[7,11.2,-18.1],[3.6,.4,5]);
+ for(const x of [5.4,8.6])b.box('arrival-gallery-side-'+x,[x,7.6,-18.1],[.4,6.8,5]);
+ b.box('arrival-gallery-end',[7,7.6,-20.6],[3.6,6.8,.4]);
+ b.exitCorridor('gallery-exit','arrival-gallery-vestibule',{minX:5.62,maxX:8.38,minZ:-20.38,maxZ:-16.6});
+ // West service partition uses the same .8m optical throat, rotated in plan.
+ b.box('service-partition-north',[-2,5.5,-1.2],[.16,11,1.6],'glass');
+ b.box('service-slot-sill',[-2,.25,0],[.16,.5,.8]);
+ b.box('service-slot-header',[-2,6.15,0],[.16,9.7,.8]);
+ b.box('service-partition-middle',[-2,5.5,3],[.16,11,5.2],'glass');
+ b.box('service-partition-south',[-2,5.5,11.2],[.16,11,5.6],'glass');
+ b.box('service-access-header',[-2,7,7],[.35,8,2.8]);
+ b.device({id:'arrival-service-hatch',kind:'shutter',label:'SERVICE ACCESS',position:[-2,1.5,7],size:[.3,3,2.8],target:[-2,5,7],direction:[1,0,0],circuit:{all:['service-light']}});
+ b.box('service-receiver-pillar',[-8.2,-1.3,0],[.4,6.2,2.2]);
+ b.box('service-receiver-body',[-8.05,.9,0],[.4,.8,.8]);
+ b.device({id:'arrival-service-carrier',kind:'moving-platform',automatic:true,label:'SERVICE CARRIER',position:[-6,-.2,7],size:[4,.4,4],target:[-14,-.2,7],targetLabel:'SERVICE',period:5,dwell:6,stops:[{label:'NEAR',position:[-6,-.2,7]},{label:'SERVICE',position:[-14,-.2,7]}],circuit:{all:['service-light']}});
+ for(const z of [5.7,8.3])b.box('arrival-service-guide-'+z,[-10,-2.1,z],[12,.18,.16]);
+ // The inner dock stands on bank0 for stair headroom. The outer enclosure still
+ // extends to the catch and has a real foundation below its above-ground exit.
+ for(const x of [-16.8,-20.2]){
+  const outer=x===-20.2;
+  b.box('service-north-jamb-'+x,[x,outer?3.3:5.5,1.8],[.4,outer?15.4:11,7.6]);
+  b.box('service-south-jamb-'+x,[x,outer?3.3:5.5,11.2],[.4,outer?15.4:11,5.6]);
+  b.box('service-exit-header-'+x,[x,7,7],[.4,8,2.8]);
+ }
+ b.box('service-exit-foundation',[-20.2,-2.2,7],[.4,4.4,2.8]);
+ b.device({id:'arrival-service-dock',kind:'shutter',label:'SERVICE DOCK',position:[-16.72,1.5,7],size:[.3,3,2.8],target:[-16.72,5,7],direction:[1,0,0],circuit:{all:['at:arrival-service-carrier:SERVICE']}});
+ b.device({id:'arrival-service-door',kind:'shutter',label:'SERVICE EXIT',position:[-20.12,1.5,7],size:[.3,3,2.8],target:[-20.12,5,7],direction:[1,0,0],circuit:{all:['service-light']}});
+ b.floor('arrival-service-vestibule',-24.4,-19.8,5.6,8.4);
+ b.box('arrival-service-roof',[-22.1,11.2,7],[5,.4,3.6]);
+ for(const z of [5.4,8.6])b.box('arrival-service-side-'+z,[-22.1,5.5,z],[5,11,.4]);
+ b.box('arrival-service-end',[-24.6,5.5,7],[.4,11,3.6]);
+ b.exitCorridor('service-exit','arrival-service-vestibule',{minX:-24.38,maxX:-20.6,minZ:5.62,maxZ:8.38});
+ for(let i=0;i<22;i++){const top=-4.2+i*.2;b.box('arrival-service-return-step-'+i,[-16.9+i*.6,(top-4.7)/2,11],[.6,top+4.7,2.5],'floor');}
+ w.marks.push(
+  {text:'GALLERY',position:[0,2.35,-7.94],normal:[0,0,1],width:1.8,height:.25},
+  {text:'SERVICE',position:[-7.94,1.6,0],normal:[1,0,0],width:1.8,height:.25},
+  {text:'GALLERY ACCESS',position:[7,3.35,-1.74],normal:[0,0,1],width:2.3,height:.25},
+  {text:'SERVICE ACCESS',position:[-1.74,3.35,7],normal:[1,0,0],width:2.3,height:.25},
+  {text:'GALLERY EXIT',position:[7,7.55,-15.94],normal:[0,0,1],width:2,height:.25},
+  {text:'SERVICE EXIT',position:[-19.94,3.35,7],normal:[1,0,0],width:2,height:.25},
+ );
+ w.routePoints={spawn:[7,.87,11],'source-view':[7,.865,1],'source-portal':[13.985,1.55,8.55],'gallery-return':[.55,1.55,3.985],'service-view':[2.5,.865,7],'service-return':[3.985,1.55,-.55],'beam-obstruction':[11,.865,8],'beam-clear':[11,.865,10],'gallery-hatch':[7,.865,-.5],'gallery-wait':[7,.865,-4.5],'gallery-board':[7,.865,-7.5],gallery:[7,5.065,-12],'gallery-exit':[7,5.065,-19],'service-near':[-3,.865,7],'service-board':[-6,.865,7],'service-far':[-14,.865,7],'service-exit':[-23,.865,7],'service-restore-view':[-3,.865,-.5],'service-catch-fall':[-3,.865,3.5],'service-low-end':[-17.8,-3.535,11]};
+ w.notes.push('Family reuse: independently inspected laser-lift/reference22 separate optical lift/carrier kit and existing core glass/compact original optics. No new paid image/model generation. Reject raster optical measurements, unguarded white far hosts and carrier guides as bridges. Explicit34x30m L-shaped metric layout replaces image assumptions.',
+  'The common foyer contains both return faces. One balanced low optical ray selects the north gallery receiver or west service receiver through separate .8x.8 slots. Neither slot admits capsule/cargo; no eligible host beyond a receiver-controlled access hatch can bypass its machine. Light selection is not an arrival: actual stopped UPPER/SERVICE pose opens a real dock leaf.',
+  'Gallery light powers a4.2m vertical lift over continuous ground0. Service light powers an8m horizontal carrier across a12m bank gap, with catch−4.4 and22 broad .6/.2m treads returning directly to the2m-wide near service bank. Inner dock jambs start floor0 so the low-end stair body can pass beneath them; outer walls/foundation close the actual catch perimeter. No rail blocks either boarding seam.',
+  'The source beam can be genuinely interrupted by a player at[11,8], braking actual machine phase. Portal colour/index order is independent of meaning. A service-side view[-3,-.5] can restore the real near-foyer pair through glass after a mistaken link, rather than requiring reset or a fake usedReceiver flag. All optics/geometry/receivers/devices remain fixed under both clauses. These restoration/transport routes are source-only until executed.');
+ return b.finish();
+}
+
+function ifTheBeamIsBlocked(){
+ const b=new ChamberBuilder(),w=b.world;w.family='relay-garden';w.spawn=[-5,.87,11];
+ b.floor('negative-ground',-14,14,-14,14);b.box('negative-roof',[0,13.2,0],[28.8,.4,28.8]);
+ b.box('negative-south',[0,6.5,14.2],[28.8,13,.4]);
+ b.box('negative-east',[14.2,6.5,0],[.4,13,28.8]);
+ // The ordinary cube/condition lives on a genuinely raised2.4m working floor.
+ b.box('negative-mezzanine',[-7,1.2,-8.5],[14,2.4,11],'floor');
+ b.cube('negative-cube',[-8,2.95,-7]);
+ b.button('negative-service',[-4,2.54,-7]);w.pads[0].label='SERVICE';
+ b.box('negative-service-label-backing',[-4,3.75,-8],[2,1.3,.16]);
+ b.box('negative-emitter-housing',[-11.45,3.05,-7],[.6,1.6,.8]);
+ // West perimeter includes the independent ground SERVICE opening. Its upper
+ // white area only reaches the working mezzanine, never the6.6m archive.
+ b.box('negative-west-north',[-14.2,6.5,-4.2],[.4,13,19.6]);
+ b.box('negative-west-south',[-14.2,6.5,11.2],[.4,13,5.6]);
+ b.box('negative-service-header',[-14.2,8,7],[.4,10,2.8]);
+ b.device({id:'negative-service-door',kind:'shutter',label:'SERVICE',position:[-14.12,1.5,7],size:[.3,3,2.8],target:[-14.12,5,7],direction:[1,0,0],circuit:{all:['negative-service'],not:['archive-light']}});
+ b.floor('negative-service-vestibule',-18.4,-13.8,5.6,8.4);
+ b.box('negative-service-roof',[-16.1,13.2,7],[5,.4,3.6]);
+ for(const z of [5.4,8.6])b.box('negative-service-side-'+z,[-16.1,6.5,z],[5,13,.4]);
+ b.box('negative-service-end',[-18.6,6.5,7],[.4,13,3.6]);
+ b.exitCorridor('service-exit','negative-service-vestibule',{minX:-18.38,maxX:-14.6,minZ:5.62,maxZ:8.38});
+ b.panel('negative-source','negative-south',[-5,1.75,13.985],[0,0,-1],5,3.5);
+ b.panel('negative-return','negative-west-north',[-13.985,4.15,-5],[1,0,0],4,3.5);
+ // The only optical throat is at upper working height. It is too small for a
+ // capsule or cube; no far host substitutes for light-powered archive access.
+ b.box('negative-partition-north',[0,6.5,-10.7],[.16,13,6.6],'glass');
+ b.box('negative-slot-sill',[0,1.325,-7],[.16,2.65,.8]);
+ b.box('negative-slot-header',[0,8.225,-7],[.16,9.55,.8]);
+ b.box('negative-partition-middle',[0,6.5,-.5],[.16,13,12.2],'glass');
+ b.box('negative-partition-south',[0,6.5,11.2],[.16,13,5.6],'glass');
+ b.box('negative-access-header',[0,8,7],[.35,10,2.8]);
+ b.device({id:'negative-archive-access',kind:'shutter',label:'ARCHIVE ACCESS',position:[0,1.5,7],size:[.3,3,2.8],target:[0,5,7],direction:[-1,0,0],circuit:{all:['archive-light']}});
+ b.box('negative-receiver-pillar',[3.45,2.2,-7],[.6,4.4,2.2]);
+ b.box('negative-receiver-body',[3.4,3.05,-7],[.4,.8,.8]);
+ b.floor('negative-archive-gallery',0,14,-14,-8,6.6);
+ for(const x of [.4,13.6])b.box('negative-archive-pier-'+x,[x,3,-11],[.4,6,.8]);
+ b.device({id:'negative-archive-lift',kind:'lift',automatic:true,cycle:true,label:'ARCHIVE LIFT',position:[8,-.2,-6],size:[4,.4,4],target:[8,6.4,-6],targetLabel:'ARCHIVE',period:5.5,dwell:6,stops:[{label:'BASE',position:[8,-.2,-6]},{label:'ARCHIVE',position:[8,6.4,-6]}],circuit:{all:['archive-light']}});
+ for(const z of [-8.8,-14.2]){
+  b.box('negative-upper-west-'+z,[3.2,9.8,z],[6.4,6.4,.4]);
+  b.box('negative-upper-east-'+z,[11.8,9.8,z],[4.4,6.4,.4]);
+  b.box('negative-upper-header-'+z,[8,11.3,z],[3.2,3.4,.4]);
+ }
+ b.device({id:'negative-archive-dock',kind:'shutter',label:'ARCHIVE DOCK',position:[8,8.1,-8.72],size:[3.2,3,.3],target:[8,11.4,-8.72],direction:[0,0,1],circuit:{all:['at:negative-archive-lift:ARCHIVE']}});
+ // The outer north wall is complete at ground/mezzanine level too.
+ b.box('negative-north-west',[-3.8,3.3,-14.2],[20.4,6.6,.4]);
+ b.box('negative-north-mezzanine-header',[-7,9.8,-14.2],[14,6.4,.4]);
+ b.box('negative-north-east',[11.8,3.3,-14.2],[4.4,6.6,.4]);
+ b.box('negative-archive-sill',[8,3.3,-14.2],[3.2,6.6,.4]);
+ b.device({id:'negative-archive-door',kind:'shutter',label:'ARCHIVE EXIT',position:[8,8.1,-14.12],size:[3.2,3,.3],target:[8,11.4,-14.12],direction:[0,0,1],circuit:{all:['archive-light']}});
+ b.floor('negative-archive-vestibule',6.4,9.6,-18.4,-13.8,6.6);
+ b.box('negative-archive-roof',[8,13.2,-16.1],[4,.4,5]);
+ for(const x of [6.2,9.8])b.box('negative-archive-side-'+x,[x,9.8,-16.1],[.4,6.4,5]);
+ b.box('negative-archive-end',[8,9.8,-18.6],[4,6.4,.4]);
+ b.exitCorridor('archive-exit','negative-archive-vestibule',{minX:6.42,maxX:9.58,minZ:-18.38,maxZ:-14.6});
+ w.marks.push(
+  {text:'SERVICE',position:[-4,4.1,-7.90],normal:[0,0,1],width:1.5,height:.25},
+  {text:'ARCHIVE',position:[3.06,3.9,-7],normal:[-1,0,0],width:1.8,height:.25},
+  {text:'ARCHIVE ACCESS',position:[-.26,3.35,7],normal:[-1,0,0],width:2.3,height:.25},
+  {text:'SERVICE EXIT',position:[-13.94,3.35,7],normal:[1,0,0],width:1.9,height:.25},
+  {text:'ARCHIVE EXIT',position:[8,9.95,-13.94],normal:[0,0,1],width:2,height:.25},
+ );
+ w.routePoints={spawn:[-5,.87,11],'source-portal':[-5,1.55,13.985],'mezzanine-portal':[-13.985,3.95,-5],'cube-approach':[-9.8,3.265,-7],'off-ray-walk':[-9.8,3.265,-5],'off-ray-park':[-8.8,3.265,-5],'service-drop':[-5.8,3.265,-7],'dark-without-pressure':[-6.8,3.265,-7],'mezzanine-return':[-12.7,3.265,-5],'mezzanine-drop-edge':[-8.8,3.265,-3.8],'safe-ground-catch':[-10.8,.865,1],'service-exit':[-17,.865,7],'archive-access-near':[-3,.865,7],'archive-access-far':[2,.865,7],'archive-wait':[8,.865,-2.5],'archive-board':[8,.865,-5.5],archive:[8,7.465,-10],'archive-exit':[8,7.465,-17]};
+ w.notes.push('Family reuse: already independently inspected core01 raised cargo and laser-lift/reference22 original optical/vertical kit. No new paid target/model generation. Explicit28x28m/13m-high metric enclosure; working mezzanine2.4m, archive6.6m. These heights introduce spatial planning/real gravity, not a harder countdown or a new motor.',
+  'One ordinary cube interrupts a3.05m-high fixed ray on the working mezzanine. SERVICE lies along that same ray. A low ground-to-mezzanine walking pair gives genuine access; no eligible white host exists in the glazed archive bay. The return white band ends5.9m, below the6.6m archive. The .8m optical throat passes light only.',
+  'Actual archive light enables its access/lift/exit. SERVICE pressure AND light absence enable the ground service exit; body darkness alone is insufficient. Cargo can legitimately be parked off-ray or dropped below the raised ray to ground0. There is no exact parking ID, original cargo location, used portal/lift, previous error or prohibition-history gate.',
+  'Continuous ground catches a mezzanine miss; the original pair can recover upper cargo without a reset. Removing SERVICE while a real body still blocks the ray must close its gate, and replacing cargo restores it. Source-native clear/transfer/equivalent/wrong/recovery and browser visible aiming/audio/save remain pending.');
+ return b.finish();
+}
+
+function ifNotDockedWait(){
+ const b=new ChamberBuilder(),w=b.world;w.family='canal';w.spawn=[-3,.87,18];
+ b.floor('serial-near-bank',-9,17,8,20);b.floor('serial-refuge',-9,9,-4,0);
+ b.floor('serial-far-bank',-9,17,-20,-16);b.floor('serial-catch',-9,17,-20,20,-4.4);
+ b.box('serial-roof',[4,11.2,0],[26.8,.4,40.8]);
+ b.box('serial-west',[-9.2,3.3,0],[.4,15.4,40.8]);
+ b.box('serial-south',[4,3.3,20.2],[26.8,15.4,.4]);
+ // Fresh entry uses the original glass/near-host kit. Neither eligible host is
+ // beyond the freight gate or inside the independently guarded inspection bay.
+ for(const x of [-7,1])b.box('serial-entry-side-'+x,[x,5.5,18],[.4,11,4]);
+ b.box('serial-entry-glass',[-3,5.5,16],[8,11,.16],'glass');
+ b.box('serial-return-host',[-6,1.75,12.2],[3.8,3.5,.4]);
+ b.panel('serial-source','serial-south',[-3,1.75,19.985],[0,0,-1],5,3.5);
+ b.panel('serial-return','serial-return-host',[-6,1.75,12.415],[0,0,1],3.5,3.5);
+ // First deck always cycles. The second has actual OR start supplies at both
+ // banks; it can start early or only after the player reaches the refuge.
+ b.device({id:'serial-near-start',kind:'switch',label:'TRANSFER START',position:[-3,1.25,13],size:[.4,.7,.3],controlOffset:[-.2,0,0],controlFacing:[-1,0,0]});
+ b.device({id:'serial-refuge-start',kind:'switch',label:'TRANSFER START',position:[3,1.25,-2],size:[.4,.7,.3],controlOffset:[-.2,0,0],controlFacing:[-1,0,0]});
+ b.device({id:'serial-deck-a',kind:'moving-platform',automatic:true,label:'TRANSFER A',position:[0,-.2,6],size:[4,.4,4],target:[0,-.2,2],targetLabel:'REFUGE',period:4,dwell:12,stops:[{label:'DEPARTURE',position:[0,-.2,6]},{label:'REFUGE',position:[0,-.2,2]}]});
+ b.device({id:'serial-deck-b',kind:'moving-platform',automatic:true,label:'TRANSFER B',position:[0,-.2,-6],size:[4,.4,4],target:[0,-.2,-14],targetLabel:'FAR',period:8,dwell:8,stops:[{label:'DEPARTURE',position:[0,-.2,-6]},{label:'FAR',position:[0,-.2,-14]}],circuit:{any:['serial-near-start','serial-refuge-start']}});
+ for(const x of [-1.3,1.3]){
+  b.box('serial-guide-a-'+x,[x,-2.1,4],[.16,.18,8]);
+  b.box('serial-guide-b-'+x,[x,-2.1,-10],[.16,.18,12]);
+ }
+ const crossWall=(id:string,z:number,glass=false,outer=false)=>{
+  b.box(id+'-left',[-5.3,outer?3.3:5.5,z],[7.4,outer?15.4:11,.4],glass?'glass':'wall');
+  b.box(id+'-right',[9.3,outer?3.3:5.5,z],[15.4,outer?15.4:11,.4],glass?'glass':'wall');
+  b.box(id+'-header',[0,7,z],[3.2,8,.4]);
+ };
+ crossWall('serial-freight-entry',10,true);
+ b.device({id:'serial-freight-gate',kind:'shutter',label:'FREIGHT',position:[0,1.5,10.08],size:[3.2,3,.3],target:[0,5,10.08],direction:[0,0,1],circuit:{all:['at:serial-deck-a:DEPARTURE','at:serial-deck-b:DEPARTURE']}});
+ crossWall('serial-refuge-arrival',-.8);
+ b.device({id:'serial-refuge-arrival-door',kind:'shutter',label:'REFUGE ARRIVAL',position:[0,1.5,-.72],size:[3.2,3,.3],target:[0,5,-.72],direction:[0,0,1],circuit:{all:['at:serial-deck-a:REFUGE']}});
+ crossWall('serial-refuge-departure',-3.2);
+ b.device({id:'serial-refuge-departure-door',kind:'shutter',label:'TRANSFER B DOCK',position:[0,1.5,-3.12],size:[3.2,3,.3],target:[0,5,-3.12],direction:[0,0,1],circuit:{all:['at:serial-deck-b:DEPARTURE']}});
+ crossWall('serial-far-dock',-16.8);
+ b.device({id:'serial-far-dock-door',kind:'shutter',label:'FAR DOCK',position:[0,1.5,-16.72],size:[3.2,3,.3],target:[0,5,-16.72],direction:[0,0,1],circuit:{all:['at:serial-deck-b:FAR']}});
+ crossWall('serial-north',-20.2,false,true);b.box('serial-north-foundation',[0,-2.2,-20.2],[3.2,4.4,.4]);
+ b.device({id:'serial-freight-exit-door',kind:'shutter',label:'FREIGHT EXIT',position:[0,1.5,-20.12],size:[3.2,3,.3],target:[0,5,-20.12],direction:[0,0,1],circuit:{}});
+ b.floor('serial-freight-vestibule',-1.6,1.6,-24.4,-19.8);
+ b.box('serial-freight-roof',[0,11.2,-22.1],[4,.4,5]);
+ for(const x of [-1.8,1.8])b.box('serial-freight-side-'+x,[x,5.5,-22.1],[.4,11,5]);
+ b.box('serial-freight-end',[0,5.5,-24.6],[4,11,.4]);
+ b.exitCorridor('freight-exit','serial-freight-vestibule',{minX:-1.58,maxX:1.58,minZ:-24.38,maxZ:-20.6});
+ // Independent inspection boarding is only through its actual LOWER dock.
+ b.box('serial-inspection-west-north',[4,5.5,11.7],[.16,11,3.4],'glass');
+ b.box('serial-inspection-west-south',[4,5.5,18.3],[.16,11,3.4],'glass');
+ b.box('serial-inspection-boarding-header',[4,7,15],[.35,8,3.2]);
+ b.device({id:'serial-inspection-boarding',kind:'shutter',label:'BOARDING',position:[4,1.5,15],size:[.3,3,3.2],target:[4,5,15],direction:[-1,0,0],circuit:{all:['at:serial-inspection-lift:LOWER']}});
+ b.device({id:'serial-inspection-lift',kind:'lift',automatic:true,cycle:true,label:'INSPECTION',position:[8,-.2,15],size:[4,.4,4],target:[8,4,15],targetLabel:'UPPER',period:3.5,dwell:10,stops:[{label:'LOWER',position:[8,-.2,15]},{label:'UPPER',position:[8,4,15]}]});
+ b.floor('serial-inspection-gallery',10,17,10,20,4.2);
+ for(const x of [10.4,16.6])for(const z of [11,19])b.box('serial-inspection-pier-'+x+'-'+z,[x,1.8,z],[.4,3.6,.8]);
+ b.box('serial-inspection-dock-north',[10.8,7.6,11.7],[.4,6.8,3.4]);
+ b.box('serial-inspection-dock-south',[10.8,7.6,18.3],[.4,6.8,3.4]);
+ b.box('serial-inspection-dock-header',[10.8,9.1,15],[.4,3.8,3.2]);
+ b.device({id:'serial-inspection-dock',kind:'shutter',label:'UPPER DOCK',position:[10.72,5.7,15],size:[.3,3,3.2],target:[10.72,9.2,15],direction:[-1,0,0],circuit:{all:['at:serial-inspection-lift:UPPER']}});
+ // Complete east perimeter/foundation around the genuine upper vestibule.
+ b.box('serial-east-north',[17.2,3.3,-3.3],[.4,15.4,33.4]);
+ b.box('serial-east-south',[17.2,3.3,18.3],[.4,15.4,3.4]);
+ b.box('serial-inspection-exit-sill',[17.2,-.1,15],[.4,8.6,3.2]);
+ b.box('serial-inspection-exit-header',[17.2,9.1,15],[.4,3.8,3.2]);
+ b.device({id:'serial-inspection-exit-door',kind:'shutter',label:'INSPECTION EXIT',position:[17.12,5.7,15],size:[.3,3,3.2],target:[17.12,9.2,15],direction:[-1,0,0],circuit:{}});
+ b.floor('serial-inspection-vestibule',16.8,21.4,13.4,16.6,4.2);
+ b.box('serial-inspection-roof',[19.1,11.2,15],[5,.4,4]);
+ for(const z of [13.2,16.8])b.box('serial-inspection-side-'+z,[19.1,7.6,z],[5,6.8,.4]);
+ b.box('serial-inspection-end',[21.6,7.6,15],[.4,6.8,4]);
+ b.exitCorridor('inspection-exit','serial-inspection-vestibule',{minX:17.6,maxX:21.38,minZ:13.42,maxZ:16.58});
+ for(let i=0;i<22;i++){const top=-4.2+i*.2;b.box('serial-return-step-'+i,[13,(top-4.7)/2,-4.9+i*.6],[2.5,top+4.7,.6],'floor');}
+ // The side flight has full headroom rather than rising beneath the refuge.
+ // Its low entrance is around the north end of this real glazed stairwell.
+ b.box('serial-return-well-glass',[9.5,3.3,1],[.16,15.4,14],'glass');
+ w.marks.push(
+  {text:'FREIGHT',position:[0,3.35,10.26],normal:[0,0,1],width:1.7,height:.25},
+  {text:'BOARDING',position:[3.74,3.35,15],normal:[-1,0,0],width:1.8,height:.25},
+  {text:'FREIGHT EXIT',position:[0,3.35,-19.94],normal:[0,0,1],width:2,height:.25},
+  {text:'INSPECTION EXIT',position:[16.94,7.55,15],normal:[-1,0,0],width:2.5,height:.25},
+ );
+ w.routePoints={spawn:[-3,.87,18],'source-portal':[-3,1.55,19.985],'return-portal':[-6,1.55,12.415],'near-start-approach':[-4.8,.865,13],'near-start-control':[-3.2,1.25,13],'freight-wait':[0,.865,11.5],staging:[0,.865,8.8],'deck-a-board':[0,.865,6],refuge:[0,.865,-2],'refuge-start-approach':[1.2,.865,-2],'refuge-start-control':[2.8,1.25,-2],'deck-b-board':[0,.865,-6],'freight-exit':[0,.865,-23],'inspection-wait':[2,.865,15],'inspection-board':[8,.865,15],'inspection-gallery':[12,5.065,15],'inspection-exit':[20,5.065,15],'catch-fall':[8,.865,8.8],'catch-low-end':[13,-3.535,-5.8]};
+ w.notes.push('Family reuse: previously inspected freight25/reference22/permissions08 enclosed transport/dock kit, with explicit26x40m serial canal, broad refuge and independent inspection bay. Reject raster guides as bridges or far white hosts. No new paid image/model generation. Both original entry white faces remain before every destination/boarding gate.',
+  'Deck A always cycles4m in4s with12s dwells. Deck B starts from either true OR near/refuge switch and travels8m in8s with8s dwells. Actual stopped departure contacts open the FREIGHT gate. Independent start timing makes either missing contact reachable; no correlated twin-clock shortcut or two-arrival count replaces the condition.',
+  'Actual REFUGE/DEPARTURE/FAR dock leaves protect transfers. Central floor provides safe waiting; no narrow jump is required. Inspection uses its independent LOWER boarding door and4.2m lift/UPPER dock. Neither a selected stop nor early light/used-start flag fulfils arrival or opens a dock.',
+  'Catch−4.4 and22 broad .6/.2m treads regain staging north of the freight gate. The broad refuge stops atX9; the separate flight atX13 has full overhead clearance behind real glazing. Reach its low end aroundZ−6.8, then climb fromZ−5.8. Always-cycling deck A reaches the refuge START without recrossing the freight gate; near START is also reachable from the foyer. Outer walls/foundations extend to catch while inner dock walls start0 for stair headroom.',
+  'All circuits, portals, starts, independent transport, inventory and geometry are unchanged under both clauses. Early near-bank start and later refuge start are legitimate physical alternatives. No exact control, ride count, target selection, prior error or visited-bank/history predicate gates either destination. Source/native and frozen browser routes remain pending.');
+ return b.finish();
+}
+
+function predictConfigureTransfer(){
+ const b=new ChamberBuilder(),w=b.world;w.family='return-loop';w.spawn=[8,.87,18];
+ b.floor('final-near-floor',-14,14,2,20);b.floor('final-cargo-cell',1,9,-18,-14);
+ b.floor('final-catch',-14,14,-18,20,-4.4);b.box('final-roof',[0,11.2,1],[28.8,.4,38.8]);
+ b.box('final-south',[0,3.3,20.2],[28.8,15.4,.4]);b.box('final-north',[0,3.3,-18.2],[28.8,15.4,.4]);
+ // Outer west archive4.2m and east inspection0m vestibules are distinct.
+ for(const[x,from,to,id]of [[-14.2,-18,4.4,'west-north'],[-14.2,7.6,20,'west-south'],[14.2,-18,6.4,'east-north'],[14.2,9.6,20,'east-south']]as const)b.box('final-'+id,[x,3.3,(from+to)/2],[.4,15.4,to-from]);
+ b.box('final-archive-sill',[-14.2,-.1,6],[.4,8.6,3.2]);b.box('final-archive-header',[-14.2,9.1,6],[.4,3.8,3.2]);
+ b.device({id:'final-archive-door',kind:'shutter',label:'ARCHIVE EXIT',position:[-14.12,5.7,6],size:[.3,3,3.2],target:[-14.12,9.2,6],direction:[1,0,0],circuit:{all:['final-store','final-gallery-light']}});
+ b.floor('final-archive-vestibule',-18.4,-13.8,4.4,7.6,4.2);b.box('final-archive-roof',[-16.1,11.2,6],[5,.4,4]);
+ for(const z of [4.2,7.8])b.box('final-archive-side-'+z,[-16.1,7.6,z],[5,6.8,.4]);b.box('final-archive-end',[-18.6,7.6,6],[.4,6.8,4]);
+ b.exitCorridor('archive-exit','final-archive-vestibule',{minX:-18.38,maxX:-14.6,minZ:4.42,maxZ:7.58});
+ b.box('final-inspection-foundation',[14.2,-2.2,8],[.4,4.4,3.2]);b.box('final-inspection-header',[14.2,7,8],[.4,8,3.2]);
+ b.device({id:'final-inspection-door',kind:'shutter',label:'INSPECTION',position:[14.12,1.5,8],size:[.3,3,3.2],target:[14.12,5,8],direction:[-1,0,0],circuit:{all:['final-service'],not:['final-gallery-light']}});
+ b.floor('final-inspection-vestibule',13.8,18.4,6.4,9.6);b.box('final-inspection-roof',[16.1,11.2,8],[5,.4,4]);
+ for(const z of [6.2,9.8])b.box('final-inspection-side-'+z,[16.1,5.5,z],[5,11,.4]);b.box('final-inspection-end',[18.6,5.5,8],[.4,11,4]);
+ b.exitCorridor('inspection-exit','final-inspection-vestibule',{minX:14.6,maxX:18.38,minZ:6.42,maxZ:9.58});
+ // An opaque near wall makes the actual optical release useful: it uncovers a
+ // remote ground white face across16m of unsupported cargo access well.
+ for(const[left,right,id]of [[-14,-1.4,'west'],[-.6,3.4,'middle'],[6.6,9.8,'east'],[12.2,14,'return-east']]as const)b.box('final-near-wall-'+id,[(left+right)/2,5.5,2],[right-left,11,.4]);
+ b.box('final-optical-sill',[-1,.25,2],[.8,.5,.4]);b.box('final-optical-header',[-1,6.15,2],[.8,9.7,.4]);
+ b.box('final-cargo-header',[5,7,2],[3.2,8,.4]);
+ b.device({id:'final-cargo-sight',kind:'shutter',label:'CARGO ACCESS',position:[5,1.5,2.08],size:[3.2,3,.3],target:[5,5,2.08],direction:[0,0,1],latch:true,circuit:{all:['final-gallery-light']}});
+ b.box('final-return-header',[11,7,2],[2.4,8,.4]);
+ b.device({id:'final-return-door',kind:'shutter',label:'RETURN',position:[11,1.5,2.08],size:[2.4,3,.3],target:[11,5,2.08],direction:[0,0,1],latch:true,circuit:{all:['final-return-control']}});
+ b.device({id:'final-return-control',kind:'switch',label:'RETURN',position:[12.8,1.25,1.1],size:[.4,.7,.3],controlOffset:[-.2,0,0],controlFacing:[-1,0,0]});
+ b.box('final-return-control-post',[12.8,-1.75,1.1],[.3,5.3,.3]);
+ for(const x of [.8,9.2])b.box('final-cargo-cell-side-'+x,[x,3.3,-16],[.4,15.4,4.4]);
+ b.box('final-cargo-cell-glass',[5,3.3,-13.9],[8,15.4,.16],'glass');b.cube('final-cube',[5,.55,-15.5]);
+ b.box('final-emitter-housing',[8.55,.8,14],[.6,1.6,.8]);
+ b.box('final-optical-return-host',[-1,1.75,4.2],[3.8,3.5,.4]);
+ b.box('final-receiver-pillar',[-1,-1.3,-2],[2.2,6.2,.4]);b.box('final-receiver-body',[-1,.9,-1.85],[.8,.8,.4]);
+ b.panel('final-source','final-east-south',[13.985,1.75,14.55],[-1,0,0],5,3.5);
+ b.panel('final-optical-return','final-optical-return-host',[-1,1.75,3.985],[0,0,-1],3.5,3.5);
+ b.panel('final-cargo-return','final-north',[5,1.75,-17.985],[0,0,1],5,3.5);
+ // Reuse the measured flush receiving-cell/end-stop relationship. The real
+ // 1.35m throat passes1.10m cargo but cannot admit the upright1.70m capsule.
+ b.device({id:'final-store-belt',kind:'conveyor',automatic:true,label:'STORE FEED',position:[-4.5,-.15,11],size:[15,.3,2.2],direction:[-1,0,0],speed:3});
+ b.button('final-store',[-11.3,0,11]);w.pads.at(-1)!.label='STORE';b.button('final-service',[7,.14,8]);w.pads.at(-1)!.label='SERVICE';
+ b.box('final-store-end-stop',[-12,1.6,11],[.3,3.2,2.6]);
+ for(const[from,to,id]of [[-12,-8.4,'west'],[-3.8,3,'east']]as const)for(const z of [9.7,12.3])b.box('final-belt-rail-'+id+'-'+z,[(from+to)/2,.35,z],[to-from,.7,.16]);
+ b.box('final-cargo-throat-roof',[-6.1,6.175,11],[4.6,9.65,2.6]);
+ for(const z of [9.7,12.3])b.box('final-cargo-throat-side-'+z,[-6.1,5.5,z],[4.6,11,.16]);
+ for(const[from,to,id]of [[2,4.4,'north'],[7.6,9.7,'middle'],[12.3,20,'south']]as const)b.box('final-store-partition-'+id,[-4,5.5,(from+to)/2],[.4,11,to-from]);
+ b.box('final-store-access-header',[-4,7,6],[.4,8,3.2]);
+ b.device({id:'final-store-access',kind:'shutter',label:'STORE ACCESS',position:[-3.92,1.5,6],size:[.3,3,3.2],target:[-3.92,5,6],direction:[1,0,0],latch:true,circuit:{all:['final-store']}});
+ b.floor('final-archive-gallery',-14,-11,2,9,4.2);for(const z of [2.6,8.4])b.box('final-archive-pier-'+z,[-13.6,1.8,z],[.4,3.6,.8]);
+ b.device({id:'final-archive-lift',kind:'lift',automatic:true,cycle:true,label:'ARCHIVE',position:[-9,-.2,6],size:[4,.4,4],target:[-9,4,6],targetLabel:'ARCHIVE',period:3.5,dwell:6,stops:[{label:'BASE',position:[-9,-.2,6]},{label:'ARCHIVE',position:[-9,4,6]}],circuit:{all:['final-store','final-gallery-light']}});
+ b.box('final-archive-dock-north',[-11.8,7.6,3.2],[.4,6.8,2.4]);b.box('final-archive-dock-south',[-11.8,7.6,8.3],[.4,6.8,1.4]);
+ b.box('final-archive-dock-header',[-11.8,9.1,6],[.4,3.8,3.2]);
+ b.device({id:'final-archive-dock',kind:'shutter',label:'ARCHIVE DOCK',position:[-11.72,5.7,6],size:[.3,3,3.2],target:[-11.72,9.2,6],direction:[1,0,0],circuit:{all:['at:final-archive-lift:ARCHIVE']}});
+ for(let i=0;i<22;i++){const top=-4.2+i*.2;b.box('final-return-step-'+i,[11,(top-4.7)/2,-10.9+i*.6],[2.5,top+4.7,.6],'floor');}
+ w.marks.push(
+  {text:'CARGO ACCESS',position:[5,3.35,2.26],normal:[0,0,1],width:2.2,height:.25},
+  {text:'STORE ACCESS',position:[-3.74,3.35,6],normal:[1,0,0],width:2.1,height:.25},
+  {text:'INSPECTION',position:[13.94,3.35,8],normal:[-1,0,0],width:2,height:.25},
+  {text:'ARCHIVE EXIT',position:[-13.94,7.55,6],normal:[1,0,0],width:2,height:.25},
+ );
+ w.routePoints={spawn:[8,.87,18],'optical-view':[3,.865,3],'source-portal':[13.985,1.55,14.55],'optical-return':[-.45,1.55,3.985],'cargo-view':[5.55,.865,3],'cargo-return':[5.55,1.55,-17.985],'cargo-approach':[5,.865,-17.2],'cargo-back-approach':[5.55,.865,-16.7],'stage-stand':[9,.865,18.8],'stage-cube':[9,.55,17],'belt-feed-stand':[3.8,.865,11],'belt-feed-cube':[2,.55,11],'store':[-11.3,0,11],'service-drop':[8.8,.865,8],'inspection-exit':[17,.865,8],'store-access-near':[-2,.865,6],'archive-wait':[-6.2,.865,6],'archive-board':[-9,.865,6],'archive-exit':[-17,5.065,6],'catch-low-end':[11,-3.535,-11.8],'catch-return-control':[12.6,1.25,1.1]};
+ w.notes.push('Family reuse: independently redisplayed sequences-belt-13.png and read measured13/15 cargoBelt flush receiver/end-stop construction before45; combine already inspected original optical/latch/glazed-cargo kit. No new paid image/model generation. Explicit28x38m U supply workshop and16m cargo gap, not raster dimensions or a rejected50-fixture factory.',
+  'Initial real light releases an opaque sight hatch. Only then can a portal shot see the remote ground white cargo cell through glass across the gap. Relinking to cargo removes light but the mechanical hatch persists. All archive/store white bypasses are absent. Near/far hosts remain low and cannot reach the4.2m archive gallery.',
+  'The same ordinary cube may be floor-staged, optics configured UNHELD, then regrasped; instant native while-held aiming is not mouse/muzzle proof. Alternatively deliver cargo to STORE while dark, then configure light unheld. Do not filter out cargo or bypass real body/hit queries to force a shot. Neither staging nor this order is a hidden goal condition.',
+  'Always-driven belt speed3 uses flush STORE0 and end-stop alignment. A real1.35m-high4.6m-long cargo throat passes upright1.10m cargo but not the1.70m capsule. Low guides contain the feed; a STORE-pressure latch opens a separate full-height pedestrian access. Current STORE AND light power actual archive lift/exit; SERVICE AND current darkness open a different ground inspection return.',
+  'Continuous near ground catches dropped/staged cargo. Pit catch−4.4 and22 broad .6/.2m treads reach a real north-side RETURN control/door, independent of current gallery light. Outer foundations close the perimeter. No used-light/belt/latch count, cargo identity, required parking spot, read-clause or history flag gates either goal. Native throat/delivery/phase/recovery and public-input sightlines/audio/save are pending.');
+ return b.finish();
+}
+
+export const draftConditionalLevels:CoreLevel[]=[{
+ number:41,...conditionalEnglish[41],architecture:{height:11,halfWidth:14,style:'graphite'},recoveryY:-7.5,expectedExit:'freight-exit',blueprint:together,
+ wrongExitFeedback:'This is inspection, supplied by SERVICE while POWER is absent. The instruction asks for both POWER and AUX, the freight transfer and its gate.',
+ contrast:{...conditionalEnglish[41].contrast!,expectedExit:'inspection-exit',wrongExitFeedback:'This is freight with POWER and AUX supplied. The changed condition asks for SERVICE while POWER is not pressed, opening inspection.'},
+},{
+ number:42,...conditionalEnglish[42],architecture:{height:11,halfWidth:17,style:'graphite'},recoveryY:-7.5,expectedExit:'gallery-exit',blueprint:anArrival,
+ optics:{emitters:[{id:'arrival-emitter',position:[9,.9,8],direction:[1,0,0],range:65}],receivers:[{id:'gallery-light',position:[0,.9,-7.6],normal:[0,0,1],radius:.34},{id:'service-light',position:[-7.6,.9,0],normal:[1,0,0],radius:.34}]},
+ wrongExitFeedback:'This is the horizontal service route. The instruction predicts the gallery lift reaching its upper dock while the gallery receiver stays lit.',
+ contrast:{...conditionalEnglish[42].contrast!,expectedExit:'service-exit',wrongExitFeedback:'This is the upper gallery. The changed instruction asks for maintained service receiver light and the service carrier dock.'},
+},{
+ number:43,...conditionalEnglish[43],architecture:{height:13,halfWidth:14,style:'graphite'},expectedExit:'archive-exit',blueprint:ifTheBeamIsBlocked,
+ optics:{emitters:[{id:'negative-emitter',position:[-11,3.05,-7],direction:[1,0,0],range:30}],receivers:[{id:'archive-light',position:[3,3.05,-7],normal:[-1,0,0],radius:.32}]},
+ wrongExitFeedback:'This is SERVICE with the beam blocked and pressure maintained. The instruction asks you to clear the beam and use the moving archive lift.',
+ contrast:{...conditionalEnglish[43].contrast!,expectedExit:'service-exit',wrongExitFeedback:'This is the lit archive route. The changed condition asks for both beam obstruction and maintained SERVICE pressure.'},
+},{
+ number:44,...conditionalEnglish[44],architecture:{height:11,halfWidth:13,style:'graphite'},recoveryY:-7.5,expectedExit:'freight-exit',blueprint:ifNotDockedWait,
+ wrongExitFeedback:'This is inspection, reached through its lower boarding dock. The instruction asks for both transfer departure contacts and the serial freight route.',
+ contrast:{...conditionalEnglish[44].contrast!,expectedExit:'inspection-exit',wrongExitFeedback:'This is the serial freight route. The changed instruction asks for the inspection lift and its lower-dock boarding door.'},
+},{
+ number:45,...conditionalEnglish[45],architecture:{height:11,halfWidth:14,style:'graphite'},recoveryY:-7.5,expectedExit:'archive-exit',blueprint:predictConfigureTransfer,
+ optics:{emitters:[{id:'final-emitter',position:[9,.9,14],direction:[1,0,0],range:80}],receivers:[{id:'final-gallery-light',position:[-1,.9,-1.6],normal:[0,0,1],radius:.34}]},
+ wrongExitFeedback:'This is dark SERVICE inspection. The instruction predicts archive carriage from current STORE pressure and maintained gallery light.',
+ contrast:{...conditionalEnglish[45].contrast!,expectedExit:'inspection-exit',wrongExitFeedback:'This is the supplied archive. The changed condition asks for SERVICE and current gallery darkness after retrieval.'},
+}];

@@ -1,0 +1,51 @@
+{
+  "sequentialCommands": [
+    [
+      "node_modules/.bin/tsc",
+      "--noEmit"
+    ],
+    [
+      "node_modules/.bin/tsc",
+      "--noEmit",
+      "--target",
+      "ES2023",
+      "--module",
+      "ESNext",
+      "--moduleResolution",
+      "Bundler",
+      "--lib",
+      "ES2023,DOM",
+      "--strict",
+      "--skipLibCheck",
+      "--esModuleInterop",
+      "--types",
+      "node",
+      "--typeRoots",
+      "/Users/acedzn/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/@types,node_modules/@types",
+      "tests/core-manual-power-hold.test.ts"
+    ],
+    [
+      "node_modules/.bin/tsx",
+      "--test",
+      "--test-concurrency=1",
+      "tests/systems.test.ts",
+      "tests/core-machinery.test.ts",
+      "tests/core-lift-seam.test.ts",
+      "tests/core-fixed-clock.test.ts",
+      "tests/core-manual-power-hold.test.ts"
+    ]
+  ],
+  "exitCodes": [
+    0,
+    0,
+    0
+  ],
+  "sources": {
+    "src/systems.ts": "13d3dbf57ced0b8d18b499762d60282a82686cbc698f972c55dbff0c6b0ea67b",
+    "src/core/world.ts": "054fe818b86b3eda9d17d240b1f0aeebaa960aff1afe4669003df8131a60af23",
+    "src/core/machine-journal.ts": "b400ede48dd62294f3a212e504495a50f8ca2db93dc4efb4f5d66e6962108de1",
+    "tests/core-manual-power-hold.test.ts": "a2e3283f89856f412b0355c8aa544479de370e03fa029b01a8f785caa8ec3320"
+  },
+  "sourceUnchanged": true,
+  "scope": "Optional manual hold contract/default machinery regression, not browser completion."
+}

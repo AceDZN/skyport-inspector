@@ -1,0 +1,44 @@
+/** Authored-spawn native input driver, not browser/progression evidence.
+ * Actor/cargo/machine/history/save setters are deliberately absent.
+ */
+import assert from 'node:assert/strict';
+import {mkdirSync,readFileSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {join} from 'node:path';
+import RAPIER from '@dimforge/rapier3d-compat';
+import type {Vector3} from 'three';
+import {CoreWorld} from '../../src/core/world';
+import {draftEventLevels} from '../../src/core/levels/events';
+import {V,type Input} from '../../src/physics';
+export const idle:Input={forward:0,strafe:0,jump:false},forward:Input={...idle,forward:1};
+export class EventRoute {
+ readonly w:CoreWorld;readonly events:Record<string,unknown>[]=[];readonly checkpoints:unknown[]=[];
+ readonly watchers:((r:EventRoute)=>void)[]=[];readonly ridingFrames=new Map<string,number>();
+ constructor(readonly number:26|27|28|29|30,readonly contrast=false,readonly id='route'){
+  const level=draftEventLevels.find(l=>l.number===number);assert.ok(level);
+  this.w=new CoreWorld(number,(type,data)=>this.events.push({type,...data}),level,contrast);
+  assert.ok(this.w.player.pos.distanceTo(V(...this.w.blueprint.spawn))<.05);
+  for(const c of this.w.blueprint.cargo)assert.ok(this.cube(c.spec.id).pos.distanceTo(V(...c.position))<.05);
+  this.tick(.5);this.note('actual-authored-spawn');
+ }
+ step(input:Input=idle){this.w.step(1/120,input);for(const d of this.w.machines.devices.filter(d=>['lift','moving-platform'].includes(d.spec.kind)&&d.moving)){const p=this.w.player,top=d.position.y+d.spec.size[1]/2;if(p.grounded&&Math.abs(p.pos.y-p.half.y-top)<.08&&Math.abs(p.pos.x-d.position.x)<d.spec.size[0]/2&&Math.abs(p.pos.z-d.position.z)<d.spec.size[2]/2)this.ridingFrames.set(d.spec.id,(this.ridingFrames.get(d.spec.id)??0)+1);}for(const watch of this.watchers)watch(this);}
+ tick(seconds:number,input:Input=idle){for(let i=0;i<Math.ceil(seconds*120);i++)this.step(input);}
+ until(predicate:()=>boolean,seconds:number,label:string,each?:()=>void){for(let i=0;i<Math.ceil(seconds*120);i++){if(predicate())return;this.step();each?.();}assert.ok(predicate(),label+' '+this.detail());}
+ look(p:Vector3){const d=p.clone().sub(this.w.eye());this.w.yaw=Math.atan2(-d.x,-d.z);this.w.pitch=Math.asin(d.y/d.length());}
+ walk(x:number,z:number,seconds=20){for(let i=0;i<Math.ceil(seconds*120);i++){if(this.w.campaignResult)return;const dx=x-this.w.player.pos.x,dz=z-this.w.player.pos.z;if(Math.hypot(dx,dz)<.14){this.tick(.1);return;}this.w.yaw=Math.atan2(-dx,-dz);this.w.pitch=0;this.step(forward);}assert.fail('Native WASD blocked toward '+[x,z]+' '+this.detail());}
+ cube(id:string){const c=this.w.crates.find(c=>c.id===id);assert.ok(c,'Missing cargo '+id);return c;}
+ device(id:string){const d=this.w.machines.devices.find(d=>d.spec.id===id);assert.ok(d,'Missing device '+id);return d;}
+ pad(id:string){const p=this.w.pads.find(p=>p.id===id);assert.ok(p,'Missing pad '+id);return p;}
+ clearRay(target:Vector3,ignore:string[]=[],portal=false){const delta=target.clone().sub(this.w.eye()),distance=delta.length();const hit=this.w.physics.castRay(new RAPIER.Ray(this.w.eye(),delta.normalize()),distance-.07,true,undefined,undefined,this.w.characterCollider,undefined,c=>{const s=this.w.fixed.get(c.handle);if(s&&(ignore.includes(s.id)||(portal&&s.kind==='glass')))return false;return![...this.w.doors].some(([id,b])=>ignore.includes(id)&&b.collider.handle===c.handle);});const id=hit?(this.w.fixed.get(hit.collider.handle)?.id??[...this.w.doors].find(([,b])=>b.collider.handle===hit.collider.handle)?.[0]??'body'):null;assert.equal(hit,null,'Actual native ray blocked by '+id+' '+this.detail());}
+ shot(index:0|1,id:string,p:Vector3){const s=this.w.surfaces.find(s=>s.id===id);assert.ok(s);assert.ok(this.w.eye().clone().sub(s.center).dot(s.normal)>0,'Back-face shot');this.look(p);this.clearRay(p,[s.solidId],true);assert.equal(this.w.place(index,id,p),true,'Whole aperture rejected '+this.detail());assert.ok(this.w.portals[index]!.center.distanceTo(p)<.04,'Placement clamped outside authored aim');this.step();}
+ enter(index:0|1){const p=this.w.portals[index];assert.ok(p);const before=this.w.player.crossings;this.look(p.center.clone().addScaledVector(p.normal,-2));for(let i=0;i<360&&this.w.player.crossings===before;i++)this.step(forward);assert.equal(this.w.player.crossings,before+1,'Actual pair failed traversal '+this.detail());this.tick(.18,forward);}
+ e(){if(!this.w.interact())this.w.grabDrop();this.step();}
+ control(id:string){assert.equal(this.w.heldId,undefined);const d=this.device(id),point=d.position.clone().add(V(...(d.spec.controlOffset??[0,0,0])));this.look(point);this.clearRay(point,[id]);assert.match(this.w.interactionHint(),/Use/);assert.equal(this.w.interact(),true,'Visible ordinary E failed '+this.detail());this.step();}
+ pickup(id:string){assert.equal(this.w.heldId,undefined);let ready=false;for(let i=0;i<480;i++){const c=this.cube(id),d=c.pos.clone().sub(this.w.player.pos),distance=Math.hypot(d.x,d.z);assert.ok(distance>.001);const local=V(d.x/distance,0,d.z/distance).applyQuaternion(c.rotation.clone().invert()),support=Math.abs(local.x)*c.half.x+Math.abs(local.y)*c.half.y+Math.abs(local.z)*c.half.z;assert.ok(distance>support+this.w.player.half.x+.06,'Pickup approach contacts current cargo '+this.detail());this.look(c.pos);if(distance<=2&&c.pos.distanceTo(this.w.eye())<3){ready=true;break;}this.step(forward);}assert.ok(ready,'Current cargo outside ordinary reach');this.look(this.cube(id).pos);assert.match(this.w.interactionHint(),/Pick up/);this.e();assert.equal(this.w.heldId,id);}
+ dropPad(id:string,padId:string,x:number,z:number){assert.equal(this.w.heldId,id);this.walk(x,z);const p=this.pad(padId);this.look(p.pos);const c=this.cube(id),local=V(0,1,0).applyQuaternion(c.rotation.clone().invert()),support=Math.abs(local.x)*c.half.x+Math.abs(local.y)*c.half.y+Math.abs(local.z)*c.half.z,releaseY=p.pos.y+support+.2;this.w.pitch=Math.asin(Math.max(-.8,Math.min(.8,(releaseY-(this.w.player.pos.y+.15))/1.8)));this.tick(.4);this.e();this.tick(1.2);assert.equal(this.w.heldId,undefined);assert.equal(p.crateId,id,'Released current cargo did not maintain actual pressure '+this.detail());this.note('actual-pressure-'+padId);}
+ finish(exit:string){assert.equal(this.w.campaignResult?.exit,exit,this.detail());assert.equal(this.w.campaignResult?.goalMatched,true);assert.equal(this.w.respawns,0);this.note('actual-physical-completion');}
+ note(label:string){this.checkpoints.push({label,state:this.w.snapshot()});}
+ detail(){return JSON.stringify({world:this.w.snapshot(),contacts:Array.from({length:this.w.controller.numComputedCollisions()},(_,i)=>this.w.controller.computedCollision(i)).filter(Boolean).map(c=>({id:c!.collider?this.w.fixed.get(c!.collider!.handle)?.id:undefined,normal:c!.normal1,witness:c!.witness1}))});}
+ dispose(error?:unknown){this.note(error?'failure':'final');const output=process.env.RIFT_EVENT_RUN?join('docs/core-levels/events-26-30',process.env.RIFT_EVENT_RUN):join('work/chamber-qa/events','unit-'+Date.now());mkdirSync(output,{recursive:true});const sources=Object.fromEntries(['src/core/levels/events.ts','src/core/levels/events-english.ts','src/core/level.ts','src/core/world.ts','src/core/machine-journal.ts','src/systems.ts','tests/core-events-routes.test.ts','tests/helpers/event-route.ts'].map(path=>[path,createHash('sha256').update(readFileSync(path)).digest('hex')]));writeFileSync(join(output,this.number+'-'+this.id+(this.contrast?'-contrast':'-base')+'.json'),JSON.stringify({scope:'Unregistered authored-spawn native input path only. No actor/cargo/machine/history/save setters, resets or browser/completion claims. Native portal rays ignore glass; real visual framing remains browser-pending.',number:this.number,contrast:this.contrast,error:error?String(error):null,sources,ridingFrames:Object.fromEntries(this.ridingFrames),events:this.events,checkpoints:this.checkpoints},null,2)+'\n');this.w.dispose();}
+}
+export function route(number:26|27|28|29|30,contrast:boolean,id:string,fn:(r:EventRoute)=>void){const r=new EventRoute(number,contrast,id);let error:unknown;try{fn(r);}catch(e){error=e;throw e;}finally{r.dispose(error);}}

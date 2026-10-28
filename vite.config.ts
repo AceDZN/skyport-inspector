@@ -1,1 +1,1 @@
-import{defineConfig}from'vite';export default defineConfig({base:'./',server:{port:5261,strictPort:true},preview:{port:4261,strictPort:true},build:{rollupOptions:{input:{main:'index.html',campaign:'campaign.html',chambers:'chambers.html'}}}});
+import{defineConfig}from'vite';export default defineConfig({base:'./',server:{port:5261,strictPort:true},preview:{port:4261,strictPort:true},build:{rollupOptions:{input:{main:'index.html'}}}});

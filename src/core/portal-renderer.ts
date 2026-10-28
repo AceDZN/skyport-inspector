@@ -1,4 +1,4 @@
-import { PerspectiveCamera, Plane, WebGLRenderTarget, Vector3, type WebGLRenderer, type Scene, type Group, type Mesh, type ShaderMaterial } from 'three';
+import { PerspectiveCamera, Plane, WebGLRenderTarget, Vector2, type WebGLRenderer, type Scene, type Group, type Mesh, type ShaderMaterial } from 'three';
 import { portalMatrix, type Portal } from '../physics';
 interface View {
     group: Group;
@@ -9,13 +9,34 @@ interface View {
 export class PortalRenderer {
     private children = new Map<string, WebGLRenderTarget>();
     private cameraPool = new Map<string, PerspectiveCamera>();
-    constructor(private renderer: WebGLRenderer, private scene: Scene) { }
+    private bufferSize = new Vector2();
+    private lastPasses:string[]=[];
+    constructor(private renderer: WebGLRenderer, private scene: Scene,
+        private quality: { software: boolean; maxWidth?: number; maxHeight?: number; samples?: number } = { software: false }) { }
+    private configureRoots(views: View[]) {
+        if (this.quality.software) return;
+        const size = this.renderer.getDrawingBufferSize(this.bufferSize);
+        if (size.x <= 0 || size.y <= 0) return;
+        const scale = Math.min(1, (this.quality.maxWidth ?? 1440) / size.x,
+            (this.quality.maxHeight ?? 960) / size.y);
+        const width = Math.max(1, Math.round(size.x * scale));
+        const height = Math.max(1, Math.round(size.y * scale));
+        const samples = Math.max(0, Math.min(this.quality.samples ?? 4, this.renderer.capabilities.maxSamples ?? 0));
+        for (const { target } of views) {
+            const changedSamples = target.samples !== samples;
+            target.samples = samples;
+            if (target.width !== width || target.height !== height) target.setSize(width, height);
+            else if (changedSamples) target.dispose();
+        }
+    }
     render(camera: PerspectiveCamera, portals: [
         Portal | undefined,
         Portal | undefined
     ], views: View[]) {
         if (!portals.every(Boolean))
             return;
+        this.configureRoots(views);
+        this.lastPasses=[];
         const originalTarget = this.renderer.getRenderTarget(), originalClip = this.renderer.clippingPlanes, shadowAuto = this.renderer.shadowMap.autoUpdate;
         this.renderer.shadowMap.autoUpdate = false;
         const originals = views.map(v => ({ view: v.plane.material.uniforms.view.value, paired: v.plane.material.uniforms.paired.value, visible: v.group.visible }));
@@ -54,6 +75,7 @@ export class PortalRenderer {
             this.renderer.setRenderTarget(target);
             this.renderer.clear();
             this.renderer.render(this.scene, virtual);
+            this.lastPasses.push(path);
             return target;
         };
         try {
@@ -67,5 +89,6 @@ export class PortalRenderer {
             views.forEach((v, i) => { v.group.visible = originals[i].visible; v.plane.material.uniforms.paired.value = true; v.plane.material.uniforms.view.value = v.target.texture; });
         }
     }
-    dispose() { this.children.forEach(t => t.dispose()); this.children.clear(); this.cameraPool.clear(); }
+    diagnostics(views:View[]){const size=this.renderer.getDrawingBufferSize(this.bufferSize);return {drawingBuffer:[size.x,size.y],software:this.quality.software,maxSamples:this.renderer.capabilities.maxSamples,roots:views.map(v=>({width:v.target.width,height:v.target.height,samples:v.target.samples})),children:[...this.children].map(([path,t])=>({path,width:t.width,height:t.height,samples:t.samples})),lastPasses:[...this.lastPasses]};}
+    dispose() { this.children.forEach(t => t.dispose()); this.children.clear(); this.cameraPool.clear(); this.lastPasses=[]; }
 }

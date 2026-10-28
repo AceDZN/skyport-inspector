@@ -1,0 +1,4504 @@
+{
+  "scope": "Unregistered authored-spawn native route. Camera/WASD/E/ray-clear portals only. Decorative visibility, realtime mouse and earned save remain pending.",
+  "number": 35,
+  "contrast": false,
+  "error": null,
+  "inputs": [
+    {
+      "action": "aim",
+      "target": [
+        -12,
+        1.55,
+        9.985
+      ]
+    },
+    {
+      "action": "place",
+      "index": 0
+    },
+    {
+      "action": "aim",
+      "target": [
+        -17.985,
+        1.55,
+        4
+      ]
+    },
+    {
+      "action": "place",
+      "index": 1
+    },
+    {
+      "action": "walk",
+      "x": -12,
+      "z": 5.8
+    },
+    {
+      "action": "aim",
+      "target": [
+        -12,
+        0.5498895645141602,
+        3.9999918937683105
+      ]
+    },
+    {
+      "action": "press",
+      "code": "KeyE"
+    },
+    {
+      "action": "walk",
+      "x": -4.8,
+      "z": -7
+    },
+    {
+      "action": "aim",
+      "target": [
+        -3,
+        1.2000000000000002,
+        -7
+      ]
+    },
+    {
+      "action": "press",
+      "code": "KeyE"
+    },
+    {
+      "action": "walk",
+      "x": -12,
+      "z": 8.7
+    },
+    {
+      "action": "aim",
+      "target": [
+        -12,
+        1.55,
+        11.959999999999999
+      ]
+    },
+    {
+      "action": "key",
+      "code": "KeyW",
+      "ms": 291.6666666666667,
+      "nativeTimingOnly": true
+    },
+    {
+      "action": "walk",
+      "x": -17.2,
+      "z": -2.2
+    },
+    {
+      "action": "aim",
+      "target": [
+        -16.299999237060547,
+        0.5498895645141602,
+        -4.000001430511475
+      ]
+    },
+    {
+      "action": "press",
+      "code": "KeyE"
+    },
+    {
+      "action": "walk",
+      "x": -17.2,
+      "z": 4
+    },
+    {
+      "action": "walk",
+      "x": -16.8,
+      "z": 4
+    },
+    {
+      "action": "aim",
+      "target": [
+        -19.96,
+        1.55,
+        4
+      ]
+    },
+    {
+      "action": "key",
+      "code": "KeyW",
+      "ms": 316.6666666666667,
+      "nativeTimingOnly": true
+    },
+    {
+      "action": "walk",
+      "x": -6.2,
+      "z": 4
+    },
+    {
+      "action": "aim",
+      "target": [
+        -8,
+        1.06,
+        4
+      ]
+    },
+    {
+      "action": "press",
+      "code": "KeyE"
+    },
+    {
+      "action": "walk",
+      "x": -3,
+      "z": 1.8
+    },
+    {
+      "action": "walk",
+      "x": -1.5,
+      "z": 0
+    },
+    {
+      "action": "walk",
+      "x": 2,
+      "z": 0
+    },
+    {
+      "action": "walk",
+      "x": 14,
+      "z": 3.5
+    },
+    {
+      "action": "walk",
+      "x": 14,
+      "z": 0.5
+    },
+    {
+      "action": "walk",
+      "x": 14,
+      "z": -5
+    },
+    {
+      "action": "walk",
+      "x": 14,
+      "z": -13
+    }
+  ],
+  "ridingFrames": {
+    "loop-lift": 420
+  },
+  "maxDeviceStep": {
+    "loop-service-door": 0,
+    "loop-upper-door": 0.036458333333333925,
+    "loop-access-door": 0.036458333333333925,
+    "loop-return-control": 0,
+    "loop-lift": 0.010000000000001563
+  },
+  "events": [
+    {
+      "type": "land",
+      "time": 0.008333333333333333
+    },
+    {
+      "type": "portalA",
+      "time": 0.3000000000000001,
+      "surface": "loop-source",
+      "point": [
+        -12,
+        1.55,
+        9.959999999999999
+      ]
+    },
+    {
+      "type": "portalB",
+      "time": 0.30833333333333346,
+      "surface": "loop-return",
+      "point": [
+        -17.96,
+        1.55,
+        4
+      ]
+    },
+    {
+      "type": "footstep",
+      "time": 0.4250000000000005
+    },
+    {
+      "type": "pickup",
+      "time": 0.7166666666666666,
+      "body": "loop-near-cube"
+    },
+    {
+      "type": "footstep",
+      "time": 0.8499999999999994
+    },
+    {
+      "type": "footstep",
+      "time": 1.274999999999998
+    },
+    {
+      "type": "footstep",
+      "time": 1.6999999999999964
+    },
+    {
+      "type": "footstep",
+      "time": 2.124999999999995
+    },
+    {
+      "type": "footstep",
+      "time": 2.5499999999999936
+    },
+    {
+      "type": "footstep",
+      "time": 2.974999999999992
+    },
+    {
+      "type": "footstep",
+      "time": 3.3999999999999906
+    },
+    {
+      "type": "footstep",
+      "time": 3.824999999999989
+    },
+    {
+      "type": "shutter-open",
+      "time": 4.208333333333332,
+      "id": "loop-access-door"
+    },
+    {
+      "type": "pad",
+      "time": 4.208333333333332,
+      "pad": "access-pressure",
+      "crate": "loop-near-cube"
+    },
+    {
+      "type": "drop",
+      "time": 4.458333333333345,
+      "body": "loop-near-cube"
+    },
+    {
+      "type": "footstep",
+      "time": 5.275000000000052
+    },
+    {
+      "type": "footstep",
+      "time": 5.700000000000073
+    },
+    {
+      "type": "footstep",
+      "time": 6.125000000000094
+    },
+    {
+      "type": "footstep",
+      "time": 6.550000000000115
+    },
+    {
+      "type": "footstep",
+      "time": 6.975000000000136
+    },
+    {
+      "type": "footstep",
+      "time": 7.400000000000158
+    },
+    {
+      "type": "footstep",
+      "time": 7.825000000000179
+    },
+    {
+      "type": "footstep",
+      "time": 8.250000000000172
+    },
+    {
+      "type": "footstep",
+      "time": 8.675000000000148
+    },
+    {
+      "type": "footstep",
+      "time": 9.100000000000124
+    },
+    {
+      "type": "footstep",
+      "time": 9.5250000000001
+    },
+    {
+      "type": "enter",
+      "time": 9.541666666666766,
+      "body": "player",
+      "from": 0,
+      "to": 1,
+      "fromSurface": "loop-source",
+      "toSurface": "loop-return",
+      "speed": 4.785029669921401,
+      "exitSpeed": 4.785029669921401,
+      "held": null
+    },
+    {
+      "type": "land",
+      "time": 9.550000000000098
+    },
+    {
+      "type": "footstep",
+      "time": 9.950000000000076
+    },
+    {
+      "type": "footstep",
+      "time": 10.375000000000052
+    },
+    {
+      "type": "footstep",
+      "time": 10.800000000000027
+    },
+    {
+      "type": "pickup",
+      "time": 11.208333333333337,
+      "body": "loop-block-cube"
+    },
+    {
+      "type": "footstep",
+      "time": 11.225000000000003
+    },
+    {
+      "type": "receiver-power",
+      "time": 11.258333333333335,
+      "id": "loop-light"
+    },
+    {
+      "type": "shutter-open",
+      "time": 11.258333333333335,
+      "id": "loop-upper-door"
+    },
+    {
+      "type": "footstep",
+      "time": 11.649999999999979
+    },
+    {
+      "type": "footstep",
+      "time": 12.074999999999955
+    },
+    {
+      "type": "footstep",
+      "time": 12.49999999999993
+    },
+    {
+      "type": "footstep",
+      "time": 12.983333333333237
+    },
+    {
+      "type": "enter",
+      "time": 13.10833333333323,
+      "body": "loop-block-cube",
+      "from": 1,
+      "to": 0,
+      "fromSurface": "loop-return",
+      "toSurface": "loop-source",
+      "speed": 17.981907866773174,
+      "exitSpeed": 17.981907866773174,
+      "held": "loop-block-cube"
+    },
+    {
+      "type": "enter",
+      "time": 13.291666666666552,
+      "body": "player",
+      "from": 1,
+      "to": 0,
+      "fromSurface": "loop-return",
+      "toSurface": "loop-source",
+      "speed": 4.78927673479906,
+      "exitSpeed": 4.78927673479906,
+      "held": "loop-block-cube"
+    },
+    {
+      "type": "land",
+      "time": 13.299999999999885
+    },
+    {
+      "type": "footstep",
+      "time": 13.483333333333208
+    },
+    {
+      "type": "footstep",
+      "time": 13.908333333333184
+    },
+    {
+      "type": "footstep",
+      "time": 14.33333333333316
+    },
+    {
+      "type": "pad",
+      "time": 14.366666666666491,
+      "pad": "loop-service",
+      "crate": "player"
+    },
+    {
+      "type": "button-release",
+      "time": 14.749999999999803,
+      "pad": "loop-service",
+      "crate": "player"
+    },
+    {
+      "type": "footstep",
+      "time": 14.758333333333136
+    },
+    {
+      "type": "footstep",
+      "time": 15.183333333333112
+    },
+    {
+      "type": "drop",
+      "time": 15.73333333333308,
+      "body": "loop-block-cube"
+    },
+    {
+      "type": "contact",
+      "time": 15.783333333333077,
+      "body": "loop-block-cube",
+      "speed": 0.9195258585187724
+    },
+    {
+      "type": "footstep",
+      "time": 16.549999999999702
+    },
+    {
+      "type": "footstep",
+      "time": 16.974999999999678
+    },
+    {
+      "type": "lift-motor",
+      "time": 17.258333333332995,
+      "id": "loop-lift"
+    },
+    {
+      "type": "footstep",
+      "time": 17.399999999999654
+    },
+    {
+      "type": "footstep",
+      "time": 17.82499999999963
+    },
+    {
+      "type": "footstep",
+      "time": 18.249999999999606
+    },
+    {
+      "type": "footstep",
+      "time": 18.67499999999958
+    },
+    {
+      "type": "footstep",
+      "time": 19.099999999999557
+    },
+    {
+      "type": "footstep",
+      "time": 19.524999999999533
+    },
+    {
+      "type": "footstep",
+      "time": 19.94999999999951
+    },
+    {
+      "type": "footstep",
+      "time": 20.374999999999485
+    },
+    {
+      "type": "lift-arrival",
+      "time": 20.758333333332796,
+      "id": "loop-lift",
+      "value": "GALLERY"
+    },
+    {
+      "type": "footstep",
+      "time": 20.79999999999946
+    },
+    {
+      "type": "footstep",
+      "time": 21.224999999999437
+    },
+    {
+      "type": "footstep",
+      "time": 21.649999999999412
+    },
+    {
+      "type": "lift-motor",
+      "time": 26.758333333332455,
+      "id": "loop-lift"
+    },
+    {
+      "type": "lift-arrival",
+      "time": 30.258333333332256,
+      "id": "loop-lift",
+      "value": "base"
+    },
+    {
+      "type": "footstep",
+      "time": 30.26666666666559
+    },
+    {
+      "type": "footstep",
+      "time": 30.691666666665565
+    },
+    {
+      "type": "lift-motor",
+      "time": 36.25833333333192,
+      "id": "loop-lift"
+    },
+    {
+      "type": "footstep",
+      "time": 39.716666666665056
+    },
+    {
+      "type": "lift-arrival",
+      "time": 39.75833333333172,
+      "id": "loop-lift",
+      "value": "GALLERY"
+    },
+    {
+      "type": "footstep",
+      "time": 40.14166666666503
+    },
+    {
+      "type": "footstep",
+      "time": 40.56666666666501
+    },
+    {
+      "type": "footstep",
+      "time": 40.999999999998316
+    },
+    {
+      "type": "footstep",
+      "time": 41.42499999999829
+    },
+    {
+      "type": "footstep",
+      "time": 41.84999999999827
+    },
+    {
+      "type": "complete",
+      "time": 42.19999999999825,
+      "chamber": 35
+    }
+  ],
+  "checkpoints": [
+    {
+      "label": "actual-authored-spawn",
+      "state": {
+        "room": "chamber-35",
+        "number": 35,
+        "mission": "The lift is powered by the receiver, and ACCESS is opened by cargo pressure. Keep both supplies active and reach the control gallery.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -12,
+            0.8650607466697693,
+            7
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "yaw": 0.1,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [
+          {
+            "id": "loop-near-cube",
+            "position": [
+              -12,
+              0.5498895645141602,
+              3.9999918937683105
+            ],
+            "velocity": [
+              -0.000004421509402163792,
+              -1.4839936568478151e-7,
+              -0.000004285785507818218
+            ],
+            "rotation": [
+              3.641038404111896e-7,
+              3.899757253233993e-12,
+              -3.6969652228435734e-7,
+              1
+            ],
+            "angularVelocity": [
+              -0.000007749253200017847,
+              -1.8522724044671424e-13,
+              0.000007994657607923727
+            ],
+            "held": false,
+            "crossings": 0
+          },
+          {
+            "id": "loop-block-cube",
+            "position": [
+              -16.299999237060547,
+              0.5498895645141602,
+              -4.000001430511475
+            ],
+            "velocity": [
+              -0.000004421478024596581,
+              -1.4878642673465947e-7,
+              -0.000004285285285732243
+            ],
+            "rotation": [
+              3.64382799489249e-7,
+              3.898424118242705e-12,
+              -3.697793999890564e-7,
+              1
+            ],
+            "angularVelocity": [
+              -0.000007748347343294881,
+              -2.2021753791714484e-14,
+              0.000007994601219252218
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "access-pressure",
+            "position": [
+              -3,
+              0.14,
+              -7
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "loop-service",
+            "position": [
+              -9,
+              0.14,
+              6
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "loop-service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -6,
+              1.5,
+              10.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-upper-door",
+            "kind": "shutter",
+            "label": "CONTROL GALLERY",
+            "position": [
+              14,
+              5.7,
+              -10.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-access-door",
+            "kind": "shutter",
+            "label": "ACCESS",
+            "position": [
+              -0.08,
+              1.5,
+              0
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-return-control",
+            "kind": "switch",
+            "label": "ACCESS RETURN",
+            "position": [
+              2.5,
+              1.25,
+              -4
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-lift",
+            "kind": "lift",
+            "label": "CONTROL GALLERY",
+            "position": [
+              14,
+              -0.2,
+              0
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "loop-source",
+            "position": [
+              -12,
+              1.75,
+              9.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "loop-return",
+            "position": [
+              -17.985,
+              1.75,
+              4
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -6,
+              1.5,
+              12.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.780000000000001
+            ]
+          },
+          {
+            "id": "control-exit",
+            "label": "EXIT",
+            "position": [
+              14,
+              5.7,
+              -12.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.780000000000001
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "loop-emitter": {
+            "segments": [
+              {
+                "from": [
+                  -17.3,
+                  0.65,
+                  -4
+                ],
+                "to": [
+                  -16.84999989271164,
+                  0.65,
+                  -4
+                ]
+              }
+            ],
+            "stop": "obstacle",
+            "obstacle": "loop-block-cube",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "access-pressure": false,
+          "loop-service": false,
+          "closed:loop-service-door": true,
+          "clear:loop-service-door": false,
+          "safety:loop-service-door": false,
+          "door-safety": false,
+          "moving:loop-service-door": false,
+          "closed:loop-upper-door": true,
+          "clear:loop-upper-door": false,
+          "safety:loop-upper-door": false,
+          "moving:loop-upper-door": false,
+          "closed:loop-access-door": true,
+          "clear:loop-access-door": false,
+          "safety:loop-access-door": false,
+          "moving:loop-access-door": false,
+          "moving:loop-return-control": false,
+          "moving:loop-lift": false,
+          "loop-light": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "loop-ground",
+          "normal": {
+            "x": 0,
+            "y": 1,
+            "z": 0.000015924073522910476
+          },
+          "witness": {
+            "x": -12.00010871887207,
+            "y": 0,
+            "z": 6.999978542327881
+          },
+          "applied": {
+            "x": 0,
+            "y": -0.000011267075933574233,
+            "z": 0
+          },
+          "remaining": {
+            "x": 0,
+            "y": -0.0010998441139236093,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-access-pressure-with-light-still-blocked",
+      "state": {
+        "room": "chamber-35",
+        "number": 35,
+        "mission": "The lift is powered by the receiver, and ACCESS is opened by cargo pressure. Keep both supplies active and reach the control gallery.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -4.729894161224365,
+            0.864995002746582,
+            -7.123329162597656
+          ],
+          "velocity": [
+            3.201358453268125e-11,
+            0,
+            -5.6370806949544247e-11
+          ],
+          "yaw": -1.631733542801559,
+          "pitch": -0.17884680278949605,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "loop-source",
+            "position": [
+              -12,
+              1.55,
+              9.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "loop-return",
+            "position": [
+              -17.96,
+              1.55,
+              4
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "loop-near-cube",
+            "position": [
+              -2.943362236022949,
+              0.6898895502090454,
+              -7.014039039611816
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -2.008390822538786e-7,
+              -0.0000010175192528549815,
+              -2.2816952593984752e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          },
+          {
+            "id": "loop-block-cube",
+            "position": [
+              -16.299999237060547,
+              0.5498895645141602,
+              -4.000001430511475
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              1.9994473632323206e-7,
+              3.889522818406599e-12,
+              -2.2716716330251074e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "access-pressure",
+            "position": [
+              -3,
+              0.14,
+              -7
+            ],
+            "pressed": true,
+            "crate": "loop-near-cube"
+          },
+          {
+            "id": "loop-service",
+            "position": [
+              -9,
+              0.14,
+              6
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "loop-service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -6,
+              1.5,
+              10.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-upper-door",
+            "kind": "shutter",
+            "label": "CONTROL GALLERY",
+            "position": [
+              14,
+              5.7,
+              -10.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-access-door",
+            "kind": "shutter",
+            "label": "ACCESS",
+            "position": [
+              -0.08,
+              5,
+              0
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-return-control",
+            "kind": "switch",
+            "label": "ACCESS RETURN",
+            "position": [
+              2.5,
+              1.25,
+              -4
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-lift",
+            "kind": "lift",
+            "label": "CONTROL GALLERY",
+            "position": [
+              14,
+              -0.2,
+              0
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "loop-source",
+            "position": [
+              -12,
+              1.75,
+              9.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "loop-return",
+            "position": [
+              -17.985,
+              1.75,
+              4
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -6,
+              1.5,
+              12.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.780000000000001
+            ]
+          },
+          {
+            "id": "control-exit",
+            "label": "EXIT",
+            "position": [
+              14,
+              5.7,
+              -12.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.780000000000001
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "loop-emitter": {
+            "segments": [
+              {
+                "from": [
+                  -17.3,
+                  0.65,
+                  -4
+                ],
+                "to": [
+                  -16.85000001192093,
+                  0.65,
+                  -4
+                ]
+              }
+            ],
+            "stop": "obstacle",
+            "obstacle": "loop-block-cube",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "access-pressure": true,
+          "loop-service": false,
+          "closed:loop-service-door": true,
+          "clear:loop-service-door": false,
+          "safety:loop-service-door": false,
+          "door-safety": false,
+          "moving:loop-service-door": false,
+          "closed:loop-upper-door": true,
+          "clear:loop-upper-door": false,
+          "safety:loop-upper-door": false,
+          "moving:loop-upper-door": false,
+          "closed:loop-access-door": false,
+          "clear:loop-access-door": true,
+          "safety:loop-access-door": false,
+          "moving:loop-access-door": false,
+          "moving:loop-return-control": false,
+          "moving:loop-lift": false,
+          "loop-light": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "portalA",
+            "time": 300,
+            "surface": "loop-source",
+            "point": [
+              -12,
+              1.55,
+              9.959999999999999
+            ]
+          },
+          {
+            "type": "portalB",
+            "time": 308,
+            "surface": "loop-return",
+            "point": [
+              -17.96,
+              1.55,
+              4
+            ]
+          },
+          {
+            "type": "footstep",
+            "time": 425
+          },
+          {
+            "type": "pickup",
+            "time": 717,
+            "body": "loop-near-cube"
+          },
+          {
+            "type": "footstep",
+            "time": 850
+          },
+          {
+            "type": "footstep",
+            "time": 1275
+          },
+          {
+            "type": "footstep",
+            "time": 1700
+          },
+          {
+            "type": "footstep",
+            "time": 2125
+          },
+          {
+            "type": "footstep",
+            "time": 2550
+          },
+          {
+            "type": "footstep",
+            "time": 2975
+          },
+          {
+            "type": "footstep",
+            "time": 3400
+          },
+          {
+            "type": "footstep",
+            "time": 3825
+          },
+          {
+            "type": "shutter-open",
+            "time": 4208,
+            "id": "loop-access-door"
+          },
+          {
+            "type": "pad",
+            "time": 4208,
+            "pad": "access-pressure",
+            "crate": "loop-near-cube"
+          },
+          {
+            "type": "drop",
+            "time": 4458,
+            "body": "loop-near-cube"
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "loop-ground",
+          "normal": {
+            "x": -0.00006357760867103934,
+            "y": 1,
+            "z": -0.000007947201083879918
+          },
+          "witness": {
+            "x": -4.729945659637451,
+            "y": 0,
+            "z": -7.122546195983887
+          },
+          "applied": {
+            "x": 2.4005011981008753e-14,
+            "y": -0.00009997843881137669,
+            "z": -4.2268987111458364e-14
+          },
+          "remaining": {
+            "x": 2.427748486185516e-13,
+            "y": -0.0010111327283084393,
+            "z": -4.274877435546387e-13
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-cubby-retrieval-clears-two-real-optical-slots",
+      "state": {
+        "room": "chamber-35",
+        "number": 35,
+        "mission": "The lift is powered by the receiver, and ACCESS is opened by cargo pressure. Keep both supplies active and reach the control gallery.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -11.989922523498535,
+            0.8649622201919556,
+            9.676092147827148
+          ],
+          "velocity": [
+            -0.0005564848484093793,
+            0,
+            -0.15778462108352087
+          ],
+          "yaw": 0.0035643809429246882,
+          "pitch": 0.010823125520932095,
+          "grounded": true,
+          "crossings": 2
+        },
+        "portals": [
+          {
+            "surface": "loop-source",
+            "position": [
+              -12,
+              1.55,
+              9.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "loop-return",
+            "position": [
+              -17.96,
+              1.55,
+              4
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "loop-near-cube",
+            "position": [
+              -2.943362236022949,
+              0.6898895502090454,
+              -7.014039039611816
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -2.008390822538786e-7,
+              -0.0000010175192528549815,
+              -2.2816952593984752e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          },
+          {
+            "id": "loop-block-cube",
+            "position": [
+              -11.996337890625,
+              1.0344434976577759,
+              7.876208782196045
+            ],
+            "velocity": [
+              -0.00011432658357080072,
+              -0.016534481197595596,
+              -0.15771351754665375
+            ],
+            "rotation": [
+              3.0201374556781957e-7,
+              -0.7071068286895752,
+              -1.9249164040502365e-8,
+              0.7071068286895752
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": true,
+            "crossings": 1
+          }
+        ],
+        "pads": [
+          {
+            "id": "access-pressure",
+            "position": [
+              -3,
+              0.14,
+              -7
+            ],
+            "pressed": true,
+            "crate": "loop-near-cube"
+          },
+          {
+            "id": "loop-service",
+            "position": [
+              -9,
+              0.14,
+              6
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "loop-service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -6,
+              1.5,
+              10.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-upper-door",
+            "kind": "shutter",
+            "label": "CONTROL GALLERY",
+            "position": [
+              14,
+              9.2,
+              -10.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-access-door",
+            "kind": "shutter",
+            "label": "ACCESS",
+            "position": [
+              -0.08,
+              5,
+              0
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-return-control",
+            "kind": "switch",
+            "label": "ACCESS RETURN",
+            "position": [
+              2.5,
+              1.25,
+              -4
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-lift",
+            "kind": "lift",
+            "label": "CONTROL GALLERY",
+            "position": [
+              14,
+              -0.2,
+              0
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "loop-source",
+            "position": [
+              -12,
+              1.75,
+              9.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "loop-return",
+            "position": [
+              -17.985,
+              1.75,
+              4
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -6,
+              1.5,
+              12.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.780000000000001
+            ]
+          },
+          {
+            "id": "control-exit",
+            "label": "EXIT",
+            "position": [
+              14,
+              5.7,
+              -12.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.780000000000001
+            ]
+          }
+        ],
+        "result": null,
+        "held": "loop-block-cube",
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "loop-emitter": {
+            "segments": [
+              {
+                "from": [
+                  -17.3,
+                  0.65,
+                  -4
+                ],
+                "to": [
+                  7.6800000000000175,
+                  0.65,
+                  -4
+                ]
+              }
+            ],
+            "stop": "receiver",
+            "receiver": "loop-light",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "access-pressure": true,
+          "loop-service": false,
+          "closed:loop-service-door": true,
+          "clear:loop-service-door": false,
+          "safety:loop-service-door": false,
+          "door-safety": false,
+          "moving:loop-service-door": false,
+          "closed:loop-upper-door": false,
+          "clear:loop-upper-door": true,
+          "safety:loop-upper-door": false,
+          "moving:loop-upper-door": false,
+          "closed:loop-access-door": false,
+          "clear:loop-access-door": true,
+          "safety:loop-access-door": false,
+          "moving:loop-access-door": false,
+          "moving:loop-return-control": false,
+          "moving:loop-lift": false,
+          "loop-light": true
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "enter",
+            "time": 9542,
+            "body": "player",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "loop-source",
+            "toSurface": "loop-return",
+            "speed": 4.785029669921401,
+            "exitSpeed": 4.785029669921401,
+            "held": null
+          },
+          {
+            "type": "land",
+            "time": 9550
+          },
+          {
+            "type": "footstep",
+            "time": 9950
+          },
+          {
+            "type": "footstep",
+            "time": 10375
+          },
+          {
+            "type": "footstep",
+            "time": 10800
+          },
+          {
+            "type": "pickup",
+            "time": 11208,
+            "body": "loop-block-cube"
+          },
+          {
+            "type": "footstep",
+            "time": 11225
+          },
+          {
+            "type": "receiver-power",
+            "time": 11258,
+            "id": "loop-light"
+          },
+          {
+            "type": "shutter-open",
+            "time": 11258,
+            "id": "loop-upper-door"
+          },
+          {
+            "type": "footstep",
+            "time": 11650
+          },
+          {
+            "type": "footstep",
+            "time": 12075
+          },
+          {
+            "type": "footstep",
+            "time": 12500
+          },
+          {
+            "type": "footstep",
+            "time": 12983
+          },
+          {
+            "type": "enter",
+            "time": 13108,
+            "body": "loop-block-cube",
+            "from": 1,
+            "to": 0,
+            "fromSurface": "loop-return",
+            "toSurface": "loop-source",
+            "speed": 17.981907866773174,
+            "exitSpeed": 17.981907866773174,
+            "held": "loop-block-cube"
+          },
+          {
+            "type": "enter",
+            "time": 13292,
+            "body": "player",
+            "from": 1,
+            "to": 0,
+            "fromSurface": "loop-return",
+            "toSurface": "loop-source",
+            "speed": 4.78927673479906,
+            "exitSpeed": 4.78927673479906,
+            "held": "loop-block-cube"
+          },
+          {
+            "type": "land",
+            "time": 13300
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "loop-ground",
+          "normal": {
+            "x": 0.0037210537120699883,
+            "y": 0.9999929666519165,
+            "z": -0.00046513171400874853
+          },
+          "witness": {
+            "x": -11.988919258117676,
+            "y": -0.000001341104507446289,
+            "z": 9.673995018005371
+          },
+          "applied": {
+            "x": -5.351237177819712e-7,
+            "y": -0.0001282152225030586,
+            "z": -0.00015172793064266443
+          },
+          "remaining": {
+            "x": -0.000004102250386495143,
+            "y": -0.0009828959591686726,
+            "z": -0.0011631438974291086
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-blocker-parked-clear-without-extra-pressure",
+      "state": {
+        "room": "chamber-35",
+        "number": 35,
+        "mission": "The lift is powered by the receiver, and ACCESS is opened by cargo pressure. Keep both supplies active and reach the control gallery.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -6.121082305908203,
+            0.8646752238273621,
+            3.922065019607544
+          ],
+          "velocity": [
+            4.614013371849591e-11,
+            0,
+            -4.553707801469863e-11
+          ],
+          "yaw": 1.6061535321218452,
+          "pitch": -0.23897696502988558,
+          "grounded": true,
+          "crossings": 2
+        },
+        "portals": [
+          {
+            "surface": "loop-source",
+            "position": [
+              -12,
+              1.55,
+              9.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "loop-return",
+            "position": [
+              -17.96,
+              1.55,
+              4
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "loop-near-cube",
+            "position": [
+              -2.943362236022949,
+              0.6898895502090454,
+              -7.014039039611816
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -2.008390822538786e-7,
+              -0.0000010175192528549815,
+              -2.2816952593984752e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          },
+          {
+            "id": "loop-block-cube",
+            "position": [
+              -7.899110794067383,
+              0.5498898029327393,
+              3.984651565551758
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -1.90010318590339e-8,
+              -0.7071075439453125,
+              -3.196845170805318e-7,
+              0.7071061134338379
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 1
+          }
+        ],
+        "pads": [
+          {
+            "id": "access-pressure",
+            "position": [
+              -3,
+              0.14,
+              -7
+            ],
+            "pressed": true,
+            "crate": "loop-near-cube"
+          },
+          {
+            "id": "loop-service",
+            "position": [
+              -9,
+              0.14,
+              6
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "loop-service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -6,
+              1.5,
+              10.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-upper-door",
+            "kind": "shutter",
+            "label": "CONTROL GALLERY",
+            "position": [
+              14,
+              9.2,
+              -10.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-access-door",
+            "kind": "shutter",
+            "label": "ACCESS",
+            "position": [
+              -0.08,
+              5,
+              0
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-return-control",
+            "kind": "switch",
+            "label": "ACCESS RETURN",
+            "position": [
+              2.5,
+              1.25,
+              -4
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-lift",
+            "kind": "lift",
+            "label": "CONTROL GALLERY",
+            "position": [
+              14,
+              -0.2,
+              0
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "loop-source",
+            "position": [
+              -12,
+              1.75,
+              9.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "loop-return",
+            "position": [
+              -17.985,
+              1.75,
+              4
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -6,
+              1.5,
+              12.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.780000000000001
+            ]
+          },
+          {
+            "id": "control-exit",
+            "label": "EXIT",
+            "position": [
+              14,
+              5.7,
+              -12.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.780000000000001
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "loop-emitter": {
+            "segments": [
+              {
+                "from": [
+                  -17.3,
+                  0.65,
+                  -4
+                ],
+                "to": [
+                  7.6800000000000175,
+                  0.65,
+                  -4
+                ]
+              }
+            ],
+            "stop": "receiver",
+            "receiver": "loop-light",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "access-pressure": true,
+          "loop-service": false,
+          "closed:loop-service-door": true,
+          "clear:loop-service-door": false,
+          "safety:loop-service-door": false,
+          "door-safety": false,
+          "moving:loop-service-door": false,
+          "closed:loop-upper-door": false,
+          "clear:loop-upper-door": true,
+          "safety:loop-upper-door": false,
+          "moving:loop-upper-door": false,
+          "closed:loop-access-door": false,
+          "clear:loop-access-door": true,
+          "safety:loop-access-door": false,
+          "moving:loop-access-door": false,
+          "moving:loop-return-control": false,
+          "moving:loop-lift": false,
+          "loop-light": true
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "footstep",
+            "time": 11650
+          },
+          {
+            "type": "footstep",
+            "time": 12075
+          },
+          {
+            "type": "footstep",
+            "time": 12500
+          },
+          {
+            "type": "footstep",
+            "time": 12983
+          },
+          {
+            "type": "enter",
+            "time": 13108,
+            "body": "loop-block-cube",
+            "from": 1,
+            "to": 0,
+            "fromSurface": "loop-return",
+            "toSurface": "loop-source",
+            "speed": 17.981907866773174,
+            "exitSpeed": 17.981907866773174,
+            "held": "loop-block-cube"
+          },
+          {
+            "type": "enter",
+            "time": 13292,
+            "body": "player",
+            "from": 1,
+            "to": 0,
+            "fromSurface": "loop-return",
+            "toSurface": "loop-source",
+            "speed": 4.78927673479906,
+            "exitSpeed": 4.78927673479906,
+            "held": "loop-block-cube"
+          },
+          {
+            "type": "land",
+            "time": 13300
+          },
+          {
+            "type": "footstep",
+            "time": 13483
+          },
+          {
+            "type": "footstep",
+            "time": 13908
+          },
+          {
+            "type": "footstep",
+            "time": 14333
+          },
+          {
+            "type": "pad",
+            "time": 14367,
+            "pad": "loop-service",
+            "crate": "player"
+          },
+          {
+            "type": "button-release",
+            "time": 14750,
+            "pad": "loop-service",
+            "crate": "player"
+          },
+          {
+            "type": "footstep",
+            "time": 14758
+          },
+          {
+            "type": "footstep",
+            "time": 15183
+          },
+          {
+            "type": "drop",
+            "time": 15733,
+            "body": "loop-block-cube"
+          },
+          {
+            "type": "contact",
+            "time": 15783,
+            "body": "loop-block-cube",
+            "speed": 0.9195258585187724
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "loop-ground",
+          "normal": {
+            "x": -0.0017878401558846235,
+            "y": 0.9999983906745911,
+            "z": -0.00015966236242093146
+          },
+          "witness": {
+            "x": -6.121219158172607,
+            "y": -0.000021576881408691406,
+            "z": 3.930314064025879
+          },
+          "applied": {
+            "x": 3.461094529467329e-14,
+            "y": -0.00010001689224736765,
+            "z": -3.415857549073087e-14
+          },
+          "remaining": {
+            "x": 3.498901472373528e-13,
+            "y": -0.0010110941948369145,
+            "z": -3.4531706378897187e-13
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-loop-lift-boarding",
+      "state": {
+        "room": "chamber-35",
+        "number": 35,
+        "mission": "The lift is powered by the receiver, and ACCESS is opened by cargo pressure. Keep both supplies active and reach the control gallery.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            13.995462417602539,
+            0.8651000261306763,
+            0.37927350401878357
+          ],
+          "velocity": [
+            -0.015741166094835144,
+            0,
+            -0.4190041795651896
+          ],
+          "yaw": 0.03754164299821218,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 2
+        },
+        "portals": [
+          {
+            "surface": "loop-source",
+            "position": [
+              -12,
+              1.55,
+              9.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "loop-return",
+            "position": [
+              -17.96,
+              1.55,
+              4
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "loop-near-cube",
+            "position": [
+              -2.943362236022949,
+              0.6898895502090454,
+              -7.014039039611816
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -2.008390822538786e-7,
+              -0.0000010175192528549815,
+              -2.2816952593984752e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          },
+          {
+            "id": "loop-block-cube",
+            "position": [
+              -7.899110794067383,
+              0.5498898029327393,
+              3.984651565551758
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -1.90010318590339e-8,
+              -0.7071075439453125,
+              -3.196845170805318e-7,
+              0.7071061134338379
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 1
+          }
+        ],
+        "pads": [
+          {
+            "id": "access-pressure",
+            "position": [
+              -3,
+              0.14,
+              -7
+            ],
+            "pressed": true,
+            "crate": "loop-near-cube"
+          },
+          {
+            "id": "loop-service",
+            "position": [
+              -9,
+              0.14,
+              6
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "loop-service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -6,
+              1.5,
+              10.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-upper-door",
+            "kind": "shutter",
+            "label": "CONTROL GALLERY",
+            "position": [
+              14,
+              9.2,
+              -10.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-access-door",
+            "kind": "shutter",
+            "label": "ACCESS",
+            "position": [
+              -0.08,
+              5,
+              0
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-return-control",
+            "kind": "switch",
+            "label": "ACCESS RETURN",
+            "position": [
+              2.5,
+              1.25,
+              -4
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-lift",
+            "kind": "lift",
+            "label": "CONTROL GALLERY",
+            "position": [
+              14,
+              -0.2,
+              0
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "loop-source",
+            "position": [
+              -12,
+              1.75,
+              9.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "loop-return",
+            "position": [
+              -17.985,
+              1.75,
+              4
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -6,
+              1.5,
+              12.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.780000000000001
+            ]
+          },
+          {
+            "id": "control-exit",
+            "label": "EXIT",
+            "position": [
+              14,
+              5.7,
+              -12.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.780000000000001
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "loop-emitter": {
+            "segments": [
+              {
+                "from": [
+                  -17.3,
+                  0.65,
+                  -4
+                ],
+                "to": [
+                  7.6800000000000175,
+                  0.65,
+                  -4
+                ]
+              }
+            ],
+            "stop": "receiver",
+            "receiver": "loop-light",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "access-pressure": true,
+          "loop-service": false,
+          "closed:loop-service-door": true,
+          "clear:loop-service-door": false,
+          "safety:loop-service-door": false,
+          "door-safety": false,
+          "moving:loop-service-door": false,
+          "closed:loop-upper-door": false,
+          "clear:loop-upper-door": true,
+          "safety:loop-upper-door": false,
+          "moving:loop-upper-door": false,
+          "closed:loop-access-door": false,
+          "clear:loop-access-door": true,
+          "safety:loop-access-door": false,
+          "moving:loop-access-door": false,
+          "moving:loop-return-control": false,
+          "moving:loop-lift": false,
+          "loop-light": true
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "footstep",
+            "time": 17400
+          },
+          {
+            "type": "footstep",
+            "time": 17825
+          },
+          {
+            "type": "footstep",
+            "time": 18250
+          },
+          {
+            "type": "footstep",
+            "time": 18675
+          },
+          {
+            "type": "footstep",
+            "time": 19100
+          },
+          {
+            "type": "footstep",
+            "time": 19525
+          },
+          {
+            "type": "footstep",
+            "time": 19950
+          },
+          {
+            "type": "footstep",
+            "time": 20375
+          },
+          {
+            "type": "lift-arrival",
+            "time": 20758,
+            "id": "loop-lift",
+            "value": "GALLERY"
+          },
+          {
+            "type": "footstep",
+            "time": 20800
+          },
+          {
+            "type": "footstep",
+            "time": 21225
+          },
+          {
+            "type": "footstep",
+            "time": 21650
+          },
+          {
+            "type": "lift-motor",
+            "time": 26758,
+            "id": "loop-lift"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 30258,
+            "id": "loop-lift",
+            "value": "base"
+          },
+          {
+            "type": "footstep",
+            "time": 30267
+          },
+          {
+            "type": "footstep",
+            "time": 30692
+          }
+        ]
+      },
+      "contacts": []
+    },
+    {
+      "label": "actual-requested-physical-completion",
+      "state": {
+        "room": "chamber-35",
+        "number": 35,
+        "mission": "The lift is powered by the receiver, and ACCESS is opened by cargo pressure. Keep both supplies active and reach the control gallery.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            13.999984741210938,
+            5.064968585968018,
+            -10.607194900512695
+          ],
+          "velocity": [
+            0.000030078898663366523,
+            0,
+            -4.7999999996488745
+          ],
+          "yaw": -0.000006272096891270532,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 2
+        },
+        "portals": [
+          {
+            "surface": "loop-source",
+            "position": [
+              -12,
+              1.55,
+              9.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "loop-return",
+            "position": [
+              -17.96,
+              1.55,
+              4
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "loop-near-cube",
+            "position": [
+              -2.943362236022949,
+              0.6898895502090454,
+              -7.014039039611816
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -2.008390822538786e-7,
+              -0.0000010175192528549815,
+              -2.2816952593984752e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          },
+          {
+            "id": "loop-block-cube",
+            "position": [
+              -7.899110794067383,
+              0.5498898029327393,
+              3.984651565551758
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -1.90010318590339e-8,
+              -0.7071075439453125,
+              -3.196845170805318e-7,
+              0.7071061134338379
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 1
+          }
+        ],
+        "pads": [
+          {
+            "id": "access-pressure",
+            "position": [
+              -3,
+              0.14,
+              -7
+            ],
+            "pressed": true,
+            "crate": "loop-near-cube"
+          },
+          {
+            "id": "loop-service",
+            "position": [
+              -9,
+              0.14,
+              6
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "loop-service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -6,
+              1.5,
+              10.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-upper-door",
+            "kind": "shutter",
+            "label": "CONTROL GALLERY",
+            "position": [
+              14,
+              9.2,
+              -10.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-access-door",
+            "kind": "shutter",
+            "label": "ACCESS",
+            "position": [
+              -0.08,
+              5,
+              0
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-return-control",
+            "kind": "switch",
+            "label": "ACCESS RETURN",
+            "position": [
+              2.5,
+              1.25,
+              -4
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-lift",
+            "kind": "lift",
+            "label": "CONTROL GALLERY",
+            "position": [
+              14,
+              4,
+              0
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "loop-source",
+            "position": [
+              -12,
+              1.75,
+              9.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "loop-return",
+            "position": [
+              -17.985,
+              1.75,
+              4
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -6,
+              1.5,
+              12.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.780000000000001
+            ]
+          },
+          {
+            "id": "control-exit",
+            "label": "EXIT",
+            "position": [
+              14,
+              5.7,
+              -12.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.780000000000001
+            ]
+          }
+        ],
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "control-exit",
+          "reason": "",
+          "events": [
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "portalA",
+              "time": 300,
+              "surface": "loop-source",
+              "point": [
+                -12,
+                1.55,
+                9.959999999999999
+              ]
+            },
+            {
+              "type": "portalB",
+              "time": 308,
+              "surface": "loop-return",
+              "point": [
+                -17.96,
+                1.55,
+                4
+              ]
+            },
+            {
+              "type": "footstep",
+              "time": 425
+            },
+            {
+              "type": "pickup",
+              "time": 717,
+              "body": "loop-near-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 850
+            },
+            {
+              "type": "footstep",
+              "time": 1275
+            },
+            {
+              "type": "footstep",
+              "time": 1700
+            },
+            {
+              "type": "footstep",
+              "time": 2125
+            },
+            {
+              "type": "footstep",
+              "time": 2550
+            },
+            {
+              "type": "footstep",
+              "time": 2975
+            },
+            {
+              "type": "footstep",
+              "time": 3400
+            },
+            {
+              "type": "footstep",
+              "time": 3825
+            },
+            {
+              "type": "shutter-open",
+              "time": 4208,
+              "id": "loop-access-door"
+            },
+            {
+              "type": "pad",
+              "time": 4208,
+              "pad": "access-pressure",
+              "crate": "loop-near-cube"
+            },
+            {
+              "type": "drop",
+              "time": 4458,
+              "body": "loop-near-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 5275
+            },
+            {
+              "type": "footstep",
+              "time": 5700
+            },
+            {
+              "type": "footstep",
+              "time": 6125
+            },
+            {
+              "type": "footstep",
+              "time": 6550
+            },
+            {
+              "type": "footstep",
+              "time": 6975
+            },
+            {
+              "type": "footstep",
+              "time": 7400
+            },
+            {
+              "type": "footstep",
+              "time": 7825
+            },
+            {
+              "type": "footstep",
+              "time": 8250
+            },
+            {
+              "type": "footstep",
+              "time": 8675
+            },
+            {
+              "type": "footstep",
+              "time": 9100
+            },
+            {
+              "type": "footstep",
+              "time": 9525
+            },
+            {
+              "type": "enter",
+              "time": 9542,
+              "body": "player",
+              "from": 0,
+              "to": 1,
+              "fromSurface": "loop-source",
+              "toSurface": "loop-return",
+              "speed": 4.785029669921401,
+              "exitSpeed": 4.785029669921401,
+              "held": null
+            },
+            {
+              "type": "land",
+              "time": 9550
+            },
+            {
+              "type": "footstep",
+              "time": 9950
+            },
+            {
+              "type": "footstep",
+              "time": 10375
+            },
+            {
+              "type": "footstep",
+              "time": 10800
+            },
+            {
+              "type": "pickup",
+              "time": 11208,
+              "body": "loop-block-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 11225
+            },
+            {
+              "type": "receiver-power",
+              "time": 11258,
+              "id": "loop-light"
+            },
+            {
+              "type": "shutter-open",
+              "time": 11258,
+              "id": "loop-upper-door"
+            },
+            {
+              "type": "footstep",
+              "time": 11650
+            },
+            {
+              "type": "footstep",
+              "time": 12075
+            },
+            {
+              "type": "footstep",
+              "time": 12500
+            },
+            {
+              "type": "footstep",
+              "time": 12983
+            },
+            {
+              "type": "enter",
+              "time": 13108,
+              "body": "loop-block-cube",
+              "from": 1,
+              "to": 0,
+              "fromSurface": "loop-return",
+              "toSurface": "loop-source",
+              "speed": 17.981907866773174,
+              "exitSpeed": 17.981907866773174,
+              "held": "loop-block-cube"
+            },
+            {
+              "type": "enter",
+              "time": 13292,
+              "body": "player",
+              "from": 1,
+              "to": 0,
+              "fromSurface": "loop-return",
+              "toSurface": "loop-source",
+              "speed": 4.78927673479906,
+              "exitSpeed": 4.78927673479906,
+              "held": "loop-block-cube"
+            },
+            {
+              "type": "land",
+              "time": 13300
+            },
+            {
+              "type": "footstep",
+              "time": 13483
+            },
+            {
+              "type": "footstep",
+              "time": 13908
+            },
+            {
+              "type": "footstep",
+              "time": 14333
+            },
+            {
+              "type": "pad",
+              "time": 14367,
+              "pad": "loop-service",
+              "crate": "player"
+            },
+            {
+              "type": "button-release",
+              "time": 14750,
+              "pad": "loop-service",
+              "crate": "player"
+            },
+            {
+              "type": "footstep",
+              "time": 14758
+            },
+            {
+              "type": "footstep",
+              "time": 15183
+            },
+            {
+              "type": "drop",
+              "time": 15733,
+              "body": "loop-block-cube"
+            },
+            {
+              "type": "contact",
+              "time": 15783,
+              "body": "loop-block-cube",
+              "speed": 0.9195258585187724
+            },
+            {
+              "type": "footstep",
+              "time": 16550
+            },
+            {
+              "type": "footstep",
+              "time": 16975
+            },
+            {
+              "type": "lift-motor",
+              "time": 17258,
+              "id": "loop-lift"
+            },
+            {
+              "type": "footstep",
+              "time": 17400
+            },
+            {
+              "type": "footstep",
+              "time": 17825
+            },
+            {
+              "type": "footstep",
+              "time": 18250
+            },
+            {
+              "type": "footstep",
+              "time": 18675
+            },
+            {
+              "type": "footstep",
+              "time": 19100
+            },
+            {
+              "type": "footstep",
+              "time": 19525
+            },
+            {
+              "type": "footstep",
+              "time": 19950
+            },
+            {
+              "type": "footstep",
+              "time": 20375
+            },
+            {
+              "type": "lift-arrival",
+              "time": 20758,
+              "id": "loop-lift",
+              "value": "GALLERY"
+            },
+            {
+              "type": "footstep",
+              "time": 20800
+            },
+            {
+              "type": "footstep",
+              "time": 21225
+            },
+            {
+              "type": "footstep",
+              "time": 21650
+            },
+            {
+              "type": "lift-motor",
+              "time": 26758,
+              "id": "loop-lift"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 30258,
+              "id": "loop-lift",
+              "value": "base"
+            },
+            {
+              "type": "footstep",
+              "time": 30267
+            },
+            {
+              "type": "footstep",
+              "time": 30692
+            },
+            {
+              "type": "lift-motor",
+              "time": 36258,
+              "id": "loop-lift"
+            },
+            {
+              "type": "footstep",
+              "time": 39717
+            },
+            {
+              "type": "lift-arrival",
+              "time": 39758,
+              "id": "loop-lift",
+              "value": "GALLERY"
+            },
+            {
+              "type": "footstep",
+              "time": 40142
+            },
+            {
+              "type": "footstep",
+              "time": 40567
+            },
+            {
+              "type": "footstep",
+              "time": 41000
+            },
+            {
+              "type": "footstep",
+              "time": 41425
+            },
+            {
+              "type": "footstep",
+              "time": 41850
+            }
+          ],
+          "mechanisms": [
+            "cargo",
+            "shutters",
+            "buttons",
+            "portals",
+            "beams",
+            "lifts"
+          ]
+        },
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "loop-emitter": {
+            "segments": [
+              {
+                "from": [
+                  -17.3,
+                  0.65,
+                  -4
+                ],
+                "to": [
+                  7.6800000000000175,
+                  0.65,
+                  -4
+                ]
+              }
+            ],
+            "stop": "receiver",
+            "receiver": "loop-light",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "access-pressure": true,
+          "loop-service": false,
+          "closed:loop-service-door": true,
+          "clear:loop-service-door": false,
+          "safety:loop-service-door": false,
+          "door-safety": false,
+          "moving:loop-service-door": false,
+          "closed:loop-upper-door": false,
+          "clear:loop-upper-door": true,
+          "safety:loop-upper-door": false,
+          "moving:loop-upper-door": false,
+          "closed:loop-access-door": false,
+          "clear:loop-access-door": true,
+          "safety:loop-access-door": false,
+          "moving:loop-access-door": false,
+          "moving:loop-return-control": false,
+          "moving:loop-lift": false,
+          "loop-light": true
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "footstep",
+            "time": 20800
+          },
+          {
+            "type": "footstep",
+            "time": 21225
+          },
+          {
+            "type": "footstep",
+            "time": 21650
+          },
+          {
+            "type": "lift-motor",
+            "time": 26758,
+            "id": "loop-lift"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 30258,
+            "id": "loop-lift",
+            "value": "base"
+          },
+          {
+            "type": "footstep",
+            "time": 30267
+          },
+          {
+            "type": "footstep",
+            "time": 30692
+          },
+          {
+            "type": "lift-motor",
+            "time": 36258,
+            "id": "loop-lift"
+          },
+          {
+            "type": "footstep",
+            "time": 39717
+          },
+          {
+            "type": "lift-arrival",
+            "time": 39758,
+            "id": "loop-lift",
+            "value": "GALLERY"
+          },
+          {
+            "type": "footstep",
+            "time": 40142
+          },
+          {
+            "type": "footstep",
+            "time": 40567
+          },
+          {
+            "type": "footstep",
+            "time": 41000
+          },
+          {
+            "type": "footstep",
+            "time": 41425
+          },
+          {
+            "type": "footstep",
+            "time": 41850
+          },
+          {
+            "type": "complete",
+            "time": 42200,
+            "chamber": 35
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "loop-upper-vestibule",
+          "normal": {
+            "x": 0.000004008835276181344,
+            "y": 1,
+            "z": 0
+          },
+          "witness": {
+            "x": 13.999979972839355,
+            "y": 4.200000286102295,
+            "z": -10.567203521728516
+          },
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": 2.506574787730642e-7,
+            "y": -0.0011111111380159855,
+            "z": -0.03999999910593033
+          }
+        }
+      ]
+    },
+    {
+      "label": "final",
+      "state": {
+        "room": "chamber-35",
+        "number": 35,
+        "mission": "The lift is powered by the receiver, and ACCESS is opened by cargo pressure. Keep both supplies active and reach the control gallery.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            13.999984741210938,
+            5.064968585968018,
+            -10.607194900512695
+          ],
+          "velocity": [
+            0.000030078898663366523,
+            0,
+            -4.7999999996488745
+          ],
+          "yaw": -0.000006272096891270532,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 2
+        },
+        "portals": [
+          {
+            "surface": "loop-source",
+            "position": [
+              -12,
+              1.55,
+              9.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "loop-return",
+            "position": [
+              -17.96,
+              1.55,
+              4
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "loop-near-cube",
+            "position": [
+              -2.943362236022949,
+              0.6898895502090454,
+              -7.014039039611816
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -2.008390822538786e-7,
+              -0.0000010175192528549815,
+              -2.2816952593984752e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          },
+          {
+            "id": "loop-block-cube",
+            "position": [
+              -7.899110794067383,
+              0.5498898029327393,
+              3.984651565551758
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -1.90010318590339e-8,
+              -0.7071075439453125,
+              -3.196845170805318e-7,
+              0.7071061134338379
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 1
+          }
+        ],
+        "pads": [
+          {
+            "id": "access-pressure",
+            "position": [
+              -3,
+              0.14,
+              -7
+            ],
+            "pressed": true,
+            "crate": "loop-near-cube"
+          },
+          {
+            "id": "loop-service",
+            "position": [
+              -9,
+              0.14,
+              6
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "loop-service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -6,
+              1.5,
+              10.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-upper-door",
+            "kind": "shutter",
+            "label": "CONTROL GALLERY",
+            "position": [
+              14,
+              9.2,
+              -10.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-access-door",
+            "kind": "shutter",
+            "label": "ACCESS",
+            "position": [
+              -0.08,
+              5,
+              0
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-return-control",
+            "kind": "switch",
+            "label": "ACCESS RETURN",
+            "position": [
+              2.5,
+              1.25,
+              -4
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-lift",
+            "kind": "lift",
+            "label": "CONTROL GALLERY",
+            "position": [
+              14,
+              4,
+              0
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "loop-source",
+            "position": [
+              -12,
+              1.75,
+              9.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "loop-return",
+            "position": [
+              -17.985,
+              1.75,
+              4
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -6,
+              1.5,
+              12.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.780000000000001
+            ]
+          },
+          {
+            "id": "control-exit",
+            "label": "EXIT",
+            "position": [
+              14,
+              5.7,
+              -12.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.780000000000001
+            ]
+          }
+        ],
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "control-exit",
+          "reason": "",
+          "events": [
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "portalA",
+              "time": 300,
+              "surface": "loop-source",
+              "point": [
+                -12,
+                1.55,
+                9.959999999999999
+              ]
+            },
+            {
+              "type": "portalB",
+              "time": 308,
+              "surface": "loop-return",
+              "point": [
+                -17.96,
+                1.55,
+                4
+              ]
+            },
+            {
+              "type": "footstep",
+              "time": 425
+            },
+            {
+              "type": "pickup",
+              "time": 717,
+              "body": "loop-near-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 850
+            },
+            {
+              "type": "footstep",
+              "time": 1275
+            },
+            {
+              "type": "footstep",
+              "time": 1700
+            },
+            {
+              "type": "footstep",
+              "time": 2125
+            },
+            {
+              "type": "footstep",
+              "time": 2550
+            },
+            {
+              "type": "footstep",
+              "time": 2975
+            },
+            {
+              "type": "footstep",
+              "time": 3400
+            },
+            {
+              "type": "footstep",
+              "time": 3825
+            },
+            {
+              "type": "shutter-open",
+              "time": 4208,
+              "id": "loop-access-door"
+            },
+            {
+              "type": "pad",
+              "time": 4208,
+              "pad": "access-pressure",
+              "crate": "loop-near-cube"
+            },
+            {
+              "type": "drop",
+              "time": 4458,
+              "body": "loop-near-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 5275
+            },
+            {
+              "type": "footstep",
+              "time": 5700
+            },
+            {
+              "type": "footstep",
+              "time": 6125
+            },
+            {
+              "type": "footstep",
+              "time": 6550
+            },
+            {
+              "type": "footstep",
+              "time": 6975
+            },
+            {
+              "type": "footstep",
+              "time": 7400
+            },
+            {
+              "type": "footstep",
+              "time": 7825
+            },
+            {
+              "type": "footstep",
+              "time": 8250
+            },
+            {
+              "type": "footstep",
+              "time": 8675
+            },
+            {
+              "type": "footstep",
+              "time": 9100
+            },
+            {
+              "type": "footstep",
+              "time": 9525
+            },
+            {
+              "type": "enter",
+              "time": 9542,
+              "body": "player",
+              "from": 0,
+              "to": 1,
+              "fromSurface": "loop-source",
+              "toSurface": "loop-return",
+              "speed": 4.785029669921401,
+              "exitSpeed": 4.785029669921401,
+              "held": null
+            },
+            {
+              "type": "land",
+              "time": 9550
+            },
+            {
+              "type": "footstep",
+              "time": 9950
+            },
+            {
+              "type": "footstep",
+              "time": 10375
+            },
+            {
+              "type": "footstep",
+              "time": 10800
+            },
+            {
+              "type": "pickup",
+              "time": 11208,
+              "body": "loop-block-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 11225
+            },
+            {
+              "type": "receiver-power",
+              "time": 11258,
+              "id": "loop-light"
+            },
+            {
+              "type": "shutter-open",
+              "time": 11258,
+              "id": "loop-upper-door"
+            },
+            {
+              "type": "footstep",
+              "time": 11650
+            },
+            {
+              "type": "footstep",
+              "time": 12075
+            },
+            {
+              "type": "footstep",
+              "time": 12500
+            },
+            {
+              "type": "footstep",
+              "time": 12983
+            },
+            {
+              "type": "enter",
+              "time": 13108,
+              "body": "loop-block-cube",
+              "from": 1,
+              "to": 0,
+              "fromSurface": "loop-return",
+              "toSurface": "loop-source",
+              "speed": 17.981907866773174,
+              "exitSpeed": 17.981907866773174,
+              "held": "loop-block-cube"
+            },
+            {
+              "type": "enter",
+              "time": 13292,
+              "body": "player",
+              "from": 1,
+              "to": 0,
+              "fromSurface": "loop-return",
+              "toSurface": "loop-source",
+              "speed": 4.78927673479906,
+              "exitSpeed": 4.78927673479906,
+              "held": "loop-block-cube"
+            },
+            {
+              "type": "land",
+              "time": 13300
+            },
+            {
+              "type": "footstep",
+              "time": 13483
+            },
+            {
+              "type": "footstep",
+              "time": 13908
+            },
+            {
+              "type": "footstep",
+              "time": 14333
+            },
+            {
+              "type": "pad",
+              "time": 14367,
+              "pad": "loop-service",
+              "crate": "player"
+            },
+            {
+              "type": "button-release",
+              "time": 14750,
+              "pad": "loop-service",
+              "crate": "player"
+            },
+            {
+              "type": "footstep",
+              "time": 14758
+            },
+            {
+              "type": "footstep",
+              "time": 15183
+            },
+            {
+              "type": "drop",
+              "time": 15733,
+              "body": "loop-block-cube"
+            },
+            {
+              "type": "contact",
+              "time": 15783,
+              "body": "loop-block-cube",
+              "speed": 0.9195258585187724
+            },
+            {
+              "type": "footstep",
+              "time": 16550
+            },
+            {
+              "type": "footstep",
+              "time": 16975
+            },
+            {
+              "type": "lift-motor",
+              "time": 17258,
+              "id": "loop-lift"
+            },
+            {
+              "type": "footstep",
+              "time": 17400
+            },
+            {
+              "type": "footstep",
+              "time": 17825
+            },
+            {
+              "type": "footstep",
+              "time": 18250
+            },
+            {
+              "type": "footstep",
+              "time": 18675
+            },
+            {
+              "type": "footstep",
+              "time": 19100
+            },
+            {
+              "type": "footstep",
+              "time": 19525
+            },
+            {
+              "type": "footstep",
+              "time": 19950
+            },
+            {
+              "type": "footstep",
+              "time": 20375
+            },
+            {
+              "type": "lift-arrival",
+              "time": 20758,
+              "id": "loop-lift",
+              "value": "GALLERY"
+            },
+            {
+              "type": "footstep",
+              "time": 20800
+            },
+            {
+              "type": "footstep",
+              "time": 21225
+            },
+            {
+              "type": "footstep",
+              "time": 21650
+            },
+            {
+              "type": "lift-motor",
+              "time": 26758,
+              "id": "loop-lift"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 30258,
+              "id": "loop-lift",
+              "value": "base"
+            },
+            {
+              "type": "footstep",
+              "time": 30267
+            },
+            {
+              "type": "footstep",
+              "time": 30692
+            },
+            {
+              "type": "lift-motor",
+              "time": 36258,
+              "id": "loop-lift"
+            },
+            {
+              "type": "footstep",
+              "time": 39717
+            },
+            {
+              "type": "lift-arrival",
+              "time": 39758,
+              "id": "loop-lift",
+              "value": "GALLERY"
+            },
+            {
+              "type": "footstep",
+              "time": 40142
+            },
+            {
+              "type": "footstep",
+              "time": 40567
+            },
+            {
+              "type": "footstep",
+              "time": 41000
+            },
+            {
+              "type": "footstep",
+              "time": 41425
+            },
+            {
+              "type": "footstep",
+              "time": 41850
+            }
+          ],
+          "mechanisms": [
+            "cargo",
+            "shutters",
+            "buttons",
+            "portals",
+            "beams",
+            "lifts"
+          ]
+        },
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "loop-emitter": {
+            "segments": [
+              {
+                "from": [
+                  -17.3,
+                  0.65,
+                  -4
+                ],
+                "to": [
+                  7.6800000000000175,
+                  0.65,
+                  -4
+                ]
+              }
+            ],
+            "stop": "receiver",
+            "receiver": "loop-light",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "access-pressure": true,
+          "loop-service": false,
+          "closed:loop-service-door": true,
+          "clear:loop-service-door": false,
+          "safety:loop-service-door": false,
+          "door-safety": false,
+          "moving:loop-service-door": false,
+          "closed:loop-upper-door": false,
+          "clear:loop-upper-door": true,
+          "safety:loop-upper-door": false,
+          "moving:loop-upper-door": false,
+          "closed:loop-access-door": false,
+          "clear:loop-access-door": true,
+          "safety:loop-access-door": false,
+          "moving:loop-access-door": false,
+          "moving:loop-return-control": false,
+          "moving:loop-lift": false,
+          "loop-light": true
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "footstep",
+            "time": 20800
+          },
+          {
+            "type": "footstep",
+            "time": 21225
+          },
+          {
+            "type": "footstep",
+            "time": 21650
+          },
+          {
+            "type": "lift-motor",
+            "time": 26758,
+            "id": "loop-lift"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 30258,
+            "id": "loop-lift",
+            "value": "base"
+          },
+          {
+            "type": "footstep",
+            "time": 30267
+          },
+          {
+            "type": "footstep",
+            "time": 30692
+          },
+          {
+            "type": "lift-motor",
+            "time": 36258,
+            "id": "loop-lift"
+          },
+          {
+            "type": "footstep",
+            "time": 39717
+          },
+          {
+            "type": "lift-arrival",
+            "time": 39758,
+            "id": "loop-lift",
+            "value": "GALLERY"
+          },
+          {
+            "type": "footstep",
+            "time": 40142
+          },
+          {
+            "type": "footstep",
+            "time": 40567
+          },
+          {
+            "type": "footstep",
+            "time": 41000
+          },
+          {
+            "type": "footstep",
+            "time": 41425
+          },
+          {
+            "type": "footstep",
+            "time": 41850
+          },
+          {
+            "type": "complete",
+            "time": 42200,
+            "chamber": 35
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "loop-upper-vestibule",
+          "normal": {
+            "x": 0.000004008835276181344,
+            "y": 1,
+            "z": 0
+          },
+          "witness": {
+            "x": 13.999979972839355,
+            "y": 4.200000286102295,
+            "z": -10.567203521728516
+          },
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": 2.506574787730642e-7,
+            "y": -0.0011111111380159855,
+            "z": -0.03999999910593033
+          }
+        }
+      ]
+    }
+  ]
+}

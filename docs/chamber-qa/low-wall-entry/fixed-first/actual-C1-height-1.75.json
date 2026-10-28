@@ -1,0 +1,2007 @@
+{
+  "scope": "Actual C1 integration or explicit native safety fixture as named. Input-only after authored construction; not browser proof.",
+  "error": null,
+  "inputs": [
+    {
+      "type": "ordinary-step",
+      "seconds": 0.3,
+      "input": {
+        "forward": 0,
+        "strafe": 0,
+        "jump": false
+      },
+      "yaw": 0,
+      "pitch": 0
+    },
+    {
+      "type": "ray-checked-aimed-placement",
+      "index": 0,
+      "id": "near-wall",
+      "requested": [
+        -7.985,
+        1.75,
+        6
+      ]
+    },
+    {
+      "type": "ray-checked-aimed-placement",
+      "index": 1,
+      "id": "far-wall",
+      "requested": [
+        5,
+        4.55,
+        -11.985
+      ]
+    },
+    {
+      "type": "ordinary-WASD-target",
+      "x": -6.3,
+      "z": 6
+    },
+    {
+      "type": "ordinary-step",
+      "seconds": 0.12,
+      "input": {
+        "forward": 0,
+        "strafe": 0,
+        "jump": false
+      },
+      "yaw": 1.0049877100089322,
+      "pitch": 0
+    },
+    {
+      "type": "ordinary-step",
+      "seconds": 0.18,
+      "input": {
+        "forward": 1,
+        "strafe": 0,
+        "jump": false
+      },
+      "yaw": -3.1300623113393438,
+      "pitch": 0.009735538077354248
+    },
+    {
+      "type": "ordinary-WASD-target",
+      "x": 3,
+      "z": -10
+    },
+    {
+      "type": "ordinary-step",
+      "seconds": 0.12,
+      "input": {
+        "forward": 0,
+        "strafe": 0,
+        "jump": false
+      },
+      "yaw": 1.9589822484662727,
+      "pitch": 0
+    },
+    {
+      "type": "ordinary-E"
+    },
+    {
+      "type": "ordinary-WASD-target",
+      "x": 5,
+      "z": -10.3
+    },
+    {
+      "type": "ordinary-step",
+      "seconds": 0.12,
+      "input": {
+        "forward": 0,
+        "strafe": 0,
+        "jump": false
+      },
+      "yaw": -1.4070254535079534,
+      "pitch": 0
+    },
+    {
+      "type": "ordinary-step",
+      "seconds": 0.18,
+      "input": {
+        "forward": 1,
+        "strafe": 0,
+        "jump": false
+      },
+      "yaw": -1.539723564640268,
+      "pitch": 0.009643181058020703
+    },
+    {
+      "type": "ordinary-WASD-target",
+      "x": 0.2,
+      "z": 6
+    },
+    {
+      "type": "ordinary-step",
+      "seconds": 0.12,
+      "input": {
+        "forward": 0,
+        "strafe": 0,
+        "jump": false
+      },
+      "yaw": -1.562980046521835,
+      "pitch": 0
+    },
+    {
+      "type": "ordinary-step",
+      "seconds": 0.35,
+      "input": {
+        "forward": 0,
+        "strafe": 0,
+        "jump": false
+      },
+      "yaw": -1.5713670330105824,
+      "pitch": -0.18581942386626565
+    },
+    {
+      "type": "ordinary-E"
+    },
+    {
+      "type": "ordinary-step",
+      "seconds": 1.2,
+      "input": {
+        "forward": 0,
+        "strafe": 0,
+        "jump": false
+      },
+      "yaw": -1.5713670330105824,
+      "pitch": -0.18581942386626565
+    },
+    {
+      "type": "ordinary-WASD-target",
+      "x": -4,
+      "z": 8.8
+    },
+    {
+      "type": "ordinary-step",
+      "seconds": 0.12,
+      "input": {
+        "forward": 0,
+        "strafe": 0,
+        "jump": false
+      },
+      "yaw": 2.144609432009561,
+      "pitch": 0
+    },
+    {
+      "type": "ordinary-WASD-target",
+      "x": -6,
+      "z": 11
+    },
+    {
+      "type": "ordinary-step",
+      "seconds": 0.12,
+      "input": {
+        "forward": 0,
+        "strafe": 0,
+        "jump": false
+      },
+      "yaw": 2.4161760015925404,
+      "pitch": 0
+    },
+    {
+      "type": "ordinary-WASD-target",
+      "x": -10,
+      "z": 11
+    }
+  ],
+  "events": [
+    {
+      "type": "land"
+    },
+    {
+      "type": "portalA",
+      "surface": "near-wall",
+      "point": [
+        -7.96,
+        1.55,
+        6
+      ]
+    },
+    {
+      "type": "portalB",
+      "surface": "far-wall",
+      "point": [
+        5,
+        4.35,
+        -11.959999999999999
+      ]
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "enter",
+      "body": "player",
+      "from": 0,
+      "to": 1,
+      "fromSurface": "near-wall",
+      "toSurface": "far-wall",
+      "speed": 4.797479430005369,
+      "exitSpeed": 4.797479430005369,
+      "held": null
+    },
+    {
+      "type": "land"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "pickup",
+      "body": "weighted-cube"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "enter",
+      "body": "weighted-cube",
+      "from": 1,
+      "to": 0,
+      "fromSurface": "far-wall",
+      "toSurface": "near-wall",
+      "speed": 17.981980050166644,
+      "exitSpeed": 17.981980050166644,
+      "held": "weighted-cube"
+    },
+    {
+      "type": "enter",
+      "body": "player",
+      "from": 1,
+      "to": 0,
+      "fromSurface": "far-wall",
+      "toSurface": "near-wall",
+      "speed": 4.7977150207620936,
+      "exitSpeed": 4.7977150207620936,
+      "held": "weighted-cube"
+    },
+    {
+      "type": "land"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "shutter-open",
+      "id": "exit-door"
+    },
+    {
+      "type": "pad",
+      "pad": "exit-button",
+      "crate": "weighted-cube"
+    },
+    {
+      "type": "drop",
+      "body": "weighted-cube"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "complete",
+      "chamber": 1
+    }
+  ],
+  "notes": [
+    {
+      "label": "actual-aimed-placement-near-wall",
+      "state": {
+        "room": "chamber-1",
+        "number": 1,
+        "mission": "Bring the cube back. Put it on the button.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -4.454600599501646e-8,
+            0.8636005520820618,
+            10
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "yaw": 1.1063975890113191,
+          "pitch": 0.02646377983189608,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "near-wall",
+            "position": [
+              -7.96,
+              1.55,
+              6
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          },
+          null
+        ],
+        "crates": [
+          {
+            "id": "weighted-cube",
+            "position": [
+              2.9999873638153076,
+              3.349896192550659,
+              -8
+            ],
+            "velocity": [
+              -0.000020709961972897872,
+              -0.0000029760883535345783,
+              -0.00001776347926352173
+            ],
+            "rotation": [
+              8.725496059014404e-7,
+              3.894881379223891e-12,
+              -9.722934919409454e-7,
+              1
+            ],
+            "angularVelocity": [
+              -0.00003211845614714548,
+              1.768657919773431e-13,
+              0.00003744604327948764
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "exit-button",
+            "position": [
+              2,
+              0.14,
+              6
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "exit-door",
+            "kind": "shutter",
+            "label": "EXIT",
+            "position": [
+              -8.12,
+              1.5,
+              11
+            ],
+            "size": [
+              0.3,
+              3,
+              2.6
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "near-wall",
+            "position": [
+              -7.985,
+              3.5,
+              -1.15
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 21.7,
+            "height": 7
+          },
+          {
+            "id": "far-wall",
+            "position": [
+              0,
+              3.5,
+              -11.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 16,
+            "height": 7
+          },
+          {
+            "id": "east-wall",
+            "position": [
+              7.985,
+              3.5,
+              1
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 26,
+            "height": 7
+          },
+          {
+            "id": "south-wall",
+            "position": [
+              0,
+              3.5,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 16,
+            "height": 7
+          }
+        ],
+        "exits": [
+          {
+            "id": "next-chamber",
+            "label": "EXIT",
+            "position": [
+              -10,
+              1.5,
+              11
+            ],
+            "size": [
+              3.960000000000001,
+              3,
+              2.960000000000001
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "exit-button": false,
+          "closed:exit-door": true,
+          "clear:exit-door": false,
+          "safety:exit-door": false,
+          "door-safety": false,
+          "moving:exit-door": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "portalA",
+            "time": 300,
+            "surface": "near-wall",
+            "point": [
+              -7.96,
+              1.55,
+              6
+            ]
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "chamber-floor",
+          "normal": {
+            "x": 0,
+            "y": 1,
+            "z": -0.00003526134241838008
+          },
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": 0,
+            "y": -0.0011111111380159855,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-aimed-placement-far-wall",
+      "state": {
+        "room": "chamber-1",
+        "number": 1,
+        "mission": "Bring the cube back. Put it on the button.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -4.454600599501646e-8,
+            0.8636005520820618,
+            10
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "yaw": -0.2236240463987292,
+          "pitch": 0.13386791127660527,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "near-wall",
+            "position": [
+              -7.96,
+              1.55,
+              6
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "far-wall",
+            "position": [
+              5,
+              4.35,
+              -11.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "weighted-cube",
+            "position": [
+              2.9999873638153076,
+              3.349896192550659,
+              -8
+            ],
+            "velocity": [
+              -0.000020709961972897872,
+              -0.0000029760883535345783,
+              -0.00001776347926352173
+            ],
+            "rotation": [
+              8.725496059014404e-7,
+              3.894881379223891e-12,
+              -9.722934919409454e-7,
+              1
+            ],
+            "angularVelocity": [
+              -0.00003211845614714548,
+              1.768657919773431e-13,
+              0.00003744604327948764
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "exit-button",
+            "position": [
+              2,
+              0.14,
+              6
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "exit-door",
+            "kind": "shutter",
+            "label": "EXIT",
+            "position": [
+              -8.12,
+              1.5,
+              11
+            ],
+            "size": [
+              0.3,
+              3,
+              2.6
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "near-wall",
+            "position": [
+              -7.985,
+              3.5,
+              -1.15
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 21.7,
+            "height": 7
+          },
+          {
+            "id": "far-wall",
+            "position": [
+              0,
+              3.5,
+              -11.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 16,
+            "height": 7
+          },
+          {
+            "id": "east-wall",
+            "position": [
+              7.985,
+              3.5,
+              1
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 26,
+            "height": 7
+          },
+          {
+            "id": "south-wall",
+            "position": [
+              0,
+              3.5,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 16,
+            "height": 7
+          }
+        ],
+        "exits": [
+          {
+            "id": "next-chamber",
+            "label": "EXIT",
+            "position": [
+              -10,
+              1.5,
+              11
+            ],
+            "size": [
+              3.960000000000001,
+              3,
+              2.960000000000001
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "exit-button": false,
+          "closed:exit-door": true,
+          "clear:exit-door": false,
+          "safety:exit-door": false,
+          "door-safety": false,
+          "moving:exit-door": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "portalA",
+            "time": 300,
+            "surface": "near-wall",
+            "point": [
+              -7.96,
+              1.55,
+              6
+            ]
+          },
+          {
+            "type": "portalB",
+            "time": 300,
+            "surface": "far-wall",
+            "point": [
+              5,
+              4.35,
+              -11.959999999999999
+            ]
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "chamber-floor",
+          "normal": {
+            "x": 0,
+            "y": 1,
+            "z": -0.00003526134241838008
+          },
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": 0,
+            "y": -0.0011111111380159855,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-W-only-portal-entry",
+      "state": {
+        "room": "chamber-1",
+        "number": 1,
+        "mission": "Bring the cube back. Put it on the button.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            4.96632719039917,
+            3.6650882840156553,
+            -11.924748344421388
+          ],
+          "velocity": [
+            0.055185703858263935,
+            0,
+            4.7971620172154195
+          ],
+          "yaw": -3.1300623113393438,
+          "pitch": 0.009735538077354248,
+          "grounded": false,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "near-wall",
+            "position": [
+              -7.96,
+              1.55,
+              6
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "far-wall",
+            "position": [
+              5,
+              4.35,
+              -11.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "weighted-cube",
+            "position": [
+              2.9999873638153076,
+              3.349896192550659,
+              -8
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              8.401572131333523e-7,
+              3.876875383224121e-12,
+              -9.569914709572913e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "exit-button",
+            "position": [
+              2,
+              0.14,
+              6
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "exit-door",
+            "kind": "shutter",
+            "label": "EXIT",
+            "position": [
+              -8.12,
+              1.5,
+              11
+            ],
+            "size": [
+              0.3,
+              3,
+              2.6
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "near-wall",
+            "position": [
+              -7.985,
+              3.5,
+              -1.15
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 21.7,
+            "height": 7
+          },
+          {
+            "id": "far-wall",
+            "position": [
+              0,
+              3.5,
+              -11.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 16,
+            "height": 7
+          },
+          {
+            "id": "east-wall",
+            "position": [
+              7.985,
+              3.5,
+              1
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 26,
+            "height": 7
+          },
+          {
+            "id": "south-wall",
+            "position": [
+              0,
+              3.5,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 16,
+            "height": 7
+          }
+        ],
+        "exits": [
+          {
+            "id": "next-chamber",
+            "label": "EXIT",
+            "position": [
+              -10,
+              1.5,
+              11
+            ],
+            "size": [
+              3.960000000000001,
+              3,
+              2.960000000000001
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "exit-button": false,
+          "closed:exit-door": true,
+          "clear:exit-door": false,
+          "safety:exit-door": false,
+          "door-safety": false,
+          "moving:exit-door": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "portalA",
+            "time": 300,
+            "surface": "near-wall",
+            "point": [
+              -7.96,
+              1.55,
+              6
+            ]
+          },
+          {
+            "type": "portalB",
+            "time": 300,
+            "surface": "far-wall",
+            "point": [
+              5,
+              4.35,
+              -11.959999999999999
+            ]
+          },
+          {
+            "type": "footstep",
+            "time": 425
+          },
+          {
+            "type": "footstep",
+            "time": 850
+          },
+          {
+            "type": "footstep",
+            "time": 1275
+          },
+          {
+            "type": "footstep",
+            "time": 1700
+          },
+          {
+            "type": "footstep",
+            "time": 2125
+          },
+          {
+            "type": "enter",
+            "time": 2483,
+            "body": "player",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "near-wall",
+            "toSurface": "far-wall",
+            "speed": 4.797479430005369,
+            "exitSpeed": 4.797479430005369,
+            "held": null
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "chamber-floor",
+          "normal": {
+            "x": -0.000014690757780044805,
+            "y": 0.9999717473983765,
+            "z": 0.00752166798338294
+          },
+          "applied": {
+            "x": -0.0022892772685736418,
+            "y": -0.00006362864951370284,
+            "z": 0.000026335439542890526
+          },
+          "remaining": {
+            "x": -0.03768707439303398,
+            "y": -0.001047482481226325,
+            "z": 0.0004335454141255468
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-W-only-portal-entry",
+      "state": {
+        "room": "chamber-1",
+        "number": 1,
+        "mission": "Bring the cube back. Put it on the button.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -7.945,
+            0.8650948524475099,
+            6.081306457519531
+          ],
+          "velocity": [
+            4.795405284500411,
+            0,
+            -0.14885421670796894
+          ],
+          "yaw": -1.539723564640268,
+          "pitch": 0.009643181058020703,
+          "grounded": false,
+          "crossings": 2
+        },
+        "portals": [
+          {
+            "surface": "near-wall",
+            "position": [
+              -7.96,
+              1.55,
+              6
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "far-wall",
+            "position": [
+              5,
+              4.35,
+              -11.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "weighted-cube",
+            "position": [
+              -6.146418571472168,
+              1.0324522256851196,
+              6.025386810302734
+            ],
+            "velocity": [
+              4.790569305419922,
+              0.011989999562501907,
+              -0.14873887598514557
+            ],
+            "rotation": [
+              0.0000012707761243291316,
+              -0.7071068286895752,
+              -8.261430650691182e-8,
+              0.7071068286895752
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": true,
+            "crossings": 1
+          }
+        ],
+        "pads": [
+          {
+            "id": "exit-button",
+            "position": [
+              2,
+              0.14,
+              6
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "exit-door",
+            "kind": "shutter",
+            "label": "EXIT",
+            "position": [
+              -8.12,
+              1.5,
+              11
+            ],
+            "size": [
+              0.3,
+              3,
+              2.6
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "near-wall",
+            "position": [
+              -7.985,
+              3.5,
+              -1.15
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 21.7,
+            "height": 7
+          },
+          {
+            "id": "far-wall",
+            "position": [
+              0,
+              3.5,
+              -11.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 16,
+            "height": 7
+          },
+          {
+            "id": "east-wall",
+            "position": [
+              7.985,
+              3.5,
+              1
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 26,
+            "height": 7
+          },
+          {
+            "id": "south-wall",
+            "position": [
+              0,
+              3.5,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 16,
+            "height": 7
+          }
+        ],
+        "exits": [
+          {
+            "id": "next-chamber",
+            "label": "EXIT",
+            "position": [
+              -10,
+              1.5,
+              11
+            ],
+            "size": [
+              3.960000000000001,
+              3,
+              2.960000000000001
+            ]
+          }
+        ],
+        "result": null,
+        "held": "weighted-cube",
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "exit-button": false,
+          "closed:exit-door": true,
+          "clear:exit-door": false,
+          "safety:exit-door": false,
+          "door-safety": false,
+          "moving:exit-door": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "portalA",
+            "time": 300,
+            "surface": "near-wall",
+            "point": [
+              -7.96,
+              1.55,
+              6
+            ]
+          },
+          {
+            "type": "portalB",
+            "time": 300,
+            "surface": "far-wall",
+            "point": [
+              5,
+              4.35,
+              -11.959999999999999
+            ]
+          },
+          {
+            "type": "footstep",
+            "time": 425
+          },
+          {
+            "type": "footstep",
+            "time": 850
+          },
+          {
+            "type": "footstep",
+            "time": 1275
+          },
+          {
+            "type": "footstep",
+            "time": 1700
+          },
+          {
+            "type": "footstep",
+            "time": 2125
+          },
+          {
+            "type": "enter",
+            "time": 2483,
+            "body": "player",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "near-wall",
+            "toSurface": "far-wall",
+            "speed": 4.797479430005369,
+            "exitSpeed": 4.797479430005369,
+            "held": null
+          },
+          {
+            "type": "land",
+            "time": 2492
+          },
+          {
+            "type": "footstep",
+            "time": 2550
+          },
+          {
+            "type": "footstep",
+            "time": 2975
+          },
+          {
+            "type": "pickup",
+            "time": 3275,
+            "body": "weighted-cube"
+          },
+          {
+            "type": "footstep",
+            "time": 3400
+          },
+          {
+            "type": "footstep",
+            "time": 3917
+          },
+          {
+            "type": "enter",
+            "time": 4083,
+            "body": "weighted-cube",
+            "from": 1,
+            "to": 0,
+            "fromSurface": "far-wall",
+            "toSurface": "near-wall",
+            "speed": 17.981980050166644,
+            "exitSpeed": 17.981980050166644,
+            "held": "weighted-cube"
+          },
+          {
+            "type": "enter",
+            "time": 4300,
+            "body": "player",
+            "from": 1,
+            "to": 0,
+            "fromSurface": "far-wall",
+            "toSurface": "near-wall",
+            "speed": 4.7977150207620936,
+            "exitSpeed": 4.7977150207620936,
+            "held": "weighted-cube"
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "raised-cube-alcove",
+          "normal": {
+            "x": 0.000007950136932777241,
+            "y": 1,
+            "z": 2.484417791492888e-7
+          },
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": -0.0012404518201947212,
+            "y": -0.0011111111380159855,
+            "z": -0.03996171057224274
+          }
+        }
+      ]
+    },
+    {
+      "label": "final",
+      "state": {
+        "room": "chamber-1",
+        "number": 1,
+        "mission": "Bring the cube back. Put it on the button.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -8.056466102600098,
+            0.8647341728210449,
+            11.046296119689941
+          ],
+          "velocity": [
+            -4.798210838995306,
+            0,
+            -0.11423717201560558
+          ],
+          "yaw": 1.5469805917279549,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 2
+        },
+        "portals": [
+          {
+            "surface": "near-wall",
+            "position": [
+              -7.96,
+              1.55,
+              6
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "far-wall",
+            "position": [
+              5,
+              4.35,
+              -11.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "weighted-cube",
+            "position": [
+              2.1298110485076904,
+              0.6899014115333557,
+              5.999492645263672
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0.0000023085010525392136,
+              -0.7071182131767273,
+              -0.000006769982974219602,
+              0.7070954442024231
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 1
+          }
+        ],
+        "pads": [
+          {
+            "id": "exit-button",
+            "position": [
+              2,
+              0.14,
+              6
+            ],
+            "pressed": true,
+            "crate": "weighted-cube"
+          }
+        ],
+        "devices": [
+          {
+            "id": "exit-door",
+            "kind": "shutter",
+            "label": "EXIT",
+            "position": [
+              -8.12,
+              5,
+              11
+            ],
+            "size": [
+              0.3,
+              3,
+              2.6
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "near-wall",
+            "position": [
+              -7.985,
+              3.5,
+              -1.15
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 21.7,
+            "height": 7
+          },
+          {
+            "id": "far-wall",
+            "position": [
+              0,
+              3.5,
+              -11.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 16,
+            "height": 7
+          },
+          {
+            "id": "east-wall",
+            "position": [
+              7.985,
+              3.5,
+              1
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 26,
+            "height": 7
+          },
+          {
+            "id": "south-wall",
+            "position": [
+              0,
+              3.5,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 16,
+            "height": 7
+          }
+        ],
+        "exits": [
+          {
+            "id": "next-chamber",
+            "label": "EXIT",
+            "position": [
+              -10,
+              1.5,
+              11
+            ],
+            "size": [
+              3.960000000000001,
+              3,
+              2.960000000000001
+            ]
+          }
+        ],
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "next-chamber",
+          "reason": "",
+          "events": [
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "portalA",
+              "time": 300,
+              "surface": "near-wall",
+              "point": [
+                -7.96,
+                1.55,
+                6
+              ]
+            },
+            {
+              "type": "portalB",
+              "time": 300,
+              "surface": "far-wall",
+              "point": [
+                5,
+                4.35,
+                -11.959999999999999
+              ]
+            },
+            {
+              "type": "footstep",
+              "time": 425
+            },
+            {
+              "type": "footstep",
+              "time": 850
+            },
+            {
+              "type": "footstep",
+              "time": 1275
+            },
+            {
+              "type": "footstep",
+              "time": 1700
+            },
+            {
+              "type": "footstep",
+              "time": 2125
+            },
+            {
+              "type": "enter",
+              "time": 2483,
+              "body": "player",
+              "from": 0,
+              "to": 1,
+              "fromSurface": "near-wall",
+              "toSurface": "far-wall",
+              "speed": 4.797479430005369,
+              "exitSpeed": 4.797479430005369,
+              "held": null
+            },
+            {
+              "type": "land",
+              "time": 2492
+            },
+            {
+              "type": "footstep",
+              "time": 2550
+            },
+            {
+              "type": "footstep",
+              "time": 2975
+            },
+            {
+              "type": "pickup",
+              "time": 3275,
+              "body": "weighted-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 3400
+            },
+            {
+              "type": "footstep",
+              "time": 3917
+            },
+            {
+              "type": "enter",
+              "time": 4083,
+              "body": "weighted-cube",
+              "from": 1,
+              "to": 0,
+              "fromSurface": "far-wall",
+              "toSurface": "near-wall",
+              "speed": 17.981980050166644,
+              "exitSpeed": 17.981980050166644,
+              "held": "weighted-cube"
+            },
+            {
+              "type": "enter",
+              "time": 4300,
+              "body": "player",
+              "from": 1,
+              "to": 0,
+              "fromSurface": "far-wall",
+              "toSurface": "near-wall",
+              "speed": 4.7977150207620936,
+              "exitSpeed": 4.7977150207620936,
+              "held": "weighted-cube"
+            },
+            {
+              "type": "land",
+              "time": 4308
+            },
+            {
+              "type": "footstep",
+              "time": 4342
+            },
+            {
+              "type": "footstep",
+              "time": 4767
+            },
+            {
+              "type": "footstep",
+              "time": 5192
+            },
+            {
+              "type": "footstep",
+              "time": 5617
+            },
+            {
+              "type": "footstep",
+              "time": 6042
+            },
+            {
+              "type": "shutter-open",
+              "time": 6192,
+              "id": "exit-door"
+            },
+            {
+              "type": "pad",
+              "time": 6192,
+              "pad": "exit-button",
+              "crate": "weighted-cube"
+            },
+            {
+              "type": "drop",
+              "time": 6517,
+              "body": "weighted-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 7733
+            },
+            {
+              "type": "footstep",
+              "time": 8158
+            },
+            {
+              "type": "footstep",
+              "time": 8583
+            },
+            {
+              "type": "footstep",
+              "time": 9008
+            },
+            {
+              "type": "footstep",
+              "time": 9433
+            },
+            {
+              "type": "footstep",
+              "time": 9858
+            }
+          ],
+          "mechanisms": [
+            "portals",
+            "cargo",
+            "shutters",
+            "buttons"
+          ]
+        },
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "exit-button": true,
+          "closed:exit-door": false,
+          "clear:exit-door": true,
+          "safety:exit-door": true,
+          "door-safety": true,
+          "moving:exit-door": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "land",
+            "time": 4308
+          },
+          {
+            "type": "footstep",
+            "time": 4342
+          },
+          {
+            "type": "footstep",
+            "time": 4767
+          },
+          {
+            "type": "footstep",
+            "time": 5192
+          },
+          {
+            "type": "footstep",
+            "time": 5617
+          },
+          {
+            "type": "footstep",
+            "time": 6042
+          },
+          {
+            "type": "shutter-open",
+            "time": 6192,
+            "id": "exit-door"
+          },
+          {
+            "type": "pad",
+            "time": 6192,
+            "pad": "exit-button",
+            "crate": "weighted-cube"
+          },
+          {
+            "type": "drop",
+            "time": 6517,
+            "body": "weighted-cube"
+          },
+          {
+            "type": "footstep",
+            "time": 7733
+          },
+          {
+            "type": "footstep",
+            "time": 8158
+          },
+          {
+            "type": "footstep",
+            "time": 8583
+          },
+          {
+            "type": "footstep",
+            "time": 9008
+          },
+          {
+            "type": "footstep",
+            "time": 9433
+          },
+          {
+            "type": "footstep",
+            "time": 9858
+          },
+          {
+            "type": "complete",
+            "time": 10225,
+            "chamber": 1
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "vestibule-floor",
+          "normal": {
+            "x": 0.0001573560875840485,
+            "y": 1,
+            "z": -0.00009072783723240718
+          },
+          "applied": {
+            "x": -0.017768513411283493,
+            "y": -0.0004937538760714233,
+            "z": -0.00042303785448893905
+          },
+          "remaining": {
+            "x": -0.02221657708287239,
+            "y": -0.0006173572619445622,
+            "z": -0.000528938602656126
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,330 @@
+{
+  "status": "CPU actual GLBs + mocked local fetch/fake bitmap decode; no real HTTP/GPU/shader/pixel/gameplay proof",
+  "ready": {
+    "ready": true,
+    "assets": {
+      "projector": {
+        "phase": "ready",
+        "url": "./models/hero-projector.glb",
+        "expectedSHA256": "2215cbd530dd2e7b84b16dbc54efa69b9a57b38d92e19b26ef689287cfbde087",
+        "task": "5c64d549-c131-4da2-8688-38d6a22ce0a6",
+        "liveInstances": 0,
+        "resident": true,
+        "bytes": 1049404,
+        "verifiedSHA256": "2215cbd530dd2e7b84b16dbc54efa69b9a57b38d92e19b26ef689287cfbde087",
+        "meshes": 1,
+        "vertices": 11877,
+        "triangles": 18780,
+        "materials": 1,
+        "textures": 3,
+        "sourceBounds": {
+          "min": [
+            -0.5000000596046448,
+            0,
+            -0.1503143459558487
+          ],
+          "max": [
+            0.5000000596046448,
+            0.486053466796875,
+            0.1503143459558487
+          ]
+        },
+        "normalizedBounds": {
+          "min": [
+            -0.15031434595584872,
+            -0.22,
+            -0.6400000596046448
+          ],
+          "max": [
+            0.15031434595584872,
+            0.266053466796875,
+            0.36000005960464476
+          ]
+        },
+        "alignment": [
+          6.123233995736766e-17,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1,
+          0,
+          6.123233995736766e-17,
+          0,
+          -8.572527594031473e-18,
+          -0.22,
+          -0.14,
+          1
+        ],
+        "fitPolicy": "Rigid rotation/translation; uniform view scale",
+        "lensMaskVertices": 137,
+        "muzzleSource": [
+          -0.320448,
+          0.29,
+          0
+        ],
+        "axisSource": [
+          -1,
+          0,
+          0
+        ],
+        "muzzleLocal": [
+          -2.819430846869003e-17,
+          0.06999999999999998,
+          -0.460448
+        ],
+        "axisLocal": [
+          -6.123233995736766e-17,
+          0,
+          -1
+        ]
+      },
+      "cargo": {
+        "phase": "ready",
+        "url": "./models/hero-weighted-cargo.glb",
+        "expectedSHA256": "143129e2a3439cf4b074f57d9b22b9b52b8e008078e1975647a50e88fdf90053",
+        "task": "b4902fc0-bae7-42b6-8452-fc9b6876ca40",
+        "liveInstances": 0,
+        "resident": true,
+        "bytes": 991240,
+        "verifiedSHA256": "143129e2a3439cf4b074f57d9b22b9b52b8e008078e1975647a50e88fdf90053",
+        "meshes": 1,
+        "vertices": 12498,
+        "triangles": 18933,
+        "materials": 1,
+        "textures": 3,
+        "sourceBounds": {
+          "min": [
+            -0.4521484971046448,
+            0,
+            -0.5000000596046448
+          ],
+          "max": [
+            0.4521484971046448,
+            0.96966552734375,
+            0.5000000596046448
+          ]
+        },
+        "normalizedBounds": {
+          "min": [
+            -0.5,
+            -0.49999999999999994,
+            -0.5
+          ],
+          "max": [
+            0.5,
+            0.49999999999999994,
+            0.5
+          ]
+        },
+        "alignment": [
+          1.1058313877006662,
+          0,
+          0,
+          0,
+          0,
+          1.0312834392899854,
+          0,
+          0,
+          0,
+          0,
+          0.9999998807907247,
+          0,
+          0,
+          -0.49999999999999994,
+          0,
+          1
+        ],
+        "fitPolicy": "Per-axis canonical cube for six-face native contact; original GLB unchanged",
+        "lensMaskVertices": 0
+      }
+    }
+  },
+  "fitBothNativeSizes": [
+    {
+      "id": "small",
+      "nativeSide": 0.84,
+      "worldMin": [
+        0.5800000000000001,
+        5.551115123125783e-17,
+        0.5800000000000001
+      ],
+      "worldMax": [
+        1.42,
+        0.8399999999999999,
+        1.42
+      ]
+    },
+    {
+      "id": "large",
+      "nativeSide": 1.1,
+      "worldMin": [
+        -1.55,
+        1.1102230246251565e-16,
+        0.44999999999999996
+      ],
+      "worldMax": [
+        -0.44999999999999996,
+        1.1,
+        1.55
+      ]
+    }
+  ],
+  "sixFaceFits": [
+    {
+      "id": "small",
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "angle": 0,
+      "minY": 5.551115123125783e-17
+    },
+    {
+      "id": "small",
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "angle": 3.141592653589793,
+      "minY": 0
+    },
+    {
+      "id": "small",
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "angle": 1.5707963267948966,
+      "minY": -5.551115123125783e-17
+    },
+    {
+      "id": "small",
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "angle": -1.5707963267948966,
+      "minY": 0
+    },
+    {
+      "id": "small",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "angle": 1.5707963267948966,
+      "minY": 0
+    },
+    {
+      "id": "small",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "angle": -1.5707963267948966,
+      "minY": 0
+    },
+    {
+      "id": "large",
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "angle": 0,
+      "minY": 1.1102230246251565e-16
+    },
+    {
+      "id": "large",
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "angle": 3.141592653589793,
+      "minY": 0
+    },
+    {
+      "id": "large",
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "angle": 1.5707963267948966,
+      "minY": 0
+    },
+    {
+      "id": "large",
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "angle": -1.5707963267948966,
+      "minY": 0
+    },
+    {
+      "id": "large",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "angle": 1.5707963267948966,
+      "minY": 0
+    },
+    {
+      "id": "large",
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "angle": -1.5707963267948966,
+      "minY": 0
+    }
+  ],
+  "gunProjection": [
+    {
+      "aspect": 1.6,
+      "left": 0.2945188997519445,
+      "right": 0.7800130064745171,
+      "top": -0.3948125403230637
+    },
+    {
+      "aspect": 1.08130081300813,
+      "left": 0.24754609604051628,
+      "right": 0.7067698555953846,
+      "top": -0.3962006254853832
+    },
+    {
+      "aspect": 0.65,
+      "left": 0.13815361580546529,
+      "right": 0.6152646108244072,
+      "top": -0.38964945420058283
+    }
+  ],
+  "clipCopyTransformPassed": true,
+  "sourceAndCopyMaterialsIndependent": true,
+  "geometryAndMapsShared": true,
+  "sourceMeshesPerCargo": 1,
+  "sourceGunMeshes": 1,
+  "roomMaterialDisposeOnce": true,
+  "roomKeepsTexturesResident": true,
+  "finalTextureDisposeOnce": true,
+  "residentReusePassed": true,
+  "failedFetchRetryPassed": true,
+  "decodedFakeImages": 12,
+  "closedImages": 12
+}

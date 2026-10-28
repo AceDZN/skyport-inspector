@@ -1,0 +1,1702 @@
+{
+  "scope": "Unregistered authored-spawn native route. Camera/WASD/E/ray-clear portals only. Decorative visibility, realtime mouse and earned save remain pending.",
+  "number": 32,
+  "contrast": false,
+  "error": null,
+  "inputs": [
+    {
+      "action": "walk",
+      "x": 8,
+      "z": 2.8
+    },
+    {
+      "action": "aim",
+      "target": [
+        8,
+        1.5149219274520873,
+        -2
+      ]
+    },
+    {
+      "action": "walk",
+      "x": -8,
+      "z": -11.8
+    },
+    {
+      "action": "walk",
+      "x": -10,
+      "z": -11.8
+    },
+    {
+      "action": "walk",
+      "x": -10,
+      "z": 3
+    }
+  ],
+  "ridingFrames": {},
+  "maxDeviceStep": {
+    "freight-service-door": 0,
+    "freight-carrier": 0.01333333333333453,
+    "release-lift": 0,
+    "freight-upper-door": 0
+  },
+  "events": [
+    {
+      "type": "land",
+      "time": 0.008333333333333333
+    },
+    {
+      "type": "pad",
+      "time": 0.008333333333333333,
+      "pad": "carrier-power",
+      "crate": "power-cube"
+    },
+    {
+      "type": "footstep",
+      "time": 0.4250000000000005
+    },
+    {
+      "type": "pad",
+      "time": 0.6000000000000003,
+      "pad": "service-pressure",
+      "crate": "player"
+    },
+    {
+      "type": "footstep",
+      "time": 0.8499999999999994
+    },
+    {
+      "type": "button-release",
+      "time": 1.033333333333332,
+      "pad": "service-pressure",
+      "crate": "player"
+    },
+    {
+      "type": "footstep",
+      "time": 1.274999999999998
+    },
+    {
+      "type": "footstep",
+      "time": 1.6999999999999964
+    },
+    {
+      "type": "footstep",
+      "time": 2.124999999999995
+    },
+    {
+      "type": "land",
+      "time": 3.2583333333333244
+    },
+    {
+      "type": "footstep",
+      "time": 3.2666666666666577
+    },
+    {
+      "type": "footstep",
+      "time": 3.691666666666656
+    },
+    {
+      "type": "footstep",
+      "time": 4.116666666666661
+    },
+    {
+      "type": "footstep",
+      "time": 4.541666666666682
+    },
+    {
+      "type": "footstep",
+      "time": 4.966666666666703
+    },
+    {
+      "type": "footstep",
+      "time": 5.391666666666724
+    },
+    {
+      "type": "footstep",
+      "time": 5.8166666666667455
+    },
+    {
+      "type": "lift-motor",
+      "time": 6.008333333333422,
+      "id": "freight-carrier"
+    },
+    {
+      "type": "footstep",
+      "time": 6.241666666666767
+    },
+    {
+      "type": "footstep",
+      "time": 6.666666666666788
+    },
+    {
+      "type": "footstep",
+      "time": 7.091666666666809
+    },
+    {
+      "type": "footstep",
+      "time": 7.541666666666831
+    },
+    {
+      "type": "footstep",
+      "time": 8.091666666666848
+    },
+    {
+      "type": "footstep",
+      "time": 8.516666666666824
+    },
+    {
+      "type": "footstep",
+      "time": 8.9416666666668
+    },
+    {
+      "type": "footstep",
+      "time": 9.366666666666775
+    },
+    {
+      "type": "footstep",
+      "time": 9.791666666666751
+    },
+    {
+      "type": "footstep",
+      "time": 10.216666666666727
+    },
+    {
+      "type": "footstep",
+      "time": 10.641666666666703
+    },
+    {
+      "type": "lift-arrival",
+      "time": 11.008333333333349,
+      "id": "freight-carrier",
+      "value": "NEAR"
+    },
+    {
+      "type": "footstep",
+      "time": 11.066666666666679
+    },
+    {
+      "type": "footstep",
+      "time": 11.491666666666655
+    }
+  ],
+  "checkpoints": [
+    {
+      "label": "actual-authored-spawn",
+      "state": {
+        "room": "chamber-32",
+        "number": 32,
+        "mission": "One cube is carried by the platform. Put that cube on RELEASE and keep POWER pressed.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            6.999999523162842,
+            0.8650955557823181,
+            10.999999046325684
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "yaw": 0.1,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [
+          {
+            "id": "power-cube",
+            "position": [
+              -8.5,
+              0.6899081468582153,
+              8
+            ],
+            "velocity": [
+              -0.000001272260419682425,
+              0.000002772723973976099,
+              0.0000055037662605172954
+            ],
+            "rotation": [
+              -3.974446372012608e-7,
+              -5.572529417074978e-12,
+              -7.844190719197286e-8,
+              1
+            ],
+            "angularVelocity": [
+              0.000009951349966286216,
+              3.423607024852615e-25,
+              0.0000023003715341474162
+            ],
+            "held": false,
+            "crossings": 0
+          },
+          {
+            "id": "carried-cube",
+            "position": [
+              3.999943256378174,
+              0.5496010780334473,
+              -8.000001907348633
+            ],
+            "velocity": [
+              -0.00004663596337195486,
+              -0.0000010946645261356025,
+              -0.00004553602047963068
+            ],
+            "rotation": [
+              0.000007547830591647653,
+              1.7773333152448778e-11,
+              -0.000008769314263190608,
+              1
+            ],
+            "angularVelocity": [
+              -0.000082356360508129,
+              1.4841758735634897e-13,
+              0.00008434572373516858
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "carrier-power",
+            "position": [
+              -8.5,
+              0.14,
+              8
+            ],
+            "pressed": true,
+            "crate": "power-cube"
+          },
+          {
+            "id": "release-pressure",
+            "position": [
+              -5,
+              0.14,
+              8
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "service-pressure",
+            "position": [
+              7,
+              0.14,
+              9
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "freight-service-door",
+            "kind": "shutter",
+            "label": "LOWER SERVICE",
+            "position": [
+              12.12,
+              1.5,
+              4
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "freight-carrier",
+            "kind": "moving-platform",
+            "label": "CARGO PLATFORM",
+            "position": [
+              4,
+              -0.2,
+              -8
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "FAR",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "release-lift",
+            "kind": "lift",
+            "label": "FREIGHT GALLERY",
+            "position": [
+              -7.5,
+              -0.2,
+              12
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "freight-upper-door",
+            "kind": "shutter",
+            "label": "FREIGHT EXIT",
+            "position": [
+              -7.5,
+              5.7,
+              6
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "freight-source",
+            "position": [
+              7,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "freight-return",
+            "position": [
+              -11.985,
+              1.75,
+              11
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              14.54,
+              1.5,
+              4
+            ],
+            "size": [
+              3.880000000000001,
+              3,
+              2.76
+            ]
+          },
+          {
+            "id": "freight-exit",
+            "label": "EXIT",
+            "position": [
+              -7.5,
+              5.7,
+              3.71
+            ],
+            "size": [
+              2.7600000000000007,
+              3,
+              3.3800000000000003
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "carrier-power": true,
+          "release-pressure": false,
+          "service-pressure": false,
+          "closed:freight-service-door": true,
+          "clear:freight-service-door": false,
+          "safety:freight-service-door": false,
+          "door-safety": false,
+          "moving:freight-service-door": false,
+          "moving:freight-carrier": false,
+          "at:freight-carrier:FAR": true,
+          "at:freight-carrier:NEAR": false,
+          "moving:release-lift": false,
+          "closed:freight-upper-door": true,
+          "clear:freight-upper-door": false,
+          "safety:freight-upper-door": false,
+          "moving:freight-upper-door": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "pad",
+            "time": 8,
+            "pad": "carrier-power",
+            "crate": "power-cube"
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "freight-near-bank",
+          "normal": {
+            "x": -0.000007943131095089484,
+            "y": 1,
+            "z": 0.000015886262190178968
+          },
+          "witness": {
+            "x": 6.998518943786621,
+            "y": 0,
+            "z": 10.998758316040039
+          },
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": 0,
+            "y": -0.0011111111380159855,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-catch-landing",
+      "state": {
+        "room": "chamber-32",
+        "number": 32,
+        "mission": "One cube is carried by the platform. Put that cube on RELEASE and keep POWER pressed.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            8.003315925598145,
+            -3.534844398498535,
+            -1.7930831909179688
+          ],
+          "velocity": [
+            -0.01364847290385617,
+            0,
+            -4.799980604004541
+          ],
+          "yaw": 0.0029022257099068174,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [
+          {
+            "id": "power-cube",
+            "position": [
+              -8.5,
+              0.6899081468582153,
+              8
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -2.5586416541045764e-7,
+              -5.569118950721208e-12,
+              -5.640309552745748e-8,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          },
+          {
+            "id": "carried-cube",
+            "position": [
+              3.999943256378174,
+              0.5495546460151672,
+              -8.000001907348633
+            ],
+            "velocity": [
+              -0.0000052793279792240355,
+              -7.967245778672805e-7,
+              -0.0000044630724005401134
+            ],
+            "rotation": [
+              3.279450595528033e-7,
+              2.0493903449270157e-11,
+              -4.0368365716858534e-7,
+              1
+            ],
+            "angularVelocity": [
+              -0.000008072267519310117,
+              4.695614387497781e-15,
+              0.000009548612069920637
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "carrier-power",
+            "position": [
+              -8.5,
+              0.14,
+              8
+            ],
+            "pressed": true,
+            "crate": "power-cube"
+          },
+          {
+            "id": "release-pressure",
+            "position": [
+              -5,
+              0.14,
+              8
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "service-pressure",
+            "position": [
+              7,
+              0.14,
+              9
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "freight-service-door",
+            "kind": "shutter",
+            "label": "LOWER SERVICE",
+            "position": [
+              12.12,
+              1.5,
+              4
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "freight-carrier",
+            "kind": "moving-platform",
+            "label": "CARGO PLATFORM",
+            "position": [
+              4,
+              -0.2,
+              -8
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "FAR",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "release-lift",
+            "kind": "lift",
+            "label": "FREIGHT GALLERY",
+            "position": [
+              -7.5,
+              -0.2,
+              12
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "freight-upper-door",
+            "kind": "shutter",
+            "label": "FREIGHT EXIT",
+            "position": [
+              -7.5,
+              5.7,
+              6
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "freight-source",
+            "position": [
+              7,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "freight-return",
+            "position": [
+              -11.985,
+              1.75,
+              11
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              14.54,
+              1.5,
+              4
+            ],
+            "size": [
+              3.880000000000001,
+              3,
+              2.76
+            ]
+          },
+          {
+            "id": "freight-exit",
+            "label": "EXIT",
+            "position": [
+              -7.5,
+              5.7,
+              3.71
+            ],
+            "size": [
+              2.7600000000000007,
+              3,
+              3.3800000000000003
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "carrier-power": true,
+          "release-pressure": false,
+          "service-pressure": false,
+          "closed:freight-service-door": true,
+          "clear:freight-service-door": false,
+          "safety:freight-service-door": false,
+          "door-safety": false,
+          "moving:freight-service-door": false,
+          "moving:freight-carrier": false,
+          "at:freight-carrier:FAR": true,
+          "at:freight-carrier:NEAR": false,
+          "moving:release-lift": false,
+          "closed:freight-upper-door": true,
+          "clear:freight-upper-door": false,
+          "safety:freight-upper-door": false,
+          "moving:freight-upper-door": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "pad",
+            "time": 8,
+            "pad": "carrier-power",
+            "crate": "power-cube"
+          },
+          {
+            "type": "footstep",
+            "time": 425
+          },
+          {
+            "type": "pad",
+            "time": 600,
+            "pad": "service-pressure",
+            "crate": "player"
+          },
+          {
+            "type": "footstep",
+            "time": 850
+          },
+          {
+            "type": "button-release",
+            "time": 1033,
+            "pad": "service-pressure",
+            "crate": "player"
+          },
+          {
+            "type": "footstep",
+            "time": 1275
+          },
+          {
+            "type": "footstep",
+            "time": 1700
+          },
+          {
+            "type": "footstep",
+            "time": 2125
+          },
+          {
+            "type": "land",
+            "time": 3258
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "freight-catch",
+          "normal": {
+            "x": 0,
+            "y": 1,
+            "z": -0.00003757141166715883
+          },
+          "witness": {
+            "x": 8.001938819885254,
+            "y": -4.40000057220459,
+            "z": -1.7758136987686157
+          },
+          "applied": {
+            "x": -0.0000677698481013067,
+            "y": -0.057598404586315155,
+            "z": -0.023833727464079857
+          },
+          "remaining": {
+            "x": -0.00004596742655849084,
+            "y": -0.03906825929880142,
+            "z": -0.016166111454367638
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-no-jump-stair-return",
+      "state": {
+        "room": "chamber-32",
+        "number": 32,
+        "mission": "One cube is carried by the platform. Put that cube on RELEASE and keep POWER pressed.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -9.999585151672363,
+            0.8651028275489807,
+            3.1063120365142822
+          ],
+          "velocity": [
+            0.0015976558335314124,
+            0,
+            0.4192972077954365
+          ],
+          "yaw": -3.1377524292974117,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [
+          {
+            "id": "power-cube",
+            "position": [
+              -8.5,
+              0.6899081468582153,
+              8
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -2.5586416541045764e-7,
+              -5.569118950721208e-12,
+              -5.640309552745748e-8,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          },
+          {
+            "id": "carried-cube",
+            "position": [
+              3.999943256378174,
+              0.5495493412017822,
+              -0.0021813467610627413
+            ],
+            "velocity": [
+              4.6963313593550993e-7,
+              1.9328913936078607e-7,
+              2.759490769221884e-7
+            ],
+            "rotation": [
+              2.3542072824511706e-7,
+              1.673071570174045e-9,
+              6.751042036512445e-8,
+              1
+            ],
+            "angularVelocity": [
+              4.99105794915522e-7,
+              7.0029336604778e-14,
+              -8.49419848236721e-7
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "carrier-power",
+            "position": [
+              -8.5,
+              0.14,
+              8
+            ],
+            "pressed": true,
+            "crate": "power-cube"
+          },
+          {
+            "id": "release-pressure",
+            "position": [
+              -5,
+              0.14,
+              8
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "service-pressure",
+            "position": [
+              7,
+              0.14,
+              9
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "freight-service-door",
+            "kind": "shutter",
+            "label": "LOWER SERVICE",
+            "position": [
+              12.12,
+              1.5,
+              4
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "freight-carrier",
+            "kind": "moving-platform",
+            "label": "CARGO PLATFORM",
+            "position": [
+              4,
+              -0.2,
+              0
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": "FAR",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "release-lift",
+            "kind": "lift",
+            "label": "FREIGHT GALLERY",
+            "position": [
+              -7.5,
+              -0.2,
+              12
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "freight-upper-door",
+            "kind": "shutter",
+            "label": "FREIGHT EXIT",
+            "position": [
+              -7.5,
+              5.7,
+              6
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "freight-source",
+            "position": [
+              7,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "freight-return",
+            "position": [
+              -11.985,
+              1.75,
+              11
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              14.54,
+              1.5,
+              4
+            ],
+            "size": [
+              3.880000000000001,
+              3,
+              2.76
+            ]
+          },
+          {
+            "id": "freight-exit",
+            "label": "EXIT",
+            "position": [
+              -7.5,
+              5.7,
+              3.71
+            ],
+            "size": [
+              2.7600000000000007,
+              3,
+              3.3800000000000003
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "carrier-power": true,
+          "release-pressure": false,
+          "service-pressure": false,
+          "closed:freight-service-door": true,
+          "clear:freight-service-door": false,
+          "safety:freight-service-door": false,
+          "door-safety": false,
+          "moving:freight-service-door": false,
+          "moving:freight-carrier": false,
+          "at:freight-carrier:FAR": false,
+          "at:freight-carrier:NEAR": true,
+          "moving:release-lift": false,
+          "closed:freight-upper-door": true,
+          "clear:freight-upper-door": false,
+          "safety:freight-upper-door": false,
+          "moving:freight-upper-door": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "footstep",
+            "time": 5817
+          },
+          {
+            "type": "lift-motor",
+            "time": 6008,
+            "id": "freight-carrier"
+          },
+          {
+            "type": "footstep",
+            "time": 6242
+          },
+          {
+            "type": "footstep",
+            "time": 6667
+          },
+          {
+            "type": "footstep",
+            "time": 7092
+          },
+          {
+            "type": "footstep",
+            "time": 7542
+          },
+          {
+            "type": "footstep",
+            "time": 8092
+          },
+          {
+            "type": "footstep",
+            "time": 8517
+          },
+          {
+            "type": "footstep",
+            "time": 8942
+          },
+          {
+            "type": "footstep",
+            "time": 9367
+          },
+          {
+            "type": "footstep",
+            "time": 9792
+          },
+          {
+            "type": "footstep",
+            "time": 10217
+          },
+          {
+            "type": "footstep",
+            "time": 10642
+          },
+          {
+            "type": "lift-arrival",
+            "time": 11008,
+            "id": "freight-carrier",
+            "value": "NEAR"
+          },
+          {
+            "type": "footstep",
+            "time": 11067
+          },
+          {
+            "type": "footstep",
+            "time": 11492
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "freight-near-bank",
+          "normal": {
+            "x": -0.0028801471926271915,
+            "y": 0.9999954104423523,
+            "z": -0.0008903098641894758
+          },
+          "witness": {
+            "x": -9.999312400817871,
+            "y": 5.960464477539063e-8,
+            "z": 3.1034011840820312
+          },
+          "applied": {
+            "x": 0.0000011999065918644192,
+            "y": -0.00010013893188443035,
+            "z": 0.00031490979017689824
+          },
+          "remaining": {
+            "x": 0.000012113891898479778,
+            "y": -0.00101097219157964,
+            "z": 0.003179233754053712
+          }
+        }
+      ]
+    },
+    {
+      "label": "final",
+      "state": {
+        "room": "chamber-32",
+        "number": 32,
+        "mission": "One cube is carried by the platform. Put that cube on RELEASE and keep POWER pressed.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -9.999585151672363,
+            0.8651028275489807,
+            3.1063120365142822
+          ],
+          "velocity": [
+            0.0015976558335314124,
+            0,
+            0.4192972077954365
+          ],
+          "yaw": -3.1377524292974117,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [
+          {
+            "id": "power-cube",
+            "position": [
+              -8.5,
+              0.6899081468582153,
+              8
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -2.5586416541045764e-7,
+              -5.569118950721208e-12,
+              -5.640309552745748e-8,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          },
+          {
+            "id": "carried-cube",
+            "position": [
+              3.999943256378174,
+              0.5495493412017822,
+              -0.0021813467610627413
+            ],
+            "velocity": [
+              4.6963313593550993e-7,
+              1.9328913936078607e-7,
+              2.759490769221884e-7
+            ],
+            "rotation": [
+              2.3542072824511706e-7,
+              1.673071570174045e-9,
+              6.751042036512445e-8,
+              1
+            ],
+            "angularVelocity": [
+              4.99105794915522e-7,
+              7.0029336604778e-14,
+              -8.49419848236721e-7
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "carrier-power",
+            "position": [
+              -8.5,
+              0.14,
+              8
+            ],
+            "pressed": true,
+            "crate": "power-cube"
+          },
+          {
+            "id": "release-pressure",
+            "position": [
+              -5,
+              0.14,
+              8
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "service-pressure",
+            "position": [
+              7,
+              0.14,
+              9
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "freight-service-door",
+            "kind": "shutter",
+            "label": "LOWER SERVICE",
+            "position": [
+              12.12,
+              1.5,
+              4
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "freight-carrier",
+            "kind": "moving-platform",
+            "label": "CARGO PLATFORM",
+            "position": [
+              4,
+              -0.2,
+              0
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": "FAR",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "release-lift",
+            "kind": "lift",
+            "label": "FREIGHT GALLERY",
+            "position": [
+              -7.5,
+              -0.2,
+              12
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "freight-upper-door",
+            "kind": "shutter",
+            "label": "FREIGHT EXIT",
+            "position": [
+              -7.5,
+              5.7,
+              6
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "freight-source",
+            "position": [
+              7,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "freight-return",
+            "position": [
+              -11.985,
+              1.75,
+              11
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              14.54,
+              1.5,
+              4
+            ],
+            "size": [
+              3.880000000000001,
+              3,
+              2.76
+            ]
+          },
+          {
+            "id": "freight-exit",
+            "label": "EXIT",
+            "position": [
+              -7.5,
+              5.7,
+              3.71
+            ],
+            "size": [
+              2.7600000000000007,
+              3,
+              3.3800000000000003
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "carrier-power": true,
+          "release-pressure": false,
+          "service-pressure": false,
+          "closed:freight-service-door": true,
+          "clear:freight-service-door": false,
+          "safety:freight-service-door": false,
+          "door-safety": false,
+          "moving:freight-service-door": false,
+          "moving:freight-carrier": false,
+          "at:freight-carrier:FAR": false,
+          "at:freight-carrier:NEAR": true,
+          "moving:release-lift": false,
+          "closed:freight-upper-door": true,
+          "clear:freight-upper-door": false,
+          "safety:freight-upper-door": false,
+          "moving:freight-upper-door": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "footstep",
+            "time": 5817
+          },
+          {
+            "type": "lift-motor",
+            "time": 6008,
+            "id": "freight-carrier"
+          },
+          {
+            "type": "footstep",
+            "time": 6242
+          },
+          {
+            "type": "footstep",
+            "time": 6667
+          },
+          {
+            "type": "footstep",
+            "time": 7092
+          },
+          {
+            "type": "footstep",
+            "time": 7542
+          },
+          {
+            "type": "footstep",
+            "time": 8092
+          },
+          {
+            "type": "footstep",
+            "time": 8517
+          },
+          {
+            "type": "footstep",
+            "time": 8942
+          },
+          {
+            "type": "footstep",
+            "time": 9367
+          },
+          {
+            "type": "footstep",
+            "time": 9792
+          },
+          {
+            "type": "footstep",
+            "time": 10217
+          },
+          {
+            "type": "footstep",
+            "time": 10642
+          },
+          {
+            "type": "lift-arrival",
+            "time": 11008,
+            "id": "freight-carrier",
+            "value": "NEAR"
+          },
+          {
+            "type": "footstep",
+            "time": 11067
+          },
+          {
+            "type": "footstep",
+            "time": 11492
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "freight-near-bank",
+          "normal": {
+            "x": -0.0028801471926271915,
+            "y": 0.9999954104423523,
+            "z": -0.0008903098641894758
+          },
+          "witness": {
+            "x": -9.999312400817871,
+            "y": 5.960464477539063e-8,
+            "z": 3.1034011840820312
+          },
+          "applied": {
+            "x": 0.0000011999065918644192,
+            "y": -0.00010013893188443035,
+            "z": 0.00031490979017689824
+          },
+          "remaining": {
+            "x": 0.000012113891898479778,
+            "y": -0.00101097219157964,
+            "z": 0.003179233754053712
+          }
+        }
+      ]
+    }
+  ]
+}

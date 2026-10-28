@@ -1,0 +1,34 @@
+{
+  "status": "SOURCE_FROZEN_NO_GPU_ACCEPTANCE",
+  "runtimeFiles": [
+    "src/chamber-scene.ts"
+  ],
+  "sourceSHA256": "ce6905b0170eb1a54fc726507c175987d6f01fb4f201e9ea788d3dc59bc2f4f8",
+  "sourceBytes": 101256,
+  "snapshot": "work/art/source-snapshots/chamber-scene-c11-cap-finish-ce6905b0.ts",
+  "baselineSHA256": "2f6889e26ffa659f42a5902499c81b21afbe38fc0139af83a8509382aea448b7",
+  "checks": {
+    "tsc --noEmit": "PASS",
+    "work/art/check-c11-cap-finish.ts": "PASS CPU only",
+    "work/art/check-owned-projector.ts": "PASS CPU actual GLTF/fake bitmap decode only"
+  },
+  "unchanged": [
+    "Root AA constructor/renderDiagnostics",
+    "native housing/colliders/proxies",
+    "beam pose and circuit",
+    "white hosts/portal placement",
+    "original GLB bytes/pose/crop",
+    "hero cubes/projector and held cue",
+    "C25 runtime",
+    "served dist"
+  ],
+  "actualBeforeFrames": [
+    "docs/chamber-qa/thirty-five-gpu/run/002-11-loaded-model-from-spawn.png",
+    "docs/chamber-qa/thirty-five-gpu/run/003-11-live-owned-lens-three-quarter.png"
+  ],
+  "actualAfterFrames": [],
+  "reviewedC25Only": "docs/chamber-qa/thirty-five-gpu/run/013-25-close-linked-view-before-entry.png",
+  "newGenerationCalls": 0,
+  "browserGPUlaunched": false,
+  "distBuild": false
+}

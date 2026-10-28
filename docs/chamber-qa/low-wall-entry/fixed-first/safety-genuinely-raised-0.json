@@ -1,0 +1,577 @@
+{
+  "scope": "Actual C1 integration or explicit native safety fixture as named. Input-only after authored construction; not browser proof.",
+  "error": null,
+  "inputs": [
+    {
+      "type": "ordinary-step",
+      "seconds": 0.3,
+      "input": {
+        "forward": 0,
+        "strafe": 0,
+        "jump": false
+      },
+      "yaw": 0,
+      "pitch": 0
+    },
+    {
+      "type": "ray-checked-aimed-placement",
+      "index": 0,
+      "id": "south-white",
+      "requested": [
+        0,
+        2.1,
+        7.985
+      ]
+    },
+    {
+      "type": "ray-checked-aimed-placement",
+      "index": 1,
+      "id": "north-white",
+      "requested": [
+        0,
+        2.1,
+        -7.985
+      ]
+    },
+    {
+      "type": "ordinary-step",
+      "seconds": 1.8,
+      "input": {
+        "forward": 1,
+        "strafe": 0,
+        "jump": false
+      },
+      "yaw": -3.141592535813427,
+      "pitch": 0.14543140390411874
+    }
+  ],
+  "events": [
+    {
+      "type": "land"
+    },
+    {
+      "type": "portalA",
+      "surface": "south-white",
+      "point": [
+        0,
+        2.1,
+        7.96
+      ]
+    },
+    {
+      "type": "portalB",
+      "surface": "north-white",
+      "point": [
+        0,
+        2.1,
+        -7.96
+      ]
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    }
+  ],
+  "notes": [
+    {
+      "label": "actual-aimed-placement-south-white",
+      "state": {
+        "room": "chamber-1",
+        "number": 1,
+        "mission": "Inspect the wall opening.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -4.711053520622954e-7,
+            0.8641383051872253,
+            4.500000953674316
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "yaw": -3.1415925184088804,
+          "pitch": 0.1665522550519389,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "south-white",
+            "position": [
+              0,
+              2.1,
+              7.96
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          null
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [],
+        "panels": [
+          {
+            "id": "south-white",
+            "position": [
+              0,
+              3.5,
+              7.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 10,
+            "height": 7
+          },
+          {
+            "id": "north-white",
+            "position": [
+              0,
+              3.5,
+              -7.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 10,
+            "height": 7
+          }
+        ],
+        "exits": [],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {},
+        "journal": null,
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "portalA",
+            "time": 300,
+            "surface": "south-white",
+            "point": [
+              0,
+              2.1,
+              7.96
+            ]
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "supported-flat-floor",
+          "normal": {
+            "x": 0,
+            "y": 0.9999999403953552,
+            "z": -0.00019863047054968774
+          },
+          "applied": {
+            "x": 0,
+            "y": -0.0006001560832373798,
+            "z": 0
+          },
+          "remaining": {
+            "x": 0,
+            "y": -0.0005109550547786057,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-aimed-placement-north-white",
+      "state": {
+        "room": "chamber-1",
+        "number": 1,
+        "mission": "Inspect the wall opening.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -4.711053520622954e-7,
+            0.8641383051872253,
+            4.500000953674316
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "yaw": -3.7733705733009945e-8,
+          "pitch": 0.046890844940152686,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "south-white",
+            "position": [
+              0,
+              2.1,
+              7.96
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "north-white",
+            "position": [
+              0,
+              2.1,
+              -7.96
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [],
+        "panels": [
+          {
+            "id": "south-white",
+            "position": [
+              0,
+              3.5,
+              7.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 10,
+            "height": 7
+          },
+          {
+            "id": "north-white",
+            "position": [
+              0,
+              3.5,
+              -7.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 10,
+            "height": 7
+          }
+        ],
+        "exits": [],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {},
+        "journal": null,
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "portalA",
+            "time": 300,
+            "surface": "south-white",
+            "point": [
+              0,
+              2.1,
+              7.96
+            ]
+          },
+          {
+            "type": "portalB",
+            "time": 300,
+            "surface": "north-white",
+            "point": [
+              0,
+              2.1,
+              -7.96
+            ]
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "supported-flat-floor",
+          "normal": {
+            "x": 0,
+            "y": 0.9999999403953552,
+            "z": -0.00019863047054968774
+          },
+          "applied": {
+            "x": 0,
+            "y": -0.0006001560832373798,
+            "z": 0
+          },
+          "remaining": {
+            "x": 0,
+            "y": -0.0005109550547786057,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "final",
+      "state": {
+        "room": "chamber-1",
+        "number": 1,
+        "mission": "Inspect the wall opening.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            0.0000230700388783589,
+            0.8649548888206482,
+            7.70490026473999
+          ],
+          "velocity": [
+            5.653265573551604e-7,
+            0,
+            4.799999999999964
+          ],
+          "yaw": -3.141592535813427,
+          "pitch": 0.14543140390411874,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "south-white",
+            "position": [
+              0,
+              2.1,
+              7.96
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "north-white",
+            "position": [
+              0,
+              2.1,
+              -7.96
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [],
+        "panels": [
+          {
+            "id": "south-white",
+            "position": [
+              0,
+              3.5,
+              7.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 10,
+            "height": 7
+          },
+          {
+            "id": "north-white",
+            "position": [
+              0,
+              3.5,
+              -7.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 10,
+            "height": 7
+          }
+        ],
+        "exits": [],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {},
+        "journal": null,
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "portalA",
+            "time": 300,
+            "surface": "south-white",
+            "point": [
+              0,
+              2.1,
+              7.96
+            ]
+          },
+          {
+            "type": "portalB",
+            "time": 300,
+            "surface": "north-white",
+            "point": [
+              0,
+              2.1,
+              -7.96
+            ]
+          },
+          {
+            "type": "footstep",
+            "time": 425
+          },
+          {
+            "type": "footstep",
+            "time": 850
+          },
+          {
+            "type": "footstep",
+            "time": 1275
+          },
+          {
+            "type": "footstep",
+            "time": 1700
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "supported-flat-floor",
+          "normal": {
+            "x": -0.00001594305103935767,
+            "y": 1,
+            "z": 9.964406899598544e-7
+          },
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": 4.7110546574913315e-9,
+            "y": -0.0011111111380159855,
+            "z": 0.03999999910593033
+          }
+        },
+        {
+          "id": "south-host",
+          "normal": {
+            "x": 0,
+            "y": 0.0017937382217496634,
+            "z": -0.9999983310699463
+          },
+          "applied": {
+            "x": -3.683016044919718e-11,
+            "y": 2.515953383408487e-7,
+            "z": 0.00010067821858683601
+          },
+          "remaining": {
+            "x": -1.459599108244447e-8,
+            "y": 0.00009970858809538186,
+            "z": 0.0398993194103241
+          }
+        }
+      ]
+    }
+  ]
+}

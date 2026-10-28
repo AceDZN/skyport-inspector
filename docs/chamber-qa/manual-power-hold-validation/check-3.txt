@@ -1,0 +1,40 @@
+✔ render fractions produce only fixed physical ticks and retain elapsed time (2.813209ms)
+✔ render fractions produce only fixed physical ticks and retain elapsed time (0.794541ms)
+✔ render fractions produce only fixed physical ticks and retain elapsed time (0.569375ms)
+✔ pause/reset cannot carry old input time into a new room (0.338041ms)
+✔ genuine continuous cycle does not report brakes at mixed tiny positive steps (10.075125ms)
+✔ zero elapsed machine updates cannot invent a stop or advance time (2.463417ms)
+✔ fixed render cadence retains real power brake resume and physical arrival events (5.979583ms)
+✔ native capsule can leave lower lift edge onto coplanar floor, cycle=false (377.791709ms)
+✔ native capsule can leave lower lift edge onto coplanar floor, cycle=true (326.673542ms)
+✔ actual interior rider can use E up/down and disembark normally at the lower dock (255.756917ms)
+✔ captured v2 lower-dock pose can walk away instead of retaining a zero-movement floor contact (27.611666ms)
+✔ native lift carries a grounded capsule up and back down without teleporting or clipping its deck (264.195375ms)
+✔ a horizontal moving platform carries an idle capsule through a real cycle (121.866292ms)
+✔ a deck-mounted lift control stays reachable at both physical stops (77.759708ms)
+✔ conveyor transports a resting dynamic cube and a physical wall still stops it (144.452042ms)
+✔ E control requires a nearby visible physical control and toggles a real shutter circuit (24.101792ms)
+✔ a portal-routed beam powers a physical shutter; a dynamic blocker removes power promptly (83.760625ms)
+✔ a powered cyclic carrier starts, brakes, and resumes continuously with its own phase (99.839417ms)
+✔ a physical dock contact cannot be triggered by selecting a lift stop before arrival (30.385375ms)
+✔ manual default keeps its existing return-to-base behaviour on actual pressure loss (342.768167ms)
+✔ optional manual power hold brakes and resumes real upward and downward loaded trips (450.219916ms)
+✔ manual hold mode emits one brake per power loss and one resume motor start (1.855417ms)
+✔ switch circuit opens a real moving shutter and closes when reset (2.210125ms)
+✔ AND and OR circuits preserve their actual conditions (0.23775ms)
+✔ moving lift transports a resting body and returns when circuit is released (1.648208ms)
+✔ conveyor direction changes real supported cargo velocity (0.884ms)
+✔ spatial energy relay respects crate occlusion and powers the selected receiver (1.292708ms)
+✔ three-way junction has three distinct physical headings, not three labels over two states (1.345875ms)
+✔ multi-stop lift physically visits distinct middle and top docks; guarded stop cannot be selected (3.979708ms)
+✔ one uninterrupted ascent and descent produce one arrival each (18.53975ms)
+✔ internal relay powers shutter with fresh external flags and clears power when blocked (2.368666ms)
+✔ an authored latching shutter stays physically open after a brief power pulse (1.122208ms)
+ℹ tests 32
+ℹ suites 0
+ℹ pass 32
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9730.012

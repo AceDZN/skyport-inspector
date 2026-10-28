@@ -1,0 +1,186 @@
+✔ native low wall support0 aimed1.55 both directions empty and held (48183.764834ms)
+✖ native low wall support0 aimed1.65 both directions empty and held (20990.383958ms)
+✖ native low wall support0 aimed1.75 both directions empty and held (13520.035917ms)
+✖ native low wall support0 aimed1.85 both directions empty and held (8974.615334ms)
+✔ native low wall support3.4 aimed1.55 both directions empty and held (2810.459291ms)
+✖ native low wall support3.4 aimed1.65 both directions empty and held (4152.201334ms)
+✖ native low wall support3.4 aimed1.75 both directions empty and held (10439.07375ms)
+✖ native low wall support3.4 aimed1.85 both directions empty and held (6813.95025ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 2
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 168960.628209
+
+✖ failing tests:
+
+test at tests/core-low-wall-entry.test.ts:72:73
+✖ native low wall support0 aimed1.65 both directions empty and held (20990.383958ms)
+  AssertionError [ERR_ASSERTION]: south→north empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white
+  south→north held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white
+  north→south empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white
+  north→south held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white
+  + actual - expected
+  
+  + [
+  +   'south→north empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white',
+  +   'south→north held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white',
+  +   'north→south empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white',
+  +   'north→south held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white'
+  + ]
+  - []
+  
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-low-wall-entry.test.ts:78:9)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: [ 'south→north empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white', 'south→north held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white', 'north→south empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white', 'north→south held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white' ],
+    expected: [],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests/core-low-wall-entry.test.ts:72:73
+✖ native low wall support0 aimed1.75 both directions empty and held (13520.035917ms)
+  AssertionError [ERR_ASSERTION]: south→north empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white
+  south→north held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white
+  north→south empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white
+  north→south held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white
+  + actual - expected
+  
+  + [
+  +   'south→north empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white',
+  +   'south→north held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white',
+  +   'north→south empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white',
+  +   'north→south held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white'
+  + ]
+  - []
+  
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-low-wall-entry.test.ts:78:9)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: [ 'south→north empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white', 'south→north held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white', 'north→south empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white', 'north→south held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white' ],
+    expected: [],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests/core-low-wall-entry.test.ts:72:73
+✖ native low wall support0 aimed1.85 both directions empty and held (8974.615334ms)
+  AssertionError [ERR_ASSERTION]: south→north empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white
+  south→north held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white
+  north→south empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white
+  north→south held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white
+  + actual - expected
+  
+  + [
+  +   'south→north empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white',
+  +   'south→north held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white',
+  +   'north→south empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white',
+  +   'north→south held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white'
+  + ]
+  - []
+  
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-low-wall-entry.test.ts:78:9)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: [ 'south→north empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white', 'south→north held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white', 'north→south empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white', 'north→south held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white' ],
+    expected: [],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests/core-low-wall-entry.test.ts:72:73
+✖ native low wall support3.4 aimed1.65 both directions empty and held (4152.201334ms)
+  AssertionError [ERR_ASSERTION]: south→north empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white
+  south→north held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white
+  north→south empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white
+  north→south held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white
+  + actual - expected
+  
+  + [
+  +   'south→north empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white',
+  +   'south→north held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white',
+  +   'north→south empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white',
+  +   'north→south held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white'
+  + ]
+  - []
+  
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-low-wall-entry.test.ts:78:9)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: [ 'south→north empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white', 'south→north held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white', 'north→south empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white', 'north→south held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white' ],
+    expected: [],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests/core-low-wall-entry.test.ts:72:73
+✖ native low wall support3.4 aimed1.75 both directions empty and held (10439.07375ms)
+  AssertionError [ERR_ASSERTION]: south→north empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white
+  south→north held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white
+  north→south empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white
+  north→south held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white
+  + actual - expected
+  
+  + [
+  +   'south→north empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white',
+  +   'south→north held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white',
+  +   'north→south empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white',
+  +   'north→south held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white'
+  + ]
+  - []
+  
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-low-wall-entry.test.ts:78:9)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: [ 'south→north empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white', 'south→north held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white', 'north→south empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white', 'north→south held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white' ],
+    expected: [],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests/core-low-wall-entry.test.ts:72:73
+✖ native low wall support3.4 aimed1.85 both directions empty and held (6813.95025ms)
+  AssertionError [ERR_ASSERTION]: south→north empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white
+  south→north held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white
+  north→south empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white
+  north→south held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white
+  + actual - expected
+  
+  + [
+  +   'south→north empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white',
+  +   'south→north held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white',
+  +   'north→south empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white',
+  +   'north→south held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white'
+  + ]
+  - []
+  
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-low-wall-entry.test.ts:78:9)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: [ 'south→north empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white', 'south→north held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross south-white → north-white', 'north→south empty: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white', 'north→south held: AssertionError [ERR_ASSERTION]: W-only low wall entry did not cross north-white → south-white' ],
+    expected: [],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

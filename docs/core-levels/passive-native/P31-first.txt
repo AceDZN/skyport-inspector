@@ -1,0 +1,36 @@
+✔ native P31 base and contrast keep identical actual inventory geometry optics and wiring (120.603459ms)
+✔ native P31 floor-button passive source uses actual remote cargo return pressure and storage hatch (165.912ms)
+✔ native P31 wall-receiver contrast uses real optical slot hatch and sustained lift-to-gallery route (221.009792ms)
+✖ native P31 actual wrong pressure hatch remains recoverable before correct receiver gallery (310.124417ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 3
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1227.989583
+
+✖ failing tests:
+
+test at tests/core-passive-routes.test.ts:33:1
+✖ native P31 actual wrong pressure hatch remains recoverable before correct receiver gallery (310.124417ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - 'supply-cube'
+  
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-passive-routes.test.ts:35:118)
+      at passiveRoute (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/helpers/passive-route.ts:38:166)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-passive-routes.test.ts:33:103)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'supply-cube',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

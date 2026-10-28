@@ -1,0 +1,1918 @@
+{
+  "scope": "Unregistered authored-spawn native route. Camera/WASD/E/ray-clear portals only. Decorative visibility, realtime mouse and earned save remain pending.",
+  "number": 33,
+  "contrast": false,
+  "error": null,
+  "inputs": [
+    {
+      "action": "aim",
+      "target": [
+        7,
+        1.55,
+        13.985
+      ]
+    },
+    {
+      "action": "place",
+      "index": 0
+    },
+    {
+      "action": "walk",
+      "x": 7,
+      "z": 6.8
+    },
+    {
+      "action": "aim",
+      "target": [
+        -11.985,
+        1.55,
+        0
+      ]
+    },
+    {
+      "action": "place",
+      "index": 1
+    },
+    {
+      "action": "walk",
+      "x": 7,
+      "z": 12.7
+    },
+    {
+      "action": "aim",
+      "target": [
+        7,
+        1.55,
+        15.959999999999999
+      ]
+    },
+    {
+      "action": "key",
+      "code": "KeyW",
+      "ms": 291.6666666666667,
+      "nativeTimingOnly": true
+    },
+    {
+      "action": "walk",
+      "x": -8,
+      "z": 4.8
+    },
+    {
+      "action": "walk",
+      "x": 5.5,
+      "z": 5.5
+    },
+    {
+      "action": "walk",
+      "x": 0,
+      "z": 3.5
+    },
+    {
+      "action": "aim",
+      "target": [
+        0,
+        1.5150900721549987,
+        0
+      ]
+    },
+    {
+      "action": "aim",
+      "target": [
+        -0.000018030630599241704,
+        0.5498895645141602,
+        -0.40001344680786133
+      ]
+    },
+    {
+      "action": "press",
+      "code": "KeyE"
+    }
+  ],
+  "ridingFrames": {},
+  "maxDeviceStep": {
+    "block-service-door": 0,
+    "hatch-control": 0,
+    "cargo-hatch": 0,
+    "block-lift": 0,
+    "block-upper-door": 0
+  },
+  "events": [
+    {
+      "type": "land",
+      "time": 0.008333333333333333
+    },
+    {
+      "type": "portalA",
+      "time": 0.3000000000000001,
+      "surface": "block-source",
+      "point": [
+        7,
+        1.55,
+        13.959999999999999
+      ]
+    },
+    {
+      "type": "footstep",
+      "time": 0.4250000000000005
+    },
+    {
+      "type": "footstep",
+      "time": 0.8499999999999994
+    },
+    {
+      "type": "portalB",
+      "time": 1.3749999999999976,
+      "surface": "block-return",
+      "point": [
+        -11.959999999999999,
+        1.55,
+        0
+      ]
+    },
+    {
+      "type": "footstep",
+      "time": 1.3916666666666642
+    },
+    {
+      "type": "footstep",
+      "time": 1.8166666666666627
+    },
+    {
+      "type": "footstep",
+      "time": 2.2416666666666614
+    },
+    {
+      "type": "footstep",
+      "time": 2.66666666666666
+    },
+    {
+      "type": "footstep",
+      "time": 3.0916666666666583
+    },
+    {
+      "type": "enter",
+      "time": 3.1249999999999916,
+      "body": "player",
+      "from": 0,
+      "to": 1,
+      "fromSurface": "block-source",
+      "toSurface": "block-return",
+      "speed": 4.7851677892391615,
+      "exitSpeed": 4.7851677892391615,
+      "held": null
+    },
+    {
+      "type": "land",
+      "time": 3.133333333333325
+    },
+    {
+      "type": "footstep",
+      "time": 3.516666666666657
+    },
+    {
+      "type": "footstep",
+      "time": 3.9416666666666553
+    },
+    {
+      "type": "footstep",
+      "time": 4.366666666666673
+    },
+    {
+      "type": "footstep",
+      "time": 4.7916666666666945
+    },
+    {
+      "type": "footstep",
+      "time": 5.216666666666716
+    },
+    {
+      "type": "footstep",
+      "time": 5.641666666666737
+    },
+    {
+      "type": "footstep",
+      "time": 6.066666666666758
+    },
+    {
+      "type": "footstep",
+      "time": 6.491666666666779
+    },
+    {
+      "type": "footstep",
+      "time": 6.9166666666668
+    },
+    {
+      "type": "footstep",
+      "time": 7.341666666666821
+    },
+    {
+      "type": "footstep",
+      "time": 7.816666666666845
+    },
+    {
+      "type": "footstep",
+      "time": 8.24166666666684
+    },
+    {
+      "type": "footstep",
+      "time": 8.666666666666815
+    },
+    {
+      "type": "footstep",
+      "time": 9.091666666666791
+    },
+    {
+      "type": "footstep",
+      "time": 9.516666666666767
+    },
+    {
+      "type": "invalid",
+      "time": 9.70000000000009,
+      "reason": "Move closer and look at the cube."
+    }
+  ],
+  "checkpoints": [
+    {
+      "label": "actual-authored-spawn",
+      "state": {
+        "room": "chamber-33",
+        "number": 33,
+        "mission": "The beam is blocked by the cube. Clear the beam and use the powered lift.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            7,
+            0.8642593026161194,
+            11
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "yaw": 0.1,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [
+          {
+            "id": "block-cube",
+            "position": [
+              -0.00001703851012280211,
+              0.5498895645141602,
+              -0.40001344680786133
+            ],
+            "velocity": [
+              -0.0000044247212827031035,
+              -1.4778062507048162e-7,
+              -0.00000428524253948126
+            ],
+            "rotation": [
+              3.6383917745297367e-7,
+              3.89996542005111e-12,
+              -3.6869570863018453e-7,
+              1
+            ],
+            "angularVelocity": [
+              -0.00000774827003624523,
+              -1.7988747698458735e-13,
+              0.00000800046564108925
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "block-service",
+            "position": [
+              -7,
+              0.14,
+              8
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "block-service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -12.12,
+              1.5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "hatch-control",
+            "kind": "switch",
+            "label": "OPEN HATCH",
+            "position": [
+              5.5,
+              1.25,
+              3.7
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "cargo-hatch",
+            "kind": "shutter",
+            "label": "CARGO HATCH",
+            "position": [
+              0,
+              1.5,
+              2
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "block-lift",
+            "kind": "lift",
+            "label": "POWERED LIFT",
+            "position": [
+              8,
+              -0.2,
+              -7
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "block-upper-door",
+            "kind": "shutter",
+            "label": "POWERED EXIT",
+            "position": [
+              8,
+              5.7,
+              -14.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "block-source",
+            "position": [
+              7,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "block-return",
+            "position": [
+              -11.985,
+              1.75,
+              0
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -14.54,
+              1.5,
+              -10
+            ],
+            "size": [
+              3.880000000000001,
+              3,
+              2.7600000000000016
+            ]
+          },
+          {
+            "id": "powered-exit",
+            "label": "EXIT",
+            "position": [
+              8,
+              5.7,
+              -16.49
+            ],
+            "size": [
+              2.7600000000000007,
+              3,
+              3.7799999999999994
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "blocked-emitter": {
+            "segments": [
+              {
+                "from": [
+                  -3,
+                  0.65,
+                  -0.4
+                ],
+                "to": [
+                  -0.5500168800354004,
+                  0.65,
+                  -0.4
+                ]
+              }
+            ],
+            "stop": "obstacle",
+            "obstacle": "block-cube",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "block-service": false,
+          "closed:block-service-door": true,
+          "clear:block-service-door": false,
+          "safety:block-service-door": false,
+          "door-safety": false,
+          "moving:block-service-door": false,
+          "moving:hatch-control": false,
+          "closed:cargo-hatch": true,
+          "clear:cargo-hatch": false,
+          "safety:cargo-hatch": false,
+          "moving:cargo-hatch": false,
+          "moving:block-lift": false,
+          "closed:block-upper-door": true,
+          "clear:block-upper-door": false,
+          "safety:block-upper-door": false,
+          "moving:block-upper-door": false,
+          "block-light": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "block-floor",
+          "normal": {
+            "x": -0.0011918277014046907,
+            "y": 0.9999948143959045,
+            "z": -0.002979569137096405
+          },
+          "witness": {
+            "x": 6.982519626617432,
+            "y": -0.000037610530853271484,
+            "z": 10.999117851257324
+          },
+          "applied": {
+            "x": 0,
+            "y": -0.0001000227639451623,
+            "z": 0
+          },
+          "remaining": {
+            "x": 0,
+            "y": -0.0010110883740708232,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-entry-booth-crossing-to-hatch-control",
+      "state": {
+        "room": "chamber-33",
+        "number": 33,
+        "mission": "The beam is blocked by the cube. Clear the beam and use the powered lift.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            5.5797319412231445,
+            0.864880383014679,
+            5.503462791442871
+          ],
+          "velocity": [
+            0.41884709178217616,
+            0,
+            0.019487864698966635
+          ],
+          "yaw": -1.6183586975857978,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "block-source",
+            "position": [
+              7,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "block-return",
+            "position": [
+              -11.959999999999999,
+              1.55,
+              0
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "block-cube",
+            "position": [
+              -0.000018030630599241704,
+              0.5498895645141602,
+              -0.40001344680786133
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              1.990215565683684e-7,
+              3.891055446597624e-12,
+              -2.2650223741038644e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "block-service",
+            "position": [
+              -7,
+              0.14,
+              8
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "block-service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -12.12,
+              1.5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "hatch-control",
+            "kind": "switch",
+            "label": "OPEN HATCH",
+            "position": [
+              5.5,
+              1.25,
+              3.7
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "cargo-hatch",
+            "kind": "shutter",
+            "label": "CARGO HATCH",
+            "position": [
+              0,
+              1.5,
+              2
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "block-lift",
+            "kind": "lift",
+            "label": "POWERED LIFT",
+            "position": [
+              8,
+              -0.2,
+              -7
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "block-upper-door",
+            "kind": "shutter",
+            "label": "POWERED EXIT",
+            "position": [
+              8,
+              5.7,
+              -14.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "block-source",
+            "position": [
+              7,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "block-return",
+            "position": [
+              -11.985,
+              1.75,
+              0
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -14.54,
+              1.5,
+              -10
+            ],
+            "size": [
+              3.880000000000001,
+              3,
+              2.7600000000000016
+            ]
+          },
+          {
+            "id": "powered-exit",
+            "label": "EXIT",
+            "position": [
+              8,
+              5.7,
+              -16.49
+            ],
+            "size": [
+              2.7600000000000007,
+              3,
+              3.7799999999999994
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "blocked-emitter": {
+            "segments": [
+              {
+                "from": [
+                  -3,
+                  0.65,
+                  -0.4
+                ],
+                "to": [
+                  -0.5500180721282959,
+                  0.65,
+                  -0.4
+                ]
+              }
+            ],
+            "stop": "obstacle",
+            "obstacle": "block-cube",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "block-service": false,
+          "closed:block-service-door": true,
+          "clear:block-service-door": false,
+          "safety:block-service-door": false,
+          "door-safety": false,
+          "moving:block-service-door": false,
+          "moving:hatch-control": false,
+          "closed:cargo-hatch": true,
+          "clear:cargo-hatch": false,
+          "safety:cargo-hatch": false,
+          "moving:cargo-hatch": false,
+          "moving:block-lift": false,
+          "closed:block-upper-door": true,
+          "clear:block-upper-door": false,
+          "safety:block-upper-door": false,
+          "moving:block-upper-door": false,
+          "block-light": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "footstep",
+            "time": 1817
+          },
+          {
+            "type": "footstep",
+            "time": 2242
+          },
+          {
+            "type": "footstep",
+            "time": 2667
+          },
+          {
+            "type": "footstep",
+            "time": 3092
+          },
+          {
+            "type": "enter",
+            "time": 3125,
+            "body": "player",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "block-source",
+            "toSurface": "block-return",
+            "speed": 4.7851677892391615,
+            "exitSpeed": 4.7851677892391615,
+            "held": null
+          },
+          {
+            "type": "land",
+            "time": 3133
+          },
+          {
+            "type": "footstep",
+            "time": 3517
+          },
+          {
+            "type": "footstep",
+            "time": 3942
+          },
+          {
+            "type": "footstep",
+            "time": 4367
+          },
+          {
+            "type": "footstep",
+            "time": 4792
+          },
+          {
+            "type": "footstep",
+            "time": 5217
+          },
+          {
+            "type": "footstep",
+            "time": 5642
+          },
+          {
+            "type": "footstep",
+            "time": 6067
+          },
+          {
+            "type": "footstep",
+            "time": 6492
+          },
+          {
+            "type": "footstep",
+            "time": 6917
+          },
+          {
+            "type": "footstep",
+            "time": 7342
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "block-floor",
+          "normal": {
+            "x": 0.000008061550943239126,
+            "y": 1,
+            "z": -0.000032246203772956505
+          },
+          "witness": {
+            "x": 5.575369834899902,
+            "y": 2.9802322387695312e-8,
+            "z": 5.502841472625732
+          },
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": 0.0034903923515230417,
+            "y": -0.0011111111380159855,
+            "z": 0.0001623988791834563
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-in-range-cube-occluded-by-hatch",
+      "state": {
+        "room": "chamber-33",
+        "number": 33,
+        "mission": "The beam is blocked by the cube. Clear the beam and use the powered lift.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -0.04236525297164917,
+            0.8650906085968018,
+            2.4449362754821777
+          ],
+          "velocity": [
+            0.05776593517266915,
+            0,
+            -4.077967931372612
+          ],
+          "yaw": -0.015053061019953679,
+          "pitch": -0.32702545540021827,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "block-source",
+            "position": [
+              7,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "block-return",
+            "position": [
+              -11.959999999999999,
+              1.55,
+              0
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "block-cube",
+            "position": [
+              -0.000018030630599241704,
+              0.5498895645141602,
+              -0.40001344680786133
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              1.990215565683684e-7,
+              3.891055446597624e-12,
+              -2.2650223741038644e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "block-service",
+            "position": [
+              -7,
+              0.14,
+              8
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "block-service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -12.12,
+              1.5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "hatch-control",
+            "kind": "switch",
+            "label": "OPEN HATCH",
+            "position": [
+              5.5,
+              1.25,
+              3.7
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "cargo-hatch",
+            "kind": "shutter",
+            "label": "CARGO HATCH",
+            "position": [
+              0,
+              1.5,
+              2
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "block-lift",
+            "kind": "lift",
+            "label": "POWERED LIFT",
+            "position": [
+              8,
+              -0.2,
+              -7
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "block-upper-door",
+            "kind": "shutter",
+            "label": "POWERED EXIT",
+            "position": [
+              8,
+              5.7,
+              -14.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "block-source",
+            "position": [
+              7,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "block-return",
+            "position": [
+              -11.985,
+              1.75,
+              0
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -14.54,
+              1.5,
+              -10
+            ],
+            "size": [
+              3.880000000000001,
+              3,
+              2.7600000000000016
+            ]
+          },
+          {
+            "id": "powered-exit",
+            "label": "EXIT",
+            "position": [
+              8,
+              5.7,
+              -16.49
+            ],
+            "size": [
+              2.7600000000000007,
+              3,
+              3.7799999999999994
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "blocked-emitter": {
+            "segments": [
+              {
+                "from": [
+                  -3,
+                  0.65,
+                  -0.4
+                ],
+                "to": [
+                  -0.5500180721282959,
+                  0.65,
+                  -0.4
+                ]
+              }
+            ],
+            "stop": "obstacle",
+            "obstacle": "block-cube",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "block-service": false,
+          "closed:block-service-door": true,
+          "clear:block-service-door": false,
+          "safety:block-service-door": false,
+          "door-safety": false,
+          "moving:block-service-door": false,
+          "moving:hatch-control": false,
+          "closed:cargo-hatch": true,
+          "clear:cargo-hatch": false,
+          "safety:cargo-hatch": false,
+          "moving:cargo-hatch": false,
+          "moving:block-lift": false,
+          "closed:block-upper-door": true,
+          "clear:block-upper-door": false,
+          "safety:block-upper-door": false,
+          "moving:block-upper-door": false,
+          "block-light": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "footstep",
+            "time": 3517
+          },
+          {
+            "type": "footstep",
+            "time": 3942
+          },
+          {
+            "type": "footstep",
+            "time": 4367
+          },
+          {
+            "type": "footstep",
+            "time": 4792
+          },
+          {
+            "type": "footstep",
+            "time": 5217
+          },
+          {
+            "type": "footstep",
+            "time": 5642
+          },
+          {
+            "type": "footstep",
+            "time": 6067
+          },
+          {
+            "type": "footstep",
+            "time": 6492
+          },
+          {
+            "type": "footstep",
+            "time": 6917
+          },
+          {
+            "type": "footstep",
+            "time": 7342
+          },
+          {
+            "type": "footstep",
+            "time": 7817
+          },
+          {
+            "type": "footstep",
+            "time": 8242
+          },
+          {
+            "type": "footstep",
+            "time": 8667
+          },
+          {
+            "type": "footstep",
+            "time": 9092
+          },
+          {
+            "type": "footstep",
+            "time": 9517
+          },
+          {
+            "type": "invalid",
+            "time": 9700,
+            "reason": "Move closer and look at the cube."
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "cargo-hatch",
+          "normal": {
+            "x": -0.000004988247383153066,
+            "y": 0.0000019952990442106966,
+            "z": 1
+          },
+          "witness": {
+            "x": -0.04284721612930298,
+            "y": 1.0398683547973633,
+            "z": 2.1500000953674316
+          },
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": 0.00048138279817067087,
+            "y": -0.0011111111380159855,
+            "z": -0.03398306667804718
+          }
+        },
+        {
+          "id": "cargo-hatch",
+          "normal": {
+            "x": -0.000004988247383153066,
+            "y": 0.0000019952990442106966,
+            "z": 1
+          },
+          "witness": {
+            "x": -0.04284721612930298,
+            "y": 1.0398683547973633,
+            "z": 2.1500000953674316
+          },
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": 0.00048121277359314263,
+            "y": -0.0011110431514680386,
+            "z": 4.8624940879316014e-11
+          }
+        },
+        {
+          "id": "block-floor",
+          "normal": {
+            "x": 0,
+            "y": 1,
+            "z": -0.00003173980439896695
+          },
+          "witness": {
+            "x": -0.041512250900268555,
+            "y": -2.9802322387695312e-8,
+            "z": 2.444734811782837
+          },
+          "applied": {
+            "x": 0.00048121277359314263,
+            "y": -0.000028639098673011176,
+            "z": 4.8624940879316014e-11
+          },
+          "remaining": {
+            "x": 0,
+            "y": -0.001082404050976038,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "final",
+      "state": {
+        "room": "chamber-33",
+        "number": 33,
+        "mission": "The beam is blocked by the cube. Clear the beam and use the powered lift.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -0.04236525297164917,
+            0.8650906085968018,
+            2.4449362754821777
+          ],
+          "velocity": [
+            0.05776593517266915,
+            0,
+            -4.077967931372612
+          ],
+          "yaw": -0.015053061019953679,
+          "pitch": -0.32702545540021827,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "block-source",
+            "position": [
+              7,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "block-return",
+            "position": [
+              -11.959999999999999,
+              1.55,
+              0
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "block-cube",
+            "position": [
+              -0.000018030630599241704,
+              0.5498895645141602,
+              -0.40001344680786133
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              1.990215565683684e-7,
+              3.891055446597624e-12,
+              -2.2650223741038644e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "block-service",
+            "position": [
+              -7,
+              0.14,
+              8
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "block-service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -12.12,
+              1.5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "hatch-control",
+            "kind": "switch",
+            "label": "OPEN HATCH",
+            "position": [
+              5.5,
+              1.25,
+              3.7
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "cargo-hatch",
+            "kind": "shutter",
+            "label": "CARGO HATCH",
+            "position": [
+              0,
+              1.5,
+              2
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "block-lift",
+            "kind": "lift",
+            "label": "POWERED LIFT",
+            "position": [
+              8,
+              -0.2,
+              -7
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "block-upper-door",
+            "kind": "shutter",
+            "label": "POWERED EXIT",
+            "position": [
+              8,
+              5.7,
+              -14.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "block-source",
+            "position": [
+              7,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "block-return",
+            "position": [
+              -11.985,
+              1.75,
+              0
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -14.54,
+              1.5,
+              -10
+            ],
+            "size": [
+              3.880000000000001,
+              3,
+              2.7600000000000016
+            ]
+          },
+          {
+            "id": "powered-exit",
+            "label": "EXIT",
+            "position": [
+              8,
+              5.7,
+              -16.49
+            ],
+            "size": [
+              2.7600000000000007,
+              3,
+              3.7799999999999994
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "blocked-emitter": {
+            "segments": [
+              {
+                "from": [
+                  -3,
+                  0.65,
+                  -0.4
+                ],
+                "to": [
+                  -0.5500180721282959,
+                  0.65,
+                  -0.4
+                ]
+              }
+            ],
+            "stop": "obstacle",
+            "obstacle": "block-cube",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "block-service": false,
+          "closed:block-service-door": true,
+          "clear:block-service-door": false,
+          "safety:block-service-door": false,
+          "door-safety": false,
+          "moving:block-service-door": false,
+          "moving:hatch-control": false,
+          "closed:cargo-hatch": true,
+          "clear:cargo-hatch": false,
+          "safety:cargo-hatch": false,
+          "moving:cargo-hatch": false,
+          "moving:block-lift": false,
+          "closed:block-upper-door": true,
+          "clear:block-upper-door": false,
+          "safety:block-upper-door": false,
+          "moving:block-upper-door": false,
+          "block-light": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "footstep",
+            "time": 3517
+          },
+          {
+            "type": "footstep",
+            "time": 3942
+          },
+          {
+            "type": "footstep",
+            "time": 4367
+          },
+          {
+            "type": "footstep",
+            "time": 4792
+          },
+          {
+            "type": "footstep",
+            "time": 5217
+          },
+          {
+            "type": "footstep",
+            "time": 5642
+          },
+          {
+            "type": "footstep",
+            "time": 6067
+          },
+          {
+            "type": "footstep",
+            "time": 6492
+          },
+          {
+            "type": "footstep",
+            "time": 6917
+          },
+          {
+            "type": "footstep",
+            "time": 7342
+          },
+          {
+            "type": "footstep",
+            "time": 7817
+          },
+          {
+            "type": "footstep",
+            "time": 8242
+          },
+          {
+            "type": "footstep",
+            "time": 8667
+          },
+          {
+            "type": "footstep",
+            "time": 9092
+          },
+          {
+            "type": "footstep",
+            "time": 9517
+          },
+          {
+            "type": "invalid",
+            "time": 9700,
+            "reason": "Move closer and look at the cube."
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "cargo-hatch",
+          "normal": {
+            "x": -0.000004988247383153066,
+            "y": 0.0000019952990442106966,
+            "z": 1
+          },
+          "witness": {
+            "x": -0.04284721612930298,
+            "y": 1.0398683547973633,
+            "z": 2.1500000953674316
+          },
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": 0.00048138279817067087,
+            "y": -0.0011111111380159855,
+            "z": -0.03398306667804718
+          }
+        },
+        {
+          "id": "cargo-hatch",
+          "normal": {
+            "x": -0.000004988247383153066,
+            "y": 0.0000019952990442106966,
+            "z": 1
+          },
+          "witness": {
+            "x": -0.04284721612930298,
+            "y": 1.0398683547973633,
+            "z": 2.1500000953674316
+          },
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": 0.00048121277359314263,
+            "y": -0.0011110431514680386,
+            "z": 4.8624940879316014e-11
+          }
+        },
+        {
+          "id": "block-floor",
+          "normal": {
+            "x": 0,
+            "y": 1,
+            "z": -0.00003173980439896695
+          },
+          "witness": {
+            "x": -0.041512250900268555,
+            "y": -2.9802322387695312e-8,
+            "z": 2.444734811782837
+          },
+          "applied": {
+            "x": 0.00048121277359314263,
+            "y": -0.000028639098673011176,
+            "z": 4.8624940879316014e-11
+          },
+          "remaining": {
+            "x": 0,
+            "y": -0.001082404050976038,
+            "z": 0
+          }
+        }
+      ]
+    }
+  ]
+}

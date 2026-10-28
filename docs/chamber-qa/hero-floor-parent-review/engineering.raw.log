@@ -1,0 +1,104 @@
+CAPTURE fresh-entry {"mode":"menu","level":1,"player":{"position":[0,0.86,10],"velocity":[0,0,0],"yaw":0,"pitch":0,"grounded":false,"crossings":0}}
+COMMAND_READY
+INPUT {"action":"click","selector":"[data-action=levels]"} {"mode":"levels","level":1,"player":{"position":[0,0.86,10],"velocity":[0,0,0],"yaw":0,"pitch":0,"grounded":false,"crossings":0},"held":null,"result":null}
+COMMAND_READY
+INPUT {"action":"click","selector":"[data-action=level][data-level=\"1\"]"} {"mode":"playing","level":1,"player":{"position":[0.0000016846462358444114,0.8643690347671509,10.000000953674316],"velocity":[0,0,0],"yaw":0,"pitch":0,"grounded":true,"crossings":0},"held":null,"result":null}
+COMMAND_READY
+CAPTURE 1-entry-engineering-spawn-earlier-visuals {"mode":"playing","level":1,"player":{"position":[0.0000017372517504554708,0.8644691109657288,10.000000953674316],"velocity":[0,0,0],"yaw":0,"pitch":0,"grounded":true,"crossings":0}}
+INPUT {"action":"capture","name":"1-entry-engineering-spawn-earlier-visuals"} {"mode":"playing","level":1,"player":{"position":[0.0000017217541881109355,0.8644691109657288,10.000000953674316],"velocity":[0,0,0],"yaw":0,"pitch":0,"grounded":true,"crossings":0},"held":null,"result":null}
+COMMAND_READY
+INPUT {"action":"aim","target":[-7.985,1.75,6]} {"mode":"playing","level":1,"player":{"position":[0.0000016900256696317228,0.8642690181732178,10.000000953674316],"velocity":[0,0,0],"yaw":1.1063975769042969,"pitch":0.026388989257812502,"grounded":true,"crossings":0},"held":null,"result":null}
+COMMAND_READY
+INPUT {"action":"place","index":0} {"mode":"playing","level":1,"player":{"position":[0.0000017124813211921719,0.8643690347671509,10.000000953674316],"velocity":[0,0,0],"yaw":1.1063975769042969,"pitch":0.026388989257812502,"grounded":true,"crossings":0},"held":null,"result":null}
+COMMAND_READY
+INPUT {"action":"aim","target":[5,4.55,-11.985]} {"mode":"playing","level":1,"player":{"position":[0.0000016702564380466356,0.8642690777778625,10.000000953674316],"velocity":[0,0,0],"yaw":-0.223623944091797,"pitch":0.13384315795898438,"grounded":true,"crossings":0},"held":null,"result":null}
+COMMAND_READY
+INPUT {"action":"place","index":1} {"mode":"playing","level":1,"player":{"position":[0.000001755799075908726,0.8644691109657288,10.000000953674316],"velocity":[0,0,0],"yaw":-0.223623944091797,"pitch":0.13384315795898438,"grounded":true,"crossings":0},"held":null,"result":null}
+COMMAND_READY
+INPUT {"action":"assert","path":"world.portals.0.surface","equals":"near-wall"} {"mode":"playing","level":1,"player":{"position":[0.000001656305926189816,0.8641690015792847,10.000000953674316],"velocity":[0,0,0],"yaw":-0.223623944091797,"pitch":0.13384315795898438,"grounded":true,"crossings":0},"held":null,"result":null}
+COMMAND_READY
+INPUT {"action":"assert","path":"world.portals.1.surface","equals":"far-wall"} {"mode":"playing","level":1,"player":{"position":[0.000001656305926189816,0.8641690015792847,10.000000953674316],"velocity":[0,0,0],"yaw":-0.223623944091797,"pitch":0.13384315795898438,"grounded":true,"crossings":0},"held":null,"result":null}
+COMMAND_READY
+INPUT {"action":"assert-range","path":"world.portals.0.position.1","min":1.54,"max":1.56} {"mode":"playing","level":1,"player":{"position":[0.000001656305926189816,0.8641690015792847,10.000000953674316],"velocity":[0,0,0],"yaw":-0.223623944091797,"pitch":0.13384315795898438,"grounded":true,"crossings":0},"held":null,"result":null}
+COMMAND_READY
+INPUT {"action":"assert-range","path":"world.portals.1.position.1","min":4.34,"max":4.36} {"mode":"playing","level":1,"player":{"position":[0.000001656305926189816,0.8641690015792847,10.000000953674316],"velocity":[0,0,0],"yaw":-0.223623944091797,"pitch":0.13384315795898438,"grounded":true,"crossings":0},"held":null,"result":null}
+COMMAND_READY
+CAPTURE 1-natural-low-shots-aligned-to-actual-floors {"mode":"playing","level":1,"player":{"position":[0.0000016985810589176253,0.8642690181732178,10.000000953674316],"velocity":[0,0,0],"yaw":-0.223623944091797,"pitch":0.13384315795898438,"grounded":true,"crossings":0}}
+INPUT {"action":"capture","name":"1-natural-low-shots-aligned-to-actual-floors"} {"mode":"playing","level":1,"player":{"position":[0.0000017010905821734923,0.8643690943717957,10.000000953674316],"velocity":[0,0,0],"yaw":-0.223623944091797,"pitch":0.13384315795898438,"grounded":true,"crossings":0},"held":null,"result":null}
+COMMAND_READY
+INPUT {"action":"walk","x":-6.8,"z":6} {"mode":"playing","level":1,"player":{"position":[-6.766333103179932,0.8650592565536499,6.01991605758667],"velocity":[-3.6355577256256873e-31,0,-2.1385630395410855e-31],"yaw":1.0390723266601563,"pitch":0.000025378417968735523,"grounded":true,"crossings":0},"held":null,"result":null}
+COMMAND_READY
+INPUT {"action":"aim","target":[-8.5,1.55,6]} {"mode":"playing","level":1,"player":{"position":[-6.76633358001709,0.8649593591690063,6.019917964935303],"velocity":[-4.2e-322,0,-2.5e-322],"yaw":1.5593082092285155,"pitch":0.020150061035156236,"grounded":true,"crossings":0},"held":null,"result":null}
+COMMAND_READY
+INPUT {"action":"trusted-key","code":"KeyW","ms":600} {"mode":"playing","level":1,"player":{"position":[4.91032600402832,3.665099620819092,-6.758714199066162],"velocity":[-8.094661301394848e-22,0,7.04580637242807e-20],"yaw":3.130104536023412,"pitch":0.020150061035156236,"grounded":true,"crossings":1},"held":null,"result":null}
+COMMAND_READY
+INPUT {"action":"wait","ms":250} {"mode":"playing","level":1,"player":{"position":[4.91032600402832,3.664966106414795,-6.758714199066162],"velocity":[-3.975665070795394e-109,0,3.460523578129578e-107],"yaw":3.130104536023412,"pitch":0.020150061035156236,"grounded":true,"crossings":1},"held":null,"result":null}
+COMMAND_READY
+INPUT {"action":"assert","path":"world.player.crossings","equals":1} {"mode":"playing","level":1,"player":{"position":[4.91032600402832,3.6650516986846924,-6.758714199066162],"velocity":[-3.5022390830568505e-146,0,3.048441130565465e-144],"yaw":3.130104536023412,"pitch":0.020150061035156236,"grounded":true,"crossings":1},"held":null,"result":null}
+COMMAND_READY
+INPUT {"action":"assert","path":"world.player.grounded","equals":true} {"mode":"playing","level":1,"player":{"position":[4.91032600402832,3.6650593280792236,-6.758714199066162],"velocity":[-1.9927023373483754e-167,0,1.7345005929305742e-165],"yaw":3.130104536023412,"pitch":0.020150061035156236,"grounded":true,"crossings":1},"held":null,"result":null}
+COMMAND_READY
+CAPTURE 1-trusted-W-only-standing-entry-no-jump {"mode":"playing","level":1,"player":{"position":[4.91032600402832,3.6650593280792236,-6.758714199066162],"velocity":[-4.4130987100345975e-208,0,3.8412773376889756e-206],"yaw":3.130104536023412,"pitch":0.020150061035156236,"grounded":true,"crossings":1}}
+INPUT {"action":"capture","name":"1-trusted-W-only-standing-entry-no-jump"} {"mode":"playing","level":1,"player":{"position":[4.91032600402832,3.665027141571045,-6.758714199066162],"velocity":[-1.5e-323,0,1.5e-323],"yaw":3.130104536023412,"pitch":0.020150061035156236,"grounded":true,"crossings":1},"held":null,"result":null}
+COMMAND_READY
+INPUT {"action":"walk","x":3,"z":-9.8} {"mode":"playing","level":1,"player":{"position":[3.0391488075256348,3.6649744510650635,-9.75394058227539],"velocity":[-9.619972766110045e-42,0,-1.490250042603327e-41],"yaw":0.5732246287968498,"pitch":0.00009453124999998607,"grounded":true,"crossings":1},"held":null,"result":null}
+COMMAND_READY
+INPUT {"action":"aim","target":[3,3.35,-8]} {"mode":"playing","level":1,"player":{"position":[3.0391488075256348,3.66510009765625,-9.75394058227539],"velocity":[-3.783972472006601e-222,0,-5.861830667009107e-222],"yaw":3.1192759410527096,"pitch":-0.5028528747558594,"grounded":true,"crossings":1},"held":null,"result":null}
+COMMAND_READY
+INPUT {"action":"press","code":"KeyE"} {"mode":"playing","level":1,"player":{"position":[3.0391488075256348,3.66510009765625,-9.75394058227539],"velocity":[-2.9118423222771915e-260,0,-4.510795664739102e-260],"yaw":3.1192759410527096,"pitch":-0.5028528747558594,"grounded":true,"crossings":1},"held":"weighted-cube","result":null}
+COMMAND_READY
+INPUT {"action":"assert","path":"world.held","equals":"weighted-cube"} {"mode":"playing","level":1,"player":{"position":[3.0391488075256348,3.665029525756836,-9.75394058227539],"velocity":[-1.3799453529695e-310,0,-2.137702123542e-310],"yaw":3.1192759410527096,"pitch":-0.5028528747558594,"grounded":true,"crossings":1},"held":"weighted-cube","result":null}
+COMMAND_READY
+CAPTURE 1-entry-engineering-cargo-held-earlier-visuals {"mode":"playing","level":1,"player":{"position":[3.0391488075256348,3.665029525756836,-9.75394058227539],"velocity":[-1.5e-323,0,-1.5e-323],"yaw":3.1192759410527096,"pitch":-0.5028528747558594,"grounded":true,"crossings":1}}
+INPUT {"action":"capture","name":"1-entry-engineering-cargo-held-earlier-visuals"} {"mode":"playing","level":1,"player":{"position":[3.0391488075256348,3.665029525756836,-9.75394058227539],"velocity":[-1.5e-323,0,-1.5e-323],"yaw":3.1192759410527096,"pitch":-0.5028528747558594,"grounded":true,"crossings":1},"held":"weighted-cube","result":null}
+COMMAND_READY
+INPUT {"action":"walk","x":5,"z":-10} {"mode":"playing","level":1,"player":{"position":[4.964286804199219,3.6648972034454346,-9.995609283447266],"velocity":[1.11678237055484e-54,0,-1.4014065504673515e-55],"yaw":4.8372225597050535,"pitch":-0.00008627319335938188,"grounded":true,"crossings":1},"held":"weighted-cube","result":null}
+COMMAND_READY
+INPUT {"action":"aim","target":[5,4.35,-12.5]} {"mode":"playing","level":1,"player":{"position":[4.964286804199219,3.664997100830078,-9.995609283447266],"velocity":[1.5e-323,0,-1.5e-323],"yaw":6.26892613636521,"pitch":0.014054003906249994,"grounded":true,"crossings":1},"held":"weighted-cube","result":null}
+COMMAND_READY
+INPUT {"action":"trusted-key","code":"KeyW","ms":750} {"mode":"playing","level":1,"player":{"position":[-6.1740193367004395,0.8650962114334106,6.0537848472595215],"velocity":[5.1478104541112394e-68,0,7.340848388700384e-70],"yaw":-1.585055497609273,"pitch":0.014054003906249994,"grounded":true,"crossings":2},"held":"weighted-cube","result":null}
+COMMAND_READY
+INPUT {"action":"wait","ms":250} {"mode":"playing","level":1,"player":{"position":[-6.1740193367004395,0.8649706244468689,6.0537848472595215],"velocity":[6.3919535508090535e-183,0,9.115013527087112e-185],"yaw":-1.585055497609273,"pitch":0.014054003906249994,"grounded":true,"crossings":2},"held":"weighted-cube","result":null}
+COMMAND_READY
+INPUT {"action":"assert","path":"world.player.crossings","equals":2} {"mode":"playing","level":1,"player":{"position":[-6.1740193367004395,0.8648706674575806,6.05378532409668],"velocity":[1.5e-323,0,1.5e-323],"yaw":-1.585055497609273,"pitch":0.014054003906249994,"grounded":true,"crossings":2},"held":"weighted-cube","result":null}
+COMMAND_READY
+INPUT {"action":"assert","path":"world.player.grounded","equals":true} {"mode":"playing","level":1,"player":{"position":[-6.1740193367004395,0.8648706078529358,6.053784370422363],"velocity":[1.5e-323,0,1.5e-323],"yaw":-1.585055497609273,"pitch":0.014054003906249994,"grounded":true,"crossings":2},"held":"weighted-cube","result":null}
+COMMAND_READY
+INPUT {"action":"assert","path":"world.held","equals":"weighted-cube"} {"mode":"playing","level":1,"player":{"position":[-6.1740193367004395,0.8648706078529358,6.053784370422363],"velocity":[1.5e-323,0,1.5e-323],"yaw":-1.585055497609273,"pitch":0.014054003906249994,"grounded":true,"crossings":2},"held":"weighted-cube","result":null}
+COMMAND_READY
+INPUT {"action":"assert","path":"world.crates.0.crossings","equals":1} {"mode":"playing","level":1,"player":{"position":[-6.1740193367004395,0.8649935126304626,6.0537848472595215],"velocity":[1.5e-323,0,1.5e-323],"yaw":-1.585055497609273,"pitch":0.014054003906249994,"grounded":true,"crossings":2},"held":"weighted-cube","result":null}
+COMMAND_READY
+CAPTURE 1-trusted-W-only-cargo-return-no-jump {"mode":"playing","level":1,"player":{"position":[-6.1740193367004395,0.8649935126304626,6.0537848472595215],"velocity":[1.5e-323,0,1.5e-323],"yaw":-1.585055497609273,"pitch":0.014054003906249994,"grounded":true,"crossings":2}}
+INPUT {"action":"capture","name":"1-trusted-W-only-cargo-return-no-jump"} {"mode":"playing","level":1,"player":{"position":[-6.1740193367004395,0.8648706674575806,6.053784370422363],"velocity":[1.5e-323,0,1.5e-323],"yaw":-1.585055497609273,"pitch":0.014054003906249994,"grounded":true,"crossings":2},"held":"weighted-cube","result":null}
+COMMAND_READY
+INPUT {"action":"walk","x":0.2,"z":6} {"mode":"playing","level":1,"player":{"position":[-0.005132982507348061,0.8641387820243835,6.002037525177002],"velocity":[4.362886375491875e-56,0,-3.6814896563111326e-58],"yaw":-1.562358329640523,"pitch":0.0000510925292968676,"grounded":true,"crossings":2},"held":"weighted-cube","result":null}
+COMMAND_READY
+INPUT {"action":"aim","target":[2,1.2,6]} {"mode":"playing","level":1,"player":{"position":[-0.005132982507348061,0.8641387820243835,6.002037525177002],"velocity":[1.5e-323,0,-1.5e-323],"yaw":-1.569780106984273,"pitch":-0.15540393676757816,"grounded":true,"crossings":2},"held":"weighted-cube","result":null}
+COMMAND_READY
+INPUT {"action":"wait","ms":250} {"mode":"playing","level":1,"player":{"position":[-0.005132982507348061,0.8641387820243835,6.002037525177002],"velocity":[1.5e-323,0,-1.5e-323],"yaw":-1.569780106984273,"pitch":-0.15540393676757816,"grounded":true,"crossings":2},"held":"weighted-cube","result":null}
+COMMAND_READY
+INPUT {"action":"press","code":"KeyE"} {"mode":"playing","level":1,"player":{"position":[-0.005132982507348061,0.8641387820243835,6.002037525177002],"velocity":[1.5e-323,0,-1.5e-323],"yaw":-1.569780106984273,"pitch":-0.15540393676757816,"grounded":true,"crossings":2},"held":null,"result":null}
+COMMAND_READY
+INPUT {"action":"wait","ms":1000} {"mode":"playing","level":1,"player":{"position":[-0.005132982507348061,0.8641387820243835,6.002037525177002],"velocity":[1.5e-323,0,-1.5e-323],"yaw":-1.569780106984273,"pitch":-0.15540393676757816,"grounded":true,"crossings":2},"held":null,"result":null}
+COMMAND_READY
+INPUT {"action":"assert","path":"world.pads.0.crate","equals":"weighted-cube"} {"mode":"playing","level":1,"player":{"position":[-0.005132982507348061,0.8641387820243835,6.002037525177002],"velocity":[1.5e-323,0,-1.5e-323],"yaw":-1.569780106984273,"pitch":-0.15540393676757816,"grounded":true,"crossings":2},"held":null,"result":null}
+COMMAND_READY
+CAPTURE 1-engineering-cargo-on-physical-pressure-plate {"mode":"playing","level":1,"player":{"position":[-0.005132982507348061,0.8641387820243835,6.002037525177002],"velocity":[1.5e-323,0,-1.5e-323],"yaw":-1.569780106984273,"pitch":-0.15540393676757816,"grounded":true,"crossings":2}}
+INPUT {"action":"capture","name":"1-engineering-cargo-on-physical-pressure-plate"} {"mode":"playing","level":1,"player":{"position":[-0.005132982507348061,0.8641387820243835,6.002037525177002],"velocity":[1.5e-323,0,-1.5e-323],"yaw":-1.569780106984273,"pitch":-0.15540393676757816,"grounded":true,"crossings":2},"held":null,"result":null}
+COMMAND_READY
+INPUT {"action":"walk","x":-6.6,"z":10.8} {"mode":"playing","level":1,"player":{"position":[-6.634113788604736,0.864335834980011,10.82444953918457],"velocity":[-5.7516972198503474e-62,0,4.184532183024988e-62],"yaw":-4.083424455128804,"pitch":-2.7755575615628914e-17,"grounded":true,"crossings":2},"held":null,"result":null}
+COMMAND_READY
+INPUT {"action":"walk","x":-10.7,"z":11} {"mode":"result","level":1,"player":{"position":[-8.051606178283691,0.8650000691413879,10.885577201843262],"velocity":[-4.7911077862007545,0,0.20686311821875722],"yaw":-4.6692393110858355,"pitch":-2.7755575615628914e-17,"grounded":true,"crossings":2},"held":null,"result":{"goalMatched":true,"exit":"next-chamber"}}
+COMMAND_READY
+INPUT {"action":"assert","path":"world.result.goalMatched","equals":true} {"mode":"result","level":1,"player":{"position":[-8.051606178283691,0.8650000691413879,10.885577201843262],"velocity":[-4.7911077862007545,0,0.20686311821875722],"yaw":-4.6692393110858355,"pitch":-2.7755575615628914e-17,"grounded":true,"crossings":2},"held":null,"result":{"goalMatched":true,"exit":"next-chamber"}}
+COMMAND_READY
+CAPTURE 1-physical-repair-replay-complete {"mode":"result","level":1,"player":{"position":[-8.051606178283691,0.8650000691413879,10.885577201843262],"velocity":[-4.7911077862007545,0,0.20686311821875722],"yaw":-4.6692393110858355,"pitch":-2.7755575615628914e-17,"grounded":true,"crossings":2},"result":true}
+INPUT {"action":"capture","name":"1-physical-repair-replay-complete"} {"mode":"result","level":1,"player":{"position":[-8.051606178283691,0.8650000691413879,10.885577201843262],"velocity":[-4.7911077862007545,0,0.20686311821875722],"yaw":-4.6692393110858355,"pitch":-2.7755575615628914e-17,"grounded":true,"crossings":2},"held":null,"result":{"goalMatched":true,"exit":"next-chamber"}}
+COMMAND_READY
+CAPTURE reload {"mode":"menu","level":1,"player":{"position":[0,0.86,10],"velocity":[0,0,0],"yaw":0,"pitch":0,"grounded":false,"crossings":0}}
+INPUT {"action":"reload"} {"mode":"menu","level":1,"player":{"position":[0,0.86,10],"velocity":[0,0,0],"yaw":0,"pitch":0,"grounded":false,"crossings":0},"held":null,"result":null}
+COMMAND_READY
+INPUT {"action":"assert","path":"progress.completed","equals":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]} {"mode":"menu","level":1,"player":{"position":[0,0.86,10],"velocity":[0,0,0],"yaw":0,"pitch":0,"grounded":false,"crossings":0},"held":null,"result":null}
+COMMAND_READY
+INPUT {"action":"export-earned-save"} {"mode":"menu","level":1,"player":{"position":[0,0.86,10],"velocity":[0,0,0],"yaw":0,"pitch":0,"grounded":false,"crossings":0},"held":null,"result":null}
+COMMAND_READY

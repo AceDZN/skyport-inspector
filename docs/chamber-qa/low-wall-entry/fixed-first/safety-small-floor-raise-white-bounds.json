@@ -1,0 +1,280 @@
+{
+  "scope": "Actual C1 integration or explicit native safety fixture as named. Input-only after authored construction; not browser proof.",
+  "error": null,
+  "inputs": [
+    {
+      "type": "ordinary-step",
+      "seconds": 0.3,
+      "input": {
+        "forward": 0,
+        "strafe": 0,
+        "jump": false
+      },
+      "yaw": 0,
+      "pitch": 0
+    },
+    {
+      "type": "ray-checked-aimed-placement",
+      "index": 0,
+      "id": "north-white",
+      "requested": [
+        0,
+        1.55,
+        -7.985
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "land"
+    },
+    {
+      "type": "invalid",
+      "reason": "The whole portal must fit inside the white surface above its floor."
+    }
+  ],
+  "notes": [
+    {
+      "label": "actual-aimed-placement-north-white",
+      "state": {
+        "room": "chamber-1",
+        "number": 1,
+        "mission": "Inspect the wall opening.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -3.365401255450706e-7,
+            0.9138135313987732,
+            4.500001430511475
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "yaw": -2.6955553623135107e-8,
+          "pitch": -0.0011064096259082964,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [],
+        "panels": [
+          {
+            "id": "south-white",
+            "position": [
+              0,
+              1.55,
+              7.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 10,
+            "height": 3.1
+          },
+          {
+            "id": "north-white",
+            "position": [
+              0,
+              1.55,
+              -7.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 10,
+            "height": 3.1
+          }
+        ],
+        "exits": [],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {},
+        "journal": null,
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "invalid",
+            "time": 300,
+            "reason": "The whole portal must fit inside the white surface above its floor."
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "supported-flat-floor",
+          "normal": {
+            "x": 0,
+            "y": 0.9999999403953552,
+            "z": -0.00001737239108479116
+          },
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": 0,
+            "y": -0.0011111111380159855,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "final",
+      "state": {
+        "room": "chamber-1",
+        "number": 1,
+        "mission": "Inspect the wall opening.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -3.365401255450706e-7,
+            0.9138135313987732,
+            4.500001430511475
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "yaw": -2.6955553623135107e-8,
+          "pitch": -0.0011064096259082964,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [],
+        "panels": [
+          {
+            "id": "south-white",
+            "position": [
+              0,
+              1.55,
+              7.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 10,
+            "height": 3.1
+          },
+          {
+            "id": "north-white",
+            "position": [
+              0,
+              1.55,
+              -7.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 10,
+            "height": 3.1
+          }
+        ],
+        "exits": [],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {},
+        "journal": null,
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "invalid",
+            "time": 300,
+            "reason": "The whole portal must fit inside the white surface above its floor."
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "supported-flat-floor",
+          "normal": {
+            "x": 0,
+            "y": 0.9999999403953552,
+            "z": -0.00001737239108479116
+          },
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": 0,
+            "y": -0.0011111111380159855,
+            "z": 0
+          }
+        }
+      ]
+    }
+  ]
+}

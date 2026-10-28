@@ -1,0 +1,170 @@
+{
+  "status": "HISTORICAL_OFFLINE_PROPOSAL; subsequentRootimplementation_and_boundedGPUrecord_below",
+  "frames": [
+    {
+      "path": "/Users/acedzn/idea-plotter/reports/rift-core-parent-release7/continuation-22/017-25-partial-held-return-at-actual-aperture.png",
+      "sha256": "5d99c335359acaa5cfbb16a904b9407f19010f8ad8ae4e8f73b9fd85d7a07825",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "inspected": true
+    },
+    {
+      "path": "/Users/acedzn/idea-plotter/reports/rift-core-parent-release7/continuation-22/018-25-reverse-held-seam-inspection.png",
+      "sha256": "f133462ca0ad3c52b794949066f3a2a51fb65eb89340e863c466656ff95f999b",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "inspected": true
+    }
+  ],
+  "source": {
+    "src/chamber-scene.ts": {
+      "sha256": "43e0cf98a277a38836ff75955fcf812f7167a969f3a49b6f22e59b359975be70",
+      "bytes": 100088
+    },
+    "src/core/portal-renderer.ts": {
+      "sha256": "514662c88f9dd625246650b2a07f6d30c55db1cf22f5e47f5cb1b35324d6effb",
+      "bytes": 3959
+    },
+    "src/scene.ts": {
+      "sha256": "e9e3d56a2f9ecef576fe289b9b2a70be38706121c14569870092e01f996767c7",
+      "bytes": 17288
+    }
+  },
+  "current1440x900": {
+    "root": [
+      900,
+      563
+    ],
+    "rootCount": 2,
+    "child": [
+      585,
+      366
+    ],
+    "childCount": 4,
+    "targetPixels": 1869840
+  },
+  "proposed1440x900": {
+    "root": [
+      1440,
+      900
+    ],
+    "rootCount": 2,
+    "child": [
+      936,
+      585
+    ],
+    "childCount": 4,
+    "targetPixels": 4782240,
+    "rootSamplesRequested": 4,
+    "rootSamplesClampedTo": "renderer.capabilities.maxSamples",
+    "childSamples": 0
+  },
+  "targetAreaRatio": 2.5575664227955333,
+  "nominalMiB": {
+    "currentRGBA8Plus4ByteDepth": 14.2657470703125,
+    "proposedRGBA8Plus4ByteDepthPlus4xSeparateRootColourDepth": 115.587158203125
+  },
+  "dimensionExamples": [
+    {
+      "drawingBuffer": [
+        1440,
+        900
+      ],
+      "proposedRoot": [
+        1440,
+        900
+      ]
+    },
+    {
+      "drawingBuffer": [
+        2160,
+        1350
+      ],
+      "proposedRoot": [
+        1440,
+        900
+      ]
+    },
+    {
+      "drawingBuffer": [
+        931,
+        861
+      ],
+      "proposedRoot": [
+        931,
+        861
+      ]
+    },
+    {
+      "drawingBuffer": [
+        698,
+        1280
+      ],
+      "proposedRoot": [
+        524,
+        960
+      ]
+    },
+    {
+      "drawingBuffer": [
+        3840,
+        2160
+      ],
+      "proposedRoot": [
+        1440,
+        810
+      ]
+    }
+  ],
+  "preserved": [
+    "2 generations",
+    "6 scene passes",
+    "4 unique children",
+    "child scale .65",
+    "exit clipping .035",
+    "colour-space and tone mapping",
+    "software480-wide path and cadence",
+    "dirty/paused refresh",
+    "native world and eligibility",
+    "Scene43e0"
+  ],
+  "validation": "No runtime implementation, build, GPU or browser. Arithmetic and local source inspection only. Actual full-frame cost and matched pixels remain unverified.",
+  "subsequentRuntime": {
+    "candidate": "main-0WD_xDVx.js",
+    "sha256": "8131a1ced57a35f9ed84956514511f5f58b4f6574b287a8cb12e9cc850b41885",
+    "record": "../chamber-qa/thirty-five-gpu/VERIFIED.json",
+    "actual1440x900": {
+      "roots": 2,
+      "rootSize": [
+        1440,
+        900
+      ],
+      "rootSamples": 4,
+      "children": 4,
+      "childSize": [
+        936,
+        585
+      ],
+      "childSamples": 0,
+      "passes": [
+        "00",
+        "01",
+        "0",
+        "10",
+        "11",
+        "1"
+      ]
+    },
+    "resizeActual": [
+      931,
+      861
+    ],
+    "fullVisualAcceptance": false,
+    "newHeldSeamVerified": false,
+    "scope": "Selected close linked frame inspected; bounded RAF samples only. No all-angle/performance or full campaign claim."
+  }
+}

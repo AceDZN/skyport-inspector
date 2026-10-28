@@ -1,0 +1,34 @@
+✔ native P34 base and contrast share independent actual timer and TEST-latch circuits (87.897916ms)
+✔ native P34 actual closed timer leaves block approach then clear stepped inspection route (237.090125ms)
+✔ native P34 actual TEST release persists while TEST off permits loaded freight crossing (120.967291ms)
+✔ native P34 wrong timed destination returns through real windows before latched freight recovery (219.782792ms)
+✔ native P34 current TEST interlock brakes midrail and real switch-off resumes own phase (200.528ms)
+✖ native P34 actual missed freight bank recovers by broad stairs without jump or reset (70.012541ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 5
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1327.216083
+
+✖ failing tests:
+
+test at tests/core-passive-routes.test.ts:116:1
+✖ native P34 actual missed freight bank recovers by broad stairs without jump or reset (70.012541ms)
+  AssertionError [ERR_ASSERTION]: Actual freight miss did not land on bounded catch; {"world":{"room":"chamber-34","number":34,"mission":"The cargo hatch is released by TEST. Release it, switch TEST off and use its latched route.","physics":"Rapier3D 0.21 · capsule KCC + dynamic rigid cubes","player":{"position":[10.541478157043457,0.035837456583976746,-1.1278600692749023],"velocity":[-4.215731735656257e-27,0,-1.8704415448103308e-25],"yaw":0.022534897413839166,"pitch":0,"grounded":true,"crossings":1},"portals":[{"surface":"process-source","position":[0.55,1.55,13.959999999999999],"normal":[0,0,-1]},{"surface":"process-return","position":[0.55,1.55,5.69],"normal":[0,0,1]}],"crates":[],"pads":[],"devices":[{"id":"inspection-clock","kind":"timer","label":"INSPECTION TIMER","position":[-7,1.3,8],"size":[0.8,1.2,0.35],"active":false,"progress":0.9309523809523738,"choice":0,"angle":0,"powered":null,"blocked":false},{"id":"test-release","kind":"switch","label":"TEST","position":[7,1.25,8],"size":[0.4,0.7,0.3],"active":false,"progress":0,"choice":0,"angle":0,"powered":null,"blocked":false},{"id":"inspection-first-leaf","kind":"shutter","label":"INSPECTION 1","position":[-7,1.5,4.08],"size":[3.2,3,0.3],"active":false,"progress":0,"choice":0,"angle":0,"powered":null,"blocked":false},{"id":"inspection-second-leaf","kind":"shutter","label":"INSPECTION 2","position":[-7,3.3,-5.92],"size":[3.2,3,0.3],"active":false,"progress":0,"choice":0,"angle":0,"powered":null,"blocked":false},{"id":"latched-cargo-hatch","kind":"shutter","label":"LATCHED CARGO","position":[7,5,4.08],"size":[3.2,3,0.3],"active":true,"progress":1,"choice":0,"angle":0,"powered":null,"blocked":false},{"id":"latched-freight-platform","kind":"moving-platform","label":"FREIGHT TRANSFER","position":[7,-0.2,-4.240000000000239],"size":[4,0.4,4],"active":true,"progress":0.5300000000000299,"choice":"NEAR","angle":0,"powered":null,"blocked":false},{"id":"latched-freight-exit-leaf","kind":"shutter","label":"FREIGHT EXIT","position":[7,1.5,-14.12],"size":[3.2,3,0.3],"active":false,"progress":0,"choice":0,"angle":0,"powered":null,"blocked":false}],"panels":[{"id":"process-source","position":[0,1.75,13.985],"normal":[0,0,-1],"width":5,"height":3.5},{"id":"process-return","position":[0,1.75,5.665],"normal":[0,0,1],"width":3.5,"height":3.5}],"exits":[{"id":"inspection-exit","label":"EXIT","position":[-7,3.3,-16.49],"size":[3.16,3,3.7799999999999994]},{"id":"latched-exit","label":"EXIT","position":[7,1.5,-16.49],"size":[3.16,3,3.7799999999999994]}],"result":null,"held":null,"holdSpaceTransform":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],"launchUsed":false,"respawns":0,"beams":{},"signals":{"moving:inspection-clock":false,"moving:test-release":false,"closed:inspection-first-leaf":true,"clear:inspection-first-leaf":false,"safety:inspection-first-leaf":false,"door-safety":false,"moving:inspection-first-leaf":false,"closed:inspection-second-leaf":true,"clear:inspection-second-leaf":false,"safety:inspection-second-leaf":false,"moving:inspection-second-leaf":false,"closed:latched-cargo-hatch":false,"clear:latched-cargo-hatch":true,"safety:latched-cargo-hatch":false,"moving:latched-cargo-hatch":false,"moving:latched-freight-platform":true,"at:latched-freight-platform:NEAR":false,"at:latched-freight-platform:FAR":false,"closed:latched-freight-exit-leaf":true,"clear:latched-freight-exit-leaf":false,"safety:latched-freight-exit-leaf":false,"moving:latched-freight-exit-leaf":false,"inspection-clock":false},"events":[{"type":"switch-toggle","time":4392,"id":"test-release","value":false},{"type":"footstep","time":5400},{"type":"footstep","time":5825},{"type":"footstep","time":6250},{"type":"footstep","time":6750},{"type":"timer-close","time":7000,"id":"inspection-clock"},{"type":"shutter-close","time":7000,"id":"inspection-first-leaf"},{"type":"shutter-close","time":7000,"id":"inspection-second-leaf"},{"type":"footstep","time":7175},{"type":"footstep","time":7600},{"type":"footstep","time":8025},{"type":"footstep","time":8450},{"type":"footstep","time":8875},{"type":"footstep","time":9300},{"type":"footstep","time":9725},{"type":"lift-motor","time":10392,"id":"latched-freight-platform"}]},"contacts":[{"id":"process-return-step-17","normal":{"x":0.0000014998398683019332,"y":0.9022077322006226,"z":-0.4313017725944519},"witness":{"x":10.54147720336914,"y":-0.7999999523162842,"z":-1},"applied":{"x":0,"y":0,"z":0},"remaining":{"x":-3.5131098764155237e-29,"y":-0.0011111111380159855,"z":-1.5587013263112553e-27}}]}
+      at PassiveRoute.until (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/helpers/passive-route.ts:20:169)
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-passive-routes.test.ts:117:191)
+      at passiveRoute (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/helpers/passive-route.ts:39:166)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-passive-routes.test.ts:116:97)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

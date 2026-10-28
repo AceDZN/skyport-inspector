@@ -1,0 +1,13 @@
+CAPTURE fresh-entry {"mode":"menu","level":1,"player":{"position":[0,0.86,10],"velocity":[0,0,0],"yaw":0,"pitch":0,"grounded":false,"crossings":0}}
+COMMAND_READY
+INPUT {"action":"assert","path":"heroAssets.ready","equals":true} {"mode":"menu","level":1,"player":{"position":[0,0.86,10],"velocity":[0,0,0],"yaw":0,"pitch":0,"grounded":false,"crossings":0},"held":null,"result":null}
+COMMAND_READY
+INPUT {"action":"assert","path":"progress.completed","equals":[]} {"mode":"menu","level":1,"player":{"position":[0,0.86,10],"velocity":[0,0,0],"yaw":0,"pitch":0,"grounded":false,"crossings":0},"held":null,"result":null}
+COMMAND_READY
+INPUT {"action":"click","selector":"[data-action=start]"} {"mode":"playing","level":1,"player":{"position":[-2.179454838824313e-9,0.8608000874519348,10],"velocity":[0,0,0],"yaw":0,"pitch":0,"grounded":true,"crossings":0},"held":null,"result":null}
+COMMAND_READY
+INPUT {"action":"assert","path":"heroInstances.gun.attached","equals":true} {"mode":"playing","level":1,"player":{"position":[0.0000016442958212792291,0.8641690611839294,10.000000953674316],"velocity":[0,0,0],"yaw":0,"pitch":0,"grounded":true,"crossings":0},"held":null,"result":null}
+COMMAND_READY
+CAPTURE default-preview-real-tripo-new-player {"mode":"playing","level":1,"player":{"position":[0.0000017168775912068668,0.8643690943717957,10.000000953674316],"velocity":[0,0,0],"yaw":0,"pitch":0,"grounded":true,"crossings":0}}
+INPUT {"action":"capture","name":"default-preview-real-tripo-new-player"} {"mode":"playing","level":1,"player":{"position":[0.0000016638367696941714,0.8641690611839294,10.000000953674316],"velocity":[0,0,0],"yaw":0,"pitch":0,"grounded":true,"crossings":0},"held":null,"result":null}
+COMMAND_READY

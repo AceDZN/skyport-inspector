@@ -1,4 +1,44 @@
-# Rift Runner — local model and font provenance
+# Current actual Tripo hero assets · combined repair source
+
+The complete visible first-person gun and every loose/held cargo now use actual user-authorized Tripo GLBs. Primitive hero builders are removed. Both original files must hash-verify and decode before gameplay; failure/loading has no primitive hero substitute. Actual combined D2 C1 GPU/asset-lifecycle acceptance now PASSES; all-room and full50-campaign acceptance remain OPEN. Parent evidence is `/Users/acedzn/idea-plotter/reports/rift-tripo-hero-repair/COMBINED-VERIFIED.json`. The scope is C1 repair/reload/retry, not a fresh all-trusted or campaign run.
+
+| Asset | Local runtime file | Bytes | SHA-256 | Actual exported mesh |
+| --- | --- | --- | --- | --- |
+| Projector · task`5c64d549-c131-4da2-8688-38d6a22ce0a6` | `public/models/hero-projector.glb` |1,049,404 |`2215cbd530dd2e7b84b16dbc54efa69b9a57b38d92e19b26ef689287cfbde087` |18,780tris /11,877 POSITION vertices |
+| Weighted energy cargo · task`b4902fc0-bae7-42b6-8452-fc9b6876ca40` | `public/models/hero-weighted-cargo.glb` |991,240 |`143129e2a3439cf4b074f57d9b22b9b52b8e008078e1975647a50e88fdf90053` |18,933tris /12,498 POSITION vertices |
+
+Each has one mesh/material, three embedded JPEG maps and no clips, skin or external resource URI. Root/parent acquired the commissioned H3.1 outputs under direct user authorization:30 existing credits each/60 total, no new purchase. Art submitted no generation. Original sources are preserved at `/Users/acedzn/Documents/Codex/2026-10-28/rift-tripo-models/portal-projector.glb` and `reactor-cargo.glb`. Stable task URLs and provenance notices sit beside both runtime files. UI vertex counts11,756/12,446 remain separately attributed; they are not local exporter counts.
+
+All original mesh triangles/textures remain. Gun alignment is rigid with uniform view scale. Cargo uses explicit per-axis canonical[-.5,.5] normalization (about+10.6%X/+3.1%Y/~0%Z), then native.84/1.10 scaling, to match all six resting faces and physical size gates. This supersedes the earlier uniform/base-only plan; it is not uniform proportion preservation. No native hull/physics/control changed. Resident geometry/maps are shared, with independent body/copy materials and real portal clipping.
+
+Source freeze and exact CPU/build limits: `docs/chamber-art/TRIPO_HERO_INTEGRATION.md`, `TRIPO_HERO_SOURCE.json`, and `TRIPO_HERO_ACTUAL_GLB_PROBE.json`. The small C11 camera insert remains a separate functional asset and does not satisfy this hero requirement. Earlier procedural/Blender cargo and V4 hero sections below are historical, not the current hero implementation.
+
+C1 actual D2 evidence: both GLB GET200/exact SHA; visible PBR gun and loose/held cargo; actual19k portal copy at partial straddle (`.159344635 < .550000924`) followed by ordinary withdrawal; trusted W-only standing entry/both directions and held return with0 jump events/0 respawns; real pad/exit/reload; portrait/wide and restart1 live instance each. Separate deliberate503 tests for each asset pass ordinary Retry and no World before Retry. Parent records74 actions/17 captures/0 normal errors on actual ANGLE Metal Apple M2 Max. Art inspected accepted frames007/009/016 offline. Movement/coarse look elsewhere in the run used synthetic DOM events with real RAFs; do not call the whole run all-trusted, all-angle or50-level verified. No new generation/runtime/GLB/archive change occurred during this closure.
+
+
+---
+
+# Current runtime asset status ·28 October2026
+
+The currently frozen25-room Cciwh build uses the original detailed Three.js gun/cube redesign. Its actual freshC1carry/portal/button/exit and repaired cube face were inspected; see `docs/chamber-qa/cube-repair-browser/`. The generated gun/cube sheets in `docs/chamber-art/hero-v4-targets/` are construction references, not runtime billboards or Tripo models.
+
+`cargo-module.glb` below is original Blender art and remains preserved as historical/source-library material; the new cargo renderer no longer requests it. `porter.glb` is an owned paid Tripo automaton and is still unused. Do not count either as current Tripo runtime integration.
+
+A fitting owned Tripo optical-camera asset has now been copied unchanged as `public/models/owned-optical-projector.glb` (639,492B, source task12b2777c…). Source integration43e0 fits its measured lens/axis to C11's actual always-live emitter, with an explicitly documented in-memory hood trim and physical-housing envelope preserved. See `docs/chamber-art/TRIPO_CAMERA_INTEGRATION.md` and its exact hash/owner/provenance audit. It is not in the currently frozen Cciwh artifact. Actual local GET, visible mesh/textures/shader, native receiver routing and room-change cleanup proof remain open before final delivery. No new Tripo model/rig generation or paid credit operation was needed.
+
+The earlier provenance below is preserved for the original assets; historical runtime inspection does not accept the new camera integration.
+
+> Current source update (28October2026): the new gun/cubes are actual original Three.js geometry, with the cube depth/winding repair documented under docs/chamber-art/hero-redesign/. The old cargo GLB below is retained historical local Blender art, **not Tripo and no longer the current core hero**. porter.glb is retained owned Tripo history, not a current live-use claim. Existing C11 now has a source-only owned Tripo optical-projector integration; actual new-build GET/shader/power pixels are pending. See docs/chamber-art/TRIPO_CAMERA_INTEGRATION.md and TRIPO_CAMERA_SOURCE.json. Exactly50 remains the campaign objective; the old two-chamber/courtyard prose below is historical context.
+
+## Owned Tripo optical projector (new source integration)
+
+`public/models/owned-optical-projector.glb` is an unchanged copy of the user's original Short Circuit Tripo camera task`12b2777c-65e2-4070-aca5-c34bbe0f552e`:639,492B, SHA-256`f7cf372aae3a68f57ed3799c99c966f8bff918aff922ef7fd6831e381edbd754`,18,247triangles, one mesh/material, three embedded1K WebP maps, no rig/clips. The source project's retained original prompt/ref and paid-output acquisition/rights record provide the reuse provenance; no public gallery licence is inferred. No new generation, rig, agreement, purchase or credits were used.
+
+It supplies the body of an actual existing C11 beam emitter, with measured lens/axis aligned to its native ray. A bounded in-memory sun-hood trim fits the pre-existing pylon/head envelope; raw copied bytes remain unchanged. Actual Tripo lens geometry receives state-driven emissive power, while native physics/circuits remain authoritative. Read-only loaded/mesh diagnostics, procedural fallback, guarded late-load handling and disposal are implemented. Current status is **source-only**: no successful browser GET, shader/pixel, occlusion or room-change claim yet. Runtime mesh use must be observed before this satisfies the final Tripo pipeline requirement.
+
+---
+
+## Earlier local model and font provenance
 
 Current immediate art direction: two enclosed test chambers with cool white ceramic, graphite service recesses, brushed metal and cyan/amber portal energy. The sparse fifty-level courtyard draft is preserved as unverified source material, not the current core delivery. Chamber architecture and the original handheld instrument are documented in `docs/chamber-art/DEVICE_AND_MATERIALS.md`. The rejected ticket desk is historical. Its asset prose and unused banker lamp are under `docs/rift-art/history/`, and Git tag`skyport-desk-v1` preserves the old build. It is not the new world.
 
@@ -28,7 +68,7 @@ The guide is a friendly mechanical facility helper, never the player's body. It 
 
 Existing local Heebo Hebrew/Latin regular/bold WOFF2 subsets remain under `public/fonts/`,34,448B total; SIL Open Font License at `public/fonts/Heebo-LICENSE.txt`. Font hashes are retained in `docs/art/font-metrics.json`. No runtime CDN, account, service or key is required.
 
-Active GLBs total **2,959,688B** (~2.82MiB) if the optional guide is bundled. Module alone is938,480B. Module has no GPU texture allocation; the guide's three1024² maps can use roughly16MiB decoded including mipmaps. Five module material groups mean five draws per uninstanced crate; reuse shared geometry/materials. Exact collision proxies and portal surfaces remain authored world geometry. No skeleton is needed for rigid cargo.
+Retained original GLBs total **2,959,688B** (~2.82MiB) if the optional guide is bundled. Module alone is938,480B. Module has no GPU texture allocation; the guide's three1024² maps can use roughly16MiB decoded including mipmaps. Five module material groups mean five draws per uninstanced crate; reuse shared geometry/materials. Exact collision proxies and portal surfaces remain authored world geometry. No skeleton is needed for rigid cargo.
 
 ## Verification boundary
 

@@ -1,0 +1,39 @@
+/** Authored-spawn native route driver. No body/velocity/machine/goal/history/save writes.
+ * Physical rays do not certify decorative glazing visibility; frozen UI remains separate.
+ */
+import assert from'node:assert/strict';
+import{mkdirSync,writeFileSync}from'node:fs';
+import RAPIER from'@dimforge/rapier3d-compat';
+import{Vector3}from'three';
+import{CoreWorld}from'../../src/core/world';
+import{draftPassiveLevels}from'../../src/core/levels/passive';
+import{V,type Input}from'../../src/physics';
+export const idle:Input={forward:0,strafe:0,jump:false},forward:Input={...idle,forward:1};
+export class PassiveRoute{
+ readonly w:CoreWorld;readonly events:any[]=[];readonly checkpoints:any[]=[];readonly inputs:any[]=[];readonly riding=new Map<string,number>();readonly maxDeviceStep=new Map<string,number>();
+ constructor(readonly number:number,readonly contrast=false,readonly id='route'){
+  const level=draftPassiveLevels.find(l=>l.number===number);assert.ok(level);this.w=new CoreWorld(number,(type,data)=>this.events.push({type,time:this.w?.time??0,...data}),level,contrast);
+  assert.ok(this.w.player.pos.distanceTo(V(...this.w.blueprint.spawn))<.05);for(const cargo of this.w.blueprint.cargo)assert.ok(this.cube(cargo.spec.id).pos.distanceTo(V(...cargo.position))<.05);this.tick(.3);this.note('actual-authored-spawn');
+ }
+ step(input=idle){const prior=new Map(this.w.machines.devices.map(d=>[d.spec.id,d.position.clone()]));this.w.step(1/120,input);assert.equal(this.w.respawns,0,'Route unexpectedly reset');for(const d of this.w.machines.devices){this.maxDeviceStep.set(d.spec.id,Math.max(this.maxDeviceStep.get(d.spec.id)??0,d.position.distanceTo(prior.get(d.spec.id)!)));if(!['lift','moving-platform'].includes(d.spec.kind)||!d.moving)continue;const p=this.w.player,top=d.position.y+d.spec.size[1]/2;if(p.grounded&&Math.abs(p.pos.y-p.half.y-top)<.08&&Math.abs(p.pos.x-d.position.x)<d.spec.size[0]/2&&Math.abs(p.pos.z-d.position.z)<d.spec.size[2]/2)this.riding.set(d.spec.id,(this.riding.get(d.spec.id)??0)+1);}}
+ tick(seconds:number,input=idle){for(let i=0;i<Math.ceil(seconds*120);i++)this.step(input);}
+ until(predicate:()=>boolean,seconds:number,message:string,each?:()=>void){for(let i=0;i<Math.ceil(seconds*120);i++){if(predicate())return;this.step();each?.();}assert.ok(predicate(),message+'; '+this.detail());}
+ look(point:Vector3){this.inputs.push({action:'aim',target:point.toArray()});const d=point.clone().sub(this.w.eye());this.w.yaw=Math.atan2(-d.x,-d.z);this.w.pitch=Math.asin(d.y/d.length());}
+ walk(x:number,z:number,limit=20){this.inputs.push({action:'walk',x,z});for(let i=0;i<limit*120;i++){if(this.w.campaignResult)return;const dx=x-this.w.player.pos.x,dz=z-this.w.player.pos.z;if(Math.hypot(dx,dz)<.12){this.tick(.12);return;}this.w.yaw=Math.atan2(-dx,-dz);this.w.pitch=0;this.step(forward);}assert.fail('Ordinary native walk blocked toward '+[x,z]+'; '+this.detail());}
+ cube(id:string){const c=this.w.crates.find(c=>c.id===id);assert.ok(c,'Missing cargo '+id);return c;}
+ device(id:string){const d=this.w.machines.devices.find(d=>d.spec.id===id);assert.ok(d,'Missing device '+id);return d;}
+ pad(id:string){const p=this.w.pads.find(p=>p.id===id);assert.ok(p,'Missing pad '+id);return p;}
+ clearRay(point:Vector3,ignore:string[]=[],throughGlass=false){const d=point.clone().sub(this.w.eye()),range=d.length();const hit=this.w.physics.castRay(new RAPIER.Ray(this.w.eye(),d.normalize()),range-.07,true,undefined,undefined,this.w.characterCollider,undefined,c=>{const solid=this.w.fixed.get(c.handle);if(solid&&(ignore.includes(solid.id)||(throughGlass&&solid.kind==='glass')))return false;for(const[id,body]of this.w.doors)if(body.collider.handle===c.handle&&ignore.includes(id))return false;return true;});assert.equal(hit,null,'Physical ray blocked before '+point.toArray()+'; '+this.detail());}
+ shot(index:0|1,id:string,point:Vector3){const surface=this.w.surfaces.find(s=>s.id===id);assert.ok(surface);assert.ok(this.w.eye().clone().sub(surface.center).dot(surface.normal)>0,'Back-face planned shot');this.look(point);this.clearRay(point,[surface.solidId],true);this.inputs.push({action:'place',index});assert.ok(this.w.place(index,id,point),'Real full aperture rejected planned shot; '+this.detail());assert.ok(this.w.portals[index]!.center.distanceTo(point)<.04);this.step();}
+ enter(index:0|1){const p=this.w.portals[index];assert.ok(p);const previous=this.w.player.crossings;this.look(p.center.clone().addScaledVector(p.normal,-2));let frames=0;for(;frames<360&&this.w.player.crossings===previous;frames++)this.step(forward);this.inputs.push({action:'key',code:'KeyW',ms:frames*1000/120,nativeTimingOnly:true});assert.equal(this.w.player.crossings,previous+1,'Actual portal approach failed; '+this.detail());this.tick(.18);}
+ e(){this.inputs.push({action:'press',code:'KeyE'});if(!this.w.interact())this.w.grabDrop();this.step();}
+ control(id:string){assert.equal(this.w.heldId,undefined);const d=this.device(id),point=d.position.clone().add(V(...(d.spec.controlOffset??[0,0,0])));this.look(point);this.clearRay(point,[id]);assert.match(this.w.interactionHint(),/Use/);this.inputs.push({action:'press',code:'KeyE'});assert.equal(this.w.interact(),true,'Actual visible E control failed');this.step();}
+ pickup(id:string){assert.equal(this.w.heldId,undefined);const c=this.cube(id),delta=c.pos.clone().sub(this.w.player.pos),flat=Math.hypot(delta.x,delta.z);assert.ok(flat>c.half.x+this.w.player.half.x+.08,'Pickup approach already overlaps/pushes cargo');this.look(c.pos);assert.match(this.w.interactionHint(),/Pick up/);this.e();assert.equal(this.w.heldId,id);}
+ dropPad(id:string,padId:string,x:number,z:number){assert.equal(this.w.heldId,id);this.walk(x,z);const pad=this.pad(padId);this.look(V(pad.pos.x,pad.pos.y+1.06,pad.pos.z));this.tick(.35);this.e();assert.equal(this.w.heldId,undefined);this.until(()=>pad.crateId===id,2,'Actual released cargo failed pressure');this.tick(.8);assert.equal(pad.crateId,id);}
+ finish(exit:string){assert.equal(this.w.campaignResult?.exit,exit,this.detail());assert.equal(this.w.campaignResult?.goalMatched,true);assert.equal(this.w.respawns,0);this.note('actual-requested-physical-completion');}
+ contacts(){return Array.from({length:this.w.controller.numComputedCollisions()},(_,i)=>this.w.controller.computedCollision(i)!).map(c=>({id:c.collider?(this.w.fixed.get(c.collider.handle)?.id??[...this.w.doors].find(([,b])=>b.collider.handle===c.collider!.handle)?.[0]??'body'):'none',normal:c.normal1,witness:c.witness1,applied:c.translationDeltaApplied,remaining:c.translationDeltaRemaining}));}
+ detail(){return JSON.stringify({world:this.w.snapshot(),contacts:this.contacts()});}
+ note(label:string){this.checkpoints.push({label,state:this.w.snapshot(),contacts:this.contacts()});}
+ dispose(error?:unknown){this.note(error?'failure':'final');const dir=process.env.RIFT_PASSIVE_RUN?new URL('../../docs/core-levels/passive-native/'+process.env.RIFT_PASSIVE_RUN+'/',import.meta.url):new URL('../../work/chamber-qa/passive/unit-'+Date.now()+'/',import.meta.url);mkdirSync(dir,{recursive:true});writeFileSync(new URL(this.number+'-'+this.id+(this.contrast?'-contrast':'-base')+'.json',dir),JSON.stringify({scope:'Unregistered authored-spawn native route. Camera/WASD/E/ray-clear portals only. Decorative visibility, realtime mouse and earned save remain pending.',number:this.number,contrast:this.contrast,error:error?String(error):null,inputs:this.inputs,ridingFrames:Object.fromEntries(this.riding),maxDeviceStep:Object.fromEntries(this.maxDeviceStep),events:this.events,checkpoints:this.checkpoints},null,2)+'\n');this.w.dispose();}
+}
+export function passiveRoute(number:number,contrast:boolean,id:string,run:(r:PassiveRoute)=>void){const r=new PassiveRoute(number,contrast,id);let error:unknown;try{run(r);}catch(e){error=e;throw e;}finally{r.dispose(error);}}

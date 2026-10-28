@@ -4,7 +4,7 @@ import type { CatalogueRow } from '../campaign-types';
 import {addCorridorExit} from './level-kit';
 export const chamberTitles = ['The Other Side', 'A Longer Fall'];
 export const chamberMissions = [
-    'Bring the cube back from the alcove. Leave it on the button to open the exit.',
+    'Bring the cube back. Put it on the button.',
     'Fall through the floor rift. Use your momentum to reach the upper exit.'
 ];
 export const chamberHebrew = [

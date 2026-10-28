@@ -1,0 +1,3829 @@
+{
+  "scope": "Two fresh isolated contexts; real asset HTTP 503 injected once, ordinary Retry UI click, read-only public state. No gameplay/progress proof.",
+  "cases": [
+    {
+      "asset": "hero-projector",
+      "responses": [
+        {
+          "url": "http://localhost:4261/hero-repair/models/hero-weighted-cargo.glb",
+          "status": 200
+        },
+        {
+          "url": "http://localhost:4261/hero-repair/models/hero-projector.glb",
+          "status": 503
+        },
+        {
+          "url": "http://localhost:4261/hero-repair/models/hero-projector.glb",
+          "status": 200
+        }
+      ],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+        "Error: Hero asset request failed (503)\n    at http://localhost:4261/hero-repair/assets/main-D2DMbgrH.js:3839:7661\n    at async Promise.all (index 0)\n    at async Promise.all (index 1)\n    at async mS (http://localhost:4261/hero-repair/assets/main-D2DMbgrH.js:3847:65538)"
+      ],
+      "pageErrors": [],
+      "failure": {
+        "title": "Rift Runner",
+        "version": "rapier-authored-campaign",
+        "mode": "load-error",
+        "level": 1,
+        "alternate": false,
+        "progress": {
+          "version": 2,
+          "highestUnlocked": 1,
+          "resumeLevel": 1,
+          "records": {},
+          "updatedAt": 1793197565944,
+          "generation": "legacy",
+          "completed": [],
+          "resume": 1,
+          "registered": 35
+        },
+        "saveDiagnostics": {
+          "key": "rift-runner-rapier-campaign-v1",
+          "journalKey": "rift-runner-rapier-campaign-v1-journal",
+          "generation": "legacy",
+          "storage": "missing",
+          "journal": "missing",
+          "recovery": "fresh",
+          "primaryNeedsRepair": false,
+          "legacyImportEligible": true,
+          "preservedUnreadableKeys": [],
+          "lastWrite": null,
+          "warning": null,
+          "origin": "http://localhost:4261"
+        },
+        "pointerLocked": false,
+        "controls": {
+          "unlocked": false,
+          "sensitivity": 0.0022
+        },
+        "audio": {
+          "context": "not-started",
+          "paused": false,
+          "loopCount": 0,
+          "activeSfx": 0,
+          "cuesPlayed": 0,
+          "energy": false,
+          "chapter": 1,
+          "intensity": 0,
+          "environment": "chamber",
+          "airSpeed": 0,
+          "airActive": false,
+          "recentCues": [],
+          "paired": false,
+          "bridge": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 0,
+          "loadErrors": [],
+          "timeline": 0
+        },
+        "assets": null,
+        "heroAssets": {
+          "ready": false,
+          "assets": {
+            "projector": {
+              "phase": "error",
+              "url": "./models/hero-projector.glb",
+              "expectedSHA256": "2215cbd530dd2e7b84b16dbc54efa69b9a57b38d92e19b26ef689287cfbde087",
+              "task": "5c64d549-c131-4da2-8688-38d6a22ce0a6",
+              "error": "Error: Hero asset request failed (503)",
+              "liveInstances": 0,
+              "resident": false
+            },
+            "cargo": {
+              "phase": "ready",
+              "url": "./models/hero-weighted-cargo.glb",
+              "expectedSHA256": "143129e2a3439cf4b074f57d9b22b9b52b8e008078e1975647a50e88fdf90053",
+              "task": "b4902fc0-bae7-42b6-8452-fc9b6876ca40",
+              "liveInstances": 0,
+              "resident": true,
+              "bytes": 991240,
+              "verifiedSHA256": "143129e2a3439cf4b074f57d9b22b9b52b8e008078e1975647a50e88fdf90053",
+              "meshes": 1,
+              "vertices": 12498,
+              "triangles": 18933,
+              "materials": 1,
+              "textures": 3,
+              "sourceBounds": {
+                "min": [
+                  -0.4521484971046448,
+                  0,
+                  -0.5000000596046448
+                ],
+                "max": [
+                  0.4521484971046448,
+                  0.96966552734375,
+                  0.5000000596046448
+                ]
+              },
+              "normalizedBounds": {
+                "min": [
+                  -0.5,
+                  -0.49999999999999994,
+                  -0.5
+                ],
+                "max": [
+                  0.5,
+                  0.49999999999999994,
+                  0.5
+                ]
+              },
+              "alignment": [
+                1.1058313877006662,
+                0,
+                0,
+                0,
+                0,
+                1.0312834392899854,
+                0,
+                0,
+                0,
+                0,
+                0.9999998807907247,
+                0,
+                0,
+                -0.49999999999999994,
+                0,
+                1
+              ],
+              "fitPolicy": "Per-axis canonical cube for six-face native contact; original GLB unchanged",
+              "lensMaskVertices": 0
+            }
+          }
+        },
+        "heroInstances": null,
+        "initializationError": "Error: Hero asset request failed (503)",
+        "portalRendering": null,
+        "transportMotion": []
+      },
+      "recovered": {
+        "title": "Rift Runner",
+        "version": "rapier-authored-campaign",
+        "mode": "menu",
+        "level": 1,
+        "alternate": false,
+        "world": {
+          "room": "chamber-1",
+          "number": 1,
+          "mission": "Bring the cube back. Put it on the button.",
+          "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+          "player": {
+            "position": [
+              0,
+              0.86,
+              10
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "yaw": 0,
+            "pitch": 0,
+            "grounded": false,
+            "crossings": 0
+          },
+          "portals": [
+            null,
+            null
+          ],
+          "crates": [
+            {
+              "id": "weighted-cube",
+              "position": [
+                3,
+                3.35,
+                -8
+              ],
+              "velocity": [
+                0,
+                0,
+                0
+              ],
+              "rotation": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "angularVelocity": [
+                0,
+                0,
+                0
+              ],
+              "held": false,
+              "crossings": 0
+            }
+          ],
+          "pads": [
+            {
+              "id": "exit-button",
+              "position": [
+                2,
+                0.14,
+                6
+              ],
+              "pressed": false,
+              "crate": null
+            }
+          ],
+          "devices": [
+            {
+              "id": "exit-door",
+              "kind": "shutter",
+              "label": "EXIT",
+              "position": [
+                -8.12,
+                1.5,
+                11
+              ],
+              "size": [
+                0.3,
+                3,
+                2.6
+              ],
+              "active": false,
+              "progress": 0,
+              "choice": 0,
+              "angle": 0,
+              "powered": null,
+              "blocked": false
+            }
+          ],
+          "panels": [
+            {
+              "id": "near-wall",
+              "position": [
+                -7.985,
+                3.5,
+                -1.15
+              ],
+              "normal": [
+                1,
+                0,
+                0
+              ],
+              "width": 21.7,
+              "height": 7
+            },
+            {
+              "id": "far-wall",
+              "position": [
+                0,
+                3.5,
+                -11.985
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ],
+              "width": 16,
+              "height": 7
+            },
+            {
+              "id": "east-wall",
+              "position": [
+                7.985,
+                3.5,
+                1
+              ],
+              "normal": [
+                -1,
+                0,
+                0
+              ],
+              "width": 26,
+              "height": 7
+            },
+            {
+              "id": "south-wall",
+              "position": [
+                0,
+                3.5,
+                13.985
+              ],
+              "normal": [
+                0,
+                0,
+                -1
+              ],
+              "width": 16,
+              "height": 7
+            }
+          ],
+          "exits": [
+            {
+              "id": "next-chamber",
+              "label": "EXIT",
+              "position": [
+                -10,
+                1.5,
+                11
+              ],
+              "size": [
+                3.960000000000001,
+                3,
+                2.960000000000001
+              ]
+            }
+          ],
+          "result": null,
+          "held": null,
+          "holdSpaceTransform": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "launchUsed": false,
+          "respawns": 0,
+          "beams": {},
+          "signals": {},
+          "journal": null,
+          "events": []
+        },
+        "progress": {
+          "version": 2,
+          "highestUnlocked": 1,
+          "resumeLevel": 1,
+          "records": {},
+          "updatedAt": 1793197565944,
+          "generation": "legacy",
+          "completed": [],
+          "resume": 1,
+          "registered": 35
+        },
+        "saveDiagnostics": {
+          "key": "rift-runner-rapier-campaign-v1",
+          "journalKey": "rift-runner-rapier-campaign-v1-journal",
+          "generation": "legacy",
+          "storage": "missing",
+          "journal": "missing",
+          "recovery": "fresh",
+          "primaryNeedsRepair": false,
+          "legacyImportEligible": true,
+          "preservedUnreadableKeys": [],
+          "lastWrite": null,
+          "warning": null,
+          "origin": "http://localhost:4261"
+        },
+        "pointerLocked": false,
+        "controls": {
+          "unlocked": false,
+          "sensitivity": 0.0022
+        },
+        "audio": {
+          "context": "not-started",
+          "paused": false,
+          "loopCount": 0,
+          "activeSfx": 0,
+          "cuesPlayed": 0,
+          "energy": false,
+          "chapter": 1,
+          "intensity": 0,
+          "environment": "chamber",
+          "airSpeed": 0,
+          "airActive": false,
+          "recentCues": [],
+          "paired": false,
+          "bridge": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 0,
+          "loadErrors": [],
+          "timeline": 0
+        },
+        "assets": {
+          "state": "not-requested",
+          "room": 1,
+          "url": "./models/owned-optical-projector.glb",
+          "fallback": true,
+          "meshIDs": [],
+          "lateDiscards": 0,
+          "heroes": {
+            "ready": true,
+            "assets": {
+              "projector": {
+                "phase": "ready",
+                "url": "./models/hero-projector.glb",
+                "expectedSHA256": "2215cbd530dd2e7b84b16dbc54efa69b9a57b38d92e19b26ef689287cfbde087",
+                "task": "5c64d549-c131-4da2-8688-38d6a22ce0a6",
+                "liveInstances": 1,
+                "resident": true,
+                "bytes": 1049404,
+                "verifiedSHA256": "2215cbd530dd2e7b84b16dbc54efa69b9a57b38d92e19b26ef689287cfbde087",
+                "meshes": 1,
+                "vertices": 11877,
+                "triangles": 18780,
+                "materials": 1,
+                "textures": 3,
+                "sourceBounds": {
+                  "min": [
+                    -0.5000000596046448,
+                    0,
+                    -0.1503143459558487
+                  ],
+                  "max": [
+                    0.5000000596046448,
+                    0.486053466796875,
+                    0.1503143459558487
+                  ]
+                },
+                "normalizedBounds": {
+                  "min": [
+                    -0.15031434595584872,
+                    -0.22,
+                    -0.6400000596046448
+                  ],
+                  "max": [
+                    0.15031434595584872,
+                    0.266053466796875,
+                    0.36000005960464476
+                  ]
+                },
+                "alignment": [
+                  6.123233995736766e-17,
+                  0,
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  -1,
+                  0,
+                  6.123233995736766e-17,
+                  0,
+                  -8.572527594031473e-18,
+                  -0.22,
+                  -0.14,
+                  1
+                ],
+                "fitPolicy": "Rigid rotation/translation; uniform view scale",
+                "lensMaskVertices": 137,
+                "muzzleSource": [
+                  -0.320448,
+                  0.29,
+                  0
+                ],
+                "axisSource": [
+                  -1,
+                  0,
+                  0
+                ],
+                "muzzleLocal": [
+                  -2.819430846869003e-17,
+                  0.06999999999999998,
+                  -0.460448
+                ],
+                "axisLocal": [
+                  -6.123233995736766e-17,
+                  0,
+                  -1
+                ]
+              },
+              "cargo": {
+                "phase": "ready",
+                "url": "./models/hero-weighted-cargo.glb",
+                "expectedSHA256": "143129e2a3439cf4b074f57d9b22b9b52b8e008078e1975647a50e88fdf90053",
+                "task": "b4902fc0-bae7-42b6-8452-fc9b6876ca40",
+                "liveInstances": 1,
+                "resident": true,
+                "bytes": 991240,
+                "verifiedSHA256": "143129e2a3439cf4b074f57d9b22b9b52b8e008078e1975647a50e88fdf90053",
+                "meshes": 1,
+                "vertices": 12498,
+                "triangles": 18933,
+                "materials": 1,
+                "textures": 3,
+                "sourceBounds": {
+                  "min": [
+                    -0.4521484971046448,
+                    0,
+                    -0.5000000596046448
+                  ],
+                  "max": [
+                    0.4521484971046448,
+                    0.96966552734375,
+                    0.5000000596046448
+                  ]
+                },
+                "normalizedBounds": {
+                  "min": [
+                    -0.5,
+                    -0.49999999999999994,
+                    -0.5
+                  ],
+                  "max": [
+                    0.5,
+                    0.49999999999999994,
+                    0.5
+                  ]
+                },
+                "alignment": [
+                  1.1058313877006662,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1.0312834392899854,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0.9999998807907247,
+                  0,
+                  0,
+                  -0.49999999999999994,
+                  0,
+                  1
+                ],
+                "fitPolicy": "Per-axis canonical cube for six-face native contact; original GLB unchanged",
+                "lensMaskVertices": 0
+              }
+            },
+            "gun": {
+              "attached": true,
+              "meshes": [
+                {
+                  "id": 215,
+                  "uuid": "d8e09012-492d-42e0-8980-3a22639ac5e8",
+                  "name": "tripo_node_611cc53a-6c26-4668-b0d4-7120f3c09134",
+                  "source": "tripo_node_611cc53a-6c26-4668-b0d4-7120f3c09134",
+                  "asset": "projector",
+                  "vertices": 11877,
+                  "triangles": 18780
+                }
+              ],
+              "muzzleInView": [
+                0.3681312613549729,
+                -0.3252677429205556,
+                -1.21468672
+              ],
+              "muzzleInWorld": [
+                0.3681312613549729,
+                1.1847322570794443,
+                8.78531328
+              ],
+              "axisInView": [
+                -6.113974938725237e-17,
+                3.3660810326873242e-18,
+                -1
+              ],
+              "axisInWorld": [
+                -6.113974938725237e-17,
+                3.3660810326873242e-18,
+                -1
+              ]
+            },
+            "cargo": [
+              {
+                "id": "weighted-cube",
+                "meshes": [
+                  {
+                    "id": 159,
+                    "uuid": "9e8252dd-9802-4955-ba42-efc5d009199c",
+                    "name": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                    "source": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                    "asset": "cargo",
+                    "vertices": 12498,
+                    "triangles": 18933
+                  }
+                ],
+                "portalCopies": [
+                  {
+                    "visible": false,
+                    "meshes": [
+                      {
+                        "id": 164,
+                        "uuid": "75f1934d-2ebd-4e12-a16b-9d8d90f01bd3",
+                        "name": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                        "source": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                        "asset": "cargo",
+                        "vertices": 12498,
+                        "triangles": 18933
+                      }
+                    ]
+                  },
+                  {
+                    "visible": false,
+                    "meshes": [
+                      {
+                        "id": 169,
+                        "uuid": "44c14d6b-a30e-43d3-a4d8-be8ebb77141d",
+                        "name": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                        "source": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                        "asset": "cargo",
+                        "vertices": 12498,
+                        "triangles": 18933
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "heroAssets": {
+          "ready": true,
+          "assets": {
+            "projector": {
+              "phase": "ready",
+              "url": "./models/hero-projector.glb",
+              "expectedSHA256": "2215cbd530dd2e7b84b16dbc54efa69b9a57b38d92e19b26ef689287cfbde087",
+              "task": "5c64d549-c131-4da2-8688-38d6a22ce0a6",
+              "liveInstances": 1,
+              "resident": true,
+              "bytes": 1049404,
+              "verifiedSHA256": "2215cbd530dd2e7b84b16dbc54efa69b9a57b38d92e19b26ef689287cfbde087",
+              "meshes": 1,
+              "vertices": 11877,
+              "triangles": 18780,
+              "materials": 1,
+              "textures": 3,
+              "sourceBounds": {
+                "min": [
+                  -0.5000000596046448,
+                  0,
+                  -0.1503143459558487
+                ],
+                "max": [
+                  0.5000000596046448,
+                  0.486053466796875,
+                  0.1503143459558487
+                ]
+              },
+              "normalizedBounds": {
+                "min": [
+                  -0.15031434595584872,
+                  -0.22,
+                  -0.6400000596046448
+                ],
+                "max": [
+                  0.15031434595584872,
+                  0.266053466796875,
+                  0.36000005960464476
+                ]
+              },
+              "alignment": [
+                6.123233995736766e-17,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                -1,
+                0,
+                6.123233995736766e-17,
+                0,
+                -8.572527594031473e-18,
+                -0.22,
+                -0.14,
+                1
+              ],
+              "fitPolicy": "Rigid rotation/translation; uniform view scale",
+              "lensMaskVertices": 137,
+              "muzzleSource": [
+                -0.320448,
+                0.29,
+                0
+              ],
+              "axisSource": [
+                -1,
+                0,
+                0
+              ],
+              "muzzleLocal": [
+                -2.819430846869003e-17,
+                0.06999999999999998,
+                -0.460448
+              ],
+              "axisLocal": [
+                -6.123233995736766e-17,
+                0,
+                -1
+              ]
+            },
+            "cargo": {
+              "phase": "ready",
+              "url": "./models/hero-weighted-cargo.glb",
+              "expectedSHA256": "143129e2a3439cf4b074f57d9b22b9b52b8e008078e1975647a50e88fdf90053",
+              "task": "b4902fc0-bae7-42b6-8452-fc9b6876ca40",
+              "liveInstances": 1,
+              "resident": true,
+              "bytes": 991240,
+              "verifiedSHA256": "143129e2a3439cf4b074f57d9b22b9b52b8e008078e1975647a50e88fdf90053",
+              "meshes": 1,
+              "vertices": 12498,
+              "triangles": 18933,
+              "materials": 1,
+              "textures": 3,
+              "sourceBounds": {
+                "min": [
+                  -0.4521484971046448,
+                  0,
+                  -0.5000000596046448
+                ],
+                "max": [
+                  0.4521484971046448,
+                  0.96966552734375,
+                  0.5000000596046448
+                ]
+              },
+              "normalizedBounds": {
+                "min": [
+                  -0.5,
+                  -0.49999999999999994,
+                  -0.5
+                ],
+                "max": [
+                  0.5,
+                  0.49999999999999994,
+                  0.5
+                ]
+              },
+              "alignment": [
+                1.1058313877006662,
+                0,
+                0,
+                0,
+                0,
+                1.0312834392899854,
+                0,
+                0,
+                0,
+                0,
+                0.9999998807907247,
+                0,
+                0,
+                -0.49999999999999994,
+                0,
+                1
+              ],
+              "fitPolicy": "Per-axis canonical cube for six-face native contact; original GLB unchanged",
+              "lensMaskVertices": 0
+            }
+          }
+        },
+        "heroInstances": {
+          "ready": true,
+          "assets": {
+            "projector": {
+              "phase": "ready",
+              "url": "./models/hero-projector.glb",
+              "expectedSHA256": "2215cbd530dd2e7b84b16dbc54efa69b9a57b38d92e19b26ef689287cfbde087",
+              "task": "5c64d549-c131-4da2-8688-38d6a22ce0a6",
+              "liveInstances": 1,
+              "resident": true,
+              "bytes": 1049404,
+              "verifiedSHA256": "2215cbd530dd2e7b84b16dbc54efa69b9a57b38d92e19b26ef689287cfbde087",
+              "meshes": 1,
+              "vertices": 11877,
+              "triangles": 18780,
+              "materials": 1,
+              "textures": 3,
+              "sourceBounds": {
+                "min": [
+                  -0.5000000596046448,
+                  0,
+                  -0.1503143459558487
+                ],
+                "max": [
+                  0.5000000596046448,
+                  0.486053466796875,
+                  0.1503143459558487
+                ]
+              },
+              "normalizedBounds": {
+                "min": [
+                  -0.15031434595584872,
+                  -0.22,
+                  -0.6400000596046448
+                ],
+                "max": [
+                  0.15031434595584872,
+                  0.266053466796875,
+                  0.36000005960464476
+                ]
+              },
+              "alignment": [
+                6.123233995736766e-17,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                -1,
+                0,
+                6.123233995736766e-17,
+                0,
+                -8.572527594031473e-18,
+                -0.22,
+                -0.14,
+                1
+              ],
+              "fitPolicy": "Rigid rotation/translation; uniform view scale",
+              "lensMaskVertices": 137,
+              "muzzleSource": [
+                -0.320448,
+                0.29,
+                0
+              ],
+              "axisSource": [
+                -1,
+                0,
+                0
+              ],
+              "muzzleLocal": [
+                -2.819430846869003e-17,
+                0.06999999999999998,
+                -0.460448
+              ],
+              "axisLocal": [
+                -6.123233995736766e-17,
+                0,
+                -1
+              ]
+            },
+            "cargo": {
+              "phase": "ready",
+              "url": "./models/hero-weighted-cargo.glb",
+              "expectedSHA256": "143129e2a3439cf4b074f57d9b22b9b52b8e008078e1975647a50e88fdf90053",
+              "task": "b4902fc0-bae7-42b6-8452-fc9b6876ca40",
+              "liveInstances": 1,
+              "resident": true,
+              "bytes": 991240,
+              "verifiedSHA256": "143129e2a3439cf4b074f57d9b22b9b52b8e008078e1975647a50e88fdf90053",
+              "meshes": 1,
+              "vertices": 12498,
+              "triangles": 18933,
+              "materials": 1,
+              "textures": 3,
+              "sourceBounds": {
+                "min": [
+                  -0.4521484971046448,
+                  0,
+                  -0.5000000596046448
+                ],
+                "max": [
+                  0.4521484971046448,
+                  0.96966552734375,
+                  0.5000000596046448
+                ]
+              },
+              "normalizedBounds": {
+                "min": [
+                  -0.5,
+                  -0.49999999999999994,
+                  -0.5
+                ],
+                "max": [
+                  0.5,
+                  0.49999999999999994,
+                  0.5
+                ]
+              },
+              "alignment": [
+                1.1058313877006662,
+                0,
+                0,
+                0,
+                0,
+                1.0312834392899854,
+                0,
+                0,
+                0,
+                0,
+                0.9999998807907247,
+                0,
+                0,
+                -0.49999999999999994,
+                0,
+                1
+              ],
+              "fitPolicy": "Per-axis canonical cube for six-face native contact; original GLB unchanged",
+              "lensMaskVertices": 0
+            }
+          },
+          "gun": {
+            "attached": true,
+            "meshes": [
+              {
+                "id": 215,
+                "uuid": "d8e09012-492d-42e0-8980-3a22639ac5e8",
+                "name": "tripo_node_611cc53a-6c26-4668-b0d4-7120f3c09134",
+                "source": "tripo_node_611cc53a-6c26-4668-b0d4-7120f3c09134",
+                "asset": "projector",
+                "vertices": 11877,
+                "triangles": 18780
+              }
+            ],
+            "muzzleInView": [
+              0.3681312613549729,
+              -0.3252677429205556,
+              -1.21468672
+            ],
+            "muzzleInWorld": [
+              0.3681312613549729,
+              1.1847322570794443,
+              8.78531328
+            ],
+            "axisInView": [
+              -6.113974938725237e-17,
+              3.3660810326873242e-18,
+              -1
+            ],
+            "axisInWorld": [
+              -6.113974938725237e-17,
+              3.3660810326873242e-18,
+              -1
+            ]
+          },
+          "cargo": [
+            {
+              "id": "weighted-cube",
+              "meshes": [
+                {
+                  "id": 159,
+                  "uuid": "9e8252dd-9802-4955-ba42-efc5d009199c",
+                  "name": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                  "source": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                  "asset": "cargo",
+                  "vertices": 12498,
+                  "triangles": 18933
+                }
+              ],
+              "portalCopies": [
+                {
+                  "visible": false,
+                  "meshes": [
+                    {
+                      "id": 164,
+                      "uuid": "75f1934d-2ebd-4e12-a16b-9d8d90f01bd3",
+                      "name": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                      "source": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                      "asset": "cargo",
+                      "vertices": 12498,
+                      "triangles": 18933
+                    }
+                  ]
+                },
+                {
+                  "visible": false,
+                  "meshes": [
+                    {
+                      "id": 169,
+                      "uuid": "44c14d6b-a30e-43d3-a4d8-be8ebb77141d",
+                      "name": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                      "source": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                      "asset": "cargo",
+                      "vertices": 12498,
+                      "triangles": 18933
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "portalRendering": {
+          "drawingBuffer": [
+            1280,
+            800
+          ],
+          "software": false,
+          "maxSamples": 4,
+          "roots": [
+            {
+              "width": 900,
+              "height": 563,
+              "samples": 0
+            },
+            {
+              "width": 900,
+              "height": 563,
+              "samples": 0
+            }
+          ],
+          "children": [],
+          "lastPasses": []
+        },
+        "transportMotion": []
+      },
+      "playing": {
+        "title": "Rift Runner",
+        "version": "rapier-authored-campaign",
+        "mode": "playing",
+        "level": 1,
+        "alternate": false,
+        "world": {
+          "room": "chamber-1",
+          "number": 1,
+          "mission": "Bring the cube back. Put it on the button.",
+          "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+          "player": {
+            "position": [
+              -2.583501412800615e-9,
+              0.861000120639801,
+              10
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "yaw": 0,
+            "pitch": 0,
+            "grounded": true,
+            "crossings": 0
+          },
+          "portals": [
+            null,
+            null
+          ],
+          "crates": [
+            {
+              "id": "weighted-cube",
+              "position": [
+                2.9999873638153076,
+                3.3499135971069336,
+                -8
+              ],
+              "velocity": [
+                -0.000057769033446675166,
+                -0.000005514812073670328,
+                -0.00005233874617260881
+              ],
+              "rotation": [
+                0.00000320361323247198,
+                2.987288151221068e-12,
+                -0.000004001243723905645,
+                1
+              ],
+              "angularVelocity": [
+                -0.00009463274182053283,
+                7.767810700221034e-12,
+                0.00010445115913171321
+              ],
+              "held": false,
+              "crossings": 0
+            }
+          ],
+          "pads": [
+            {
+              "id": "exit-button",
+              "position": [
+                2,
+                0.14,
+                6
+              ],
+              "pressed": false,
+              "crate": null
+            }
+          ],
+          "devices": [
+            {
+              "id": "exit-door",
+              "kind": "shutter",
+              "label": "EXIT",
+              "position": [
+                -8.12,
+                1.5,
+                11
+              ],
+              "size": [
+                0.3,
+                3,
+                2.6
+              ],
+              "active": false,
+              "progress": 0,
+              "choice": 0,
+              "angle": 0,
+              "powered": null,
+              "blocked": false
+            }
+          ],
+          "panels": [
+            {
+              "id": "near-wall",
+              "position": [
+                -7.985,
+                3.5,
+                -1.15
+              ],
+              "normal": [
+                1,
+                0,
+                0
+              ],
+              "width": 21.7,
+              "height": 7
+            },
+            {
+              "id": "far-wall",
+              "position": [
+                0,
+                3.5,
+                -11.985
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ],
+              "width": 16,
+              "height": 7
+            },
+            {
+              "id": "east-wall",
+              "position": [
+                7.985,
+                3.5,
+                1
+              ],
+              "normal": [
+                -1,
+                0,
+                0
+              ],
+              "width": 26,
+              "height": 7
+            },
+            {
+              "id": "south-wall",
+              "position": [
+                0,
+                3.5,
+                13.985
+              ],
+              "normal": [
+                0,
+                0,
+                -1
+              ],
+              "width": 16,
+              "height": 7
+            }
+          ],
+          "exits": [
+            {
+              "id": "next-chamber",
+              "label": "EXIT",
+              "position": [
+                -10,
+                1.5,
+                11
+              ],
+              "size": [
+                3.960000000000001,
+                3,
+                2.960000000000001
+              ]
+            }
+          ],
+          "result": null,
+          "held": null,
+          "holdSpaceTransform": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "launchUsed": false,
+          "respawns": 0,
+          "beams": {},
+          "signals": {
+            "exit-button": false,
+            "closed:exit-door": true,
+            "clear:exit-door": false,
+            "safety:exit-door": false,
+            "door-safety": false,
+            "moving:exit-door": false
+          },
+          "journal": null,
+          "events": [
+            {
+              "type": "land",
+              "time": 8
+            }
+          ]
+        },
+        "progress": {
+          "version": 2,
+          "highestUnlocked": 1,
+          "resumeLevel": 1,
+          "records": {},
+          "updatedAt": 1793197566689,
+          "generation": "legacy",
+          "completed": [],
+          "resume": 1,
+          "registered": 35
+        },
+        "saveDiagnostics": {
+          "key": "rift-runner-rapier-campaign-v1",
+          "journalKey": "rift-runner-rapier-campaign-v1-journal",
+          "generation": "legacy",
+          "storage": "valid",
+          "journal": "valid",
+          "recovery": "fresh",
+          "primaryNeedsRepair": false,
+          "legacyImportEligible": false,
+          "preservedUnreadableKeys": [],
+          "lastWrite": "written",
+          "warning": null,
+          "origin": "http://localhost:4261"
+        },
+        "pointerLocked": false,
+        "controls": {
+          "unlocked": true,
+          "sensitivity": 0.0022
+        },
+        "audio": {
+          "context": "running",
+          "paused": false,
+          "loopCount": 0,
+          "activeSfx": 0,
+          "cuesPlayed": 0,
+          "energy": false,
+          "chapter": 1,
+          "intensity": 0,
+          "environment": "chamber",
+          "airSpeed": 0,
+          "airActive": false,
+          "recentCues": [],
+          "paired": false,
+          "bridge": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 0,
+          "loadErrors": [],
+          "timeline": 0.272
+        },
+        "assets": {
+          "state": "not-requested",
+          "room": 1,
+          "url": "./models/owned-optical-projector.glb",
+          "fallback": true,
+          "meshIDs": [],
+          "lateDiscards": 0,
+          "heroes": {
+            "ready": true,
+            "assets": {
+              "projector": {
+                "phase": "ready",
+                "url": "./models/hero-projector.glb",
+                "expectedSHA256": "2215cbd530dd2e7b84b16dbc54efa69b9a57b38d92e19b26ef689287cfbde087",
+                "task": "5c64d549-c131-4da2-8688-38d6a22ce0a6",
+                "liveInstances": 1,
+                "resident": true,
+                "bytes": 1049404,
+                "verifiedSHA256": "2215cbd530dd2e7b84b16dbc54efa69b9a57b38d92e19b26ef689287cfbde087",
+                "meshes": 1,
+                "vertices": 11877,
+                "triangles": 18780,
+                "materials": 1,
+                "textures": 3,
+                "sourceBounds": {
+                  "min": [
+                    -0.5000000596046448,
+                    0,
+                    -0.1503143459558487
+                  ],
+                  "max": [
+                    0.5000000596046448,
+                    0.486053466796875,
+                    0.1503143459558487
+                  ]
+                },
+                "normalizedBounds": {
+                  "min": [
+                    -0.15031434595584872,
+                    -0.22,
+                    -0.6400000596046448
+                  ],
+                  "max": [
+                    0.15031434595584872,
+                    0.266053466796875,
+                    0.36000005960464476
+                  ]
+                },
+                "alignment": [
+                  6.123233995736766e-17,
+                  0,
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  -1,
+                  0,
+                  6.123233995736766e-17,
+                  0,
+                  -8.572527594031473e-18,
+                  -0.22,
+                  -0.14,
+                  1
+                ],
+                "fitPolicy": "Rigid rotation/translation; uniform view scale",
+                "lensMaskVertices": 137,
+                "muzzleSource": [
+                  -0.320448,
+                  0.29,
+                  0
+                ],
+                "axisSource": [
+                  -1,
+                  0,
+                  0
+                ],
+                "muzzleLocal": [
+                  -2.819430846869003e-17,
+                  0.06999999999999998,
+                  -0.460448
+                ],
+                "axisLocal": [
+                  -6.123233995736766e-17,
+                  0,
+                  -1
+                ]
+              },
+              "cargo": {
+                "phase": "ready",
+                "url": "./models/hero-weighted-cargo.glb",
+                "expectedSHA256": "143129e2a3439cf4b074f57d9b22b9b52b8e008078e1975647a50e88fdf90053",
+                "task": "b4902fc0-bae7-42b6-8452-fc9b6876ca40",
+                "liveInstances": 1,
+                "resident": true,
+                "bytes": 991240,
+                "verifiedSHA256": "143129e2a3439cf4b074f57d9b22b9b52b8e008078e1975647a50e88fdf90053",
+                "meshes": 1,
+                "vertices": 12498,
+                "triangles": 18933,
+                "materials": 1,
+                "textures": 3,
+                "sourceBounds": {
+                  "min": [
+                    -0.4521484971046448,
+                    0,
+                    -0.5000000596046448
+                  ],
+                  "max": [
+                    0.4521484971046448,
+                    0.96966552734375,
+                    0.5000000596046448
+                  ]
+                },
+                "normalizedBounds": {
+                  "min": [
+                    -0.5,
+                    -0.49999999999999994,
+                    -0.5
+                  ],
+                  "max": [
+                    0.5,
+                    0.49999999999999994,
+                    0.5
+                  ]
+                },
+                "alignment": [
+                  1.1058313877006662,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1.0312834392899854,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0.9999998807907247,
+                  0,
+                  0,
+                  -0.49999999999999994,
+                  0,
+                  1
+                ],
+                "fitPolicy": "Per-axis canonical cube for six-face native contact; original GLB unchanged",
+                "lensMaskVertices": 0
+              }
+            },
+            "gun": {
+              "attached": true,
+              "meshes": [
+                {
+                  "id": 373,
+                  "uuid": "d0c5ac83-de3f-4413-b8e9-e387f866f083",
+                  "name": "tripo_node_611cc53a-6c26-4668-b0d4-7120f3c09134",
+                  "source": "tripo_node_611cc53a-6c26-4668-b0d4-7120f3c09134",
+                  "asset": "projector",
+                  "vertices": 11877,
+                  "triangles": 18780
+                }
+              ],
+              "muzzleInView": [
+                0.3681144157315064,
+                -0.32526681865737994,
+                -1.21468672
+              ],
+              "muzzleInWorld": [
+                0.36811441314800497,
+                1.185733301982421,
+                8.78531328
+              ],
+              "axisInView": [
+                -6.114101266397076e-17,
+                3.343056547354734e-18,
+                -1
+              ],
+              "axisInWorld": [
+                -6.114101266397076e-17,
+                3.343056547354734e-18,
+                -1
+              ]
+            },
+            "cargo": [
+              {
+                "id": "weighted-cube",
+                "meshes": [
+                  {
+                    "id": 317,
+                    "uuid": "79f1c5ff-e0e7-4f45-b0b5-430c15a7dbb4",
+                    "name": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                    "source": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                    "asset": "cargo",
+                    "vertices": 12498,
+                    "triangles": 18933
+                  }
+                ],
+                "portalCopies": [
+                  {
+                    "visible": false,
+                    "meshes": [
+                      {
+                        "id": 322,
+                        "uuid": "88d5305e-13ab-4473-8689-c9578105166a",
+                        "name": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                        "source": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                        "asset": "cargo",
+                        "vertices": 12498,
+                        "triangles": 18933
+                      }
+                    ]
+                  },
+                  {
+                    "visible": false,
+                    "meshes": [
+                      {
+                        "id": 327,
+                        "uuid": "f21e59b8-c60c-40fe-8f5e-f7bf1c7ca8dc",
+                        "name": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                        "source": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                        "asset": "cargo",
+                        "vertices": 12498,
+                        "triangles": 18933
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "heroAssets": {
+          "ready": true,
+          "assets": {
+            "projector": {
+              "phase": "ready",
+              "url": "./models/hero-projector.glb",
+              "expectedSHA256": "2215cbd530dd2e7b84b16dbc54efa69b9a57b38d92e19b26ef689287cfbde087",
+              "task": "5c64d549-c131-4da2-8688-38d6a22ce0a6",
+              "liveInstances": 1,
+              "resident": true,
+              "bytes": 1049404,
+              "verifiedSHA256": "2215cbd530dd2e7b84b16dbc54efa69b9a57b38d92e19b26ef689287cfbde087",
+              "meshes": 1,
+              "vertices": 11877,
+              "triangles": 18780,
+              "materials": 1,
+              "textures": 3,
+              "sourceBounds": {
+                "min": [
+                  -0.5000000596046448,
+                  0,
+                  -0.1503143459558487
+                ],
+                "max": [
+                  0.5000000596046448,
+                  0.486053466796875,
+                  0.1503143459558487
+                ]
+              },
+              "normalizedBounds": {
+                "min": [
+                  -0.15031434595584872,
+                  -0.22,
+                  -0.6400000596046448
+                ],
+                "max": [
+                  0.15031434595584872,
+                  0.266053466796875,
+                  0.36000005960464476
+                ]
+              },
+              "alignment": [
+                6.123233995736766e-17,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                -1,
+                0,
+                6.123233995736766e-17,
+                0,
+                -8.572527594031473e-18,
+                -0.22,
+                -0.14,
+                1
+              ],
+              "fitPolicy": "Rigid rotation/translation; uniform view scale",
+              "lensMaskVertices": 137,
+              "muzzleSource": [
+                -0.320448,
+                0.29,
+                0
+              ],
+              "axisSource": [
+                -1,
+                0,
+                0
+              ],
+              "muzzleLocal": [
+                -2.819430846869003e-17,
+                0.06999999999999998,
+                -0.460448
+              ],
+              "axisLocal": [
+                -6.123233995736766e-17,
+                0,
+                -1
+              ]
+            },
+            "cargo": {
+              "phase": "ready",
+              "url": "./models/hero-weighted-cargo.glb",
+              "expectedSHA256": "143129e2a3439cf4b074f57d9b22b9b52b8e008078e1975647a50e88fdf90053",
+              "task": "b4902fc0-bae7-42b6-8452-fc9b6876ca40",
+              "liveInstances": 1,
+              "resident": true,
+              "bytes": 991240,
+              "verifiedSHA256": "143129e2a3439cf4b074f57d9b22b9b52b8e008078e1975647a50e88fdf90053",
+              "meshes": 1,
+              "vertices": 12498,
+              "triangles": 18933,
+              "materials": 1,
+              "textures": 3,
+              "sourceBounds": {
+                "min": [
+                  -0.4521484971046448,
+                  0,
+                  -0.5000000596046448
+                ],
+                "max": [
+                  0.4521484971046448,
+                  0.96966552734375,
+                  0.5000000596046448
+                ]
+              },
+              "normalizedBounds": {
+                "min": [
+                  -0.5,
+                  -0.49999999999999994,
+                  -0.5
+                ],
+                "max": [
+                  0.5,
+                  0.49999999999999994,
+                  0.5
+                ]
+              },
+              "alignment": [
+                1.1058313877006662,
+                0,
+                0,
+                0,
+                0,
+                1.0312834392899854,
+                0,
+                0,
+                0,
+                0,
+                0.9999998807907247,
+                0,
+                0,
+                -0.49999999999999994,
+                0,
+                1
+              ],
+              "fitPolicy": "Per-axis canonical cube for six-face native contact; original GLB unchanged",
+              "lensMaskVertices": 0
+            }
+          }
+        },
+        "heroInstances": {
+          "ready": true,
+          "assets": {
+            "projector": {
+              "phase": "ready",
+              "url": "./models/hero-projector.glb",
+              "expectedSHA256": "2215cbd530dd2e7b84b16dbc54efa69b9a57b38d92e19b26ef689287cfbde087",
+              "task": "5c64d549-c131-4da2-8688-38d6a22ce0a6",
+              "liveInstances": 1,
+              "resident": true,
+              "bytes": 1049404,
+              "verifiedSHA256": "2215cbd530dd2e7b84b16dbc54efa69b9a57b38d92e19b26ef689287cfbde087",
+              "meshes": 1,
+              "vertices": 11877,
+              "triangles": 18780,
+              "materials": 1,
+              "textures": 3,
+              "sourceBounds": {
+                "min": [
+                  -0.5000000596046448,
+                  0,
+                  -0.1503143459558487
+                ],
+                "max": [
+                  0.5000000596046448,
+                  0.486053466796875,
+                  0.1503143459558487
+                ]
+              },
+              "normalizedBounds": {
+                "min": [
+                  -0.15031434595584872,
+                  -0.22,
+                  -0.6400000596046448
+                ],
+                "max": [
+                  0.15031434595584872,
+                  0.266053466796875,
+                  0.36000005960464476
+                ]
+              },
+              "alignment": [
+                6.123233995736766e-17,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                -1,
+                0,
+                6.123233995736766e-17,
+                0,
+                -8.572527594031473e-18,
+                -0.22,
+                -0.14,
+                1
+              ],
+              "fitPolicy": "Rigid rotation/translation; uniform view scale",
+              "lensMaskVertices": 137,
+              "muzzleSource": [
+                -0.320448,
+                0.29,
+                0
+              ],
+              "axisSource": [
+                -1,
+                0,
+                0
+              ],
+              "muzzleLocal": [
+                -2.819430846869003e-17,
+                0.06999999999999998,
+                -0.460448
+              ],
+              "axisLocal": [
+                -6.123233995736766e-17,
+                0,
+                -1
+              ]
+            },
+            "cargo": {
+              "phase": "ready",
+              "url": "./models/hero-weighted-cargo.glb",
+              "expectedSHA256": "143129e2a3439cf4b074f57d9b22b9b52b8e008078e1975647a50e88fdf90053",
+              "task": "b4902fc0-bae7-42b6-8452-fc9b6876ca40",
+              "liveInstances": 1,
+              "resident": true,
+              "bytes": 991240,
+              "verifiedSHA256": "143129e2a3439cf4b074f57d9b22b9b52b8e008078e1975647a50e88fdf90053",
+              "meshes": 1,
+              "vertices": 12498,
+              "triangles": 18933,
+              "materials": 1,
+              "textures": 3,
+              "sourceBounds": {
+                "min": [
+                  -0.4521484971046448,
+                  0,
+                  -0.5000000596046448
+                ],
+                "max": [
+                  0.4521484971046448,
+                  0.96966552734375,
+                  0.5000000596046448
+                ]
+              },
+              "normalizedBounds": {
+                "min": [
+                  -0.5,
+                  -0.49999999999999994,
+                  -0.5
+                ],
+                "max": [
+                  0.5,
+                  0.49999999999999994,
+                  0.5
+                ]
+              },
+              "alignment": [
+                1.1058313877006662,
+                0,
+                0,
+                0,
+                0,
+                1.0312834392899854,
+                0,
+                0,
+                0,
+                0,
+                0.9999998807907247,
+                0,
+                0,
+                -0.49999999999999994,
+                0,
+                1
+              ],
+              "fitPolicy": "Per-axis canonical cube for six-face native contact; original GLB unchanged",
+              "lensMaskVertices": 0
+            }
+          },
+          "gun": {
+            "attached": true,
+            "meshes": [
+              {
+                "id": 373,
+                "uuid": "d0c5ac83-de3f-4413-b8e9-e387f866f083",
+                "name": "tripo_node_611cc53a-6c26-4668-b0d4-7120f3c09134",
+                "source": "tripo_node_611cc53a-6c26-4668-b0d4-7120f3c09134",
+                "asset": "projector",
+                "vertices": 11877,
+                "triangles": 18780
+              }
+            ],
+            "muzzleInView": [
+              0.3681144157315064,
+              -0.32526681865737994,
+              -1.21468672
+            ],
+            "muzzleInWorld": [
+              0.36811441314800497,
+              1.185733301982421,
+              8.78531328
+            ],
+            "axisInView": [
+              -6.114101266397076e-17,
+              3.343056547354734e-18,
+              -1
+            ],
+            "axisInWorld": [
+              -6.114101266397076e-17,
+              3.343056547354734e-18,
+              -1
+            ]
+          },
+          "cargo": [
+            {
+              "id": "weighted-cube",
+              "meshes": [
+                {
+                  "id": 317,
+                  "uuid": "79f1c5ff-e0e7-4f45-b0b5-430c15a7dbb4",
+                  "name": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                  "source": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                  "asset": "cargo",
+                  "vertices": 12498,
+                  "triangles": 18933
+                }
+              ],
+              "portalCopies": [
+                {
+                  "visible": false,
+                  "meshes": [
+                    {
+                      "id": 322,
+                      "uuid": "88d5305e-13ab-4473-8689-c9578105166a",
+                      "name": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                      "source": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                      "asset": "cargo",
+                      "vertices": 12498,
+                      "triangles": 18933
+                    }
+                  ]
+                },
+                {
+                  "visible": false,
+                  "meshes": [
+                    {
+                      "id": 327,
+                      "uuid": "f21e59b8-c60c-40fe-8f5e-f7bf1c7ca8dc",
+                      "name": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                      "source": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                      "asset": "cargo",
+                      "vertices": 12498,
+                      "triangles": 18933
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "portalRendering": {
+          "drawingBuffer": [
+            1280,
+            800
+          ],
+          "software": false,
+          "maxSamples": 4,
+          "roots": [
+            {
+              "width": 900,
+              "height": 506,
+              "samples": 0
+            },
+            {
+              "width": 900,
+              "height": 506,
+              "samples": 0
+            }
+          ],
+          "children": [],
+          "lastPasses": []
+        },
+        "transportMotion": []
+      },
+      "scripts": [
+        "http://localhost:4261/hero-repair/assets/main-D2DMbgrH.js"
+      ],
+      "scriptHashes": [
+        {
+          "url": "http://localhost:4261/hero-repair/assets/main-D2DMbgrH.js",
+          "sha256": "48cb251e7280e8ce8d6589c87e161e20f00da08d10259ac4369cc71f5d689761"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "asset": "hero-weighted-cargo",
+      "responses": [
+        {
+          "url": "http://localhost:4261/hero-repair/models/hero-weighted-cargo.glb",
+          "status": 503
+        },
+        {
+          "url": "http://localhost:4261/hero-repair/models/hero-projector.glb",
+          "status": 200
+        },
+        {
+          "url": "http://localhost:4261/hero-repair/models/hero-weighted-cargo.glb",
+          "status": 200
+        }
+      ],
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+        "Error: Hero asset request failed (503)\n    at http://localhost:4261/hero-repair/assets/main-D2DMbgrH.js:3839:7661\n    at async Promise.all (index 1)\n    at async Promise.all (index 1)\n    at async mS (http://localhost:4261/hero-repair/assets/main-D2DMbgrH.js:3847:65538)"
+      ],
+      "pageErrors": [],
+      "failure": {
+        "title": "Rift Runner",
+        "version": "rapier-authored-campaign",
+        "mode": "load-error",
+        "level": 1,
+        "alternate": false,
+        "progress": {
+          "version": 2,
+          "highestUnlocked": 1,
+          "resumeLevel": 1,
+          "records": {},
+          "updatedAt": 1793197581539,
+          "generation": "legacy",
+          "completed": [],
+          "resume": 1,
+          "registered": 35
+        },
+        "saveDiagnostics": {
+          "key": "rift-runner-rapier-campaign-v1",
+          "journalKey": "rift-runner-rapier-campaign-v1-journal",
+          "generation": "legacy",
+          "storage": "missing",
+          "journal": "missing",
+          "recovery": "fresh",
+          "primaryNeedsRepair": false,
+          "legacyImportEligible": true,
+          "preservedUnreadableKeys": [],
+          "lastWrite": null,
+          "warning": null,
+          "origin": "http://localhost:4261"
+        },
+        "pointerLocked": false,
+        "controls": {
+          "unlocked": false,
+          "sensitivity": 0.0022
+        },
+        "audio": {
+          "context": "not-started",
+          "paused": false,
+          "loopCount": 0,
+          "activeSfx": 0,
+          "cuesPlayed": 0,
+          "energy": false,
+          "chapter": 1,
+          "intensity": 0,
+          "environment": "chamber",
+          "airSpeed": 0,
+          "airActive": false,
+          "recentCues": [],
+          "paired": false,
+          "bridge": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 0,
+          "loadErrors": [],
+          "timeline": 0
+        },
+        "assets": null,
+        "heroAssets": {
+          "ready": false,
+          "assets": {
+            "projector": {
+              "phase": "decoding",
+              "url": "./models/hero-projector.glb",
+              "expectedSHA256": "2215cbd530dd2e7b84b16dbc54efa69b9a57b38d92e19b26ef689287cfbde087",
+              "task": "5c64d549-c131-4da2-8688-38d6a22ce0a6",
+              "liveInstances": 0,
+              "resident": false
+            },
+            "cargo": {
+              "phase": "error",
+              "url": "./models/hero-weighted-cargo.glb",
+              "expectedSHA256": "143129e2a3439cf4b074f57d9b22b9b52b8e008078e1975647a50e88fdf90053",
+              "task": "b4902fc0-bae7-42b6-8452-fc9b6876ca40",
+              "error": "Error: Hero asset request failed (503)",
+              "liveInstances": 0,
+              "resident": false
+            }
+          }
+        },
+        "heroInstances": null,
+        "initializationError": "Error: Hero asset request failed (503)",
+        "portalRendering": null,
+        "transportMotion": []
+      },
+      "recovered": {
+        "title": "Rift Runner",
+        "version": "rapier-authored-campaign",
+        "mode": "menu",
+        "level": 1,
+        "alternate": false,
+        "world": {
+          "room": "chamber-1",
+          "number": 1,
+          "mission": "Bring the cube back. Put it on the button.",
+          "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+          "player": {
+            "position": [
+              0,
+              0.86,
+              10
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "yaw": 0,
+            "pitch": 0,
+            "grounded": false,
+            "crossings": 0
+          },
+          "portals": [
+            null,
+            null
+          ],
+          "crates": [
+            {
+              "id": "weighted-cube",
+              "position": [
+                3,
+                3.35,
+                -8
+              ],
+              "velocity": [
+                0,
+                0,
+                0
+              ],
+              "rotation": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "angularVelocity": [
+                0,
+                0,
+                0
+              ],
+              "held": false,
+              "crossings": 0
+            }
+          ],
+          "pads": [
+            {
+              "id": "exit-button",
+              "position": [
+                2,
+                0.14,
+                6
+              ],
+              "pressed": false,
+              "crate": null
+            }
+          ],
+          "devices": [
+            {
+              "id": "exit-door",
+              "kind": "shutter",
+              "label": "EXIT",
+              "position": [
+                -8.12,
+                1.5,
+                11
+              ],
+              "size": [
+                0.3,
+                3,
+                2.6
+              ],
+              "active": false,
+              "progress": 0,
+              "choice": 0,
+              "angle": 0,
+              "powered": null,
+              "blocked": false
+            }
+          ],
+          "panels": [
+            {
+              "id": "near-wall",
+              "position": [
+                -7.985,
+                3.5,
+                -1.15
+              ],
+              "normal": [
+                1,
+                0,
+                0
+              ],
+              "width": 21.7,
+              "height": 7
+            },
+            {
+              "id": "far-wall",
+              "position": [
+                0,
+                3.5,
+                -11.985
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ],
+              "width": 16,
+              "height": 7
+            },
+            {
+              "id": "east-wall",
+              "position": [
+                7.985,
+                3.5,
+                1
+              ],
+              "normal": [
+                -1,
+                0,
+                0
+              ],
+              "width": 26,
+              "height": 7
+            },
+            {
+              "id": "south-wall",
+              "position": [
+                0,
+                3.5,
+                13.985
+              ],
+              "normal": [
+                0,
+                0,
+                -1
+              ],
+              "width": 16,
+              "height": 7
+            }
+          ],
+          "exits": [
+            {
+              "id": "next-chamber",
+              "label": "EXIT",
+              "position": [
+                -10,
+                1.5,
+                11
+              ],
+              "size": [
+                3.960000000000001,
+                3,
+                2.960000000000001
+              ]
+            }
+          ],
+          "result": null,
+          "held": null,
+          "holdSpaceTransform": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "launchUsed": false,
+          "respawns": 0,
+          "beams": {},
+          "signals": {},
+          "journal": null,
+          "events": []
+        },
+        "progress": {
+          "version": 2,
+          "highestUnlocked": 1,
+          "resumeLevel": 1,
+          "records": {},
+          "updatedAt": 1793197581539,
+          "generation": "legacy",
+          "completed": [],
+          "resume": 1,
+          "registered": 35
+        },
+        "saveDiagnostics": {
+          "key": "rift-runner-rapier-campaign-v1",
+          "journalKey": "rift-runner-rapier-campaign-v1-journal",
+          "generation": "legacy",
+          "storage": "missing",
+          "journal": "missing",
+          "recovery": "fresh",
+          "primaryNeedsRepair": false,
+          "legacyImportEligible": true,
+          "preservedUnreadableKeys": [],
+          "lastWrite": null,
+          "warning": null,
+          "origin": "http://localhost:4261"
+        },
+        "pointerLocked": false,
+        "controls": {
+          "unlocked": false,
+          "sensitivity": 0.0022
+        },
+        "audio": {
+          "context": "not-started",
+          "paused": false,
+          "loopCount": 0,
+          "activeSfx": 0,
+          "cuesPlayed": 0,
+          "energy": false,
+          "chapter": 1,
+          "intensity": 0,
+          "environment": "chamber",
+          "airSpeed": 0,
+          "airActive": false,
+          "recentCues": [],
+          "paired": false,
+          "bridge": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 0,
+          "loadErrors": [],
+          "timeline": 0
+        },
+        "assets": {
+          "state": "not-requested",
+          "room": 1,
+          "url": "./models/owned-optical-projector.glb",
+          "fallback": true,
+          "meshIDs": [],
+          "lateDiscards": 0,
+          "heroes": {
+            "ready": true,
+            "assets": {
+              "projector": {
+                "phase": "ready",
+                "url": "./models/hero-projector.glb",
+                "expectedSHA256": "2215cbd530dd2e7b84b16dbc54efa69b9a57b38d92e19b26ef689287cfbde087",
+                "task": "5c64d549-c131-4da2-8688-38d6a22ce0a6",
+                "liveInstances": 1,
+                "resident": true,
+                "bytes": 1049404,
+                "verifiedSHA256": "2215cbd530dd2e7b84b16dbc54efa69b9a57b38d92e19b26ef689287cfbde087",
+                "meshes": 1,
+                "vertices": 11877,
+                "triangles": 18780,
+                "materials": 1,
+                "textures": 3,
+                "sourceBounds": {
+                  "min": [
+                    -0.5000000596046448,
+                    0,
+                    -0.1503143459558487
+                  ],
+                  "max": [
+                    0.5000000596046448,
+                    0.486053466796875,
+                    0.1503143459558487
+                  ]
+                },
+                "normalizedBounds": {
+                  "min": [
+                    -0.15031434595584872,
+                    -0.22,
+                    -0.6400000596046448
+                  ],
+                  "max": [
+                    0.15031434595584872,
+                    0.266053466796875,
+                    0.36000005960464476
+                  ]
+                },
+                "alignment": [
+                  6.123233995736766e-17,
+                  0,
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  -1,
+                  0,
+                  6.123233995736766e-17,
+                  0,
+                  -8.572527594031473e-18,
+                  -0.22,
+                  -0.14,
+                  1
+                ],
+                "fitPolicy": "Rigid rotation/translation; uniform view scale",
+                "lensMaskVertices": 137,
+                "muzzleSource": [
+                  -0.320448,
+                  0.29,
+                  0
+                ],
+                "axisSource": [
+                  -1,
+                  0,
+                  0
+                ],
+                "muzzleLocal": [
+                  -2.819430846869003e-17,
+                  0.06999999999999998,
+                  -0.460448
+                ],
+                "axisLocal": [
+                  -6.123233995736766e-17,
+                  0,
+                  -1
+                ]
+              },
+              "cargo": {
+                "phase": "ready",
+                "url": "./models/hero-weighted-cargo.glb",
+                "expectedSHA256": "143129e2a3439cf4b074f57d9b22b9b52b8e008078e1975647a50e88fdf90053",
+                "task": "b4902fc0-bae7-42b6-8452-fc9b6876ca40",
+                "liveInstances": 1,
+                "resident": true,
+                "bytes": 991240,
+                "verifiedSHA256": "143129e2a3439cf4b074f57d9b22b9b52b8e008078e1975647a50e88fdf90053",
+                "meshes": 1,
+                "vertices": 12498,
+                "triangles": 18933,
+                "materials": 1,
+                "textures": 3,
+                "sourceBounds": {
+                  "min": [
+                    -0.4521484971046448,
+                    0,
+                    -0.5000000596046448
+                  ],
+                  "max": [
+                    0.4521484971046448,
+                    0.96966552734375,
+                    0.5000000596046448
+                  ]
+                },
+                "normalizedBounds": {
+                  "min": [
+                    -0.5,
+                    -0.49999999999999994,
+                    -0.5
+                  ],
+                  "max": [
+                    0.5,
+                    0.49999999999999994,
+                    0.5
+                  ]
+                },
+                "alignment": [
+                  1.1058313877006662,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1.0312834392899854,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0.9999998807907247,
+                  0,
+                  0,
+                  -0.49999999999999994,
+                  0,
+                  1
+                ],
+                "fitPolicy": "Per-axis canonical cube for six-face native contact; original GLB unchanged",
+                "lensMaskVertices": 0
+              }
+            },
+            "gun": {
+              "attached": true,
+              "meshes": [
+                {
+                  "id": 215,
+                  "uuid": "fa4bcbaf-f29a-460b-ab44-3f5d49b93acb",
+                  "name": "tripo_node_611cc53a-6c26-4668-b0d4-7120f3c09134",
+                  "source": "tripo_node_611cc53a-6c26-4668-b0d4-7120f3c09134",
+                  "asset": "projector",
+                  "vertices": 11877,
+                  "triangles": 18780
+                }
+              ],
+              "muzzleInView": [
+                0.3681312613549729,
+                -0.3252677429205556,
+                -1.21468672
+              ],
+              "muzzleInWorld": [
+                0.3681312613549729,
+                1.1847322570794443,
+                8.78531328
+              ],
+              "axisInView": [
+                -6.113974938725237e-17,
+                3.3660810326873242e-18,
+                -1
+              ],
+              "axisInWorld": [
+                -6.113974938725237e-17,
+                3.3660810326873242e-18,
+                -1
+              ]
+            },
+            "cargo": [
+              {
+                "id": "weighted-cube",
+                "meshes": [
+                  {
+                    "id": 159,
+                    "uuid": "fc0b3a57-e8fc-4f88-b5ad-8c338ec7ca2f",
+                    "name": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                    "source": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                    "asset": "cargo",
+                    "vertices": 12498,
+                    "triangles": 18933
+                  }
+                ],
+                "portalCopies": [
+                  {
+                    "visible": false,
+                    "meshes": [
+                      {
+                        "id": 164,
+                        "uuid": "9dcf6e60-259d-4b70-8faf-995d994c7356",
+                        "name": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                        "source": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                        "asset": "cargo",
+                        "vertices": 12498,
+                        "triangles": 18933
+                      }
+                    ]
+                  },
+                  {
+                    "visible": false,
+                    "meshes": [
+                      {
+                        "id": 169,
+                        "uuid": "2aa3a051-0c92-4711-a90b-5b4d1ba20242",
+                        "name": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                        "source": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                        "asset": "cargo",
+                        "vertices": 12498,
+                        "triangles": 18933
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "heroAssets": {
+          "ready": true,
+          "assets": {
+            "projector": {
+              "phase": "ready",
+              "url": "./models/hero-projector.glb",
+              "expectedSHA256": "2215cbd530dd2e7b84b16dbc54efa69b9a57b38d92e19b26ef689287cfbde087",
+              "task": "5c64d549-c131-4da2-8688-38d6a22ce0a6",
+              "liveInstances": 1,
+              "resident": true,
+              "bytes": 1049404,
+              "verifiedSHA256": "2215cbd530dd2e7b84b16dbc54efa69b9a57b38d92e19b26ef689287cfbde087",
+              "meshes": 1,
+              "vertices": 11877,
+              "triangles": 18780,
+              "materials": 1,
+              "textures": 3,
+              "sourceBounds": {
+                "min": [
+                  -0.5000000596046448,
+                  0,
+                  -0.1503143459558487
+                ],
+                "max": [
+                  0.5000000596046448,
+                  0.486053466796875,
+                  0.1503143459558487
+                ]
+              },
+              "normalizedBounds": {
+                "min": [
+                  -0.15031434595584872,
+                  -0.22,
+                  -0.6400000596046448
+                ],
+                "max": [
+                  0.15031434595584872,
+                  0.266053466796875,
+                  0.36000005960464476
+                ]
+              },
+              "alignment": [
+                6.123233995736766e-17,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                -1,
+                0,
+                6.123233995736766e-17,
+                0,
+                -8.572527594031473e-18,
+                -0.22,
+                -0.14,
+                1
+              ],
+              "fitPolicy": "Rigid rotation/translation; uniform view scale",
+              "lensMaskVertices": 137,
+              "muzzleSource": [
+                -0.320448,
+                0.29,
+                0
+              ],
+              "axisSource": [
+                -1,
+                0,
+                0
+              ],
+              "muzzleLocal": [
+                -2.819430846869003e-17,
+                0.06999999999999998,
+                -0.460448
+              ],
+              "axisLocal": [
+                -6.123233995736766e-17,
+                0,
+                -1
+              ]
+            },
+            "cargo": {
+              "phase": "ready",
+              "url": "./models/hero-weighted-cargo.glb",
+              "expectedSHA256": "143129e2a3439cf4b074f57d9b22b9b52b8e008078e1975647a50e88fdf90053",
+              "task": "b4902fc0-bae7-42b6-8452-fc9b6876ca40",
+              "liveInstances": 1,
+              "resident": true,
+              "bytes": 991240,
+              "verifiedSHA256": "143129e2a3439cf4b074f57d9b22b9b52b8e008078e1975647a50e88fdf90053",
+              "meshes": 1,
+              "vertices": 12498,
+              "triangles": 18933,
+              "materials": 1,
+              "textures": 3,
+              "sourceBounds": {
+                "min": [
+                  -0.4521484971046448,
+                  0,
+                  -0.5000000596046448
+                ],
+                "max": [
+                  0.4521484971046448,
+                  0.96966552734375,
+                  0.5000000596046448
+                ]
+              },
+              "normalizedBounds": {
+                "min": [
+                  -0.5,
+                  -0.49999999999999994,
+                  -0.5
+                ],
+                "max": [
+                  0.5,
+                  0.49999999999999994,
+                  0.5
+                ]
+              },
+              "alignment": [
+                1.1058313877006662,
+                0,
+                0,
+                0,
+                0,
+                1.0312834392899854,
+                0,
+                0,
+                0,
+                0,
+                0.9999998807907247,
+                0,
+                0,
+                -0.49999999999999994,
+                0,
+                1
+              ],
+              "fitPolicy": "Per-axis canonical cube for six-face native contact; original GLB unchanged",
+              "lensMaskVertices": 0
+            }
+          }
+        },
+        "heroInstances": {
+          "ready": true,
+          "assets": {
+            "projector": {
+              "phase": "ready",
+              "url": "./models/hero-projector.glb",
+              "expectedSHA256": "2215cbd530dd2e7b84b16dbc54efa69b9a57b38d92e19b26ef689287cfbde087",
+              "task": "5c64d549-c131-4da2-8688-38d6a22ce0a6",
+              "liveInstances": 1,
+              "resident": true,
+              "bytes": 1049404,
+              "verifiedSHA256": "2215cbd530dd2e7b84b16dbc54efa69b9a57b38d92e19b26ef689287cfbde087",
+              "meshes": 1,
+              "vertices": 11877,
+              "triangles": 18780,
+              "materials": 1,
+              "textures": 3,
+              "sourceBounds": {
+                "min": [
+                  -0.5000000596046448,
+                  0,
+                  -0.1503143459558487
+                ],
+                "max": [
+                  0.5000000596046448,
+                  0.486053466796875,
+                  0.1503143459558487
+                ]
+              },
+              "normalizedBounds": {
+                "min": [
+                  -0.15031434595584872,
+                  -0.22,
+                  -0.6400000596046448
+                ],
+                "max": [
+                  0.15031434595584872,
+                  0.266053466796875,
+                  0.36000005960464476
+                ]
+              },
+              "alignment": [
+                6.123233995736766e-17,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                -1,
+                0,
+                6.123233995736766e-17,
+                0,
+                -8.572527594031473e-18,
+                -0.22,
+                -0.14,
+                1
+              ],
+              "fitPolicy": "Rigid rotation/translation; uniform view scale",
+              "lensMaskVertices": 137,
+              "muzzleSource": [
+                -0.320448,
+                0.29,
+                0
+              ],
+              "axisSource": [
+                -1,
+                0,
+                0
+              ],
+              "muzzleLocal": [
+                -2.819430846869003e-17,
+                0.06999999999999998,
+                -0.460448
+              ],
+              "axisLocal": [
+                -6.123233995736766e-17,
+                0,
+                -1
+              ]
+            },
+            "cargo": {
+              "phase": "ready",
+              "url": "./models/hero-weighted-cargo.glb",
+              "expectedSHA256": "143129e2a3439cf4b074f57d9b22b9b52b8e008078e1975647a50e88fdf90053",
+              "task": "b4902fc0-bae7-42b6-8452-fc9b6876ca40",
+              "liveInstances": 1,
+              "resident": true,
+              "bytes": 991240,
+              "verifiedSHA256": "143129e2a3439cf4b074f57d9b22b9b52b8e008078e1975647a50e88fdf90053",
+              "meshes": 1,
+              "vertices": 12498,
+              "triangles": 18933,
+              "materials": 1,
+              "textures": 3,
+              "sourceBounds": {
+                "min": [
+                  -0.4521484971046448,
+                  0,
+                  -0.5000000596046448
+                ],
+                "max": [
+                  0.4521484971046448,
+                  0.96966552734375,
+                  0.5000000596046448
+                ]
+              },
+              "normalizedBounds": {
+                "min": [
+                  -0.5,
+                  -0.49999999999999994,
+                  -0.5
+                ],
+                "max": [
+                  0.5,
+                  0.49999999999999994,
+                  0.5
+                ]
+              },
+              "alignment": [
+                1.1058313877006662,
+                0,
+                0,
+                0,
+                0,
+                1.0312834392899854,
+                0,
+                0,
+                0,
+                0,
+                0.9999998807907247,
+                0,
+                0,
+                -0.49999999999999994,
+                0,
+                1
+              ],
+              "fitPolicy": "Per-axis canonical cube for six-face native contact; original GLB unchanged",
+              "lensMaskVertices": 0
+            }
+          },
+          "gun": {
+            "attached": true,
+            "meshes": [
+              {
+                "id": 215,
+                "uuid": "fa4bcbaf-f29a-460b-ab44-3f5d49b93acb",
+                "name": "tripo_node_611cc53a-6c26-4668-b0d4-7120f3c09134",
+                "source": "tripo_node_611cc53a-6c26-4668-b0d4-7120f3c09134",
+                "asset": "projector",
+                "vertices": 11877,
+                "triangles": 18780
+              }
+            ],
+            "muzzleInView": [
+              0.3681312613549729,
+              -0.3252677429205556,
+              -1.21468672
+            ],
+            "muzzleInWorld": [
+              0.3681312613549729,
+              1.1847322570794443,
+              8.78531328
+            ],
+            "axisInView": [
+              -6.113974938725237e-17,
+              3.3660810326873242e-18,
+              -1
+            ],
+            "axisInWorld": [
+              -6.113974938725237e-17,
+              3.3660810326873242e-18,
+              -1
+            ]
+          },
+          "cargo": [
+            {
+              "id": "weighted-cube",
+              "meshes": [
+                {
+                  "id": 159,
+                  "uuid": "fc0b3a57-e8fc-4f88-b5ad-8c338ec7ca2f",
+                  "name": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                  "source": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                  "asset": "cargo",
+                  "vertices": 12498,
+                  "triangles": 18933
+                }
+              ],
+              "portalCopies": [
+                {
+                  "visible": false,
+                  "meshes": [
+                    {
+                      "id": 164,
+                      "uuid": "9dcf6e60-259d-4b70-8faf-995d994c7356",
+                      "name": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                      "source": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                      "asset": "cargo",
+                      "vertices": 12498,
+                      "triangles": 18933
+                    }
+                  ]
+                },
+                {
+                  "visible": false,
+                  "meshes": [
+                    {
+                      "id": 169,
+                      "uuid": "2aa3a051-0c92-4711-a90b-5b4d1ba20242",
+                      "name": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                      "source": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                      "asset": "cargo",
+                      "vertices": 12498,
+                      "triangles": 18933
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "portalRendering": {
+          "drawingBuffer": [
+            1280,
+            800
+          ],
+          "software": false,
+          "maxSamples": 4,
+          "roots": [
+            {
+              "width": 900,
+              "height": 563,
+              "samples": 0
+            },
+            {
+              "width": 900,
+              "height": 563,
+              "samples": 0
+            }
+          ],
+          "children": [],
+          "lastPasses": []
+        },
+        "transportMotion": []
+      },
+      "playing": {
+        "title": "Rift Runner",
+        "version": "rapier-authored-campaign",
+        "mode": "playing",
+        "level": 1,
+        "alternate": false,
+        "world": {
+          "room": "chamber-1",
+          "number": 1,
+          "mission": "Bring the cube back. Put it on the button.",
+          "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+          "player": {
+            "position": [
+              -2.179454838824313e-9,
+              0.8608000874519348,
+              10
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "yaw": 0,
+            "pitch": 0,
+            "grounded": true,
+            "crossings": 0
+          },
+          "portals": [
+            null,
+            null
+          ],
+          "crates": [
+            {
+              "id": "weighted-cube",
+              "position": [
+                2.9999873638153076,
+                3.3499224185943604,
+                -8
+              ],
+              "velocity": [
+                -0.00008270229591289535,
+                -0.000011582015758904163,
+                -0.00007138828368624672
+              ],
+              "rotation": [
+                0.000003388980076124426,
+                2.7127800873716357e-12,
+                -0.0000043171621655346826,
+                1
+              ],
+              "angularVelocity": [
+                -0.00012907476047985256,
+                2.4439031527656585e-12,
+                0.00014953124627936631
+              ],
+              "held": false,
+              "crossings": 0
+            }
+          ],
+          "pads": [
+            {
+              "id": "exit-button",
+              "position": [
+                2,
+                0.14,
+                6
+              ],
+              "pressed": false,
+              "crate": null
+            }
+          ],
+          "devices": [
+            {
+              "id": "exit-door",
+              "kind": "shutter",
+              "label": "EXIT",
+              "position": [
+                -8.12,
+                1.5,
+                11
+              ],
+              "size": [
+                0.3,
+                3,
+                2.6
+              ],
+              "active": false,
+              "progress": 0,
+              "choice": 0,
+              "angle": 0,
+              "powered": null,
+              "blocked": false
+            }
+          ],
+          "panels": [
+            {
+              "id": "near-wall",
+              "position": [
+                -7.985,
+                3.5,
+                -1.15
+              ],
+              "normal": [
+                1,
+                0,
+                0
+              ],
+              "width": 21.7,
+              "height": 7
+            },
+            {
+              "id": "far-wall",
+              "position": [
+                0,
+                3.5,
+                -11.985
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ],
+              "width": 16,
+              "height": 7
+            },
+            {
+              "id": "east-wall",
+              "position": [
+                7.985,
+                3.5,
+                1
+              ],
+              "normal": [
+                -1,
+                0,
+                0
+              ],
+              "width": 26,
+              "height": 7
+            },
+            {
+              "id": "south-wall",
+              "position": [
+                0,
+                3.5,
+                13.985
+              ],
+              "normal": [
+                0,
+                0,
+                -1
+              ],
+              "width": 16,
+              "height": 7
+            }
+          ],
+          "exits": [
+            {
+              "id": "next-chamber",
+              "label": "EXIT",
+              "position": [
+                -10,
+                1.5,
+                11
+              ],
+              "size": [
+                3.960000000000001,
+                3,
+                2.960000000000001
+              ]
+            }
+          ],
+          "result": null,
+          "held": null,
+          "holdSpaceTransform": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "launchUsed": false,
+          "respawns": 0,
+          "beams": {},
+          "signals": {
+            "exit-button": false,
+            "closed:exit-door": true,
+            "clear:exit-door": false,
+            "safety:exit-door": false,
+            "door-safety": false,
+            "moving:exit-door": false
+          },
+          "journal": null,
+          "events": [
+            {
+              "type": "land",
+              "time": 8
+            }
+          ]
+        },
+        "progress": {
+          "version": 2,
+          "highestUnlocked": 1,
+          "resumeLevel": 1,
+          "records": {},
+          "updatedAt": 1793197582314,
+          "generation": "legacy",
+          "completed": [],
+          "resume": 1,
+          "registered": 35
+        },
+        "saveDiagnostics": {
+          "key": "rift-runner-rapier-campaign-v1",
+          "journalKey": "rift-runner-rapier-campaign-v1-journal",
+          "generation": "legacy",
+          "storage": "valid",
+          "journal": "valid",
+          "recovery": "fresh",
+          "primaryNeedsRepair": false,
+          "legacyImportEligible": false,
+          "preservedUnreadableKeys": [],
+          "lastWrite": "written",
+          "warning": null,
+          "origin": "http://localhost:4261"
+        },
+        "pointerLocked": false,
+        "controls": {
+          "unlocked": true,
+          "sensitivity": 0.0022
+        },
+        "audio": {
+          "context": "running",
+          "paused": false,
+          "loopCount": 0,
+          "activeSfx": 0,
+          "cuesPlayed": 0,
+          "energy": false,
+          "chapter": 1,
+          "intensity": 0,
+          "environment": "chamber",
+          "airSpeed": 0,
+          "airActive": false,
+          "recentCues": [],
+          "paired": false,
+          "bridge": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 0,
+          "loadErrors": [],
+          "timeline": 0.256
+        },
+        "assets": {
+          "state": "not-requested",
+          "room": 1,
+          "url": "./models/owned-optical-projector.glb",
+          "fallback": true,
+          "meshIDs": [],
+          "lateDiscards": 0,
+          "heroes": {
+            "ready": true,
+            "assets": {
+              "projector": {
+                "phase": "ready",
+                "url": "./models/hero-projector.glb",
+                "expectedSHA256": "2215cbd530dd2e7b84b16dbc54efa69b9a57b38d92e19b26ef689287cfbde087",
+                "task": "5c64d549-c131-4da2-8688-38d6a22ce0a6",
+                "liveInstances": 1,
+                "resident": true,
+                "bytes": 1049404,
+                "verifiedSHA256": "2215cbd530dd2e7b84b16dbc54efa69b9a57b38d92e19b26ef689287cfbde087",
+                "meshes": 1,
+                "vertices": 11877,
+                "triangles": 18780,
+                "materials": 1,
+                "textures": 3,
+                "sourceBounds": {
+                  "min": [
+                    -0.5000000596046448,
+                    0,
+                    -0.1503143459558487
+                  ],
+                  "max": [
+                    0.5000000596046448,
+                    0.486053466796875,
+                    0.1503143459558487
+                  ]
+                },
+                "normalizedBounds": {
+                  "min": [
+                    -0.15031434595584872,
+                    -0.22,
+                    -0.6400000596046448
+                  ],
+                  "max": [
+                    0.15031434595584872,
+                    0.266053466796875,
+                    0.36000005960464476
+                  ]
+                },
+                "alignment": [
+                  6.123233995736766e-17,
+                  0,
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                  -1,
+                  0,
+                  6.123233995736766e-17,
+                  0,
+                  -8.572527594031473e-18,
+                  -0.22,
+                  -0.14,
+                  1
+                ],
+                "fitPolicy": "Rigid rotation/translation; uniform view scale",
+                "lensMaskVertices": 137,
+                "muzzleSource": [
+                  -0.320448,
+                  0.29,
+                  0
+                ],
+                "axisSource": [
+                  -1,
+                  0,
+                  0
+                ],
+                "muzzleLocal": [
+                  -2.819430846869003e-17,
+                  0.06999999999999998,
+                  -0.460448
+                ],
+                "axisLocal": [
+                  -6.123233995736766e-17,
+                  0,
+                  -1
+                ]
+              },
+              "cargo": {
+                "phase": "ready",
+                "url": "./models/hero-weighted-cargo.glb",
+                "expectedSHA256": "143129e2a3439cf4b074f57d9b22b9b52b8e008078e1975647a50e88fdf90053",
+                "task": "b4902fc0-bae7-42b6-8452-fc9b6876ca40",
+                "liveInstances": 1,
+                "resident": true,
+                "bytes": 991240,
+                "verifiedSHA256": "143129e2a3439cf4b074f57d9b22b9b52b8e008078e1975647a50e88fdf90053",
+                "meshes": 1,
+                "vertices": 12498,
+                "triangles": 18933,
+                "materials": 1,
+                "textures": 3,
+                "sourceBounds": {
+                  "min": [
+                    -0.4521484971046448,
+                    0,
+                    -0.5000000596046448
+                  ],
+                  "max": [
+                    0.4521484971046448,
+                    0.96966552734375,
+                    0.5000000596046448
+                  ]
+                },
+                "normalizedBounds": {
+                  "min": [
+                    -0.5,
+                    -0.49999999999999994,
+                    -0.5
+                  ],
+                  "max": [
+                    0.5,
+                    0.49999999999999994,
+                    0.5
+                  ]
+                },
+                "alignment": [
+                  1.1058313877006662,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1.0312834392899854,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0.9999998807907247,
+                  0,
+                  0,
+                  -0.49999999999999994,
+                  0,
+                  1
+                ],
+                "fitPolicy": "Per-axis canonical cube for six-face native contact; original GLB unchanged",
+                "lensMaskVertices": 0
+              }
+            },
+            "gun": {
+              "attached": true,
+              "meshes": [
+                {
+                  "id": 373,
+                  "uuid": "b631b010-72c1-43cc-b02e-baa9faa30493",
+                  "name": "tripo_node_611cc53a-6c26-4668-b0d4-7120f3c09134",
+                  "source": "tripo_node_611cc53a-6c26-4668-b0d4-7120f3c09134",
+                  "asset": "projector",
+                  "vertices": 11877,
+                  "triangles": 18780
+                }
+              ],
+              "muzzleInView": [
+                0.3681174954351795,
+                -0.32526698715515595,
+                -1.21468672
+              ],
+              "muzzleInWorld": [
+                0.3681174932557247,
+                1.1855331002967788,
+                8.78531328
+              ],
+              "axisInView": [
+                -6.114078236233899e-17,
+                3.3472658657092406e-18,
+                -1
+              ],
+              "axisInWorld": [
+                -6.114078236233899e-17,
+                3.3472658657092406e-18,
+                -1
+              ]
+            },
+            "cargo": [
+              {
+                "id": "weighted-cube",
+                "meshes": [
+                  {
+                    "id": 317,
+                    "uuid": "3261716f-e847-4c94-b133-26dbf4e33f4c",
+                    "name": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                    "source": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                    "asset": "cargo",
+                    "vertices": 12498,
+                    "triangles": 18933
+                  }
+                ],
+                "portalCopies": [
+                  {
+                    "visible": false,
+                    "meshes": [
+                      {
+                        "id": 322,
+                        "uuid": "706a83c0-df78-42e1-8c76-2d2d8e1415fb",
+                        "name": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                        "source": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                        "asset": "cargo",
+                        "vertices": 12498,
+                        "triangles": 18933
+                      }
+                    ]
+                  },
+                  {
+                    "visible": false,
+                    "meshes": [
+                      {
+                        "id": 327,
+                        "uuid": "78f07ae0-16db-41b5-ae29-009876092f67",
+                        "name": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                        "source": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                        "asset": "cargo",
+                        "vertices": 12498,
+                        "triangles": 18933
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "heroAssets": {
+          "ready": true,
+          "assets": {
+            "projector": {
+              "phase": "ready",
+              "url": "./models/hero-projector.glb",
+              "expectedSHA256": "2215cbd530dd2e7b84b16dbc54efa69b9a57b38d92e19b26ef689287cfbde087",
+              "task": "5c64d549-c131-4da2-8688-38d6a22ce0a6",
+              "liveInstances": 1,
+              "resident": true,
+              "bytes": 1049404,
+              "verifiedSHA256": "2215cbd530dd2e7b84b16dbc54efa69b9a57b38d92e19b26ef689287cfbde087",
+              "meshes": 1,
+              "vertices": 11877,
+              "triangles": 18780,
+              "materials": 1,
+              "textures": 3,
+              "sourceBounds": {
+                "min": [
+                  -0.5000000596046448,
+                  0,
+                  -0.1503143459558487
+                ],
+                "max": [
+                  0.5000000596046448,
+                  0.486053466796875,
+                  0.1503143459558487
+                ]
+              },
+              "normalizedBounds": {
+                "min": [
+                  -0.15031434595584872,
+                  -0.22,
+                  -0.6400000596046448
+                ],
+                "max": [
+                  0.15031434595584872,
+                  0.266053466796875,
+                  0.36000005960464476
+                ]
+              },
+              "alignment": [
+                6.123233995736766e-17,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                -1,
+                0,
+                6.123233995736766e-17,
+                0,
+                -8.572527594031473e-18,
+                -0.22,
+                -0.14,
+                1
+              ],
+              "fitPolicy": "Rigid rotation/translation; uniform view scale",
+              "lensMaskVertices": 137,
+              "muzzleSource": [
+                -0.320448,
+                0.29,
+                0
+              ],
+              "axisSource": [
+                -1,
+                0,
+                0
+              ],
+              "muzzleLocal": [
+                -2.819430846869003e-17,
+                0.06999999999999998,
+                -0.460448
+              ],
+              "axisLocal": [
+                -6.123233995736766e-17,
+                0,
+                -1
+              ]
+            },
+            "cargo": {
+              "phase": "ready",
+              "url": "./models/hero-weighted-cargo.glb",
+              "expectedSHA256": "143129e2a3439cf4b074f57d9b22b9b52b8e008078e1975647a50e88fdf90053",
+              "task": "b4902fc0-bae7-42b6-8452-fc9b6876ca40",
+              "liveInstances": 1,
+              "resident": true,
+              "bytes": 991240,
+              "verifiedSHA256": "143129e2a3439cf4b074f57d9b22b9b52b8e008078e1975647a50e88fdf90053",
+              "meshes": 1,
+              "vertices": 12498,
+              "triangles": 18933,
+              "materials": 1,
+              "textures": 3,
+              "sourceBounds": {
+                "min": [
+                  -0.4521484971046448,
+                  0,
+                  -0.5000000596046448
+                ],
+                "max": [
+                  0.4521484971046448,
+                  0.96966552734375,
+                  0.5000000596046448
+                ]
+              },
+              "normalizedBounds": {
+                "min": [
+                  -0.5,
+                  -0.49999999999999994,
+                  -0.5
+                ],
+                "max": [
+                  0.5,
+                  0.49999999999999994,
+                  0.5
+                ]
+              },
+              "alignment": [
+                1.1058313877006662,
+                0,
+                0,
+                0,
+                0,
+                1.0312834392899854,
+                0,
+                0,
+                0,
+                0,
+                0.9999998807907247,
+                0,
+                0,
+                -0.49999999999999994,
+                0,
+                1
+              ],
+              "fitPolicy": "Per-axis canonical cube for six-face native contact; original GLB unchanged",
+              "lensMaskVertices": 0
+            }
+          }
+        },
+        "heroInstances": {
+          "ready": true,
+          "assets": {
+            "projector": {
+              "phase": "ready",
+              "url": "./models/hero-projector.glb",
+              "expectedSHA256": "2215cbd530dd2e7b84b16dbc54efa69b9a57b38d92e19b26ef689287cfbde087",
+              "task": "5c64d549-c131-4da2-8688-38d6a22ce0a6",
+              "liveInstances": 1,
+              "resident": true,
+              "bytes": 1049404,
+              "verifiedSHA256": "2215cbd530dd2e7b84b16dbc54efa69b9a57b38d92e19b26ef689287cfbde087",
+              "meshes": 1,
+              "vertices": 11877,
+              "triangles": 18780,
+              "materials": 1,
+              "textures": 3,
+              "sourceBounds": {
+                "min": [
+                  -0.5000000596046448,
+                  0,
+                  -0.1503143459558487
+                ],
+                "max": [
+                  0.5000000596046448,
+                  0.486053466796875,
+                  0.1503143459558487
+                ]
+              },
+              "normalizedBounds": {
+                "min": [
+                  -0.15031434595584872,
+                  -0.22,
+                  -0.6400000596046448
+                ],
+                "max": [
+                  0.15031434595584872,
+                  0.266053466796875,
+                  0.36000005960464476
+                ]
+              },
+              "alignment": [
+                6.123233995736766e-17,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                -1,
+                0,
+                6.123233995736766e-17,
+                0,
+                -8.572527594031473e-18,
+                -0.22,
+                -0.14,
+                1
+              ],
+              "fitPolicy": "Rigid rotation/translation; uniform view scale",
+              "lensMaskVertices": 137,
+              "muzzleSource": [
+                -0.320448,
+                0.29,
+                0
+              ],
+              "axisSource": [
+                -1,
+                0,
+                0
+              ],
+              "muzzleLocal": [
+                -2.819430846869003e-17,
+                0.06999999999999998,
+                -0.460448
+              ],
+              "axisLocal": [
+                -6.123233995736766e-17,
+                0,
+                -1
+              ]
+            },
+            "cargo": {
+              "phase": "ready",
+              "url": "./models/hero-weighted-cargo.glb",
+              "expectedSHA256": "143129e2a3439cf4b074f57d9b22b9b52b8e008078e1975647a50e88fdf90053",
+              "task": "b4902fc0-bae7-42b6-8452-fc9b6876ca40",
+              "liveInstances": 1,
+              "resident": true,
+              "bytes": 991240,
+              "verifiedSHA256": "143129e2a3439cf4b074f57d9b22b9b52b8e008078e1975647a50e88fdf90053",
+              "meshes": 1,
+              "vertices": 12498,
+              "triangles": 18933,
+              "materials": 1,
+              "textures": 3,
+              "sourceBounds": {
+                "min": [
+                  -0.4521484971046448,
+                  0,
+                  -0.5000000596046448
+                ],
+                "max": [
+                  0.4521484971046448,
+                  0.96966552734375,
+                  0.5000000596046448
+                ]
+              },
+              "normalizedBounds": {
+                "min": [
+                  -0.5,
+                  -0.49999999999999994,
+                  -0.5
+                ],
+                "max": [
+                  0.5,
+                  0.49999999999999994,
+                  0.5
+                ]
+              },
+              "alignment": [
+                1.1058313877006662,
+                0,
+                0,
+                0,
+                0,
+                1.0312834392899854,
+                0,
+                0,
+                0,
+                0,
+                0.9999998807907247,
+                0,
+                0,
+                -0.49999999999999994,
+                0,
+                1
+              ],
+              "fitPolicy": "Per-axis canonical cube for six-face native contact; original GLB unchanged",
+              "lensMaskVertices": 0
+            }
+          },
+          "gun": {
+            "attached": true,
+            "meshes": [
+              {
+                "id": 373,
+                "uuid": "b631b010-72c1-43cc-b02e-baa9faa30493",
+                "name": "tripo_node_611cc53a-6c26-4668-b0d4-7120f3c09134",
+                "source": "tripo_node_611cc53a-6c26-4668-b0d4-7120f3c09134",
+                "asset": "projector",
+                "vertices": 11877,
+                "triangles": 18780
+              }
+            ],
+            "muzzleInView": [
+              0.3681174954351795,
+              -0.32526698715515595,
+              -1.21468672
+            ],
+            "muzzleInWorld": [
+              0.3681174932557247,
+              1.1855331002967788,
+              8.78531328
+            ],
+            "axisInView": [
+              -6.114078236233899e-17,
+              3.3472658657092406e-18,
+              -1
+            ],
+            "axisInWorld": [
+              -6.114078236233899e-17,
+              3.3472658657092406e-18,
+              -1
+            ]
+          },
+          "cargo": [
+            {
+              "id": "weighted-cube",
+              "meshes": [
+                {
+                  "id": 317,
+                  "uuid": "3261716f-e847-4c94-b133-26dbf4e33f4c",
+                  "name": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                  "source": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                  "asset": "cargo",
+                  "vertices": 12498,
+                  "triangles": 18933
+                }
+              ],
+              "portalCopies": [
+                {
+                  "visible": false,
+                  "meshes": [
+                    {
+                      "id": 322,
+                      "uuid": "706a83c0-df78-42e1-8c76-2d2d8e1415fb",
+                      "name": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                      "source": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                      "asset": "cargo",
+                      "vertices": 12498,
+                      "triangles": 18933
+                    }
+                  ]
+                },
+                {
+                  "visible": false,
+                  "meshes": [
+                    {
+                      "id": 327,
+                      "uuid": "78f07ae0-16db-41b5-ae29-009876092f67",
+                      "name": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                      "source": "tripo_node_21697f99-82d3-4151-a0f1-718ef8422f24",
+                      "asset": "cargo",
+                      "vertices": 12498,
+                      "triangles": 18933
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "portalRendering": {
+          "drawingBuffer": [
+            1280,
+            800
+          ],
+          "software": false,
+          "maxSamples": 4,
+          "roots": [
+            {
+              "width": 900,
+              "height": 506,
+              "samples": 0
+            },
+            {
+              "width": 900,
+              "height": 506,
+              "samples": 0
+            }
+          ],
+          "children": [],
+          "lastPasses": []
+        },
+        "transportMotion": []
+      },
+      "scripts": [
+        "http://localhost:4261/hero-repair/assets/main-D2DMbgrH.js"
+      ],
+      "scriptHashes": [
+        {
+          "url": "http://localhost:4261/hero-repair/assets/main-D2DMbgrH.js",
+          "sha256": "48cb251e7280e8ce8d6589c87e161e20f00da08d10259ac4369cc71f5d689761"
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "passed": true
+}

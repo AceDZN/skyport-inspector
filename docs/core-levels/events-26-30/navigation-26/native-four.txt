@@ -1,0 +1,32 @@
+✔ native E26 base and contrast retain identical physical fixture and initial inventory (128.755875ms)
+✔ native E26 actual test retrieval then past-open A manual route (244.312917ms)
+✔ native E26 identical test then remained-closed B route (154.013958ms)
+✖ native E26 wrong B is recoverable through the same powered manual console (276.793459ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 3
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1322.036625
+
+✖ failing tests:
+
+test at tests/core-events-routes.test.ts:26:1
+✖ native E26 wrong B is recoverable through the same powered manual console (276.793459ms)
+  AssertionError [ERR_ASSERTION]: Native WASD blocked toward 8.3,2 {"world":{"room":"chamber-26","number":26,"mission":"Run the test and retrieve the cube. Switch the test off, then use the gate that opened during the test.","physics":"Rapier3D 0.21 · capsule KCC + dynamic rigid cubes","player":{"position":[8.299976348876953,0.864959180355072,-0.49482569098472595],"velocity":[0.00006186184844023098,0,4.799999999035463],"yaw":-3.141582790863273,"pitch":0,"grounded":true,"crossings":1},"portals":[{"surface":"test-source","position":[0.55,1.55,13.959999999999999],"normal":[0,0,-1]},{"surface":"test-waiting","position":[0.55,1.55,4.69],"normal":[0,0,1]}],"crates":[{"id":"test-cube","position":[-4.954067707061768,0.6898993849754333,6.027327537536621],"velocity":[0,0,0],"rotation":[0.0000013845670991941006,0.0000028172532893222524,-6.941410788385838e-7,1],"angularVelocity":[0,0,0],"held":false,"crossings":0}],"pads":[{"id":"manual-power","position":[-5,0.14,6],"pressed":true,"crate":"test-cube"}],"devices":[{"id":"gate-a","kind":"shutter","label":"GATE A","position":[-5,1.5,0],"size":[3.2,3,0.3],"active":false,"progress":0,"choice":0,"angle":0,"powered":null,"blocked":false},{"id":"a-exit-leaf","kind":"shutter","label":"A","position":[-5,1.5,-8.12],"size":[3.2,3,0.3],"active":false,"progress":0,"choice":0,"angle":0,"powered":null,"blocked":false},{"id":"gate-b","kind":"shutter","label":"GATE B","position":[5,5,0],"size":[3.2,3,0.3],"active":true,"progress":1,"choice":0,"angle":0,"powered":null,"blocked":false},{"id":"b-exit-leaf","kind":"shutter","label":"B","position":[5,5,-8.12],"size":[3.2,3,0.3],"active":true,"progress":1,"choice":0,"angle":0,"powered":null,"blocked":false},{"id":"test-power","kind":"switch","label":"TEST","position":[2.5,1.25,6],"size":[0.4,0.7,0.3],"active":false,"progress":0,"choice":0,"angle":0,"powered":null,"blocked":false},{"id":"test-clock","kind":"timer","label":"TEST PULSE","position":[-1.2,1.3,3],"size":[0.8,1.2,0.35],"active":false,"progress":0.914880952380946,"choice":0,"angle":0,"powered":null,"blocked":false},{"id":"test-drive","kind":"receiver","label":"TEST SUPPLY","position":[9,1.2,2],"size":[0.4,0.7,0.3],"active":false,"progress":0,"choice":0,"angle":0,"powered":null,"blocked":false},{"id":"manual-drive-a","kind":"receiver","label":"MANUAL A","position":[9,1.2,3.2],"size":[0.4,0.7,0.3],"active":false,"progress":0,"choice":0,"angle":0,"powered":null,"blocked":false},{"id":"manual-drive-b","kind":"receiver","label":"MANUAL B","position":[9,1.2,4.4],"size":[0.4,0.7,0.3],"active":true,"progress":0,"choice":0,"angle":0,"powered":null,"blocked":false},{"id":"manual-cover","kind":"shutter","label":"MANUAL ROUTES","position":[6,4,8.65],"size":[3.2,1.2,0.2],"active":true,"progress":1,"choice":0,"angle":0,"powered":null,"blocked":false},{"id":"manual-a","kind":"switch","label":"GATE A","position":[5.2,1.35,8.15],"size":[0.4,0.6,0.25],"active":false,"progress":0,"choice":0,"angle":0,"powered":null,"blocked":false},{"id":"manual-b","kind":"switch","label":"GATE B","position":[6.8,1.35,8.15],"size":[0.4,0.6,0.25],"active":true,"progress":0,"choice":0,"angle":0,"powered":null,"blocked":false}],"panels":[{"id":"test-source","position":[0,1.75,13.985],"normal":[0,0,-1],"width":5,"height":3.5},{"id":"test-waiting","position":[0,1.75,4.665],"normal":[0,0,1],"width":3.5,"height":3.5}],"exits":[{"id":"a-exit","label":"EXIT","position":[-5,1.5,-10.39],"size":[3.16,3,3.58]},{"id":"b-exit","label":"EXIT","position":[5,1.5,-10.39],"size":[3.16,3,3.58]}],"result":null,"held":null,"holdSpaceTransform":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],"launchUsed":false,"respawns":0,"beams":{},"signals":{"manual-power":true,"safety:gate-a":false,"door-safety":false,"moving:gate-a":false,"safety:a-exit-leaf":false,"moving:a-exit-leaf":false,"safety:gate-b":false,"moving:gate-b":false,"safety:b-exit-leaf":false,"moving:b-exit-leaf":false,"moving:test-power":false,"moving:test-clock":false,"moving:test-drive":false,"moving:manual-drive-a":false,"moving:manual-drive-b":false,"safety:manual-cover":false,"moving:manual-cover":false,"moving:manual-a":false,"moving:manual-b":false,"test-clock":false,"test-drive":false,"manual-drive-a":false,"manual-drive-b":true},"events":[{"type":"footstep","time":38458},{"type":"footstep","time":38883},{"type":"footstep","time":39308},{"type":"footstep","time":39733},{"type":"footstep","time":40158},{"type":"footstep","time":40583},{"type":"footstep","time":41008},{"type":"footstep","time":41433},{"type":"footstep","time":41858},{"type":"footstep","time":42283},{"type":"footstep","time":42708},{"type":"footstep","time":43133},{"type":"footstep","time":43558},{"type":"footstep","time":43983},{"type":"footstep","time":44408},{"type":"footstep","time":44833}]},"contacts":[{"id":"test-floor","normal":{"x":0,"y":1,"z":0},"witness":{"x":8.299043655395508,"y":0,"z":-0.4928009510040283}},{"id":"test-east-jamb","normal":{"x":0.0000020238305751263397,"y":0.000008095322300505359,"z":-1},"witness":{"x":8.299962997436523,"y":1.2559826374053955,"z":-0.20000000298023224}}]}
+      at EventRoute.walk (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/helpers/event-route.ts:28:288)
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-events-routes.test.ts:26:297)
+      at route (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/helpers/event-route.ts:44:162)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-events-routes.test.ts:26:86)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'fail',
+    diff: 'simple'
+  }

@@ -1,3 +1,5 @@
+import {observeLeaf,observeDock} from './machine-state';
+import {MachineJournal,type JournalReading} from './machine-journal';
 import RAPIER from '@dimforge/rapier3d-compat';
 import { Vector3, Quaternion, Matrix4, Box3, Ray } from 'three';
 import { V, poseMatrix, portalMatrix, type Body, type Input, type Portal, type Solid } from '../physics';
@@ -8,6 +10,7 @@ import type {CoreLevel} from './level';
 import type { WorldBlueprint } from '../campaign-blueprint';
 import {tracePortalBeam,type BeamResult,type BeamPortal} from './portal-beam';
 import {queryHeldFootprint} from './held-footprint';
+import {alignWallPortalToFloor} from './portal-placement';
 export const initializePhysics = () => RAPIER.init();
 interface RigidCube extends Body {
     rigid: RAPIER.RigidBody;
@@ -34,6 +37,7 @@ export class CoreWorld {
     readonly room: Room;
     readonly number: number;
     readonly level:CoreLevel;
+    readonly journal?:MachineJournal;
     readonly row: {
         number: number;
     };
@@ -99,6 +103,7 @@ export class CoreWorld {
         this.onEvent = onEvent;
         const base=definition??getCoreLevel(number);
         this.level=alternate&&base.contrast?{...base,mission:base.contrast.mission,he:base.contrast.he,expectedExit:base.contrast.expectedExit??base.expectedExit,wrongExitFeedback:base.contrast.wrongExitFeedback??base.wrongExitFeedback}:base;
+        this.journal=this.level.journal?new MachineJournal(this.level.journal):undefined;
         this.blueprint = this.level.blueprint();
         this.yaw=this.level.startYaw??0;
         this.spawn = V(...this.blueprint.spawn);
@@ -137,6 +142,7 @@ export class CoreWorld {
         }
         this.physics.timestep = 1 / 120;
         this.physics.step(this.eventQueue, this.hooks);
+        this.observeJournal();
     }
     private hooks: RAPIER.PhysicsHooks = { filterContactPair: (a, b) => { const ca = this.physics.getCollider(a), cb = this.physics.getCollider(b); if (!ca || !cb)
             return RAPIER.SolverFlags.COMPUTE_IMPULSE; const sa = this.fixed.get(a), sb = this.fixed.get(b), bodyA = this.bodyForCollider(a), bodyB = this.bodyForCollider(b); if ((sa && bodyB && this.apertureIgnores(bodyB, sa)) || (sb && bodyA && this.apertureIgnores(bodyA, sb)))
@@ -182,7 +188,7 @@ export class CoreWorld {
         p.x = Math.max(-mx, Math.min(mx, p.x));
         p.y = Math.max(-my, Math.min(my, p.y));
         p.z = .025;
-        const center = p.applyMatrix4(basis);
+        const center = alignWallPortalToFloor(s,p.applyMatrix4(basis),this.solids);
         if (!s.floor) {
             for (const floor of this.solids.filter(f => f.kind === 'floor')) {
                 const alongX = Math.abs(s.normal.x) > .8, within = alongX ? center.z + .9 > floor.min.z && center.z - .9 < floor.max.z && center.x >= floor.min.x - .06 && center.x <= floor.max.x + .06 : center.x + .9 > floor.min.x && center.x - .9 < floor.max.x && center.z >= floor.min.z - .06 && center.z <= floor.max.z + .06;
@@ -196,6 +202,13 @@ export class CoreWorld {
                     }
                 }
             }
+        }
+        // Floor corrections must still fit the authored white region. Neither
+        // alignment nor a small upward correction enlarges the eligible wall.
+        const finalLocal=center.clone().applyMatrix4(basis.clone().invert());
+        if(Math.abs(finalLocal.x)>mx+.000001||Math.abs(finalLocal.y)>my+.000001){
+            this.event('invalid',{reason:'The whole portal must fit inside the white surface above its floor.'});
+            return false;
         }
         const apertureBox = new Box3(center.clone().sub(V(Math.abs(s.normal.x) > .8 ? .07 : (s.floor ? 1.15 : .9), s.floor ? .07 : 1.55, Math.abs(s.normal.z) > .8 ? .07 : (s.floor ? 1.15 : .9))), center.clone().add(V(Math.abs(s.normal.x) > .8 ? .07 : (s.floor ? 1.15 : .9), s.floor ? .07 : 1.55, Math.abs(s.normal.z) > .8 ? .07 : (s.floor ? 1.15 : .9))));
         if (this.solids.some(w => w.id !== s.solidId && w.kind === 'wall' && apertureBox.intersectsBox(new Box3(w.min, w.max)))) {
@@ -367,24 +380,43 @@ export class CoreWorld {
     respawn() { this.respawns++; this.campaignResult = undefined; this.player.pos.copy(this.spawn); this.player.vel.set(0, 0, 0); this.blockedEntry.clear(); this.character.setTranslation(this.spawn, true); this.character.setNextKinematicTranslation(this.spawn); if (this.heldId) {
         const c = this.crates.find(c => c.id === this.heldId)!;
         this.resetCube(c);
-    } this.heldId = undefined; this.holdMap.identity(); this.yaw = this.level.startYaw??0; this.pitch = 0; this.physics.propagateModifiedBodyPositionsToColliders(); this.event('respawn', { count: this.respawns }); }
+    } this.heldId = undefined; this.holdMap.identity(); this.yaw = this.level.startYaw??0; this.pitch = 0; this.physics.propagateModifiedBodyPositionsToColliders(); this.event('respawn', { count: this.respawns }); this.journal?.reset();this.observeJournal(); }
     private resetCube(c: RigidCube) { c.held = false; c.pos.copy(V(...this.blueprint.cargo.find(x => x.spec.id === c.id)!.position)); c.vel.set(0, 0, 0); c.rigid.setBodyType(RAPIER.RigidBodyType.Dynamic, true); c.rigid.setTranslation(c.pos, true); c.rigid.setRotation(Q, true); c.rigid.setLinvel(V(), true); c.rigid.setAngvel(V(), true); this.physics.propagateModifiedBodyPositionsToColliders(); }
-    private updateOptics(flags:Record<string,boolean>){
+    private updateOptics(flags:Record<string,boolean>,observationOnly=false){
         const optical=this.level.optics;if(!optical)return;
         for(const receiver of optical.receivers)flags[receiver.id]=false;
         const portals:BeamPortal[]=this.portals.filter((p):p is Portal=>!!p).map(p=>({id:String(p.index),linkedTo:this.portals[1-p.index]?String(1-p.index):undefined,center:p.center.toArray() as [number,number,number],normal:p.normal.toArray() as [number,number,number],up:p.up.toArray() as [number,number,number],radii:Math.abs(p.normal.y)>.8?[1.144,1.102]:[.88,1.53]}));
         const flag=(id:string)=>flags[id]??this.machines.devices.find(d=>d.spec.id===id)?.on??false;
         for(const emitter of optical.emitters){
             const c=emitter.circuit,enabled=(!c?.all||c.all.every(flag))&&(!c?.any||c.any.some(flag))&&(!c?.not||c.not.every(id=>!flag(id)));
-            if(!enabled){this.beams.delete(emitter.id);continue;}
+            if(!enabled){if(!observationOnly)this.beams.delete(emitter.id);continue;}
             const result=tracePortalBeam({origin:emitter.position,direction:emitter.direction,maxDistance:emitter.range??80,portals,receivers:optical.receivers.map(r=>({id:r.id,center:r.position,radius:r.radius})),castObstacle:(origin,direction,range)=>{
                 const hit=this.physics.castRay(new RAPIER.Ray(V(...origin),V(...direction)),range,true,undefined,undefined,this.doors.get(emitter.id)?.collider);
                 if(!hit)return undefined;
                 return{id:this.fixed.get(hit.collider.handle)?.id??this.bodyForCollider(hit.collider.handle)?.id??'machine',distance:hit.timeOfImpact};
             }});
-            this.beams.set(emitter.id,result);if(result.receiver)flags[result.receiver]=true;
+            if(!observationOnly)this.beams.set(emitter.id,result);if(result.receiver)flags[result.receiver]=true;
         }
-        for(const receiver of optical.receivers){const previous=this.machines.flags[receiver.id]??false;if(flags[receiver.id]!==previous)this.event(flags[receiver.id]?'receiver-power':'beam-blocked',{id:receiver.id});}
+        if(!observationOnly)for(const receiver of optical.receivers){const previous=this.machines.flags[receiver.id]??false;if(flags[receiver.id]!==previous)this.event(flags[receiver.id]?'receiver-power':'beam-blocked',{id:receiver.id});}
+    }
+    private observeJournal(){
+        if(!this.journal)return;
+        const flags:Record<string,boolean>={},pressure=new Map<string,{pressed:boolean;cargo:boolean}>();
+        // Fresh native overlap observations; this read never writes pad/circuit state.
+        for(const pad of this.pads){let pressed=false,cargo=false;this.physics.intersectionsWithShape(pad.pos.clone().add(V(0,.02,0)),Q,new RAPIER.Cuboid(.85,.03,.85),collider=>{const body=this.bodyForCollider(collider.handle);if(body){pressed=true;cargo||=body!==this.player;}return true;});pressure.set(pad.id,{pressed,cargo});flags[pad.id]=pressed;}
+        // Fresh ray transport, with no beam-map writes or audiovisual events.
+        this.updateOptics(flags,true);
+        const readings:JournalReading[]=this.journal.config.watch.map(watch=>{
+            let state='UNKNOWN',cargo: boolean|undefined;
+            const device=this.machines.devices.find(d=>d.spec.id===watch.id),body=this.doors.get(watch.id)?.rigid;
+            if(watch.kind==='shutter'&&device?.spec.kind==='shutter'&&body){const pose=observeLeaf(device.spec,body.translation(),body.linvel());state=pose.closed?'CLOSED':pose.open?'OPEN':pose.stopped?'PARTLY OPEN':'MOVING';}
+            if(watch.kind==='dock'&&device&&body){const spec=device.spec.stops?device.spec:{...device.spec,stops:[{label:'BASE',position:device.spec.position},{label:device.spec.targetLabel??'UPPER',position:device.spec.target??device.spec.position}]};const stop=observeDock(spec,body.translation(),body.linvel());state=stop?'AT '+stop:Math.hypot(body.linvel().x,body.linvel().y,body.linvel().z)>1e-5?'MOVING':'BETWEEN STOPS';}
+            if(watch.kind==='light'&&this.level.optics?.receivers.some(r=>r.id===watch.id))state=flags[watch.id]?'LIT':'DARK';
+            if(watch.kind==='pressure'&&pressure.has(watch.id)){const reading=pressure.get(watch.id)!;state=reading.pressed?'PRESSED':'EMPTY';cargo=reading.cargo;}
+            return {...watch,state,cargo};
+        });
+        const controls=Object.fromEntries((this.journal.config.tests??[]).map(test=>[test.control,this.machines.devices.find(d=>d.spec.id===test.control)?.on===true]));
+        this.journal.observe(this.time,readings,controls);
     }
     private updateMachinery(dt:number){
         const flags: Record<string, boolean> = {};
@@ -401,6 +433,10 @@ export class CoreWorld {
         for (const d of this.machines.devices) {
             const size = V(...d.spec.size), p = V(...d.spec.position);
             if(d.spec.kind==='shutter'){
+                const native=this.doors.get(d.spec.id)!.rigid;
+                const observed=observeLeaf(d.spec,native.translation(),native.linvel());
+                flags['closed:'+d.spec.id]=observed.closed;
+                flags['clear:'+d.spec.id]=observed.clear;
                 const occupants=this.doorOccupants.get(d.spec.id)??new Set<string>();
                 for(const body of [this.player,...this.crates]){
                     const halfX=this.normalSupport(body,V(1,0,0)),halfY=this.normalSupport(body,V(0,1,0)),halfZ=this.normalSupport(body,V(0,0,1));
@@ -531,6 +567,7 @@ export class CoreWorld {
             this.respawn();
             return;
         }
+        this.observeJournal();
         const exit = this.blueprint.exits.find(e => Math.abs(this.player.pos.x - e.position[0]) < e.size[0] / 2 && Math.abs(this.player.pos.y - e.position[1]) < e.size[1] / 2 && Math.abs(this.player.pos.z - e.position[2]) < e.size[2] / 2);
         if(!exit)this.lastWrongExit=undefined;
         if(exit&&this.level.expectedExit&&exit.id!==this.level.expectedExit){if(this.lastWrongExit!==exit.id){this.lastWrongExit=exit.id;this.event('wrong-exit',{exit:exit.id,expected:this.level.expectedExit,reason:this.level.wrongExitFeedback??'This is a different destination. Check the requested door.'});}return;}
@@ -539,6 +576,6 @@ export class CoreWorld {
             this.event('complete', { chamber: this.number });
         }
     }
-    snapshot() { return { room: this.room.id, number: this.number, mission: this.room.mission, physics: 'Rapier3D 0.21 · capsule KCC + dynamic rigid cubes', player: { position: this.player.pos.toArray(), velocity: this.player.vel.toArray(), yaw: this.yaw, pitch: this.pitch, grounded: this.player.grounded, crossings: this.player.crossings }, portals: this.portals.map(p => p ? { surface: p.surfaceId, position: p.center.toArray(), normal: p.normal.toArray() } : null), crates: this.crates.map(c => ({ id: c.id, position: c.pos.toArray(), velocity: c.vel.toArray(), rotation: c.rotation.toArray(), angularVelocity: c.angularVelocity.toArray(), held: !!c.held, crossings: c.crossings })), pads: this.pads.map(p => ({ id: p.id, position: p.pos.toArray(), pressed: p.pressed, crate: p.crateId ?? null })), devices: this.machines.snapshot(), panels: this.surfaces.map(s => ({ id: s.id, position: s.center.toArray(), normal: s.normal.toArray(), width: s.width, height: s.height })), exits: this.blueprint.exits, result: this.campaignResult ?? null, held: this.heldId ?? null, holdSpaceTransform: this.holdMap.toArray(), launchUsed: this.launchUsed, respawns: this.respawns, beams:Object.fromEntries(this.beams),signals:{...this.machines.flags},events: this.events.slice(-16) }; }
+    snapshot() { return { room: this.room.id, number: this.number, mission: this.room.mission, physics: 'Rapier3D 0.21 · capsule KCC + dynamic rigid cubes', player: { position: this.player.pos.toArray(), velocity: this.player.vel.toArray(), yaw: this.yaw, pitch: this.pitch, grounded: this.player.grounded, crossings: this.player.crossings }, portals: this.portals.map(p => p ? { surface: p.surfaceId, position: p.center.toArray(), normal: p.normal.toArray() } : null), crates: this.crates.map(c => ({ id: c.id, position: c.pos.toArray(), velocity: c.vel.toArray(), rotation: c.rotation.toArray(), angularVelocity: c.angularVelocity.toArray(), held: !!c.held, crossings: c.crossings })), pads: this.pads.map(p => ({ id: p.id, position: p.pos.toArray(), pressed: p.pressed, crate: p.crateId ?? null })), devices: this.machines.snapshot(), panels: this.surfaces.map(s => ({ id: s.id, position: s.center.toArray(), normal: s.normal.toArray(), width: s.width, height: s.height })), exits: this.blueprint.exits, result: this.campaignResult ?? null, held: this.heldId ?? null, holdSpaceTransform: this.holdMap.toArray(), launchUsed: this.launchUsed, respawns: this.respawns, beams:Object.fromEntries(this.beams),signals:{...this.machines.flags},journal:this.journal?.snapshot()??null,events: this.events.slice(-16) }; }
     dispose() { this.eventQueue.free(); this.physics.free(); }
 }

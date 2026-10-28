@@ -1,4 +1,5 @@
 import type {WorldBlueprint} from '../campaign-blueprint';
+import type {JournalConfig} from './machine-journal';
 import type {Circuit,XYZ} from '../systems';
 export interface OpticalFixture {
  emitters:{id:string;position:XYZ;direction:XYZ;range?:number;circuit?:Circuit}[];
@@ -14,6 +15,8 @@ export interface CoreLevel {
  expectedExit?:string;
  blueprint:()=>WorldBlueprint;
  optics?:OpticalFixture;
+ /** Optional read-only current state/history panel; never a goal or circuit input. */
+ journal?:JournalConfig;
  sources:{url:string;practice:string}[];
  /** A documented language change with a different physically meaningful route/action. */
  contrast?:{mission:string;he:string;physicalChange:string;expectedExit?:string;wrongExitFeedback?:string};

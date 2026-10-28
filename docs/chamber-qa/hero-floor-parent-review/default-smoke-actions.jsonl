@@ -1,0 +1,6 @@
+{"action": "assert", "path": "heroAssets.ready", "equals": true}
+{"action": "assert", "path": "progress.completed", "equals": []}
+{"action": "click", "selector": "[data-action=start]"}
+{"action": "assert", "path": "heroInstances.gun.attached", "equals": true}
+{"action": "capture", "name": "default-preview-real-tripo-new-player"}
+{"action": "close"}

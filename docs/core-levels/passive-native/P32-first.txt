@@ -1,0 +1,34 @@
+✔ native P32 base and contrast have identical real cargo platform supplies geometry and wiring (155.888709ms)
+✔ native P32 actually carried cube is collected delivered through portal and powers upper freight (516.613125ms)
+✔ native P32 source-cube contrast physically removes carrier power and uses lower SERVICE (119.597583ms)
+✖ native P32 midrail source loss wrong service route and pressure restoration recover to freight (85.166959ms)
+✔ native P32 swapped equivalent physical cargo allocation is accepted without identity gates (375.800916ms)
+✔ native P32 genuine catch and broad low-end stair recovery need neither jump nor reset (111.129875ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 5
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1810.653959
+
+✖ failing tests:
+
+test at tests/core-passive-routes.test.ts:57:1
+✖ native P32 midrail source loss wrong service route and pressure restoration recover to freight (85.166959ms)
+  AssertionError [ERR_ASSERTION]: Removing source failed to remove pressure; {"world":{"room":"chamber-32","number":32,"mission":"One cube is carried by the platform. Put that cube on RELEASE and keep POWER pressed.","physics":"Rapier3D 0.21 · capsule KCC + dynamic rigid cubes","player":{"position":[-10.241747856140137,0.8649566769599915,7.873263359069824],"velocity":[1.3149532464674326e-50,0,-2.8607078594288035e-50],"yaw":-1.6434318268771417,"pitch":-0.44135564768045715,"grounded":true,"crossings":1},"portals":[{"surface":"freight-source","position":[7,1.55,13.959999999999999],"normal":[0,0,-1]},{"surface":"freight-return","position":[-11.959999999999999,1.55,11],"normal":[1,0,0]}],"crates":[{"id":"power-cube","position":[-8.618528366088867,0.7020246386528015,7.991374969482422],"velocity":[-0.00011432658357080072,0.011989999562501907,-0.00005716329178540036],"rotation":[-2.5586416541045764e-7,-5.569118950721208e-12,-5.640309552745748e-8,1],"angularVelocity":[0,0,0],"held":true,"crossings":0},{"id":"carried-cube","position":[3.9999423027038574,0.5495483875274658,-4.998510837554932],"velocity":[-4.7359606014651945e-7,-0.000001807365833883523,1.5982991456985474],"rotation":[-0.000004884934696747223,4.235564676768888e-10,8.982588894923538e-8,1],"angularVelocity":[-0.00018217824981547892,8.832732323327264e-10,8.5658774651165e-7],"held":false,"crossings":0}],"pads":[{"id":"carrier-power","position":[-8.5,0.14,8],"pressed":true,"crate":"power-cube"},{"id":"release-pressure","position":[-5,0.14,8],"pressed":false,"crate":null},{"id":"service-pressure","position":[7,0.14,9],"pressed":false,"crate":null}],"devices":[{"id":"freight-service-door","kind":"shutter","label":"LOWER SERVICE","position":[12.12,1.5,4],"size":[0.3,3,2.8],"active":false,"progress":0,"choice":0,"angle":0,"powered":null,"blocked":false},{"id":"freight-carrier","kind":"moving-platform","label":"CARGO PLATFORM","position":[4,-0.2,-4.879999999999704],"size":[4,0.4,4],"active":true,"progress":0.390000000000037,"choice":"FAR","angle":0,"powered":null,"blocked":false},{"id":"release-lift","kind":"lift","label":"FREIGHT GALLERY","position":[-7.5,-0.2,12],"size":[4,0.4,4],"active":false,"progress":0,"choice":0,"angle":0,"powered":null,"blocked":false},{"id":"freight-upper-door","kind":"shutter","label":"FREIGHT EXIT","position":[-7.5,5.7,6],"size":[2.8,3,0.3],"active":false,"progress":0,"choice":0,"angle":0,"powered":null,"blocked":false}],"panels":[{"id":"freight-source","position":[7,1.75,13.985],"normal":[0,0,-1],"width":5,"height":3.5},{"id":"freight-return","position":[-11.985,1.75,11],"normal":[1,0,0],"width":5,"height":3.5}],"exits":[{"id":"service-exit","label":"EXIT","position":[14.54,1.5,4],"size":[3.880000000000001,3,2.76]},{"id":"freight-exit","label":"EXIT","position":[-7.5,5.7,3.71],"size":[2.7600000000000007,3,3.3800000000000003]}],"result":null,"held":"power-cube","holdSpaceTransform":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],"launchUsed":false,"respawns":0,"beams":{},"signals":{"carrier-power":true,"release-pressure":false,"service-pressure":false,"safety:freight-service-door":false,"door-safety":false,"moving:freight-service-door":false,"moving:freight-carrier":true,"at:freight-carrier:FAR":false,"at:freight-carrier:NEAR":false,"moving:release-lift":false,"safety:freight-upper-door":false,"moving:freight-upper-door":false},"events":[{"type":"land","time":8},{"type":"pad","time":8,"pad":"carrier-power","crate":"power-cube"},{"type":"portalA","time":300,"surface":"freight-source","point":[7,1.55,13.959999999999999]},{"type":"portalB","time":308,"surface":"freight-return","point":[-11.959999999999999,1.55,11]},{"type":"footstep","time":425},{"type":"footstep","time":850},{"type":"enter","time":1117,"body":"player","from":0,"to":1,"fromSurface":"freight-source","toSurface":"freight-return","speed":4.782549535915657,"exitSpeed":4.782549535915657,"held":null},{"type":"land","time":1125},{"type":"footstep","time":1308},{"type":"footstep","time":1733},{"type":"lift-motor","time":6008,"id":"freight-carrier"},{"type":"pickup","time":6942,"body":"power-cube"}]},"contacts":[{"id":"freight-near-bank","normal":{"x":-0.0007992732571437955,"y":0.9999997019767761,"z":0},"witness":{"x":-10.2404146194458,"y":-0.000002205371856689453,"z":7.870414733886719},"applied":{"x":0,"y":-0.00010020824265666306,"z":0},"remaining":{"x":0,"y":-0.0010109029244631529,"z":0}}]}
+      at PassiveRoute.until (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/helpers/passive-route.ts:20:169)
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-passive-routes.test.ts:58:241)
+      at passiveRoute (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/helpers/passive-route.ts:38:166)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-passive-routes.test.ts:57:107)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

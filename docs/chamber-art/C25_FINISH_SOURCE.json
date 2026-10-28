@@ -1,0 +1,44 @@
+{
+  "status": "SOURCE_ONLY_UNCOMPILED_UNPLAYED",
+  "beforeSHA256": "ce6905b0170eb1a54fc726507c175987d6f01fb4f201e9ea788d3dc59bc2f4f8",
+  "sourceSHA256": "841c2d82f4c24ead6f885dbf11da58d0e9d7472a964a61c71d981ac1f80f1733",
+  "bytes": 104269,
+  "beforeSnapshot": "work/art/source-snapshots/chamber-scene-before-c25-finish-ce6905b0.ts",
+  "snapshot": "work/art/source-snapshots/chamber-scene-c25-finish-841c2d82.ts",
+  "runtimeFiles": [
+    "src/chamber-scene.ts"
+  ],
+  "sourceDiff": "C25_FINISH_SOURCE.diff",
+  "scope": [
+    "hatch-front-west",
+    "hatch-front-east",
+    "hatch-header",
+    "freight-return-step-0..21",
+    "freight-carrier",
+    "one existing architecture practical slot"
+  ],
+  "newMaterials": 1,
+  "newTextures": 0,
+  "facadeAdditionalBatchBudget": 2,
+  "stairVisibleMeshes": 3,
+  "stairOriginalAimBoxesRetained": 22,
+  "stairMainDrawDeltaExpected": -19,
+  "compile": "NOT RUN per serialized native lane",
+  "CPUgeometryProbe": "NOT RUN",
+  "GPU": "NOT RUN",
+  "build": "NOT RUN",
+  "staticDist": "UNCHANGED",
+  "preservedTextBlocks": [
+    "C11 cradle caps",
+    "Root AA/diagnostics",
+    "hero cube/device",
+    "held footprint"
+  ],
+  "nextRequired": [
+    "typecheck",
+    "actual merged geometry/aim identity CPU check",
+    "next frozen actual finish/white-boundary/route captures",
+    "full-frame draws/timing"
+  ],
+  "lightAllocation": "C25 priority header + main balcony only, replacing secondary vestibule floor selection; existing four-source cap and exit washes unchanged"
+}

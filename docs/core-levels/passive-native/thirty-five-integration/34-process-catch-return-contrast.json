@@ -1,0 +1,3222 @@
+{
+  "scope": "Unregistered authored-spawn native route. Camera/WASD/E/ray-clear portals only. Decorative visibility, realtime mouse and earned save remain pending.",
+  "number": 34,
+  "contrast": true,
+  "error": null,
+  "inputs": [
+    {
+      "action": "aim",
+      "target": [
+        0.55,
+        1.55,
+        13.985
+      ]
+    },
+    {
+      "action": "place",
+      "index": 0
+    },
+    {
+      "action": "aim",
+      "target": [
+        0.55,
+        1.55,
+        5.665
+      ]
+    },
+    {
+      "action": "place",
+      "index": 1
+    },
+    {
+      "action": "walk",
+      "x": 0.55,
+      "z": 12.7
+    },
+    {
+      "action": "aim",
+      "target": [
+        0.55,
+        1.55,
+        15.959999999999999
+      ]
+    },
+    {
+      "action": "key",
+      "code": "KeyW",
+      "ms": 283.3333333333333,
+      "nativeTimingOnly": true
+    },
+    {
+      "action": "walk",
+      "x": 5,
+      "z": 6.8
+    },
+    {
+      "action": "walk",
+      "x": 7,
+      "z": 9.8
+    },
+    {
+      "action": "aim",
+      "target": [
+        7,
+        1.25,
+        8.2
+      ]
+    },
+    {
+      "action": "press",
+      "code": "KeyE"
+    },
+    {
+      "action": "aim",
+      "target": [
+        7,
+        1.25,
+        8.2
+      ]
+    },
+    {
+      "action": "press",
+      "code": "KeyE"
+    },
+    {
+      "action": "walk",
+      "x": 9,
+      "z": 9.8
+    },
+    {
+      "action": "walk",
+      "x": 9,
+      "z": 6.8
+    },
+    {
+      "action": "walk",
+      "x": 7,
+      "z": 6.8
+    },
+    {
+      "action": "walk",
+      "x": 7,
+      "z": 2.8
+    },
+    {
+      "action": "walk",
+      "x": 3.5,
+      "z": 2.8
+    },
+    {
+      "action": "aim",
+      "target": [
+        3.5,
+        1.5150928735733031,
+        -2
+      ]
+    },
+    {
+      "action": "walk",
+      "x": 9,
+      "z": -11.8
+    },
+    {
+      "action": "walk",
+      "x": 10.5,
+      "z": -11.8
+    },
+    {
+      "action": "walk",
+      "x": 10.5,
+      "z": 3
+    }
+  ],
+  "ridingFrames": {},
+  "maxDeviceStep": {
+    "inspection-clock": 0,
+    "test-release": 0,
+    "inspection-first-leaf": 0.036458333333333925,
+    "inspection-second-leaf": 0.036458333333333925,
+    "latched-cargo-hatch": 0.036458333333333925,
+    "latched-freight-platform": 0.013333333333334085,
+    "latched-freight-exit-leaf": 0.036458333333333925
+  },
+  "events": [
+    {
+      "type": "timer-open",
+      "time": 0.008333333333333333,
+      "id": "inspection-clock"
+    },
+    {
+      "type": "shutter-open",
+      "time": 0.008333333333333333,
+      "id": "inspection-first-leaf"
+    },
+    {
+      "type": "shutter-open",
+      "time": 0.008333333333333333,
+      "id": "inspection-second-leaf"
+    },
+    {
+      "type": "land",
+      "time": 0.008333333333333333
+    },
+    {
+      "type": "portalA",
+      "time": 0.3000000000000001,
+      "surface": "process-source",
+      "point": [
+        0.55,
+        1.55,
+        13.959999999999999
+      ]
+    },
+    {
+      "type": "portalB",
+      "time": 0.30833333333333346,
+      "surface": "process-return",
+      "point": [
+        0.55,
+        1.55,
+        5.69
+      ]
+    },
+    {
+      "type": "footstep",
+      "time": 0.4250000000000005
+    },
+    {
+      "type": "footstep",
+      "time": 0.8583333333333327
+    },
+    {
+      "type": "enter",
+      "time": 1.1333333333333317,
+      "body": "player",
+      "from": 0,
+      "to": 1,
+      "fromSurface": "process-source",
+      "toSurface": "process-return",
+      "speed": 4.782462922205934,
+      "exitSpeed": 4.782462922205934,
+      "held": null
+    },
+    {
+      "type": "land",
+      "time": 1.141666666666665
+    },
+    {
+      "type": "footstep",
+      "time": 1.3249999999999977
+    },
+    {
+      "type": "footstep",
+      "time": 1.7499999999999962
+    },
+    {
+      "type": "footstep",
+      "time": 2.174999999999995
+    },
+    {
+      "type": "footstep",
+      "time": 2.5999999999999934
+    },
+    {
+      "type": "footstep",
+      "time": 3.024999999999992
+    },
+    {
+      "type": "switch-toggle",
+      "time": 3.383333333333324,
+      "id": "test-release",
+      "value": true
+    },
+    {
+      "type": "shutter-open",
+      "time": 3.383333333333324,
+      "id": "latched-cargo-hatch"
+    },
+    {
+      "type": "switch-toggle",
+      "time": 4.391666666666675,
+      "id": "test-release",
+      "value": false
+    },
+    {
+      "type": "footstep",
+      "time": 5.400000000000058
+    },
+    {
+      "type": "footstep",
+      "time": 5.825000000000079
+    },
+    {
+      "type": "footstep",
+      "time": 6.2500000000001
+    },
+    {
+      "type": "footstep",
+      "time": 6.750000000000125
+    },
+    {
+      "type": "timer-close",
+      "time": 7.000000000000138,
+      "id": "inspection-clock"
+    },
+    {
+      "type": "shutter-close",
+      "time": 7.000000000000138,
+      "id": "inspection-first-leaf"
+    },
+    {
+      "type": "shutter-close",
+      "time": 7.000000000000138,
+      "id": "inspection-second-leaf"
+    },
+    {
+      "type": "footstep",
+      "time": 7.175000000000146
+    },
+    {
+      "type": "footstep",
+      "time": 7.6000000000001675
+    },
+    {
+      "type": "footstep",
+      "time": 8.025000000000185
+    },
+    {
+      "type": "footstep",
+      "time": 8.450000000000161
+    },
+    {
+      "type": "footstep",
+      "time": 8.875000000000137
+    },
+    {
+      "type": "footstep",
+      "time": 9.300000000000113
+    },
+    {
+      "type": "land",
+      "time": 10.200000000000061
+    },
+    {
+      "type": "footstep",
+      "time": 10.208333333333394
+    },
+    {
+      "type": "lift-motor",
+      "time": 10.391666666666717,
+      "id": "latched-freight-platform"
+    },
+    {
+      "type": "footstep",
+      "time": 10.63333333333337
+    },
+    {
+      "type": "footstep",
+      "time": 11.058333333333346
+    },
+    {
+      "type": "footstep",
+      "time": 11.483333333333322
+    },
+    {
+      "type": "footstep",
+      "time": 11.908333333333298
+    },
+    {
+      "type": "footstep",
+      "time": 12.333333333333274
+    },
+    {
+      "type": "footstep",
+      "time": 12.808333333333247
+    },
+    {
+      "type": "footstep",
+      "time": 13.266666666666554
+    },
+    {
+      "type": "footstep",
+      "time": 13.69166666666653
+    },
+    {
+      "type": "timer-open",
+      "time": 14.008333333333178,
+      "id": "inspection-clock"
+    },
+    {
+      "type": "shutter-open",
+      "time": 14.008333333333178,
+      "id": "inspection-first-leaf"
+    },
+    {
+      "type": "shutter-open",
+      "time": 14.008333333333178,
+      "id": "inspection-second-leaf"
+    },
+    {
+      "type": "footstep",
+      "time": 14.116666666666505
+    },
+    {
+      "type": "footstep",
+      "time": 14.541666666666481
+    },
+    {
+      "type": "footstep",
+      "time": 14.966666666666457
+    },
+    {
+      "type": "lift-arrival",
+      "time": 15.391666666666433,
+      "id": "latched-freight-platform",
+      "value": "FAR"
+    },
+    {
+      "type": "footstep",
+      "time": 15.391666666666433
+    },
+    {
+      "type": "shutter-open",
+      "time": 15.399999999999766,
+      "id": "latched-freight-exit-leaf"
+    },
+    {
+      "type": "footstep",
+      "time": 15.816666666666409
+    },
+    {
+      "type": "footstep",
+      "time": 16.241666666666386
+    },
+    {
+      "type": "footstep",
+      "time": 16.666666666666362
+    },
+    {
+      "type": "footstep",
+      "time": 17.091666666666338
+    }
+  ],
+  "checkpoints": [
+    {
+      "label": "actual-authored-spawn",
+      "state": {
+        "room": "chamber-34",
+        "number": 34,
+        "mission": "The cargo hatch is released by TEST. Release it, switch TEST off and use its latched route.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            0.0000026856421300180955,
+            0.8646469116210938,
+            11
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "inspection-clock",
+            "kind": "timer",
+            "label": "INSPECTION TIMER",
+            "position": [
+              -7,
+              1.3,
+              8
+            ],
+            "size": [
+              0.8,
+              1.2,
+              0.35
+            ],
+            "active": true,
+            "progress": 0.02142857142857148,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "test-release",
+            "kind": "switch",
+            "label": "TEST",
+            "position": [
+              7,
+              1.25,
+              8
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "inspection-first-leaf",
+            "kind": "shutter",
+            "label": "INSPECTION 1",
+            "position": [
+              -7,
+              2.8125000000000004,
+              4.08
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 0.3750000000000001,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "inspection-second-leaf",
+            "kind": "shutter",
+            "label": "INSPECTION 2",
+            "position": [
+              -7,
+              4.612500000000001,
+              -5.92
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 0.3750000000000001,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "latched-cargo-hatch",
+            "kind": "shutter",
+            "label": "LATCHED CARGO",
+            "position": [
+              7,
+              1.5,
+              4.08
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "latched-freight-platform",
+            "kind": "moving-platform",
+            "label": "FREIGHT TRANSFER",
+            "position": [
+              7,
+              -0.2,
+              0
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "NEAR",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "latched-freight-exit-leaf",
+            "kind": "shutter",
+            "label": "FREIGHT EXIT",
+            "position": [
+              7,
+              1.5,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "process-source",
+            "position": [
+              0,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "process-return",
+            "position": [
+              0,
+              1.75,
+              5.665
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "inspection-exit",
+            "label": "EXIT",
+            "position": [
+              -7,
+              3.3,
+              -16.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.7799999999999994
+            ]
+          },
+          {
+            "id": "latched-exit",
+            "label": "EXIT",
+            "position": [
+              7,
+              1.5,
+              -16.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.7799999999999994
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "moving:inspection-clock": false,
+          "moving:test-release": false,
+          "closed:inspection-first-leaf": false,
+          "clear:inspection-first-leaf": false,
+          "safety:inspection-first-leaf": false,
+          "door-safety": false,
+          "moving:inspection-first-leaf": true,
+          "closed:inspection-second-leaf": false,
+          "clear:inspection-second-leaf": false,
+          "safety:inspection-second-leaf": false,
+          "moving:inspection-second-leaf": true,
+          "closed:latched-cargo-hatch": true,
+          "clear:latched-cargo-hatch": false,
+          "safety:latched-cargo-hatch": false,
+          "moving:latched-cargo-hatch": false,
+          "moving:latched-freight-platform": false,
+          "at:latched-freight-platform:NEAR": true,
+          "at:latched-freight-platform:FAR": false,
+          "closed:latched-freight-exit-leaf": true,
+          "clear:latched-freight-exit-leaf": false,
+          "safety:latched-freight-exit-leaf": false,
+          "moving:latched-freight-exit-leaf": false,
+          "inspection-clock": true
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "timer-open",
+            "time": 8,
+            "id": "inspection-clock"
+          },
+          {
+            "type": "shutter-open",
+            "time": 8,
+            "id": "inspection-first-leaf"
+          },
+          {
+            "type": "shutter-open",
+            "time": 8,
+            "id": "inspection-second-leaf"
+          },
+          {
+            "type": "land",
+            "time": 8
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "process-near-bank",
+          "normal": {
+            "x": 0.00003252159876865335,
+            "y": 1,
+            "z": 0.000016260799384326674
+          },
+          "witness": {
+            "x": 0.0002231597900390625,
+            "y": 0,
+            "z": 10.998550415039062
+          },
+          "applied": {
+            "x": 0,
+            "y": -0.00009998837776947767,
+            "z": 0
+          },
+          "remaining": {
+            "x": 0,
+            "y": -0.0010111227165907621,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-process-booth-crossing",
+      "state": {
+        "room": "chamber-34",
+        "number": 34,
+        "mission": "The cargo hatch is released by TEST. Release it, switch TEST off and use its latched route.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            0.5756445527076721,
+            0.8650984168052673,
+            5.963232040405273
+          ],
+          "velocity": [
+            -0.0017274066721432975,
+            0,
+            0.15755164783386558
+          ],
+          "yaw": 3.130517885778645,
+          "pitch": 0.011008149038580304,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "process-source",
+            "position": [
+              0.55,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "process-return",
+            "position": [
+              0.55,
+              1.55,
+              5.69
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "inspection-clock",
+            "kind": "timer",
+            "label": "INSPECTION TIMER",
+            "position": [
+              -7,
+              1.3,
+              8
+            ],
+            "size": [
+              0.8,
+              1.2,
+              0.35
+            ],
+            "active": true,
+            "progress": 0.09404761904761891,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "test-release",
+            "kind": "switch",
+            "label": "TEST",
+            "position": [
+              7,
+              1.25,
+              8
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "inspection-first-leaf",
+            "kind": "shutter",
+            "label": "INSPECTION 1",
+            "position": [
+              -7,
+              5,
+              4.08
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "inspection-second-leaf",
+            "kind": "shutter",
+            "label": "INSPECTION 2",
+            "position": [
+              -7,
+              6.8,
+              -5.92
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "latched-cargo-hatch",
+            "kind": "shutter",
+            "label": "LATCHED CARGO",
+            "position": [
+              7,
+              1.5,
+              4.08
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "latched-freight-platform",
+            "kind": "moving-platform",
+            "label": "FREIGHT TRANSFER",
+            "position": [
+              7,
+              -0.2,
+              0
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "NEAR",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "latched-freight-exit-leaf",
+            "kind": "shutter",
+            "label": "FREIGHT EXIT",
+            "position": [
+              7,
+              1.5,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "process-source",
+            "position": [
+              0,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "process-return",
+            "position": [
+              0,
+              1.75,
+              5.665
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "inspection-exit",
+            "label": "EXIT",
+            "position": [
+              -7,
+              3.3,
+              -16.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.7799999999999994
+            ]
+          },
+          {
+            "id": "latched-exit",
+            "label": "EXIT",
+            "position": [
+              7,
+              1.5,
+              -16.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.7799999999999994
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "moving:inspection-clock": false,
+          "moving:test-release": false,
+          "closed:inspection-first-leaf": false,
+          "clear:inspection-first-leaf": true,
+          "safety:inspection-first-leaf": false,
+          "door-safety": false,
+          "moving:inspection-first-leaf": false,
+          "closed:inspection-second-leaf": false,
+          "clear:inspection-second-leaf": true,
+          "safety:inspection-second-leaf": false,
+          "moving:inspection-second-leaf": false,
+          "closed:latched-cargo-hatch": true,
+          "clear:latched-cargo-hatch": false,
+          "safety:latched-cargo-hatch": false,
+          "moving:latched-cargo-hatch": false,
+          "moving:latched-freight-platform": false,
+          "at:latched-freight-platform:NEAR": true,
+          "at:latched-freight-platform:FAR": false,
+          "closed:latched-freight-exit-leaf": true,
+          "clear:latched-freight-exit-leaf": false,
+          "safety:latched-freight-exit-leaf": false,
+          "moving:latched-freight-exit-leaf": false,
+          "inspection-clock": true
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "timer-open",
+            "time": 8,
+            "id": "inspection-clock"
+          },
+          {
+            "type": "shutter-open",
+            "time": 8,
+            "id": "inspection-first-leaf"
+          },
+          {
+            "type": "shutter-open",
+            "time": 8,
+            "id": "inspection-second-leaf"
+          },
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "portalA",
+            "time": 300,
+            "surface": "process-source",
+            "point": [
+              0.55,
+              1.55,
+              13.959999999999999
+            ]
+          },
+          {
+            "type": "portalB",
+            "time": 308,
+            "surface": "process-return",
+            "point": [
+              0.55,
+              1.55,
+              5.69
+            ]
+          },
+          {
+            "type": "footstep",
+            "time": 425
+          },
+          {
+            "type": "footstep",
+            "time": 858
+          },
+          {
+            "type": "enter",
+            "time": 1133,
+            "body": "player",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "process-source",
+            "toSurface": "process-return",
+            "speed": 4.782462922205934,
+            "exitSpeed": 4.782462922205934,
+            "held": null
+          },
+          {
+            "type": "land",
+            "time": 1142
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "process-near-bank",
+          "normal": {
+            "x": 0,
+            "y": 1,
+            "z": 0
+          },
+          "witness": {
+            "x": 0.5756045579910278,
+            "y": -1.7881393432617188e-7,
+            "z": 5.96174955368042
+          },
+          "applied": {
+            "x": -0.0000010027126791101182,
+            "y": -0.00007739638385828584,
+            "z": 0.00009145445073954761
+          },
+          "remaining": {
+            "x": -0.000013392343134910334,
+            "y": -0.0010337147396057844,
+            "z": 0.0012214758899062872
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-test-releases-hold-open-latch",
+      "state": {
+        "room": "chamber-34",
+        "number": 34,
+        "mission": "The cargo hatch is released by TEST. Release it, switch TEST off and use its latched route.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            7.0625200271606445,
+            0.8628970384597778,
+            9.898774147033691
+          ],
+          "velocity": [
+            6.460891498924156e-10,
+            0,
+            1.021189765095562e-9
+          ],
+          "yaw": 0.03106910398763373,
+          "pitch": -0.15611976843683428,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "process-source",
+            "position": [
+              0.55,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "process-return",
+            "position": [
+              0.55,
+              1.55,
+              5.69
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "inspection-clock",
+            "kind": "timer",
+            "label": "INSPECTION TIMER",
+            "position": [
+              -7,
+              1.3,
+              8
+            ],
+            "size": [
+              0.8,
+              1.2,
+              0.35
+            ],
+            "active": true,
+            "progress": 0.3130952380952386,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "test-release",
+            "kind": "switch",
+            "label": "TEST",
+            "position": [
+              7,
+              1.25,
+              8
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "inspection-first-leaf",
+            "kind": "shutter",
+            "label": "INSPECTION 1",
+            "position": [
+              -7,
+              5,
+              4.08
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "inspection-second-leaf",
+            "kind": "shutter",
+            "label": "INSPECTION 2",
+            "position": [
+              -7,
+              6.8,
+              -5.92
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "latched-cargo-hatch",
+            "kind": "shutter",
+            "label": "LATCHED CARGO",
+            "position": [
+              7,
+              5,
+              4.08
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "latched-freight-platform",
+            "kind": "moving-platform",
+            "label": "FREIGHT TRANSFER",
+            "position": [
+              7,
+              -0.2,
+              0
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "NEAR",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "latched-freight-exit-leaf",
+            "kind": "shutter",
+            "label": "FREIGHT EXIT",
+            "position": [
+              7,
+              1.5,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "process-source",
+            "position": [
+              0,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "process-return",
+            "position": [
+              0,
+              1.75,
+              5.665
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "inspection-exit",
+            "label": "EXIT",
+            "position": [
+              -7,
+              3.3,
+              -16.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.7799999999999994
+            ]
+          },
+          {
+            "id": "latched-exit",
+            "label": "EXIT",
+            "position": [
+              7,
+              1.5,
+              -16.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.7799999999999994
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "moving:inspection-clock": false,
+          "moving:test-release": false,
+          "closed:inspection-first-leaf": false,
+          "clear:inspection-first-leaf": true,
+          "safety:inspection-first-leaf": false,
+          "door-safety": false,
+          "moving:inspection-first-leaf": false,
+          "closed:inspection-second-leaf": false,
+          "clear:inspection-second-leaf": true,
+          "safety:inspection-second-leaf": false,
+          "moving:inspection-second-leaf": false,
+          "closed:latched-cargo-hatch": false,
+          "clear:latched-cargo-hatch": true,
+          "safety:latched-cargo-hatch": false,
+          "moving:latched-cargo-hatch": false,
+          "moving:latched-freight-platform": false,
+          "at:latched-freight-platform:NEAR": true,
+          "at:latched-freight-platform:FAR": false,
+          "closed:latched-freight-exit-leaf": true,
+          "clear:latched-freight-exit-leaf": false,
+          "safety:latched-freight-exit-leaf": false,
+          "moving:latched-freight-exit-leaf": false,
+          "inspection-clock": true
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "shutter-open",
+            "time": 8,
+            "id": "inspection-first-leaf"
+          },
+          {
+            "type": "shutter-open",
+            "time": 8,
+            "id": "inspection-second-leaf"
+          },
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "portalA",
+            "time": 300,
+            "surface": "process-source",
+            "point": [
+              0.55,
+              1.55,
+              13.959999999999999
+            ]
+          },
+          {
+            "type": "portalB",
+            "time": 308,
+            "surface": "process-return",
+            "point": [
+              0.55,
+              1.55,
+              5.69
+            ]
+          },
+          {
+            "type": "footstep",
+            "time": 425
+          },
+          {
+            "type": "footstep",
+            "time": 858
+          },
+          {
+            "type": "enter",
+            "time": 1133,
+            "body": "player",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "process-source",
+            "toSurface": "process-return",
+            "speed": 4.782462922205934,
+            "exitSpeed": 4.782462922205934,
+            "held": null
+          },
+          {
+            "type": "land",
+            "time": 1142
+          },
+          {
+            "type": "footstep",
+            "time": 1325
+          },
+          {
+            "type": "footstep",
+            "time": 1750
+          },
+          {
+            "type": "footstep",
+            "time": 2175
+          },
+          {
+            "type": "footstep",
+            "time": 2600
+          },
+          {
+            "type": "footstep",
+            "time": 3025
+          },
+          {
+            "type": "switch-toggle",
+            "time": 3383,
+            "id": "test-release",
+            "value": true
+          },
+          {
+            "type": "shutter-open",
+            "time": 3383,
+            "id": "latched-cargo-hatch"
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "process-near-bank",
+          "normal": {
+            "x": 0,
+            "y": 1,
+            "z": -0.000009303074875788298
+          },
+          "witness": {
+            "x": 7.060373783111572,
+            "y": 2.9802322387695312e-8,
+            "z": 9.899410247802734
+          },
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": 5.384076431219631e-12,
+            "y": -0.0011111111380159855,
+            "z": 8.509914994903056e-12
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-test-off-latch-persists",
+      "state": {
+        "room": "chamber-34",
+        "number": 34,
+        "mission": "The cargo hatch is released by TEST. Release it, switch TEST off and use its latched route.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            7.0625200271606445,
+            0.8629970550537109,
+            9.898774147033691
+          ],
+          "velocity": [
+            1.862011930000966e-18,
+            0,
+            2.9430420333160604e-18
+          ],
+          "yaw": 0.0367864222406511,
+          "pitch": -0.15343665237927695,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "process-source",
+            "position": [
+              0.55,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "process-return",
+            "position": [
+              0.55,
+              1.55,
+              5.69
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "inspection-clock",
+            "kind": "timer",
+            "label": "INSPECTION TIMER",
+            "position": [
+              -7,
+              1.3,
+              8
+            ],
+            "size": [
+              0.8,
+              1.2,
+              0.35
+            ],
+            "active": true,
+            "progress": 0.38511904761905164,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "test-release",
+            "kind": "switch",
+            "label": "TEST",
+            "position": [
+              7,
+              1.25,
+              8
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "inspection-first-leaf",
+            "kind": "shutter",
+            "label": "INSPECTION 1",
+            "position": [
+              -7,
+              5,
+              4.08
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "inspection-second-leaf",
+            "kind": "shutter",
+            "label": "INSPECTION 2",
+            "position": [
+              -7,
+              6.8,
+              -5.92
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "latched-cargo-hatch",
+            "kind": "shutter",
+            "label": "LATCHED CARGO",
+            "position": [
+              7,
+              5,
+              4.08
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "latched-freight-platform",
+            "kind": "moving-platform",
+            "label": "FREIGHT TRANSFER",
+            "position": [
+              7,
+              -0.2,
+              0
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "NEAR",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "latched-freight-exit-leaf",
+            "kind": "shutter",
+            "label": "FREIGHT EXIT",
+            "position": [
+              7,
+              1.5,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "process-source",
+            "position": [
+              0,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "process-return",
+            "position": [
+              0,
+              1.75,
+              5.665
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "inspection-exit",
+            "label": "EXIT",
+            "position": [
+              -7,
+              3.3,
+              -16.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.7799999999999994
+            ]
+          },
+          {
+            "id": "latched-exit",
+            "label": "EXIT",
+            "position": [
+              7,
+              1.5,
+              -16.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.7799999999999994
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "moving:inspection-clock": false,
+          "moving:test-release": false,
+          "closed:inspection-first-leaf": false,
+          "clear:inspection-first-leaf": true,
+          "safety:inspection-first-leaf": false,
+          "door-safety": false,
+          "moving:inspection-first-leaf": false,
+          "closed:inspection-second-leaf": false,
+          "clear:inspection-second-leaf": true,
+          "safety:inspection-second-leaf": false,
+          "moving:inspection-second-leaf": false,
+          "closed:latched-cargo-hatch": false,
+          "clear:latched-cargo-hatch": true,
+          "safety:latched-cargo-hatch": false,
+          "moving:latched-cargo-hatch": false,
+          "moving:latched-freight-platform": false,
+          "at:latched-freight-platform:NEAR": true,
+          "at:latched-freight-platform:FAR": false,
+          "closed:latched-freight-exit-leaf": true,
+          "clear:latched-freight-exit-leaf": false,
+          "safety:latched-freight-exit-leaf": false,
+          "moving:latched-freight-exit-leaf": false,
+          "inspection-clock": true
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "shutter-open",
+            "time": 8,
+            "id": "inspection-second-leaf"
+          },
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "portalA",
+            "time": 300,
+            "surface": "process-source",
+            "point": [
+              0.55,
+              1.55,
+              13.959999999999999
+            ]
+          },
+          {
+            "type": "portalB",
+            "time": 308,
+            "surface": "process-return",
+            "point": [
+              0.55,
+              1.55,
+              5.69
+            ]
+          },
+          {
+            "type": "footstep",
+            "time": 425
+          },
+          {
+            "type": "footstep",
+            "time": 858
+          },
+          {
+            "type": "enter",
+            "time": 1133,
+            "body": "player",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "process-source",
+            "toSurface": "process-return",
+            "speed": 4.782462922205934,
+            "exitSpeed": 4.782462922205934,
+            "held": null
+          },
+          {
+            "type": "land",
+            "time": 1142
+          },
+          {
+            "type": "footstep",
+            "time": 1325
+          },
+          {
+            "type": "footstep",
+            "time": 1750
+          },
+          {
+            "type": "footstep",
+            "time": 2175
+          },
+          {
+            "type": "footstep",
+            "time": 2600
+          },
+          {
+            "type": "footstep",
+            "time": 3025
+          },
+          {
+            "type": "switch-toggle",
+            "time": 3383,
+            "id": "test-release",
+            "value": true
+          },
+          {
+            "type": "shutter-open",
+            "time": 3383,
+            "id": "latched-cargo-hatch"
+          },
+          {
+            "type": "switch-toggle",
+            "time": 4392,
+            "id": "test-release",
+            "value": false
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "process-near-bank",
+          "normal": {
+            "x": 0.00003697251304402016,
+            "y": 1,
+            "z": 0.00001848625652201008
+          },
+          "witness": {
+            "x": 7.062516689300537,
+            "y": 0,
+            "z": 9.898772239685059
+          },
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": 1.5516766071391137e-20,
+            "y": -0.0011111111380159855,
+            "z": 2.4525351015810345e-20
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-process-catch-landing",
+      "state": {
+        "room": "chamber-34",
+        "number": 34,
+        "mission": "The cargo hatch is released by TEST. Release it, switch TEST off and use its latched route.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            3.4743008613586426,
+            -3.5286166667938232,
+            -1.769481897354126
+          ],
+          "velocity": [
+            0.09268302723912807,
+            0,
+            -4.799105399794746
+          ],
+          "yaw": -0.01965764122339599,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "process-source",
+            "position": [
+              0.55,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "process-return",
+            "position": [
+              0.55,
+              1.55,
+              5.69
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "inspection-clock",
+            "kind": "timer",
+            "label": "INSPECTION TIMER",
+            "position": [
+              -7,
+              1.3,
+              8
+            ],
+            "size": [
+              0.8,
+              1.2,
+              0.35
+            ],
+            "active": false,
+            "progress": 0.7285714285714329,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "test-release",
+            "kind": "switch",
+            "label": "TEST",
+            "position": [
+              7,
+              1.25,
+              8
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "inspection-first-leaf",
+            "kind": "shutter",
+            "label": "INSPECTION 1",
+            "position": [
+              -7,
+              1.5,
+              4.08
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "inspection-second-leaf",
+            "kind": "shutter",
+            "label": "INSPECTION 2",
+            "position": [
+              -7,
+              3.3,
+              -5.92
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "latched-cargo-hatch",
+            "kind": "shutter",
+            "label": "LATCHED CARGO",
+            "position": [
+              7,
+              5,
+              4.08
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "latched-freight-platform",
+            "kind": "moving-platform",
+            "label": "FREIGHT TRANSFER",
+            "position": [
+              7,
+              -0.2,
+              0
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "NEAR",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "latched-freight-exit-leaf",
+            "kind": "shutter",
+            "label": "FREIGHT EXIT",
+            "position": [
+              7,
+              1.5,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "process-source",
+            "position": [
+              0,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "process-return",
+            "position": [
+              0,
+              1.75,
+              5.665
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "inspection-exit",
+            "label": "EXIT",
+            "position": [
+              -7,
+              3.3,
+              -16.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.7799999999999994
+            ]
+          },
+          {
+            "id": "latched-exit",
+            "label": "EXIT",
+            "position": [
+              7,
+              1.5,
+              -16.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.7799999999999994
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "moving:inspection-clock": false,
+          "moving:test-release": false,
+          "closed:inspection-first-leaf": true,
+          "clear:inspection-first-leaf": false,
+          "safety:inspection-first-leaf": false,
+          "door-safety": false,
+          "moving:inspection-first-leaf": false,
+          "closed:inspection-second-leaf": true,
+          "clear:inspection-second-leaf": false,
+          "safety:inspection-second-leaf": false,
+          "moving:inspection-second-leaf": false,
+          "closed:latched-cargo-hatch": false,
+          "clear:latched-cargo-hatch": true,
+          "safety:latched-cargo-hatch": false,
+          "moving:latched-cargo-hatch": false,
+          "moving:latched-freight-platform": false,
+          "at:latched-freight-platform:NEAR": true,
+          "at:latched-freight-platform:FAR": false,
+          "closed:latched-freight-exit-leaf": true,
+          "clear:latched-freight-exit-leaf": false,
+          "safety:latched-freight-exit-leaf": false,
+          "moving:latched-freight-exit-leaf": false,
+          "inspection-clock": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "shutter-open",
+            "time": 3383,
+            "id": "latched-cargo-hatch"
+          },
+          {
+            "type": "switch-toggle",
+            "time": 4392,
+            "id": "test-release",
+            "value": false
+          },
+          {
+            "type": "footstep",
+            "time": 5400
+          },
+          {
+            "type": "footstep",
+            "time": 5825
+          },
+          {
+            "type": "footstep",
+            "time": 6250
+          },
+          {
+            "type": "footstep",
+            "time": 6750
+          },
+          {
+            "type": "timer-close",
+            "time": 7000,
+            "id": "inspection-clock"
+          },
+          {
+            "type": "shutter-close",
+            "time": 7000,
+            "id": "inspection-first-leaf"
+          },
+          {
+            "type": "shutter-close",
+            "time": 7000,
+            "id": "inspection-second-leaf"
+          },
+          {
+            "type": "footstep",
+            "time": 7175
+          },
+          {
+            "type": "footstep",
+            "time": 7600
+          },
+          {
+            "type": "footstep",
+            "time": 8025
+          },
+          {
+            "type": "footstep",
+            "time": 8450
+          },
+          {
+            "type": "footstep",
+            "time": 8875
+          },
+          {
+            "type": "footstep",
+            "time": 9300
+          },
+          {
+            "type": "land",
+            "time": 10200
+          }
+        ]
+      },
+      "contacts": []
+    },
+    {
+      "label": "actual-process-low-end-stair-return",
+      "state": {
+        "room": "chamber-34",
+        "number": 34,
+        "mission": "The cargo hatch is released by TEST. Release it, switch TEST off and use its latched route.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            10.499567031860352,
+            0.8650954961776733,
+            3.1098663806915283
+          ],
+          "velocity": [
+            -0.0017074789694811814,
+            0,
+            0.4192967749179476
+          ],
+          "yaw": 3.1374920261441694,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "process-source",
+            "position": [
+              0.55,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "process-return",
+            "position": [
+              0.55,
+              1.55,
+              5.69
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "inspection-clock",
+            "kind": "timer",
+            "label": "INSPECTION TIMER",
+            "position": [
+              -7,
+              1.3,
+              8
+            ],
+            "size": [
+              0.8,
+              1.2,
+              0.35
+            ],
+            "active": true,
+            "progress": 0.2374999999999756,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "test-release",
+            "kind": "switch",
+            "label": "TEST",
+            "position": [
+              7,
+              1.25,
+              8
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "inspection-first-leaf",
+            "kind": "shutter",
+            "label": "INSPECTION 1",
+            "position": [
+              -7,
+              5,
+              4.08
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "inspection-second-leaf",
+            "kind": "shutter",
+            "label": "INSPECTION 2",
+            "position": [
+              -7,
+              6.8,
+              -5.92
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "latched-cargo-hatch",
+            "kind": "shutter",
+            "label": "LATCHED CARGO",
+            "position": [
+              7,
+              5,
+              4.08
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "latched-freight-platform",
+            "kind": "moving-platform",
+            "label": "FREIGHT TRANSFER",
+            "position": [
+              7,
+              -0.2,
+              -8
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": "NEAR",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "latched-freight-exit-leaf",
+            "kind": "shutter",
+            "label": "FREIGHT EXIT",
+            "position": [
+              7,
+              5,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "process-source",
+            "position": [
+              0,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "process-return",
+            "position": [
+              0,
+              1.75,
+              5.665
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "inspection-exit",
+            "label": "EXIT",
+            "position": [
+              -7,
+              3.3,
+              -16.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.7799999999999994
+            ]
+          },
+          {
+            "id": "latched-exit",
+            "label": "EXIT",
+            "position": [
+              7,
+              1.5,
+              -16.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.7799999999999994
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "moving:inspection-clock": false,
+          "moving:test-release": false,
+          "closed:inspection-first-leaf": false,
+          "clear:inspection-first-leaf": true,
+          "safety:inspection-first-leaf": false,
+          "door-safety": false,
+          "moving:inspection-first-leaf": false,
+          "closed:inspection-second-leaf": false,
+          "clear:inspection-second-leaf": true,
+          "safety:inspection-second-leaf": false,
+          "moving:inspection-second-leaf": false,
+          "closed:latched-cargo-hatch": false,
+          "clear:latched-cargo-hatch": true,
+          "safety:latched-cargo-hatch": false,
+          "moving:latched-cargo-hatch": false,
+          "moving:latched-freight-platform": false,
+          "at:latched-freight-platform:NEAR": false,
+          "at:latched-freight-platform:FAR": true,
+          "closed:latched-freight-exit-leaf": false,
+          "clear:latched-freight-exit-leaf": true,
+          "safety:latched-freight-exit-leaf": false,
+          "moving:latched-freight-exit-leaf": false,
+          "inspection-clock": true
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "footstep",
+            "time": 12808
+          },
+          {
+            "type": "footstep",
+            "time": 13267
+          },
+          {
+            "type": "footstep",
+            "time": 13692
+          },
+          {
+            "type": "timer-open",
+            "time": 14008,
+            "id": "inspection-clock"
+          },
+          {
+            "type": "shutter-open",
+            "time": 14008,
+            "id": "inspection-first-leaf"
+          },
+          {
+            "type": "shutter-open",
+            "time": 14008,
+            "id": "inspection-second-leaf"
+          },
+          {
+            "type": "footstep",
+            "time": 14117
+          },
+          {
+            "type": "footstep",
+            "time": 14542
+          },
+          {
+            "type": "footstep",
+            "time": 14967
+          },
+          {
+            "type": "lift-arrival",
+            "time": 15392,
+            "id": "latched-freight-platform",
+            "value": "FAR"
+          },
+          {
+            "type": "footstep",
+            "time": 15392
+          },
+          {
+            "type": "shutter-open",
+            "time": 15400,
+            "id": "latched-freight-exit-leaf"
+          },
+          {
+            "type": "footstep",
+            "time": 15817
+          },
+          {
+            "type": "footstep",
+            "time": 16242
+          },
+          {
+            "type": "footstep",
+            "time": 16667
+          },
+          {
+            "type": "footstep",
+            "time": 17092
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "process-near-bank",
+          "normal": {
+            "x": -0.000009903178579406813,
+            "y": 1,
+            "z": 0.00000792254286352545
+          },
+          "witness": {
+            "x": 10.497243881225586,
+            "y": 0,
+            "z": 3.10933780670166
+          },
+          "applied": {
+            "x": -2.278381145970343e-7,
+            "y": -0.000017791384379961528,
+            "z": 0.00005594902177108452
+          },
+          "remaining": {
+            "x": -0.000014001153431308921,
+            "y": -0.0010933197336271405,
+            "z": 0.0034381907898932695
+          }
+        }
+      ]
+    },
+    {
+      "label": "final",
+      "state": {
+        "room": "chamber-34",
+        "number": 34,
+        "mission": "The cargo hatch is released by TEST. Release it, switch TEST off and use its latched route.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            10.499567031860352,
+            0.8650954961776733,
+            3.1098663806915283
+          ],
+          "velocity": [
+            -0.0017074789694811814,
+            0,
+            0.4192967749179476
+          ],
+          "yaw": 3.1374920261441694,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "process-source",
+            "position": [
+              0.55,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "process-return",
+            "position": [
+              0.55,
+              1.55,
+              5.69
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "inspection-clock",
+            "kind": "timer",
+            "label": "INSPECTION TIMER",
+            "position": [
+              -7,
+              1.3,
+              8
+            ],
+            "size": [
+              0.8,
+              1.2,
+              0.35
+            ],
+            "active": true,
+            "progress": 0.2374999999999756,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "test-release",
+            "kind": "switch",
+            "label": "TEST",
+            "position": [
+              7,
+              1.25,
+              8
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "inspection-first-leaf",
+            "kind": "shutter",
+            "label": "INSPECTION 1",
+            "position": [
+              -7,
+              5,
+              4.08
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "inspection-second-leaf",
+            "kind": "shutter",
+            "label": "INSPECTION 2",
+            "position": [
+              -7,
+              6.8,
+              -5.92
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "latched-cargo-hatch",
+            "kind": "shutter",
+            "label": "LATCHED CARGO",
+            "position": [
+              7,
+              5,
+              4.08
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "latched-freight-platform",
+            "kind": "moving-platform",
+            "label": "FREIGHT TRANSFER",
+            "position": [
+              7,
+              -0.2,
+              -8
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": "NEAR",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "latched-freight-exit-leaf",
+            "kind": "shutter",
+            "label": "FREIGHT EXIT",
+            "position": [
+              7,
+              5,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "process-source",
+            "position": [
+              0,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "process-return",
+            "position": [
+              0,
+              1.75,
+              5.665
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "inspection-exit",
+            "label": "EXIT",
+            "position": [
+              -7,
+              3.3,
+              -16.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.7799999999999994
+            ]
+          },
+          {
+            "id": "latched-exit",
+            "label": "EXIT",
+            "position": [
+              7,
+              1.5,
+              -16.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.7799999999999994
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "moving:inspection-clock": false,
+          "moving:test-release": false,
+          "closed:inspection-first-leaf": false,
+          "clear:inspection-first-leaf": true,
+          "safety:inspection-first-leaf": false,
+          "door-safety": false,
+          "moving:inspection-first-leaf": false,
+          "closed:inspection-second-leaf": false,
+          "clear:inspection-second-leaf": true,
+          "safety:inspection-second-leaf": false,
+          "moving:inspection-second-leaf": false,
+          "closed:latched-cargo-hatch": false,
+          "clear:latched-cargo-hatch": true,
+          "safety:latched-cargo-hatch": false,
+          "moving:latched-cargo-hatch": false,
+          "moving:latched-freight-platform": false,
+          "at:latched-freight-platform:NEAR": false,
+          "at:latched-freight-platform:FAR": true,
+          "closed:latched-freight-exit-leaf": false,
+          "clear:latched-freight-exit-leaf": true,
+          "safety:latched-freight-exit-leaf": false,
+          "moving:latched-freight-exit-leaf": false,
+          "inspection-clock": true
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "footstep",
+            "time": 12808
+          },
+          {
+            "type": "footstep",
+            "time": 13267
+          },
+          {
+            "type": "footstep",
+            "time": 13692
+          },
+          {
+            "type": "timer-open",
+            "time": 14008,
+            "id": "inspection-clock"
+          },
+          {
+            "type": "shutter-open",
+            "time": 14008,
+            "id": "inspection-first-leaf"
+          },
+          {
+            "type": "shutter-open",
+            "time": 14008,
+            "id": "inspection-second-leaf"
+          },
+          {
+            "type": "footstep",
+            "time": 14117
+          },
+          {
+            "type": "footstep",
+            "time": 14542
+          },
+          {
+            "type": "footstep",
+            "time": 14967
+          },
+          {
+            "type": "lift-arrival",
+            "time": 15392,
+            "id": "latched-freight-platform",
+            "value": "FAR"
+          },
+          {
+            "type": "footstep",
+            "time": 15392
+          },
+          {
+            "type": "shutter-open",
+            "time": 15400,
+            "id": "latched-freight-exit-leaf"
+          },
+          {
+            "type": "footstep",
+            "time": 15817
+          },
+          {
+            "type": "footstep",
+            "time": 16242
+          },
+          {
+            "type": "footstep",
+            "time": 16667
+          },
+          {
+            "type": "footstep",
+            "time": 17092
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "process-near-bank",
+          "normal": {
+            "x": -0.000009903178579406813,
+            "y": 1,
+            "z": 0.00000792254286352545
+          },
+          "witness": {
+            "x": 10.497243881225586,
+            "y": 0,
+            "z": 3.10933780670166
+          },
+          "applied": {
+            "x": -2.278381145970343e-7,
+            "y": -0.000017791384379961528,
+            "z": 0.00005594902177108452
+          },
+          "remaining": {
+            "x": -0.000014001153431308921,
+            "y": -0.0010933197336271405,
+            "z": 0.0034381907898932695
+          }
+        }
+      ]
+    }
+  ]
+}

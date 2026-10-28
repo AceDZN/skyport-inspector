@@ -1,0 +1,2774 @@
+{
+  "scope": "Unregistered authored-spawn native input path only. No actor/cargo/machine/history/save setters, resets or browser/completion claims. Native portal rays ignore glass; real visual framing remains browser-pending.",
+  "number": 27,
+  "contrast": true,
+  "error": null,
+  "sources": {
+    "src/core/levels/events.ts": "9b97067f6ca51003721fbbd02e5f37192d1309ee256851452b96bba98054412c",
+    "src/core/levels/events-english.ts": "17e56e3ba32955d1243f9591c5c2d7e33b4528310e0e6168813e0a9b2093cdf2",
+    "src/core/level.ts": "4dc6e0989e9a3ebe3a22f4a115ac5116073fec2e2d7d8777ff76f81f7b9db272",
+    "src/core/world.ts": "054fe818b86b3eda9d17d240b1f0aeebaa960aff1afe4669003df8131a60af23",
+    "src/core/machine-journal.ts": "b400ede48dd62294f3a212e504495a50f8ca2db93dc4efb4f5d66e6962108de1",
+    "src/systems.ts": "13d3dbf57ced0b8d18b499762d60282a82686cbc698f972c55dbff0c6b0ea67b",
+    "tests/core-events-routes.test.ts": "93418dd39be98185aebf3ad090fb6a31c790d8fb4804e8af34f46f251169c77e",
+    "tests/helpers/event-route.ts": "2b2457d666484a3122b511adc29253d72452b00b995d142e5bb7487f0ef86c87"
+  },
+  "ridingFrames": {},
+  "events": [
+    {
+      "type": "land"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "pickup",
+      "body": "power-cube"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "drop",
+      "body": "power-cube"
+    },
+    {
+      "type": "pad",
+      "pad": "power-pressure",
+      "crate": "power-cube"
+    },
+    {
+      "type": "contact",
+      "body": "power-cube",
+      "speed": 2.4606585555326537
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "portalA",
+      "surface": "reuse-source",
+      "point": [
+        10.959999999999999,
+        1.55,
+        8
+      ]
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "portalB",
+      "surface": "reuse-return",
+      "point": [
+        -5,
+        1.55,
+        -13.959999999999999
+      ]
+    },
+    {
+      "type": "receiver-power",
+      "id": "cargo-light"
+    },
+    {
+      "type": "shutter-open",
+      "id": "inspection-door"
+    },
+    {
+      "type": "shutter-open",
+      "id": "cargo-hatch"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "complete",
+      "chamber": 27
+    }
+  ],
+  "checkpoints": [
+    {
+      "label": "actual-authored-spawn",
+      "state": {
+        "room": "chamber-27",
+        "number": 27,
+        "mission": "Keep the inspection receiver powered. Leave the cube on POWER and use the inspection passage.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -0.000001322151547356043,
+            0.8647183179855347,
+            11.999998092651367
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [
+          {
+            "id": "power-cube",
+            "position": [
+              -6.000002861022949,
+              0.5498895645141602,
+              7.999998569488525
+            ],
+            "velocity": [
+              -0.00000507894083057181,
+              -7.46950433949678e-7,
+              -0.000004326888301875442
+            ],
+            "rotation": [
+              2.0005023770863772e-7,
+              3.890196758477016e-12,
+              -2.2703488866682164e-7,
+              1
+            ],
+            "angularVelocity": [
+              -0.000007823570740583818,
+              -4.4896828903283684e-14,
+              0.000009183378097077366
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "power-pressure",
+            "position": [
+              -3,
+              0.14,
+              8
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "lift-pressure",
+            "position": [
+              7,
+              0.14,
+              3
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "inspection-door",
+            "kind": "shutter",
+            "label": "INSPECTION",
+            "position": [
+              -11.12,
+              1.5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "balcony-exit-leaf",
+            "kind": "shutter",
+            "label": "BALCONY",
+            "position": [
+              5,
+              5.7,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "cargo-hatch",
+            "kind": "shutter",
+            "label": "HOLD-OPEN HATCH",
+            "position": [
+              5,
+              1.5,
+              0
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "reuse-lift",
+            "kind": "lift",
+            "label": "BALCONY",
+            "position": [
+              5,
+              -0.2,
+              -6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "reuse-source",
+            "position": [
+              10.985,
+              1.75,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          },
+          {
+            "id": "reuse-return",
+            "position": [
+              -5,
+              1.75,
+              -13.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 6,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "inspection-exit",
+            "label": "EXIT",
+            "position": [
+              -13.399999999999999,
+              1.5,
+              -10
+            ],
+            "size": [
+              3.5600000000000005,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "balcony-exit",
+            "label": "EXIT",
+            "position": [
+              5,
+              5.7,
+              -16.39
+            ],
+            "size": [
+              3.16,
+              3,
+              3.58
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "power-pressure": false,
+          "lift-pressure": false,
+          "closed:inspection-door": true,
+          "clear:inspection-door": false,
+          "safety:inspection-door": false,
+          "door-safety": false,
+          "moving:inspection-door": false,
+          "closed:balcony-exit-leaf": true,
+          "clear:balcony-exit-leaf": false,
+          "safety:balcony-exit-leaf": false,
+          "moving:balcony-exit-leaf": false,
+          "closed:cargo-hatch": true,
+          "clear:cargo-hatch": false,
+          "safety:cargo-hatch": false,
+          "moving:cargo-hatch": false,
+          "moving:reuse-lift": false,
+          "cargo-light": false
+        },
+        "journal": {
+          "reports": [],
+          "attempt": 1,
+          "rows": [],
+          "truncated": false,
+          "now": [
+            {
+              "id": "cargo-hatch",
+              "label": "HATCH",
+              "kind": "shutter",
+              "state": "CLOSED"
+            },
+            {
+              "id": "inspection-door",
+              "label": "INSPECTION DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            },
+            {
+              "id": "cargo-light",
+              "label": "RECEIVER",
+              "kind": "light",
+              "state": "DARK"
+            },
+            {
+              "id": "power-pressure",
+              "label": "POWER",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "lift-pressure",
+              "label": "LIFT",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "reuse-lift",
+              "label": "BALCONY LIFT",
+              "kind": "dock",
+              "state": "AT BASE"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          }
+        ]
+      }
+    },
+    {
+      "label": "actual-pressure-power-pressure",
+      "state": {
+        "room": "chamber-27",
+        "number": 27,
+        "mission": "Keep the inspection receiver powered. Leave the cube on POWER and use the inspection passage.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -4.832286834716797,
+            0.8643714189529419,
+            8.000509262084961
+          ],
+          "velocity": [
+            -1.5033687967185796e-14,
+            0,
+            2.5036041524240425e-15
+          ],
+          "yaw": -1.5732504569454246,
+          "pitch": -0.06949577754426504,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [
+          {
+            "id": "power-cube",
+            "position": [
+              -2.961275100708008,
+              0.6898895502090454,
+              8.00401496887207
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              1.9787903227097559e-7,
+              -0.00000753330141378683,
+              -2.2496992357901036e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "power-pressure",
+            "position": [
+              -3,
+              0.14,
+              8
+            ],
+            "pressed": true,
+            "crate": "power-cube"
+          },
+          {
+            "id": "lift-pressure",
+            "position": [
+              7,
+              0.14,
+              3
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "inspection-door",
+            "kind": "shutter",
+            "label": "INSPECTION",
+            "position": [
+              -11.12,
+              1.5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "balcony-exit-leaf",
+            "kind": "shutter",
+            "label": "BALCONY",
+            "position": [
+              5,
+              5.7,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "cargo-hatch",
+            "kind": "shutter",
+            "label": "HOLD-OPEN HATCH",
+            "position": [
+              5,
+              1.5,
+              0
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "reuse-lift",
+            "kind": "lift",
+            "label": "BALCONY",
+            "position": [
+              5,
+              -0.2,
+              -6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "reuse-source",
+            "position": [
+              10.985,
+              1.75,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          },
+          {
+            "id": "reuse-return",
+            "position": [
+              -5,
+              1.75,
+              -13.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 6,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "inspection-exit",
+            "label": "EXIT",
+            "position": [
+              -13.399999999999999,
+              1.5,
+              -10
+            ],
+            "size": [
+              3.5600000000000005,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "balcony-exit",
+            "label": "EXIT",
+            "position": [
+              5,
+              5.7,
+              -16.39
+            ],
+            "size": [
+              3.16,
+              3,
+              3.58
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "reuse-emitter": {
+            "segments": [
+              {
+                "from": [
+                  7,
+                  0.9,
+                  8
+                ],
+                "to": [
+                  10.999999761581421,
+                  0.9,
+                  8
+                ]
+              }
+            ],
+            "stop": "obstacle",
+            "obstacle": "reuse-east",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "power-pressure": true,
+          "lift-pressure": false,
+          "closed:inspection-door": true,
+          "clear:inspection-door": false,
+          "safety:inspection-door": false,
+          "door-safety": false,
+          "moving:inspection-door": false,
+          "closed:balcony-exit-leaf": true,
+          "clear:balcony-exit-leaf": false,
+          "safety:balcony-exit-leaf": false,
+          "moving:balcony-exit-leaf": false,
+          "closed:cargo-hatch": true,
+          "clear:cargo-hatch": false,
+          "safety:cargo-hatch": false,
+          "moving:cargo-hatch": false,
+          "moving:reuse-lift": false,
+          "cargo-light": false
+        },
+        "journal": {
+          "reports": [],
+          "attempt": 1,
+          "rows": [
+            {
+              "sequence": 1,
+              "time": 3.033333333333325,
+              "text": "Cargo reached POWER."
+            }
+          ],
+          "truncated": false,
+          "now": [
+            {
+              "id": "cargo-hatch",
+              "label": "HATCH",
+              "kind": "shutter",
+              "state": "CLOSED"
+            },
+            {
+              "id": "inspection-door",
+              "label": "INSPECTION DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            },
+            {
+              "id": "cargo-light",
+              "label": "RECEIVER",
+              "kind": "light",
+              "state": "DARK"
+            },
+            {
+              "id": "power-pressure",
+              "label": "POWER",
+              "kind": "pressure",
+              "state": "PRESSED",
+              "cargo": true
+            },
+            {
+              "id": "lift-pressure",
+              "label": "LIFT",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "reuse-lift",
+              "label": "BALCONY LIFT",
+              "kind": "dock",
+              "state": "AT BASE"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "footstep",
+            "time": 508
+          },
+          {
+            "type": "footstep",
+            "time": 933
+          },
+          {
+            "type": "footstep",
+            "time": 1358
+          },
+          {
+            "type": "footstep",
+            "time": 1783
+          },
+          {
+            "type": "pickup",
+            "time": 2242,
+            "body": "power-cube"
+          },
+          {
+            "type": "footstep",
+            "time": 2258
+          },
+          {
+            "type": "drop",
+            "time": 2892,
+            "body": "power-cube"
+          },
+          {
+            "type": "pad",
+            "time": 3042,
+            "pad": "power-pressure",
+            "crate": "power-cube"
+          },
+          {
+            "type": "contact",
+            "time": 3050,
+            "body": "power-cube",
+            "speed": 2.4606585555326537
+          }
+        ]
+      }
+    },
+    {
+      "label": "actual-latched-and-maintained-leaves-open",
+      "state": {
+        "room": "chamber-27",
+        "number": 27,
+        "mission": "Keep the inspection receiver powered. Leave the cube on POWER and use the inspection passage.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -1.0955103635787964,
+            0.8645555377006531,
+            12.514957427978516
+          ],
+          "velocity": [
+            -1.1304591857592962e-7,
+            0,
+            1.765072622168207e-8
+          ],
+          "yaw": 0.14749167568450783,
+          "pitch": 0.0013076470191065595,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "reuse-source",
+            "position": [
+              10.959999999999999,
+              1.55,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "reuse-return",
+            "position": [
+              -5,
+              1.55,
+              -13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "power-cube",
+            "position": [
+              -2.961275100708008,
+              0.6898895502090454,
+              8.00401496887207
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              1.9787903227097559e-7,
+              -0.00000753330141378683,
+              -2.2496992357901036e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "power-pressure",
+            "position": [
+              -3,
+              0.14,
+              8
+            ],
+            "pressed": true,
+            "crate": "power-cube"
+          },
+          {
+            "id": "lift-pressure",
+            "position": [
+              7,
+              0.14,
+              3
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "inspection-door",
+            "kind": "shutter",
+            "label": "INSPECTION",
+            "position": [
+              -11.12,
+              4.999999999999995,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": true,
+            "progress": 0.9999999999999986,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "balcony-exit-leaf",
+            "kind": "shutter",
+            "label": "BALCONY",
+            "position": [
+              5,
+              5.7,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "cargo-hatch",
+            "kind": "shutter",
+            "label": "HOLD-OPEN HATCH",
+            "position": [
+              5,
+              4.999999999999995,
+              0
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 0.9999999999999986,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "reuse-lift",
+            "kind": "lift",
+            "label": "BALCONY",
+            "position": [
+              5,
+              -0.2,
+              -6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "reuse-source",
+            "position": [
+              10.985,
+              1.75,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          },
+          {
+            "id": "reuse-return",
+            "position": [
+              -5,
+              1.75,
+              -13.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 6,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "inspection-exit",
+            "label": "EXIT",
+            "position": [
+              -13.399999999999999,
+              1.5,
+              -10
+            ],
+            "size": [
+              3.5600000000000005,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "balcony-exit",
+            "label": "EXIT",
+            "position": [
+              5,
+              5.7,
+              -16.39
+            ],
+            "size": [
+              3.16,
+              3,
+              3.58
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "reuse-emitter": {
+            "segments": [
+              {
+                "from": [
+                  7,
+                  0.9,
+                  8
+                ],
+                "to": [
+                  10.959999999999999,
+                  0.9,
+                  8
+                ],
+                "portal": "0"
+              },
+              {
+                "from": [
+                  -5,
+                  0.9,
+                  -13.959
+                ],
+                "to": [
+                  -5,
+                  0.9,
+                  -7.840000000000001
+                ]
+              }
+            ],
+            "stop": "receiver",
+            "receiver": "cargo-light",
+            "hops": 1
+          }
+        },
+        "signals": {
+          "power-pressure": true,
+          "lift-pressure": false,
+          "closed:inspection-door": false,
+          "clear:inspection-door": true,
+          "safety:inspection-door": false,
+          "door-safety": false,
+          "moving:inspection-door": true,
+          "closed:balcony-exit-leaf": true,
+          "clear:balcony-exit-leaf": false,
+          "safety:balcony-exit-leaf": false,
+          "moving:balcony-exit-leaf": false,
+          "closed:cargo-hatch": false,
+          "clear:cargo-hatch": true,
+          "safety:cargo-hatch": false,
+          "moving:cargo-hatch": true,
+          "moving:reuse-lift": false,
+          "cargo-light": true
+        },
+        "journal": {
+          "reports": [],
+          "attempt": 1,
+          "rows": [
+            {
+              "sequence": 1,
+              "time": 3.033333333333325,
+              "text": "Cargo reached POWER."
+            },
+            {
+              "sequence": 2,
+              "time": 10.100000000000067,
+              "text": "RECEIVER received light."
+            }
+          ],
+          "truncated": false,
+          "now": [
+            {
+              "id": "cargo-hatch",
+              "label": "HATCH",
+              "kind": "shutter",
+              "state": "MOVING"
+            },
+            {
+              "id": "inspection-door",
+              "label": "INSPECTION DOOR",
+              "kind": "shutter",
+              "state": "MOVING"
+            },
+            {
+              "id": "cargo-light",
+              "label": "RECEIVER",
+              "kind": "light",
+              "state": "LIT"
+            },
+            {
+              "id": "power-pressure",
+              "label": "POWER",
+              "kind": "pressure",
+              "state": "PRESSED",
+              "cargo": true
+            },
+            {
+              "id": "lift-pressure",
+              "label": "LIFT",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "reuse-lift",
+              "label": "BALCONY LIFT",
+              "kind": "dock",
+              "state": "AT BASE"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 5383
+          },
+          {
+            "type": "footstep",
+            "time": 5808
+          },
+          {
+            "type": "footstep",
+            "time": 6233
+          },
+          {
+            "type": "footstep",
+            "time": 6658
+          },
+          {
+            "type": "footstep",
+            "time": 7083
+          },
+          {
+            "type": "footstep",
+            "time": 7508
+          },
+          {
+            "type": "portalA",
+            "time": 7858,
+            "surface": "reuse-source",
+            "point": [
+              10.959999999999999,
+              1.55,
+              8
+            ]
+          },
+          {
+            "type": "footstep",
+            "time": 7933
+          },
+          {
+            "type": "footstep",
+            "time": 8358
+          },
+          {
+            "type": "footstep",
+            "time": 8783
+          },
+          {
+            "type": "footstep",
+            "time": 9208
+          },
+          {
+            "type": "footstep",
+            "time": 9633
+          },
+          {
+            "type": "portalB",
+            "time": 10092,
+            "surface": "reuse-return",
+            "point": [
+              -5,
+              1.55,
+              -13.959999999999999
+            ]
+          },
+          {
+            "type": "receiver-power",
+            "time": 10100,
+            "id": "cargo-light"
+          },
+          {
+            "type": "shutter-open",
+            "time": 10100,
+            "id": "inspection-door"
+          },
+          {
+            "type": "shutter-open",
+            "time": 10100,
+            "id": "cargo-hatch"
+          }
+        ]
+      }
+    },
+    {
+      "label": "actual-physical-completion",
+      "state": {
+        "room": "chamber-27",
+        "number": 27,
+        "mission": "Keep the inspection receiver powered. Leave the cube on POWER and use the inspection passage.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -11.624307632446289,
+            0.8652381896972656,
+            -10.041539192199707
+          ],
+          "velocity": [
+            -4.799266193570769,
+            0,
+            0.08390805925887343
+          ],
+          "yaw": 1.5882795266901748,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "reuse-source",
+            "position": [
+              10.959999999999999,
+              1.55,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "reuse-return",
+            "position": [
+              -5,
+              1.55,
+              -13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "power-cube",
+            "position": [
+              -2.961275100708008,
+              0.6898895502090454,
+              8.00401496887207
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              1.9787903227097559e-7,
+              -0.00000753330141378683,
+              -2.2496992357901036e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "power-pressure",
+            "position": [
+              -3,
+              0.14,
+              8
+            ],
+            "pressed": true,
+            "crate": "power-cube"
+          },
+          {
+            "id": "lift-pressure",
+            "position": [
+              7,
+              0.14,
+              3
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "inspection-door",
+            "kind": "shutter",
+            "label": "INSPECTION",
+            "position": [
+              -11.12,
+              5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "balcony-exit-leaf",
+            "kind": "shutter",
+            "label": "BALCONY",
+            "position": [
+              5,
+              5.7,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "cargo-hatch",
+            "kind": "shutter",
+            "label": "HOLD-OPEN HATCH",
+            "position": [
+              5,
+              5,
+              0
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "reuse-lift",
+            "kind": "lift",
+            "label": "BALCONY",
+            "position": [
+              5,
+              -0.2,
+              -6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "reuse-source",
+            "position": [
+              10.985,
+              1.75,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          },
+          {
+            "id": "reuse-return",
+            "position": [
+              -5,
+              1.75,
+              -13.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 6,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "inspection-exit",
+            "label": "EXIT",
+            "position": [
+              -13.399999999999999,
+              1.5,
+              -10
+            ],
+            "size": [
+              3.5600000000000005,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "balcony-exit",
+            "label": "EXIT",
+            "position": [
+              5,
+              5.7,
+              -16.39
+            ],
+            "size": [
+              3.16,
+              3,
+              3.58
+            ]
+          }
+        ],
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "inspection-exit",
+          "reason": "",
+          "events": [
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "footstep",
+              "time": 508
+            },
+            {
+              "type": "footstep",
+              "time": 933
+            },
+            {
+              "type": "footstep",
+              "time": 1358
+            },
+            {
+              "type": "footstep",
+              "time": 1783
+            },
+            {
+              "type": "pickup",
+              "time": 2242,
+              "body": "power-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 2258
+            },
+            {
+              "type": "drop",
+              "time": 2892,
+              "body": "power-cube"
+            },
+            {
+              "type": "pad",
+              "time": 3042,
+              "pad": "power-pressure",
+              "crate": "power-cube"
+            },
+            {
+              "type": "contact",
+              "time": 3050,
+              "body": "power-cube",
+              "speed": 2.4606585555326537
+            },
+            {
+              "type": "footstep",
+              "time": 4108
+            },
+            {
+              "type": "footstep",
+              "time": 4533
+            },
+            {
+              "type": "footstep",
+              "time": 4958
+            },
+            {
+              "type": "footstep",
+              "time": 5383
+            },
+            {
+              "type": "footstep",
+              "time": 5808
+            },
+            {
+              "type": "footstep",
+              "time": 6233
+            },
+            {
+              "type": "footstep",
+              "time": 6658
+            },
+            {
+              "type": "footstep",
+              "time": 7083
+            },
+            {
+              "type": "footstep",
+              "time": 7508
+            },
+            {
+              "type": "portalA",
+              "time": 7858,
+              "surface": "reuse-source",
+              "point": [
+                10.959999999999999,
+                1.55,
+                8
+              ]
+            },
+            {
+              "type": "footstep",
+              "time": 7933
+            },
+            {
+              "type": "footstep",
+              "time": 8358
+            },
+            {
+              "type": "footstep",
+              "time": 8783
+            },
+            {
+              "type": "footstep",
+              "time": 9208
+            },
+            {
+              "type": "footstep",
+              "time": 9633
+            },
+            {
+              "type": "portalB",
+              "time": 10092,
+              "surface": "reuse-return",
+              "point": [
+                -5,
+                1.55,
+                -13.959999999999999
+              ]
+            },
+            {
+              "type": "receiver-power",
+              "time": 10100,
+              "id": "cargo-light"
+            },
+            {
+              "type": "shutter-open",
+              "time": 10100,
+              "id": "inspection-door"
+            },
+            {
+              "type": "shutter-open",
+              "time": 10100,
+              "id": "cargo-hatch"
+            },
+            {
+              "type": "footstep",
+              "time": 10900
+            },
+            {
+              "type": "footstep",
+              "time": 11325
+            },
+            {
+              "type": "footstep",
+              "time": 11750
+            },
+            {
+              "type": "footstep",
+              "time": 12175
+            },
+            {
+              "type": "footstep",
+              "time": 12600
+            },
+            {
+              "type": "footstep",
+              "time": 13025
+            },
+            {
+              "type": "footstep",
+              "time": 13450
+            },
+            {
+              "type": "footstep",
+              "time": 13875
+            },
+            {
+              "type": "footstep",
+              "time": 14300
+            },
+            {
+              "type": "footstep",
+              "time": 14725
+            },
+            {
+              "type": "footstep",
+              "time": 15150
+            },
+            {
+              "type": "footstep",
+              "time": 15575
+            },
+            {
+              "type": "footstep",
+              "time": 16000
+            },
+            {
+              "type": "footstep",
+              "time": 16425
+            },
+            {
+              "type": "footstep",
+              "time": 16850
+            },
+            {
+              "type": "footstep",
+              "time": 17275
+            },
+            {
+              "type": "footstep",
+              "time": 17700
+            },
+            {
+              "type": "footstep",
+              "time": 18125
+            },
+            {
+              "type": "footstep",
+              "time": 18550
+            },
+            {
+              "type": "footstep",
+              "time": 18975
+            },
+            {
+              "type": "footstep",
+              "time": 19467
+            },
+            {
+              "type": "footstep",
+              "time": 19892
+            }
+          ],
+          "mechanisms": [
+            "cargo",
+            "buttons",
+            "beams",
+            "shutters"
+          ]
+        },
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "reuse-emitter": {
+            "segments": [
+              {
+                "from": [
+                  7,
+                  0.9,
+                  8
+                ],
+                "to": [
+                  10.959999999999999,
+                  0.9,
+                  8
+                ],
+                "portal": "0"
+              },
+              {
+                "from": [
+                  -5,
+                  0.9,
+                  -13.959
+                ],
+                "to": [
+                  -5,
+                  0.9,
+                  -7.840000000000001
+                ]
+              }
+            ],
+            "stop": "receiver",
+            "receiver": "cargo-light",
+            "hops": 1
+          }
+        },
+        "signals": {
+          "power-pressure": true,
+          "lift-pressure": false,
+          "closed:inspection-door": false,
+          "clear:inspection-door": true,
+          "safety:inspection-door": false,
+          "door-safety": false,
+          "moving:inspection-door": false,
+          "closed:balcony-exit-leaf": true,
+          "clear:balcony-exit-leaf": false,
+          "safety:balcony-exit-leaf": false,
+          "moving:balcony-exit-leaf": false,
+          "closed:cargo-hatch": false,
+          "clear:cargo-hatch": true,
+          "safety:cargo-hatch": false,
+          "moving:cargo-hatch": false,
+          "moving:reuse-lift": false,
+          "cargo-light": true
+        },
+        "journal": {
+          "reports": [],
+          "attempt": 1,
+          "rows": [
+            {
+              "sequence": 1,
+              "time": 3.033333333333325,
+              "text": "Cargo reached POWER."
+            },
+            {
+              "sequence": 2,
+              "time": 10.100000000000067,
+              "text": "RECEIVER received light."
+            },
+            {
+              "sequence": 3,
+              "time": 10.900000000000022,
+              "text": "HATCH opened fully."
+            },
+            {
+              "sequence": 4,
+              "time": 10.900000000000022,
+              "text": "INSPECTION DOOR opened fully."
+            }
+          ],
+          "truncated": false,
+          "now": [
+            {
+              "id": "cargo-hatch",
+              "label": "HATCH",
+              "kind": "shutter",
+              "state": "OPEN"
+            },
+            {
+              "id": "inspection-door",
+              "label": "INSPECTION DOOR",
+              "kind": "shutter",
+              "state": "OPEN"
+            },
+            {
+              "id": "cargo-light",
+              "label": "RECEIVER",
+              "kind": "light",
+              "state": "LIT"
+            },
+            {
+              "id": "power-pressure",
+              "label": "POWER",
+              "kind": "pressure",
+              "state": "PRESSED",
+              "cargo": true
+            },
+            {
+              "id": "lift-pressure",
+              "label": "LIFT",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "reuse-lift",
+              "label": "BALCONY LIFT",
+              "kind": "dock",
+              "state": "AT BASE"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 13875
+          },
+          {
+            "type": "footstep",
+            "time": 14300
+          },
+          {
+            "type": "footstep",
+            "time": 14725
+          },
+          {
+            "type": "footstep",
+            "time": 15150
+          },
+          {
+            "type": "footstep",
+            "time": 15575
+          },
+          {
+            "type": "footstep",
+            "time": 16000
+          },
+          {
+            "type": "footstep",
+            "time": 16425
+          },
+          {
+            "type": "footstep",
+            "time": 16850
+          },
+          {
+            "type": "footstep",
+            "time": 17275
+          },
+          {
+            "type": "footstep",
+            "time": 17700
+          },
+          {
+            "type": "footstep",
+            "time": 18125
+          },
+          {
+            "type": "footstep",
+            "time": 18550
+          },
+          {
+            "type": "footstep",
+            "time": 18975
+          },
+          {
+            "type": "footstep",
+            "time": 19467
+          },
+          {
+            "type": "footstep",
+            "time": 19892
+          },
+          {
+            "type": "complete",
+            "time": 20300,
+            "chamber": 27
+          }
+        ]
+      }
+    },
+    {
+      "label": "final",
+      "state": {
+        "room": "chamber-27",
+        "number": 27,
+        "mission": "Keep the inspection receiver powered. Leave the cube on POWER and use the inspection passage.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -11.624307632446289,
+            0.8652381896972656,
+            -10.041539192199707
+          ],
+          "velocity": [
+            -4.799266193570769,
+            0,
+            0.08390805925887343
+          ],
+          "yaw": 1.5882795266901748,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "reuse-source",
+            "position": [
+              10.959999999999999,
+              1.55,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "reuse-return",
+            "position": [
+              -5,
+              1.55,
+              -13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "power-cube",
+            "position": [
+              -2.961275100708008,
+              0.6898895502090454,
+              8.00401496887207
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              1.9787903227097559e-7,
+              -0.00000753330141378683,
+              -2.2496992357901036e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "power-pressure",
+            "position": [
+              -3,
+              0.14,
+              8
+            ],
+            "pressed": true,
+            "crate": "power-cube"
+          },
+          {
+            "id": "lift-pressure",
+            "position": [
+              7,
+              0.14,
+              3
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "inspection-door",
+            "kind": "shutter",
+            "label": "INSPECTION",
+            "position": [
+              -11.12,
+              5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "balcony-exit-leaf",
+            "kind": "shutter",
+            "label": "BALCONY",
+            "position": [
+              5,
+              5.7,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "cargo-hatch",
+            "kind": "shutter",
+            "label": "HOLD-OPEN HATCH",
+            "position": [
+              5,
+              5,
+              0
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "reuse-lift",
+            "kind": "lift",
+            "label": "BALCONY",
+            "position": [
+              5,
+              -0.2,
+              -6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "reuse-source",
+            "position": [
+              10.985,
+              1.75,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          },
+          {
+            "id": "reuse-return",
+            "position": [
+              -5,
+              1.75,
+              -13.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 6,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "inspection-exit",
+            "label": "EXIT",
+            "position": [
+              -13.399999999999999,
+              1.5,
+              -10
+            ],
+            "size": [
+              3.5600000000000005,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "balcony-exit",
+            "label": "EXIT",
+            "position": [
+              5,
+              5.7,
+              -16.39
+            ],
+            "size": [
+              3.16,
+              3,
+              3.58
+            ]
+          }
+        ],
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "inspection-exit",
+          "reason": "",
+          "events": [
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "footstep",
+              "time": 508
+            },
+            {
+              "type": "footstep",
+              "time": 933
+            },
+            {
+              "type": "footstep",
+              "time": 1358
+            },
+            {
+              "type": "footstep",
+              "time": 1783
+            },
+            {
+              "type": "pickup",
+              "time": 2242,
+              "body": "power-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 2258
+            },
+            {
+              "type": "drop",
+              "time": 2892,
+              "body": "power-cube"
+            },
+            {
+              "type": "pad",
+              "time": 3042,
+              "pad": "power-pressure",
+              "crate": "power-cube"
+            },
+            {
+              "type": "contact",
+              "time": 3050,
+              "body": "power-cube",
+              "speed": 2.4606585555326537
+            },
+            {
+              "type": "footstep",
+              "time": 4108
+            },
+            {
+              "type": "footstep",
+              "time": 4533
+            },
+            {
+              "type": "footstep",
+              "time": 4958
+            },
+            {
+              "type": "footstep",
+              "time": 5383
+            },
+            {
+              "type": "footstep",
+              "time": 5808
+            },
+            {
+              "type": "footstep",
+              "time": 6233
+            },
+            {
+              "type": "footstep",
+              "time": 6658
+            },
+            {
+              "type": "footstep",
+              "time": 7083
+            },
+            {
+              "type": "footstep",
+              "time": 7508
+            },
+            {
+              "type": "portalA",
+              "time": 7858,
+              "surface": "reuse-source",
+              "point": [
+                10.959999999999999,
+                1.55,
+                8
+              ]
+            },
+            {
+              "type": "footstep",
+              "time": 7933
+            },
+            {
+              "type": "footstep",
+              "time": 8358
+            },
+            {
+              "type": "footstep",
+              "time": 8783
+            },
+            {
+              "type": "footstep",
+              "time": 9208
+            },
+            {
+              "type": "footstep",
+              "time": 9633
+            },
+            {
+              "type": "portalB",
+              "time": 10092,
+              "surface": "reuse-return",
+              "point": [
+                -5,
+                1.55,
+                -13.959999999999999
+              ]
+            },
+            {
+              "type": "receiver-power",
+              "time": 10100,
+              "id": "cargo-light"
+            },
+            {
+              "type": "shutter-open",
+              "time": 10100,
+              "id": "inspection-door"
+            },
+            {
+              "type": "shutter-open",
+              "time": 10100,
+              "id": "cargo-hatch"
+            },
+            {
+              "type": "footstep",
+              "time": 10900
+            },
+            {
+              "type": "footstep",
+              "time": 11325
+            },
+            {
+              "type": "footstep",
+              "time": 11750
+            },
+            {
+              "type": "footstep",
+              "time": 12175
+            },
+            {
+              "type": "footstep",
+              "time": 12600
+            },
+            {
+              "type": "footstep",
+              "time": 13025
+            },
+            {
+              "type": "footstep",
+              "time": 13450
+            },
+            {
+              "type": "footstep",
+              "time": 13875
+            },
+            {
+              "type": "footstep",
+              "time": 14300
+            },
+            {
+              "type": "footstep",
+              "time": 14725
+            },
+            {
+              "type": "footstep",
+              "time": 15150
+            },
+            {
+              "type": "footstep",
+              "time": 15575
+            },
+            {
+              "type": "footstep",
+              "time": 16000
+            },
+            {
+              "type": "footstep",
+              "time": 16425
+            },
+            {
+              "type": "footstep",
+              "time": 16850
+            },
+            {
+              "type": "footstep",
+              "time": 17275
+            },
+            {
+              "type": "footstep",
+              "time": 17700
+            },
+            {
+              "type": "footstep",
+              "time": 18125
+            },
+            {
+              "type": "footstep",
+              "time": 18550
+            },
+            {
+              "type": "footstep",
+              "time": 18975
+            },
+            {
+              "type": "footstep",
+              "time": 19467
+            },
+            {
+              "type": "footstep",
+              "time": 19892
+            }
+          ],
+          "mechanisms": [
+            "cargo",
+            "buttons",
+            "beams",
+            "shutters"
+          ]
+        },
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "reuse-emitter": {
+            "segments": [
+              {
+                "from": [
+                  7,
+                  0.9,
+                  8
+                ],
+                "to": [
+                  10.959999999999999,
+                  0.9,
+                  8
+                ],
+                "portal": "0"
+              },
+              {
+                "from": [
+                  -5,
+                  0.9,
+                  -13.959
+                ],
+                "to": [
+                  -5,
+                  0.9,
+                  -7.840000000000001
+                ]
+              }
+            ],
+            "stop": "receiver",
+            "receiver": "cargo-light",
+            "hops": 1
+          }
+        },
+        "signals": {
+          "power-pressure": true,
+          "lift-pressure": false,
+          "closed:inspection-door": false,
+          "clear:inspection-door": true,
+          "safety:inspection-door": false,
+          "door-safety": false,
+          "moving:inspection-door": false,
+          "closed:balcony-exit-leaf": true,
+          "clear:balcony-exit-leaf": false,
+          "safety:balcony-exit-leaf": false,
+          "moving:balcony-exit-leaf": false,
+          "closed:cargo-hatch": false,
+          "clear:cargo-hatch": true,
+          "safety:cargo-hatch": false,
+          "moving:cargo-hatch": false,
+          "moving:reuse-lift": false,
+          "cargo-light": true
+        },
+        "journal": {
+          "reports": [],
+          "attempt": 1,
+          "rows": [
+            {
+              "sequence": 1,
+              "time": 3.033333333333325,
+              "text": "Cargo reached POWER."
+            },
+            {
+              "sequence": 2,
+              "time": 10.100000000000067,
+              "text": "RECEIVER received light."
+            },
+            {
+              "sequence": 3,
+              "time": 10.900000000000022,
+              "text": "HATCH opened fully."
+            },
+            {
+              "sequence": 4,
+              "time": 10.900000000000022,
+              "text": "INSPECTION DOOR opened fully."
+            }
+          ],
+          "truncated": false,
+          "now": [
+            {
+              "id": "cargo-hatch",
+              "label": "HATCH",
+              "kind": "shutter",
+              "state": "OPEN"
+            },
+            {
+              "id": "inspection-door",
+              "label": "INSPECTION DOOR",
+              "kind": "shutter",
+              "state": "OPEN"
+            },
+            {
+              "id": "cargo-light",
+              "label": "RECEIVER",
+              "kind": "light",
+              "state": "LIT"
+            },
+            {
+              "id": "power-pressure",
+              "label": "POWER",
+              "kind": "pressure",
+              "state": "PRESSED",
+              "cargo": true
+            },
+            {
+              "id": "lift-pressure",
+              "label": "LIFT",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "reuse-lift",
+              "label": "BALCONY LIFT",
+              "kind": "dock",
+              "state": "AT BASE"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 13875
+          },
+          {
+            "type": "footstep",
+            "time": 14300
+          },
+          {
+            "type": "footstep",
+            "time": 14725
+          },
+          {
+            "type": "footstep",
+            "time": 15150
+          },
+          {
+            "type": "footstep",
+            "time": 15575
+          },
+          {
+            "type": "footstep",
+            "time": 16000
+          },
+          {
+            "type": "footstep",
+            "time": 16425
+          },
+          {
+            "type": "footstep",
+            "time": 16850
+          },
+          {
+            "type": "footstep",
+            "time": 17275
+          },
+          {
+            "type": "footstep",
+            "time": 17700
+          },
+          {
+            "type": "footstep",
+            "time": 18125
+          },
+          {
+            "type": "footstep",
+            "time": 18550
+          },
+          {
+            "type": "footstep",
+            "time": 18975
+          },
+          {
+            "type": "footstep",
+            "time": 19467
+          },
+          {
+            "type": "footstep",
+            "time": 19892
+          },
+          {
+            "type": "complete",
+            "time": 20300,
+            "chamber": 27
+          }
+        ]
+      }
+    }
+  ]
+}

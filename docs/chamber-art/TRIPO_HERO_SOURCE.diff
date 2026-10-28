@@ -1,0 +1,174 @@
+--- a/src/chamber-scene.ts
++++ b/src/chamber-scene.ts
+@@ -8,13 +8,14 @@
+ import {poseMatrix,portalMatrix,V,type RiftWorld} from './physics';
+ import type {CoreWorld} from './core/world';
+ import {PortalRenderer} from './core/portal-renderer';
++import {preloadHeroAssets,heroAssetStatus,requireHeroAssets,instantiateHero,cloneHeroMaterial,heroBounds,disposeHeroAssets,type HeroInstance} from './hero-assets';
+ /** Read adapter only: the Rapier core owns physics; RiftScene receives its existing render shape. */
+ export type ChamberSceneWorld=CoreWorld;
+ import type {DeviceState} from './systems';
+ 
+ type Batch={geometry:T.BufferGeometry;material:T.Material;matrices:T.Matrix4[]};
+ type DoorArt={state:DeviceState;leaf:T.Group;indicators:T.MeshStandardMaterial[];inputs:{id:string;lamp:T.MeshStandardMaterial}[]};
+-type CratePieces={source:T.Material[];copies:{group:T.Group;materials:T.Material[]}[]};
++type CratePieces={source:T.Material[];copies:{group:T.Group;materials:T.Material[]}[];release?:()=>void};
+ type ButtonArt={top:T.Mesh;lights:T.MeshStandardMaterial;restY:number;plungers?:T.Group;plungerRestY:number;flush?:boolean};
+ type MachineDisplay={canvas:HTMLCanvasElement;texture:T.CanvasTexture;key:string;title:string};
+ type BeltArt={canvas:HTMLCanvasElement;texture:T.CanvasTexture;direction:T.Vector3;reversed:boolean;lastTime:number;rollers:T.Mesh[];radius:number};
+@@ -52,17 +53,19 @@
+  declare private viewScene:T.Scene|undefined;
+  declare private viewCamera:T.PerspectiveCamera|undefined;
+  declare private instrument:T.Group|undefined;
+- declare private emitterCore:T.MeshStandardMaterial|undefined;
+- declare private instrumentA:T.MeshStandardMaterial|undefined;
+- declare private instrumentB:T.MeshStandardMaterial|undefined;
+- declare private instrumentEmitters:T.Group[];
++ declare private heroInstances:Set<HeroInstance>;
++ declare private heroGun:HeroInstance|undefined;
+  declare private lastPortalSignature:string|undefined;
+  declare private recoil:number;
+  declare private artClock:number;
+  declare private pulse:number;
+  declare private shotIndex:number;
+ 
++ static preloadHeroAssets(){return preloadHeroAssets();}
++ static heroAssetStatus(){return heroAssetStatus();}
++ static disposeHeroAssets(){disposeHeroAssets();}
+  constructor(canvas:HTMLCanvasElement,world:ChamberSceneWorld){
++  requireHeroAssets();
+   super(canvas,world as unknown as RiftWorld);
+   this.artClock=0;this.recoil=0;this.pulse=0;this.shotIndex=0;this.buildInstrument();this.resize();
+  }
+@@ -386,7 +389,7 @@
+   }
+  }
+  /** Read-only renderer diagnostics; loaded means an attached actual model, never merely a GET. */
+- assetDiagnostics(){return JSON.parse(JSON.stringify({...this.ownedProjectorDiag,lateDiscards:this.ownedProjectorLateDiscards??0}));}
++ assetDiagnostics(){return JSON.parse(JSON.stringify({...this.ownedProjectorDiag,lateDiscards:this.ownedProjectorLateDiscards??0,heroes:this.heroAssetDiagnostics()}));}
+  disposeOwnedAssets(){this.clearOwnedProjector();}
+  private disposeImportedAsset(root:T.Object3D){
+   const geometry=new Set<T.BufferGeometry>(),materials=new Set<T.Material>(),textures=new Set<T.Texture>();root.traverse(o=>{if(o instanceof T.Mesh){geometry.add(o.geometry);for(const m of Array.isArray(o.material)?o.material:[o.material]){materials.add(m);for(const value of Object.values(m))if(value instanceof T.Texture)textures.add(value);}}});root.removeFromParent();for(const g of geometry)g.dispose();for(const m of materials)m.dispose();for(const t of textures){t.dispose();(t.image as {close?:()=>void}|undefined)?.close?.();}
+@@ -563,7 +566,14 @@
+   }
+   positions.needsUpdate=colors.needsUpdate=edges.needsUpdate=true;art.patch.geometry.setDrawRange(0,count);art.outline.geometry.setDrawRange(0,edgeCount);art.patch.material.opacity=.26*art.opacity;art.outline.material.opacity=.58*art.opacity;
+  }
++ private releaseHeroInstances(){this.heroInstances?.forEach(instance=>instance.dispose());this.heroInstances=new Set();this.heroGun=undefined;}
++ heroAssetDiagnostics(){
++  const meshes=(root:T.Object3D|undefined)=>{const list:Record<string,unknown>[]=[];root?.traverse(o=>{if(o instanceof T.Mesh&&o.userData.heroAsset)list.push({id:o.id,uuid:o.uuid,name:o.name,source:o.userData.originalTripoMesh,asset:o.userData.heroAsset,vertices:o.geometry.getAttribute('position').count,triangles:(o.geometry.index?.count??o.geometry.getAttribute('position').count)/3});});return list;};
++  const status=heroAssetStatus(),gun=status.assets.projector,muzzle=gun.muzzleLocal&&this.instrument?V(...gun.muzzleLocal as[number,number,number]).applyMatrix4(this.instrument.matrixWorld):undefined,axis=gun.axisLocal&&this.instrument?V(...gun.axisLocal as[number,number,number]).transformDirection(this.instrument.matrixWorld):undefined;
++  return{...status,gun:{attached:!!this.heroGun,meshes:meshes(this.heroGun?.root),muzzleInView:muzzle?.toArray(),muzzleInWorld:muzzle?.clone().applyMatrix4(this.camera.matrixWorld).toArray(),axisInView:axis?.toArray(),axisInWorld:axis?.clone().transformDirection(this.camera.matrixWorld).toArray()},cargo:[...(this.crateVisuals??new Map<string,T.Group>())].map(([id,root])=>({id,meshes:meshes(root),portalCopies:this.cratePieces?.get(id)?.copies.map(copy=>({visible:copy.group.visible,meshes:meshes(copy.group)}))}))};
++ }
+  override build(){
++  this.releaseHeroInstances();
+   this.clearOwnedProjector();
+   this.portalRenderer?.dispose();this.portalRenderer=undefined;
+   if(this.viewScene)this.disposeObject(this.viewScene);this.viewScene=undefined;this.viewCamera=undefined;this.instrument=undefined;
+@@ -572,43 +582,15 @@
+  }
+  /** Original renderer assets are constructed synchronously; no legacy cargo replacement race. */
+  override async loadModels(){}
+- private chamferPlate(width:number,height:number,depth:number,cut:number,slots=false){
+-  const points=(w:number,h:number,c:number)=>[[-w/2+c,-h/2],[w/2-c,-h/2],[w/2,-h/2+c],[w/2,h/2-c],[w/2-c,h/2],[-w/2+c,h/2],[-w/2,h/2-c],[-w/2,-h/2+c]];
+-  const shape=new T.Shape(points(width,height,cut).map(([x,y])=>new T.Vector2(x,y)));
+-  if(slots)for(const y of[-.225,.225]){const path=new T.Path(points(.40,.070,.018).reverse().map(([x,v])=>new T.Vector2(x,v+y)));shape.holes.push(path);}
+-  return this.geo(new T.ExtrudeGeometry(shape,{depth,bevelEnabled:true,bevelSegments:2,steps:1,bevelSize:.006,bevelThickness:.004,curveSegments:1}));
+- }
+- private heroCube(group:T.Group){
+-  // Normalized cubic envelope: every face detail, corner and contact stays in [-.5,.5].
+-  const ceramic=this.material(new T.MeshPhysicalMaterial({color:0xe4dfd0,roughness:.43,metalness:.08,clearcoat:.22,clearcoatRoughness:.3,normalMap:this.finishes.white.normalMap,normalScale:new T.Vector2(.17,.17)})),metal=this.material(new T.MeshStandardMaterial({color:0x667078,roughness:.38,metalness:.78})),rubber=this.material(new T.MeshStandardMaterial({color:0x22292d,roughness:.78,metalness:.08})),brass=this.material(new T.MeshStandardMaterial({color:0xb49456,roughness:.32,metalness:.78})),dark=this.material(new T.MeshStandardMaterial({color:0x11191e,roughness:.65,metalness:.3}));
+-  this.part(group,[0,0,0],[.90,.90,.90],rubber,.055).name='hero-cube-core';
+-  for(const x of[-1,1])for(const y of[-1,1])for(const z of[-1,1])this.part(group,[x*.39,y*.39,z*.39],[.22,.22,.22],rubber,.04).name='hero-cube-corner';
+-  const trim=this.material(new T.MeshStandardMaterial({color:0x587985,emissive:0x17333d,emissiveIntensity:.12,roughness:.35,metalness:.6}));
+-  const cassette=this.chamferPlate(.70,.70,.025,.065,true),bezel=this.chamferPlate(.785,.785,.028,.08),screwGeometry=this.geo(new T.CylinderGeometry(.011,.011,.006,12));
+-  const diamondGeometry=this.geo(new T.BufferGeometry()),corners=[[0,.115],[-.115,0],[0,-.115],[.115,0]],diamondVertices:number[]=[];for(let i=0;i<4;i++){diamondVertices.push(...corners[i],0,...corners[(i+1)%4],0,0,0,.010);}diamondGeometry.setAttribute('position',new T.Float32BufferAttribute(diamondVertices,3));diamondGeometry.computeVertexNormals();
+-  for(const normal of[V(1,0,0),V(-1,0,0),V(0,1,0),V(0,-1,0),V(0,0,1),V(0,0,-1)]){
+-   const face=new T.Group(),up=Math.abs(normal.y)>.9?V(0,0,-1):V(0,1,0);face.quaternion.setFromRotationMatrix(poseMatrix(V(),normal,up));group.add(face);
+-   const frame=this.mesh(bezel,metal,face);frame.position.z=.433;for(const side of[-1,1])this.part(face,[0,side*.415,.483],[.23,.012,.008],trim,.003);
+-   for(const y of[-.225,.225])this.part(face,[0,y,.463],[.47,.12,.012],dark,.018);
+-   const panel=this.mesh(cassette,ceramic,face);panel.position.z=.451;panel.name='hero-cube-ceramic-face';
+-   this.part(face,[0,0,.474],[.335,.335,.018],brass,.022);this.part(face,[0,0,.484],[.300,.300,.008],dark,.017);
+-   const diamond=this.mesh(diamondGeometry,brass,face);diamond.position.z=.489;diamond.name='hero-cube-diamond';
+-   for(const x of[-1,1])for(const y of[-1,1]){const screw=this.mesh(screwGeometry,brass,face);screw.rotation.x=Math.PI/2;screw.position.set(x*.304,y*.304,.487);const tri=new T.Shape([new T.Vector2(0,0),new T.Vector2(x*.08,0),new T.Vector2(0,y*.08)]),plate=this.mesh(this.geo(new T.ShapeGeometry(tri)),brass,face);plate.position.set(x*.351,y*.351,.496);}
+-  }
+-
+-  // Static cube construction batches by material: bevels/holes remain geometry, five draw meshes.
+-  group.updateMatrixWorld(true);const parts=new Map<T.Material,T.BufferGeometry[]>(),obsolete=new Set<T.BufferGeometry>();
+-  group.traverse(o=>{if(o instanceof T.Mesh){const material=o.material as T.Material,g=o.geometry.index?o.geometry.toNonIndexed():o.geometry.clone();g.applyMatrix4(o.matrixWorld);if(!g.hasAttribute('uv'))g.setAttribute('uv',new T.BufferAttribute(new Float32Array(g.getAttribute('position').count*2),2));const list=parts.get(material)??[];list.push(g);parts.set(material,list);obsolete.add(o.geometry);}});
+-  group.clear();for(const[material,list]of parts){const geometry=mergeGeometries(list,false);if(!geometry)throw Error('Hero cargo geometry could not be batched');const mesh=this.mesh(this.geo(geometry),material,group);mesh.name='hero-cube-surface';for(const g of list)g.dispose();}for(const g of obsolete){g.dispose();this.ownedGeometries.delete(g);}
+- }
+  override createCrate(id:string){
+   const oldVisual=this.crateVisuals.get(id),oldTargets=new Set<T.Object3D>();oldVisual?.traverse(o=>oldTargets.add(o));this.targets=this.targets.filter(o=>!oldTargets.has(o));
+   const previous=this.cratePieces?.get(id);if(previous)for(const copy of previous.copies){this.root.remove(copy.group);copy.materials.forEach(m=>{m.dispose();this.ownedMaterials.delete(m);});}
++  previous?.release?.();
+   if(oldVisual){this.root.remove(oldVisual);this.disposeObject(oldVisual);}
+-  const b=this.core.crates.find(c=>c.id===id)!,group=new T.Group();group.name='original-hero-cargo:'+id;this.heroCube(group);group.scale.copy(b.half).multiplyScalar(2);group.position.copy(b.pos);group.quaternion.copy(b.rotation);this.root.add(group);this.crateVisuals.set(id,group);
+-  const source:T.Material[]=[],sourceMap=new Map<T.Material,T.Material>();group.traverse(o=>{if(o instanceof T.Mesh){const mats=(Array.isArray(o.material)?o.material:[o.material]).map(m=>{const cached=sourceMap.get(m);if(cached)return cached;const c=this.material((m as T.Material).clone());c.clipShadows=true;sourceMap.set(m,c);source.push(c);return c;});o.material=Array.isArray(o.material)?mats:mats[0];}});
+-  const copies=[0,1].map(()=>{const copy=group.clone(true),materials:T.Material[]=[],copyMap=new Map<T.Material,T.Material>();copy.visible=false;copy.traverse(o=>{if(o instanceof T.Mesh){o.userData.sharedAsset=true;const mats=(Array.isArray(o.material)?o.material:[o.material]).map(m=>{const cached=copyMap.get(m);if(cached)return cached;const c=this.material((m as T.Material).clone());c.clipShadows=true;copyMap.set(m,c);materials.push(c);return c;});o.material=Array.isArray(o.material)?mats:mats[0];}});this.root.add(copy);return{group:copy,materials};});
+-  group.traverse(o=>{if(o instanceof T.Mesh)this.targets.push(o);});this.cratePieces?.set(id,{source,copies});
++  const b=this.core.crates.find(c=>c.id===id)!,group=new T.Group(),asset=instantiateHero('cargo');group.name='actual-tripo-cargo:'+id;group.add(asset.root);this.heroInstances.add(asset);group.scale.copy(b.half).multiplyScalar(2);group.position.copy(b.pos);group.quaternion.copy(b.rotation);this.root.add(group);this.crateVisuals.set(id,group);
++  const source=asset.materials;source.forEach(material=>{material.clipShadows=true;});
++  const copies=[0,1].map(()=>{const copy=group.clone(true),materials:T.Material[]=[],copyMap=new Map<T.Material,T.Material>();copy.visible=false;copy.traverse(o=>{if(o instanceof T.Mesh){o.userData.sharedAsset=true;const mats=(Array.isArray(o.material)?o.material:[o.material]).map(m=>{const cached=copyMap.get(m);if(cached)return cached;const c=this.material(cloneHeroMaterial(m,'cargo'));c.clipShadows=true;copyMap.set(m,c);materials.push(c);return c;});o.material=Array.isArray(o.material)?mats:mats[0];}});this.root.add(copy);return{group:copy,materials};});
++  group.traverse(o=>{if(o instanceof T.Mesh)this.targets.push(o);});this.cratePieces?.set(id,{source,copies,release:()=>{asset.dispose();this.heroInstances.delete(asset);}});
+  }
+  private syncCratePieces(){
+   for(const cube of this.core.crates){const visual=this.crateVisuals.get(cube.id),pieces=this.cratePieces.get(cube.id);if(!visual||!pieces)continue;visual.position.copy(cube.pos);visual.quaternion.copy(cube.rotation);visual.updateMatrixWorld(true);pieces.source.forEach(m=>m.clippingPlanes=null);pieces.copies.forEach(c=>c.group.visible=false);
+@@ -621,42 +603,15 @@
+  }
+  override buildPortalVisuals(){super.buildPortalVisuals();for(const [i,v] of this.portalViews.entries()){for(const child of v.group.children)if(child instanceof T.Mesh&&child.geometry.type==='TubeGeometry'){(child.material as T.MeshBasicMaterial).color.set(i===0?0x55c9ee:0xffb535);}v.plane.material.uniforms.tint.value.set(i===0?0x55c9ee:0xffb535);for(const child of [...v.group.children])if(child instanceof T.Mesh&&child.geometry.type==='PlaneGeometry'){v.group.remove(child);this.disposeObject(child);}}}
+  private buildInstrument(){
++  requireHeroAssets();
+   this.viewScene=new T.Scene();this.viewScene.environment=this.scene.environment;this.viewScene.environmentIntensity=.7;this.viewCamera=new T.PerspectiveCamera(54,this.camera.aspect,.01,10);this.viewScene.add(new T.HemisphereLight(0xe8f1f5,0x302c27,.95));const key=new T.DirectionalLight(0xffe2b7,3.1);key.position.set(-2,3,2);const rim=new T.DirectionalLight(0xb8d9ed,.85);rim.position.set(2,1,-3);this.viewScene.add(key,rim);
+-  const tool=this.instrument=new T.Group();tool.name='original-fork-projector';this.viewScene.add(tool);const fit=this.instrumentFit();tool.position.set(fit.x,fit.y,-.92);tool.scale.setScalar(fit.scale);tool.rotation.set(.12,.34,-.055);
+-  const ceramic=this.material(new T.MeshPhysicalMaterial({color:0xf0e8d8,roughness:.32,metalness:.12,clearcoat:.3,clearcoatRoughness:.24,normalMap:this.finishes.white.normalMap,normalScale:new T.Vector2(.13,.13)})),steel=this.material(new T.MeshStandardMaterial({color:0x8f9da3,roughness:.25,metalness:.85})),graphite=this.material(new T.MeshStandardMaterial({color:0x242c32,roughness:.43,metalness:.6})),rubber=this.material(new T.MeshStandardMaterial({color:0x11191f,roughness:.85,metalness:.04})),copper=this.material(new T.MeshStandardMaterial({color:0xbd7747,roughness:.28,metalness:.86}));
+-  this.instrumentA=this.material(new T.MeshStandardMaterial({color:0x74d7e6,emissive:0x35ccee,emissiveIntensity:.35,roughness:.22,metalness:.3}));this.instrumentB=this.material(new T.MeshStandardMaterial({color:0xe0b46b,emissive:0xffb43e,emissiveIntensity:.35,roughness:.22,metalness:.3}));this.emitterCore=this.material(new T.MeshStandardMaterial({color:0xa6c0c4,emissive:0x35ccee,emissiveIntensity:.25,metalness:.35,roughness:.25}));
+-  // Open asymmetric fork, not a rear white slab: major shoulders wrap around a dark exposed chassis.
+-  this.part(tool,[0,0,.075],[.27,.32,.25],graphite,.055);
+-  for(const side of[-1,1]){this.part(tool,[side*.145,.015,.07],[.045,.35,.22],ceramic,.018);this.part(tool,[side*.169,.015,.085],[.012,.18,.10],steel,.006);}
+-  this.part(tool,[0,.185,.055],[.25,.045,.20],ceramic,.018);this.part(tool,[0,-.16,.10],[.25,.05,.18],steel,.012);
+-  for(let i=0;i<5;i++)this.part(tool,[0,.06-i*.025,.208],[.16,.012,.012],rubber,.003);
+-  for(const side of[-1,1])this.part(tool,[side*.065,.15,.185],[.050,.012,.025],side<0?this.instrumentA:this.instrumentB,.004);
+-  this.part(tool,[0,-.03,.207],[.075,.09,.012],this.emitterCore,.008);
+-  this.instrumentEmitters=[];
+-  for(const [i,x,y,length]of[[0,-.035,.105,.64],[1,.040,-.125,.49]]){
+-   const emitter=new T.Group();emitter.name='projector-channel-'+i;emitter.position.set(x,y,0);emitter.userData.restZ=0;tool.add(emitter);this.instrumentEmitters.push(emitter);const light=i===0?this.instrumentA:this.instrumentB,end=-length;
+-   // Longitudinal tie-rods enclose actual copper windings; all mechanics are rigid visible geometry.
+-   const helix=new class extends T.Curve<T.Vector3>{constructor(){super();}getPoint(t:number,target=new T.Vector3()){return target.set(Math.cos(t*Math.PI*20)*.040,Math.sin(t*Math.PI*20)*.040,-.12-t*.22);}};
+-   this.mesh(this.geo(new T.TubeGeometry(helix,100,.0065,6,false)),copper,emitter);
+-   for(const side of[-1,1]){const rod=this.mesh(this.geo(new T.CylinderGeometry(.012,.012,.34,12)),steel,emitter);rod.rotation.x=Math.PI/2;rod.position.set(side*.063,0,-.20);this.part(emitter,[side*.064,0,-.06],[.045,.14,.055],graphite,.012);}
+-   this.part(emitter,[0,0,end+.12],[.175,.145,.24],graphite,.026);this.part(emitter,[0,.064,end+.12],[.16,.055,.23],ceramic,.019);this.part(emitter,[0,-.064,end+.12],[.16,.042,.23],ceramic,.016);
+-   for(const side of[-1,1]){this.part(emitter,[side*.087,0,end+.12],[.012,.075,.21],steel,.006);this.part(emitter,[side*.094,.016,end+.13],[.008,.013,.18],light,.003);}
+-   // V4 curved ceramic half-shells retain an open fork and expose the actual two coil channels.
+-   const hood=this.mesh(this.geo(new T.CylinderGeometry(.103,.110,.29,24,1,true,i===0?Math.PI/2:-Math.PI/2,Math.PI)),ceramic,emitter);hood.rotation.x=Math.PI/2;hood.position.z=end+.14;
+-   const liner=this.mesh(this.geo(new T.CylinderGeometry(.096,.103,.285,24,1,true,i===0?Math.PI/2:-Math.PI/2,Math.PI)),graphite,emitter);liner.rotation.x=Math.PI/2;liner.position.z=end+.14;
+-   for(const z of[end-.027,end+.015]){const ring=this.mesh(this.geo(new T.TorusGeometry(.047,.009,8,32)),steel,emitter);ring.position.z=z;}
+-   for(let n=0;n<4;n++){const ring=this.mesh(this.geo(new T.TorusGeometry(.042,.0025,6,24)),light,emitter);ring.position.z=-.15-n*.045;}
+-   // Two squared field windows with a real central negative-space opening and bevelled metal lips.
+-   for(const side of[-1,1]){this.part(emitter,[side*.069,0,end-.005],[.027,.14,.045],steel,.007);this.part(emitter,[0,side*.057,end-.005],[.14,.025,.045],steel,.007);this.part(emitter,[side*.052,0,end-.024],[.008,.080,.008],light,.002);this.part(emitter,[0,side*.038,end-.024],[.104,.008,.008],light,.002);}
+-   for(const side of[-1,1]){const screw=this.mesh(this.geo(new T.CylinderGeometry(.015,.015,.01,12)),steel,emitter);screw.rotation.z=Math.PI/2;screw.position.set(side*.17,0,.06);}
+-  }
+-  const grip=this.part(tool,[.025,-.295,.115],[.13,.27,.16],rubber,.035);grip.rotation.x=-.20;this.part(tool,[.028,-.415,.15],[.17,.048,.19],ceramic,.018);
+-  for(let i=0;i<6;i++)this.part(tool,[.096,-.205-i*.030,.13],[.012,.012,.12],graphite,.003);
+-  this.part(tool,[-.07,-.25,-.005],[.025,.17,.025],steel,.006);this.part(tool,[-.035,-.33,.028],[.11,.025,.10],steel,.008);this.part(tool,[-.035,-.20,.035],[.018,.075,.025],rubber,.005);
+-  // Restrained static glove geometry, no skeleton/hand-rig claim.
+-  const glove=this.material(new T.MeshStandardMaterial({color:0x303a42,roughness:.84}));this.part(tool,[.12,-.32,.19],[.16,.15,.17],glove,.037);this.part(tool,[.13,-.42,.29],[.18,.14,.24],graphite,.035).rotation.x=-.25;for(let i=0;i<3;i++)this.part(tool,[-.015+i*.039,-.27,.205],[.034,.072,.07],glove,.014);
+- }
+- private instrumentFit(){const aspect=this.viewCamera?.aspect??this.camera.aspect,ratio=T.MathUtils.clamp(aspect/1.35,.62,1);return{scale:.64*ratio,x:Math.min(.40,Math.max(.05,Math.tan(27*Math.PI/180)*.70*aspect-.205*ratio)),y:-.37*Math.sqrt(ratio)};}
++  const tool=new T.Group();tool.name='actual-tripo-projector-view';this.instrument=tool;this.viewScene.add(tool);const asset=instantiateHero('projector');tool.add(asset.root);this.heroInstances.add(asset);this.heroGun=asset;
++ }
++ private instrumentFit(){
++  const aspect=this.viewCamera?.aspect??this.camera.aspect,ratio=T.MathUtils.clamp(aspect/1.35,.62,1),scale=.64*ratio,bounds=heroBounds('projector').applyMatrix4(new T.Matrix4().makeRotationZ(-.055)),near=.84-bounds.max.z*scale;
++  const originalX=Math.min(.40,Math.max(.05,Math.tan(27*Math.PI/180)*.70*aspect-.205*ratio)),safeX=Math.tan(27*Math.PI/180)*aspect*near-bounds.max.x*scale-.02;
++  return{scale,x:Math.min(originalX,Math.max(.02,safeX)),y:-.37*Math.sqrt(ratio)};
++ }
+  fire(index:number){this.recoil=.032;this.pulse=.16;this.shotIndex=index;}
+  renderDiagnostics(){return this.portalRenderer?.diagnostics(this.portalViews)??null;}
+  override renderLinkedViews(){this.portalRenderer??=new PortalRenderer(this.renderer,this.scene,{software:this.software});if(this.refreshLinkedViews||!this.software||this.frame++%3===0){this.refreshLinkedViews=false;this.portalRenderer.render(this.camera,this.core.portals,this.portalViews);}}
+@@ -676,6 +631,6 @@
+   this.updateHeldFootprint(dt);
+   super.update(dt);
+   for(const c of this.core.crates){const visual=this.crateVisuals.get(c.id);if(visual&&c.rotation)visual.quaternion.copy(c.rotation);}
+-  if(this.instrument&&this.viewScene&&this.viewCamera){const fit=this.instrumentFit(),speed=Math.hypot(this.core.player.vel.x,this.core.player.vel.z),sway=this.reducedMotion?0:Math.sin(this.artClock*7)*Math.min(.004,speed*.0008);this.instrument.scale.setScalar(fit.scale);this.instrument.position.set(fit.x,fit.y+sway,(this.core.heldId?-.88:-.92)+this.recoil);for(const [i,emitter]of this.instrumentEmitters.entries())emitter.position.z=(emitter.userData.restZ??0)+this.recoil*(i===this.shotIndex?.75:.12);this.instrument.rotation.z=-.055+(this.reducedMotion?0:Math.sin(this.artClock*1.4)*.003);this.instrumentA!.emissiveIntensity=this.core.portals[0]?2.8:.25;this.instrumentB!.emissiveIntensity=this.core.portals[1]?2.8:.25;const color=this.shotIndex===1?0xffb23d:0x49ccef;this.emitterCore!.emissive.set(color);this.emitterCore!.emissiveIntensity=1.3+(this.pulse??0)*12;this.pulse=Math.max(0,(this.pulse??0)-dt);const clear=this.renderer.autoClear;this.renderer.autoClear=false;this.renderer.clearDepth();this.renderer.render(this.viewScene,this.viewCamera);this.renderer.autoClear=clear;}
++  if(this.instrument&&this.viewScene&&this.viewCamera){const fit=this.instrumentFit(),speed=Math.hypot(this.core.player.vel.x,this.core.player.vel.z),sway=this.reducedMotion?0:Math.sin(this.artClock*7)*Math.min(.004,speed*.0008);this.instrument.scale.setScalar(fit.scale);this.instrument.position.set(fit.x,fit.y+sway,(this.core.heldId?-.88:-.92)+this.recoil);this.instrument.rotation.z=-.055+(this.reducedMotion?0:Math.sin(this.artClock*1.4)*.003);const color=this.shotIndex===1?0xffb23d:0x49ccef;for(const material of this.heroGun?.materials??[])if(material instanceof T.MeshStandardMaterial){material.emissive.set(color);material.emissiveIntensity=(this.core.portals[this.shotIndex??0]?1.2:.12)+(this.pulse??0)*14;}this.instrument.updateMatrixWorld(true);this.pulse=Math.max(0,(this.pulse??0)-dt);const clear=this.renderer.autoClear;this.renderer.autoClear=false;this.renderer.clearDepth();this.renderer.render(this.viewScene,this.viewCamera);this.renderer.autoClear=clear;}
+  }
+ }

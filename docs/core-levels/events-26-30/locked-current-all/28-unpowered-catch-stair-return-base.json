@@ -1,0 +1,1879 @@
+{
+  "scope": "Unregistered authored-spawn native input path only. No actor/cargo/machine/history/save setters, resets or browser/completion claims. Native portal rays ignore glass; real visual framing remains browser-pending.",
+  "number": 28,
+  "contrast": false,
+  "error": null,
+  "sources": {
+    "src/core/levels/events.ts": "9b97067f6ca51003721fbbd02e5f37192d1309ee256851452b96bba98054412c",
+    "src/core/levels/events-english.ts": "17e56e3ba32955d1243f9591c5c2d7e33b4528310e0e6168813e0a9b2093cdf2",
+    "src/core/level.ts": "4dc6e0989e9a3ebe3a22f4a115ac5116073fec2e2d7d8777ff76f81f7b9db272",
+    "src/core/world.ts": "054fe818b86b3eda9d17d240b1f0aeebaa960aff1afe4669003df8131a60af23",
+    "src/core/machine-journal.ts": "b81c0ea842f5f7655e551e2a3d2fb3447324206b57a53418f724303757e25e45",
+    "src/systems.ts": "b53edc09e8fd038b506b4504443ca24073e2d02be8ae807d56000354b30b7716",
+    "tests/core-events-routes.test.ts": "93418dd39be98185aebf3ad090fb6a31c790d8fb4804e8af34f46f251169c77e",
+    "tests/helpers/event-route.ts": "2b2457d666484a3122b511adc29253d72452b00b995d142e5bb7487f0ef86c87"
+  },
+  "ridingFrames": {},
+  "events": [
+    {
+      "type": "land"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "land"
+    },
+    {
+      "type": "land"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    }
+  ],
+  "checkpoints": [
+    {
+      "label": "actual-authored-spawn",
+      "state": {
+        "room": "chamber-28",
+        "number": 28,
+        "mission": "Make a delivery, then reverse the belt. Return the cube to the receiver it left on that trip. Keep that receiver pressed and use its transport.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            7.000002384185791,
+            0.8641840219497681,
+            11.000001907348633
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [
+          {
+            "id": "freight-cube",
+            "position": [
+              8.340277872775914e-7,
+              0.5499123930931091,
+              -2.598881678750331e-7
+            ],
+            "velocity": [
+              9.63769934969605e-7,
+              9.063606398740376e-7,
+              3.6595423580365605e-8
+            ],
+            "rotation": [
+              -3.9543479601888976e-9,
+              -1.049713484538306e-12,
+              7.690497483281433e-8,
+              1
+            ],
+            "angularVelocity": [
+              6.602360969054644e-8,
+              7.619407627621269e-14,
+              -0.0000017426556269128923
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "store-receiver",
+            "position": [
+              7.8,
+              0,
+              0
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "service-receiver",
+            "position": [
+              -7.8,
+              0,
+              0
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "delivery-belt",
+            "kind": "conveyor",
+            "label": "DELIVERY",
+            "position": [
+              0,
+              -0.15,
+              0
+            ],
+            "size": [
+              17,
+              0.3,
+              6
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "delivery-power",
+            "kind": "switch",
+            "label": "BELT POWER",
+            "position": [
+              2,
+              1.25,
+              5.7
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "delivery-reverse",
+            "kind": "switch",
+            "label": "REVERSE",
+            "position": [
+              -2,
+              1.3,
+              5.85
+            ],
+            "size": [
+              0.4,
+              0.6,
+              0.25
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "delivery-cover",
+            "kind": "shutter",
+            "label": "STORE RELEASE",
+            "position": [
+              -2,
+              1.5,
+              6.35
+            ],
+            "size": [
+              1.4,
+              1,
+              0.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "store-carrier",
+            "kind": "moving-platform",
+            "label": "STORE CARRIER",
+            "position": [
+              17,
+              -0.2,
+              8
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "NEAR",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "store-door",
+            "kind": "shutter",
+            "label": "STORE",
+            "position": [
+              29.12,
+              1.5,
+              8
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "service-lift",
+            "kind": "lift",
+            "label": "SERVICE INSPECTION",
+            "position": [
+              -18,
+              -0.2,
+              6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -23.12,
+              4.9,
+              2
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "freight-source",
+            "position": [
+              7,
+              1.75,
+              11.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "freight-booth",
+            "position": [
+              0,
+              1.75,
+              9.485
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "store-exit",
+            "label": "EXIT",
+            "position": [
+              31.4,
+              1.5,
+              8
+            ],
+            "size": [
+              3.5600000000000023,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -25.4,
+              4.9,
+              2
+            ],
+            "size": [
+              3.5600000000000023,
+              3,
+              3.16
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "store-receiver": false,
+          "service-receiver": false,
+          "moving:delivery-belt": false,
+          "moving:delivery-power": false,
+          "moving:delivery-reverse": false,
+          "closed:delivery-cover": true,
+          "clear:delivery-cover": false,
+          "safety:delivery-cover": false,
+          "door-safety": false,
+          "moving:delivery-cover": false,
+          "moving:store-carrier": false,
+          "at:store-carrier:NEAR": true,
+          "at:store-carrier:FAR": false,
+          "closed:store-door": true,
+          "clear:store-door": false,
+          "safety:store-door": false,
+          "moving:store-door": false,
+          "moving:service-lift": false,
+          "closed:service-door": true,
+          "clear:service-door": false,
+          "safety:service-door": false,
+          "moving:service-door": false
+        },
+        "journal": {
+          "attempt": 1,
+          "rows": [],
+          "truncated": false,
+          "now": [
+            {
+              "id": "store-receiver",
+              "label": "STORE",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "service-receiver",
+              "label": "SERVICE",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "store-carrier",
+              "label": "STORE CARRIER",
+              "kind": "dock",
+              "state": "AT NEAR"
+            },
+            {
+              "id": "service-lift",
+              "label": "SERVICE LIFT",
+              "kind": "dock",
+              "state": "AT BASE"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          }
+        ]
+      }
+    },
+    {
+      "label": "actual-unpowered-catch",
+      "state": {
+        "room": "chamber-28",
+        "number": 28,
+        "mission": "Make a delivery, then reverse the belt. Return the cube to the receiver it left on that trip. Keep that receiver pressed and use its transport.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            16.93024253845215,
+            -3.52900767326355,
+            4.296072006225586
+          ],
+          "velocity": [
+            -0.14590404075748853,
+            0,
+            -4.797782139363305
+          ],
+          "yaw": 0.03065186890060415,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [
+          {
+            "id": "freight-cube",
+            "position": [
+              8.340277872775914e-7,
+              0.5499123930931091,
+              -2.598881678750331e-7
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -3.9543479601888976e-9,
+              -1.049713484538306e-12,
+              7.690497483281433e-8,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "store-receiver",
+            "position": [
+              7.8,
+              0,
+              0
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "service-receiver",
+            "position": [
+              -7.8,
+              0,
+              0
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "delivery-belt",
+            "kind": "conveyor",
+            "label": "DELIVERY",
+            "position": [
+              0,
+              -0.15,
+              0
+            ],
+            "size": [
+              17,
+              0.3,
+              6
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "delivery-power",
+            "kind": "switch",
+            "label": "BELT POWER",
+            "position": [
+              2,
+              1.25,
+              5.7
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "delivery-reverse",
+            "kind": "switch",
+            "label": "REVERSE",
+            "position": [
+              -2,
+              1.3,
+              5.85
+            ],
+            "size": [
+              0.4,
+              0.6,
+              0.25
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "delivery-cover",
+            "kind": "shutter",
+            "label": "STORE RELEASE",
+            "position": [
+              -2,
+              1.5,
+              6.35
+            ],
+            "size": [
+              1.4,
+              1,
+              0.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "store-carrier",
+            "kind": "moving-platform",
+            "label": "STORE CARRIER",
+            "position": [
+              17,
+              -0.2,
+              8
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "NEAR",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "store-door",
+            "kind": "shutter",
+            "label": "STORE",
+            "position": [
+              29.12,
+              1.5,
+              8
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "service-lift",
+            "kind": "lift",
+            "label": "SERVICE INSPECTION",
+            "position": [
+              -18,
+              -0.2,
+              6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -23.12,
+              4.9,
+              2
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "freight-source",
+            "position": [
+              7,
+              1.75,
+              11.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "freight-booth",
+            "position": [
+              0,
+              1.75,
+              9.485
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "store-exit",
+            "label": "EXIT",
+            "position": [
+              31.4,
+              1.5,
+              8
+            ],
+            "size": [
+              3.5600000000000023,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -25.4,
+              4.9,
+              2
+            ],
+            "size": [
+              3.5600000000000023,
+              3,
+              3.16
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "store-receiver": false,
+          "service-receiver": false,
+          "moving:delivery-belt": false,
+          "moving:delivery-power": false,
+          "moving:delivery-reverse": false,
+          "closed:delivery-cover": true,
+          "clear:delivery-cover": false,
+          "safety:delivery-cover": false,
+          "door-safety": false,
+          "moving:delivery-cover": false,
+          "moving:store-carrier": false,
+          "at:store-carrier:NEAR": true,
+          "at:store-carrier:FAR": false,
+          "closed:store-door": true,
+          "clear:store-door": false,
+          "safety:store-door": false,
+          "moving:store-door": false,
+          "moving:service-lift": false,
+          "closed:service-door": true,
+          "clear:service-door": false,
+          "safety:service-door": false,
+          "moving:service-door": false
+        },
+        "journal": {
+          "attempt": 1,
+          "rows": [],
+          "truncated": false,
+          "now": [
+            {
+              "id": "store-receiver",
+              "label": "STORE",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "service-receiver",
+              "label": "SERVICE",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "store-carrier",
+              "label": "STORE CARRIER",
+              "kind": "dock",
+              "state": "AT NEAR"
+            },
+            {
+              "id": "service-lift",
+              "label": "SERVICE LIFT",
+              "kind": "dock",
+              "state": "AT BASE"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "footstep",
+            "time": 508
+          },
+          {
+            "type": "footstep",
+            "time": 933
+          },
+          {
+            "type": "footstep",
+            "time": 1358
+          },
+          {
+            "type": "footstep",
+            "time": 1783
+          },
+          {
+            "type": "footstep",
+            "time": 2208
+          },
+          {
+            "type": "footstep",
+            "time": 2633
+          },
+          {
+            "type": "footstep",
+            "time": 3058
+          },
+          {
+            "type": "footstep",
+            "time": 3483
+          },
+          {
+            "type": "footstep",
+            "time": 3908
+          },
+          {
+            "type": "land",
+            "time": 4092
+          },
+          {
+            "type": "land",
+            "time": 4867
+          }
+        ]
+      }
+    },
+    {
+      "label": "actual-common-arch-return-without-supply",
+      "state": {
+        "room": "chamber-28",
+        "number": 28,
+        "mission": "Make a delivery, then reverse the belt. Return the cube to the receiver it left on that trip. Keep that receiver pressed and use its transport.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            9.624038696289062,
+            0.8650757670402527,
+            7.9833903312683105
+          ],
+          "velocity": [
+            -0.666871368066102,
+            0,
+            -0.14643898165023922
+          ],
+          "yaw": 1.3546762814965303,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [
+          {
+            "id": "freight-cube",
+            "position": [
+              8.340277872775914e-7,
+              0.5499123930931091,
+              -2.598881678750331e-7
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -3.9543479601888976e-9,
+              -1.049713484538306e-12,
+              7.690497483281433e-8,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "store-receiver",
+            "position": [
+              7.8,
+              0,
+              0
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "service-receiver",
+            "position": [
+              -7.8,
+              0,
+              0
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "delivery-belt",
+            "kind": "conveyor",
+            "label": "DELIVERY",
+            "position": [
+              0,
+              -0.15,
+              0
+            ],
+            "size": [
+              17,
+              0.3,
+              6
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "delivery-power",
+            "kind": "switch",
+            "label": "BELT POWER",
+            "position": [
+              2,
+              1.25,
+              5.7
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "delivery-reverse",
+            "kind": "switch",
+            "label": "REVERSE",
+            "position": [
+              -2,
+              1.3,
+              5.85
+            ],
+            "size": [
+              0.4,
+              0.6,
+              0.25
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "delivery-cover",
+            "kind": "shutter",
+            "label": "STORE RELEASE",
+            "position": [
+              -2,
+              1.5,
+              6.35
+            ],
+            "size": [
+              1.4,
+              1,
+              0.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "store-carrier",
+            "kind": "moving-platform",
+            "label": "STORE CARRIER",
+            "position": [
+              17,
+              -0.2,
+              8
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "NEAR",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "store-door",
+            "kind": "shutter",
+            "label": "STORE",
+            "position": [
+              29.12,
+              1.5,
+              8
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "service-lift",
+            "kind": "lift",
+            "label": "SERVICE INSPECTION",
+            "position": [
+              -18,
+              -0.2,
+              6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -23.12,
+              4.9,
+              2
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "freight-source",
+            "position": [
+              7,
+              1.75,
+              11.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "freight-booth",
+            "position": [
+              0,
+              1.75,
+              9.485
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "store-exit",
+            "label": "EXIT",
+            "position": [
+              31.4,
+              1.5,
+              8
+            ],
+            "size": [
+              3.5600000000000023,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -25.4,
+              4.9,
+              2
+            ],
+            "size": [
+              3.5600000000000023,
+              3,
+              3.16
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "store-receiver": false,
+          "service-receiver": false,
+          "moving:delivery-belt": false,
+          "moving:delivery-power": false,
+          "moving:delivery-reverse": false,
+          "closed:delivery-cover": true,
+          "clear:delivery-cover": false,
+          "safety:delivery-cover": false,
+          "door-safety": false,
+          "moving:delivery-cover": false,
+          "moving:store-carrier": false,
+          "at:store-carrier:NEAR": true,
+          "at:store-carrier:FAR": false,
+          "closed:store-door": true,
+          "clear:store-door": false,
+          "safety:store-door": false,
+          "moving:store-door": false,
+          "moving:service-lift": false,
+          "closed:service-door": true,
+          "clear:service-door": false,
+          "safety:service-door": false,
+          "moving:service-door": false
+        },
+        "journal": {
+          "attempt": 1,
+          "rows": [],
+          "truncated": false,
+          "now": [
+            {
+              "id": "store-receiver",
+              "label": "STORE",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "service-receiver",
+              "label": "SERVICE",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "store-carrier",
+              "label": "STORE CARRIER",
+              "kind": "dock",
+              "state": "AT NEAR"
+            },
+            {
+              "id": "service-lift",
+              "label": "SERVICE LIFT",
+              "kind": "dock",
+              "state": "AT BASE"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 7425
+          },
+          {
+            "type": "footstep",
+            "time": 7850
+          },
+          {
+            "type": "footstep",
+            "time": 8275
+          },
+          {
+            "type": "footstep",
+            "time": 8700
+          },
+          {
+            "type": "footstep",
+            "time": 9125
+          },
+          {
+            "type": "footstep",
+            "time": 9550
+          },
+          {
+            "type": "footstep",
+            "time": 9975
+          },
+          {
+            "type": "footstep",
+            "time": 10400
+          },
+          {
+            "type": "footstep",
+            "time": 10825
+          },
+          {
+            "type": "footstep",
+            "time": 11250
+          },
+          {
+            "type": "footstep",
+            "time": 11675
+          },
+          {
+            "type": "footstep",
+            "time": 12100
+          },
+          {
+            "type": "footstep",
+            "time": 12525
+          },
+          {
+            "type": "footstep",
+            "time": 12950
+          },
+          {
+            "type": "footstep",
+            "time": 13375
+          },
+          {
+            "type": "footstep",
+            "time": 13800
+          }
+        ]
+      }
+    },
+    {
+      "label": "final",
+      "state": {
+        "room": "chamber-28",
+        "number": 28,
+        "mission": "Make a delivery, then reverse the belt. Return the cube to the receiver it left on that trip. Keep that receiver pressed and use its transport.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            9.624038696289062,
+            0.8650757670402527,
+            7.9833903312683105
+          ],
+          "velocity": [
+            -0.666871368066102,
+            0,
+            -0.14643898165023922
+          ],
+          "yaw": 1.3546762814965303,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [
+          {
+            "id": "freight-cube",
+            "position": [
+              8.340277872775914e-7,
+              0.5499123930931091,
+              -2.598881678750331e-7
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -3.9543479601888976e-9,
+              -1.049713484538306e-12,
+              7.690497483281433e-8,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "store-receiver",
+            "position": [
+              7.8,
+              0,
+              0
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "service-receiver",
+            "position": [
+              -7.8,
+              0,
+              0
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "delivery-belt",
+            "kind": "conveyor",
+            "label": "DELIVERY",
+            "position": [
+              0,
+              -0.15,
+              0
+            ],
+            "size": [
+              17,
+              0.3,
+              6
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "delivery-power",
+            "kind": "switch",
+            "label": "BELT POWER",
+            "position": [
+              2,
+              1.25,
+              5.7
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "delivery-reverse",
+            "kind": "switch",
+            "label": "REVERSE",
+            "position": [
+              -2,
+              1.3,
+              5.85
+            ],
+            "size": [
+              0.4,
+              0.6,
+              0.25
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "delivery-cover",
+            "kind": "shutter",
+            "label": "STORE RELEASE",
+            "position": [
+              -2,
+              1.5,
+              6.35
+            ],
+            "size": [
+              1.4,
+              1,
+              0.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "store-carrier",
+            "kind": "moving-platform",
+            "label": "STORE CARRIER",
+            "position": [
+              17,
+              -0.2,
+              8
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "NEAR",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "store-door",
+            "kind": "shutter",
+            "label": "STORE",
+            "position": [
+              29.12,
+              1.5,
+              8
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "service-lift",
+            "kind": "lift",
+            "label": "SERVICE INSPECTION",
+            "position": [
+              -18,
+              -0.2,
+              6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -23.12,
+              4.9,
+              2
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "freight-source",
+            "position": [
+              7,
+              1.75,
+              11.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "freight-booth",
+            "position": [
+              0,
+              1.75,
+              9.485
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "store-exit",
+            "label": "EXIT",
+            "position": [
+              31.4,
+              1.5,
+              8
+            ],
+            "size": [
+              3.5600000000000023,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -25.4,
+              4.9,
+              2
+            ],
+            "size": [
+              3.5600000000000023,
+              3,
+              3.16
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "store-receiver": false,
+          "service-receiver": false,
+          "moving:delivery-belt": false,
+          "moving:delivery-power": false,
+          "moving:delivery-reverse": false,
+          "closed:delivery-cover": true,
+          "clear:delivery-cover": false,
+          "safety:delivery-cover": false,
+          "door-safety": false,
+          "moving:delivery-cover": false,
+          "moving:store-carrier": false,
+          "at:store-carrier:NEAR": true,
+          "at:store-carrier:FAR": false,
+          "closed:store-door": true,
+          "clear:store-door": false,
+          "safety:store-door": false,
+          "moving:store-door": false,
+          "moving:service-lift": false,
+          "closed:service-door": true,
+          "clear:service-door": false,
+          "safety:service-door": false,
+          "moving:service-door": false
+        },
+        "journal": {
+          "attempt": 1,
+          "rows": [],
+          "truncated": false,
+          "now": [
+            {
+              "id": "store-receiver",
+              "label": "STORE",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "service-receiver",
+              "label": "SERVICE",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "store-carrier",
+              "label": "STORE CARRIER",
+              "kind": "dock",
+              "state": "AT NEAR"
+            },
+            {
+              "id": "service-lift",
+              "label": "SERVICE LIFT",
+              "kind": "dock",
+              "state": "AT BASE"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 7425
+          },
+          {
+            "type": "footstep",
+            "time": 7850
+          },
+          {
+            "type": "footstep",
+            "time": 8275
+          },
+          {
+            "type": "footstep",
+            "time": 8700
+          },
+          {
+            "type": "footstep",
+            "time": 9125
+          },
+          {
+            "type": "footstep",
+            "time": 9550
+          },
+          {
+            "type": "footstep",
+            "time": 9975
+          },
+          {
+            "type": "footstep",
+            "time": 10400
+          },
+          {
+            "type": "footstep",
+            "time": 10825
+          },
+          {
+            "type": "footstep",
+            "time": 11250
+          },
+          {
+            "type": "footstep",
+            "time": 11675
+          },
+          {
+            "type": "footstep",
+            "time": 12100
+          },
+          {
+            "type": "footstep",
+            "time": 12525
+          },
+          {
+            "type": "footstep",
+            "time": 12950
+          },
+          {
+            "type": "footstep",
+            "time": 13375
+          },
+          {
+            "type": "footstep",
+            "time": 13800
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "status": "SOURCE_FROZEN_C1_ACTUAL_GPU_ACCEPTED_CAMPAIGN_PENDING",
+  "sceneSHA256": "c99c3ffd02392d0ce40b75494fdc36a066ff1a5998eb1d3a44d83077bba65e29",
+  "sceneBytes": 96349,
+  "snapshot": "work/art/source-snapshots/chamber-scene-tripo-heroes-c99c3ffd.ts",
+  "helperSHA256": "91ab46ceb21286b69bef4d18638af54e8d68318be08c4799f96abea5ec0ec9e5",
+  "helperBytes": 10441,
+  "helperSnapshot": "work/art/source-snapshots/hero-assets-91ab46ce.ts",
+  "runtimeFiles": [
+    "src/chamber-scene.ts",
+    "src/hero-assets.ts"
+  ],
+  "models": {
+    "projector": {
+      "path": "public/models/hero-projector.glb",
+      "bytes": 1049404,
+      "sha256": "2215cbd530dd2e7b84b16dbc54efa69b9a57b38d92e19b26ef689287cfbde087"
+    },
+    "cargo": {
+      "path": "public/models/hero-weighted-cargo.glb",
+      "bytes": 991240,
+      "sha256": "143129e2a3439cf4b074f57d9b22b9b52b8e008078e1975647a50e88fdf90053"
+    }
+  },
+  "cpuProbe": "TRIPO_HERO_ACTUAL_GLB_PROBE.json PASS, actual geometry + mocked fetch/fake bitmap only",
+  "cubeFit": "Per-axis canonical [-.5,.5] for both .84/1.10 and six resting faces; supersedes uniform/base-only plan",
+  "finalTypecheck": "PASS: Root integrated npm build (full tsc + Vite), source hashes unchanged",
+  "GPU": "PARENT immutable D2 C1 acceptance PASS; Art offline frame inspection only",
+  "dist": "UNCHANGED",
+  "staticAPI": [
+    "ChamberScene.preloadHeroAssets()",
+    "ChamberScene.heroAssetStatus()"
+  ],
+  "publicInstanceField": "assetDiagnostics().heroes",
+  "preserved": [
+    "Root AA/diagnostics",
+    "C11 cap",
+    "C25 finish",
+    "native physics/hosts/circuits",
+    "all actual source GLB triangles/textures"
+  ],
+  "combinedCandidate": {
+    "path": "http://localhost:4261/hero-repair/",
+    "bundle": "main-D2DMbgrH.js",
+    "sha256": "48cb251e7280e8ce8d6589c87e161e20f00da08d10259ac4369cc71f5d689761",
+    "archive": "work/frozen-builds/main-D2DMbgrH",
+    "actualAcceptance": "PASS C1 repair/asset lifecycle only; all-room/all-angle/full50 remain OPEN"
+  },
+  "parentC1Acceptance": {
+    "record": "/Users/acedzn/idea-plotter/reports/rift-tripo-hero-repair/COMBINED-VERIFIED.json",
+    "actions": 74,
+    "captures": 17,
+    "normalErrors": 0,
+    "inputScope": "Mixed synthetic DOM movement/real RAF and trusted UI segments; not all-trusted",
+    "artFramesViewed": [
+      "007-1-actual-tripo-cargo-held.png",
+      "009-1-tripo-cargo-ordinary-reverse-at-seam.png",
+      "016-1-tripo-wide-layout.png"
+    ],
+    "allRoomCampaignAcceptance": "OPEN"
+  }
+}

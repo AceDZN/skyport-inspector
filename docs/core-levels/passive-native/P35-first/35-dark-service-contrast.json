@@ -1,0 +1,1492 @@
+{
+  "scope": "Unregistered authored-spawn native route. Camera/WASD/E/ray-clear portals only. Decorative visibility, realtime mouse and earned save remain pending.",
+  "number": 35,
+  "contrast": true,
+  "error": null,
+  "inputs": [
+    {
+      "action": "walk",
+      "x": -12,
+      "z": 5.8
+    },
+    {
+      "action": "aim",
+      "target": [
+        -12,
+        0.5498895645141602,
+        3.9999918937683105
+      ]
+    },
+    {
+      "action": "press",
+      "code": "KeyE"
+    },
+    {
+      "action": "walk",
+      "x": -10.8,
+      "z": 6
+    },
+    {
+      "action": "aim",
+      "target": [
+        -9,
+        1.2000000000000002,
+        6
+      ]
+    },
+    {
+      "action": "press",
+      "code": "KeyE"
+    },
+    {
+      "action": "walk",
+      "x": -10.8,
+      "z": 7.8
+    },
+    {
+      "action": "walk",
+      "x": -6,
+      "z": 7.8
+    },
+    {
+      "action": "walk",
+      "x": -6,
+      "z": 13
+    }
+  ],
+  "ridingFrames": {},
+  "maxDeviceStep": {
+    "loop-service-door": 0.036458333333333925,
+    "loop-upper-door": 0,
+    "loop-access-door": 0,
+    "loop-return-control": 0,
+    "loop-lift": 0
+  },
+  "events": [
+    {
+      "type": "land",
+      "time": 0.008333333333333333
+    },
+    {
+      "type": "footstep",
+      "time": 0.4250000000000005
+    },
+    {
+      "type": "pickup",
+      "time": 0.7083333333333333,
+      "body": "loop-near-cube"
+    },
+    {
+      "type": "footstep",
+      "time": 0.8499999999999994
+    },
+    {
+      "type": "shutter-open",
+      "time": 1.1749999999999983,
+      "id": "loop-service-door"
+    },
+    {
+      "type": "pad",
+      "time": 1.1749999999999983,
+      "pad": "loop-service",
+      "crate": "loop-near-cube"
+    },
+    {
+      "type": "drop",
+      "time": 1.4833333333333305,
+      "body": "loop-near-cube"
+    },
+    {
+      "type": "footstep",
+      "time": 2.2999999999999945
+    },
+    {
+      "type": "footstep",
+      "time": 2.8249999999999926
+    },
+    {
+      "type": "footstep",
+      "time": 3.249999999999991
+    },
+    {
+      "type": "footstep",
+      "time": 3.6749999999999896
+    },
+    {
+      "type": "footstep",
+      "time": 4.099999999999993
+    },
+    {
+      "type": "footstep",
+      "time": 4.525000000000015
+    },
+    {
+      "type": "complete",
+      "time": 4.633333333333353,
+      "chamber": 35
+    }
+  ],
+  "checkpoints": [
+    {
+      "label": "actual-authored-spawn",
+      "state": {
+        "room": "chamber-35",
+        "number": 35,
+        "mission": "SERVICE is opened by the floor button, and the lift is stopped by loss of light. Keep the receiver dark and use SERVICE.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -12,
+            0.8650607466697693,
+            7
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "yaw": 0.1,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [
+          {
+            "id": "loop-near-cube",
+            "position": [
+              -12,
+              0.5498895645141602,
+              3.9999918937683105
+            ],
+            "velocity": [
+              -0.000004421509402163792,
+              -1.4839936568478151e-7,
+              -0.000004285785507818218
+            ],
+            "rotation": [
+              3.641038404111896e-7,
+              3.899757253233993e-12,
+              -3.6969652228435734e-7,
+              1
+            ],
+            "angularVelocity": [
+              -0.000007749253200017847,
+              -1.8522724044671424e-13,
+              0.000007994657607923727
+            ],
+            "held": false,
+            "crossings": 0
+          },
+          {
+            "id": "loop-block-cube",
+            "position": [
+              -16.299999237060547,
+              0.5498895645141602,
+              -4.000001430511475
+            ],
+            "velocity": [
+              -0.000004421478024596581,
+              -1.4878642673465947e-7,
+              -0.000004285285285732243
+            ],
+            "rotation": [
+              3.64382799489249e-7,
+              3.898424118242705e-12,
+              -3.697793999890564e-7,
+              1
+            ],
+            "angularVelocity": [
+              -0.000007748347343294881,
+              -2.2021753791714484e-14,
+              0.000007994601219252218
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "access-pressure",
+            "position": [
+              -3,
+              0.14,
+              -7
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "loop-service",
+            "position": [
+              -9,
+              0.14,
+              6
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "loop-service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -6,
+              1.5,
+              10.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-upper-door",
+            "kind": "shutter",
+            "label": "CONTROL GALLERY",
+            "position": [
+              14,
+              5.7,
+              -10.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-access-door",
+            "kind": "shutter",
+            "label": "ACCESS",
+            "position": [
+              -0.08,
+              1.5,
+              0
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-return-control",
+            "kind": "switch",
+            "label": "ACCESS RETURN",
+            "position": [
+              2.5,
+              1.25,
+              -4
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-lift",
+            "kind": "lift",
+            "label": "CONTROL GALLERY",
+            "position": [
+              14,
+              -0.2,
+              0
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "loop-source",
+            "position": [
+              -12,
+              1.75,
+              9.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "loop-return",
+            "position": [
+              -17.985,
+              1.75,
+              4
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -6,
+              1.5,
+              12.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.780000000000001
+            ]
+          },
+          {
+            "id": "control-exit",
+            "label": "EXIT",
+            "position": [
+              14,
+              5.7,
+              -12.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.780000000000001
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "loop-emitter": {
+            "segments": [
+              {
+                "from": [
+                  -17.3,
+                  0.65,
+                  -4
+                ],
+                "to": [
+                  -16.84999989271164,
+                  0.65,
+                  -4
+                ]
+              }
+            ],
+            "stop": "obstacle",
+            "obstacle": "loop-block-cube",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "access-pressure": false,
+          "loop-service": false,
+          "closed:loop-service-door": true,
+          "clear:loop-service-door": false,
+          "safety:loop-service-door": false,
+          "door-safety": false,
+          "moving:loop-service-door": false,
+          "closed:loop-upper-door": true,
+          "clear:loop-upper-door": false,
+          "safety:loop-upper-door": false,
+          "moving:loop-upper-door": false,
+          "closed:loop-access-door": true,
+          "clear:loop-access-door": false,
+          "safety:loop-access-door": false,
+          "moving:loop-access-door": false,
+          "moving:loop-return-control": false,
+          "moving:loop-lift": false,
+          "loop-light": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "loop-ground",
+          "normal": {
+            "x": 0,
+            "y": 1,
+            "z": 0.000015924073522910476
+          },
+          "witness": {
+            "x": -12.00010871887207,
+            "y": 0,
+            "z": 6.999978542327881
+          },
+          "applied": {
+            "x": 0,
+            "y": -0.000011267075933574233,
+            "z": 0
+          },
+          "remaining": {
+            "x": 0,
+            "y": -0.0010998441139236093,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-requested-physical-completion",
+      "state": {
+        "room": "chamber-35",
+        "number": 35,
+        "mission": "SERVICE is opened by the floor button, and the lift is stopped by loss of light. Keep the receiver dark and use SERVICE.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -5.9409565925598145,
+            0.8647462129592896,
+            10.632545471191406
+          ],
+          "velocity": [
+            -0.1196775903879961,
+            0,
+            4.798492755857984
+          ],
+          "yaw": 3.1166580944969864,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [
+          {
+            "id": "loop-near-cube",
+            "position": [
+              -8.891971588134766,
+              0.6898980140686035,
+              6.0029683113098145
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -0.000004174911282461835,
+              -0.00000464801905764034,
+              -0.0000026474581318325363,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          },
+          {
+            "id": "loop-block-cube",
+            "position": [
+              -16.299999237060547,
+              0.5498895645141602,
+              -4.000001430511475
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              1.9994473632323206e-7,
+              3.889522818406599e-12,
+              -2.2716716330251074e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "access-pressure",
+            "position": [
+              -3,
+              0.14,
+              -7
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "loop-service",
+            "position": [
+              -9,
+              0.14,
+              6
+            ],
+            "pressed": true,
+            "crate": "loop-near-cube"
+          }
+        ],
+        "devices": [
+          {
+            "id": "loop-service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -6,
+              5,
+              10.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-upper-door",
+            "kind": "shutter",
+            "label": "CONTROL GALLERY",
+            "position": [
+              14,
+              5.7,
+              -10.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-access-door",
+            "kind": "shutter",
+            "label": "ACCESS",
+            "position": [
+              -0.08,
+              1.5,
+              0
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-return-control",
+            "kind": "switch",
+            "label": "ACCESS RETURN",
+            "position": [
+              2.5,
+              1.25,
+              -4
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-lift",
+            "kind": "lift",
+            "label": "CONTROL GALLERY",
+            "position": [
+              14,
+              -0.2,
+              0
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "loop-source",
+            "position": [
+              -12,
+              1.75,
+              9.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "loop-return",
+            "position": [
+              -17.985,
+              1.75,
+              4
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -6,
+              1.5,
+              12.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.780000000000001
+            ]
+          },
+          {
+            "id": "control-exit",
+            "label": "EXIT",
+            "position": [
+              14,
+              5.7,
+              -12.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.780000000000001
+            ]
+          }
+        ],
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "service-exit",
+          "reason": "",
+          "events": [
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "footstep",
+              "time": 425
+            },
+            {
+              "type": "pickup",
+              "time": 708,
+              "body": "loop-near-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 850
+            },
+            {
+              "type": "shutter-open",
+              "time": 1175,
+              "id": "loop-service-door"
+            },
+            {
+              "type": "pad",
+              "time": 1175,
+              "pad": "loop-service",
+              "crate": "loop-near-cube"
+            },
+            {
+              "type": "drop",
+              "time": 1483,
+              "body": "loop-near-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 2300
+            },
+            {
+              "type": "footstep",
+              "time": 2825
+            },
+            {
+              "type": "footstep",
+              "time": 3250
+            },
+            {
+              "type": "footstep",
+              "time": 3675
+            },
+            {
+              "type": "footstep",
+              "time": 4100
+            },
+            {
+              "type": "footstep",
+              "time": 4525
+            }
+          ],
+          "mechanisms": [
+            "cargo",
+            "shutters",
+            "buttons"
+          ]
+        },
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "loop-emitter": {
+            "segments": [
+              {
+                "from": [
+                  -17.3,
+                  0.65,
+                  -4
+                ],
+                "to": [
+                  -16.85000001192093,
+                  0.65,
+                  -4
+                ]
+              }
+            ],
+            "stop": "obstacle",
+            "obstacle": "loop-block-cube",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "access-pressure": false,
+          "loop-service": true,
+          "closed:loop-service-door": false,
+          "clear:loop-service-door": true,
+          "safety:loop-service-door": false,
+          "door-safety": false,
+          "moving:loop-service-door": false,
+          "closed:loop-upper-door": true,
+          "clear:loop-upper-door": false,
+          "safety:loop-upper-door": false,
+          "moving:loop-upper-door": false,
+          "closed:loop-access-door": true,
+          "clear:loop-access-door": false,
+          "safety:loop-access-door": false,
+          "moving:loop-access-door": false,
+          "moving:loop-return-control": false,
+          "moving:loop-lift": false,
+          "loop-light": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "footstep",
+            "time": 425
+          },
+          {
+            "type": "pickup",
+            "time": 708,
+            "body": "loop-near-cube"
+          },
+          {
+            "type": "footstep",
+            "time": 850
+          },
+          {
+            "type": "shutter-open",
+            "time": 1175,
+            "id": "loop-service-door"
+          },
+          {
+            "type": "pad",
+            "time": 1175,
+            "pad": "loop-service",
+            "crate": "loop-near-cube"
+          },
+          {
+            "type": "drop",
+            "time": 1483,
+            "body": "loop-near-cube"
+          },
+          {
+            "type": "footstep",
+            "time": 2300
+          },
+          {
+            "type": "footstep",
+            "time": 2825
+          },
+          {
+            "type": "footstep",
+            "time": 3250
+          },
+          {
+            "type": "footstep",
+            "time": 3675
+          },
+          {
+            "type": "footstep",
+            "time": 4100
+          },
+          {
+            "type": "footstep",
+            "time": 4525
+          },
+          {
+            "type": "complete",
+            "time": 4633,
+            "chamber": 35
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "loop-service-vestibule",
+          "normal": {
+            "x": 0,
+            "y": 0.9999999403953552,
+            "z": 0.0000040695895222597755
+          },
+          "witness": {
+            "x": -5.939955234527588,
+            "y": 0,
+            "z": 10.592565536499023
+          },
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": -0.0009973132982850075,
+            "y": -0.0011111111380159855,
+            "z": 0.03998744115233421
+          }
+        }
+      ]
+    },
+    {
+      "label": "final",
+      "state": {
+        "room": "chamber-35",
+        "number": 35,
+        "mission": "SERVICE is opened by the floor button, and the lift is stopped by loss of light. Keep the receiver dark and use SERVICE.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -5.9409565925598145,
+            0.8647462129592896,
+            10.632545471191406
+          ],
+          "velocity": [
+            -0.1196775903879961,
+            0,
+            4.798492755857984
+          ],
+          "yaw": 3.1166580944969864,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [
+          {
+            "id": "loop-near-cube",
+            "position": [
+              -8.891971588134766,
+              0.6898980140686035,
+              6.0029683113098145
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -0.000004174911282461835,
+              -0.00000464801905764034,
+              -0.0000026474581318325363,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          },
+          {
+            "id": "loop-block-cube",
+            "position": [
+              -16.299999237060547,
+              0.5498895645141602,
+              -4.000001430511475
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              1.9994473632323206e-7,
+              3.889522818406599e-12,
+              -2.2716716330251074e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "access-pressure",
+            "position": [
+              -3,
+              0.14,
+              -7
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "loop-service",
+            "position": [
+              -9,
+              0.14,
+              6
+            ],
+            "pressed": true,
+            "crate": "loop-near-cube"
+          }
+        ],
+        "devices": [
+          {
+            "id": "loop-service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -6,
+              5,
+              10.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-upper-door",
+            "kind": "shutter",
+            "label": "CONTROL GALLERY",
+            "position": [
+              14,
+              5.7,
+              -10.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-access-door",
+            "kind": "shutter",
+            "label": "ACCESS",
+            "position": [
+              -0.08,
+              1.5,
+              0
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-return-control",
+            "kind": "switch",
+            "label": "ACCESS RETURN",
+            "position": [
+              2.5,
+              1.25,
+              -4
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "loop-lift",
+            "kind": "lift",
+            "label": "CONTROL GALLERY",
+            "position": [
+              14,
+              -0.2,
+              0
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "loop-source",
+            "position": [
+              -12,
+              1.75,
+              9.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "loop-return",
+            "position": [
+              -17.985,
+              1.75,
+              4
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -6,
+              1.5,
+              12.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.780000000000001
+            ]
+          },
+          {
+            "id": "control-exit",
+            "label": "EXIT",
+            "position": [
+              14,
+              5.7,
+              -12.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.780000000000001
+            ]
+          }
+        ],
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "service-exit",
+          "reason": "",
+          "events": [
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "footstep",
+              "time": 425
+            },
+            {
+              "type": "pickup",
+              "time": 708,
+              "body": "loop-near-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 850
+            },
+            {
+              "type": "shutter-open",
+              "time": 1175,
+              "id": "loop-service-door"
+            },
+            {
+              "type": "pad",
+              "time": 1175,
+              "pad": "loop-service",
+              "crate": "loop-near-cube"
+            },
+            {
+              "type": "drop",
+              "time": 1483,
+              "body": "loop-near-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 2300
+            },
+            {
+              "type": "footstep",
+              "time": 2825
+            },
+            {
+              "type": "footstep",
+              "time": 3250
+            },
+            {
+              "type": "footstep",
+              "time": 3675
+            },
+            {
+              "type": "footstep",
+              "time": 4100
+            },
+            {
+              "type": "footstep",
+              "time": 4525
+            }
+          ],
+          "mechanisms": [
+            "cargo",
+            "shutters",
+            "buttons"
+          ]
+        },
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "loop-emitter": {
+            "segments": [
+              {
+                "from": [
+                  -17.3,
+                  0.65,
+                  -4
+                ],
+                "to": [
+                  -16.85000001192093,
+                  0.65,
+                  -4
+                ]
+              }
+            ],
+            "stop": "obstacle",
+            "obstacle": "loop-block-cube",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "access-pressure": false,
+          "loop-service": true,
+          "closed:loop-service-door": false,
+          "clear:loop-service-door": true,
+          "safety:loop-service-door": false,
+          "door-safety": false,
+          "moving:loop-service-door": false,
+          "closed:loop-upper-door": true,
+          "clear:loop-upper-door": false,
+          "safety:loop-upper-door": false,
+          "moving:loop-upper-door": false,
+          "closed:loop-access-door": true,
+          "clear:loop-access-door": false,
+          "safety:loop-access-door": false,
+          "moving:loop-access-door": false,
+          "moving:loop-return-control": false,
+          "moving:loop-lift": false,
+          "loop-light": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "footstep",
+            "time": 425
+          },
+          {
+            "type": "pickup",
+            "time": 708,
+            "body": "loop-near-cube"
+          },
+          {
+            "type": "footstep",
+            "time": 850
+          },
+          {
+            "type": "shutter-open",
+            "time": 1175,
+            "id": "loop-service-door"
+          },
+          {
+            "type": "pad",
+            "time": 1175,
+            "pad": "loop-service",
+            "crate": "loop-near-cube"
+          },
+          {
+            "type": "drop",
+            "time": 1483,
+            "body": "loop-near-cube"
+          },
+          {
+            "type": "footstep",
+            "time": 2300
+          },
+          {
+            "type": "footstep",
+            "time": 2825
+          },
+          {
+            "type": "footstep",
+            "time": 3250
+          },
+          {
+            "type": "footstep",
+            "time": 3675
+          },
+          {
+            "type": "footstep",
+            "time": 4100
+          },
+          {
+            "type": "footstep",
+            "time": 4525
+          },
+          {
+            "type": "complete",
+            "time": 4633,
+            "chamber": 35
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "loop-service-vestibule",
+          "normal": {
+            "x": 0,
+            "y": 0.9999999403953552,
+            "z": 0.0000040695895222597755
+          },
+          "witness": {
+            "x": -5.939955234527588,
+            "y": 0,
+            "z": 10.592565536499023
+          },
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": -0.0009973132982850075,
+            "y": -0.0011111111380159855,
+            "z": 0.03998744115233421
+          }
+        }
+      ]
+    }
+  ]
+}

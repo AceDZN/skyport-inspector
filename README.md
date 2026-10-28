@@ -1,14 +1,16 @@
 # Rift Runner · קופצים בין שערים
 
-An original first-person portal puzzle game. Twenty authored enclosed chambers now develop real portals, rigid cargo, momentum flings, pressure circuits, shutters, lifts, carriers, conveyors, optics and causal English. Separately scoped ordinary-input runs earn the saved1–20 prefix. Thirty main rooms, further finish/contrast checks and the final fresh sequential1→50 playthrough remain required.
+A first-person portal puzzle game with saved numbered progression and no grade selector. Thirty-five authored rooms are registered in this checkpoint. The goal remains exactly 50; later rooms, final audiovisual review and a fresh complete 1→50 playthrough are still in progress.
 
-The new core is composed around Rapier3D0.21: a capsule character controller, dynamic rigid cubes with angular motion, collision-aware holding, aperture-scoped portals and physical machinery. It does not inherit the rejected AABB controller. Existing original sound/music and appropriate art are reused.
+The portal instrument and every loose/carried cube now use actual generated Tripo GLBs. Both models are fetched, hash-verified and decoded before play is enabled; failed loading offers an ordinary retry. Low wall shots align to a real supported walking floor, so normal W entry and held-cargo return do not require jumping. Deliberately raised openings, ledges, ceilings and full-body fit remain physical constraints.
 
-The [twenty-room review](docs/chamber-qa/TWENTY_CHAMBERS.md) binds the latest genuine-earned15→20 continuation,16/20 contrasts, actual C11 motor/brake repair and C13 covered-control feedback to the frozen BMw build. Its283 commands have zero errors/retries; earlier retries and harness mistakes remain preserved in their own contexts. This is not a fresh1→20 run. Current foundation/contact/motion/save integration passes209 native contracts; those counts do not represent level completions. Later batches remain unregistered work in progress, and actual visual finish remains open.
+English instructions change real routes, supplies, timing and object choices. M opens paused Hebrew/vocabulary help; later N journals distinguish earlier observed events from current machine states. Completion includes an English phrase recap. These are situated reading/comprehension activities, not a claim of whole-unit mastery.
 
-**Current review:** [localhost4261](http://localhost:4261/). **Development:** [localhost5261/chambers.html](http://localhost:5261/chambers.html). [Ten-room evidence](docs/chamber-qa/TEN_CHAMBERS.md) binds the normal-input6→10 continuation, C7 wrong-route/stair recovery, C8 loose-cargo freight, C9 alternate cargo choice, C10 no-ride base/parking contrast and reload persistence to frozen DiK0owgl. Three initial harness assumptions are retained; no page/console errors occurred. This is separate from the earlier [128.52-second continuous fresh1→5 recording](docs/chamber-qa/five-chambers-gameplay.mp4) on CJGVY4LM and the [41.84-second two-room recording](docs/chamber-qa/core-gameplay.mp4). No fresh1→10 or completed50-room claim is made.
+The [accepted model/entry review](docs/chamber-qa/hero-floor-parent-review/COMBINED-REVIEW.md) records 74 mixed UI-input actions, 17 actual captures, no command/page/normal console errors, trusted W-only standing crossings both ways including actual held cargo, real pressure/exit and saved progress after reload. Both GLBs were verified through actual local HTTP, PBR pixels and a genuine partial cargo seam. Separate 503 fixtures for each model recovered through Retry before any world was created. Navigation used standard DOM keyboard events; the review is explicitly not all-trusted input.
 
-WASD move, mouse look, left/right mouse place portals on valid white surfaces, Space jump, E grab/drop, R safe retry, M Hebrew help, Escape pause/unlock. Drag look is available if pointer lock is unavailable. Reading pauses the puzzle.
+[Placement regression evidence](docs/chamber-qa/LOW_WALL_ENTRY.md) preserves the failing baseline, 25 repaired native groups including 32 bidirectional empty/held attempts and four actual C1 routes, plus 58 existing affected ceiling/fling/optics/carry regressions. Native contracts do not represent browser level completions. Independent play has earned 1–25 across separately preserved earlier contexts; no fresh 1–35 or completed 50-room claim is made.
+
+Run locally:
 
 ```sh
 npm ci
@@ -17,6 +19,8 @@ npm run build
 npm run preview
 ```
 
-REAL-PORTAL-RESET.md is authoritative and supersedes the earlier campaign approach. The eventual requirement remains fifty authored levels with saved progression and no grade selector; expansion proceeds in small authored, tested batches. The Rapier campaign uses an isolated save key, preserves earned two-chamber progress with explicitly unknown old measurements, and supports Continue, unlocked replay and backed-up reset. Base and changed-instruction evidence are retained separately. `rift-campaign-50-draft-v1` preserves the rejected, unverified fifty-room draft. Its catalogue, static tests and partial prefix runs are historical source material, not shipped campaign evidence.
+[Preview](http://localhost:4261/) · [Development](http://localhost:5261/). WASD moves; mouse looks; left/right click places portals; E uses/grabs/drops; Space jumps; R retries; M opens help; N opens a configured machine journal; Escape pauses. Drag look is available in settings. Reading pauses physics and audio.
 
-Targets and exact prompts: docs/chamber-targets/. Actual art/search evidence: docs/chamber-art/. Independent tests and gameplay evidence: docs/chamber-qa/. Original audio: AUDIO.md and docs/chamber-audio/. No paid Tripo generation, commercial-game assets, human acoustic audition or learning-gains claim.
+Actual model provenance and exact binary hashes are in [ASSETS.md](ASSETS.md). The new Tripo props were generated in the user's account under explicit authorization using existing credits, with no purchase or upgrade. Original music, ambience and effects are retained. Draft later fixtures remain separate from registered gameplay and browser acceptance.
+
+REAL-PORTAL-RESET.md and PORTAL-CAMPAIGN-QUALITY.md govern the build. Historical tags retain the rejected graded/AABB50 draft and earlier reviewed 10/20-room checkpoints; they are not the current app or final campaign evidence.
