@@ -1,0 +1,65 @@
+{
+  "createdAt": "2026-10-28T15:54:59.728741+00:00",
+  "status": "SOURCE-ONLY marks metadata correction; no compiler/native/browser/build or recipe execution.",
+  "beforeSha256": "05f8367a33f8f79bc2b57bc8181a1a03357994013a97d14b70d6edae743929ea",
+  "afterSha256": "38c476025e114d5e0f063a7e50a8be94a83678e39e0d2f68ea6abbe08aabdabb",
+  "afterBytes": 19878,
+  "exactlyOneOriginalMarkPositionExpressionChanged": true,
+  "oldExpression": "originals.forEach((lines,j)=>lines.forEach((text,i)=>w.marks.push({text,position:[14.94,5.3-j*2.0-i*.28,23.3],normal:[-1,0,0],width:2.4,height:.18})));",
+  "newExpression": "originals.forEach((lines,j)=>lines.forEach((text,i)=>w.marks.push({text,position:[14.94,2.8-i*.28,j===0?21.6:24.5],normal:[-1,0,0],width:2.4,height:.18})));",
+  "unchanged": [
+    "full source text outside this one mark placement expression",
+    "both original procedure arrays/full wording/group ownership",
+    "all physical geometry/portal hosts/circuits/mission/goal metadata",
+    "C49 original and report marks",
+    "prepared route commands"
+  ],
+  "layout": {
+    "common": {
+      "x": 14.94,
+      "normal": [
+        -1,
+        0,
+        0
+      ],
+      "width": 2.4,
+      "lineHeight": 0.18,
+      "headerY": 2.8,
+      "lineSpacing": 0.28
+    },
+    "LOADING + FREIGHT": {
+      "centreZ": 21.6,
+      "spanZ": [
+        20.4,
+        22.8
+      ],
+      "lineYs": [
+        2.8,
+        2.52,
+        2.24,
+        1.96,
+        1.68
+      ]
+    },
+    "GALLERY + ARCHIVE": {
+      "centreZ": 24.5,
+      "spanZ": [
+        23.3,
+        25.7
+      ],
+      "lineYs": [
+        2.8,
+        2.52,
+        2.24,
+        1.96,
+        1.68,
+        1.4
+      ]
+    }
+  },
+  "recipeHashesUntouched": {
+    "docs/core-levels/reported-recipes/49-base-segment.jsonl": "849c52e0a07057f4e0afba09ffc7a1e992204fe2bf62f25256c2a311bfc06cff",
+    "docs/core-levels/reported-recipes/49-wrong-source-repair-segment.jsonl": "47f480d944662d4f2c07f81c9893b46145a114c6d8a5db6ae86b7fff51fee464",
+    "docs/core-levels/reported-recipes/50-base-segment.jsonl": "effc6c99c49781ed8762ef63a61f2454c4e82fc01954d9505979d51cf60f80c3"
+  }
+}

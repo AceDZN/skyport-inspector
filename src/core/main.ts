@@ -48,7 +48,7 @@ async function lock() {
 }
 function event(type: string, data: Record<string, unknown> = {}) {
     if (!started) return;
-    audio.cue(type === 'blocked' || type === 'wrong-exit' ? 'invalid' : type);
+    if (type !== 'complete') audio.cue(type === 'blocked' || type === 'wrong-exit' ? 'invalid' : type);
     if (type === 'blocked') message('הצד השני חסום. פנו מקום או מקמו מחדש את השער.');
     if (type === 'invalid' || type === 'wrong-exit') message(String(data.reason ?? 'Aim at a white surface.'));
     if (type === 'portalA' || type === 'portalB') audio.setConnection(world.portals.every(Boolean));
@@ -56,7 +56,7 @@ function event(type: string, data: Record<string, unknown> = {}) {
     if (type === 'complete' && world.campaignResult?.goalMatched) {
         const accepted = progress.observe(number, {goalMatched:true, assistance, retries:world.respawns, seconds:world.time, portalCrossings:world.player.crossings, mechanisms:world.campaignResult.mechanisms,variant:alternate?'contrast':'base'});
         if (!accepted) { home(); message(progress.warning ?? 'This result belongs to an older campaign. Start the room again.'); return; }
-        mode = 'result'; release(); audio.setPaused(true); render();
+        mode = 'result'; release(); audio.pauseWithCompletion(); render();
     }
 }
 function load(n: number, contrast = false) {

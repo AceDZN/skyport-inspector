@@ -1,0 +1,5796 @@
+{
+  "scope": "Unregistered authored-spawn native input path only. No actor/cargo/machine/history/save setters, resets or browser/completion claims. Native portal rays ignore glass; real visual framing remains browser-pending.",
+  "number": 37,
+  "contrast": false,
+  "error": null,
+  "sources": {
+    "src/core/levels/completion.ts": "f1b391be23e0c97d642e73c1457ceef264631e3088538886f3625a602cbfbb1a",
+    "src/core/levels/completion-english.ts": "0e614046f4e2b475d586465175eb84f6abb1d600dce48a758b49d419bb545932",
+    "src/core/level.ts": "4dc6e0989e9a3ebe3a22f4a115ac5116073fec2e2d7d8777ff76f81f7b9db272",
+    "src/core/world.ts": "054fe818b86b3eda9d17d240b1f0aeebaa960aff1afe4669003df8131a60af23",
+    "src/core/machine-journal.ts": "b400ede48dd62294f3a212e504495a50f8ca2db93dc4efb4f5d66e6962108de1",
+    "src/systems.ts": "b53edc09e8fd038b506b4504443ca24073e2d02be8ae807d56000354b30b7716",
+    "tests/core-completion-routes.test.ts": "5a743bc9ae55f985985a80d9a87502d4c9b27ec7688fff5f88db8a6829e442b4",
+    "tests/helpers/completion-route.ts": "52c77921696405304ded7b699d1bcbc788f2e08997a36c0d6efb5497565ae548"
+  },
+  "ridingFrames": {
+    "archive-lift": 600
+  },
+  "events": [
+    {
+      "type": "land"
+    },
+    {
+      "type": "portalA",
+      "surface": "rack-source",
+      "point": [
+        -4.45,
+        1.55,
+        13.959999999999999
+      ]
+    },
+    {
+      "type": "portalB",
+      "surface": "rack-return",
+      "point": [
+        -10.959999999999999,
+        1.55,
+        -3.45
+      ]
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "pickup",
+      "body": "release-cube"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "enter",
+      "body": "release-cube",
+      "from": 0,
+      "to": 1,
+      "fromSurface": "rack-source",
+      "toSurface": "rack-return",
+      "speed": 2.5031685263452155,
+      "exitSpeed": 2.5031685263452155,
+      "held": "release-cube"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "enter",
+      "body": "player",
+      "from": 0,
+      "to": 1,
+      "fromSurface": "rack-source",
+      "toSurface": "rack-return",
+      "speed": 4.798782145608326,
+      "exitSpeed": 4.798782145608326,
+      "held": "release-cube"
+    },
+    {
+      "type": "land"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "drop",
+      "body": "release-cube"
+    },
+    {
+      "type": "shutter-open",
+      "id": "service-door"
+    },
+    {
+      "type": "shutter-open",
+      "id": "rack-access"
+    },
+    {
+      "type": "pad",
+      "pad": "release-pressure",
+      "crate": "release-cube"
+    },
+    {
+      "type": "contact",
+      "body": "release-cube",
+      "speed": 2.46078591027561
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "pickup",
+      "body": "storage-cube"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "drop",
+      "body": "storage-cube"
+    },
+    {
+      "type": "shutter-close",
+      "id": "service-door"
+    },
+    {
+      "type": "pad",
+      "pad": "storage-pressure",
+      "crate": "storage-cube"
+    },
+    {
+      "type": "contact",
+      "body": "storage-cube",
+      "speed": 2.4607804176787216
+    },
+    {
+      "type": "lift-motor",
+      "id": "archive-lift"
+    },
+    {
+      "type": "pickup",
+      "body": "storage-cube"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "shutter-open",
+      "id": "service-door"
+    },
+    {
+      "type": "lift-brake",
+      "id": "archive-lift"
+    },
+    {
+      "type": "button-release",
+      "pad": "storage-pressure",
+      "crate": "player"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "drop",
+      "body": "storage-cube"
+    },
+    {
+      "type": "shutter-close",
+      "id": "service-door"
+    },
+    {
+      "type": "lift-motor",
+      "id": "archive-lift"
+    },
+    {
+      "type": "pad",
+      "pad": "storage-pressure",
+      "crate": "storage-cube"
+    },
+    {
+      "type": "contact",
+      "body": "storage-cube",
+      "speed": 2.4607801793106225
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "lift-arrival",
+      "id": "archive-lift",
+      "value": "ARCHIVE"
+    },
+    {
+      "type": "shutter-open",
+      "id": "archive-door"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "lift-motor",
+      "id": "archive-lift"
+    },
+    {
+      "type": "shutter-close",
+      "id": "archive-door"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "lift-arrival",
+      "id": "archive-lift",
+      "value": "base"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "lift-motor",
+      "id": "archive-lift"
+    },
+    {
+      "type": "lift-arrival",
+      "id": "archive-lift",
+      "value": "ARCHIVE"
+    },
+    {
+      "type": "shutter-open",
+      "id": "archive-door"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "complete",
+      "chamber": 37
+    }
+  ],
+  "checkpoints": [
+    {
+      "label": "actual-authored-spawn",
+      "state": {
+        "room": "chamber-37",
+        "number": 37,
+        "mission": "Finish both deliveries. Keep STORAGE and RELEASE pressed, then use the archive lift.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -0.000001322151547356043,
+            0.8647183179855347,
+            11.999998092651367
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [
+          {
+            "id": "release-cube",
+            "position": [
+              -5.000002861022949,
+              0.5498895645141602,
+              9
+            ],
+            "velocity": [
+              -0.0000050901730901387054,
+              -7.617604182996729e-7,
+              -0.000004335345693107229
+            ],
+            "rotation": [
+              1.9990997657259868e-7,
+              3.890404925294133e-12,
+              -2.2745460626083513e-7,
+              1
+            ],
+            "angularVelocity": [
+              -0.00000783886389399413,
+              9.301465305443235e-14,
+              0.000009203688023262657
+            ],
+            "held": false,
+            "crossings": 0
+          },
+          {
+            "id": "storage-cube",
+            "position": [
+              9,
+              3.9498960971832275,
+              -12
+            ],
+            "velocity": [
+              -0.00002082707214867696,
+              -0.0000031358140404336154,
+              -0.00001767238791217096
+            ],
+            "rotation": [
+              7.60273849209625e-7,
+              3.765216003565053e-12,
+              -9.50515072872804e-7,
+              1
+            ],
+            "angularVelocity": [
+              -0.00003195376484654844,
+              -1.3879630951507682e-13,
+              0.00003765781002584845
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "release-pressure",
+            "position": [
+              -6,
+              0.14,
+              -4
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "storage-pressure",
+            "position": [
+              9,
+              3.54,
+              -6
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -11.12,
+              1.5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "archive-door",
+            "kind": "shutter",
+            "label": "ARCHIVE",
+            "position": [
+              -6,
+              7.7,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "rack-access",
+            "kind": "shutter",
+            "label": "CARGO ACCESS",
+            "position": [
+              6,
+              1.5,
+              0
+            ],
+            "size": [
+              2.5,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "archive-lift",
+            "kind": "lift",
+            "label": "ARCHIVE LIFT",
+            "position": [
+              -6,
+              -0.2,
+              -10
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "LOADING",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "rack-source",
+            "position": [
+              -5,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "rack-return",
+            "position": [
+              -10.985,
+              1.75,
+              -4
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -13.39,
+              1.5,
+              -10
+            ],
+            "size": [
+              3.58,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "archive-exit",
+            "label": "EXIT",
+            "position": [
+              -6,
+              7.7,
+              -16.29
+            ],
+            "size": [
+              3.16,
+              3,
+              3.380000000000001
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "release-pressure": false,
+          "storage-pressure": false,
+          "closed:service-door": true,
+          "clear:service-door": false,
+          "safety:service-door": false,
+          "door-safety": false,
+          "moving:service-door": false,
+          "closed:archive-door": true,
+          "clear:archive-door": false,
+          "safety:archive-door": false,
+          "moving:archive-door": false,
+          "closed:rack-access": true,
+          "clear:rack-access": false,
+          "safety:rack-access": false,
+          "moving:rack-access": false,
+          "moving:archive-lift": false,
+          "at:archive-lift:LOADING": true,
+          "at:archive-lift:ARCHIVE": false
+        },
+        "journal": {
+          "reports": [
+            {
+              "id": "release-contact",
+              "status": "NOT YET OBSERVED",
+              "text": "The RELEASE plate has not been pressed yet.",
+              "observedAt": null,
+              "pastText": null
+            },
+            {
+              "id": "storage-contact",
+              "status": "NOT YET OBSERVED",
+              "text": "The STORAGE plate has not been pressed yet.",
+              "observedAt": null,
+              "pastText": null
+            },
+            {
+              "id": "archive-arrival",
+              "status": "NOT YET OBSERVED",
+              "text": "The lift has not reached ARCHIVE yet.",
+              "observedAt": null,
+              "pastText": null
+            },
+            {
+              "id": "rack-opened",
+              "status": "NOT YET OBSERVED",
+              "text": "The cargo access has not opened fully yet.",
+              "observedAt": null,
+              "pastText": null
+            }
+          ],
+          "attempt": 1,
+          "rows": [],
+          "truncated": false,
+          "now": [
+            {
+              "id": "release-pressure",
+              "label": "RELEASE",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "storage-pressure",
+              "label": "STORAGE",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "rack-access",
+              "label": "CARGO ACCESS",
+              "kind": "shutter",
+              "state": "CLOSED"
+            },
+            {
+              "id": "archive-lift",
+              "label": "ARCHIVE LIFT",
+              "kind": "dock",
+              "state": "AT LOADING"
+            },
+            {
+              "id": "archive-door",
+              "label": "ARCHIVE DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            },
+            {
+              "id": "service-door",
+              "label": "SERVICE DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          }
+        ]
+      }
+    },
+    {
+      "label": "actual-pressure-release-pressure",
+      "state": {
+        "room": "chamber-37",
+        "number": 37,
+        "mission": "Finish both deliveries. Keep STORAGE and RELEASE pressed, then use the archive lift.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -7.6995673179626465,
+            0.8649894595146179,
+            -4.027491092681885
+          ],
+          "velocity": [
+            1.57186521335445e-14,
+            0,
+            -4.304723374162778e-15
+          ],
+          "yaw": -1.5817617483026427,
+          "pitch": -0.06954709510541442,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "rack-source",
+            "position": [
+              -4.45,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "rack-return",
+            "position": [
+              -10.959999999999999,
+              1.55,
+              -3.45
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "release-cube",
+            "position": [
+              -5.827986717224121,
+              0.689893364906311,
+              -4.007966041564941
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -9.77840272753383e-7,
+              0.7071740031242371,
+              -0.000003538778855727287,
+              0.7070395946502686
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 1
+          },
+          {
+            "id": "storage-cube",
+            "position": [
+              9,
+              3.9498960971832275,
+              -12
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              7.60273849209625e-7,
+              3.765216003565053e-12,
+              -9.50515072872804e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "release-pressure",
+            "position": [
+              -6,
+              0.14,
+              -4
+            ],
+            "pressed": true,
+            "crate": "release-cube"
+          },
+          {
+            "id": "storage-pressure",
+            "position": [
+              9,
+              3.54,
+              -6
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -11.12,
+              5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "archive-door",
+            "kind": "shutter",
+            "label": "ARCHIVE",
+            "position": [
+              -6,
+              7.7,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "rack-access",
+            "kind": "shutter",
+            "label": "CARGO ACCESS",
+            "position": [
+              6,
+              5,
+              0
+            ],
+            "size": [
+              2.5,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "archive-lift",
+            "kind": "lift",
+            "label": "ARCHIVE LIFT",
+            "position": [
+              -6,
+              -0.2,
+              -10
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "LOADING",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "rack-source",
+            "position": [
+              -5,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "rack-return",
+            "position": [
+              -10.985,
+              1.75,
+              -4
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -13.39,
+              1.5,
+              -10
+            ],
+            "size": [
+              3.58,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "archive-exit",
+            "label": "EXIT",
+            "position": [
+              -6,
+              7.7,
+              -16.29
+            ],
+            "size": [
+              3.16,
+              3,
+              3.380000000000001
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "release-pressure": true,
+          "storage-pressure": false,
+          "closed:service-door": false,
+          "clear:service-door": true,
+          "safety:service-door": false,
+          "door-safety": false,
+          "moving:service-door": false,
+          "closed:archive-door": true,
+          "clear:archive-door": false,
+          "safety:archive-door": false,
+          "moving:archive-door": false,
+          "closed:rack-access": false,
+          "clear:rack-access": true,
+          "safety:rack-access": false,
+          "moving:rack-access": false,
+          "moving:archive-lift": false,
+          "at:archive-lift:LOADING": true,
+          "at:archive-lift:ARCHIVE": false
+        },
+        "journal": {
+          "reports": [
+            {
+              "id": "release-contact",
+              "status": "OBSERVED",
+              "text": "The RELEASE plate has been pressed. Check its current pressure.",
+              "observedAt": 4.808333333333362,
+              "pastText": null
+            },
+            {
+              "id": "storage-contact",
+              "status": "NOT YET OBSERVED",
+              "text": "The STORAGE plate has not been pressed yet.",
+              "observedAt": null,
+              "pastText": null
+            },
+            {
+              "id": "archive-arrival",
+              "status": "NOT YET OBSERVED",
+              "text": "The lift has not reached ARCHIVE yet.",
+              "observedAt": null,
+              "pastText": null
+            },
+            {
+              "id": "rack-opened",
+              "status": "OBSERVED",
+              "text": "The cargo access has opened.",
+              "observedAt": 5.6166666666667355,
+              "pastText": null
+            }
+          ],
+          "attempt": 1,
+          "rows": [
+            {
+              "sequence": 1,
+              "time": 4.808333333333362,
+              "text": "Cargo reached RELEASE."
+            },
+            {
+              "sequence": 2,
+              "time": 5.6166666666667355,
+              "text": "CARGO ACCESS opened fully."
+            },
+            {
+              "sequence": 3,
+              "time": 5.6166666666667355,
+              "text": "SERVICE DOOR opened fully."
+            }
+          ],
+          "truncated": false,
+          "now": [
+            {
+              "id": "release-pressure",
+              "label": "RELEASE",
+              "kind": "pressure",
+              "state": "PRESSED",
+              "cargo": true
+            },
+            {
+              "id": "storage-pressure",
+              "label": "STORAGE",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "rack-access",
+              "label": "CARGO ACCESS",
+              "kind": "shutter",
+              "state": "OPEN"
+            },
+            {
+              "id": "archive-lift",
+              "label": "ARCHIVE LIFT",
+              "kind": "dock",
+              "state": "AT LOADING"
+            },
+            {
+              "id": "archive-door",
+              "label": "ARCHIVE DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            },
+            {
+              "id": "service-door",
+              "label": "SERVICE DOOR",
+              "kind": "shutter",
+              "state": "OPEN"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 1375
+          },
+          {
+            "type": "footstep",
+            "time": 1833
+          },
+          {
+            "type": "pickup",
+            "time": 1833,
+            "body": "release-cube"
+          },
+          {
+            "type": "footstep",
+            "time": 2283
+          },
+          {
+            "type": "footstep",
+            "time": 2708
+          },
+          {
+            "type": "enter",
+            "time": 3025,
+            "body": "release-cube",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "rack-source",
+            "toSurface": "rack-return",
+            "speed": 2.5031685263452155,
+            "exitSpeed": 2.5031685263452155,
+            "held": "release-cube"
+          },
+          {
+            "type": "footstep",
+            "time": 3133
+          },
+          {
+            "type": "enter",
+            "time": 3508,
+            "body": "player",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "rack-source",
+            "toSurface": "rack-return",
+            "speed": 4.798782145608326,
+            "exitSpeed": 4.798782145608326,
+            "held": "release-cube"
+          },
+          {
+            "type": "land",
+            "time": 3517
+          },
+          {
+            "type": "footstep",
+            "time": 3558
+          },
+          {
+            "type": "footstep",
+            "time": 3983
+          },
+          {
+            "type": "drop",
+            "time": 4667,
+            "body": "release-cube"
+          },
+          {
+            "type": "shutter-open",
+            "time": 4817,
+            "id": "service-door"
+          },
+          {
+            "type": "shutter-open",
+            "time": 4817,
+            "id": "rack-access"
+          },
+          {
+            "type": "pad",
+            "time": 4817,
+            "pad": "release-pressure",
+            "crate": "release-cube"
+          },
+          {
+            "type": "contact",
+            "time": 4825,
+            "body": "release-cube",
+            "speed": 2.46078591027561
+          }
+        ]
+      }
+    },
+    {
+      "label": "actual-first-arrival-second-delivery-remains",
+      "state": {
+        "room": "chamber-37",
+        "number": 37,
+        "mission": "Finish both deliveries. Keep STORAGE and RELEASE pressed, then use the archive lift.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -7.6995673179626465,
+            0.8649894595146179,
+            -4.027491092681885
+          ],
+          "velocity": [
+            1.57186521335445e-14,
+            0,
+            -4.304723374162778e-15
+          ],
+          "yaw": -1.5817617483026427,
+          "pitch": -0.06954709510541442,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "rack-source",
+            "position": [
+              -4.45,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "rack-return",
+            "position": [
+              -10.959999999999999,
+              1.55,
+              -3.45
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "release-cube",
+            "position": [
+              -5.827986717224121,
+              0.689893364906311,
+              -4.007966041564941
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -9.77840272753383e-7,
+              0.7071740031242371,
+              -0.000003538778855727287,
+              0.7070395946502686
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 1
+          },
+          {
+            "id": "storage-cube",
+            "position": [
+              9,
+              3.9498960971832275,
+              -12
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              7.60273849209625e-7,
+              3.765216003565053e-12,
+              -9.50515072872804e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "release-pressure",
+            "position": [
+              -6,
+              0.14,
+              -4
+            ],
+            "pressed": true,
+            "crate": "release-cube"
+          },
+          {
+            "id": "storage-pressure",
+            "position": [
+              9,
+              3.54,
+              -6
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -11.12,
+              5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "archive-door",
+            "kind": "shutter",
+            "label": "ARCHIVE",
+            "position": [
+              -6,
+              7.7,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "rack-access",
+            "kind": "shutter",
+            "label": "CARGO ACCESS",
+            "position": [
+              6,
+              5,
+              0
+            ],
+            "size": [
+              2.5,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "archive-lift",
+            "kind": "lift",
+            "label": "ARCHIVE LIFT",
+            "position": [
+              -6,
+              -0.2,
+              -10
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "LOADING",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "rack-source",
+            "position": [
+              -5,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "rack-return",
+            "position": [
+              -10.985,
+              1.75,
+              -4
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -13.39,
+              1.5,
+              -10
+            ],
+            "size": [
+              3.58,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "archive-exit",
+            "label": "EXIT",
+            "position": [
+              -6,
+              7.7,
+              -16.29
+            ],
+            "size": [
+              3.16,
+              3,
+              3.380000000000001
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "release-pressure": true,
+          "storage-pressure": false,
+          "closed:service-door": false,
+          "clear:service-door": true,
+          "safety:service-door": false,
+          "door-safety": false,
+          "moving:service-door": false,
+          "closed:archive-door": true,
+          "clear:archive-door": false,
+          "safety:archive-door": false,
+          "moving:archive-door": false,
+          "closed:rack-access": false,
+          "clear:rack-access": true,
+          "safety:rack-access": false,
+          "moving:rack-access": false,
+          "moving:archive-lift": false,
+          "at:archive-lift:LOADING": true,
+          "at:archive-lift:ARCHIVE": false
+        },
+        "journal": {
+          "reports": [
+            {
+              "id": "release-contact",
+              "status": "OBSERVED",
+              "text": "The RELEASE plate has been pressed. Check its current pressure.",
+              "observedAt": 4.808333333333362,
+              "pastText": null
+            },
+            {
+              "id": "storage-contact",
+              "status": "NOT YET OBSERVED",
+              "text": "The STORAGE plate has not been pressed yet.",
+              "observedAt": null,
+              "pastText": null
+            },
+            {
+              "id": "archive-arrival",
+              "status": "NOT YET OBSERVED",
+              "text": "The lift has not reached ARCHIVE yet.",
+              "observedAt": null,
+              "pastText": null
+            },
+            {
+              "id": "rack-opened",
+              "status": "OBSERVED",
+              "text": "The cargo access has opened.",
+              "observedAt": 5.6166666666667355,
+              "pastText": null
+            }
+          ],
+          "attempt": 1,
+          "rows": [
+            {
+              "sequence": 1,
+              "time": 4.808333333333362,
+              "text": "Cargo reached RELEASE."
+            },
+            {
+              "sequence": 2,
+              "time": 5.6166666666667355,
+              "text": "CARGO ACCESS opened fully."
+            },
+            {
+              "sequence": 3,
+              "time": 5.6166666666667355,
+              "text": "SERVICE DOOR opened fully."
+            }
+          ],
+          "truncated": false,
+          "now": [
+            {
+              "id": "release-pressure",
+              "label": "RELEASE",
+              "kind": "pressure",
+              "state": "PRESSED",
+              "cargo": true
+            },
+            {
+              "id": "storage-pressure",
+              "label": "STORAGE",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "rack-access",
+              "label": "CARGO ACCESS",
+              "kind": "shutter",
+              "state": "OPEN"
+            },
+            {
+              "id": "archive-lift",
+              "label": "ARCHIVE LIFT",
+              "kind": "dock",
+              "state": "AT LOADING"
+            },
+            {
+              "id": "archive-door",
+              "label": "ARCHIVE DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            },
+            {
+              "id": "service-door",
+              "label": "SERVICE DOOR",
+              "kind": "shutter",
+              "state": "OPEN"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 1375
+          },
+          {
+            "type": "footstep",
+            "time": 1833
+          },
+          {
+            "type": "pickup",
+            "time": 1833,
+            "body": "release-cube"
+          },
+          {
+            "type": "footstep",
+            "time": 2283
+          },
+          {
+            "type": "footstep",
+            "time": 2708
+          },
+          {
+            "type": "enter",
+            "time": 3025,
+            "body": "release-cube",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "rack-source",
+            "toSurface": "rack-return",
+            "speed": 2.5031685263452155,
+            "exitSpeed": 2.5031685263452155,
+            "held": "release-cube"
+          },
+          {
+            "type": "footstep",
+            "time": 3133
+          },
+          {
+            "type": "enter",
+            "time": 3508,
+            "body": "player",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "rack-source",
+            "toSurface": "rack-return",
+            "speed": 4.798782145608326,
+            "exitSpeed": 4.798782145608326,
+            "held": "release-cube"
+          },
+          {
+            "type": "land",
+            "time": 3517
+          },
+          {
+            "type": "footstep",
+            "time": 3558
+          },
+          {
+            "type": "footstep",
+            "time": 3983
+          },
+          {
+            "type": "drop",
+            "time": 4667,
+            "body": "release-cube"
+          },
+          {
+            "type": "shutter-open",
+            "time": 4817,
+            "id": "service-door"
+          },
+          {
+            "type": "shutter-open",
+            "time": 4817,
+            "id": "rack-access"
+          },
+          {
+            "type": "pad",
+            "time": 4817,
+            "pad": "release-pressure",
+            "crate": "release-cube"
+          },
+          {
+            "type": "contact",
+            "time": 4825,
+            "body": "release-cube",
+            "speed": 2.46078591027561
+          }
+        ]
+      }
+    },
+    {
+      "label": "actual-pressure-storage-pressure",
+      "state": {
+        "room": "chamber-37",
+        "number": 37,
+        "mission": "Finish both deliveries. Keep STORAGE and RELEASE pressed, then use the archive lift.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            8.998090744018555,
+            4.264970302581787,
+            -7.712492942810059
+          ],
+          "velocity": [
+            -3.5480163778377256e-16,
+            0,
+            1.6293637949676563e-14
+          ],
+          "yaw": -3.1409006307137295,
+          "pitch": -0.06953139154485571,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "rack-source",
+            "position": [
+              -4.45,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "rack-return",
+            "position": [
+              -10.959999999999999,
+              1.55,
+              -3.45
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "release-cube",
+            "position": [
+              -5.827986717224121,
+              0.689893364906311,
+              -4.007966041564941
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -9.77840272753383e-7,
+              0.7071740031242371,
+              -0.000003538778855727287,
+              0.7070395946502686
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 1
+          },
+          {
+            "id": "storage-cube",
+            "position": [
+              8.997920989990234,
+              4.089911937713623,
+              -5.842015743255615
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0.000003060533117604791,
+              -0.000021539022782235406,
+              -0.0000071603053584112786,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "release-pressure",
+            "position": [
+              -6,
+              0.14,
+              -4
+            ],
+            "pressed": true,
+            "crate": "release-cube"
+          },
+          {
+            "id": "storage-pressure",
+            "position": [
+              9,
+              3.54,
+              -6
+            ],
+            "pressed": true,
+            "crate": "storage-cube"
+          }
+        ],
+        "devices": [
+          {
+            "id": "service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -11.12,
+              1.5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "archive-door",
+            "kind": "shutter",
+            "label": "ARCHIVE",
+            "position": [
+              -6,
+              7.7,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "rack-access",
+            "kind": "shutter",
+            "label": "CARGO ACCESS",
+            "position": [
+              6,
+              5,
+              0
+            ],
+            "size": [
+              2.5,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "archive-lift",
+            "kind": "lift",
+            "label": "ARCHIVE LIFT",
+            "position": [
+              -6,
+              -0.2,
+              -10
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "LOADING",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "rack-source",
+            "position": [
+              -5,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "rack-return",
+            "position": [
+              -10.985,
+              1.75,
+              -4
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -13.39,
+              1.5,
+              -10
+            ],
+            "size": [
+              3.58,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "archive-exit",
+            "label": "EXIT",
+            "position": [
+              -6,
+              7.7,
+              -16.29
+            ],
+            "size": [
+              3.16,
+              3,
+              3.380000000000001
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "release-pressure": true,
+          "storage-pressure": true,
+          "closed:service-door": true,
+          "clear:service-door": false,
+          "safety:service-door": false,
+          "door-safety": false,
+          "moving:service-door": false,
+          "closed:archive-door": true,
+          "clear:archive-door": false,
+          "safety:archive-door": false,
+          "moving:archive-door": false,
+          "closed:rack-access": false,
+          "clear:rack-access": true,
+          "safety:rack-access": false,
+          "moving:rack-access": false,
+          "moving:archive-lift": false,
+          "at:archive-lift:LOADING": true,
+          "at:archive-lift:ARCHIVE": false
+        },
+        "journal": {
+          "reports": [
+            {
+              "id": "release-contact",
+              "status": "OBSERVED",
+              "text": "The RELEASE plate has been pressed. Check its current pressure.",
+              "observedAt": 4.808333333333362,
+              "pastText": null
+            },
+            {
+              "id": "storage-contact",
+              "status": "OBSERVED",
+              "text": "The STORAGE plate has been pressed. Check whether it is pressed now.",
+              "observedAt": 16.466666666666374,
+              "pastText": null
+            },
+            {
+              "id": "archive-arrival",
+              "status": "NOT YET OBSERVED",
+              "text": "The lift has not reached ARCHIVE yet.",
+              "observedAt": null,
+              "pastText": null
+            },
+            {
+              "id": "rack-opened",
+              "status": "OBSERVED",
+              "text": "The cargo access has opened.",
+              "observedAt": 5.6166666666667355,
+              "pastText": null
+            }
+          ],
+          "attempt": 1,
+          "rows": [
+            {
+              "sequence": 1,
+              "time": 4.808333333333362,
+              "text": "Cargo reached RELEASE."
+            },
+            {
+              "sequence": 2,
+              "time": 5.6166666666667355,
+              "text": "CARGO ACCESS opened fully."
+            },
+            {
+              "sequence": 3,
+              "time": 5.6166666666667355,
+              "text": "SERVICE DOOR opened fully."
+            },
+            {
+              "sequence": 4,
+              "time": 16.466666666666374,
+              "text": "Cargo reached STORAGE."
+            },
+            {
+              "sequence": 5,
+              "time": 17.27499999999966,
+              "text": "SERVICE DOOR closed fully."
+            }
+          ],
+          "truncated": false,
+          "now": [
+            {
+              "id": "release-pressure",
+              "label": "RELEASE",
+              "kind": "pressure",
+              "state": "PRESSED",
+              "cargo": true
+            },
+            {
+              "id": "storage-pressure",
+              "label": "STORAGE",
+              "kind": "pressure",
+              "state": "PRESSED",
+              "cargo": true
+            },
+            {
+              "id": "rack-access",
+              "label": "CARGO ACCESS",
+              "kind": "shutter",
+              "state": "OPEN"
+            },
+            {
+              "id": "archive-lift",
+              "label": "ARCHIVE LIFT",
+              "kind": "dock",
+              "state": "AT LOADING"
+            },
+            {
+              "id": "archive-door",
+              "label": "ARCHIVE DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            },
+            {
+              "id": "service-door",
+              "label": "SERVICE DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 11408
+          },
+          {
+            "type": "footstep",
+            "time": 11833
+          },
+          {
+            "type": "footstep",
+            "time": 12258
+          },
+          {
+            "type": "footstep",
+            "time": 12683
+          },
+          {
+            "type": "footstep",
+            "time": 13108
+          },
+          {
+            "type": "footstep",
+            "time": 13533
+          },
+          {
+            "type": "footstep",
+            "time": 13967
+          },
+          {
+            "type": "pickup",
+            "time": 14400,
+            "body": "storage-cube"
+          },
+          {
+            "type": "footstep",
+            "time": 14417
+          },
+          {
+            "type": "footstep",
+            "time": 14908
+          },
+          {
+            "type": "footstep",
+            "time": 15333
+          },
+          {
+            "type": "footstep",
+            "time": 15758
+          },
+          {
+            "type": "drop",
+            "time": 16325,
+            "body": "storage-cube"
+          },
+          {
+            "type": "shutter-close",
+            "time": 16475,
+            "id": "service-door"
+          },
+          {
+            "type": "pad",
+            "time": 16475,
+            "pad": "storage-pressure",
+            "crate": "storage-cube"
+          },
+          {
+            "type": "contact",
+            "time": 16483,
+            "body": "storage-cube",
+            "speed": 2.4607804176787216
+          }
+        ]
+      }
+    },
+    {
+      "label": "actual-two-current-independent-pressures",
+      "state": {
+        "room": "chamber-37",
+        "number": 37,
+        "mission": "Finish both deliveries. Keep STORAGE and RELEASE pressed, then use the archive lift.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            8.998090744018555,
+            4.264970302581787,
+            -7.712492942810059
+          ],
+          "velocity": [
+            -3.5480163778377256e-16,
+            0,
+            1.6293637949676563e-14
+          ],
+          "yaw": -3.1409006307137295,
+          "pitch": -0.06953139154485571,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "rack-source",
+            "position": [
+              -4.45,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "rack-return",
+            "position": [
+              -10.959999999999999,
+              1.55,
+              -3.45
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "release-cube",
+            "position": [
+              -5.827986717224121,
+              0.689893364906311,
+              -4.007966041564941
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -9.77840272753383e-7,
+              0.7071740031242371,
+              -0.000003538778855727287,
+              0.7070395946502686
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 1
+          },
+          {
+            "id": "storage-cube",
+            "position": [
+              8.997920989990234,
+              4.089911937713623,
+              -5.842015743255615
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0.000003060533117604791,
+              -0.000021539022782235406,
+              -0.0000071603053584112786,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "release-pressure",
+            "position": [
+              -6,
+              0.14,
+              -4
+            ],
+            "pressed": true,
+            "crate": "release-cube"
+          },
+          {
+            "id": "storage-pressure",
+            "position": [
+              9,
+              3.54,
+              -6
+            ],
+            "pressed": true,
+            "crate": "storage-cube"
+          }
+        ],
+        "devices": [
+          {
+            "id": "service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -11.12,
+              1.5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "archive-door",
+            "kind": "shutter",
+            "label": "ARCHIVE",
+            "position": [
+              -6,
+              7.7,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "rack-access",
+            "kind": "shutter",
+            "label": "CARGO ACCESS",
+            "position": [
+              6,
+              5,
+              0
+            ],
+            "size": [
+              2.5,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "archive-lift",
+            "kind": "lift",
+            "label": "ARCHIVE LIFT",
+            "position": [
+              -6,
+              -0.2,
+              -10
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "LOADING",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "rack-source",
+            "position": [
+              -5,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "rack-return",
+            "position": [
+              -10.985,
+              1.75,
+              -4
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -13.39,
+              1.5,
+              -10
+            ],
+            "size": [
+              3.58,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "archive-exit",
+            "label": "EXIT",
+            "position": [
+              -6,
+              7.7,
+              -16.29
+            ],
+            "size": [
+              3.16,
+              3,
+              3.380000000000001
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "release-pressure": true,
+          "storage-pressure": true,
+          "closed:service-door": true,
+          "clear:service-door": false,
+          "safety:service-door": false,
+          "door-safety": false,
+          "moving:service-door": false,
+          "closed:archive-door": true,
+          "clear:archive-door": false,
+          "safety:archive-door": false,
+          "moving:archive-door": false,
+          "closed:rack-access": false,
+          "clear:rack-access": true,
+          "safety:rack-access": false,
+          "moving:rack-access": false,
+          "moving:archive-lift": false,
+          "at:archive-lift:LOADING": true,
+          "at:archive-lift:ARCHIVE": false
+        },
+        "journal": {
+          "reports": [
+            {
+              "id": "release-contact",
+              "status": "OBSERVED",
+              "text": "The RELEASE plate has been pressed. Check its current pressure.",
+              "observedAt": 4.808333333333362,
+              "pastText": null
+            },
+            {
+              "id": "storage-contact",
+              "status": "OBSERVED",
+              "text": "The STORAGE plate has been pressed. Check whether it is pressed now.",
+              "observedAt": 16.466666666666374,
+              "pastText": null
+            },
+            {
+              "id": "archive-arrival",
+              "status": "NOT YET OBSERVED",
+              "text": "The lift has not reached ARCHIVE yet.",
+              "observedAt": null,
+              "pastText": null
+            },
+            {
+              "id": "rack-opened",
+              "status": "OBSERVED",
+              "text": "The cargo access has opened.",
+              "observedAt": 5.6166666666667355,
+              "pastText": null
+            }
+          ],
+          "attempt": 1,
+          "rows": [
+            {
+              "sequence": 1,
+              "time": 4.808333333333362,
+              "text": "Cargo reached RELEASE."
+            },
+            {
+              "sequence": 2,
+              "time": 5.6166666666667355,
+              "text": "CARGO ACCESS opened fully."
+            },
+            {
+              "sequence": 3,
+              "time": 5.6166666666667355,
+              "text": "SERVICE DOOR opened fully."
+            },
+            {
+              "sequence": 4,
+              "time": 16.466666666666374,
+              "text": "Cargo reached STORAGE."
+            },
+            {
+              "sequence": 5,
+              "time": 17.27499999999966,
+              "text": "SERVICE DOOR closed fully."
+            }
+          ],
+          "truncated": false,
+          "now": [
+            {
+              "id": "release-pressure",
+              "label": "RELEASE",
+              "kind": "pressure",
+              "state": "PRESSED",
+              "cargo": true
+            },
+            {
+              "id": "storage-pressure",
+              "label": "STORAGE",
+              "kind": "pressure",
+              "state": "PRESSED",
+              "cargo": true
+            },
+            {
+              "id": "rack-access",
+              "label": "CARGO ACCESS",
+              "kind": "shutter",
+              "state": "OPEN"
+            },
+            {
+              "id": "archive-lift",
+              "label": "ARCHIVE LIFT",
+              "kind": "dock",
+              "state": "AT LOADING"
+            },
+            {
+              "id": "archive-door",
+              "label": "ARCHIVE DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            },
+            {
+              "id": "service-door",
+              "label": "SERVICE DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 11408
+          },
+          {
+            "type": "footstep",
+            "time": 11833
+          },
+          {
+            "type": "footstep",
+            "time": 12258
+          },
+          {
+            "type": "footstep",
+            "time": 12683
+          },
+          {
+            "type": "footstep",
+            "time": 13108
+          },
+          {
+            "type": "footstep",
+            "time": 13533
+          },
+          {
+            "type": "footstep",
+            "time": 13967
+          },
+          {
+            "type": "pickup",
+            "time": 14400,
+            "body": "storage-cube"
+          },
+          {
+            "type": "footstep",
+            "time": 14417
+          },
+          {
+            "type": "footstep",
+            "time": 14908
+          },
+          {
+            "type": "footstep",
+            "time": 15333
+          },
+          {
+            "type": "footstep",
+            "time": 15758
+          },
+          {
+            "type": "drop",
+            "time": 16325,
+            "body": "storage-cube"
+          },
+          {
+            "type": "shutter-close",
+            "time": 16475,
+            "id": "service-door"
+          },
+          {
+            "type": "pad",
+            "time": 16475,
+            "pad": "storage-pressure",
+            "crate": "storage-cube"
+          },
+          {
+            "type": "contact",
+            "time": 16483,
+            "body": "storage-cube",
+            "speed": 2.4607804176787216
+          }
+        ]
+      }
+    },
+    {
+      "label": "true-old-arrival-current-empty",
+      "state": {
+        "room": "chamber-37",
+        "number": 37,
+        "mission": "Finish both deliveries. Keep STORAGE and RELEASE pressed, then use the archive lift.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            9.000104904174805,
+            4.264917850494385,
+            -9.601553916931152
+          ],
+          "velocity": [
+            2.4841954725461373e-12,
+            0,
+            -2.313989377486771e-9
+          ],
+          "yaw": -0.0010771354614704705,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "rack-source",
+            "position": [
+              -4.45,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "rack-return",
+            "position": [
+              -10.959999999999999,
+              1.55,
+              -3.45
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "release-cube",
+            "position": [
+              -5.827986717224121,
+              0.689893364906311,
+              -4.007966041564941
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -9.77840272753383e-7,
+              0.7071740031242371,
+              -0.000003538778855727287,
+              0.7070395946502686
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 1
+          },
+          {
+            "id": "storage-cube",
+            "position": [
+              9.002043724060059,
+              4.414917945861816,
+              -11.4015531539917
+            ],
+            "velocity": [
+              0,
+              0.012004290707409382,
+              0
+            ],
+            "rotation": [
+              0.000003060533117604791,
+              -0.000021539022782235406,
+              -0.0000071603053584112786,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": true,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "release-pressure",
+            "position": [
+              -6,
+              0.14,
+              -4
+            ],
+            "pressed": true,
+            "crate": "release-cube"
+          },
+          {
+            "id": "storage-pressure",
+            "position": [
+              9,
+              3.54,
+              -6
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -11.12,
+              5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "archive-door",
+            "kind": "shutter",
+            "label": "ARCHIVE",
+            "position": [
+              -6,
+              7.7,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "rack-access",
+            "kind": "shutter",
+            "label": "CARGO ACCESS",
+            "position": [
+              6,
+              5,
+              0
+            ],
+            "size": [
+              2.5,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "archive-lift",
+            "kind": "lift",
+            "label": "ARCHIVE LIFT",
+            "position": [
+              -6,
+              0.46133333333353693,
+              -10
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0.10666666666669951,
+            "choice": "LOADING",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "rack-source",
+            "position": [
+              -5,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "rack-return",
+            "position": [
+              -10.985,
+              1.75,
+              -4
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -13.39,
+              1.5,
+              -10
+            ],
+            "size": [
+              3.58,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "archive-exit",
+            "label": "EXIT",
+            "position": [
+              -6,
+              7.7,
+              -16.29
+            ],
+            "size": [
+              3.16,
+              3,
+              3.380000000000001
+            ]
+          }
+        ],
+        "result": null,
+        "held": "storage-cube",
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "release-pressure": true,
+          "storage-pressure": false,
+          "closed:service-door": false,
+          "clear:service-door": true,
+          "safety:service-door": false,
+          "door-safety": false,
+          "moving:service-door": false,
+          "closed:archive-door": true,
+          "clear:archive-door": false,
+          "safety:archive-door": false,
+          "moving:archive-door": false,
+          "closed:rack-access": false,
+          "clear:rack-access": true,
+          "safety:rack-access": false,
+          "moving:rack-access": false,
+          "moving:archive-lift": false,
+          "at:archive-lift:LOADING": false,
+          "at:archive-lift:ARCHIVE": false
+        },
+        "journal": {
+          "reports": [
+            {
+              "id": "release-contact",
+              "status": "OBSERVED",
+              "text": "The RELEASE plate has been pressed. Check its current pressure.",
+              "observedAt": 4.808333333333362,
+              "pastText": null
+            },
+            {
+              "id": "storage-contact",
+              "status": "OBSERVED",
+              "text": "The STORAGE plate has been pressed. Check whether it is pressed now.",
+              "observedAt": 16.466666666666374,
+              "pastText": null
+            },
+            {
+              "id": "archive-arrival",
+              "status": "NOT YET OBSERVED",
+              "text": "The lift has not reached ARCHIVE yet.",
+              "observedAt": null,
+              "pastText": null
+            },
+            {
+              "id": "rack-opened",
+              "status": "OBSERVED",
+              "text": "The cargo access has opened.",
+              "observedAt": 5.6166666666667355,
+              "pastText": null
+            }
+          ],
+          "attempt": 1,
+          "rows": [
+            {
+              "sequence": 1,
+              "time": 4.808333333333362,
+              "text": "Cargo reached RELEASE."
+            },
+            {
+              "sequence": 2,
+              "time": 5.6166666666667355,
+              "text": "CARGO ACCESS opened fully."
+            },
+            {
+              "sequence": 3,
+              "time": 5.6166666666667355,
+              "text": "SERVICE DOOR opened fully."
+            },
+            {
+              "sequence": 4,
+              "time": 16.466666666666374,
+              "text": "Cargo reached STORAGE."
+            },
+            {
+              "sequence": 5,
+              "time": 17.27499999999966,
+              "text": "SERVICE DOOR closed fully."
+            },
+            {
+              "sequence": 6,
+              "time": 23.99999999999928,
+              "text": "STORAGE became empty."
+            },
+            {
+              "sequence": 7,
+              "time": 24.808333333332566,
+              "text": "SERVICE DOOR opened fully."
+            }
+          ],
+          "truncated": false,
+          "now": [
+            {
+              "id": "release-pressure",
+              "label": "RELEASE",
+              "kind": "pressure",
+              "state": "PRESSED",
+              "cargo": true
+            },
+            {
+              "id": "storage-pressure",
+              "label": "STORAGE",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "rack-access",
+              "label": "CARGO ACCESS",
+              "kind": "shutter",
+              "state": "OPEN"
+            },
+            {
+              "id": "archive-lift",
+              "label": "ARCHIVE LIFT",
+              "kind": "dock",
+              "state": "BETWEEN STOPS"
+            },
+            {
+              "id": "archive-door",
+              "label": "ARCHIVE DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            },
+            {
+              "id": "service-door",
+              "label": "SERVICE DOOR",
+              "kind": "shutter",
+              "state": "OPEN"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 13967
+          },
+          {
+            "type": "pickup",
+            "time": 14400,
+            "body": "storage-cube"
+          },
+          {
+            "type": "footstep",
+            "time": 14417
+          },
+          {
+            "type": "footstep",
+            "time": 14908
+          },
+          {
+            "type": "footstep",
+            "time": 15333
+          },
+          {
+            "type": "footstep",
+            "time": 15758
+          },
+          {
+            "type": "drop",
+            "time": 16325,
+            "body": "storage-cube"
+          },
+          {
+            "type": "shutter-close",
+            "time": 16475,
+            "id": "service-door"
+          },
+          {
+            "type": "pad",
+            "time": 16475,
+            "pad": "storage-pressure",
+            "crate": "storage-cube"
+          },
+          {
+            "type": "contact",
+            "time": 16483,
+            "body": "storage-cube",
+            "speed": 2.4607804176787216
+          },
+          {
+            "type": "lift-motor",
+            "time": 23475,
+            "id": "archive-lift"
+          },
+          {
+            "type": "pickup",
+            "time": 23958,
+            "body": "storage-cube"
+          },
+          {
+            "type": "footstep",
+            "time": 23975
+          },
+          {
+            "type": "shutter-open",
+            "time": 24008,
+            "id": "service-door"
+          },
+          {
+            "type": "lift-brake",
+            "time": 24008,
+            "id": "archive-lift"
+          },
+          {
+            "type": "button-release",
+            "time": 24008,
+            "pad": "storage-pressure",
+            "crate": "player"
+          }
+        ]
+      }
+    },
+    {
+      "label": "actual-pressure-storage-pressure",
+      "state": {
+        "room": "chamber-37",
+        "number": 37,
+        "mission": "Finish both deliveries. Keep STORAGE and RELEASE pressed, then use the archive lift.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            8.999992370605469,
+            4.264962196350098,
+            -7.683650016784668
+          ],
+          "velocity": [
+            -9.997979587284579e-19,
+            0,
+            1.6290829094225902e-14
+          ],
+          "yaw": -3.1415893148653473,
+          "pitch": -0.06953095837403518,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "rack-source",
+            "position": [
+              -4.45,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "rack-return",
+            "position": [
+              -10.959999999999999,
+              1.55,
+              -3.45
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "release-cube",
+            "position": [
+              -5.827986717224121,
+              0.689893364906311,
+              -4.007966041564941
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -9.77840272753383e-7,
+              0.7071740031242371,
+              -0.000003538778855727287,
+              0.7070395946502686
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 1
+          },
+          {
+            "id": "storage-cube",
+            "position": [
+              8.998188972473145,
+              4.089911937713623,
+              -5.8141093254089355
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0.000004838138920604251,
+              -0.0000971005720202811,
+              0.000007026595540082781,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "release-pressure",
+            "position": [
+              -6,
+              0.14,
+              -4
+            ],
+            "pressed": true,
+            "crate": "release-cube"
+          },
+          {
+            "id": "storage-pressure",
+            "position": [
+              9,
+              3.54,
+              -6
+            ],
+            "pressed": true,
+            "crate": "storage-cube"
+          }
+        ],
+        "devices": [
+          {
+            "id": "service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -11.12,
+              1.5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "archive-door",
+            "kind": "shutter",
+            "label": "ARCHIVE",
+            "position": [
+              -6,
+              7.7,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "rack-access",
+            "kind": "shutter",
+            "label": "CARGO ACCESS",
+            "position": [
+              6,
+              5,
+              0
+            ],
+            "size": [
+              2.5,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "archive-lift",
+            "kind": "lift",
+            "label": "ARCHIVE LIFT",
+            "position": [
+              -6,
+              1.784000000000189,
+              -10
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0.3200000000000305,
+            "choice": "LOADING",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "rack-source",
+            "position": [
+              -5,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "rack-return",
+            "position": [
+              -10.985,
+              1.75,
+              -4
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -13.39,
+              1.5,
+              -10
+            ],
+            "size": [
+              3.58,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "archive-exit",
+            "label": "EXIT",
+            "position": [
+              -6,
+              7.7,
+              -16.29
+            ],
+            "size": [
+              3.16,
+              3,
+              3.380000000000001
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "release-pressure": true,
+          "storage-pressure": true,
+          "closed:service-door": true,
+          "clear:service-door": false,
+          "safety:service-door": false,
+          "door-safety": false,
+          "moving:service-door": false,
+          "closed:archive-door": true,
+          "clear:archive-door": false,
+          "safety:archive-door": false,
+          "moving:archive-door": false,
+          "closed:rack-access": false,
+          "clear:rack-access": true,
+          "safety:rack-access": false,
+          "moving:rack-access": false,
+          "moving:archive-lift": true,
+          "at:archive-lift:LOADING": false,
+          "at:archive-lift:ARCHIVE": false
+        },
+        "journal": {
+          "reports": [
+            {
+              "id": "release-contact",
+              "status": "OBSERVED",
+              "text": "The RELEASE plate has been pressed. Check its current pressure.",
+              "observedAt": 4.808333333333362,
+              "pastText": null
+            },
+            {
+              "id": "storage-contact",
+              "status": "OBSERVED",
+              "text": "The STORAGE plate has been pressed. Check whether it is pressed now.",
+              "observedAt": 26.50833333333247,
+              "pastText": null
+            },
+            {
+              "id": "archive-arrival",
+              "status": "UNKNOWN",
+              "text": "The archive arrival was not fully observed. Check the current dock.",
+              "observedAt": null,
+              "pastText": null
+            },
+            {
+              "id": "rack-opened",
+              "status": "OBSERVED",
+              "text": "The cargo access has opened.",
+              "observedAt": 5.6166666666667355,
+              "pastText": null
+            }
+          ],
+          "attempt": 1,
+          "rows": [
+            {
+              "sequence": 2,
+              "time": 5.6166666666667355,
+              "text": "CARGO ACCESS opened fully."
+            },
+            {
+              "sequence": 3,
+              "time": 5.6166666666667355,
+              "text": "SERVICE DOOR opened fully."
+            },
+            {
+              "sequence": 4,
+              "time": 16.466666666666374,
+              "text": "Cargo reached STORAGE."
+            },
+            {
+              "sequence": 5,
+              "time": 17.27499999999966,
+              "text": "SERVICE DOOR closed fully."
+            },
+            {
+              "sequence": 6,
+              "time": 23.99999999999928,
+              "text": "STORAGE became empty."
+            },
+            {
+              "sequence": 7,
+              "time": 24.808333333332566,
+              "text": "SERVICE DOOR opened fully."
+            },
+            {
+              "sequence": 8,
+              "time": 26.50833333333247,
+              "text": "Cargo reached STORAGE."
+            },
+            {
+              "sequence": 9,
+              "time": 27.316666666665757,
+              "text": "SERVICE DOOR closed fully."
+            }
+          ],
+          "truncated": true,
+          "now": [
+            {
+              "id": "release-pressure",
+              "label": "RELEASE",
+              "kind": "pressure",
+              "state": "PRESSED",
+              "cargo": true
+            },
+            {
+              "id": "storage-pressure",
+              "label": "STORAGE",
+              "kind": "pressure",
+              "state": "PRESSED",
+              "cargo": true
+            },
+            {
+              "id": "rack-access",
+              "label": "CARGO ACCESS",
+              "kind": "shutter",
+              "state": "OPEN"
+            },
+            {
+              "id": "archive-lift",
+              "label": "ARCHIVE LIFT",
+              "kind": "dock",
+              "state": "MOVING"
+            },
+            {
+              "id": "archive-door",
+              "label": "ARCHIVE DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            },
+            {
+              "id": "service-door",
+              "label": "SERVICE DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "drop",
+            "time": 16325,
+            "body": "storage-cube"
+          },
+          {
+            "type": "shutter-close",
+            "time": 16475,
+            "id": "service-door"
+          },
+          {
+            "type": "pad",
+            "time": 16475,
+            "pad": "storage-pressure",
+            "crate": "storage-cube"
+          },
+          {
+            "type": "contact",
+            "time": 16483,
+            "body": "storage-cube",
+            "speed": 2.4607804176787216
+          },
+          {
+            "type": "lift-motor",
+            "time": 23475,
+            "id": "archive-lift"
+          },
+          {
+            "type": "pickup",
+            "time": 23958,
+            "body": "storage-cube"
+          },
+          {
+            "type": "footstep",
+            "time": 23975
+          },
+          {
+            "type": "shutter-open",
+            "time": 24008,
+            "id": "service-door"
+          },
+          {
+            "type": "lift-brake",
+            "time": 24008,
+            "id": "archive-lift"
+          },
+          {
+            "type": "button-release",
+            "time": 24008,
+            "pad": "storage-pressure",
+            "crate": "player"
+          },
+          {
+            "type": "footstep",
+            "time": 25475
+          },
+          {
+            "type": "drop",
+            "time": 26367,
+            "body": "storage-cube"
+          },
+          {
+            "type": "shutter-close",
+            "time": 26517,
+            "id": "service-door"
+          },
+          {
+            "type": "lift-motor",
+            "time": 26517,
+            "id": "archive-lift"
+          },
+          {
+            "type": "pad",
+            "time": 26517,
+            "pad": "storage-pressure",
+            "crate": "storage-cube"
+          },
+          {
+            "type": "contact",
+            "time": 26525,
+            "body": "storage-cube",
+            "speed": 2.4607801793106225
+          }
+        ]
+      }
+    },
+    {
+      "label": "actual-physical-completion",
+      "state": {
+        "room": "chamber-37",
+        "number": 37,
+        "mission": "Finish both deliveries. Keep STORAGE and RELEASE pressed, then use the archive lift.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -6,
+            7.064864158630371,
+            -14.611174583435059
+          ],
+          "velocity": [
+            -0.000004595341707028454,
+            0,
+            -4.796771214062611
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "rack-source",
+            "position": [
+              -4.45,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "rack-return",
+            "position": [
+              -10.959999999999999,
+              1.55,
+              -3.45
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "release-cube",
+            "position": [
+              -5.827986717224121,
+              0.689893364906311,
+              -4.007966041564941
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -9.77840272753383e-7,
+              0.7071740031242371,
+              -0.000003538778855727287,
+              0.7070395946502686
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 1
+          },
+          {
+            "id": "storage-cube",
+            "position": [
+              8.998188972473145,
+              4.089911937713623,
+              -5.8141093254089355
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0.000004838138920604251,
+              -0.0000971005720202811,
+              0.000007026595540082781,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "release-pressure",
+            "position": [
+              -6,
+              0.14,
+              -4
+            ],
+            "pressed": true,
+            "crate": "release-cube"
+          },
+          {
+            "id": "storage-pressure",
+            "position": [
+              9,
+              3.54,
+              -6
+            ],
+            "pressed": true,
+            "crate": "storage-cube"
+          }
+        ],
+        "devices": [
+          {
+            "id": "service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -11.12,
+              1.5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "archive-door",
+            "kind": "shutter",
+            "label": "ARCHIVE",
+            "position": [
+              -6,
+              10.8,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "rack-access",
+            "kind": "shutter",
+            "label": "CARGO ACCESS",
+            "position": [
+              6,
+              5,
+              0
+            ],
+            "size": [
+              2.5,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "archive-lift",
+            "kind": "lift",
+            "label": "ARCHIVE LIFT",
+            "position": [
+              -6,
+              6,
+              -10
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": "LOADING",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "rack-source",
+            "position": [
+              -5,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "rack-return",
+            "position": [
+              -10.985,
+              1.75,
+              -4
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -13.39,
+              1.5,
+              -10
+            ],
+            "size": [
+              3.58,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "archive-exit",
+            "label": "EXIT",
+            "position": [
+              -6,
+              7.7,
+              -16.29
+            ],
+            "size": [
+              3.16,
+              3,
+              3.380000000000001
+            ]
+          }
+        ],
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "archive-exit",
+          "reason": "",
+          "events": [
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "portalA",
+              "time": 500,
+              "surface": "rack-source",
+              "point": [
+                -4.45,
+                1.55,
+                13.959999999999999
+              ]
+            },
+            {
+              "type": "portalB",
+              "time": 508,
+              "surface": "rack-return",
+              "point": [
+                -10.959999999999999,
+                1.55,
+                -3.45
+              ]
+            },
+            {
+              "type": "footstep",
+              "time": 525
+            },
+            {
+              "type": "footstep",
+              "time": 950
+            },
+            {
+              "type": "footstep",
+              "time": 1375
+            },
+            {
+              "type": "footstep",
+              "time": 1833
+            },
+            {
+              "type": "pickup",
+              "time": 1833,
+              "body": "release-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 2283
+            },
+            {
+              "type": "footstep",
+              "time": 2708
+            },
+            {
+              "type": "enter",
+              "time": 3025,
+              "body": "release-cube",
+              "from": 0,
+              "to": 1,
+              "fromSurface": "rack-source",
+              "toSurface": "rack-return",
+              "speed": 2.5031685263452155,
+              "exitSpeed": 2.5031685263452155,
+              "held": "release-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 3133
+            },
+            {
+              "type": "enter",
+              "time": 3508,
+              "body": "player",
+              "from": 0,
+              "to": 1,
+              "fromSurface": "rack-source",
+              "toSurface": "rack-return",
+              "speed": 4.798782145608326,
+              "exitSpeed": 4.798782145608326,
+              "held": "release-cube"
+            },
+            {
+              "type": "land",
+              "time": 3517
+            },
+            {
+              "type": "footstep",
+              "time": 3558
+            },
+            {
+              "type": "footstep",
+              "time": 3983
+            },
+            {
+              "type": "drop",
+              "time": 4667,
+              "body": "release-cube"
+            },
+            {
+              "type": "shutter-open",
+              "time": 4817,
+              "id": "service-door"
+            },
+            {
+              "type": "shutter-open",
+              "time": 4817,
+              "id": "rack-access"
+            },
+            {
+              "type": "pad",
+              "time": 4817,
+              "pad": "release-pressure",
+              "crate": "release-cube"
+            },
+            {
+              "type": "contact",
+              "time": 4825,
+              "body": "release-cube",
+              "speed": 2.46078591027561
+            },
+            {
+              "type": "footstep",
+              "time": 5883
+            },
+            {
+              "type": "footstep",
+              "time": 6308
+            },
+            {
+              "type": "footstep",
+              "time": 6733
+            },
+            {
+              "type": "footstep",
+              "time": 7158
+            },
+            {
+              "type": "footstep",
+              "time": 7583
+            },
+            {
+              "type": "footstep",
+              "time": 8008
+            },
+            {
+              "type": "footstep",
+              "time": 8433
+            },
+            {
+              "type": "footstep",
+              "time": 8858
+            },
+            {
+              "type": "footstep",
+              "time": 9283
+            },
+            {
+              "type": "footstep",
+              "time": 9708
+            },
+            {
+              "type": "footstep",
+              "time": 10133
+            },
+            {
+              "type": "footstep",
+              "time": 10558
+            },
+            {
+              "type": "footstep",
+              "time": 10983
+            },
+            {
+              "type": "footstep",
+              "time": 11408
+            },
+            {
+              "type": "footstep",
+              "time": 11833
+            },
+            {
+              "type": "footstep",
+              "time": 12258
+            },
+            {
+              "type": "footstep",
+              "time": 12683
+            },
+            {
+              "type": "footstep",
+              "time": 13108
+            },
+            {
+              "type": "footstep",
+              "time": 13533
+            },
+            {
+              "type": "footstep",
+              "time": 13967
+            },
+            {
+              "type": "pickup",
+              "time": 14400,
+              "body": "storage-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 14417
+            },
+            {
+              "type": "footstep",
+              "time": 14908
+            },
+            {
+              "type": "footstep",
+              "time": 15333
+            },
+            {
+              "type": "footstep",
+              "time": 15758
+            },
+            {
+              "type": "drop",
+              "time": 16325,
+              "body": "storage-cube"
+            },
+            {
+              "type": "shutter-close",
+              "time": 16475,
+              "id": "service-door"
+            },
+            {
+              "type": "pad",
+              "time": 16475,
+              "pad": "storage-pressure",
+              "crate": "storage-cube"
+            },
+            {
+              "type": "contact",
+              "time": 16483,
+              "body": "storage-cube",
+              "speed": 2.4607804176787216
+            },
+            {
+              "type": "lift-motor",
+              "time": 23475,
+              "id": "archive-lift"
+            },
+            {
+              "type": "pickup",
+              "time": 23958,
+              "body": "storage-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 23975
+            },
+            {
+              "type": "shutter-open",
+              "time": 24008,
+              "id": "service-door"
+            },
+            {
+              "type": "lift-brake",
+              "time": 24008,
+              "id": "archive-lift"
+            },
+            {
+              "type": "button-release",
+              "time": 24008,
+              "pad": "storage-pressure",
+              "crate": "player"
+            },
+            {
+              "type": "footstep",
+              "time": 25475
+            },
+            {
+              "type": "drop",
+              "time": 26367,
+              "body": "storage-cube"
+            },
+            {
+              "type": "shutter-close",
+              "time": 26517,
+              "id": "service-door"
+            },
+            {
+              "type": "lift-motor",
+              "time": 26517,
+              "id": "archive-lift"
+            },
+            {
+              "type": "pad",
+              "time": 26517,
+              "pad": "storage-pressure",
+              "crate": "storage-cube"
+            },
+            {
+              "type": "contact",
+              "time": 26525,
+              "body": "storage-cube",
+              "speed": 2.4607801793106225
+            },
+            {
+              "type": "footstep",
+              "time": 27833
+            },
+            {
+              "type": "footstep",
+              "time": 28258
+            },
+            {
+              "type": "footstep",
+              "time": 28683
+            },
+            {
+              "type": "footstep",
+              "time": 29108
+            },
+            {
+              "type": "footstep",
+              "time": 29533
+            },
+            {
+              "type": "footstep",
+              "time": 29958
+            },
+            {
+              "type": "footstep",
+              "time": 30383
+            },
+            {
+              "type": "footstep",
+              "time": 30808
+            },
+            {
+              "type": "lift-arrival",
+              "time": 30983,
+              "id": "archive-lift",
+              "value": "ARCHIVE"
+            },
+            {
+              "type": "shutter-open",
+              "time": 30992,
+              "id": "archive-door"
+            },
+            {
+              "type": "footstep",
+              "time": 31233
+            },
+            {
+              "type": "footstep",
+              "time": 31658
+            },
+            {
+              "type": "footstep",
+              "time": 32083
+            },
+            {
+              "type": "footstep",
+              "time": 32508
+            },
+            {
+              "type": "footstep",
+              "time": 32933
+            },
+            {
+              "type": "footstep",
+              "time": 33358
+            },
+            {
+              "type": "footstep",
+              "time": 33783
+            },
+            {
+              "type": "footstep",
+              "time": 34208
+            },
+            {
+              "type": "footstep",
+              "time": 34633
+            },
+            {
+              "type": "footstep",
+              "time": 35058
+            },
+            {
+              "type": "footstep",
+              "time": 35483
+            },
+            {
+              "type": "footstep",
+              "time": 35908
+            },
+            {
+              "type": "footstep",
+              "time": 36333
+            },
+            {
+              "type": "footstep",
+              "time": 36758
+            },
+            {
+              "type": "footstep",
+              "time": 37183
+            },
+            {
+              "type": "footstep",
+              "time": 37608
+            },
+            {
+              "type": "lift-motor",
+              "time": 37983,
+              "id": "archive-lift"
+            },
+            {
+              "type": "shutter-close",
+              "time": 37992,
+              "id": "archive-door"
+            },
+            {
+              "type": "footstep",
+              "time": 38033
+            },
+            {
+              "type": "footstep",
+              "time": 38458
+            },
+            {
+              "type": "lift-arrival",
+              "time": 42983,
+              "id": "archive-lift",
+              "value": "base"
+            },
+            {
+              "type": "footstep",
+              "time": 43000
+            },
+            {
+              "type": "footstep",
+              "time": 43425
+            },
+            {
+              "type": "lift-motor",
+              "time": 49983,
+              "id": "archive-lift"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 54983,
+              "id": "archive-lift",
+              "value": "ARCHIVE"
+            },
+            {
+              "type": "shutter-open",
+              "time": 54992,
+              "id": "archive-door"
+            },
+            {
+              "type": "footstep",
+              "time": 55792
+            },
+            {
+              "type": "footstep",
+              "time": 56217
+            },
+            {
+              "type": "footstep",
+              "time": 56642
+            }
+          ],
+          "mechanisms": [
+            "cargo",
+            "portals",
+            "shutters",
+            "buttons",
+            "lifts"
+          ]
+        },
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "release-pressure": true,
+          "storage-pressure": true,
+          "closed:service-door": true,
+          "clear:service-door": false,
+          "safety:service-door": false,
+          "door-safety": false,
+          "moving:service-door": false,
+          "closed:archive-door": false,
+          "clear:archive-door": true,
+          "safety:archive-door": false,
+          "moving:archive-door": false,
+          "closed:rack-access": false,
+          "clear:rack-access": true,
+          "safety:rack-access": false,
+          "moving:rack-access": false,
+          "moving:archive-lift": false,
+          "at:archive-lift:LOADING": false,
+          "at:archive-lift:ARCHIVE": true
+        },
+        "journal": {
+          "reports": [
+            {
+              "id": "release-contact",
+              "status": "OBSERVED",
+              "text": "The RELEASE plate has been pressed. Check its current pressure.",
+              "observedAt": 4.808333333333362,
+              "pastText": null
+            },
+            {
+              "id": "storage-contact",
+              "status": "OBSERVED",
+              "text": "The STORAGE plate has been pressed. Check whether it is pressed now.",
+              "observedAt": 26.50833333333247,
+              "pastText": null
+            },
+            {
+              "id": "archive-arrival",
+              "status": "OBSERVED",
+              "text": "The lift has reached ARCHIVE. Check its current dock before crossing.",
+              "observedAt": 54.983333333330854,
+              "pastText": null
+            },
+            {
+              "id": "rack-opened",
+              "status": "OBSERVED",
+              "text": "The cargo access has opened.",
+              "observedAt": 5.6166666666667355,
+              "pastText": null
+            }
+          ],
+          "attempt": 1,
+          "rows": [
+            {
+              "sequence": 8,
+              "time": 26.50833333333247,
+              "text": "Cargo reached STORAGE."
+            },
+            {
+              "sequence": 9,
+              "time": 27.316666666665757,
+              "text": "SERVICE DOOR closed fully."
+            },
+            {
+              "sequence": 10,
+              "time": 30.983333333332215,
+              "text": "ARCHIVE LIFT arrived at ARCHIVE."
+            },
+            {
+              "sequence": 11,
+              "time": 31.791666666665503,
+              "text": "ARCHIVE DOOR opened fully."
+            },
+            {
+              "sequence": 12,
+              "time": 38.79166666666511,
+              "text": "ARCHIVE DOOR closed fully."
+            },
+            {
+              "sequence": 13,
+              "time": 42.98333333333154,
+              "text": "ARCHIVE LIFT arrived at LOADING."
+            },
+            {
+              "sequence": 14,
+              "time": 54.983333333330854,
+              "text": "ARCHIVE LIFT arrived at ARCHIVE."
+            },
+            {
+              "sequence": 15,
+              "time": 55.79166666666414,
+              "text": "ARCHIVE DOOR opened fully."
+            }
+          ],
+          "truncated": true,
+          "now": [
+            {
+              "id": "release-pressure",
+              "label": "RELEASE",
+              "kind": "pressure",
+              "state": "PRESSED",
+              "cargo": true
+            },
+            {
+              "id": "storage-pressure",
+              "label": "STORAGE",
+              "kind": "pressure",
+              "state": "PRESSED",
+              "cargo": true
+            },
+            {
+              "id": "rack-access",
+              "label": "CARGO ACCESS",
+              "kind": "shutter",
+              "state": "OPEN"
+            },
+            {
+              "id": "archive-lift",
+              "label": "ARCHIVE LIFT",
+              "kind": "dock",
+              "state": "AT ARCHIVE"
+            },
+            {
+              "id": "archive-door",
+              "label": "ARCHIVE DOOR",
+              "kind": "shutter",
+              "state": "OPEN"
+            },
+            {
+              "id": "service-door",
+              "label": "SERVICE DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 37183
+          },
+          {
+            "type": "footstep",
+            "time": 37608
+          },
+          {
+            "type": "lift-motor",
+            "time": 37983,
+            "id": "archive-lift"
+          },
+          {
+            "type": "shutter-close",
+            "time": 37992,
+            "id": "archive-door"
+          },
+          {
+            "type": "footstep",
+            "time": 38033
+          },
+          {
+            "type": "footstep",
+            "time": 38458
+          },
+          {
+            "type": "lift-arrival",
+            "time": 42983,
+            "id": "archive-lift",
+            "value": "base"
+          },
+          {
+            "type": "footstep",
+            "time": 43000
+          },
+          {
+            "type": "footstep",
+            "time": 43425
+          },
+          {
+            "type": "lift-motor",
+            "time": 49983,
+            "id": "archive-lift"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 54983,
+            "id": "archive-lift",
+            "value": "ARCHIVE"
+          },
+          {
+            "type": "shutter-open",
+            "time": 54992,
+            "id": "archive-door"
+          },
+          {
+            "type": "footstep",
+            "time": 55792
+          },
+          {
+            "type": "footstep",
+            "time": 56217
+          },
+          {
+            "type": "footstep",
+            "time": 56642
+          },
+          {
+            "type": "complete",
+            "time": 56875,
+            "chamber": 37
+          }
+        ]
+      }
+    },
+    {
+      "label": "final",
+      "state": {
+        "room": "chamber-37",
+        "number": 37,
+        "mission": "Finish both deliveries. Keep STORAGE and RELEASE pressed, then use the archive lift.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -6,
+            7.064864158630371,
+            -14.611174583435059
+          ],
+          "velocity": [
+            -0.000004595341707028454,
+            0,
+            -4.796771214062611
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "rack-source",
+            "position": [
+              -4.45,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "rack-return",
+            "position": [
+              -10.959999999999999,
+              1.55,
+              -3.45
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "release-cube",
+            "position": [
+              -5.827986717224121,
+              0.689893364906311,
+              -4.007966041564941
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -9.77840272753383e-7,
+              0.7071740031242371,
+              -0.000003538778855727287,
+              0.7070395946502686
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 1
+          },
+          {
+            "id": "storage-cube",
+            "position": [
+              8.998188972473145,
+              4.089911937713623,
+              -5.8141093254089355
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0.000004838138920604251,
+              -0.0000971005720202811,
+              0.000007026595540082781,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "release-pressure",
+            "position": [
+              -6,
+              0.14,
+              -4
+            ],
+            "pressed": true,
+            "crate": "release-cube"
+          },
+          {
+            "id": "storage-pressure",
+            "position": [
+              9,
+              3.54,
+              -6
+            ],
+            "pressed": true,
+            "crate": "storage-cube"
+          }
+        ],
+        "devices": [
+          {
+            "id": "service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -11.12,
+              1.5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "archive-door",
+            "kind": "shutter",
+            "label": "ARCHIVE",
+            "position": [
+              -6,
+              10.8,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "rack-access",
+            "kind": "shutter",
+            "label": "CARGO ACCESS",
+            "position": [
+              6,
+              5,
+              0
+            ],
+            "size": [
+              2.5,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "archive-lift",
+            "kind": "lift",
+            "label": "ARCHIVE LIFT",
+            "position": [
+              -6,
+              6,
+              -10
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": "LOADING",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "rack-source",
+            "position": [
+              -5,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "rack-return",
+            "position": [
+              -10.985,
+              1.75,
+              -4
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -13.39,
+              1.5,
+              -10
+            ],
+            "size": [
+              3.58,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "archive-exit",
+            "label": "EXIT",
+            "position": [
+              -6,
+              7.7,
+              -16.29
+            ],
+            "size": [
+              3.16,
+              3,
+              3.380000000000001
+            ]
+          }
+        ],
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "archive-exit",
+          "reason": "",
+          "events": [
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "portalA",
+              "time": 500,
+              "surface": "rack-source",
+              "point": [
+                -4.45,
+                1.55,
+                13.959999999999999
+              ]
+            },
+            {
+              "type": "portalB",
+              "time": 508,
+              "surface": "rack-return",
+              "point": [
+                -10.959999999999999,
+                1.55,
+                -3.45
+              ]
+            },
+            {
+              "type": "footstep",
+              "time": 525
+            },
+            {
+              "type": "footstep",
+              "time": 950
+            },
+            {
+              "type": "footstep",
+              "time": 1375
+            },
+            {
+              "type": "footstep",
+              "time": 1833
+            },
+            {
+              "type": "pickup",
+              "time": 1833,
+              "body": "release-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 2283
+            },
+            {
+              "type": "footstep",
+              "time": 2708
+            },
+            {
+              "type": "enter",
+              "time": 3025,
+              "body": "release-cube",
+              "from": 0,
+              "to": 1,
+              "fromSurface": "rack-source",
+              "toSurface": "rack-return",
+              "speed": 2.5031685263452155,
+              "exitSpeed": 2.5031685263452155,
+              "held": "release-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 3133
+            },
+            {
+              "type": "enter",
+              "time": 3508,
+              "body": "player",
+              "from": 0,
+              "to": 1,
+              "fromSurface": "rack-source",
+              "toSurface": "rack-return",
+              "speed": 4.798782145608326,
+              "exitSpeed": 4.798782145608326,
+              "held": "release-cube"
+            },
+            {
+              "type": "land",
+              "time": 3517
+            },
+            {
+              "type": "footstep",
+              "time": 3558
+            },
+            {
+              "type": "footstep",
+              "time": 3983
+            },
+            {
+              "type": "drop",
+              "time": 4667,
+              "body": "release-cube"
+            },
+            {
+              "type": "shutter-open",
+              "time": 4817,
+              "id": "service-door"
+            },
+            {
+              "type": "shutter-open",
+              "time": 4817,
+              "id": "rack-access"
+            },
+            {
+              "type": "pad",
+              "time": 4817,
+              "pad": "release-pressure",
+              "crate": "release-cube"
+            },
+            {
+              "type": "contact",
+              "time": 4825,
+              "body": "release-cube",
+              "speed": 2.46078591027561
+            },
+            {
+              "type": "footstep",
+              "time": 5883
+            },
+            {
+              "type": "footstep",
+              "time": 6308
+            },
+            {
+              "type": "footstep",
+              "time": 6733
+            },
+            {
+              "type": "footstep",
+              "time": 7158
+            },
+            {
+              "type": "footstep",
+              "time": 7583
+            },
+            {
+              "type": "footstep",
+              "time": 8008
+            },
+            {
+              "type": "footstep",
+              "time": 8433
+            },
+            {
+              "type": "footstep",
+              "time": 8858
+            },
+            {
+              "type": "footstep",
+              "time": 9283
+            },
+            {
+              "type": "footstep",
+              "time": 9708
+            },
+            {
+              "type": "footstep",
+              "time": 10133
+            },
+            {
+              "type": "footstep",
+              "time": 10558
+            },
+            {
+              "type": "footstep",
+              "time": 10983
+            },
+            {
+              "type": "footstep",
+              "time": 11408
+            },
+            {
+              "type": "footstep",
+              "time": 11833
+            },
+            {
+              "type": "footstep",
+              "time": 12258
+            },
+            {
+              "type": "footstep",
+              "time": 12683
+            },
+            {
+              "type": "footstep",
+              "time": 13108
+            },
+            {
+              "type": "footstep",
+              "time": 13533
+            },
+            {
+              "type": "footstep",
+              "time": 13967
+            },
+            {
+              "type": "pickup",
+              "time": 14400,
+              "body": "storage-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 14417
+            },
+            {
+              "type": "footstep",
+              "time": 14908
+            },
+            {
+              "type": "footstep",
+              "time": 15333
+            },
+            {
+              "type": "footstep",
+              "time": 15758
+            },
+            {
+              "type": "drop",
+              "time": 16325,
+              "body": "storage-cube"
+            },
+            {
+              "type": "shutter-close",
+              "time": 16475,
+              "id": "service-door"
+            },
+            {
+              "type": "pad",
+              "time": 16475,
+              "pad": "storage-pressure",
+              "crate": "storage-cube"
+            },
+            {
+              "type": "contact",
+              "time": 16483,
+              "body": "storage-cube",
+              "speed": 2.4607804176787216
+            },
+            {
+              "type": "lift-motor",
+              "time": 23475,
+              "id": "archive-lift"
+            },
+            {
+              "type": "pickup",
+              "time": 23958,
+              "body": "storage-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 23975
+            },
+            {
+              "type": "shutter-open",
+              "time": 24008,
+              "id": "service-door"
+            },
+            {
+              "type": "lift-brake",
+              "time": 24008,
+              "id": "archive-lift"
+            },
+            {
+              "type": "button-release",
+              "time": 24008,
+              "pad": "storage-pressure",
+              "crate": "player"
+            },
+            {
+              "type": "footstep",
+              "time": 25475
+            },
+            {
+              "type": "drop",
+              "time": 26367,
+              "body": "storage-cube"
+            },
+            {
+              "type": "shutter-close",
+              "time": 26517,
+              "id": "service-door"
+            },
+            {
+              "type": "lift-motor",
+              "time": 26517,
+              "id": "archive-lift"
+            },
+            {
+              "type": "pad",
+              "time": 26517,
+              "pad": "storage-pressure",
+              "crate": "storage-cube"
+            },
+            {
+              "type": "contact",
+              "time": 26525,
+              "body": "storage-cube",
+              "speed": 2.4607801793106225
+            },
+            {
+              "type": "footstep",
+              "time": 27833
+            },
+            {
+              "type": "footstep",
+              "time": 28258
+            },
+            {
+              "type": "footstep",
+              "time": 28683
+            },
+            {
+              "type": "footstep",
+              "time": 29108
+            },
+            {
+              "type": "footstep",
+              "time": 29533
+            },
+            {
+              "type": "footstep",
+              "time": 29958
+            },
+            {
+              "type": "footstep",
+              "time": 30383
+            },
+            {
+              "type": "footstep",
+              "time": 30808
+            },
+            {
+              "type": "lift-arrival",
+              "time": 30983,
+              "id": "archive-lift",
+              "value": "ARCHIVE"
+            },
+            {
+              "type": "shutter-open",
+              "time": 30992,
+              "id": "archive-door"
+            },
+            {
+              "type": "footstep",
+              "time": 31233
+            },
+            {
+              "type": "footstep",
+              "time": 31658
+            },
+            {
+              "type": "footstep",
+              "time": 32083
+            },
+            {
+              "type": "footstep",
+              "time": 32508
+            },
+            {
+              "type": "footstep",
+              "time": 32933
+            },
+            {
+              "type": "footstep",
+              "time": 33358
+            },
+            {
+              "type": "footstep",
+              "time": 33783
+            },
+            {
+              "type": "footstep",
+              "time": 34208
+            },
+            {
+              "type": "footstep",
+              "time": 34633
+            },
+            {
+              "type": "footstep",
+              "time": 35058
+            },
+            {
+              "type": "footstep",
+              "time": 35483
+            },
+            {
+              "type": "footstep",
+              "time": 35908
+            },
+            {
+              "type": "footstep",
+              "time": 36333
+            },
+            {
+              "type": "footstep",
+              "time": 36758
+            },
+            {
+              "type": "footstep",
+              "time": 37183
+            },
+            {
+              "type": "footstep",
+              "time": 37608
+            },
+            {
+              "type": "lift-motor",
+              "time": 37983,
+              "id": "archive-lift"
+            },
+            {
+              "type": "shutter-close",
+              "time": 37992,
+              "id": "archive-door"
+            },
+            {
+              "type": "footstep",
+              "time": 38033
+            },
+            {
+              "type": "footstep",
+              "time": 38458
+            },
+            {
+              "type": "lift-arrival",
+              "time": 42983,
+              "id": "archive-lift",
+              "value": "base"
+            },
+            {
+              "type": "footstep",
+              "time": 43000
+            },
+            {
+              "type": "footstep",
+              "time": 43425
+            },
+            {
+              "type": "lift-motor",
+              "time": 49983,
+              "id": "archive-lift"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 54983,
+              "id": "archive-lift",
+              "value": "ARCHIVE"
+            },
+            {
+              "type": "shutter-open",
+              "time": 54992,
+              "id": "archive-door"
+            },
+            {
+              "type": "footstep",
+              "time": 55792
+            },
+            {
+              "type": "footstep",
+              "time": 56217
+            },
+            {
+              "type": "footstep",
+              "time": 56642
+            }
+          ],
+          "mechanisms": [
+            "cargo",
+            "portals",
+            "shutters",
+            "buttons",
+            "lifts"
+          ]
+        },
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "release-pressure": true,
+          "storage-pressure": true,
+          "closed:service-door": true,
+          "clear:service-door": false,
+          "safety:service-door": false,
+          "door-safety": false,
+          "moving:service-door": false,
+          "closed:archive-door": false,
+          "clear:archive-door": true,
+          "safety:archive-door": false,
+          "moving:archive-door": false,
+          "closed:rack-access": false,
+          "clear:rack-access": true,
+          "safety:rack-access": false,
+          "moving:rack-access": false,
+          "moving:archive-lift": false,
+          "at:archive-lift:LOADING": false,
+          "at:archive-lift:ARCHIVE": true
+        },
+        "journal": {
+          "reports": [
+            {
+              "id": "release-contact",
+              "status": "OBSERVED",
+              "text": "The RELEASE plate has been pressed. Check its current pressure.",
+              "observedAt": 4.808333333333362,
+              "pastText": null
+            },
+            {
+              "id": "storage-contact",
+              "status": "OBSERVED",
+              "text": "The STORAGE plate has been pressed. Check whether it is pressed now.",
+              "observedAt": 26.50833333333247,
+              "pastText": null
+            },
+            {
+              "id": "archive-arrival",
+              "status": "OBSERVED",
+              "text": "The lift has reached ARCHIVE. Check its current dock before crossing.",
+              "observedAt": 54.983333333330854,
+              "pastText": null
+            },
+            {
+              "id": "rack-opened",
+              "status": "OBSERVED",
+              "text": "The cargo access has opened.",
+              "observedAt": 5.6166666666667355,
+              "pastText": null
+            }
+          ],
+          "attempt": 1,
+          "rows": [
+            {
+              "sequence": 8,
+              "time": 26.50833333333247,
+              "text": "Cargo reached STORAGE."
+            },
+            {
+              "sequence": 9,
+              "time": 27.316666666665757,
+              "text": "SERVICE DOOR closed fully."
+            },
+            {
+              "sequence": 10,
+              "time": 30.983333333332215,
+              "text": "ARCHIVE LIFT arrived at ARCHIVE."
+            },
+            {
+              "sequence": 11,
+              "time": 31.791666666665503,
+              "text": "ARCHIVE DOOR opened fully."
+            },
+            {
+              "sequence": 12,
+              "time": 38.79166666666511,
+              "text": "ARCHIVE DOOR closed fully."
+            },
+            {
+              "sequence": 13,
+              "time": 42.98333333333154,
+              "text": "ARCHIVE LIFT arrived at LOADING."
+            },
+            {
+              "sequence": 14,
+              "time": 54.983333333330854,
+              "text": "ARCHIVE LIFT arrived at ARCHIVE."
+            },
+            {
+              "sequence": 15,
+              "time": 55.79166666666414,
+              "text": "ARCHIVE DOOR opened fully."
+            }
+          ],
+          "truncated": true,
+          "now": [
+            {
+              "id": "release-pressure",
+              "label": "RELEASE",
+              "kind": "pressure",
+              "state": "PRESSED",
+              "cargo": true
+            },
+            {
+              "id": "storage-pressure",
+              "label": "STORAGE",
+              "kind": "pressure",
+              "state": "PRESSED",
+              "cargo": true
+            },
+            {
+              "id": "rack-access",
+              "label": "CARGO ACCESS",
+              "kind": "shutter",
+              "state": "OPEN"
+            },
+            {
+              "id": "archive-lift",
+              "label": "ARCHIVE LIFT",
+              "kind": "dock",
+              "state": "AT ARCHIVE"
+            },
+            {
+              "id": "archive-door",
+              "label": "ARCHIVE DOOR",
+              "kind": "shutter",
+              "state": "OPEN"
+            },
+            {
+              "id": "service-door",
+              "label": "SERVICE DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 37183
+          },
+          {
+            "type": "footstep",
+            "time": 37608
+          },
+          {
+            "type": "lift-motor",
+            "time": 37983,
+            "id": "archive-lift"
+          },
+          {
+            "type": "shutter-close",
+            "time": 37992,
+            "id": "archive-door"
+          },
+          {
+            "type": "footstep",
+            "time": 38033
+          },
+          {
+            "type": "footstep",
+            "time": 38458
+          },
+          {
+            "type": "lift-arrival",
+            "time": 42983,
+            "id": "archive-lift",
+            "value": "base"
+          },
+          {
+            "type": "footstep",
+            "time": 43000
+          },
+          {
+            "type": "footstep",
+            "time": 43425
+          },
+          {
+            "type": "lift-motor",
+            "time": 49983,
+            "id": "archive-lift"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 54983,
+            "id": "archive-lift",
+            "value": "ARCHIVE"
+          },
+          {
+            "type": "shutter-open",
+            "time": 54992,
+            "id": "archive-door"
+          },
+          {
+            "type": "footstep",
+            "time": 55792
+          },
+          {
+            "type": "footstep",
+            "time": 56217
+          },
+          {
+            "type": "footstep",
+            "time": 56642
+          },
+          {
+            "type": "complete",
+            "time": 56875,
+            "chamber": 37
+          }
+        ]
+      }
+    }
+  ]
+}

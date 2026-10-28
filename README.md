@@ -1,16 +1,14 @@
 # Rift Runner · קופצים בין שערים
 
-A first-person portal puzzle game with saved numbered progression and no grade selector. Thirty-five authored rooms are registered in this checkpoint. The goal remains exactly 50; later rooms, final audiovisual review and a fresh complete 1→50 playthrough are still in progress.
+A first-person portal puzzle game with **50 authored rooms**, saved numbered progression, Continue and unlocked replay. There is no grade selector. This is the frozen 50-room engineering checkpoint; the final fresh ordinary-input 1→50 playthrough and all-room visual/audio/control acceptance are still in progress.
 
-The portal instrument and every loose/carried cube now use actual generated Tripo GLBs. Both models are fetched, hash-verified and decoded before play is enabled; failed loading offers an ordinary retry. Low wall shots align to a real supported walking floor, so normal W entry and held-cargo return do not require jumping. Deliberately raised openings, ledges, ceilings and full-body fit remain physical constraints.
+The portal instrument and every loose/carried cube use actual generated Tripo GLBs. Both required heroes are fetched, hash-verified and decoded before play; loading failure offers Retry. Supported low wall shots allow standing entry and held-cargo return without jumping. Level 1 has contextual retrieval/carry/button hints in M help. Raised openings, ledges, ceilings and full-body fit remain physical constraints.
 
-English instructions change real routes, supplies, timing and object choices. M opens paused Hebrew/vocabulary help; later N journals distinguish earlier observed events from current machine states. Completion includes an English phrase recap. These are situated reading/comprehension activities, not a claim of whole-unit mastery.
+English selects real objects, routes, supplies, order and maintained conditions. The progression moves from short action/spatial instructions to comparisons, reference, past versus current observations, passive relationships, completed actions, conditionals and reported instructions. M pauses for Hebrew/vocabulary support; N opens configured observation journals; completion recaps the English focus. Reported-instruction help explicitly includes their/its/here/there. These are situated comprehension activities, not a claim of whole-unit mastery. [Curriculum provenance](CURRICULUM.md) and per-room sources retain the verified Workbook scope.
 
-The [accepted model/entry review](docs/chamber-qa/hero-floor-parent-review/COMBINED-REVIEW.md) records 74 mixed UI-input actions, 17 actual captures, no command/page/normal console errors, trusted W-only standing crossings both ways including actual held cargo, real pressure/exit and saved progress after reload. Both GLBs were verified through actual local HTTP, PBR pixels and a genuine partial cargo seam. Separate 503 fixtures for each model recovered through Retry before any world was created. Navigation used standard DOM keyboard events; the review is explicitly not all-trusted input.
+The [50-room build record](docs/chamber-qa/fifty-integration/BUILD.json) binds exact source/model/bundle hashes. Current-engine reported46–50, all50 world startups and save contracts are covered separately from the broader45-room regression; first failures and targeted corrections remain preserved. [Native closure](docs/chamber-qa/fifty-integration/CLOSURE.json) and [45-room evidence](docs/chamber-qa/forty-five-integration/native-closure.json) are finite contracts, not browser completions. The [actual C1 model/entry review](docs/chamber-qa/hero-floor-parent-review/COMBINED-REVIEW.md) verifies real PBR meshes, partial held-cargo clipping, trusted W segments, pressure/exit/reload and each-model503 Retry. Earlier genuine progress through35 spans separately preserved contexts. Later playtesting and the final one-build fresh campaign remain open.
 
-[Placement regression evidence](docs/chamber-qa/LOW_WALL_ENTRY.md) preserves the failing baseline, 25 repaired native groups including 32 bidirectional empty/held attempts and four actual C1 routes, plus 58 existing affected ceiling/fling/optics/carry regressions. Native contracts do not represent browser level completions. Independent play has earned 1–25 across separately preserved earlier contexts; no fresh 1–35 or completed 50-room claim is made.
-
-Run locally:
+The latest Scene fits blueprint signs, mounts floor marks correctly, derives46/48/50 ceiling hardware from actual roofs and clips47/50 circuit paint to real floor support. Its bounded CPU probes are separate from actual pixel acceptance. Completion audio plays on the paused result screen and cancels on early Next/Restart; six fake-WebAudio lifecycle contracts pass, with actual listening review pending. [Assets and model hashes](ASSETS.md) document the user-owned Tripo props, generated using existing authorized credits without a purchase or upgrade.
 
 ```sh
 npm ci
@@ -19,8 +17,8 @@ npm run build
 npm run preview
 ```
 
-[Preview](http://localhost:4261/) · [Development](http://localhost:5261/). WASD moves; mouse looks; left/right click places portals; E uses/grabs/drops; Space jumps; R retries; M opens help; N opens a configured machine journal; Escape pauses. Drag look is available in settings. Reading pauses physics and audio.
+[50-room candidate](http://localhost:4261/fifty/) · [45-room review](http://localhost:4261/forty-five/) · [accepted model/entry preview](http://localhost:4261/) · [source development](http://localhost:5261/). The local snapshot URLs are preserved independently during review.
 
-Actual model provenance and exact binary hashes are in [ASSETS.md](ASSETS.md). The new Tripo props were generated in the user's account under explicit authorization using existing credits, with no purchase or upgrade. Original music, ambience and effects are retained. Draft later fixtures remain separate from registered gameplay and browser acceptance.
+WASD moves; mouse looks; left/right click places portals; E uses/grabs/drops; Space jumps; R retries; M opens help; N opens a configured journal; Escape pauses. Drag look is available in settings. Reading pauses physics and continuous room audio.
 
-REAL-PORTAL-RESET.md and PORTAL-CAMPAIGN-QUALITY.md govern the build. Historical tags retain the rejected graded/AABB50 draft and earlier reviewed 10/20-room checkpoints; they are not the current app or final campaign evidence.
+REAL-PORTAL-RESET.md and PORTAL-CAMPAIGN-QUALITY.md govern the work. Historical tags retain the rejected graded/AABB draft and earlier reviewed checkpoints. They are source history, not the current game or final campaign evidence.

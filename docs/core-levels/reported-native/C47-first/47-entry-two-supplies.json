@@ -1,0 +1,3207 @@
+{
+  "scope": "Unregistered authored-spawn native inputs only; no actor/cargo/machine/velocity/save/history/goal writes; not browser proof.",
+  "number": 47,
+  "contrast": false,
+  "error": "AssertionError [ERR_ASSERTION]: ACCESS never fully clears the actual walking hatch {\"state\":{\"room\":\"chamber-47\",\"number\":47,\"mission\":\"ENTRY told me to keep its walking hatch open while I bring a cube to its receiving bay.\",\"physics\":\"Rapier3D 0.21 · capsule KCC + dynamic rigid cubes\",\"player\":{\"position\":[-5.035236358642578,0.8649858832359314,1.9040048122406006],\"velocity\":[-1.660847649582294e-18,0,-4.5250579888724794e-18],\"yaw\":0.3516842778716988,\"pitch\":0,\"grounded\":true,\"crossings\":3},\"portals\":[{\"surface\":\"listener-source\",\"position\":[0,1.55,13.959999999999999],\"normal\":[0,0,-1]},{\"surface\":\"listener-return\",\"position\":[0.55,1.55,4.94],\"normal\":[0,0,1]}],\"crates\":[{\"id\":\"listener-cube-a\",\"position\":[-10.669232368469238,0.5498899817466736,6.601982116699219],\"velocity\":[0,0,0],\"rotation\":[0.11691533774137497,-0.11691446602344513,0.6973759531974792,-0.6973727345466614],\"angularVelocity\":[0,0,0],\"held\":false,\"crossings\":1},{\"id\":\"listener-cube-b\",\"position\":[-5.2945356369018555,1.0146833658218384,1.3917683362960815],\"velocity\":[0,0,0],\"rotation\":[1.99414273538423e-7,3.891996534083342e-12,-2.268262875304572e-7,1],\"angularVelocity\":[0,0,0],\"held\":true,\"crossings\":1}],\"pads\":[{\"id\":\"listener-access\",\"position\":[-5,0.14,6],\"pressed\":false,\"crate\":null},{\"id\":\"listener-entry-receipt\",\"position\":[-5,0.14,-4],\"pressed\":false,\"crate\":null},{\"id\":\"listener-freight-receipt\",\"position\":[5,0,-1.4],\"pressed\":false,\"crate\":null}],\"devices\":[{\"id\":\"entry-door\",\"kind\":\"shutter\",\"label\":\"ENTRY\",\"position\":[-12.12,1.5,-7],\"size\":[0.3,3,3.2],\"active\":false,\"progress\":0,\"choice\":0,\"angle\":0,\"powered\":null,\"blocked\":false},{\"id\":\"freight-door\",\"kind\":\"shutter\",\"label\":\"FREIGHT\",\"position\":[12.12,3.9,-7],\"size\":[0.3,3,3.2],\"active\":false,\"progress\":0,\"choice\":0,\"angle\":0,\"powered\":null,\"blocked\":false},{\"id\":\"listener-entry-hatch\",\"kind\":\"shutter\",\"label\":\"ENTRY\",\"position\":[-5,1.5,0.68],\"size\":[2.8,3,0.3],\"active\":false,\"progress\":0,\"choice\":0,\"angle\":0,\"powered\":null,\"blocked\":false},{\"id\":\"listener-stair-gate\",\"kind\":\"shutter\",\"label\":\"FREIGHT STAIRS\",\"position\":[10.5,1.5,7],\"size\":[2.8,3,0.3],\"active\":false,\"progress\":0,\"choice\":0,\"angle\":0,\"powered\":null,\"blocked\":false}],\"panels\":[{\"id\":\"listener-source\",\"position\":[0,1.75,13.985],\"normal\":[0,0,-1],\"width\":5,\"height\":3.5},{\"id\":\"listener-return\",\"position\":[0,1.75,4.915],\"normal\":[0,0,1],\"width\":3.5,\"height\":3.5}],\"exits\":[{\"id\":\"entry-exit\",\"label\":\"EXIT\",\"position\":[-14.489999999999998,1.5,-7],\"size\":[3.7799999999999994,3,3.16]},{\"id\":\"freight-exit\",\"label\":\"EXIT\",\"position\":[14.489999999999998,3.9,-7],\"size\":[3.7799999999999994,3,3.16]}],\"result\":null,\"held\":\"listener-cube-b\",\"holdSpaceTransform\":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],\"launchUsed\":false,\"respawns\":0,\"beams\":{},\"signals\":{\"listener-access\":false,\"listener-entry-receipt\":false,\"listener-freight-receipt\":false,\"closed:entry-door\":true,\"clear:entry-door\":false,\"safety:entry-door\":false,\"door-safety\":false,\"moving:entry-door\":false,\"closed:freight-door\":true,\"clear:freight-door\":false,\"safety:freight-door\":false,\"moving:freight-door\":false,\"closed:listener-entry-hatch\":true,\"clear:listener-entry-hatch\":false,\"safety:listener-entry-hatch\":false,\"moving:listener-entry-hatch\":false,\"closed:listener-stair-gate\":true,\"clear:listener-stair-gate\":false,\"safety:listener-stair-gate\":false,\"moving:listener-stair-gate\":false},\"journal\":null,\"events\":[{\"type\":\"footstep\",\"time\":11192},{\"type\":\"enter\",\"time\":11258,\"body\":\"player\",\"from\":0,\"to\":1,\"fromSurface\":\"listener-source\",\"toSurface\":\"listener-return\",\"speed\":4.791480750613333,\"exitSpeed\":4.791480750613333,\"held\":\"listener-cube-b\"},{\"type\":\"land\",\"time\":11267},{\"type\":\"footstep\",\"time\":11617},{\"type\":\"footstep\",\"time\":12042},{\"type\":\"contact\",\"time\":12192,\"body\":\"listener-cube-a\",\"speed\":0.8863626552661271},{\"type\":\"shutter-close\",\"time\":12258,\"id\":\"listener-entry-hatch\"},{\"type\":\"button-release\",\"time\":12258,\"pad\":\"listener-access\",\"crate\":\"player\"},{\"type\":\"contact\",\"time\":12425,\"body\":\"listener-cube-a\",\"speed\":8.132419826815372},{\"type\":\"contact\",\"time\":12558,\"body\":\"listener-cube-a\",\"speed\":7.089002177403781},{\"type\":\"footstep\",\"time\":12583},{\"type\":\"contact\",\"time\":12925,\"body\":\"listener-cube-a\",\"speed\":5.391229623962558},{\"type\":\"footstep\",\"time\":13008},{\"type\":\"contact\",\"time\":13200,\"body\":\"listener-cube-a\",\"speed\":4.1767385277156},{\"type\":\"contact\",\"time\":13375,\"body\":\"listener-cube-a\",\"speed\":2.47144545598718},{\"type\":\"footstep\",\"time\":13433}]},\"contacts\":[{\"id\":\"listener-floor\",\"normal\":{\"x\":0.0021780706010758877,\"y\":0.9999975562095642,\"z\":0},\"applied\":{\"x\":-1.3635158581464053e-21,\"y\":-0.00010946344991680235,\"z\":-3.714963450616547e-21},\"remaining\":{\"x\":-1.2476881359226595e-20,\"y\":-0.001001647673547268,\"z\":-3.399385322757044e-20}}],\"events\":[{\"type\":\"contact\",\"time\":12.424999999999935,\"body\":\"listener-cube-a\",\"speed\":8.132419826815372},{\"type\":\"contact\",\"time\":12.55833333333326,\"body\":\"listener-cube-a\",\"speed\":7.089002177403781},{\"type\":\"footstep\",\"time\":12.58333333333326},{\"type\":\"contact\",\"time\":12.924999999999907,\"body\":\"listener-cube-a\",\"speed\":5.391229623962558},{\"type\":\"footstep\",\"time\":13.008333333333235},{\"type\":\"contact\",\"time\":13.199999999999891,\"body\":\"listener-cube-a\",\"speed\":4.1767385277156},{\"type\":\"contact\",\"time\":13.374999999999881,\"body\":\"listener-cube-a\",\"speed\":2.47144545598718},{\"type\":\"footstep\",\"time\":13.433333333333211}]}",
+  "inputs": [
+    {
+      "type": "step-input",
+      "seconds": 0.3,
+      "input": {
+        "forward": 0,
+        "strafe": 0,
+        "jump": false
+      },
+      "yaw": 0,
+      "pitch": 0
+    },
+    {
+      "type": "native-ray-checked-aimed-shot",
+      "index": 0,
+      "surface": "listener-source",
+      "p": [
+        0,
+        1.55,
+        13.985
+      ]
+    },
+    {
+      "type": "native-ray-checked-aimed-shot",
+      "index": 1,
+      "surface": "listener-return",
+      "p": [
+        0.55,
+        1.55,
+        4.915
+      ]
+    },
+    {
+      "type": "ordinary-WASD-to",
+      "x": -4,
+      "z": 12.8,
+      "seconds": 20
+    },
+    {
+      "type": "step-input",
+      "seconds": 0.12,
+      "input": {
+        "forward": 0,
+        "strafe": 0,
+        "jump": false
+      },
+      "yaw": 1.7682640586256764,
+      "pitch": 0
+    },
+    {
+      "type": "ordinary-E"
+    },
+    {
+      "type": "ordinary-WASD-to",
+      "x": 0,
+      "z": 12.7,
+      "seconds": 20
+    },
+    {
+      "type": "step-input",
+      "seconds": 0.12,
+      "input": {
+        "forward": 0,
+        "strafe": 0,
+        "jump": false
+      },
+      "yaw": -1.5405088977198262,
+      "pitch": 0
+    },
+    {
+      "type": "step-input",
+      "seconds": 0.06,
+      "input": {
+        "forward": 1,
+        "strafe": 0,
+        "jump": false
+      },
+      "yaw": 3.106153199449356,
+      "pitch": 0.010679889117584941
+    },
+    {
+      "type": "ordinary-WASD-to",
+      "x": 0.55,
+      "z": 5.7,
+      "seconds": 20
+    },
+    {
+      "type": "step-input",
+      "seconds": 0.12,
+      "input": {
+        "forward": 0,
+        "strafe": 0,
+        "jump": false
+      },
+      "yaw": 2.8312787095327936,
+      "pitch": 0
+    },
+    {
+      "type": "ordinary-WASD-to",
+      "x": -3.5,
+      "z": 5.7,
+      "seconds": 20
+    },
+    {
+      "type": "step-input",
+      "seconds": 0.12,
+      "input": {
+        "forward": 0,
+        "strafe": 0,
+        "jump": false
+      },
+      "yaw": 1.5520908426886737,
+      "pitch": 0
+    },
+    {
+      "type": "ordinary-WASD-to",
+      "x": -6.8,
+      "z": 6,
+      "seconds": 20
+    },
+    {
+      "type": "step-input",
+      "seconds": 0.12,
+      "input": {
+        "forward": 0,
+        "strafe": 0,
+        "jump": false
+      },
+      "yaw": 1.6712965953424925,
+      "pitch": 0
+    },
+    {
+      "type": "step-input",
+      "seconds": 0.35,
+      "input": {
+        "forward": 0,
+        "strafe": 0,
+        "jump": false
+      },
+      "yaw": -1.565592882736429,
+      "pitch": -0.16434915055467741
+    },
+    {
+      "type": "ordinary-E"
+    },
+    {
+      "type": "step-input",
+      "seconds": 0.8,
+      "input": {
+        "forward": 0,
+        "strafe": 0,
+        "jump": false
+      },
+      "yaw": -1.565592882736429,
+      "pitch": -0.16434915055467741
+    },
+    {
+      "type": "ordinary-WASD-to",
+      "x": -6.8,
+      "z": 7.2,
+      "seconds": 20
+    },
+    {
+      "type": "step-input",
+      "seconds": 0.12,
+      "input": {
+        "forward": 0,
+        "strafe": 0,
+        "jump": false
+      },
+      "yaw": -3.0415500725221367,
+      "pitch": 0
+    },
+    {
+      "type": "ordinary-WASD-to",
+      "x": 0.55,
+      "z": 7.2,
+      "seconds": 20
+    },
+    {
+      "type": "step-input",
+      "seconds": 0.12,
+      "input": {
+        "forward": 0,
+        "strafe": 0,
+        "jump": false
+      },
+      "yaw": -1.5537118371323566,
+      "pitch": 0
+    },
+    {
+      "type": "ordinary-WASD-to",
+      "x": 0.55,
+      "z": 6.4,
+      "seconds": 20
+    },
+    {
+      "type": "step-input",
+      "seconds": 0.12,
+      "input": {
+        "forward": 0,
+        "strafe": 0,
+        "jump": false
+      },
+      "yaw": 0.17751386101769356,
+      "pitch": 0
+    },
+    {
+      "type": "step-input",
+      "seconds": 0.06,
+      "input": {
+        "forward": 1,
+        "strafe": 0,
+        "jump": false
+      },
+      "yaw": -0.0033415193207593542,
+      "pitch": 0.010322767468023944
+    },
+    {
+      "type": "ordinary-WASD-to",
+      "x": 4,
+      "z": 12.8,
+      "seconds": 20
+    },
+    {
+      "type": "step-input",
+      "seconds": 0.12,
+      "input": {
+        "forward": 0,
+        "strafe": 0,
+        "jump": false
+      },
+      "yaw": -1.4269754340178944,
+      "pitch": 0
+    },
+    {
+      "type": "ordinary-E"
+    },
+    {
+      "type": "ordinary-WASD-to",
+      "x": 0,
+      "z": 12.7,
+      "seconds": 20
+    },
+    {
+      "type": "step-input",
+      "seconds": 0.12,
+      "input": {
+        "forward": 0,
+        "strafe": 0,
+        "jump": false
+      },
+      "yaw": 1.5498438336794238,
+      "pitch": 0
+    },
+    {
+      "type": "step-input",
+      "seconds": 0.06,
+      "input": {
+        "forward": 1,
+        "strafe": 0,
+        "jump": false
+      },
+      "yaw": -3.1143488682212537,
+      "pitch": 0.010694414910631812
+    },
+    {
+      "type": "ordinary-WASD-to",
+      "x": 0.55,
+      "z": 5.7,
+      "seconds": 20
+    },
+    {
+      "type": "step-input",
+      "seconds": 0.12,
+      "input": {
+        "forward": 0,
+        "strafe": 0,
+        "jump": false
+      },
+      "yaw": -2.9085378651337237,
+      "pitch": 0
+    },
+    {
+      "type": "ordinary-WASD-to",
+      "x": -3.5,
+      "z": 5.7,
+      "seconds": 20
+    },
+    {
+      "type": "step-input",
+      "seconds": 0.12,
+      "input": {
+        "forward": 0,
+        "strafe": 0,
+        "jump": false
+      },
+      "yaw": 1.541910251066356,
+      "pitch": 0
+    },
+    {
+      "type": "ordinary-WASD-to",
+      "x": -5,
+      "z": 2,
+      "seconds": 20
+    },
+    {
+      "type": "step-input",
+      "seconds": 0.12,
+      "input": {
+        "forward": 0,
+        "strafe": 0,
+        "jump": false
+      },
+      "yaw": 0.3516842778716988,
+      "pitch": 0
+    }
+  ],
+  "notes": [
+    {
+      "label": "actual-tools-pair-configured-unheld",
+      "state": {
+        "room": "chamber-47",
+        "number": 47,
+        "mission": "ENTRY told me to keep its walking hatch open while I bring a cube to its receiving bay.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -0.000003191956921000383,
+            0.8646915555000305,
+            11.99999713897705
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "yaw": -0.07747389730989654,
+          "pitch": 0.004968561435676862,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "listener-source",
+            "position": [
+              0,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "listener-return",
+            "position": [
+              0.55,
+              1.55,
+              4.94
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "listener-cube-a",
+            "position": [
+              -4.000002384185791,
+              0.5498895645141602,
+              11
+            ],
+            "velocity": [
+              -0.000004421928224473959,
+              -1.4878733622936124e-7,
+              -0.000004284918759367429
+            ],
+            "rotation": [
+              3.646010782176745e-7,
+              3.899083313163576e-12,
+              -3.698202704072173e-7,
+              1
+            ],
+            "angularVelocity": [
+              -0.000007747684321657289,
+              4.731065257439215e-15,
+              0.000007995415217010304
+            ],
+            "held": false,
+            "crossings": 0
+          },
+          {
+            "id": "listener-cube-b",
+            "position": [
+              3.9999873638153076,
+              0.5498895645141602,
+              11
+            ],
+            "velocity": [
+              -0.000004420658569870284,
+              -1.483194154161538e-7,
+              -0.000004285105660528643
+            ],
+            "rotation": [
+              3.6431825378713256e-7,
+              3.901278172041556e-12,
+              -3.689890490932157e-7,
+              1
+            ],
+            "angularVelocity": [
+              -0.000007748022653686348,
+              2.889658659382087e-14,
+              0.00000799311965238303
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "listener-access",
+            "position": [
+              -5,
+              0.14,
+              6
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "listener-entry-receipt",
+            "position": [
+              -5,
+              0.14,
+              -4
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "listener-freight-receipt",
+            "position": [
+              5,
+              0,
+              -1.4
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "entry-door",
+            "kind": "shutter",
+            "label": "ENTRY",
+            "position": [
+              -12.12,
+              1.5,
+              -7
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "freight-door",
+            "kind": "shutter",
+            "label": "FREIGHT",
+            "position": [
+              12.12,
+              3.9,
+              -7
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "listener-entry-hatch",
+            "kind": "shutter",
+            "label": "ENTRY",
+            "position": [
+              -5,
+              1.5,
+              0.68
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "listener-stair-gate",
+            "kind": "shutter",
+            "label": "FREIGHT STAIRS",
+            "position": [
+              10.5,
+              1.5,
+              7
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "listener-source",
+            "position": [
+              0,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "listener-return",
+            "position": [
+              0,
+              1.75,
+              4.915
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "entry-exit",
+            "label": "EXIT",
+            "position": [
+              -14.489999999999998,
+              1.5,
+              -7
+            ],
+            "size": [
+              3.7799999999999994,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "freight-exit",
+            "label": "EXIT",
+            "position": [
+              14.489999999999998,
+              3.9,
+              -7
+            ],
+            "size": [
+              3.7799999999999994,
+              3,
+              3.16
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "listener-access": false,
+          "listener-entry-receipt": false,
+          "listener-freight-receipt": false,
+          "closed:entry-door": true,
+          "clear:entry-door": false,
+          "safety:entry-door": false,
+          "door-safety": false,
+          "moving:entry-door": false,
+          "closed:freight-door": true,
+          "clear:freight-door": false,
+          "safety:freight-door": false,
+          "moving:freight-door": false,
+          "closed:listener-entry-hatch": true,
+          "clear:listener-entry-hatch": false,
+          "safety:listener-entry-hatch": false,
+          "moving:listener-entry-hatch": false,
+          "closed:listener-stair-gate": true,
+          "clear:listener-stair-gate": false,
+          "safety:listener-stair-gate": false,
+          "moving:listener-stair-gate": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "portalA",
+            "time": 300,
+            "surface": "listener-source",
+            "point": [
+              0,
+              1.55,
+              13.959999999999999
+            ]
+          },
+          {
+            "type": "portalB",
+            "time": 300,
+            "surface": "listener-return",
+            "point": [
+              0.55,
+              1.55,
+              4.94
+            ]
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "listener-floor",
+          "normal": {
+            "x": 0,
+            "y": 0.9999546408653259,
+            "z": -0.009527357295155525
+          },
+          "applied": {
+            "x": 0,
+            "y": -0.00010010306141339242,
+            "z": 0
+          },
+          "remaining": {
+            "x": 0,
+            "y": -0.0010110080474987626,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-normal-depth-then-turn-west",
+      "state": {
+        "room": "chamber-47",
+        "number": 47,
+        "mission": "ENTRY told me to keep its walking hatch open while I bring a cube to its receiving bay.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -3.5973024368286133,
+            0.8650994896888733,
+            5.698136806488037
+          ],
+          "velocity": [
+            -0.41922659825088027,
+            0,
+            -0.0078583078014822
+          ],
+          "yaw": 1.5520908426886737,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "listener-source",
+            "position": [
+              0,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "listener-return",
+            "position": [
+              0.55,
+              1.55,
+              4.94
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "listener-cube-a",
+            "position": [
+              -5.396987438201904,
+              1.0150995254516602,
+              5.664468765258789
+            ],
+            "velocity": [
+              -0.41877827048301697,
+              0.0023008224088698626,
+              -0.007888533174991608
+            ],
+            "rotation": [
+              2.0005801104616694e-7,
+              3.890138211559702e-12,
+              -2.2733087234882987e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": true,
+            "crossings": 1
+          },
+          {
+            "id": "listener-cube-b",
+            "position": [
+              3.9999873638153076,
+              0.5498895645141602,
+              11
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              1.99414273538423e-7,
+              3.89205768308587e-12,
+              -2.268262875304572e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "listener-access",
+            "position": [
+              -5,
+              0.14,
+              6
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "listener-entry-receipt",
+            "position": [
+              -5,
+              0.14,
+              -4
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "listener-freight-receipt",
+            "position": [
+              5,
+              0,
+              -1.4
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "entry-door",
+            "kind": "shutter",
+            "label": "ENTRY",
+            "position": [
+              -12.12,
+              1.5,
+              -7
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "freight-door",
+            "kind": "shutter",
+            "label": "FREIGHT",
+            "position": [
+              12.12,
+              3.9,
+              -7
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "listener-entry-hatch",
+            "kind": "shutter",
+            "label": "ENTRY",
+            "position": [
+              -5,
+              1.5,
+              0.68
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "listener-stair-gate",
+            "kind": "shutter",
+            "label": "FREIGHT STAIRS",
+            "position": [
+              10.5,
+              1.5,
+              7
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "listener-source",
+            "position": [
+              0,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "listener-return",
+            "position": [
+              0,
+              1.75,
+              4.915
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "entry-exit",
+            "label": "EXIT",
+            "position": [
+              -14.489999999999998,
+              1.5,
+              -7
+            ],
+            "size": [
+              3.7799999999999994,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "freight-exit",
+            "label": "EXIT",
+            "position": [
+              14.489999999999998,
+              3.9,
+              -7
+            ],
+            "size": [
+              3.7799999999999994,
+              3,
+              3.16
+            ]
+          }
+        ],
+        "result": null,
+        "held": "listener-cube-a",
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "listener-access": false,
+          "listener-entry-receipt": false,
+          "listener-freight-receipt": false,
+          "closed:entry-door": true,
+          "clear:entry-door": false,
+          "safety:entry-door": false,
+          "door-safety": false,
+          "moving:entry-door": false,
+          "closed:freight-door": true,
+          "clear:freight-door": false,
+          "safety:freight-door": false,
+          "moving:freight-door": false,
+          "closed:listener-entry-hatch": true,
+          "clear:listener-entry-hatch": false,
+          "safety:listener-entry-hatch": false,
+          "moving:listener-entry-hatch": false,
+          "closed:listener-stair-gate": true,
+          "clear:listener-stair-gate": false,
+          "safety:listener-stair-gate": false,
+          "moving:listener-stair-gate": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "portalA",
+            "time": 300,
+            "surface": "listener-source",
+            "point": [
+              0,
+              1.55,
+              13.959999999999999
+            ]
+          },
+          {
+            "type": "portalB",
+            "time": 300,
+            "surface": "listener-return",
+            "point": [
+              0.55,
+              1.55,
+              4.94
+            ]
+          },
+          {
+            "type": "footstep",
+            "time": 425
+          },
+          {
+            "type": "footstep",
+            "time": 850
+          },
+          {
+            "type": "pickup",
+            "time": 1350,
+            "body": "listener-cube-a"
+          },
+          {
+            "type": "footstep",
+            "time": 1367
+          },
+          {
+            "type": "footstep",
+            "time": 1792
+          },
+          {
+            "type": "footstep",
+            "time": 2217
+          },
+          {
+            "type": "enter",
+            "time": 2617,
+            "body": "listener-cube-a",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "listener-source",
+            "toSurface": "listener-return",
+            "speed": 17.982009231077537,
+            "exitSpeed": 17.982009231077537,
+            "held": "listener-cube-a"
+          },
+          {
+            "type": "footstep",
+            "time": 2642
+          },
+          {
+            "type": "enter",
+            "time": 2725,
+            "body": "player",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "listener-source",
+            "toSurface": "listener-return",
+            "speed": 4.78996214312947,
+            "exitSpeed": 4.78996214312947,
+            "held": "listener-cube-a"
+          },
+          {
+            "type": "land",
+            "time": 2733
+          },
+          {
+            "type": "footstep",
+            "time": 3067
+          },
+          {
+            "type": "footstep",
+            "time": 3492
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "listener-floor",
+          "normal": {
+            "x": 0,
+            "y": 1,
+            "z": 0
+          },
+          "applied": {
+            "x": -0.0002542086294852197,
+            "y": -0.00008085003355517983,
+            "z": -0.00000476508330393699
+          },
+          "remaining": {
+            "x": -0.0032393462024629116,
+            "y": -0.0010302611626684666,
+            "z": -0.000060720813053194433
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-released-pressure-listener-access",
+      "state": {
+        "room": "chamber-47",
+        "number": 47,
+        "mission": "ENTRY told me to keep its walking hatch open while I bring a cube to its receiving bay.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -6.918886184692383,
+            0.8650838732719421,
+            6.011837482452393
+          ],
+          "velocity": [
+            -6.45033199011611e-11,
+            0,
+            6.469224105497974e-12
+          ],
+          "yaw": -1.565592882736429,
+          "pitch": -0.16434915055467741,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "listener-source",
+            "position": [
+              0,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "listener-return",
+            "position": [
+              0.55,
+              1.55,
+              4.94
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "listener-cube-a",
+            "position": [
+              -5.116563320159912,
+              0.6898946166038513,
+              6.002779960632324
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0.0000037094621347932843,
+              0.000030179649911588058,
+              0.0000011680278930725763,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 1
+          },
+          {
+            "id": "listener-cube-b",
+            "position": [
+              3.9999873638153076,
+              0.5498895645141602,
+              11
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              1.99414273538423e-7,
+              3.89205768308587e-12,
+              -2.268262875304572e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "listener-access",
+            "position": [
+              -5,
+              0.14,
+              6
+            ],
+            "pressed": true,
+            "crate": "listener-cube-a"
+          },
+          {
+            "id": "listener-entry-receipt",
+            "position": [
+              -5,
+              0.14,
+              -4
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "listener-freight-receipt",
+            "position": [
+              5,
+              0,
+              -1.4
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "entry-door",
+            "kind": "shutter",
+            "label": "ENTRY",
+            "position": [
+              -12.12,
+              1.5,
+              -7
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "freight-door",
+            "kind": "shutter",
+            "label": "FREIGHT",
+            "position": [
+              12.12,
+              3.9,
+              -7
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "listener-entry-hatch",
+            "kind": "shutter",
+            "label": "ENTRY",
+            "position": [
+              -5,
+              5,
+              0.68
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "listener-stair-gate",
+            "kind": "shutter",
+            "label": "FREIGHT STAIRS",
+            "position": [
+              10.5,
+              1.5,
+              7
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "listener-source",
+            "position": [
+              0,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "listener-return",
+            "position": [
+              0,
+              1.75,
+              4.915
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "entry-exit",
+            "label": "EXIT",
+            "position": [
+              -14.489999999999998,
+              1.5,
+              -7
+            ],
+            "size": [
+              3.7799999999999994,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "freight-exit",
+            "label": "EXIT",
+            "position": [
+              14.489999999999998,
+              3.9,
+              -7
+            ],
+            "size": [
+              3.7799999999999994,
+              3,
+              3.16
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "listener-access": true,
+          "listener-entry-receipt": false,
+          "listener-freight-receipt": false,
+          "closed:entry-door": true,
+          "clear:entry-door": false,
+          "safety:entry-door": false,
+          "door-safety": false,
+          "moving:entry-door": false,
+          "closed:freight-door": true,
+          "clear:freight-door": false,
+          "safety:freight-door": false,
+          "moving:freight-door": false,
+          "closed:listener-entry-hatch": false,
+          "clear:listener-entry-hatch": true,
+          "safety:listener-entry-hatch": false,
+          "moving:listener-entry-hatch": false,
+          "closed:listener-stair-gate": true,
+          "clear:listener-stair-gate": false,
+          "safety:listener-stair-gate": false,
+          "moving:listener-stair-gate": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "footstep",
+            "time": 2217
+          },
+          {
+            "type": "enter",
+            "time": 2617,
+            "body": "listener-cube-a",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "listener-source",
+            "toSurface": "listener-return",
+            "speed": 17.982009231077537,
+            "exitSpeed": 17.982009231077537,
+            "held": "listener-cube-a"
+          },
+          {
+            "type": "footstep",
+            "time": 2642
+          },
+          {
+            "type": "enter",
+            "time": 2725,
+            "body": "player",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "listener-source",
+            "toSurface": "listener-return",
+            "speed": 4.78996214312947,
+            "exitSpeed": 4.78996214312947,
+            "held": "listener-cube-a"
+          },
+          {
+            "type": "land",
+            "time": 2733
+          },
+          {
+            "type": "footstep",
+            "time": 3067
+          },
+          {
+            "type": "footstep",
+            "time": 3492
+          },
+          {
+            "type": "footstep",
+            "time": 4025
+          },
+          {
+            "type": "shutter-open",
+            "time": 4167,
+            "id": "listener-entry-hatch"
+          },
+          {
+            "type": "pad",
+            "time": 4167,
+            "pad": "listener-access",
+            "crate": "player"
+          },
+          {
+            "type": "footstep",
+            "time": 4450
+          },
+          {
+            "type": "button-release",
+            "time": 4592,
+            "pad": "listener-access",
+            "crate": "player"
+          },
+          {
+            "type": "shutter-open",
+            "time": 5050,
+            "id": "listener-entry-hatch"
+          },
+          {
+            "type": "pad",
+            "time": 5050,
+            "pad": "listener-access",
+            "crate": "listener-cube-a"
+          },
+          {
+            "type": "drop",
+            "time": 5200,
+            "body": "listener-cube-a"
+          },
+          {
+            "type": "contact",
+            "time": 5242,
+            "body": "listener-cube-a",
+            "speed": 0.7856754517017615
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "listener-floor",
+          "normal": {
+            "x": 0,
+            "y": 1,
+            "z": 0
+          },
+          "applied": {
+            "x": -4.834393790235231e-14,
+            "y": -0.00009993065759772435,
+            "z": 4.84855380942107e-15
+          },
+          "remaining": {
+            "x": -4.891837260788401e-13,
+            "y": -0.0010111804585903883,
+            "z": 4.906164585921982e-14
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-normal-depth-then-turn-west",
+      "state": {
+        "room": "chamber-47",
+        "number": 47,
+        "mission": "ENTRY told me to keep its walking hatch open while I bring a cube to its receiving bay.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -3.621236562728882,
+            0.8649803996086121,
+            5.696296215057373
+          ],
+          "velocity": [
+            -0.4191151157294519,
+            0,
+            -0.012456603515561914
+          ],
+          "yaw": 1.541910251066356,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 3
+        },
+        "portals": [
+          {
+            "surface": "listener-source",
+            "position": [
+              0,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "listener-return",
+            "position": [
+              0.55,
+              1.55,
+              4.94
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "listener-cube-a",
+            "position": [
+              -8.044382095336914,
+              0.8693691492080688,
+              6.07423210144043
+            ],
+            "velocity": [
+              -4.608561038970947,
+              2.8241591453552246,
+              1.651847243309021
+            ],
+            "rotation": [
+              -0.08080193400382996,
+              0.12640276551246643,
+              0.8232119679450989,
+              0.547554075717926
+            ],
+            "angularVelocity": [
+              1.8543277978897095,
+              -0.3147808611392975,
+              5.523863315582275
+            ],
+            "held": false,
+            "crossings": 1
+          },
+          {
+            "id": "listener-cube-b",
+            "position": [
+              -5.420485496520996,
+              1.014980435371399,
+              5.644308567047119
+            ],
+            "velocity": [
+              -0.41992151737213135,
+              -0.012004290707409382,
+              -0.012118617072701454
+            ],
+            "rotation": [
+              1.99414273538423e-7,
+              3.891996534083342e-12,
+              -2.268262875304572e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": true,
+            "crossings": 1
+          }
+        ],
+        "pads": [
+          {
+            "id": "listener-access",
+            "position": [
+              -5,
+              0.14,
+              6
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "listener-entry-receipt",
+            "position": [
+              -5,
+              0.14,
+              -4
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "listener-freight-receipt",
+            "position": [
+              5,
+              0,
+              -1.4
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "entry-door",
+            "kind": "shutter",
+            "label": "ENTRY",
+            "position": [
+              -12.12,
+              1.5,
+              -7
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "freight-door",
+            "kind": "shutter",
+            "label": "FREIGHT",
+            "position": [
+              12.12,
+              3.9,
+              -7
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "listener-entry-hatch",
+            "kind": "shutter",
+            "label": "ENTRY",
+            "position": [
+              -5,
+              3.578125000000005,
+              0.68
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0.5937500000000014,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "listener-stair-gate",
+            "kind": "shutter",
+            "label": "FREIGHT STAIRS",
+            "position": [
+              10.5,
+              1.5,
+              7
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "listener-source",
+            "position": [
+              0,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "listener-return",
+            "position": [
+              0,
+              1.75,
+              4.915
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "entry-exit",
+            "label": "EXIT",
+            "position": [
+              -14.489999999999998,
+              1.5,
+              -7
+            ],
+            "size": [
+              3.7799999999999994,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "freight-exit",
+            "label": "EXIT",
+            "position": [
+              14.489999999999998,
+              3.9,
+              -7
+            ],
+            "size": [
+              3.7799999999999994,
+              3,
+              3.16
+            ]
+          }
+        ],
+        "result": null,
+        "held": "listener-cube-b",
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "listener-access": false,
+          "listener-entry-receipt": false,
+          "listener-freight-receipt": false,
+          "closed:entry-door": true,
+          "clear:entry-door": false,
+          "safety:entry-door": false,
+          "door-safety": false,
+          "moving:entry-door": false,
+          "closed:freight-door": true,
+          "clear:freight-door": false,
+          "safety:freight-door": false,
+          "moving:freight-door": false,
+          "closed:listener-entry-hatch": false,
+          "clear:listener-entry-hatch": false,
+          "safety:listener-entry-hatch": false,
+          "moving:listener-entry-hatch": true,
+          "closed:listener-stair-gate": true,
+          "clear:listener-stair-gate": false,
+          "safety:listener-stair-gate": false,
+          "moving:listener-stair-gate": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "footstep",
+            "time": 9433
+          },
+          {
+            "type": "pickup",
+            "time": 9900,
+            "body": "listener-cube-b"
+          },
+          {
+            "type": "footstep",
+            "time": 9917
+          },
+          {
+            "type": "footstep",
+            "time": 10342
+          },
+          {
+            "type": "footstep",
+            "time": 10767
+          },
+          {
+            "type": "enter",
+            "time": 11133,
+            "body": "listener-cube-b",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "listener-source",
+            "toSurface": "listener-return",
+            "speed": 17.981963919600158,
+            "exitSpeed": 17.981963919600158,
+            "held": "listener-cube-b"
+          },
+          {
+            "type": "footstep",
+            "time": 11192
+          },
+          {
+            "type": "enter",
+            "time": 11258,
+            "body": "player",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "listener-source",
+            "toSurface": "listener-return",
+            "speed": 4.791480750613333,
+            "exitSpeed": 4.791480750613333,
+            "held": "listener-cube-b"
+          },
+          {
+            "type": "land",
+            "time": 11267
+          },
+          {
+            "type": "footstep",
+            "time": 11617
+          },
+          {
+            "type": "footstep",
+            "time": 12042
+          },
+          {
+            "type": "contact",
+            "time": 12192,
+            "body": "listener-cube-a",
+            "speed": 0.8863626552661271
+          },
+          {
+            "type": "shutter-close",
+            "time": 12258,
+            "id": "listener-entry-hatch"
+          },
+          {
+            "type": "button-release",
+            "time": 12258,
+            "pad": "listener-access",
+            "crate": "player"
+          },
+          {
+            "type": "contact",
+            "time": 12425,
+            "body": "listener-cube-a",
+            "speed": 8.132419826815372
+          },
+          {
+            "type": "contact",
+            "time": 12558,
+            "body": "listener-cube-a",
+            "speed": 7.089002177403781
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "listener-floor",
+          "normal": {
+            "x": -0.009739222936332226,
+            "y": 0.999949038028717,
+            "z": 0.002654746640473604
+          },
+          "applied": {
+            "x": -0.0003174572775606066,
+            "y": -0.00010099286737386137,
+            "z": -0.000009435210813535377
+          },
+          "remaining": {
+            "x": -0.0031751685310155153,
+            "y": -0.0010101182851940393,
+            "z": -0.00009436982509214431
+          }
+        }
+      ]
+    },
+    {
+      "label": "failure",
+      "state": {
+        "room": "chamber-47",
+        "number": 47,
+        "mission": "ENTRY told me to keep its walking hatch open while I bring a cube to its receiving bay.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -5.035236358642578,
+            0.8649858832359314,
+            1.9040048122406006
+          ],
+          "velocity": [
+            -1.660847649582294e-18,
+            0,
+            -4.5250579888724794e-18
+          ],
+          "yaw": 0.3516842778716988,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 3
+        },
+        "portals": [
+          {
+            "surface": "listener-source",
+            "position": [
+              0,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "listener-return",
+            "position": [
+              0.55,
+              1.55,
+              4.94
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "listener-cube-a",
+            "position": [
+              -10.669232368469238,
+              0.5498899817466736,
+              6.601982116699219
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0.11691533774137497,
+              -0.11691446602344513,
+              0.6973759531974792,
+              -0.6973727345466614
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 1
+          },
+          {
+            "id": "listener-cube-b",
+            "position": [
+              -5.2945356369018555,
+              1.0146833658218384,
+              1.3917683362960815
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              1.99414273538423e-7,
+              3.891996534083342e-12,
+              -2.268262875304572e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": true,
+            "crossings": 1
+          }
+        ],
+        "pads": [
+          {
+            "id": "listener-access",
+            "position": [
+              -5,
+              0.14,
+              6
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "listener-entry-receipt",
+            "position": [
+              -5,
+              0.14,
+              -4
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "listener-freight-receipt",
+            "position": [
+              5,
+              0,
+              -1.4
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "entry-door",
+            "kind": "shutter",
+            "label": "ENTRY",
+            "position": [
+              -12.12,
+              1.5,
+              -7
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "freight-door",
+            "kind": "shutter",
+            "label": "FREIGHT",
+            "position": [
+              12.12,
+              3.9,
+              -7
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "listener-entry-hatch",
+            "kind": "shutter",
+            "label": "ENTRY",
+            "position": [
+              -5,
+              1.5,
+              0.68
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "listener-stair-gate",
+            "kind": "shutter",
+            "label": "FREIGHT STAIRS",
+            "position": [
+              10.5,
+              1.5,
+              7
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "listener-source",
+            "position": [
+              0,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "listener-return",
+            "position": [
+              0,
+              1.75,
+              4.915
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "entry-exit",
+            "label": "EXIT",
+            "position": [
+              -14.489999999999998,
+              1.5,
+              -7
+            ],
+            "size": [
+              3.7799999999999994,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "freight-exit",
+            "label": "EXIT",
+            "position": [
+              14.489999999999998,
+              3.9,
+              -7
+            ],
+            "size": [
+              3.7799999999999994,
+              3,
+              3.16
+            ]
+          }
+        ],
+        "result": null,
+        "held": "listener-cube-b",
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "listener-access": false,
+          "listener-entry-receipt": false,
+          "listener-freight-receipt": false,
+          "closed:entry-door": true,
+          "clear:entry-door": false,
+          "safety:entry-door": false,
+          "door-safety": false,
+          "moving:entry-door": false,
+          "closed:freight-door": true,
+          "clear:freight-door": false,
+          "safety:freight-door": false,
+          "moving:freight-door": false,
+          "closed:listener-entry-hatch": true,
+          "clear:listener-entry-hatch": false,
+          "safety:listener-entry-hatch": false,
+          "moving:listener-entry-hatch": false,
+          "closed:listener-stair-gate": true,
+          "clear:listener-stair-gate": false,
+          "safety:listener-stair-gate": false,
+          "moving:listener-stair-gate": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "footstep",
+            "time": 11192
+          },
+          {
+            "type": "enter",
+            "time": 11258,
+            "body": "player",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "listener-source",
+            "toSurface": "listener-return",
+            "speed": 4.791480750613333,
+            "exitSpeed": 4.791480750613333,
+            "held": "listener-cube-b"
+          },
+          {
+            "type": "land",
+            "time": 11267
+          },
+          {
+            "type": "footstep",
+            "time": 11617
+          },
+          {
+            "type": "footstep",
+            "time": 12042
+          },
+          {
+            "type": "contact",
+            "time": 12192,
+            "body": "listener-cube-a",
+            "speed": 0.8863626552661271
+          },
+          {
+            "type": "shutter-close",
+            "time": 12258,
+            "id": "listener-entry-hatch"
+          },
+          {
+            "type": "button-release",
+            "time": 12258,
+            "pad": "listener-access",
+            "crate": "player"
+          },
+          {
+            "type": "contact",
+            "time": 12425,
+            "body": "listener-cube-a",
+            "speed": 8.132419826815372
+          },
+          {
+            "type": "contact",
+            "time": 12558,
+            "body": "listener-cube-a",
+            "speed": 7.089002177403781
+          },
+          {
+            "type": "footstep",
+            "time": 12583
+          },
+          {
+            "type": "contact",
+            "time": 12925,
+            "body": "listener-cube-a",
+            "speed": 5.391229623962558
+          },
+          {
+            "type": "footstep",
+            "time": 13008
+          },
+          {
+            "type": "contact",
+            "time": 13200,
+            "body": "listener-cube-a",
+            "speed": 4.1767385277156
+          },
+          {
+            "type": "contact",
+            "time": 13375,
+            "body": "listener-cube-a",
+            "speed": 2.47144545598718
+          },
+          {
+            "type": "footstep",
+            "time": 13433
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "listener-floor",
+          "normal": {
+            "x": 0.0021780706010758877,
+            "y": 0.9999975562095642,
+            "z": 0
+          },
+          "applied": {
+            "x": -1.3635158581464053e-21,
+            "y": -0.00010946344991680235,
+            "z": -3.714963450616547e-21
+          },
+          "remaining": {
+            "x": -1.2476881359226595e-20,
+            "y": -0.001001647673547268,
+            "z": -3.399385322757044e-20
+          }
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "land",
+      "time": 0.008333333333333333
+    },
+    {
+      "type": "portalA",
+      "time": 0.3000000000000001,
+      "surface": "listener-source",
+      "point": [
+        0,
+        1.55,
+        13.959999999999999
+      ]
+    },
+    {
+      "type": "portalB",
+      "time": 0.3000000000000001,
+      "surface": "listener-return",
+      "point": [
+        0.55,
+        1.55,
+        4.94
+      ]
+    },
+    {
+      "type": "footstep",
+      "time": 0.4250000000000005
+    },
+    {
+      "type": "footstep",
+      "time": 0.8499999999999994
+    },
+    {
+      "type": "pickup",
+      "time": 1.3499999999999976,
+      "body": "listener-cube-a"
+    },
+    {
+      "type": "footstep",
+      "time": 1.3666666666666643
+    },
+    {
+      "type": "footstep",
+      "time": 1.7916666666666627
+    },
+    {
+      "type": "footstep",
+      "time": 2.2166666666666615
+    },
+    {
+      "type": "enter",
+      "time": 2.61666666666666,
+      "body": "listener-cube-a",
+      "from": 0,
+      "to": 1,
+      "fromSurface": "listener-source",
+      "toSurface": "listener-return",
+      "speed": 17.982009231077537,
+      "exitSpeed": 17.982009231077537,
+      "held": "listener-cube-a"
+    },
+    {
+      "type": "footstep",
+      "time": 2.64166666666666
+    },
+    {
+      "type": "enter",
+      "time": 2.724999999999993,
+      "body": "player",
+      "from": 0,
+      "to": 1,
+      "fromSurface": "listener-source",
+      "toSurface": "listener-return",
+      "speed": 4.78996214312947,
+      "exitSpeed": 4.78996214312947,
+      "held": "listener-cube-a"
+    },
+    {
+      "type": "land",
+      "time": 2.7333333333333263
+    },
+    {
+      "type": "footstep",
+      "time": 3.0666666666666584
+    },
+    {
+      "type": "footstep",
+      "time": 3.491666666666657
+    },
+    {
+      "type": "footstep",
+      "time": 4.02499999999999
+    },
+    {
+      "type": "shutter-open",
+      "time": 4.166666666666663,
+      "id": "listener-entry-hatch"
+    },
+    {
+      "type": "pad",
+      "time": 4.166666666666663,
+      "pad": "listener-access",
+      "crate": "player"
+    },
+    {
+      "type": "footstep",
+      "time": 4.450000000000011
+    },
+    {
+      "type": "button-release",
+      "time": 4.5916666666666845,
+      "pad": "listener-access",
+      "crate": "player"
+    },
+    {
+      "type": "shutter-open",
+      "time": 5.050000000000041,
+      "id": "listener-entry-hatch"
+    },
+    {
+      "type": "pad",
+      "time": 5.050000000000041,
+      "pad": "listener-access",
+      "crate": "listener-cube-a"
+    },
+    {
+      "type": "drop",
+      "time": 5.200000000000048,
+      "body": "listener-cube-a"
+    },
+    {
+      "type": "contact",
+      "time": 5.241666666666717,
+      "body": "listener-cube-a",
+      "speed": 0.7856754517017615
+    },
+    {
+      "type": "footstep",
+      "time": 6.016666666666755
+    },
+    {
+      "type": "footstep",
+      "time": 6.441666666666777
+    },
+    {
+      "type": "footstep",
+      "time": 6.866666666666798
+    },
+    {
+      "type": "footstep",
+      "time": 7.291666666666819
+    },
+    {
+      "type": "footstep",
+      "time": 7.71666666666684
+    },
+    {
+      "type": "footstep",
+      "time": 8.15833333333351
+    },
+    {
+      "type": "footstep",
+      "time": 8.583333333333487
+    },
+    {
+      "type": "enter",
+      "time": 8.816666666666807,
+      "body": "player",
+      "from": 1,
+      "to": 0,
+      "fromSurface": "listener-return",
+      "toSurface": "listener-source",
+      "speed": 4.79522776197902,
+      "exitSpeed": 4.79522776197902,
+      "held": null
+    },
+    {
+      "type": "land",
+      "time": 8.82500000000014
+    },
+    {
+      "type": "footstep",
+      "time": 9.008333333333463
+    },
+    {
+      "type": "footstep",
+      "time": 9.433333333333438
+    },
+    {
+      "type": "pickup",
+      "time": 9.900000000000079,
+      "body": "listener-cube-b"
+    },
+    {
+      "type": "footstep",
+      "time": 9.916666666666744
+    },
+    {
+      "type": "footstep",
+      "time": 10.34166666666672
+    },
+    {
+      "type": "footstep",
+      "time": 10.766666666666696
+    },
+    {
+      "type": "enter",
+      "time": 11.133333333333342,
+      "body": "listener-cube-b",
+      "from": 0,
+      "to": 1,
+      "fromSurface": "listener-source",
+      "toSurface": "listener-return",
+      "speed": 17.981963919600158,
+      "exitSpeed": 17.981963919600158,
+      "held": "listener-cube-b"
+    },
+    {
+      "type": "footstep",
+      "time": 11.191666666666672
+    },
+    {
+      "type": "enter",
+      "time": 11.258333333333335,
+      "body": "player",
+      "from": 0,
+      "to": 1,
+      "fromSurface": "listener-source",
+      "toSurface": "listener-return",
+      "speed": 4.791480750613333,
+      "exitSpeed": 4.791480750613333,
+      "held": "listener-cube-b"
+    },
+    {
+      "type": "land",
+      "time": 11.266666666666667
+    },
+    {
+      "type": "footstep",
+      "time": 11.616666666666648
+    },
+    {
+      "type": "footstep",
+      "time": 12.041666666666623
+    },
+    {
+      "type": "contact",
+      "time": 12.191666666666615,
+      "body": "listener-cube-a",
+      "speed": 0.8863626552661271
+    },
+    {
+      "type": "shutter-close",
+      "time": 12.258333333333278,
+      "id": "listener-entry-hatch"
+    },
+    {
+      "type": "button-release",
+      "time": 12.258333333333278,
+      "pad": "listener-access",
+      "crate": "player"
+    },
+    {
+      "type": "contact",
+      "time": 12.424999999999935,
+      "body": "listener-cube-a",
+      "speed": 8.132419826815372
+    },
+    {
+      "type": "contact",
+      "time": 12.55833333333326,
+      "body": "listener-cube-a",
+      "speed": 7.089002177403781
+    },
+    {
+      "type": "footstep",
+      "time": 12.58333333333326
+    },
+    {
+      "type": "contact",
+      "time": 12.924999999999907,
+      "body": "listener-cube-a",
+      "speed": 5.391229623962558
+    },
+    {
+      "type": "footstep",
+      "time": 13.008333333333235
+    },
+    {
+      "type": "contact",
+      "time": 13.199999999999891,
+      "body": "listener-cube-a",
+      "speed": 4.1767385277156
+    },
+    {
+      "type": "contact",
+      "time": 13.374999999999881,
+      "body": "listener-cube-a",
+      "speed": 2.47144545598718
+    },
+    {
+      "type": "footstep",
+      "time": 13.433333333333211
+    }
+  ],
+  "final": {
+    "room": "chamber-47",
+    "number": 47,
+    "mission": "ENTRY told me to keep its walking hatch open while I bring a cube to its receiving bay.",
+    "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+    "player": {
+      "position": [
+        -5.035236358642578,
+        0.8649858832359314,
+        1.9040048122406006
+      ],
+      "velocity": [
+        -1.660847649582294e-18,
+        0,
+        -4.5250579888724794e-18
+      ],
+      "yaw": 0.3516842778716988,
+      "pitch": 0,
+      "grounded": true,
+      "crossings": 3
+    },
+    "portals": [
+      {
+        "surface": "listener-source",
+        "position": [
+          0,
+          1.55,
+          13.959999999999999
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ]
+      },
+      {
+        "surface": "listener-return",
+        "position": [
+          0.55,
+          1.55,
+          4.94
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ]
+      }
+    ],
+    "crates": [
+      {
+        "id": "listener-cube-a",
+        "position": [
+          -10.669232368469238,
+          0.5498899817466736,
+          6.601982116699219
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0.11691533774137497,
+          -0.11691446602344513,
+          0.6973759531974792,
+          -0.6973727345466614
+        ],
+        "angularVelocity": [
+          0,
+          0,
+          0
+        ],
+        "held": false,
+        "crossings": 1
+      },
+      {
+        "id": "listener-cube-b",
+        "position": [
+          -5.2945356369018555,
+          1.0146833658218384,
+          1.3917683362960815
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          1.99414273538423e-7,
+          3.891996534083342e-12,
+          -2.268262875304572e-7,
+          1
+        ],
+        "angularVelocity": [
+          0,
+          0,
+          0
+        ],
+        "held": true,
+        "crossings": 1
+      }
+    ],
+    "pads": [
+      {
+        "id": "listener-access",
+        "position": [
+          -5,
+          0.14,
+          6
+        ],
+        "pressed": false,
+        "crate": null
+      },
+      {
+        "id": "listener-entry-receipt",
+        "position": [
+          -5,
+          0.14,
+          -4
+        ],
+        "pressed": false,
+        "crate": null
+      },
+      {
+        "id": "listener-freight-receipt",
+        "position": [
+          5,
+          0,
+          -1.4
+        ],
+        "pressed": false,
+        "crate": null
+      }
+    ],
+    "devices": [
+      {
+        "id": "entry-door",
+        "kind": "shutter",
+        "label": "ENTRY",
+        "position": [
+          -12.12,
+          1.5,
+          -7
+        ],
+        "size": [
+          0.3,
+          3,
+          3.2
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "freight-door",
+        "kind": "shutter",
+        "label": "FREIGHT",
+        "position": [
+          12.12,
+          3.9,
+          -7
+        ],
+        "size": [
+          0.3,
+          3,
+          3.2
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "listener-entry-hatch",
+        "kind": "shutter",
+        "label": "ENTRY",
+        "position": [
+          -5,
+          1.5,
+          0.68
+        ],
+        "size": [
+          2.8,
+          3,
+          0.3
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      },
+      {
+        "id": "listener-stair-gate",
+        "kind": "shutter",
+        "label": "FREIGHT STAIRS",
+        "position": [
+          10.5,
+          1.5,
+          7
+        ],
+        "size": [
+          2.8,
+          3,
+          0.3
+        ],
+        "active": false,
+        "progress": 0,
+        "choice": 0,
+        "angle": 0,
+        "powered": null,
+        "blocked": false
+      }
+    ],
+    "panels": [
+      {
+        "id": "listener-source",
+        "position": [
+          0,
+          1.75,
+          13.985
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "width": 5,
+        "height": 3.5
+      },
+      {
+        "id": "listener-return",
+        "position": [
+          0,
+          1.75,
+          4.915
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "width": 3.5,
+        "height": 3.5
+      }
+    ],
+    "exits": [
+      {
+        "id": "entry-exit",
+        "label": "EXIT",
+        "position": [
+          -14.489999999999998,
+          1.5,
+          -7
+        ],
+        "size": [
+          3.7799999999999994,
+          3,
+          3.16
+        ]
+      },
+      {
+        "id": "freight-exit",
+        "label": "EXIT",
+        "position": [
+          14.489999999999998,
+          3.9,
+          -7
+        ],
+        "size": [
+          3.7799999999999994,
+          3,
+          3.16
+        ]
+      }
+    ],
+    "result": null,
+    "held": "listener-cube-b",
+    "holdSpaceTransform": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "launchUsed": false,
+    "respawns": 0,
+    "beams": {},
+    "signals": {
+      "listener-access": false,
+      "listener-entry-receipt": false,
+      "listener-freight-receipt": false,
+      "closed:entry-door": true,
+      "clear:entry-door": false,
+      "safety:entry-door": false,
+      "door-safety": false,
+      "moving:entry-door": false,
+      "closed:freight-door": true,
+      "clear:freight-door": false,
+      "safety:freight-door": false,
+      "moving:freight-door": false,
+      "closed:listener-entry-hatch": true,
+      "clear:listener-entry-hatch": false,
+      "safety:listener-entry-hatch": false,
+      "moving:listener-entry-hatch": false,
+      "closed:listener-stair-gate": true,
+      "clear:listener-stair-gate": false,
+      "safety:listener-stair-gate": false,
+      "moving:listener-stair-gate": false
+    },
+    "journal": null,
+    "events": [
+      {
+        "type": "footstep",
+        "time": 11192
+      },
+      {
+        "type": "enter",
+        "time": 11258,
+        "body": "player",
+        "from": 0,
+        "to": 1,
+        "fromSurface": "listener-source",
+        "toSurface": "listener-return",
+        "speed": 4.791480750613333,
+        "exitSpeed": 4.791480750613333,
+        "held": "listener-cube-b"
+      },
+      {
+        "type": "land",
+        "time": 11267
+      },
+      {
+        "type": "footstep",
+        "time": 11617
+      },
+      {
+        "type": "footstep",
+        "time": 12042
+      },
+      {
+        "type": "contact",
+        "time": 12192,
+        "body": "listener-cube-a",
+        "speed": 0.8863626552661271
+      },
+      {
+        "type": "shutter-close",
+        "time": 12258,
+        "id": "listener-entry-hatch"
+      },
+      {
+        "type": "button-release",
+        "time": 12258,
+        "pad": "listener-access",
+        "crate": "player"
+      },
+      {
+        "type": "contact",
+        "time": 12425,
+        "body": "listener-cube-a",
+        "speed": 8.132419826815372
+      },
+      {
+        "type": "contact",
+        "time": 12558,
+        "body": "listener-cube-a",
+        "speed": 7.089002177403781
+      },
+      {
+        "type": "footstep",
+        "time": 12583
+      },
+      {
+        "type": "contact",
+        "time": 12925,
+        "body": "listener-cube-a",
+        "speed": 5.391229623962558
+      },
+      {
+        "type": "footstep",
+        "time": 13008
+      },
+      {
+        "type": "contact",
+        "time": 13200,
+        "body": "listener-cube-a",
+        "speed": 4.1767385277156
+      },
+      {
+        "type": "contact",
+        "time": 13375,
+        "body": "listener-cube-a",
+        "speed": 2.47144545598718
+      },
+      {
+        "type": "footstep",
+        "time": 13433
+      }
+    ]
+  }
+}

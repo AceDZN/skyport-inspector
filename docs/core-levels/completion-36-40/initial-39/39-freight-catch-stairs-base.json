@@ -1,0 +1,1805 @@
+{
+  "scope": "Unregistered authored-spawn native input path only. No actor/cargo/machine/history/save setters, resets or browser/completion claims. Native portal rays ignore glass; real visual framing remains browser-pending.",
+  "number": 39,
+  "contrast": false,
+  "error": null,
+  "sources": {
+    "src/core/levels/completion.ts": "a3b2ec6095d526621042df9eac59187110e5ceb216d7d65bc2144af0e9319a18",
+    "src/core/levels/completion-english.ts": "f40e47dae8026d4fab402db5ce72f85534e43ec9e11a6a77dbcaa4c62a28f563",
+    "src/core/level.ts": "4dc6e0989e9a3ebe3a22f4a115ac5116073fec2e2d7d8777ff76f81f7b9db272",
+    "src/core/world.ts": "054fe818b86b3eda9d17d240b1f0aeebaa960aff1afe4669003df8131a60af23",
+    "src/core/machine-journal.ts": "b400ede48dd62294f3a212e504495a50f8ca2db93dc4efb4f5d66e6962108de1",
+    "src/systems.ts": "13d3dbf57ced0b8d18b499762d60282a82686cbc698f972c55dbff0c6b0ea67b",
+    "tests/core-completion-routes.test.ts": "dd7cd20b882a120bd455c5952a41eec6390842a5ec163072bf3da41b941d43d3",
+    "tests/helpers/completion-route.ts": "724682acd23af480578a321cc7503881210a358629a614c117e0970b2fbfeb1c"
+  },
+  "ridingFrames": {},
+  "events": [
+    {
+      "type": "land"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "land"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "lift-motor",
+      "id": "beam-freight"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "lift-arrival",
+      "id": "beam-freight",
+      "value": "upper"
+    },
+    {
+      "type": "footstep"
+    }
+  ],
+  "checkpoints": [
+    {
+      "label": "actual-authored-spawn",
+      "state": {
+        "room": "chamber-39",
+        "number": 39,
+        "mission": "Complete the receiver connection. Clear the beam and leave the cargo on RELEASE before taking the gallery lift.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            3.000000476837158,
+            0.8642235994338989,
+            12
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [
+          {
+            "id": "connection-cube",
+            "position": [
+              -8.000004768371582,
+              0.5495624542236328,
+              -6.000030040740967
+            ],
+            "velocity": [
+              -0.000009878583114186767,
+              0.0000012551789723147522,
+              -0.000011121777788503096
+            ],
+            "rotation": [
+              0.0000028086662950954633,
+              2.0129096306442662e-11,
+              -0.000003004613063239958,
+              1
+            ],
+            "angularVelocity": [
+              -0.000020115578081458807,
+              5.406587178825861e-13,
+              0.000017867054339149036
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "release-pressure",
+            "position": [
+              7,
+              0.14,
+              -2
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "service-pressure",
+            "position": [
+              7,
+              0.14,
+              8
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "inspection-door",
+            "kind": "shutter",
+            "label": "INSPECTION",
+            "position": [
+              -11.12,
+              1.5,
+              8
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "connection-gallery-door",
+            "kind": "shutter",
+            "label": "GALLERY",
+            "position": [
+              6,
+              6.1,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "beam-freight",
+            "kind": "moving-platform",
+            "label": "BEAM FREIGHT",
+            "position": [
+              -8,
+              -0.2,
+              -6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "WEST",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "connection-lift",
+            "kind": "lift",
+            "label": "GALLERY LIFT",
+            "position": [
+              6,
+              -0.2,
+              -10
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "LOADING",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "connection-source",
+            "position": [
+              10.985,
+              1.75,
+              10
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          },
+          {
+            "id": "connection-return",
+            "position": [
+              -10.985,
+              1.75,
+              -6
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "inspection-exit",
+            "label": "EXIT",
+            "position": [
+              -13.39,
+              1.5,
+              8
+            ],
+            "size": [
+              3.58,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "gallery-exit",
+            "label": "EXIT",
+            "position": [
+              6,
+              6.1,
+              -16.29
+            ],
+            "size": [
+              3.16,
+              3,
+              3.380000000000001
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "connection-emitter": {
+            "segments": [
+              {
+                "from": [
+                  7,
+                  0.9,
+                  10
+                ],
+                "to": [
+                  10.999999761581421,
+                  0.9,
+                  10
+                ]
+              }
+            ],
+            "stop": "obstacle",
+            "obstacle": "connection-east",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "release-pressure": false,
+          "service-pressure": false,
+          "closed:inspection-door": true,
+          "clear:inspection-door": false,
+          "safety:inspection-door": false,
+          "door-safety": false,
+          "moving:inspection-door": false,
+          "closed:connection-gallery-door": true,
+          "clear:connection-gallery-door": false,
+          "safety:connection-gallery-door": false,
+          "moving:connection-gallery-door": false,
+          "moving:beam-freight": false,
+          "at:beam-freight:WEST": true,
+          "at:beam-freight:COLLECTION": false,
+          "moving:connection-lift": false,
+          "at:connection-lift:LOADING": true,
+          "at:connection-lift:GALLERY": false,
+          "connection-light": false
+        },
+        "journal": {
+          "reports": [
+            {
+              "id": "receiver-connected",
+              "status": "NOT YET OBSERVED",
+              "text": "The receiver has not received light yet.",
+              "observedAt": null,
+              "pastText": null
+            },
+            {
+              "id": "release-contact",
+              "status": "NOT YET OBSERVED",
+              "text": "The RELEASE plate has not been pressed yet.",
+              "observedAt": null,
+              "pastText": null
+            },
+            {
+              "id": "gallery-arrival",
+              "status": "NOT YET OBSERVED",
+              "text": "The lift has not reached GALLERY yet.",
+              "observedAt": null,
+              "pastText": null
+            }
+          ],
+          "attempt": 1,
+          "rows": [],
+          "truncated": false,
+          "now": [
+            {
+              "id": "connection-light",
+              "label": "RECEIVER",
+              "kind": "light",
+              "state": "DARK"
+            },
+            {
+              "id": "release-pressure",
+              "label": "RELEASE",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "service-pressure",
+              "label": "SERVICE",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "beam-freight",
+              "label": "BEAM FREIGHT",
+              "kind": "dock",
+              "state": "AT WEST"
+            },
+            {
+              "id": "connection-lift",
+              "label": "GALLERY LIFT",
+              "kind": "dock",
+              "state": "AT LOADING"
+            },
+            {
+              "id": "connection-gallery-door",
+              "label": "GALLERY DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            },
+            {
+              "id": "inspection-door",
+              "label": "INSPECTION",
+              "kind": "shutter",
+              "state": "CLOSED"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          }
+        ]
+      }
+    },
+    {
+      "label": "actual-connection-pocket-catch",
+      "state": {
+        "room": "chamber-39",
+        "number": 39,
+        "mission": "Complete the receiver connection. Clear the beam and leave the cargo on RELEASE before taking the gallery lift.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -5.774690628051758,
+            -3.5348997116088867,
+            -6.100551605224609
+          ],
+          "velocity": [
+            -4.795292686230631,
+            0,
+            -0.21293348075710497
+          ],
+          "yaw": 1.5236836581979818,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [
+          {
+            "id": "connection-cube",
+            "position": [
+              -8.000004768371582,
+              0.5495546460151672,
+              -6.000030040740967
+            ],
+            "velocity": [
+              -0.000005284281087369891,
+              -8.001372293620079e-7,
+              -0.000004466525751922745
+            ],
+            "rotation": [
+              3.2517391446162947e-7,
+              2.032061845180788e-11,
+              -4.0646253296472423e-7,
+              1
+            ],
+            "angularVelocity": [
+              -0.000008078513019427191,
+              9.161534378354652e-13,
+              0.0000095575705927331
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "release-pressure",
+            "position": [
+              7,
+              0.14,
+              -2
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "service-pressure",
+            "position": [
+              7,
+              0.14,
+              8
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "inspection-door",
+            "kind": "shutter",
+            "label": "INSPECTION",
+            "position": [
+              -11.12,
+              1.5,
+              8
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "connection-gallery-door",
+            "kind": "shutter",
+            "label": "GALLERY",
+            "position": [
+              6,
+              6.1,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "beam-freight",
+            "kind": "moving-platform",
+            "label": "BEAM FREIGHT",
+            "position": [
+              -8,
+              -0.2,
+              -6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "WEST",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "connection-lift",
+            "kind": "lift",
+            "label": "GALLERY LIFT",
+            "position": [
+              6,
+              -0.2,
+              -10
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "LOADING",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "connection-source",
+            "position": [
+              10.985,
+              1.75,
+              10
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          },
+          {
+            "id": "connection-return",
+            "position": [
+              -10.985,
+              1.75,
+              -6
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "inspection-exit",
+            "label": "EXIT",
+            "position": [
+              -13.39,
+              1.5,
+              8
+            ],
+            "size": [
+              3.58,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "gallery-exit",
+            "label": "EXIT",
+            "position": [
+              6,
+              6.1,
+              -16.29
+            ],
+            "size": [
+              3.16,
+              3,
+              3.380000000000001
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "connection-emitter": {
+            "segments": [
+              {
+                "from": [
+                  7,
+                  0.9,
+                  10
+                ],
+                "to": [
+                  10.999999761581421,
+                  0.9,
+                  10
+                ]
+              }
+            ],
+            "stop": "obstacle",
+            "obstacle": "connection-east",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "release-pressure": false,
+          "service-pressure": false,
+          "closed:inspection-door": true,
+          "clear:inspection-door": false,
+          "safety:inspection-door": false,
+          "door-safety": false,
+          "moving:inspection-door": false,
+          "closed:connection-gallery-door": true,
+          "clear:connection-gallery-door": false,
+          "safety:connection-gallery-door": false,
+          "moving:connection-gallery-door": false,
+          "moving:beam-freight": false,
+          "at:beam-freight:WEST": true,
+          "at:beam-freight:COLLECTION": false,
+          "moving:connection-lift": false,
+          "at:connection-lift:LOADING": true,
+          "at:connection-lift:GALLERY": false,
+          "connection-light": false
+        },
+        "journal": {
+          "reports": [
+            {
+              "id": "receiver-connected",
+              "status": "NOT YET OBSERVED",
+              "text": "The receiver has not received light yet.",
+              "observedAt": null,
+              "pastText": null
+            },
+            {
+              "id": "release-contact",
+              "status": "NOT YET OBSERVED",
+              "text": "The RELEASE plate has not been pressed yet.",
+              "observedAt": null,
+              "pastText": null
+            },
+            {
+              "id": "gallery-arrival",
+              "status": "NOT YET OBSERVED",
+              "text": "The lift has not reached GALLERY yet.",
+              "observedAt": null,
+              "pastText": null
+            }
+          ],
+          "attempt": 1,
+          "rows": [],
+          "truncated": false,
+          "now": [
+            {
+              "id": "connection-light",
+              "label": "RECEIVER",
+              "kind": "light",
+              "state": "DARK"
+            },
+            {
+              "id": "release-pressure",
+              "label": "RELEASE",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "service-pressure",
+              "label": "SERVICE",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "beam-freight",
+              "label": "BEAM FREIGHT",
+              "kind": "dock",
+              "state": "AT WEST"
+            },
+            {
+              "id": "connection-lift",
+              "label": "GALLERY LIFT",
+              "kind": "dock",
+              "state": "AT LOADING"
+            },
+            {
+              "id": "connection-gallery-door",
+              "label": "GALLERY DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            },
+            {
+              "id": "inspection-door",
+              "label": "INSPECTION",
+              "kind": "shutter",
+              "state": "CLOSED"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 933
+          },
+          {
+            "type": "footstep",
+            "time": 1358
+          },
+          {
+            "type": "footstep",
+            "time": 1783
+          },
+          {
+            "type": "footstep",
+            "time": 2208
+          },
+          {
+            "type": "footstep",
+            "time": 2633
+          },
+          {
+            "type": "footstep",
+            "time": 3058
+          },
+          {
+            "type": "footstep",
+            "time": 3483
+          },
+          {
+            "type": "footstep",
+            "time": 3908
+          },
+          {
+            "type": "footstep",
+            "time": 4333
+          },
+          {
+            "type": "footstep",
+            "time": 4758
+          },
+          {
+            "type": "footstep",
+            "time": 5183
+          },
+          {
+            "type": "footstep",
+            "time": 5608
+          },
+          {
+            "type": "footstep",
+            "time": 6117
+          },
+          {
+            "type": "footstep",
+            "time": 6542
+          },
+          {
+            "type": "footstep",
+            "time": 6967
+          },
+          {
+            "type": "land",
+            "time": 7933
+          }
+        ]
+      }
+    },
+    {
+      "label": "actual-connection-south-bank-recovery",
+      "state": {
+        "room": "chamber-39",
+        "number": 39,
+        "mission": "Complete the receiver connection. Clear the beam and leave the cargo on RELEASE before taking the gallery lift.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -8.749710083007812,
+            0.8648034930229187,
+            10.067888259887695
+          ],
+          "velocity": [
+            0.002867260062338524,
+            0,
+            0.6827544134827995
+          ],
+          "yaw": -3.1374180178555497,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [
+          {
+            "id": "connection-cube",
+            "position": [
+              -4.000004768371582,
+              0.5495505332946777,
+              -6.000030040740967
+            ],
+            "velocity": [
+              0.000030390016036108136,
+              0.0000204638945433544,
+              0.000009929162843036465
+            ],
+            "rotation": [
+              -7.583401497868181e-7,
+              -5.190436969115808e-10,
+              -0.00002172951826651115,
+              1
+            ],
+            "angularVelocity": [
+              0.000017958740500034764,
+              -2.4878669003386422e-12,
+              -0.000054966003517620265
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "release-pressure",
+            "position": [
+              7,
+              0.14,
+              -2
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "service-pressure",
+            "position": [
+              7,
+              0.14,
+              8
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "inspection-door",
+            "kind": "shutter",
+            "label": "INSPECTION",
+            "position": [
+              -11.12,
+              1.5,
+              8
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "connection-gallery-door",
+            "kind": "shutter",
+            "label": "GALLERY",
+            "position": [
+              6,
+              6.1,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "beam-freight",
+            "kind": "moving-platform",
+            "label": "BEAM FREIGHT",
+            "position": [
+              -4,
+              -0.2,
+              -6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": "WEST",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "connection-lift",
+            "kind": "lift",
+            "label": "GALLERY LIFT",
+            "position": [
+              6,
+              -0.2,
+              -10
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "LOADING",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "connection-source",
+            "position": [
+              10.985,
+              1.75,
+              10
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          },
+          {
+            "id": "connection-return",
+            "position": [
+              -10.985,
+              1.75,
+              -6
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "inspection-exit",
+            "label": "EXIT",
+            "position": [
+              -13.39,
+              1.5,
+              8
+            ],
+            "size": [
+              3.58,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "gallery-exit",
+            "label": "EXIT",
+            "position": [
+              6,
+              6.1,
+              -16.29
+            ],
+            "size": [
+              3.16,
+              3,
+              3.380000000000001
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "connection-emitter": {
+            "segments": [
+              {
+                "from": [
+                  7,
+                  0.9,
+                  10
+                ],
+                "to": [
+                  10.999999761581421,
+                  0.9,
+                  10
+                ]
+              }
+            ],
+            "stop": "obstacle",
+            "obstacle": "connection-east",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "release-pressure": false,
+          "service-pressure": false,
+          "closed:inspection-door": true,
+          "clear:inspection-door": false,
+          "safety:inspection-door": false,
+          "door-safety": false,
+          "moving:inspection-door": false,
+          "closed:connection-gallery-door": true,
+          "clear:connection-gallery-door": false,
+          "safety:connection-gallery-door": false,
+          "moving:connection-gallery-door": false,
+          "moving:beam-freight": false,
+          "at:beam-freight:WEST": false,
+          "at:beam-freight:COLLECTION": true,
+          "moving:connection-lift": false,
+          "at:connection-lift:LOADING": true,
+          "at:connection-lift:GALLERY": false,
+          "connection-light": false
+        },
+        "journal": {
+          "reports": [
+            {
+              "id": "receiver-connected",
+              "status": "NOT YET OBSERVED",
+              "text": "The receiver has not received light yet.",
+              "observedAt": null,
+              "pastText": null
+            },
+            {
+              "id": "release-contact",
+              "status": "NOT YET OBSERVED",
+              "text": "The RELEASE plate has not been pressed yet.",
+              "observedAt": null,
+              "pastText": null
+            },
+            {
+              "id": "gallery-arrival",
+              "status": "NOT YET OBSERVED",
+              "text": "The lift has not reached GALLERY yet.",
+              "observedAt": null,
+              "pastText": null
+            }
+          ],
+          "attempt": 1,
+          "rows": [
+            {
+              "sequence": 1,
+              "time": 13.008333333333235,
+              "text": "BEAM FREIGHT arrived at COLLECTION."
+            }
+          ],
+          "truncated": false,
+          "now": [
+            {
+              "id": "connection-light",
+              "label": "RECEIVER",
+              "kind": "light",
+              "state": "DARK"
+            },
+            {
+              "id": "release-pressure",
+              "label": "RELEASE",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "service-pressure",
+              "label": "SERVICE",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "beam-freight",
+              "label": "BEAM FREIGHT",
+              "kind": "dock",
+              "state": "AT COLLECTION"
+            },
+            {
+              "id": "connection-lift",
+              "label": "GALLERY LIFT",
+              "kind": "dock",
+              "state": "AT LOADING"
+            },
+            {
+              "id": "connection-gallery-door",
+              "label": "GALLERY DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            },
+            {
+              "id": "inspection-door",
+              "label": "INSPECTION",
+              "kind": "shutter",
+              "state": "CLOSED"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "land",
+            "time": 7933
+          },
+          {
+            "type": "footstep",
+            "time": 7942
+          },
+          {
+            "type": "lift-motor",
+            "time": 8008,
+            "id": "beam-freight"
+          },
+          {
+            "type": "footstep",
+            "time": 8408
+          },
+          {
+            "type": "footstep",
+            "time": 8833
+          },
+          {
+            "type": "footstep",
+            "time": 9333
+          },
+          {
+            "type": "footstep",
+            "time": 9758
+          },
+          {
+            "type": "footstep",
+            "time": 10183
+          },
+          {
+            "type": "footstep",
+            "time": 10608
+          },
+          {
+            "type": "footstep",
+            "time": 11033
+          },
+          {
+            "type": "footstep",
+            "time": 11458
+          },
+          {
+            "type": "footstep",
+            "time": 11883
+          },
+          {
+            "type": "footstep",
+            "time": 12308
+          },
+          {
+            "type": "footstep",
+            "time": 12733
+          },
+          {
+            "type": "lift-arrival",
+            "time": 13008,
+            "id": "beam-freight",
+            "value": "upper"
+          },
+          {
+            "type": "footstep",
+            "time": 13158
+          }
+        ]
+      }
+    },
+    {
+      "label": "final",
+      "state": {
+        "room": "chamber-39",
+        "number": 39,
+        "mission": "Complete the receiver connection. Clear the beam and leave the cargo on RELEASE before taking the gallery lift.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -8.749710083007812,
+            0.8648034930229187,
+            10.067888259887695
+          ],
+          "velocity": [
+            0.002867260062338524,
+            0,
+            0.6827544134827995
+          ],
+          "yaw": -3.1374180178555497,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [
+          {
+            "id": "connection-cube",
+            "position": [
+              -4.000004768371582,
+              0.5495505332946777,
+              -6.000030040740967
+            ],
+            "velocity": [
+              0.000030390016036108136,
+              0.0000204638945433544,
+              0.000009929162843036465
+            ],
+            "rotation": [
+              -7.583401497868181e-7,
+              -5.190436969115808e-10,
+              -0.00002172951826651115,
+              1
+            ],
+            "angularVelocity": [
+              0.000017958740500034764,
+              -2.4878669003386422e-12,
+              -0.000054966003517620265
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "release-pressure",
+            "position": [
+              7,
+              0.14,
+              -2
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "service-pressure",
+            "position": [
+              7,
+              0.14,
+              8
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "inspection-door",
+            "kind": "shutter",
+            "label": "INSPECTION",
+            "position": [
+              -11.12,
+              1.5,
+              8
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "connection-gallery-door",
+            "kind": "shutter",
+            "label": "GALLERY",
+            "position": [
+              6,
+              6.1,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "beam-freight",
+            "kind": "moving-platform",
+            "label": "BEAM FREIGHT",
+            "position": [
+              -4,
+              -0.2,
+              -6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": "WEST",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "connection-lift",
+            "kind": "lift",
+            "label": "GALLERY LIFT",
+            "position": [
+              6,
+              -0.2,
+              -10
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "LOADING",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "connection-source",
+            "position": [
+              10.985,
+              1.75,
+              10
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          },
+          {
+            "id": "connection-return",
+            "position": [
+              -10.985,
+              1.75,
+              -6
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "inspection-exit",
+            "label": "EXIT",
+            "position": [
+              -13.39,
+              1.5,
+              8
+            ],
+            "size": [
+              3.58,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "gallery-exit",
+            "label": "EXIT",
+            "position": [
+              6,
+              6.1,
+              -16.29
+            ],
+            "size": [
+              3.16,
+              3,
+              3.380000000000001
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "connection-emitter": {
+            "segments": [
+              {
+                "from": [
+                  7,
+                  0.9,
+                  10
+                ],
+                "to": [
+                  10.999999761581421,
+                  0.9,
+                  10
+                ]
+              }
+            ],
+            "stop": "obstacle",
+            "obstacle": "connection-east",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "release-pressure": false,
+          "service-pressure": false,
+          "closed:inspection-door": true,
+          "clear:inspection-door": false,
+          "safety:inspection-door": false,
+          "door-safety": false,
+          "moving:inspection-door": false,
+          "closed:connection-gallery-door": true,
+          "clear:connection-gallery-door": false,
+          "safety:connection-gallery-door": false,
+          "moving:connection-gallery-door": false,
+          "moving:beam-freight": false,
+          "at:beam-freight:WEST": false,
+          "at:beam-freight:COLLECTION": true,
+          "moving:connection-lift": false,
+          "at:connection-lift:LOADING": true,
+          "at:connection-lift:GALLERY": false,
+          "connection-light": false
+        },
+        "journal": {
+          "reports": [
+            {
+              "id": "receiver-connected",
+              "status": "NOT YET OBSERVED",
+              "text": "The receiver has not received light yet.",
+              "observedAt": null,
+              "pastText": null
+            },
+            {
+              "id": "release-contact",
+              "status": "NOT YET OBSERVED",
+              "text": "The RELEASE plate has not been pressed yet.",
+              "observedAt": null,
+              "pastText": null
+            },
+            {
+              "id": "gallery-arrival",
+              "status": "NOT YET OBSERVED",
+              "text": "The lift has not reached GALLERY yet.",
+              "observedAt": null,
+              "pastText": null
+            }
+          ],
+          "attempt": 1,
+          "rows": [
+            {
+              "sequence": 1,
+              "time": 13.008333333333235,
+              "text": "BEAM FREIGHT arrived at COLLECTION."
+            }
+          ],
+          "truncated": false,
+          "now": [
+            {
+              "id": "connection-light",
+              "label": "RECEIVER",
+              "kind": "light",
+              "state": "DARK"
+            },
+            {
+              "id": "release-pressure",
+              "label": "RELEASE",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "service-pressure",
+              "label": "SERVICE",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "beam-freight",
+              "label": "BEAM FREIGHT",
+              "kind": "dock",
+              "state": "AT COLLECTION"
+            },
+            {
+              "id": "connection-lift",
+              "label": "GALLERY LIFT",
+              "kind": "dock",
+              "state": "AT LOADING"
+            },
+            {
+              "id": "connection-gallery-door",
+              "label": "GALLERY DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            },
+            {
+              "id": "inspection-door",
+              "label": "INSPECTION",
+              "kind": "shutter",
+              "state": "CLOSED"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "land",
+            "time": 7933
+          },
+          {
+            "type": "footstep",
+            "time": 7942
+          },
+          {
+            "type": "lift-motor",
+            "time": 8008,
+            "id": "beam-freight"
+          },
+          {
+            "type": "footstep",
+            "time": 8408
+          },
+          {
+            "type": "footstep",
+            "time": 8833
+          },
+          {
+            "type": "footstep",
+            "time": 9333
+          },
+          {
+            "type": "footstep",
+            "time": 9758
+          },
+          {
+            "type": "footstep",
+            "time": 10183
+          },
+          {
+            "type": "footstep",
+            "time": 10608
+          },
+          {
+            "type": "footstep",
+            "time": 11033
+          },
+          {
+            "type": "footstep",
+            "time": 11458
+          },
+          {
+            "type": "footstep",
+            "time": 11883
+          },
+          {
+            "type": "footstep",
+            "time": 12308
+          },
+          {
+            "type": "footstep",
+            "time": 12733
+          },
+          {
+            "type": "lift-arrival",
+            "time": 13008,
+            "id": "beam-freight",
+            "value": "upper"
+          },
+          {
+            "type": "footstep",
+            "time": 13158
+          }
+        ]
+      }
+    }
+  ]
+}

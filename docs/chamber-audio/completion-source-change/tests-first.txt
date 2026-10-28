@@ -1,0 +1,14 @@
+✔ audio completion waits for actual source end while room cues stay paused (1.299083ms)
+✔ audio early Next or Restart cancels completion before idempotent start (0.573459ms)
+✔ audio ordinary pause or Home immediately cancels a completion source (0.795084ms)
+✔ audio completion obeys persisted master and SFX gains without unmuting room music (1.012625ms)
+✔ audio missing completion buffer falls back to a normal silent pause (0.53775ms)
+✔ audio stale completion callback cannot suspend or clear a newer completion (0.195042ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 339.267458

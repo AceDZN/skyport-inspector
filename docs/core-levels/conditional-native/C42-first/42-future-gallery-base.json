@@ -1,0 +1,3381 @@
+{
+  "scope": "Unregistered authored-spawn native route. Camera/WASD/E/ray-clear portals only. Decorative visibility, realtime mouse and earned save remain pending.",
+  "number": 42,
+  "contrast": false,
+  "error": null,
+  "inputs": [
+    {
+      "action": "walk",
+      "x": 7,
+      "z": 1
+    },
+    {
+      "action": "aim",
+      "target": [
+        13.985,
+        1.55,
+        8.55
+      ]
+    },
+    {
+      "action": "place",
+      "index": 0
+    },
+    {
+      "action": "aim",
+      "target": [
+        0.55,
+        1.55,
+        3.985
+      ]
+    },
+    {
+      "action": "place",
+      "index": 1
+    },
+    {
+      "action": "walk",
+      "x": 7,
+      "z": -0.5
+    },
+    {
+      "action": "walk",
+      "x": 7,
+      "z": -4.5
+    },
+    {
+      "action": "walk",
+      "x": 7,
+      "z": -7.5
+    },
+    {
+      "action": "walk",
+      "x": 7,
+      "z": -12
+    },
+    {
+      "action": "walk",
+      "x": 7,
+      "z": -19
+    }
+  ],
+  "ridingFrames": {
+    "arrival-gallery-lift": 420
+  },
+  "maxDeviceStep": {
+    "arrival-gallery-hatch": 0.036458333333333925,
+    "arrival-gallery-lift": 0.010000000000001563,
+    "arrival-gallery-dock": 0.036458333333333925,
+    "arrival-gallery-door": 0.036458333333333925,
+    "arrival-service-hatch": 0,
+    "arrival-service-carrier": 0,
+    "arrival-service-dock": 0,
+    "arrival-service-door": 0
+  },
+  "events": [
+    {
+      "type": "land",
+      "time": 0.008333333333333333
+    },
+    {
+      "type": "footstep",
+      "time": 0.4250000000000005
+    },
+    {
+      "type": "footstep",
+      "time": 0.8499999999999994
+    },
+    {
+      "type": "footstep",
+      "time": 1.274999999999998
+    },
+    {
+      "type": "footstep",
+      "time": 1.6999999999999964
+    },
+    {
+      "type": "footstep",
+      "time": 2.124999999999995
+    },
+    {
+      "type": "portalA",
+      "time": 2.59166666666666,
+      "surface": "arrival-source",
+      "point": [
+        13.959999999999999,
+        1.55,
+        8.55
+      ]
+    },
+    {
+      "type": "portalB",
+      "time": 2.5999999999999934,
+      "surface": "gallery-return",
+      "point": [
+        0.55,
+        1.55,
+        3.96
+      ]
+    },
+    {
+      "type": "receiver-power",
+      "time": 2.6083333333333267,
+      "id": "gallery-light"
+    },
+    {
+      "type": "shutter-open",
+      "time": 2.6083333333333267,
+      "id": "arrival-gallery-hatch"
+    },
+    {
+      "type": "shutter-open",
+      "time": 2.6083333333333267,
+      "id": "arrival-gallery-door"
+    },
+    {
+      "type": "footstep",
+      "time": 3.6166666666666565
+    },
+    {
+      "type": "footstep",
+      "time": 4.066666666666658
+    },
+    {
+      "type": "footstep",
+      "time": 4.49166666666668
+    },
+    {
+      "type": "footstep",
+      "time": 4.916666666666701
+    },
+    {
+      "type": "lift-motor",
+      "time": 8.608333333333485,
+      "id": "arrival-gallery-lift"
+    },
+    {
+      "type": "lift-arrival",
+      "time": 12.108333333333286,
+      "id": "arrival-gallery-lift",
+      "value": "UPPER"
+    },
+    {
+      "type": "shutter-open",
+      "time": 12.11666666666662,
+      "id": "arrival-gallery-dock"
+    },
+    {
+      "type": "lift-motor",
+      "time": 18.108333333332947,
+      "id": "arrival-gallery-lift"
+    },
+    {
+      "type": "shutter-close",
+      "time": 18.11666666666628,
+      "id": "arrival-gallery-dock"
+    },
+    {
+      "type": "lift-arrival",
+      "time": 21.608333333332748,
+      "id": "arrival-gallery-lift",
+      "value": "base"
+    },
+    {
+      "type": "footstep",
+      "time": 21.61666666666608
+    },
+    {
+      "type": "footstep",
+      "time": 22.041666666666057
+    },
+    {
+      "type": "lift-motor",
+      "time": 27.608333333332407,
+      "id": "arrival-gallery-lift"
+    },
+    {
+      "type": "lift-arrival",
+      "time": 31.108333333332208,
+      "id": "arrival-gallery-lift",
+      "value": "UPPER"
+    },
+    {
+      "type": "shutter-open",
+      "time": 31.11666666666554,
+      "id": "arrival-gallery-dock"
+    },
+    {
+      "type": "footstep",
+      "time": 31.916666666665495
+    },
+    {
+      "type": "footstep",
+      "time": 32.341666666665475
+    },
+    {
+      "type": "footstep",
+      "time": 32.76666666666545
+    },
+    {
+      "type": "footstep",
+      "time": 33.19166666666543
+    },
+    {
+      "type": "footstep",
+      "time": 33.6166666666654
+    },
+    {
+      "type": "complete",
+      "time": 33.99166666666538,
+      "chamber": 42
+    }
+  ],
+  "checkpoints": [
+    {
+      "label": "actual-authored-spawn",
+      "state": {
+        "room": "chamber-42",
+        "number": 42,
+        "mission": "If you keep the gallery receiver lit, the lift will reach its upper dock. Wait for it, then use the gallery.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            6.999996185302734,
+            0.8642097115516663,
+            11.000000953674316
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "arrival-gallery-hatch",
+            "kind": "shutter",
+            "label": "GALLERY ACCESS",
+            "position": [
+              7,
+              1.5,
+              -2
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-gallery-lift",
+            "kind": "lift",
+            "label": "GALLERY LIFT",
+            "position": [
+              7,
+              -0.2,
+              -8
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "BASE",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-gallery-dock",
+            "kind": "shutter",
+            "label": "UPPER DOCK",
+            "position": [
+              7,
+              5.7,
+              -10.72
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-gallery-door",
+            "kind": "shutter",
+            "label": "GALLERY EXIT",
+            "position": [
+              7,
+              5.7,
+              -16.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-service-hatch",
+            "kind": "shutter",
+            "label": "SERVICE ACCESS",
+            "position": [
+              -2,
+              1.5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-service-carrier",
+            "kind": "moving-platform",
+            "label": "SERVICE CARRIER",
+            "position": [
+              -6,
+              -0.2,
+              7
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "NEAR",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-service-dock",
+            "kind": "shutter",
+            "label": "SERVICE DOCK",
+            "position": [
+              -16.72,
+              1.5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-service-door",
+            "kind": "shutter",
+            "label": "SERVICE EXIT",
+            "position": [
+              -20.12,
+              1.5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "arrival-source",
+            "position": [
+              13.985,
+              1.75,
+              8.55
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "gallery-return",
+            "position": [
+              0.55,
+              1.75,
+              3.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 2.7,
+            "height": 3.5
+          },
+          {
+            "id": "service-return",
+            "position": [
+              3.985,
+              1.75,
+              -0.55
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 2.7,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "gallery-exit",
+            "label": "EXIT",
+            "position": [
+              7,
+              5.7,
+              -18.490000000000002
+            ],
+            "size": [
+              2.7600000000000007,
+              3,
+              3.7799999999999976
+            ]
+          },
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -22.490000000000002,
+              1.5,
+              7
+            ],
+            "size": [
+              3.7799999999999976,
+              3,
+              2.7600000000000007
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "arrival-emitter": {
+            "segments": [
+              {
+                "from": [
+                  9,
+                  0.9,
+                  8
+                ],
+                "to": [
+                  14,
+                  0.9,
+                  8
+                ]
+              }
+            ],
+            "stop": "obstacle",
+            "obstacle": "arrival-east",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "closed:arrival-gallery-hatch": true,
+          "clear:arrival-gallery-hatch": false,
+          "safety:arrival-gallery-hatch": false,
+          "door-safety": false,
+          "moving:arrival-gallery-hatch": false,
+          "moving:arrival-gallery-lift": false,
+          "at:arrival-gallery-lift:BASE": true,
+          "at:arrival-gallery-lift:UPPER": false,
+          "closed:arrival-gallery-dock": true,
+          "clear:arrival-gallery-dock": false,
+          "safety:arrival-gallery-dock": false,
+          "moving:arrival-gallery-dock": false,
+          "closed:arrival-gallery-door": true,
+          "clear:arrival-gallery-door": false,
+          "safety:arrival-gallery-door": false,
+          "moving:arrival-gallery-door": false,
+          "closed:arrival-service-hatch": true,
+          "clear:arrival-service-hatch": false,
+          "safety:arrival-service-hatch": false,
+          "moving:arrival-service-hatch": false,
+          "moving:arrival-service-carrier": false,
+          "at:arrival-service-carrier:NEAR": true,
+          "at:arrival-service-carrier:SERVICE": false,
+          "closed:arrival-service-dock": true,
+          "clear:arrival-service-dock": false,
+          "safety:arrival-service-dock": false,
+          "moving:arrival-service-dock": false,
+          "closed:arrival-service-door": true,
+          "clear:arrival-service-door": false,
+          "safety:arrival-service-door": false,
+          "moving:arrival-service-door": false,
+          "gallery-light": false,
+          "service-light": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "arrival-foyer",
+          "normal": {
+            "x": -0.000050608592573553324,
+            "y": 1,
+            "z": -0.000008434765732090455
+          },
+          "witness": {
+            "x": 6.998143196105957,
+            "y": 0,
+            "z": 10.9989595413208
+          },
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": 0,
+            "y": -0.0011111111380159855,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-independent-gallery-optical-supply",
+      "state": {
+        "room": "chamber-42",
+        "number": 42,
+        "mission": "If you keep the gallery receiver lit, the lift will reach its upper dock. Wait for it, then use the gallery.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            7.000016689300537,
+            0.8642200827598572,
+            0.8626980781555176
+          ],
+          "velocity": [
+            6.954329445060328e-14,
+            0,
+            -1.0271504463740007e-9
+          ],
+          "yaw": 2.019616815690849,
+          "pitch": 0.004872707885010421,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "arrival-source",
+            "position": [
+              13.959999999999999,
+              1.55,
+              8.55
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "gallery-return",
+            "position": [
+              0.55,
+              1.55,
+              3.96
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "arrival-gallery-hatch",
+            "kind": "shutter",
+            "label": "GALLERY ACCESS",
+            "position": [
+              7,
+              5,
+              -2
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-gallery-lift",
+            "kind": "lift",
+            "label": "GALLERY LIFT",
+            "position": [
+              7,
+              -0.2,
+              -8
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "BASE",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-gallery-dock",
+            "kind": "shutter",
+            "label": "UPPER DOCK",
+            "position": [
+              7,
+              5.7,
+              -10.72
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-gallery-door",
+            "kind": "shutter",
+            "label": "GALLERY EXIT",
+            "position": [
+              7,
+              9.2,
+              -16.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-service-hatch",
+            "kind": "shutter",
+            "label": "SERVICE ACCESS",
+            "position": [
+              -2,
+              1.5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-service-carrier",
+            "kind": "moving-platform",
+            "label": "SERVICE CARRIER",
+            "position": [
+              -6,
+              -0.2,
+              7
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "NEAR",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-service-dock",
+            "kind": "shutter",
+            "label": "SERVICE DOCK",
+            "position": [
+              -16.72,
+              1.5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-service-door",
+            "kind": "shutter",
+            "label": "SERVICE EXIT",
+            "position": [
+              -20.12,
+              1.5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "arrival-source",
+            "position": [
+              13.985,
+              1.75,
+              8.55
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "gallery-return",
+            "position": [
+              0.55,
+              1.75,
+              3.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 2.7,
+            "height": 3.5
+          },
+          {
+            "id": "service-return",
+            "position": [
+              3.985,
+              1.75,
+              -0.55
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 2.7,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "gallery-exit",
+            "label": "EXIT",
+            "position": [
+              7,
+              5.7,
+              -18.490000000000002
+            ],
+            "size": [
+              2.7600000000000007,
+              3,
+              3.7799999999999976
+            ]
+          },
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -22.490000000000002,
+              1.5,
+              7
+            ],
+            "size": [
+              3.7799999999999976,
+              3,
+              2.7600000000000007
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "arrival-emitter": {
+            "segments": [
+              {
+                "from": [
+                  9,
+                  0.9,
+                  8
+                ],
+                "to": [
+                  13.959999999999999,
+                  0.9,
+                  8
+                ],
+                "portal": "0"
+              },
+              {
+                "from": [
+                  -6.661338147750939e-16,
+                  0.9,
+                  3.959
+                ],
+                "to": [
+                  -6.661338147750939e-16,
+                  0.9,
+                  -7.259999999999998
+                ]
+              }
+            ],
+            "stop": "receiver",
+            "receiver": "gallery-light",
+            "hops": 1
+          }
+        },
+        "signals": {
+          "closed:arrival-gallery-hatch": false,
+          "clear:arrival-gallery-hatch": true,
+          "safety:arrival-gallery-hatch": false,
+          "door-safety": false,
+          "moving:arrival-gallery-hatch": false,
+          "moving:arrival-gallery-lift": false,
+          "at:arrival-gallery-lift:BASE": true,
+          "at:arrival-gallery-lift:UPPER": false,
+          "closed:arrival-gallery-dock": true,
+          "clear:arrival-gallery-dock": false,
+          "safety:arrival-gallery-dock": false,
+          "moving:arrival-gallery-dock": false,
+          "closed:arrival-gallery-door": false,
+          "clear:arrival-gallery-door": true,
+          "safety:arrival-gallery-door": false,
+          "moving:arrival-gallery-door": false,
+          "closed:arrival-service-hatch": true,
+          "clear:arrival-service-hatch": false,
+          "safety:arrival-service-hatch": false,
+          "moving:arrival-service-hatch": false,
+          "moving:arrival-service-carrier": false,
+          "at:arrival-service-carrier:NEAR": true,
+          "at:arrival-service-carrier:SERVICE": false,
+          "closed:arrival-service-dock": true,
+          "clear:arrival-service-dock": false,
+          "safety:arrival-service-dock": false,
+          "moving:arrival-service-dock": false,
+          "closed:arrival-service-door": true,
+          "clear:arrival-service-door": false,
+          "safety:arrival-service-door": false,
+          "moving:arrival-service-door": false,
+          "gallery-light": true,
+          "service-light": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "footstep",
+            "time": 425
+          },
+          {
+            "type": "footstep",
+            "time": 850
+          },
+          {
+            "type": "footstep",
+            "time": 1275
+          },
+          {
+            "type": "footstep",
+            "time": 1700
+          },
+          {
+            "type": "footstep",
+            "time": 2125
+          },
+          {
+            "type": "portalA",
+            "time": 2592,
+            "surface": "arrival-source",
+            "point": [
+              13.959999999999999,
+              1.55,
+              8.55
+            ]
+          },
+          {
+            "type": "portalB",
+            "time": 2600,
+            "surface": "gallery-return",
+            "point": [
+              0.55,
+              1.55,
+              3.96
+            ]
+          },
+          {
+            "type": "receiver-power",
+            "time": 2608,
+            "id": "gallery-light"
+          },
+          {
+            "type": "shutter-open",
+            "time": 2608,
+            "id": "arrival-gallery-hatch"
+          },
+          {
+            "type": "shutter-open",
+            "time": 2608,
+            "id": "arrival-gallery-door"
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "arrival-foyer",
+          "normal": {
+            "x": 0,
+            "y": 1,
+            "z": -0.000004216850356897339
+          },
+          "witness": {
+            "x": 6.997977256774902,
+            "y": 0,
+            "z": 0.8626489639282227
+          },
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": 5.795274487754203e-16,
+            "y": -0.0011111111380159855,
+            "z": -8.559587066914176e-12
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-light-selection-before-predicted-upper-arrival",
+      "state": {
+        "room": "chamber-42",
+        "number": 42,
+        "mission": "If you keep the gallery receiver lit, the lift will reach its upper dock. Wait for it, then use the gallery.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            7.000016689300537,
+            0.8642200827598572,
+            0.8626980781555176
+          ],
+          "velocity": [
+            6.954329445060328e-14,
+            0,
+            -1.0271504463740007e-9
+          ],
+          "yaw": 2.019616815690849,
+          "pitch": 0.004872707885010421,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "arrival-source",
+            "position": [
+              13.959999999999999,
+              1.55,
+              8.55
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "gallery-return",
+            "position": [
+              0.55,
+              1.55,
+              3.96
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "arrival-gallery-hatch",
+            "kind": "shutter",
+            "label": "GALLERY ACCESS",
+            "position": [
+              7,
+              5,
+              -2
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-gallery-lift",
+            "kind": "lift",
+            "label": "GALLERY LIFT",
+            "position": [
+              7,
+              -0.2,
+              -8
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "BASE",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-gallery-dock",
+            "kind": "shutter",
+            "label": "UPPER DOCK",
+            "position": [
+              7,
+              5.7,
+              -10.72
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-gallery-door",
+            "kind": "shutter",
+            "label": "GALLERY EXIT",
+            "position": [
+              7,
+              9.2,
+              -16.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-service-hatch",
+            "kind": "shutter",
+            "label": "SERVICE ACCESS",
+            "position": [
+              -2,
+              1.5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-service-carrier",
+            "kind": "moving-platform",
+            "label": "SERVICE CARRIER",
+            "position": [
+              -6,
+              -0.2,
+              7
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "NEAR",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-service-dock",
+            "kind": "shutter",
+            "label": "SERVICE DOCK",
+            "position": [
+              -16.72,
+              1.5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-service-door",
+            "kind": "shutter",
+            "label": "SERVICE EXIT",
+            "position": [
+              -20.12,
+              1.5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "arrival-source",
+            "position": [
+              13.985,
+              1.75,
+              8.55
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "gallery-return",
+            "position": [
+              0.55,
+              1.75,
+              3.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 2.7,
+            "height": 3.5
+          },
+          {
+            "id": "service-return",
+            "position": [
+              3.985,
+              1.75,
+              -0.55
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 2.7,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "gallery-exit",
+            "label": "EXIT",
+            "position": [
+              7,
+              5.7,
+              -18.490000000000002
+            ],
+            "size": [
+              2.7600000000000007,
+              3,
+              3.7799999999999976
+            ]
+          },
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -22.490000000000002,
+              1.5,
+              7
+            ],
+            "size": [
+              3.7799999999999976,
+              3,
+              2.7600000000000007
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "arrival-emitter": {
+            "segments": [
+              {
+                "from": [
+                  9,
+                  0.9,
+                  8
+                ],
+                "to": [
+                  13.959999999999999,
+                  0.9,
+                  8
+                ],
+                "portal": "0"
+              },
+              {
+                "from": [
+                  -6.661338147750939e-16,
+                  0.9,
+                  3.959
+                ],
+                "to": [
+                  -6.661338147750939e-16,
+                  0.9,
+                  -7.259999999999998
+                ]
+              }
+            ],
+            "stop": "receiver",
+            "receiver": "gallery-light",
+            "hops": 1
+          }
+        },
+        "signals": {
+          "closed:arrival-gallery-hatch": false,
+          "clear:arrival-gallery-hatch": true,
+          "safety:arrival-gallery-hatch": false,
+          "door-safety": false,
+          "moving:arrival-gallery-hatch": false,
+          "moving:arrival-gallery-lift": false,
+          "at:arrival-gallery-lift:BASE": true,
+          "at:arrival-gallery-lift:UPPER": false,
+          "closed:arrival-gallery-dock": true,
+          "clear:arrival-gallery-dock": false,
+          "safety:arrival-gallery-dock": false,
+          "moving:arrival-gallery-dock": false,
+          "closed:arrival-gallery-door": false,
+          "clear:arrival-gallery-door": true,
+          "safety:arrival-gallery-door": false,
+          "moving:arrival-gallery-door": false,
+          "closed:arrival-service-hatch": true,
+          "clear:arrival-service-hatch": false,
+          "safety:arrival-service-hatch": false,
+          "moving:arrival-service-hatch": false,
+          "moving:arrival-service-carrier": false,
+          "at:arrival-service-carrier:NEAR": true,
+          "at:arrival-service-carrier:SERVICE": false,
+          "closed:arrival-service-dock": true,
+          "clear:arrival-service-dock": false,
+          "safety:arrival-service-dock": false,
+          "moving:arrival-service-dock": false,
+          "closed:arrival-service-door": true,
+          "clear:arrival-service-door": false,
+          "safety:arrival-service-door": false,
+          "moving:arrival-service-door": false,
+          "gallery-light": true,
+          "service-light": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "footstep",
+            "time": 425
+          },
+          {
+            "type": "footstep",
+            "time": 850
+          },
+          {
+            "type": "footstep",
+            "time": 1275
+          },
+          {
+            "type": "footstep",
+            "time": 1700
+          },
+          {
+            "type": "footstep",
+            "time": 2125
+          },
+          {
+            "type": "portalA",
+            "time": 2592,
+            "surface": "arrival-source",
+            "point": [
+              13.959999999999999,
+              1.55,
+              8.55
+            ]
+          },
+          {
+            "type": "portalB",
+            "time": 2600,
+            "surface": "gallery-return",
+            "point": [
+              0.55,
+              1.55,
+              3.96
+            ]
+          },
+          {
+            "type": "receiver-power",
+            "time": 2608,
+            "id": "gallery-light"
+          },
+          {
+            "type": "shutter-open",
+            "time": 2608,
+            "id": "arrival-gallery-hatch"
+          },
+          {
+            "type": "shutter-open",
+            "time": 2608,
+            "id": "arrival-gallery-door"
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "arrival-foyer",
+          "normal": {
+            "x": 0,
+            "y": 1,
+            "z": -0.000004216850356897339
+          },
+          "witness": {
+            "x": 6.997977256774902,
+            "y": 0,
+            "z": 0.8626489639282227
+          },
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": 5.795274487754203e-16,
+            "y": -0.0011111111380159855,
+            "z": -8.559587066914176e-12
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-gallery-boarding-after-base-arrival",
+      "state": {
+        "room": "chamber-42",
+        "number": 42,
+        "mission": "If you keep the gallery receiver lit, the lift will reach its upper dock. Wait for it, then use the gallery.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            6.999985218048096,
+            0.8649993538856506,
+            -7.594080924987793
+          ],
+          "velocity": [
+            -0.00006443468973259457,
+            0,
+            -0.4192981139402891
+          ],
+          "yaw": 0.0001560490855340771,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "arrival-source",
+            "position": [
+              13.959999999999999,
+              1.55,
+              8.55
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "gallery-return",
+            "position": [
+              0.55,
+              1.55,
+              3.96
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "arrival-gallery-hatch",
+            "kind": "shutter",
+            "label": "GALLERY ACCESS",
+            "position": [
+              7,
+              5,
+              -2
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-gallery-lift",
+            "kind": "lift",
+            "label": "GALLERY LIFT",
+            "position": [
+              7,
+              -0.2,
+              -8
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "BASE",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-gallery-dock",
+            "kind": "shutter",
+            "label": "UPPER DOCK",
+            "position": [
+              7,
+              5.7,
+              -10.72
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-gallery-door",
+            "kind": "shutter",
+            "label": "GALLERY EXIT",
+            "position": [
+              7,
+              9.2,
+              -16.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-service-hatch",
+            "kind": "shutter",
+            "label": "SERVICE ACCESS",
+            "position": [
+              -2,
+              1.5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-service-carrier",
+            "kind": "moving-platform",
+            "label": "SERVICE CARRIER",
+            "position": [
+              -6,
+              -0.2,
+              7
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "NEAR",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-service-dock",
+            "kind": "shutter",
+            "label": "SERVICE DOCK",
+            "position": [
+              -16.72,
+              1.5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-service-door",
+            "kind": "shutter",
+            "label": "SERVICE EXIT",
+            "position": [
+              -20.12,
+              1.5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "arrival-source",
+            "position": [
+              13.985,
+              1.75,
+              8.55
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "gallery-return",
+            "position": [
+              0.55,
+              1.75,
+              3.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 2.7,
+            "height": 3.5
+          },
+          {
+            "id": "service-return",
+            "position": [
+              3.985,
+              1.75,
+              -0.55
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 2.7,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "gallery-exit",
+            "label": "EXIT",
+            "position": [
+              7,
+              5.7,
+              -18.490000000000002
+            ],
+            "size": [
+              2.7600000000000007,
+              3,
+              3.7799999999999976
+            ]
+          },
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -22.490000000000002,
+              1.5,
+              7
+            ],
+            "size": [
+              3.7799999999999976,
+              3,
+              2.7600000000000007
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "arrival-emitter": {
+            "segments": [
+              {
+                "from": [
+                  9,
+                  0.9,
+                  8
+                ],
+                "to": [
+                  13.959999999999999,
+                  0.9,
+                  8
+                ],
+                "portal": "0"
+              },
+              {
+                "from": [
+                  -6.661338147750939e-16,
+                  0.9,
+                  3.959
+                ],
+                "to": [
+                  -6.661338147750939e-16,
+                  0.9,
+                  -7.259999999999998
+                ]
+              }
+            ],
+            "stop": "receiver",
+            "receiver": "gallery-light",
+            "hops": 1
+          }
+        },
+        "signals": {
+          "closed:arrival-gallery-hatch": false,
+          "clear:arrival-gallery-hatch": true,
+          "safety:arrival-gallery-hatch": false,
+          "door-safety": false,
+          "moving:arrival-gallery-hatch": false,
+          "moving:arrival-gallery-lift": false,
+          "at:arrival-gallery-lift:BASE": true,
+          "at:arrival-gallery-lift:UPPER": false,
+          "closed:arrival-gallery-dock": true,
+          "clear:arrival-gallery-dock": false,
+          "safety:arrival-gallery-dock": false,
+          "moving:arrival-gallery-dock": false,
+          "closed:arrival-gallery-door": false,
+          "clear:arrival-gallery-door": true,
+          "safety:arrival-gallery-door": false,
+          "moving:arrival-gallery-door": false,
+          "closed:arrival-service-hatch": true,
+          "clear:arrival-service-hatch": false,
+          "safety:arrival-service-hatch": false,
+          "moving:arrival-service-hatch": false,
+          "moving:arrival-service-carrier": false,
+          "at:arrival-service-carrier:NEAR": true,
+          "at:arrival-service-carrier:SERVICE": false,
+          "closed:arrival-service-dock": true,
+          "clear:arrival-service-dock": false,
+          "safety:arrival-service-dock": false,
+          "moving:arrival-service-dock": false,
+          "closed:arrival-service-door": true,
+          "clear:arrival-service-door": false,
+          "safety:arrival-service-door": false,
+          "moving:arrival-service-door": false,
+          "gallery-light": true,
+          "service-light": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "portalB",
+            "time": 2600,
+            "surface": "gallery-return",
+            "point": [
+              0.55,
+              1.55,
+              3.96
+            ]
+          },
+          {
+            "type": "receiver-power",
+            "time": 2608,
+            "id": "gallery-light"
+          },
+          {
+            "type": "shutter-open",
+            "time": 2608,
+            "id": "arrival-gallery-hatch"
+          },
+          {
+            "type": "shutter-open",
+            "time": 2608,
+            "id": "arrival-gallery-door"
+          },
+          {
+            "type": "footstep",
+            "time": 3617
+          },
+          {
+            "type": "footstep",
+            "time": 4067
+          },
+          {
+            "type": "footstep",
+            "time": 4492
+          },
+          {
+            "type": "footstep",
+            "time": 4917
+          },
+          {
+            "type": "lift-motor",
+            "time": 8608,
+            "id": "arrival-gallery-lift"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 12108,
+            "id": "arrival-gallery-lift",
+            "value": "UPPER"
+          },
+          {
+            "type": "shutter-open",
+            "time": 12117,
+            "id": "arrival-gallery-dock"
+          },
+          {
+            "type": "lift-motor",
+            "time": 18108,
+            "id": "arrival-gallery-lift"
+          },
+          {
+            "type": "shutter-close",
+            "time": 18117,
+            "id": "arrival-gallery-dock"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 21608,
+            "id": "arrival-gallery-lift",
+            "value": "base"
+          },
+          {
+            "type": "footstep",
+            "time": 21617
+          },
+          {
+            "type": "footstep",
+            "time": 22042
+          }
+        ]
+      },
+      "contacts": []
+    },
+    {
+      "label": "actual-requested-physical-completion",
+      "state": {
+        "room": "chamber-42",
+        "number": 42,
+        "mission": "If you keep the gallery receiver lit, the lift will reach its upper dock. Wait for it, then use the gallery.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            6.999934673309326,
+            5.06490421295166,
+            -16.613706588745117
+          ],
+          "velocity": [
+            0.00012982784111783443,
+            0,
+            -4.7999999856019135
+          ],
+          "yaw": -0.000027710586694812853,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "arrival-source",
+            "position": [
+              13.959999999999999,
+              1.55,
+              8.55
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "gallery-return",
+            "position": [
+              0.55,
+              1.55,
+              3.96
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "arrival-gallery-hatch",
+            "kind": "shutter",
+            "label": "GALLERY ACCESS",
+            "position": [
+              7,
+              5,
+              -2
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-gallery-lift",
+            "kind": "lift",
+            "label": "GALLERY LIFT",
+            "position": [
+              7,
+              4,
+              -8
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": "BASE",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-gallery-dock",
+            "kind": "shutter",
+            "label": "UPPER DOCK",
+            "position": [
+              7,
+              9.2,
+              -10.72
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-gallery-door",
+            "kind": "shutter",
+            "label": "GALLERY EXIT",
+            "position": [
+              7,
+              9.2,
+              -16.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-service-hatch",
+            "kind": "shutter",
+            "label": "SERVICE ACCESS",
+            "position": [
+              -2,
+              1.5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-service-carrier",
+            "kind": "moving-platform",
+            "label": "SERVICE CARRIER",
+            "position": [
+              -6,
+              -0.2,
+              7
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "NEAR",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-service-dock",
+            "kind": "shutter",
+            "label": "SERVICE DOCK",
+            "position": [
+              -16.72,
+              1.5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-service-door",
+            "kind": "shutter",
+            "label": "SERVICE EXIT",
+            "position": [
+              -20.12,
+              1.5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "arrival-source",
+            "position": [
+              13.985,
+              1.75,
+              8.55
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "gallery-return",
+            "position": [
+              0.55,
+              1.75,
+              3.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 2.7,
+            "height": 3.5
+          },
+          {
+            "id": "service-return",
+            "position": [
+              3.985,
+              1.75,
+              -0.55
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 2.7,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "gallery-exit",
+            "label": "EXIT",
+            "position": [
+              7,
+              5.7,
+              -18.490000000000002
+            ],
+            "size": [
+              2.7600000000000007,
+              3,
+              3.7799999999999976
+            ]
+          },
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -22.490000000000002,
+              1.5,
+              7
+            ],
+            "size": [
+              3.7799999999999976,
+              3,
+              2.7600000000000007
+            ]
+          }
+        ],
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "gallery-exit",
+          "reason": "",
+          "events": [
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "footstep",
+              "time": 425
+            },
+            {
+              "type": "footstep",
+              "time": 850
+            },
+            {
+              "type": "footstep",
+              "time": 1275
+            },
+            {
+              "type": "footstep",
+              "time": 1700
+            },
+            {
+              "type": "footstep",
+              "time": 2125
+            },
+            {
+              "type": "portalA",
+              "time": 2592,
+              "surface": "arrival-source",
+              "point": [
+                13.959999999999999,
+                1.55,
+                8.55
+              ]
+            },
+            {
+              "type": "portalB",
+              "time": 2600,
+              "surface": "gallery-return",
+              "point": [
+                0.55,
+                1.55,
+                3.96
+              ]
+            },
+            {
+              "type": "receiver-power",
+              "time": 2608,
+              "id": "gallery-light"
+            },
+            {
+              "type": "shutter-open",
+              "time": 2608,
+              "id": "arrival-gallery-hatch"
+            },
+            {
+              "type": "shutter-open",
+              "time": 2608,
+              "id": "arrival-gallery-door"
+            },
+            {
+              "type": "footstep",
+              "time": 3617
+            },
+            {
+              "type": "footstep",
+              "time": 4067
+            },
+            {
+              "type": "footstep",
+              "time": 4492
+            },
+            {
+              "type": "footstep",
+              "time": 4917
+            },
+            {
+              "type": "lift-motor",
+              "time": 8608,
+              "id": "arrival-gallery-lift"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 12108,
+              "id": "arrival-gallery-lift",
+              "value": "UPPER"
+            },
+            {
+              "type": "shutter-open",
+              "time": 12117,
+              "id": "arrival-gallery-dock"
+            },
+            {
+              "type": "lift-motor",
+              "time": 18108,
+              "id": "arrival-gallery-lift"
+            },
+            {
+              "type": "shutter-close",
+              "time": 18117,
+              "id": "arrival-gallery-dock"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 21608,
+              "id": "arrival-gallery-lift",
+              "value": "base"
+            },
+            {
+              "type": "footstep",
+              "time": 21617
+            },
+            {
+              "type": "footstep",
+              "time": 22042
+            },
+            {
+              "type": "lift-motor",
+              "time": 27608,
+              "id": "arrival-gallery-lift"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 31108,
+              "id": "arrival-gallery-lift",
+              "value": "UPPER"
+            },
+            {
+              "type": "shutter-open",
+              "time": 31117,
+              "id": "arrival-gallery-dock"
+            },
+            {
+              "type": "footstep",
+              "time": 31917
+            },
+            {
+              "type": "footstep",
+              "time": 32342
+            },
+            {
+              "type": "footstep",
+              "time": 32767
+            },
+            {
+              "type": "footstep",
+              "time": 33192
+            },
+            {
+              "type": "footstep",
+              "time": 33617
+            }
+          ],
+          "mechanisms": [
+            "beams",
+            "shutters",
+            "lifts"
+          ]
+        },
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "arrival-emitter": {
+            "segments": [
+              {
+                "from": [
+                  9,
+                  0.9,
+                  8
+                ],
+                "to": [
+                  13.959999999999999,
+                  0.9,
+                  8
+                ],
+                "portal": "0"
+              },
+              {
+                "from": [
+                  -6.661338147750939e-16,
+                  0.9,
+                  3.959
+                ],
+                "to": [
+                  -6.661338147750939e-16,
+                  0.9,
+                  -7.259999999999998
+                ]
+              }
+            ],
+            "stop": "receiver",
+            "receiver": "gallery-light",
+            "hops": 1
+          }
+        },
+        "signals": {
+          "closed:arrival-gallery-hatch": false,
+          "clear:arrival-gallery-hatch": true,
+          "safety:arrival-gallery-hatch": false,
+          "door-safety": false,
+          "moving:arrival-gallery-hatch": false,
+          "moving:arrival-gallery-lift": false,
+          "at:arrival-gallery-lift:BASE": false,
+          "at:arrival-gallery-lift:UPPER": true,
+          "closed:arrival-gallery-dock": false,
+          "clear:arrival-gallery-dock": true,
+          "safety:arrival-gallery-dock": false,
+          "moving:arrival-gallery-dock": false,
+          "closed:arrival-gallery-door": false,
+          "clear:arrival-gallery-door": true,
+          "safety:arrival-gallery-door": false,
+          "moving:arrival-gallery-door": false,
+          "closed:arrival-service-hatch": true,
+          "clear:arrival-service-hatch": false,
+          "safety:arrival-service-hatch": false,
+          "moving:arrival-service-hatch": false,
+          "moving:arrival-service-carrier": false,
+          "at:arrival-service-carrier:NEAR": true,
+          "at:arrival-service-carrier:SERVICE": false,
+          "closed:arrival-service-dock": true,
+          "clear:arrival-service-dock": false,
+          "safety:arrival-service-dock": false,
+          "moving:arrival-service-dock": false,
+          "closed:arrival-service-door": true,
+          "clear:arrival-service-door": false,
+          "safety:arrival-service-door": false,
+          "moving:arrival-service-door": false,
+          "gallery-light": true,
+          "service-light": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "lift-arrival",
+            "time": 12108,
+            "id": "arrival-gallery-lift",
+            "value": "UPPER"
+          },
+          {
+            "type": "shutter-open",
+            "time": 12117,
+            "id": "arrival-gallery-dock"
+          },
+          {
+            "type": "lift-motor",
+            "time": 18108,
+            "id": "arrival-gallery-lift"
+          },
+          {
+            "type": "shutter-close",
+            "time": 18117,
+            "id": "arrival-gallery-dock"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 21608,
+            "id": "arrival-gallery-lift",
+            "value": "base"
+          },
+          {
+            "type": "footstep",
+            "time": 21617
+          },
+          {
+            "type": "footstep",
+            "time": 22042
+          },
+          {
+            "type": "lift-motor",
+            "time": 27608,
+            "id": "arrival-gallery-lift"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 31108,
+            "id": "arrival-gallery-lift",
+            "value": "UPPER"
+          },
+          {
+            "type": "shutter-open",
+            "time": 31117,
+            "id": "arrival-gallery-dock"
+          },
+          {
+            "type": "footstep",
+            "time": 31917
+          },
+          {
+            "type": "footstep",
+            "time": 32342
+          },
+          {
+            "type": "footstep",
+            "time": 32767
+          },
+          {
+            "type": "footstep",
+            "time": 33192
+          },
+          {
+            "type": "footstep",
+            "time": 33617
+          },
+          {
+            "type": "complete",
+            "time": 33992,
+            "chamber": 42
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "arrival-gallery-vestibule",
+          "normal": {
+            "x": 0.0008540382841601968,
+            "y": 0.9999994039535522,
+            "z": -0.0006760267424397171
+          },
+          "witness": {
+            "x": 6.994475364685059,
+            "y": 4.199991703033447,
+            "z": -16.576309204101562
+          },
+          "applied": {
+            "x": 6.965183985130352e-8,
+            "y": -0.0000715325222699903,
+            "z": -0.0025751707144081593
+          },
+          "remaining": {
+            "x": 0.000001012246798381966,
+            "y": -0.0010395785793662071,
+            "z": -0.037424828857183456
+          }
+        }
+      ]
+    },
+    {
+      "label": "final",
+      "state": {
+        "room": "chamber-42",
+        "number": 42,
+        "mission": "If you keep the gallery receiver lit, the lift will reach its upper dock. Wait for it, then use the gallery.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            6.999934673309326,
+            5.06490421295166,
+            -16.613706588745117
+          ],
+          "velocity": [
+            0.00012982784111783443,
+            0,
+            -4.7999999856019135
+          ],
+          "yaw": -0.000027710586694812853,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "arrival-source",
+            "position": [
+              13.959999999999999,
+              1.55,
+              8.55
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "gallery-return",
+            "position": [
+              0.55,
+              1.55,
+              3.96
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "arrival-gallery-hatch",
+            "kind": "shutter",
+            "label": "GALLERY ACCESS",
+            "position": [
+              7,
+              5,
+              -2
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-gallery-lift",
+            "kind": "lift",
+            "label": "GALLERY LIFT",
+            "position": [
+              7,
+              4,
+              -8
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": "BASE",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-gallery-dock",
+            "kind": "shutter",
+            "label": "UPPER DOCK",
+            "position": [
+              7,
+              9.2,
+              -10.72
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-gallery-door",
+            "kind": "shutter",
+            "label": "GALLERY EXIT",
+            "position": [
+              7,
+              9.2,
+              -16.12
+            ],
+            "size": [
+              2.8,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-service-hatch",
+            "kind": "shutter",
+            "label": "SERVICE ACCESS",
+            "position": [
+              -2,
+              1.5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-service-carrier",
+            "kind": "moving-platform",
+            "label": "SERVICE CARRIER",
+            "position": [
+              -6,
+              -0.2,
+              7
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "NEAR",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-service-dock",
+            "kind": "shutter",
+            "label": "SERVICE DOCK",
+            "position": [
+              -16.72,
+              1.5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "arrival-service-door",
+            "kind": "shutter",
+            "label": "SERVICE EXIT",
+            "position": [
+              -20.12,
+              1.5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "arrival-source",
+            "position": [
+              13.985,
+              1.75,
+              8.55
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "gallery-return",
+            "position": [
+              0.55,
+              1.75,
+              3.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 2.7,
+            "height": 3.5
+          },
+          {
+            "id": "service-return",
+            "position": [
+              3.985,
+              1.75,
+              -0.55
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 2.7,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "gallery-exit",
+            "label": "EXIT",
+            "position": [
+              7,
+              5.7,
+              -18.490000000000002
+            ],
+            "size": [
+              2.7600000000000007,
+              3,
+              3.7799999999999976
+            ]
+          },
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -22.490000000000002,
+              1.5,
+              7
+            ],
+            "size": [
+              3.7799999999999976,
+              3,
+              2.7600000000000007
+            ]
+          }
+        ],
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "gallery-exit",
+          "reason": "",
+          "events": [
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "footstep",
+              "time": 425
+            },
+            {
+              "type": "footstep",
+              "time": 850
+            },
+            {
+              "type": "footstep",
+              "time": 1275
+            },
+            {
+              "type": "footstep",
+              "time": 1700
+            },
+            {
+              "type": "footstep",
+              "time": 2125
+            },
+            {
+              "type": "portalA",
+              "time": 2592,
+              "surface": "arrival-source",
+              "point": [
+                13.959999999999999,
+                1.55,
+                8.55
+              ]
+            },
+            {
+              "type": "portalB",
+              "time": 2600,
+              "surface": "gallery-return",
+              "point": [
+                0.55,
+                1.55,
+                3.96
+              ]
+            },
+            {
+              "type": "receiver-power",
+              "time": 2608,
+              "id": "gallery-light"
+            },
+            {
+              "type": "shutter-open",
+              "time": 2608,
+              "id": "arrival-gallery-hatch"
+            },
+            {
+              "type": "shutter-open",
+              "time": 2608,
+              "id": "arrival-gallery-door"
+            },
+            {
+              "type": "footstep",
+              "time": 3617
+            },
+            {
+              "type": "footstep",
+              "time": 4067
+            },
+            {
+              "type": "footstep",
+              "time": 4492
+            },
+            {
+              "type": "footstep",
+              "time": 4917
+            },
+            {
+              "type": "lift-motor",
+              "time": 8608,
+              "id": "arrival-gallery-lift"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 12108,
+              "id": "arrival-gallery-lift",
+              "value": "UPPER"
+            },
+            {
+              "type": "shutter-open",
+              "time": 12117,
+              "id": "arrival-gallery-dock"
+            },
+            {
+              "type": "lift-motor",
+              "time": 18108,
+              "id": "arrival-gallery-lift"
+            },
+            {
+              "type": "shutter-close",
+              "time": 18117,
+              "id": "arrival-gallery-dock"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 21608,
+              "id": "arrival-gallery-lift",
+              "value": "base"
+            },
+            {
+              "type": "footstep",
+              "time": 21617
+            },
+            {
+              "type": "footstep",
+              "time": 22042
+            },
+            {
+              "type": "lift-motor",
+              "time": 27608,
+              "id": "arrival-gallery-lift"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 31108,
+              "id": "arrival-gallery-lift",
+              "value": "UPPER"
+            },
+            {
+              "type": "shutter-open",
+              "time": 31117,
+              "id": "arrival-gallery-dock"
+            },
+            {
+              "type": "footstep",
+              "time": 31917
+            },
+            {
+              "type": "footstep",
+              "time": 32342
+            },
+            {
+              "type": "footstep",
+              "time": 32767
+            },
+            {
+              "type": "footstep",
+              "time": 33192
+            },
+            {
+              "type": "footstep",
+              "time": 33617
+            }
+          ],
+          "mechanisms": [
+            "beams",
+            "shutters",
+            "lifts"
+          ]
+        },
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "arrival-emitter": {
+            "segments": [
+              {
+                "from": [
+                  9,
+                  0.9,
+                  8
+                ],
+                "to": [
+                  13.959999999999999,
+                  0.9,
+                  8
+                ],
+                "portal": "0"
+              },
+              {
+                "from": [
+                  -6.661338147750939e-16,
+                  0.9,
+                  3.959
+                ],
+                "to": [
+                  -6.661338147750939e-16,
+                  0.9,
+                  -7.259999999999998
+                ]
+              }
+            ],
+            "stop": "receiver",
+            "receiver": "gallery-light",
+            "hops": 1
+          }
+        },
+        "signals": {
+          "closed:arrival-gallery-hatch": false,
+          "clear:arrival-gallery-hatch": true,
+          "safety:arrival-gallery-hatch": false,
+          "door-safety": false,
+          "moving:arrival-gallery-hatch": false,
+          "moving:arrival-gallery-lift": false,
+          "at:arrival-gallery-lift:BASE": false,
+          "at:arrival-gallery-lift:UPPER": true,
+          "closed:arrival-gallery-dock": false,
+          "clear:arrival-gallery-dock": true,
+          "safety:arrival-gallery-dock": false,
+          "moving:arrival-gallery-dock": false,
+          "closed:arrival-gallery-door": false,
+          "clear:arrival-gallery-door": true,
+          "safety:arrival-gallery-door": false,
+          "moving:arrival-gallery-door": false,
+          "closed:arrival-service-hatch": true,
+          "clear:arrival-service-hatch": false,
+          "safety:arrival-service-hatch": false,
+          "moving:arrival-service-hatch": false,
+          "moving:arrival-service-carrier": false,
+          "at:arrival-service-carrier:NEAR": true,
+          "at:arrival-service-carrier:SERVICE": false,
+          "closed:arrival-service-dock": true,
+          "clear:arrival-service-dock": false,
+          "safety:arrival-service-dock": false,
+          "moving:arrival-service-dock": false,
+          "closed:arrival-service-door": true,
+          "clear:arrival-service-door": false,
+          "safety:arrival-service-door": false,
+          "moving:arrival-service-door": false,
+          "gallery-light": true,
+          "service-light": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "lift-arrival",
+            "time": 12108,
+            "id": "arrival-gallery-lift",
+            "value": "UPPER"
+          },
+          {
+            "type": "shutter-open",
+            "time": 12117,
+            "id": "arrival-gallery-dock"
+          },
+          {
+            "type": "lift-motor",
+            "time": 18108,
+            "id": "arrival-gallery-lift"
+          },
+          {
+            "type": "shutter-close",
+            "time": 18117,
+            "id": "arrival-gallery-dock"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 21608,
+            "id": "arrival-gallery-lift",
+            "value": "base"
+          },
+          {
+            "type": "footstep",
+            "time": 21617
+          },
+          {
+            "type": "footstep",
+            "time": 22042
+          },
+          {
+            "type": "lift-motor",
+            "time": 27608,
+            "id": "arrival-gallery-lift"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 31108,
+            "id": "arrival-gallery-lift",
+            "value": "UPPER"
+          },
+          {
+            "type": "shutter-open",
+            "time": 31117,
+            "id": "arrival-gallery-dock"
+          },
+          {
+            "type": "footstep",
+            "time": 31917
+          },
+          {
+            "type": "footstep",
+            "time": 32342
+          },
+          {
+            "type": "footstep",
+            "time": 32767
+          },
+          {
+            "type": "footstep",
+            "time": 33192
+          },
+          {
+            "type": "footstep",
+            "time": 33617
+          },
+          {
+            "type": "complete",
+            "time": 33992,
+            "chamber": 42
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "arrival-gallery-vestibule",
+          "normal": {
+            "x": 0.0008540382841601968,
+            "y": 0.9999994039535522,
+            "z": -0.0006760267424397171
+          },
+          "witness": {
+            "x": 6.994475364685059,
+            "y": 4.199991703033447,
+            "z": -16.576309204101562
+          },
+          "applied": {
+            "x": 6.965183985130352e-8,
+            "y": -0.0000715325222699903,
+            "z": -0.0025751707144081593
+          },
+          "remaining": {
+            "x": 0.000001012246798381966,
+            "y": -0.0010395785793662071,
+            "z": -0.037424828857183456
+          }
+        }
+      ]
+    }
+  ]
+}

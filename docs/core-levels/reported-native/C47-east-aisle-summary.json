@@ -1,0 +1,188 @@
+{
+  "sourceExact": true,
+  "nativePass": 4,
+  "nativeFail": 0,
+  "scope": "Only four failed cases replayed; original first3/7 preserved, no new combined7/7 claim.",
+  "routes": [
+    {
+      "file": "47-entry-two-supplies.json",
+      "error": null,
+      "respawns": 0,
+      "crossings": 3,
+      "jumpEvents": 0,
+      "result": {
+        "goalMatched": true,
+        "physicalComplete": true,
+        "exit": "entry-exit",
+        "reason": ""
+      },
+      "pads": [
+        {
+          "id": "listener-access",
+          "position": [
+            -5,
+            0.14,
+            6
+          ],
+          "pressed": true,
+          "crate": "listener-cube-a"
+        },
+        {
+          "id": "listener-entry-receipt",
+          "position": [
+            -5,
+            0.14,
+            -4
+          ],
+          "pressed": true,
+          "crate": "listener-cube-b"
+        },
+        {
+          "id": "listener-freight-receipt",
+          "position": [
+            5,
+            0,
+            -1.4
+          ],
+          "pressed": false,
+          "crate": null
+        }
+      ]
+    },
+    {
+      "file": "47-equivalent-swapped-cargo.json",
+      "error": null,
+      "respawns": 0,
+      "crossings": 3,
+      "jumpEvents": 0,
+      "result": {
+        "goalMatched": true,
+        "physicalComplete": true,
+        "exit": "entry-exit",
+        "reason": ""
+      },
+      "pads": [
+        {
+          "id": "listener-access",
+          "position": [
+            -5,
+            0.14,
+            6
+          ],
+          "pressed": true,
+          "crate": "listener-cube-b"
+        },
+        {
+          "id": "listener-entry-receipt",
+          "position": [
+            -5,
+            0.14,
+            -4
+          ],
+          "pressed": true,
+          "crate": "listener-cube-a"
+        },
+        {
+          "id": "listener-freight-receipt",
+          "position": [
+            5,
+            0,
+            -1.4
+          ],
+          "pressed": false,
+          "crate": null
+        }
+      ]
+    },
+    {
+      "file": "47-maintained-access-removal-recovery.json",
+      "error": null,
+      "respawns": 0,
+      "crossings": 3,
+      "jumpEvents": 0,
+      "result": {
+        "goalMatched": true,
+        "physicalComplete": true,
+        "exit": "entry-exit",
+        "reason": ""
+      },
+      "pads": [
+        {
+          "id": "listener-access",
+          "position": [
+            -5,
+            0.14,
+            6
+          ],
+          "pressed": true,
+          "crate": "listener-cube-a"
+        },
+        {
+          "id": "listener-entry-receipt",
+          "position": [
+            -5,
+            0.14,
+            -4
+          ],
+          "pressed": true,
+          "crate": "listener-cube-b"
+        },
+        {
+          "id": "listener-freight-receipt",
+          "position": [
+            5,
+            0,
+            -1.4
+          ],
+          "pressed": false,
+          "crate": null
+        }
+      ]
+    },
+    {
+      "file": "47-wrong-freight-return-entry.json",
+      "error": null,
+      "respawns": 0,
+      "crossings": 3,
+      "jumpEvents": 0,
+      "result": {
+        "goalMatched": true,
+        "physicalComplete": true,
+        "exit": "entry-exit",
+        "reason": ""
+      },
+      "pads": [
+        {
+          "id": "listener-access",
+          "position": [
+            -5,
+            0.14,
+            6
+          ],
+          "pressed": true,
+          "crate": "listener-cube-a"
+        },
+        {
+          "id": "listener-entry-receipt",
+          "position": [
+            -5,
+            0.14,
+            -4
+          ],
+          "pressed": true,
+          "crate": "listener-cube-b"
+        },
+        {
+          "id": "listener-freight-receipt",
+          "position": [
+            5,
+            0,
+            -1.4
+          ],
+          "pressed": false,
+          "crate": null
+        }
+      ]
+    }
+  ]
+}

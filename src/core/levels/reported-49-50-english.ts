@@ -1,11 +1,16 @@
 /** Original reported instructions; source/copy location is explicit, never a goal flag. */
 import type{EarlyEnglishEntry}from'./early-english';
 const reported='https://english.workbook.co.il/grade-9/chapter-11/reported-speech-reference';
-/** Only49 is authored here. QA independently owns46–48;50 follows its own fixture proof. */
-export const reportedFinalEnglish:Record<49,EarlyEnglishEntry>={
+/** Separate49–50 lane; QA independently owns46–48. Native status is recorded per fixture. */
+export const reportedFinalEnglish:Record<49|50,EarlyEnglishEntry>={
  49:{name:'The Copy at GALLERY',chapter:'Reported Instructions',
   mission:'The copy at GALLERY says: LOADING told the operator to leave the cube there and keep its receiver lit. Follow LOADING’s instruction.',
   he:'בעותק שב־GALLERY כתוב: LOADING הורה למפעיל להשאיר את הקובייה שם ולהשאיר את המקלט שלו מואר. פעלו לפי ההוראה של LOADING.',
   sources:[{url:reported,practice:'The identified source is LOADING while the report is copied at GALLERY: here in the original becomes there in that copy, and my receiver becomes its receiver. The named location/possessive jointly select the actual lower cargo supply and optical return. The same-place GALLERY alternative retains here. No automatic here-to-there rule, mandatory tense backshift, optional-that contrast or report-read gate is used.'}],
   contrast:{mission:'The copy at GALLERY says: GALLERY told the operator to leave the cube here and keep its receiver lit. Follow GALLERY’s instruction.',he:'בעותק שב־GALLERY כתוב: GALLERY הורה למפעיל להשאיר את הקובייה כאן ולהשאיר את המקלט שלו מואר. פעלו לפי ההוראה של GALLERY.',physicalChange:'Deliver the same ordinary cube to upper GALLERY pressure and redirect the beam to its receiver instead of supplying lower LOADING. The same fixed originals and both copies are present, with both current pressure/light AND circuits and routes. The elevation and real cargo/optical allocation change together; no cargo-owner, board-read, exact path or grammar-match flag awards progress.'}},
+ 50:{name:'Their Transfer Plan',chapter:'Reported Instructions',
+  mission:'LOADING and FREIGHT told the operator to bring a cube back, leave it in their STORE and keep their receiver lit. Take their ferry.',
+  he:'LOADING ו־FREIGHT הורו למפעיל להחזיר קובייה, להשאיר אותה ב־STORE שלהם ולהשאיר את המקלט שלהם מואר. חצו במשטח ההעברה שלהם.',
+  sources:[{url:reported,practice:'Retain the same explicitly named plural source group through their STORE, their receiver and their final route. The fixed original uses our; its report uses their and an explicit tell-recipient-to instruction. The operational plan requires an unladen momentum retrieval, actual cargo return, current group-specific optical/pressure supply and a real ferry or parked-deck route. No mandatory backshift, read/owner/history/ride flag or report result supplies a machine.'}],
+  contrast:{mission:'GALLERY and ARCHIVE told the operator to bring a cube back, leave it in their STORE and keep their receiver lit. Park their bridge and cross their walkway.',he:'GALLERY ו־ARCHIVE הורו למפעיל להחזיר קובייה, להשאיר אותה ב־STORE שלהם ולהשאיר את המקלט שלהם מואר. החנו את הגשר שלהם וחצו במעבר שלהם.',physicalChange:'The same proven high-vault retrieval and covered walking return provide ordinary cargo. Supply GALLERY/ARCHIVE STORE and its north-wall optical return, then call the real10m deck to PARK and cross its stopped support, instead of supplying LOADING/FREIGHT and riding the separate12m ferry. All hardware, source cards and current native dock/supply circuits remain fixed. Parking without riding and other physically valid equivalents are accepted; no original-cargo, visited-stage, selected-target or past-use condition exists.'}},
 };

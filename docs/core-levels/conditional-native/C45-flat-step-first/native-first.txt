@@ -1,0 +1,52 @@
+✖ native C45 physical eight centimetre belt step permits flat W approach to actual roof and flat escape (4860.695042ms)
+✔ native C45 identical fixture starts dark with remote cargo and no supplied archive (842.753416ms)
+✔ native C45 staged unheld reconfiguration then real STORE delivery powers later archive carriage (14468.908583ms)
+✔ native C45 retrieved cargo with current dark SERVICE opens separate inspection return (2072.387792ms)
+✔ native C45 wrong dark inspection returns for physical reallocation and unheld light restoration (17144.4945ms)
+✔ native C45 equivalent cargo-first dark delivery then unheld light satisfies same physical supplies (8588.178416ms)
+✖ native C45 actual cargo passes low throat while whole upright capsule is physically blocked (4022.202958ms)
+✔ native C45 actual access-well miss climbs to independent RETURN and recovers cargo without reset (4584.337208ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 6
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 61304.278875
+
+✖ failing tests:
+
+test at tests/core-conditional-flat-entry.test.ts:36:1
+✖ native C45 physical eight centimetre belt step permits flat W approach to actual roof and flat escape (4860.695042ms)
+  AssertionError [ERR_ASSERTION]: The body must actually pass the original east belt-entry pin
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-conditional-flat-entry.test.ts:49:9)
+      at conditionalRoute (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/helpers/conditional-route.ts:39:178)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-conditional-flat-entry.test.ts:36:130)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/core-conditional-routes.test.ts:10:45
+✖ native C45 actual cargo passes low throat while whole upright capsule is physically blocked (4022.202958ms)
+  AssertionError [ERR_ASSERTION]: Body did not actually reach and stop at cargo throat
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-conditional-routes.test.ts:160:159)
+      at conditionalRoute (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/helpers/conditional-route.ts:39:178)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-conditional-routes.test.ts:159:108)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1306:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:897:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

@@ -1,0 +1,31 @@
+--- a/src/chamber-scene.ts
++++ b/src/chamber-scene.ts
+@@ -122,6 +122,14 @@
+   b.putImageData(color,0,0);c.putImageData(vectors,0,0);const map=this.texture(new T.CanvasTexture(base)),normalMap=this.texture(new T.CanvasTexture(normal));map.colorSpace=T.SRGBColorSpace;for(const texture of[map,normalMap]){texture.wrapS=texture.wrapT=T.RepeatWrapping;texture.anisotropy=Math.min(8,this.renderer.capabilities.getMaxAnisotropy());}return{map,normalMap};
+  }
+  private floorGeometry(size:T.Vector3,pos:T.Vector3){const g=this.geo(new T.BoxGeometry(size.x,size.y,size.z)),a=g.getAttribute('position'),uv=g.getAttribute('uv'),normal=g.getAttribute('normal');for(let i=0;i<a.count;i++){if(Math.abs(normal.getY(i))>.5)uv.setXY(i,(a.getX(i)+pos.x)/2,(a.getZ(i)+pos.z)/2);else uv.setXY(i,(a.getX(i)+pos.x)/2,(a.getY(i)+pos.y)/2);}return g;}
++ private fittedBlueprintMark(text:string,width:number,height:number){
++  // Blueprint prose is often much wider than it is tall. Fit the exact inherited label canvas,
++  // leaving all other C1/device label() callers and its line placement unchanged.
++  const measure=document.createElement('canvas');measure.width=1024;measure.height=Math.round(1024*height/width);const context=measure.getContext('2d')!,lines=text.split('\n');
++  let font=Math.max(1,Math.min(220,Math.floor(measure.height*.72/Math.max(1,lines.length))));context.font=`bold ${font}px Arial`;
++  const widest=Math.max(1,...lines.map(line=>context.measureText(line).width));font=Math.max(1,Math.floor(font*Math.min(1,920/widest)));
++  return this.label(text,width,height,'#20292e','#c7d3d6',font);
++ }
+  private wallCladding(min:T.Vector3,max:T.Vector3,axis:'x'|'z',sign:number,solidID=''){
+   const a=axis==='x'?'z':'x',u1=min[a],u2=max[a],y1=min.y,y2=max.y,plane=sign>0?max[axis]:min[axis];
+   const freight=this.core.number===25&&axis==='z'&&['hatch-front-west','hatch-front-east','hatch-header'].includes(solidID);
+@@ -210,11 +218,11 @@
+   if(this.core.number>2)this.glassFrames();
+   const entryInlay=this.core.solids.find(s=>s.id==='entry-service-inlay');
+   if(this.core.number<=2||entryInlay){const plaque=this.label(String(this.core.number).padStart(2,'0'),.5,.4,'#252b30','#bbc4c6',160);plaque.position.set(entryInlay?entryInlay.max.x+.03:-half+.14,entryInlay?1.65:1.55,this.core.number===1?12.95:this.core.number===2?11:0);plaque.rotation.y=Math.PI/2;this.root.add(plaque);}
+-  for(const mark of b.marks){const sign=this.label(mark.text,mark.width??1,mark.height??.22,'#20292e','#c7d3d6',220),normal=V(...(mark.normal??[0,0,1]));sign.position.set(...mark.position);
++  for(const mark of b.marks){const sign=this.fittedBlueprintMark(mark.text,mark.width??1,mark.height??.22),normal=V(...(mark.normal??[0,0,1]));sign.position.set(...mark.position);
+    // Door names belong on the front of the retraction pocket; wall-plane signs were occluded by it.
+    const door=this.core.machines.devices.find(d=>d.spec.kind==='shutter'&&d.spec.label===mark.text&&Math.hypot(mark.position[0]-d.spec.position[0],mark.position[2]-d.spec.position[2])<1);
+    if(door){sign.position.set(...door.spec.position).addScaledVector(normal,.56);sign.position.y=door.spec.position[1]+door.spec.size[1]/2+.53;}
+-   sign.quaternion.setFromRotationMatrix(poseMatrix(sign.position,normal,V(0,1,0)));this.root.add(sign);}
++   sign.quaternion.setFromRotationMatrix(poseMatrix(sign.position,normal,Math.abs(normal.y)>.9?V(0,0,-1):V(0,1,0)));this.root.add(sign);}
+   for(const s of b.surfaces){const integrated=style==='ceramic'&&!s.floor,visualMaterial=integrated?this.material(new T.MeshBasicMaterial({transparent:true,opacity:0,depthWrite:false})):f.white;const face=this.mesh(this.geo(new T.PlaneGeometry(s.width,s.height)),visualMaterial);face.matrix.copy(poseMatrix(s.center.clone().addScaledVector(s.normal,integrated?.05:.008),s.normal,s.up));face.matrix.decompose(face.position,face.quaternion,face.scale);face.userData.surface=s.id;this.targets.unshift(face);
+    // Full eligible wall regions are integrated surfaces, not labelled predetermined rectangles.
+ 

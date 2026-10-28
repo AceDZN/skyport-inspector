@@ -1,0 +1,2376 @@
+{
+  "scope": "Unregistered authored-spawn native input path only. No actor/cargo/machine/history/save setters, resets or browser/completion claims. Native portal rays ignore glass; real visual framing remains browser-pending.",
+  "number": 50,
+  "contrast": false,
+  "error": null,
+  "sources": {
+    "src/core/levels/reported-49-50.ts": "05f8367a33f8f79bc2b57bc8181a1a03357994013a97d14b70d6edae743929ea",
+    "src/core/levels/reported-49-50-english.ts": "b3abc86ec1f6afa674488ab823750691d0c4bc7c9b9126e98f19061cfb935cd7",
+    "src/core/level.ts": "4dc6e0989e9a3ebe3a22f4a115ac5116073fec2e2d7d8777ff76f81f7b9db272",
+    "src/core/world.ts": "e04f8690ddfb9306c9602a25a104b5e47dbe6829b937cf53da82debf52be3d94",
+    "src/core/portal-placement.ts": "655b0716bec176c8dc553ffa546c45287c16e3633d6475753342d8129bf28875",
+    "src/core/machine-journal.ts": "b400ede48dd62294f3a212e504495a50f8ca2db93dc4efb4f5d66e6962108de1",
+    "src/systems.ts": "13d3dbf57ced0b8d18b499762d60282a82686cbc698f972c55dbff0c6b0ea67b",
+    "tests/core-reported-final-routes.test.ts": "04e6d73cb3104389fb1b579e7644489d18fcb6bd2dff5b16e7db711ea97ac985",
+    "tests/helpers/reported-final-route.ts": "08696e6ebd502208cd88499081d0108b52320cc171bc780f213e97bfdab33034"
+  },
+  "ridingFrames": {},
+  "events": [
+    {
+      "type": "land"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "land"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    }
+  ],
+  "checkpoints": [
+    {
+      "label": "actual-authored-spawn",
+      "state": {
+        "room": "chamber-50",
+        "number": 50,
+        "mission": "LOADING and FREIGHT told the operator to bring a cube back, leave it in their STORE and keep their receiver lit. Take their ferry.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -1,
+            0.8650962710380554,
+            11
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [
+          {
+            "id": "vault-cube",
+            "position": [
+              26,
+              5.549904823303223,
+              -6.000000476837158
+            ],
+            "velocity": [
+              -0.000042145584302488714,
+              -0.0000064175324041571,
+              -0.000035729575756704435
+            ],
+            "rotation": [
+              0.0000015189765463219373,
+              4.2080353958307004e-12,
+              -0.000001868454774012207,
+              1
+            ],
+            "angularVelocity": [
+              -0.00006460276199504733,
+              8.210854481678805e-15,
+              0.00007620357064297423
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "return-pressure",
+            "position": [
+              23,
+              5.14,
+              -6
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "freight-store",
+            "position": [
+              -5,
+              0.14,
+              19
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "archive-store",
+            "position": [
+              12,
+              0.14,
+              16.5
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "vault-return-cover",
+            "kind": "shutter",
+            "label": "RETURN COVER",
+            "position": [
+              29.6,
+              6.75,
+              -6
+            ],
+            "size": [
+              0.5,
+              3.8,
+              4.4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "vault-recovery",
+            "kind": "lift",
+            "label": "RETURN",
+            "position": [
+              -5,
+              -22.2,
+              10
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "BASIN",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "vault-basin-call",
+            "kind": "switch",
+            "label": "CALL RETURN",
+            "position": [
+              -2.4,
+              -20.8,
+              12.8
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "freight-final-door",
+            "kind": "shutter",
+            "label": "FREIGHT FERRY",
+            "position": [
+              -3,
+              1.5,
+              40.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "archive-final-door",
+            "kind": "shutter",
+            "label": "ARCHIVE WALKWAY",
+            "position": [
+              9,
+              1.5,
+              40.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "final-ferry",
+            "kind": "moving-platform",
+            "label": "FREIGHT FERRY",
+            "position": [
+              -3,
+              -0.2,
+              22
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "NEAR",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "final-bridge",
+            "kind": "lift",
+            "label": "ARCHIVE BRIDGE",
+            "position": [
+              3,
+              -0.2,
+              31
+            ],
+            "size": [
+              4,
+              0.4,
+              10
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "HOME",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "park-bridge",
+            "kind": "switch",
+            "label": "PARK BRIDGE",
+            "position": [
+              13,
+              1.25,
+              24.5
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "vault-deep-floor",
+            "position": [
+              3,
+              -17.975,
+              1
+            ],
+            "normal": [
+              0,
+              1,
+              0
+            ],
+            "width": 4,
+            "height": 10
+          },
+          {
+            "id": "vault-launch",
+            "position": [
+              -7.985,
+              9,
+              -6
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 4,
+            "height": 3.1
+          },
+          {
+            "id": "vault-upper-return",
+            "position": [
+              29.985,
+              6.75,
+              -6
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 4,
+            "height": 3.5
+          },
+          {
+            "id": "vault-return-wall",
+            "position": [
+              0,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 6,
+            "height": 3.5
+          },
+          {
+            "id": "transfer-source",
+            "position": [
+              14.985,
+              1.75,
+              18
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 4,
+            "height": 3.5
+          },
+          {
+            "id": "freight-return",
+            "position": [
+              -7.985,
+              1.75,
+              17
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 4,
+            "height": 3.5
+          },
+          {
+            "id": "archive-return",
+            "position": [
+              10,
+              1.75,
+              14.415
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 4,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "freight-exit",
+            "label": "EXIT",
+            "position": [
+              -3,
+              1.5,
+              42.29
+            ],
+            "size": [
+              3.16,
+              3,
+              3.3799999999999955
+            ]
+          },
+          {
+            "id": "archive-exit",
+            "label": "EXIT",
+            "position": [
+              9,
+              1.5,
+              42.29
+            ],
+            "size": [
+              3.16,
+              3,
+              3.3799999999999955
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "return-pressure": false,
+          "freight-store": false,
+          "archive-store": false,
+          "closed:vault-return-cover": true,
+          "clear:vault-return-cover": false,
+          "safety:vault-return-cover": false,
+          "door-safety": false,
+          "moving:vault-return-cover": false,
+          "moving:vault-recovery": false,
+          "at:vault-recovery:BASIN": true,
+          "at:vault-recovery:APPROACH": false,
+          "moving:vault-basin-call": false,
+          "closed:freight-final-door": true,
+          "clear:freight-final-door": false,
+          "safety:freight-final-door": false,
+          "moving:freight-final-door": false,
+          "closed:archive-final-door": true,
+          "clear:archive-final-door": false,
+          "safety:archive-final-door": false,
+          "moving:archive-final-door": false,
+          "moving:final-ferry": false,
+          "at:final-ferry:NEAR": true,
+          "at:final-ferry:FAR": false,
+          "moving:final-bridge": false,
+          "at:final-bridge:HOME": true,
+          "at:final-bridge:PARK": false,
+          "moving:park-bridge": false,
+          "freight-light": false,
+          "archive-light": false
+        },
+        "journal": {
+          "reports": [
+            {
+              "id": "return-opened",
+              "status": "NOT YET OBSERVED",
+              "text": "The return cover has not opened fully yet.",
+              "observedAt": null,
+              "pastText": null
+            }
+          ],
+          "attempt": 1,
+          "rows": [],
+          "truncated": false,
+          "now": [
+            {
+              "id": "vault-return-cover",
+              "label": "RETURN COVER",
+              "kind": "shutter",
+              "state": "CLOSED"
+            },
+            {
+              "id": "freight-store",
+              "label": "FREIGHT STORE",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "archive-store",
+              "label": "ARCHIVE STORE",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "freight-light",
+              "label": "FREIGHT RECEIVER",
+              "kind": "light",
+              "state": "DARK"
+            },
+            {
+              "id": "archive-light",
+              "label": "ARCHIVE RECEIVER",
+              "kind": "light",
+              "state": "DARK"
+            },
+            {
+              "id": "final-ferry",
+              "label": "FREIGHT FERRY",
+              "kind": "dock",
+              "state": "AT NEAR"
+            },
+            {
+              "id": "final-bridge",
+              "label": "ARCHIVE BRIDGE",
+              "kind": "dock",
+              "state": "AT HOME"
+            },
+            {
+              "id": "archive-final-door",
+              "label": "ARCHIVE EXIT",
+              "kind": "shutter",
+              "state": "CLOSED"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          }
+        ]
+      }
+    },
+    {
+      "label": "actual-annex-dry-catch",
+      "state": {
+        "room": "chamber-50",
+        "number": 50,
+        "mission": "LOADING and FREIGHT told the operator to bring a cube back, leave it in their STORE and keep their receiver lit. Take their ferry.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            4.9999680519104,
+            -3.5348105430603027,
+            23.795482635498047
+          ],
+          "velocity": [
+            -0.00015698137668012098,
+            0,
+            4.799999999170749
+          ],
+          "yaw": 3.1415868574963604,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [
+          {
+            "id": "vault-cube",
+            "position": [
+              26,
+              5.549904823303223,
+              -6.000000476837158
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0.0000015189765463219373,
+              4.2080353958307004e-12,
+              -0.000001868454774012207,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "return-pressure",
+            "position": [
+              23,
+              5.14,
+              -6
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "freight-store",
+            "position": [
+              -5,
+              0.14,
+              19
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "archive-store",
+            "position": [
+              12,
+              0.14,
+              16.5
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "vault-return-cover",
+            "kind": "shutter",
+            "label": "RETURN COVER",
+            "position": [
+              29.6,
+              6.75,
+              -6
+            ],
+            "size": [
+              0.5,
+              3.8,
+              4.4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "vault-recovery",
+            "kind": "lift",
+            "label": "RETURN",
+            "position": [
+              -5,
+              -22.2,
+              10
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "BASIN",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "vault-basin-call",
+            "kind": "switch",
+            "label": "CALL RETURN",
+            "position": [
+              -2.4,
+              -20.8,
+              12.8
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "freight-final-door",
+            "kind": "shutter",
+            "label": "FREIGHT FERRY",
+            "position": [
+              -3,
+              1.5,
+              40.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "archive-final-door",
+            "kind": "shutter",
+            "label": "ARCHIVE WALKWAY",
+            "position": [
+              9,
+              1.5,
+              40.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "final-ferry",
+            "kind": "moving-platform",
+            "label": "FREIGHT FERRY",
+            "position": [
+              -3,
+              -0.2,
+              22
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "NEAR",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "final-bridge",
+            "kind": "lift",
+            "label": "ARCHIVE BRIDGE",
+            "position": [
+              3,
+              -0.2,
+              31
+            ],
+            "size": [
+              4,
+              0.4,
+              10
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "HOME",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "park-bridge",
+            "kind": "switch",
+            "label": "PARK BRIDGE",
+            "position": [
+              13,
+              1.25,
+              24.5
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "vault-deep-floor",
+            "position": [
+              3,
+              -17.975,
+              1
+            ],
+            "normal": [
+              0,
+              1,
+              0
+            ],
+            "width": 4,
+            "height": 10
+          },
+          {
+            "id": "vault-launch",
+            "position": [
+              -7.985,
+              9,
+              -6
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 4,
+            "height": 3.1
+          },
+          {
+            "id": "vault-upper-return",
+            "position": [
+              29.985,
+              6.75,
+              -6
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 4,
+            "height": 3.5
+          },
+          {
+            "id": "vault-return-wall",
+            "position": [
+              0,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 6,
+            "height": 3.5
+          },
+          {
+            "id": "transfer-source",
+            "position": [
+              14.985,
+              1.75,
+              18
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 4,
+            "height": 3.5
+          },
+          {
+            "id": "freight-return",
+            "position": [
+              -7.985,
+              1.75,
+              17
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 4,
+            "height": 3.5
+          },
+          {
+            "id": "archive-return",
+            "position": [
+              10,
+              1.75,
+              14.415
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 4,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "freight-exit",
+            "label": "EXIT",
+            "position": [
+              -3,
+              1.5,
+              42.29
+            ],
+            "size": [
+              3.16,
+              3,
+              3.3799999999999955
+            ]
+          },
+          {
+            "id": "archive-exit",
+            "label": "EXIT",
+            "position": [
+              9,
+              1.5,
+              42.29
+            ],
+            "size": [
+              3.16,
+              3,
+              3.3799999999999955
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "return-pressure": false,
+          "freight-store": false,
+          "archive-store": false,
+          "closed:vault-return-cover": true,
+          "clear:vault-return-cover": false,
+          "safety:vault-return-cover": false,
+          "door-safety": false,
+          "moving:vault-return-cover": false,
+          "moving:vault-recovery": false,
+          "at:vault-recovery:BASIN": true,
+          "at:vault-recovery:APPROACH": false,
+          "moving:vault-basin-call": false,
+          "closed:freight-final-door": true,
+          "clear:freight-final-door": false,
+          "safety:freight-final-door": false,
+          "moving:freight-final-door": false,
+          "closed:archive-final-door": true,
+          "clear:archive-final-door": false,
+          "safety:archive-final-door": false,
+          "moving:archive-final-door": false,
+          "moving:final-ferry": false,
+          "at:final-ferry:NEAR": true,
+          "at:final-ferry:FAR": false,
+          "moving:final-bridge": false,
+          "at:final-bridge:HOME": true,
+          "at:final-bridge:PARK": false,
+          "moving:park-bridge": false,
+          "freight-light": false,
+          "archive-light": false
+        },
+        "journal": {
+          "reports": [
+            {
+              "id": "return-opened",
+              "status": "NOT YET OBSERVED",
+              "text": "The return cover has not opened fully yet.",
+              "observedAt": null,
+              "pastText": null
+            }
+          ],
+          "attempt": 1,
+          "rows": [],
+          "truncated": false,
+          "now": [
+            {
+              "id": "vault-return-cover",
+              "label": "RETURN COVER",
+              "kind": "shutter",
+              "state": "CLOSED"
+            },
+            {
+              "id": "freight-store",
+              "label": "FREIGHT STORE",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "archive-store",
+              "label": "ARCHIVE STORE",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "freight-light",
+              "label": "FREIGHT RECEIVER",
+              "kind": "light",
+              "state": "DARK"
+            },
+            {
+              "id": "archive-light",
+              "label": "ARCHIVE RECEIVER",
+              "kind": "light",
+              "state": "DARK"
+            },
+            {
+              "id": "final-ferry",
+              "label": "FREIGHT FERRY",
+              "kind": "dock",
+              "state": "AT NEAR"
+            },
+            {
+              "id": "final-bridge",
+              "label": "ARCHIVE BRIDGE",
+              "kind": "dock",
+              "state": "AT HOME"
+            },
+            {
+              "id": "archive-final-door",
+              "label": "ARCHIVE EXIT",
+              "kind": "shutter",
+              "state": "CLOSED"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "footstep",
+            "time": 508
+          },
+          {
+            "type": "footstep",
+            "time": 933
+          },
+          {
+            "type": "footstep",
+            "time": 1358
+          },
+          {
+            "type": "footstep",
+            "time": 1783
+          },
+          {
+            "type": "footstep",
+            "time": 2208
+          },
+          {
+            "type": "footstep",
+            "time": 2633
+          },
+          {
+            "type": "footstep",
+            "time": 3058
+          },
+          {
+            "type": "footstep",
+            "time": 3483
+          },
+          {
+            "type": "footstep",
+            "time": 3908
+          },
+          {
+            "type": "land",
+            "time": 5017
+          }
+        ]
+      }
+    },
+    {
+      "label": "actual-return-only-near-bank-recovery",
+      "state": {
+        "room": "chamber-50",
+        "number": 50,
+        "mission": "LOADING and FREIGHT told the operator to bring a cube back, leave it in their STORE and keep their receiver lit. Take their ferry.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -6.499980449676514,
+            0.8646807670593262,
+            19.14069366455078
+          ],
+          "velocity": [
+            -0.0001542994010696612,
+            0,
+            -0.6827604164519973
+          ],
+          "yaw": 0.00027023794080918397,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [
+          {
+            "id": "vault-cube",
+            "position": [
+              26,
+              5.549904823303223,
+              -6.000000476837158
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0.0000015189765463219373,
+              4.2080353958307004e-12,
+              -0.000001868454774012207,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "return-pressure",
+            "position": [
+              23,
+              5.14,
+              -6
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "freight-store",
+            "position": [
+              -5,
+              0.14,
+              19
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "archive-store",
+            "position": [
+              12,
+              0.14,
+              16.5
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "vault-return-cover",
+            "kind": "shutter",
+            "label": "RETURN COVER",
+            "position": [
+              29.6,
+              6.75,
+              -6
+            ],
+            "size": [
+              0.5,
+              3.8,
+              4.4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "vault-recovery",
+            "kind": "lift",
+            "label": "RETURN",
+            "position": [
+              -5,
+              -22.2,
+              10
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "BASIN",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "vault-basin-call",
+            "kind": "switch",
+            "label": "CALL RETURN",
+            "position": [
+              -2.4,
+              -20.8,
+              12.8
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "freight-final-door",
+            "kind": "shutter",
+            "label": "FREIGHT FERRY",
+            "position": [
+              -3,
+              1.5,
+              40.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "archive-final-door",
+            "kind": "shutter",
+            "label": "ARCHIVE WALKWAY",
+            "position": [
+              9,
+              1.5,
+              40.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "final-ferry",
+            "kind": "moving-platform",
+            "label": "FREIGHT FERRY",
+            "position": [
+              -3,
+              -0.2,
+              22
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "NEAR",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "final-bridge",
+            "kind": "lift",
+            "label": "ARCHIVE BRIDGE",
+            "position": [
+              3,
+              -0.2,
+              31
+            ],
+            "size": [
+              4,
+              0.4,
+              10
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "HOME",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "park-bridge",
+            "kind": "switch",
+            "label": "PARK BRIDGE",
+            "position": [
+              13,
+              1.25,
+              24.5
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "vault-deep-floor",
+            "position": [
+              3,
+              -17.975,
+              1
+            ],
+            "normal": [
+              0,
+              1,
+              0
+            ],
+            "width": 4,
+            "height": 10
+          },
+          {
+            "id": "vault-launch",
+            "position": [
+              -7.985,
+              9,
+              -6
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 4,
+            "height": 3.1
+          },
+          {
+            "id": "vault-upper-return",
+            "position": [
+              29.985,
+              6.75,
+              -6
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 4,
+            "height": 3.5
+          },
+          {
+            "id": "vault-return-wall",
+            "position": [
+              0,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 6,
+            "height": 3.5
+          },
+          {
+            "id": "transfer-source",
+            "position": [
+              14.985,
+              1.75,
+              18
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 4,
+            "height": 3.5
+          },
+          {
+            "id": "freight-return",
+            "position": [
+              -7.985,
+              1.75,
+              17
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 4,
+            "height": 3.5
+          },
+          {
+            "id": "archive-return",
+            "position": [
+              10,
+              1.75,
+              14.415
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 4,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "freight-exit",
+            "label": "EXIT",
+            "position": [
+              -3,
+              1.5,
+              42.29
+            ],
+            "size": [
+              3.16,
+              3,
+              3.3799999999999955
+            ]
+          },
+          {
+            "id": "archive-exit",
+            "label": "EXIT",
+            "position": [
+              9,
+              1.5,
+              42.29
+            ],
+            "size": [
+              3.16,
+              3,
+              3.3799999999999955
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "return-pressure": false,
+          "freight-store": false,
+          "archive-store": false,
+          "closed:vault-return-cover": true,
+          "clear:vault-return-cover": false,
+          "safety:vault-return-cover": false,
+          "door-safety": false,
+          "moving:vault-return-cover": false,
+          "moving:vault-recovery": false,
+          "at:vault-recovery:BASIN": true,
+          "at:vault-recovery:APPROACH": false,
+          "moving:vault-basin-call": false,
+          "closed:freight-final-door": true,
+          "clear:freight-final-door": false,
+          "safety:freight-final-door": false,
+          "moving:freight-final-door": false,
+          "closed:archive-final-door": true,
+          "clear:archive-final-door": false,
+          "safety:archive-final-door": false,
+          "moving:archive-final-door": false,
+          "moving:final-ferry": false,
+          "at:final-ferry:NEAR": true,
+          "at:final-ferry:FAR": false,
+          "moving:final-bridge": false,
+          "at:final-bridge:HOME": true,
+          "at:final-bridge:PARK": false,
+          "moving:park-bridge": false,
+          "freight-light": false,
+          "archive-light": false
+        },
+        "journal": {
+          "reports": [
+            {
+              "id": "return-opened",
+              "status": "NOT YET OBSERVED",
+              "text": "The return cover has not opened fully yet.",
+              "observedAt": null,
+              "pastText": null
+            }
+          ],
+          "attempt": 1,
+          "rows": [],
+          "truncated": false,
+          "now": [
+            {
+              "id": "vault-return-cover",
+              "label": "RETURN COVER",
+              "kind": "shutter",
+              "state": "CLOSED"
+            },
+            {
+              "id": "freight-store",
+              "label": "FREIGHT STORE",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "archive-store",
+              "label": "ARCHIVE STORE",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "freight-light",
+              "label": "FREIGHT RECEIVER",
+              "kind": "light",
+              "state": "DARK"
+            },
+            {
+              "id": "archive-light",
+              "label": "ARCHIVE RECEIVER",
+              "kind": "light",
+              "state": "DARK"
+            },
+            {
+              "id": "final-ferry",
+              "label": "FREIGHT FERRY",
+              "kind": "dock",
+              "state": "AT NEAR"
+            },
+            {
+              "id": "final-bridge",
+              "label": "ARCHIVE BRIDGE",
+              "kind": "dock",
+              "state": "AT HOME"
+            },
+            {
+              "id": "archive-final-door",
+              "label": "ARCHIVE EXIT",
+              "kind": "shutter",
+              "state": "CLOSED"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 8000
+          },
+          {
+            "type": "footstep",
+            "time": 8425
+          },
+          {
+            "type": "footstep",
+            "time": 8850
+          },
+          {
+            "type": "footstep",
+            "time": 9275
+          },
+          {
+            "type": "footstep",
+            "time": 9700
+          },
+          {
+            "type": "footstep",
+            "time": 10125
+          },
+          {
+            "type": "footstep",
+            "time": 10550
+          },
+          {
+            "type": "footstep",
+            "time": 10975
+          },
+          {
+            "type": "footstep",
+            "time": 11400
+          },
+          {
+            "type": "footstep",
+            "time": 11825
+          },
+          {
+            "type": "footstep",
+            "time": 12250
+          },
+          {
+            "type": "footstep",
+            "time": 12675
+          },
+          {
+            "type": "footstep",
+            "time": 13100
+          },
+          {
+            "type": "footstep",
+            "time": 13525
+          },
+          {
+            "type": "footstep",
+            "time": 13950
+          },
+          {
+            "type": "footstep",
+            "time": 14375
+          }
+        ]
+      }
+    },
+    {
+      "label": "final",
+      "state": {
+        "room": "chamber-50",
+        "number": 50,
+        "mission": "LOADING and FREIGHT told the operator to bring a cube back, leave it in their STORE and keep their receiver lit. Take their ferry.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -6.499980449676514,
+            0.8646807670593262,
+            19.14069366455078
+          ],
+          "velocity": [
+            -0.0001542994010696612,
+            0,
+            -0.6827604164519973
+          ],
+          "yaw": 0.00027023794080918397,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [
+          {
+            "id": "vault-cube",
+            "position": [
+              26,
+              5.549904823303223,
+              -6.000000476837158
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0.0000015189765463219373,
+              4.2080353958307004e-12,
+              -0.000001868454774012207,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "return-pressure",
+            "position": [
+              23,
+              5.14,
+              -6
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "freight-store",
+            "position": [
+              -5,
+              0.14,
+              19
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "archive-store",
+            "position": [
+              12,
+              0.14,
+              16.5
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "vault-return-cover",
+            "kind": "shutter",
+            "label": "RETURN COVER",
+            "position": [
+              29.6,
+              6.75,
+              -6
+            ],
+            "size": [
+              0.5,
+              3.8,
+              4.4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "vault-recovery",
+            "kind": "lift",
+            "label": "RETURN",
+            "position": [
+              -5,
+              -22.2,
+              10
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "BASIN",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "vault-basin-call",
+            "kind": "switch",
+            "label": "CALL RETURN",
+            "position": [
+              -2.4,
+              -20.8,
+              12.8
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "freight-final-door",
+            "kind": "shutter",
+            "label": "FREIGHT FERRY",
+            "position": [
+              -3,
+              1.5,
+              40.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "archive-final-door",
+            "kind": "shutter",
+            "label": "ARCHIVE WALKWAY",
+            "position": [
+              9,
+              1.5,
+              40.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "final-ferry",
+            "kind": "moving-platform",
+            "label": "FREIGHT FERRY",
+            "position": [
+              -3,
+              -0.2,
+              22
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "NEAR",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "final-bridge",
+            "kind": "lift",
+            "label": "ARCHIVE BRIDGE",
+            "position": [
+              3,
+              -0.2,
+              31
+            ],
+            "size": [
+              4,
+              0.4,
+              10
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "HOME",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "park-bridge",
+            "kind": "switch",
+            "label": "PARK BRIDGE",
+            "position": [
+              13,
+              1.25,
+              24.5
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "vault-deep-floor",
+            "position": [
+              3,
+              -17.975,
+              1
+            ],
+            "normal": [
+              0,
+              1,
+              0
+            ],
+            "width": 4,
+            "height": 10
+          },
+          {
+            "id": "vault-launch",
+            "position": [
+              -7.985,
+              9,
+              -6
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 4,
+            "height": 3.1
+          },
+          {
+            "id": "vault-upper-return",
+            "position": [
+              29.985,
+              6.75,
+              -6
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 4,
+            "height": 3.5
+          },
+          {
+            "id": "vault-return-wall",
+            "position": [
+              0,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 6,
+            "height": 3.5
+          },
+          {
+            "id": "transfer-source",
+            "position": [
+              14.985,
+              1.75,
+              18
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 4,
+            "height": 3.5
+          },
+          {
+            "id": "freight-return",
+            "position": [
+              -7.985,
+              1.75,
+              17
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 4,
+            "height": 3.5
+          },
+          {
+            "id": "archive-return",
+            "position": [
+              10,
+              1.75,
+              14.415
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 4,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "freight-exit",
+            "label": "EXIT",
+            "position": [
+              -3,
+              1.5,
+              42.29
+            ],
+            "size": [
+              3.16,
+              3,
+              3.3799999999999955
+            ]
+          },
+          {
+            "id": "archive-exit",
+            "label": "EXIT",
+            "position": [
+              9,
+              1.5,
+              42.29
+            ],
+            "size": [
+              3.16,
+              3,
+              3.3799999999999955
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "return-pressure": false,
+          "freight-store": false,
+          "archive-store": false,
+          "closed:vault-return-cover": true,
+          "clear:vault-return-cover": false,
+          "safety:vault-return-cover": false,
+          "door-safety": false,
+          "moving:vault-return-cover": false,
+          "moving:vault-recovery": false,
+          "at:vault-recovery:BASIN": true,
+          "at:vault-recovery:APPROACH": false,
+          "moving:vault-basin-call": false,
+          "closed:freight-final-door": true,
+          "clear:freight-final-door": false,
+          "safety:freight-final-door": false,
+          "moving:freight-final-door": false,
+          "closed:archive-final-door": true,
+          "clear:archive-final-door": false,
+          "safety:archive-final-door": false,
+          "moving:archive-final-door": false,
+          "moving:final-ferry": false,
+          "at:final-ferry:NEAR": true,
+          "at:final-ferry:FAR": false,
+          "moving:final-bridge": false,
+          "at:final-bridge:HOME": true,
+          "at:final-bridge:PARK": false,
+          "moving:park-bridge": false,
+          "freight-light": false,
+          "archive-light": false
+        },
+        "journal": {
+          "reports": [
+            {
+              "id": "return-opened",
+              "status": "NOT YET OBSERVED",
+              "text": "The return cover has not opened fully yet.",
+              "observedAt": null,
+              "pastText": null
+            }
+          ],
+          "attempt": 1,
+          "rows": [],
+          "truncated": false,
+          "now": [
+            {
+              "id": "vault-return-cover",
+              "label": "RETURN COVER",
+              "kind": "shutter",
+              "state": "CLOSED"
+            },
+            {
+              "id": "freight-store",
+              "label": "FREIGHT STORE",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "archive-store",
+              "label": "ARCHIVE STORE",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "freight-light",
+              "label": "FREIGHT RECEIVER",
+              "kind": "light",
+              "state": "DARK"
+            },
+            {
+              "id": "archive-light",
+              "label": "ARCHIVE RECEIVER",
+              "kind": "light",
+              "state": "DARK"
+            },
+            {
+              "id": "final-ferry",
+              "label": "FREIGHT FERRY",
+              "kind": "dock",
+              "state": "AT NEAR"
+            },
+            {
+              "id": "final-bridge",
+              "label": "ARCHIVE BRIDGE",
+              "kind": "dock",
+              "state": "AT HOME"
+            },
+            {
+              "id": "archive-final-door",
+              "label": "ARCHIVE EXIT",
+              "kind": "shutter",
+              "state": "CLOSED"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 8000
+          },
+          {
+            "type": "footstep",
+            "time": 8425
+          },
+          {
+            "type": "footstep",
+            "time": 8850
+          },
+          {
+            "type": "footstep",
+            "time": 9275
+          },
+          {
+            "type": "footstep",
+            "time": 9700
+          },
+          {
+            "type": "footstep",
+            "time": 10125
+          },
+          {
+            "type": "footstep",
+            "time": 10550
+          },
+          {
+            "type": "footstep",
+            "time": 10975
+          },
+          {
+            "type": "footstep",
+            "time": 11400
+          },
+          {
+            "type": "footstep",
+            "time": 11825
+          },
+          {
+            "type": "footstep",
+            "time": 12250
+          },
+          {
+            "type": "footstep",
+            "time": 12675
+          },
+          {
+            "type": "footstep",
+            "time": 13100
+          },
+          {
+            "type": "footstep",
+            "time": 13525
+          },
+          {
+            "type": "footstep",
+            "time": 13950
+          },
+          {
+            "type": "footstep",
+            "time": 14375
+          }
+        ]
+      }
+    }
+  ]
+}

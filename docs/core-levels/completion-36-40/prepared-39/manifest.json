@@ -1,0 +1,56 @@
+{
+  "createdAt": "2026-10-28T10:46:51.705614+00:00",
+  "status": "SOURCE ONLY; six C39 cases prepared, no compiler/native/browser/build execution",
+  "scope": "Frozen C39 fixture and prepared cases before separately authorized C40 source append. Copies are text snapshots, not test modules. No actor/cargo/machine/history/save writes.",
+  "cases": 6,
+  "files": {
+    "src/core/levels/completion.ts": {
+      "sha256": "a3b2ec6095d526621042df9eac59187110e5ceb216d7d65bc2144af0e9319a18",
+      "bytes": 34975,
+      "snapshot": "src__core__levels__completion.ts.txt"
+    },
+    "src/core/levels/completion-english.ts": {
+      "sha256": "f40e47dae8026d4fab402db5ce72f85534e43ec9e11a6a77dbcaa4c62a28f563",
+      "bytes": 6210,
+      "snapshot": "src__core__levels__completion-english.ts.txt"
+    },
+    "tests/core-completion-routes.test.ts": {
+      "sha256": "dd7cd20b882a120bd455c5952a41eec6390842a5ec163072bf3da41b941d43d3",
+      "bytes": 32735,
+      "snapshot": "tests__core-completion-routes.test.ts.txt"
+    },
+    "tests/helpers/completion-route.ts": {
+      "sha256": "724682acd23af480578a321cc7503881210a358629a614c117e0970b2fbfeb1c",
+      "bytes": 8267,
+      "snapshot": "tests__helpers__completion-route.ts.txt"
+    },
+    "docs/core-levels/DESIGN-36-40.md": {
+      "sha256": "860c8795281d60389f4942547f89753a8e8bdc3a19300bbd9e1dc012970a3d43",
+      "bytes": 19699,
+      "snapshot": "docs__core-levels__DESIGN-36-40.md.txt"
+    },
+    "docs/core-levels/COMPLETION_REPORTS.md": {
+      "sha256": "1c7952b0dea959ee82192ae23369e8539e811bb8f3445dd571c0fc424ab7443b",
+      "bytes": 12058,
+      "snapshot": "docs__core-levels__COMPLETION_REPORTS.md.txt"
+    }
+  },
+  "currentEngineHashes": {
+    "src/core/world.ts": {
+      "sha256": "054fe818b86b3eda9d17d240b1f0aeebaa960aff1afe4669003df8131a60af23",
+      "bytes": 45375
+    },
+    "src/systems.ts": {
+      "sha256": "13d3dbf57ced0b8d18b499762d60282a82686cbc698f972c55dbff0c6b0ea67b",
+      "bytes": 10748
+    },
+    "src/core/machine-journal.ts": {
+      "sha256": "b400ede48dd62294f3a212e504495a50f8ca2db93dc4efb4f5d66e6962108de1",
+      "bytes": 6754
+    },
+    "src/physics.ts": {
+      "sha256": "a6dadd039ea5ef703681ab5276cb4c14f48c72bebb7d34d86013f35b4bf870b4",
+      "bytes": 19595
+    }
+  }
+}

@@ -1,0 +1,131 @@
+✔ native C40 both requests retain identical momentum vault and real closed latched return cover (1126.459792ms)
+✖ native C40 actual unladen deep fling and full walking cargo return still require the final gallery journey (2707.054625ms)
+✖ native C40 same retrieval contrast delivers SERVICE and leaves final gallery unpowered (641.299375ms)
+✖ native C40 wrong completed SERVICE remains recoverable by actual GALLERY reallocation (486.063875ms)
+✖ native C40 a real plate departure leaves its true completed report but removes unfinished transfer power (1025.113167ms)
+✖ native C40 missed deep aperture reaches real basin then RETURN carries a reset-free recentered retry (2631.362333ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 1
+ℹ fail 5
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 10367.284625
+
+✖ failing tests:
+
+test at tests/core-completion40-routes.test.ts:44:1
+✖ native C40 actual unladen deep fling and full walking cargo return still require the final gallery journey (2707.054625ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'OBSERVED'
+  - 'NOT YET OBSERVED'
+  
+      at vaultLanding (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-completion40-routes.test.ts:20:236)
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-completion40-routes.test.ts:44:167)
+      at route (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/helpers/completion-route.ts:44:172)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-completion40-routes.test.ts:44:119)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'OBSERVED',
+    expected: 'NOT YET OBSERVED',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/core-completion40-routes.test.ts:45:1
+✖ native C40 same retrieval contrast delivers SERVICE and leaves final gallery unpowered (641.299375ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'OBSERVED'
+  - 'NOT YET OBSERVED'
+  
+      at vaultLanding (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-completion40-routes.test.ts:20:236)
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-completion40-routes.test.ts:45:146)
+      at route (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/helpers/completion-route.ts:44:172)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-completion40-routes.test.ts:45:99)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'OBSERVED',
+    expected: 'NOT YET OBSERVED',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/core-completion40-routes.test.ts:46:1
+✖ native C40 wrong completed SERVICE remains recoverable by actual GALLERY reallocation (486.063875ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'OBSERVED'
+  - 'NOT YET OBSERVED'
+  
+      at vaultLanding (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-completion40-routes.test.ts:20:236)
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-completion40-routes.test.ts:46:152)
+      at route (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/helpers/completion-route.ts:44:172)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-completion40-routes.test.ts:46:98)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'OBSERVED',
+    expected: 'NOT YET OBSERVED',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/core-completion40-routes.test.ts:47:1
+✖ native C40 a real plate departure leaves its true completed report but removes unfinished transfer power (1025.113167ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'OBSERVED'
+  - 'NOT YET OBSERVED'
+  
+      at vaultLanding (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-completion40-routes.test.ts:20:236)
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-completion40-routes.test.ts:47:169)
+      at route (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/helpers/completion-route.ts:44:172)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-completion40-routes.test.ts:47:117)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'OBSERVED',
+    expected: 'NOT YET OBSERVED',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/core-completion40-routes.test.ts:48:1
+✖ native C40 missed deep aperture reaches real basin then RETURN carries a reset-free recentered retry (2631.362333ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'OBSERVED'
+  - 'NOT YET OBSERVED'
+  
+      at vaultLanding (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-completion40-routes.test.ts:20:236)
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-completion40-routes.test.ts:48:951)
+      at route (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/helpers/completion-route.ts:44:172)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-completion40-routes.test.ts:48:113)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'OBSERVED',
+    expected: 'NOT YET OBSERVED',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -1,0 +1,25 @@
+{
+  "scope": "Unique contracts covered across first run and targeted missing-input replay; not a new combined439 run or browser completion.",
+  "firstRun": {
+    "passed": 438,
+    "failed": 1,
+    "exitCode": 1,
+    "cause": "Snapshot omitted four existing read-only saved-export inputs; no gameplay contract failed.",
+    "sourceExactMatch": true
+  },
+  "followup": {
+    "passed": 1,
+    "failed": 0,
+    "exitCode": 0,
+    "runtimeTestsAssertionsUnchanged": true
+  },
+  "totalDistinctContractsCovered": 439,
+  "flatEntryObservation": {
+    "queries": 7409,
+    "fixedDuringQuery": 7409,
+    "physicsTypeChecks": 7409,
+    "heldTypeChecks": 437,
+    "nativeStateViolations": 0
+  },
+  "worldSHA256": "e04f8690ddfb9306c9602a25a104b5e47dbe6829b937cf53da82debf52be3d94"
+}

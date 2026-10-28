@@ -1,0 +1,34 @@
+✔ native C45 identical fixture starts dark with remote cargo and no supplied archive (243.289125ms)
+✔ native C45 staged unheld reconfiguration then real STORE delivery powers later archive carriage (2188.178125ms)
+✔ native C45 retrieved cargo with current dark SERVICE opens separate inspection return (312.449209ms)
+✔ native C45 wrong dark inspection returns for physical reallocation and unheld light restoration (2192.223875ms)
+✔ native C45 equivalent cargo-first dark delivery then unheld light satisfies same physical supplies (1280.604208ms)
+✖ native C45 actual cargo passes low throat while whole upright capsule is physically blocked (644.783875ms)
+✔ native C45 actual access-well miss climbs to independent RETURN and recovers cargo without reset (2016.374625ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 6
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9833.789125
+
+✖ failing tests:
+
+test at tests/core-conditional-routes.test.ts:10:45
+✖ native C45 actual cargo passes low throat while whole upright capsule is physically blocked (644.783875ms)
+  AssertionError [ERR_ASSERTION]: Body did not actually reach and stop at cargo throat
+      at <anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-conditional-routes.test.ts:160:159)
+      at conditionalRoute (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/helpers/conditional-route.ts:39:178)
+      at TestContext.<anonymous> (/Users/acedzn/dev/AceDZN-exp/skyport-inspector/tests/core-conditional-routes.test.ts:159:108)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

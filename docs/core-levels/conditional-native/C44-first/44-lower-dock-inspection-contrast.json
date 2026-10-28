@@ -1,0 +1,3593 @@
+{
+  "scope": "Unregistered authored-spawn native route. Camera/WASD/E/ray-clear portals only. Decorative visibility, realtime mouse and earned save remain pending.",
+  "number": 44,
+  "contrast": true,
+  "error": null,
+  "inputs": [
+    {
+      "action": "aim",
+      "target": [
+        -3,
+        1.55,
+        19.985
+      ]
+    },
+    {
+      "action": "place",
+      "index": 0
+    },
+    {
+      "action": "aim",
+      "target": [
+        -6,
+        1.55,
+        12.415
+      ]
+    },
+    {
+      "action": "place",
+      "index": 1
+    },
+    {
+      "action": "walk",
+      "x": -3,
+      "z": 18.7
+    },
+    {
+      "action": "aim",
+      "target": [
+        -3,
+        1.55,
+        21.96
+      ]
+    },
+    {
+      "action": "key",
+      "code": "KeyW",
+      "ms": 300,
+      "nativeTimingOnly": true
+    },
+    {
+      "action": "walk",
+      "x": -3,
+      "z": 14.5
+    },
+    {
+      "action": "walk",
+      "x": 0,
+      "z": 14.5
+    },
+    {
+      "action": "walk",
+      "x": 2,
+      "z": 14.5
+    },
+    {
+      "action": "walk",
+      "x": 2,
+      "z": 15
+    },
+    {
+      "action": "walk",
+      "x": 8,
+      "z": 15
+    },
+    {
+      "action": "walk",
+      "x": 12,
+      "z": 15
+    },
+    {
+      "action": "walk",
+      "x": 20,
+      "z": 15
+    }
+  ],
+  "ridingFrames": {
+    "serial-inspection-lift": 420
+  },
+  "maxDeviceStep": {
+    "serial-near-start": 0,
+    "serial-refuge-start": 0,
+    "serial-deck-a": 0.00833333333333286,
+    "serial-deck-b": 0,
+    "serial-freight-gate": 0.036458333333333925,
+    "serial-refuge-arrival-door": 0.036458333333333925,
+    "serial-refuge-departure-door": 0.036458333333333925,
+    "serial-far-dock-door": 0,
+    "serial-freight-exit-door": 0.036458333333333925,
+    "serial-inspection-boarding": 0.036458333333333925,
+    "serial-inspection-lift": 0.010000000000000231,
+    "serial-inspection-dock": 0.036458333333333925,
+    "serial-inspection-exit-door": 0.036458333333333925
+  },
+  "events": [
+    {
+      "type": "shutter-open",
+      "time": 0.008333333333333333,
+      "id": "serial-freight-gate"
+    },
+    {
+      "type": "shutter-open",
+      "time": 0.008333333333333333,
+      "id": "serial-refuge-departure-door"
+    },
+    {
+      "type": "shutter-open",
+      "time": 0.008333333333333333,
+      "id": "serial-freight-exit-door"
+    },
+    {
+      "type": "shutter-open",
+      "time": 0.008333333333333333,
+      "id": "serial-inspection-boarding"
+    },
+    {
+      "type": "shutter-open",
+      "time": 0.008333333333333333,
+      "id": "serial-inspection-exit-door"
+    },
+    {
+      "type": "land",
+      "time": 0.008333333333333333
+    },
+    {
+      "type": "portalA",
+      "time": 0.3000000000000001,
+      "surface": "serial-source",
+      "point": [
+        -3,
+        1.55,
+        19.96
+      ]
+    },
+    {
+      "type": "portalB",
+      "time": 0.30833333333333346,
+      "surface": "serial-return",
+      "point": [
+        -6,
+        1.55,
+        12.44
+      ]
+    },
+    {
+      "type": "footstep",
+      "time": 0.4250000000000005
+    },
+    {
+      "type": "footstep",
+      "time": 0.8499999999999994
+    },
+    {
+      "type": "enter",
+      "time": 0.9083333333333325,
+      "body": "player",
+      "from": 0,
+      "to": 1,
+      "fromSurface": "serial-source",
+      "toSurface": "serial-return",
+      "speed": 4.787345848874565,
+      "exitSpeed": 4.787345848874565,
+      "held": null
+    },
+    {
+      "type": "land",
+      "time": 0.9166666666666659
+    },
+    {
+      "type": "footstep",
+      "time": 1.274999999999998
+    },
+    {
+      "type": "footstep",
+      "time": 1.6999999999999964
+    },
+    {
+      "type": "footstep",
+      "time": 2.124999999999995
+    },
+    {
+      "type": "footstep",
+      "time": 2.5499999999999936
+    },
+    {
+      "type": "footstep",
+      "time": 2.974999999999992
+    },
+    {
+      "type": "footstep",
+      "time": 3.3999999999999906
+    },
+    {
+      "type": "lift-motor",
+      "time": 10.008333333333406,
+      "id": "serial-inspection-lift"
+    },
+    {
+      "type": "shutter-close",
+      "time": 10.016666666666739,
+      "id": "serial-inspection-boarding"
+    },
+    {
+      "type": "lift-motor",
+      "time": 12.008333333333292,
+      "id": "serial-deck-a"
+    },
+    {
+      "type": "shutter-close",
+      "time": 12.016666666666625,
+      "id": "serial-freight-gate"
+    },
+    {
+      "type": "lift-arrival",
+      "time": 13.508333333333207,
+      "id": "serial-inspection-lift",
+      "value": "UPPER"
+    },
+    {
+      "type": "shutter-open",
+      "time": 13.51666666666654,
+      "id": "serial-inspection-dock"
+    },
+    {
+      "type": "lift-arrival",
+      "time": 16.008333333333066,
+      "id": "serial-deck-a",
+      "value": "REFUGE"
+    },
+    {
+      "type": "shutter-open",
+      "time": 16.0166666666664,
+      "id": "serial-refuge-arrival-door"
+    },
+    {
+      "type": "lift-motor",
+      "time": 23.50833333333264,
+      "id": "serial-inspection-lift"
+    },
+    {
+      "type": "shutter-close",
+      "time": 23.516666666665973,
+      "id": "serial-inspection-dock"
+    },
+    {
+      "type": "lift-arrival",
+      "time": 27.00833333333244,
+      "id": "serial-inspection-lift",
+      "value": "base"
+    },
+    {
+      "type": "shutter-open",
+      "time": 27.016666666665774,
+      "id": "serial-inspection-boarding"
+    },
+    {
+      "type": "footstep",
+      "time": 27.81666666666573
+    },
+    {
+      "type": "lift-motor",
+      "time": 28.008333333332384,
+      "id": "serial-deck-a"
+    },
+    {
+      "type": "shutter-close",
+      "time": 28.016666666665717,
+      "id": "serial-refuge-arrival-door"
+    },
+    {
+      "type": "footstep",
+      "time": 28.241666666665704
+    },
+    {
+      "type": "footstep",
+      "time": 28.66666666666568
+    },
+    {
+      "type": "footstep",
+      "time": 29.091666666665656
+    },
+    {
+      "type": "lift-arrival",
+      "time": 32.00833333333216,
+      "id": "serial-deck-a",
+      "value": "base"
+    },
+    {
+      "type": "shutter-open",
+      "time": 32.01666666666549,
+      "id": "serial-freight-gate"
+    },
+    {
+      "type": "lift-motor",
+      "time": 37.008333333331876,
+      "id": "serial-inspection-lift"
+    },
+    {
+      "type": "shutter-close",
+      "time": 37.01666666666521,
+      "id": "serial-inspection-boarding"
+    },
+    {
+      "type": "lift-arrival",
+      "time": 40.50833333333168,
+      "id": "serial-inspection-lift",
+      "value": "UPPER"
+    },
+    {
+      "type": "shutter-open",
+      "time": 40.51666666666501,
+      "id": "serial-inspection-dock"
+    },
+    {
+      "type": "footstep",
+      "time": 41.316666666664965
+    },
+    {
+      "type": "footstep",
+      "time": 41.74166666666494
+    },
+    {
+      "type": "footstep",
+      "time": 42.29166666666491
+    },
+    {
+      "type": "footstep",
+      "time": 42.716666666664885
+    },
+    {
+      "type": "footstep",
+      "time": 43.14166666666486
+    },
+    {
+      "type": "complete",
+      "time": 43.50833333333151,
+      "chamber": 44
+    }
+  ],
+  "checkpoints": [
+    {
+      "label": "actual-authored-spawn",
+      "state": {
+        "room": "chamber-44",
+        "number": 44,
+        "mission": "If the inspection lift is at its lower dock, the boarding door opens. Board it there and use inspection.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -3.000000238418579,
+            0.8649798631668091,
+            18
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "serial-near-start",
+            "kind": "switch",
+            "label": "TRANSFER START",
+            "position": [
+              -3,
+              1.25,
+              13
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-refuge-start",
+            "kind": "switch",
+            "label": "TRANSFER START",
+            "position": [
+              3,
+              1.25,
+              -2
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-deck-a",
+            "kind": "moving-platform",
+            "label": "TRANSFER A",
+            "position": [
+              0,
+              -0.2,
+              6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "DEPARTURE",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-deck-b",
+            "kind": "moving-platform",
+            "label": "TRANSFER B",
+            "position": [
+              0,
+              -0.2,
+              -6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "DEPARTURE",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-freight-gate",
+            "kind": "shutter",
+            "label": "FREIGHT",
+            "position": [
+              0,
+              2.8125000000000004,
+              10.08
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 0.3750000000000001,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-refuge-arrival-door",
+            "kind": "shutter",
+            "label": "REFUGE ARRIVAL",
+            "position": [
+              0,
+              1.5,
+              -0.72
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-refuge-departure-door",
+            "kind": "shutter",
+            "label": "TRANSFER B DOCK",
+            "position": [
+              0,
+              2.8125000000000004,
+              -3.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 0.3750000000000001,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-far-dock-door",
+            "kind": "shutter",
+            "label": "FAR DOCK",
+            "position": [
+              0,
+              1.5,
+              -16.72
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-freight-exit-door",
+            "kind": "shutter",
+            "label": "FREIGHT EXIT",
+            "position": [
+              0,
+              2.8125000000000004,
+              -20.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 0.3750000000000001,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-inspection-boarding",
+            "kind": "shutter",
+            "label": "BOARDING",
+            "position": [
+              4,
+              2.8125000000000004,
+              15
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": true,
+            "progress": 0.3750000000000001,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-inspection-lift",
+            "kind": "lift",
+            "label": "INSPECTION",
+            "position": [
+              8,
+              -0.2,
+              15
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "LOWER",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-inspection-dock",
+            "kind": "shutter",
+            "label": "UPPER DOCK",
+            "position": [
+              10.72,
+              5.7,
+              15
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-inspection-exit-door",
+            "kind": "shutter",
+            "label": "INSPECTION EXIT",
+            "position": [
+              17.12,
+              7.0125,
+              15
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": true,
+            "progress": 0.3750000000000001,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "serial-source",
+            "position": [
+              -3,
+              1.75,
+              19.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "serial-return",
+            "position": [
+              -6,
+              1.75,
+              12.415
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "freight-exit",
+            "label": "EXIT",
+            "position": [
+              0,
+              1.5,
+              -22.490000000000002
+            ],
+            "size": [
+              3.16,
+              3,
+              3.7799999999999976
+            ]
+          },
+          {
+            "id": "inspection-exit",
+            "label": "EXIT",
+            "position": [
+              19.490000000000002,
+              5.7,
+              15
+            ],
+            "size": [
+              3.7799999999999976,
+              3,
+              3.1599999999999984
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "moving:serial-near-start": false,
+          "moving:serial-refuge-start": false,
+          "moving:serial-deck-a": false,
+          "at:serial-deck-a:DEPARTURE": true,
+          "at:serial-deck-a:REFUGE": false,
+          "moving:serial-deck-b": false,
+          "at:serial-deck-b:DEPARTURE": true,
+          "at:serial-deck-b:FAR": false,
+          "closed:serial-freight-gate": false,
+          "clear:serial-freight-gate": false,
+          "safety:serial-freight-gate": false,
+          "door-safety": false,
+          "moving:serial-freight-gate": true,
+          "closed:serial-refuge-arrival-door": true,
+          "clear:serial-refuge-arrival-door": false,
+          "safety:serial-refuge-arrival-door": false,
+          "moving:serial-refuge-arrival-door": false,
+          "closed:serial-refuge-departure-door": false,
+          "clear:serial-refuge-departure-door": false,
+          "safety:serial-refuge-departure-door": false,
+          "moving:serial-refuge-departure-door": true,
+          "closed:serial-far-dock-door": true,
+          "clear:serial-far-dock-door": false,
+          "safety:serial-far-dock-door": false,
+          "moving:serial-far-dock-door": false,
+          "closed:serial-freight-exit-door": false,
+          "clear:serial-freight-exit-door": false,
+          "safety:serial-freight-exit-door": false,
+          "moving:serial-freight-exit-door": true,
+          "closed:serial-inspection-boarding": false,
+          "clear:serial-inspection-boarding": false,
+          "safety:serial-inspection-boarding": false,
+          "moving:serial-inspection-boarding": true,
+          "moving:serial-inspection-lift": false,
+          "at:serial-inspection-lift:LOWER": true,
+          "at:serial-inspection-lift:UPPER": false,
+          "closed:serial-inspection-dock": true,
+          "clear:serial-inspection-dock": false,
+          "safety:serial-inspection-dock": false,
+          "moving:serial-inspection-dock": false,
+          "closed:serial-inspection-exit-door": false,
+          "clear:serial-inspection-exit-door": false,
+          "safety:serial-inspection-exit-door": false,
+          "moving:serial-inspection-exit-door": true
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "shutter-open",
+            "time": 8,
+            "id": "serial-freight-gate"
+          },
+          {
+            "type": "shutter-open",
+            "time": 8,
+            "id": "serial-refuge-departure-door"
+          },
+          {
+            "type": "shutter-open",
+            "time": 8,
+            "id": "serial-freight-exit-door"
+          },
+          {
+            "type": "shutter-open",
+            "time": 8,
+            "id": "serial-inspection-boarding"
+          },
+          {
+            "type": "shutter-open",
+            "time": 8,
+            "id": "serial-inspection-exit-door"
+          },
+          {
+            "type": "land",
+            "time": 8
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "serial-near-bank",
+          "normal": {
+            "x": 0.000047957008064258844,
+            "y": 0.9999999403953552,
+            "z": -0.000007992834980541375
+          },
+          "witness": {
+            "x": -3.0000381469726562,
+            "y": 0,
+            "z": 17.996675491333008
+          },
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": 0,
+            "y": -0.0011111111380159855,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-linked-entry-to-common-bank",
+      "state": {
+        "room": "chamber-44",
+        "number": 44,
+        "mission": "If the inspection lift is at its lower dock, the boarding door opens. Board it there and use inspection.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            0.1233658716082573,
+            0.8650702238082886,
+            14.497374534606934
+          ],
+          "velocity": [
+            0.4192047116885064,
+            0,
+            -0.00888335253042074
+          ],
+          "yaw": -1.5496766935246806,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "serial-source",
+            "position": [
+              -3,
+              1.55,
+              19.96
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "serial-return",
+            "position": [
+              -6,
+              1.55,
+              12.44
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "serial-near-start",
+            "kind": "switch",
+            "label": "TRANSFER START",
+            "position": [
+              -3,
+              1.25,
+              13
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-refuge-start",
+            "kind": "switch",
+            "label": "TRANSFER START",
+            "position": [
+              3,
+              1.25,
+              -2
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-deck-a",
+            "kind": "moving-platform",
+            "label": "TRANSFER A",
+            "position": [
+              0,
+              -0.2,
+              6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "DEPARTURE",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-deck-b",
+            "kind": "moving-platform",
+            "label": "TRANSFER B",
+            "position": [
+              0,
+              -0.2,
+              -6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "DEPARTURE",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-freight-gate",
+            "kind": "shutter",
+            "label": "FREIGHT",
+            "position": [
+              0,
+              5,
+              10.08
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-refuge-arrival-door",
+            "kind": "shutter",
+            "label": "REFUGE ARRIVAL",
+            "position": [
+              0,
+              1.5,
+              -0.72
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-refuge-departure-door",
+            "kind": "shutter",
+            "label": "TRANSFER B DOCK",
+            "position": [
+              0,
+              5,
+              -3.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-far-dock-door",
+            "kind": "shutter",
+            "label": "FAR DOCK",
+            "position": [
+              0,
+              1.5,
+              -16.72
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-freight-exit-door",
+            "kind": "shutter",
+            "label": "FREIGHT EXIT",
+            "position": [
+              0,
+              5,
+              -20.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-inspection-boarding",
+            "kind": "shutter",
+            "label": "BOARDING",
+            "position": [
+              4,
+              5,
+              15
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-inspection-lift",
+            "kind": "lift",
+            "label": "INSPECTION",
+            "position": [
+              8,
+              -0.2,
+              15
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "LOWER",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-inspection-dock",
+            "kind": "shutter",
+            "label": "UPPER DOCK",
+            "position": [
+              10.72,
+              5.7,
+              15
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-inspection-exit-door",
+            "kind": "shutter",
+            "label": "INSPECTION EXIT",
+            "position": [
+              17.12,
+              9.2,
+              15
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "serial-source",
+            "position": [
+              -3,
+              1.75,
+              19.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "serial-return",
+            "position": [
+              -6,
+              1.75,
+              12.415
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "freight-exit",
+            "label": "EXIT",
+            "position": [
+              0,
+              1.5,
+              -22.490000000000002
+            ],
+            "size": [
+              3.16,
+              3,
+              3.7799999999999976
+            ]
+          },
+          {
+            "id": "inspection-exit",
+            "label": "EXIT",
+            "position": [
+              19.490000000000002,
+              5.7,
+              15
+            ],
+            "size": [
+              3.7799999999999976,
+              3,
+              3.1599999999999984
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "moving:serial-near-start": false,
+          "moving:serial-refuge-start": false,
+          "moving:serial-deck-a": false,
+          "at:serial-deck-a:DEPARTURE": true,
+          "at:serial-deck-a:REFUGE": false,
+          "moving:serial-deck-b": false,
+          "at:serial-deck-b:DEPARTURE": true,
+          "at:serial-deck-b:FAR": false,
+          "closed:serial-freight-gate": false,
+          "clear:serial-freight-gate": true,
+          "safety:serial-freight-gate": false,
+          "door-safety": false,
+          "moving:serial-freight-gate": false,
+          "closed:serial-refuge-arrival-door": true,
+          "clear:serial-refuge-arrival-door": false,
+          "safety:serial-refuge-arrival-door": false,
+          "moving:serial-refuge-arrival-door": false,
+          "closed:serial-refuge-departure-door": false,
+          "clear:serial-refuge-departure-door": true,
+          "safety:serial-refuge-departure-door": false,
+          "moving:serial-refuge-departure-door": false,
+          "closed:serial-far-dock-door": true,
+          "clear:serial-far-dock-door": false,
+          "safety:serial-far-dock-door": false,
+          "moving:serial-far-dock-door": false,
+          "closed:serial-freight-exit-door": false,
+          "clear:serial-freight-exit-door": true,
+          "safety:serial-freight-exit-door": false,
+          "moving:serial-freight-exit-door": false,
+          "closed:serial-inspection-boarding": false,
+          "clear:serial-inspection-boarding": true,
+          "safety:serial-inspection-boarding": false,
+          "moving:serial-inspection-boarding": false,
+          "moving:serial-inspection-lift": false,
+          "at:serial-inspection-lift:LOWER": true,
+          "at:serial-inspection-lift:UPPER": false,
+          "closed:serial-inspection-dock": true,
+          "clear:serial-inspection-dock": false,
+          "safety:serial-inspection-dock": false,
+          "moving:serial-inspection-dock": false,
+          "closed:serial-inspection-exit-door": false,
+          "clear:serial-inspection-exit-door": true,
+          "safety:serial-inspection-exit-door": false,
+          "moving:serial-inspection-exit-door": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "shutter-open",
+            "time": 8,
+            "id": "serial-freight-gate"
+          },
+          {
+            "type": "shutter-open",
+            "time": 8,
+            "id": "serial-refuge-departure-door"
+          },
+          {
+            "type": "shutter-open",
+            "time": 8,
+            "id": "serial-freight-exit-door"
+          },
+          {
+            "type": "shutter-open",
+            "time": 8,
+            "id": "serial-inspection-boarding"
+          },
+          {
+            "type": "shutter-open",
+            "time": 8,
+            "id": "serial-inspection-exit-door"
+          },
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "portalA",
+            "time": 300,
+            "surface": "serial-source",
+            "point": [
+              -3,
+              1.55,
+              19.96
+            ]
+          },
+          {
+            "type": "portalB",
+            "time": 308,
+            "surface": "serial-return",
+            "point": [
+              -6,
+              1.55,
+              12.44
+            ]
+          },
+          {
+            "type": "footstep",
+            "time": 425
+          },
+          {
+            "type": "footstep",
+            "time": 850
+          },
+          {
+            "type": "enter",
+            "time": 908,
+            "body": "player",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "serial-source",
+            "toSurface": "serial-return",
+            "speed": 4.787345848874565,
+            "exitSpeed": 4.787345848874565,
+            "held": null
+          },
+          {
+            "type": "land",
+            "time": 917
+          },
+          {
+            "type": "footstep",
+            "time": 1275
+          },
+          {
+            "type": "footstep",
+            "time": 1700
+          },
+          {
+            "type": "footstep",
+            "time": 2125
+          },
+          {
+            "type": "footstep",
+            "time": 2550
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "serial-near-bank",
+          "normal": {
+            "x": 0,
+            "y": 1,
+            "z": -0.0000079631463449914
+          },
+          "witness": {
+            "x": 0.11987137794494629,
+            "y": 0,
+            "z": 14.49744701385498
+          },
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": 0.0034933725837618113,
+            "y": -0.0011111111380159855,
+            "z": -0.00007402793562505394
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-lower-dock-inspection-boarding",
+      "state": {
+        "room": "chamber-44",
+        "number": 44,
+        "mission": "If the inspection lift is at its lower dock, the boarding door opens. Board it there and use inspection.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            8.121932983398438,
+            0.8649992346763611,
+            14.997919082641602
+          ],
+          "velocity": [
+            0.41924006026533567,
+            0,
+            -0.007104357879380038
+          ],
+          "yaw": -1.5539294077670005,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "serial-source",
+            "position": [
+              -3,
+              1.55,
+              19.96
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "serial-return",
+            "position": [
+              -6,
+              1.55,
+              12.44
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "serial-near-start",
+            "kind": "switch",
+            "label": "TRANSFER START",
+            "position": [
+              -3,
+              1.25,
+              13
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-refuge-start",
+            "kind": "switch",
+            "label": "TRANSFER START",
+            "position": [
+              3,
+              1.25,
+              -2
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-deck-a",
+            "kind": "moving-platform",
+            "label": "TRANSFER A",
+            "position": [
+              0,
+              -0.2,
+              3.274999999998979
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0.6812500000002553,
+            "choice": "DEPARTURE",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-deck-b",
+            "kind": "moving-platform",
+            "label": "TRANSFER B",
+            "position": [
+              0,
+              -0.2,
+              -6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "DEPARTURE",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-freight-gate",
+            "kind": "shutter",
+            "label": "FREIGHT",
+            "position": [
+              0,
+              1.5,
+              10.08
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-refuge-arrival-door",
+            "kind": "shutter",
+            "label": "REFUGE ARRIVAL",
+            "position": [
+              0,
+              1.5,
+              -0.72
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-refuge-departure-door",
+            "kind": "shutter",
+            "label": "TRANSFER B DOCK",
+            "position": [
+              0,
+              5,
+              -3.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-far-dock-door",
+            "kind": "shutter",
+            "label": "FAR DOCK",
+            "position": [
+              0,
+              1.5,
+              -16.72
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-freight-exit-door",
+            "kind": "shutter",
+            "label": "FREIGHT EXIT",
+            "position": [
+              0,
+              5,
+              -20.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-inspection-boarding",
+            "kind": "shutter",
+            "label": "BOARDING",
+            "position": [
+              4,
+              5,
+              15
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-inspection-lift",
+            "kind": "lift",
+            "label": "INSPECTION",
+            "position": [
+              8,
+              -0.2,
+              15
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "LOWER",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-inspection-dock",
+            "kind": "shutter",
+            "label": "UPPER DOCK",
+            "position": [
+              10.72,
+              5.7,
+              15
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-inspection-exit-door",
+            "kind": "shutter",
+            "label": "INSPECTION EXIT",
+            "position": [
+              17.12,
+              9.2,
+              15
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "serial-source",
+            "position": [
+              -3,
+              1.75,
+              19.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "serial-return",
+            "position": [
+              -6,
+              1.75,
+              12.415
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "freight-exit",
+            "label": "EXIT",
+            "position": [
+              0,
+              1.5,
+              -22.490000000000002
+            ],
+            "size": [
+              3.16,
+              3,
+              3.7799999999999976
+            ]
+          },
+          {
+            "id": "inspection-exit",
+            "label": "EXIT",
+            "position": [
+              19.490000000000002,
+              5.7,
+              15
+            ],
+            "size": [
+              3.7799999999999976,
+              3,
+              3.1599999999999984
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "moving:serial-near-start": false,
+          "moving:serial-refuge-start": false,
+          "moving:serial-deck-a": true,
+          "at:serial-deck-a:DEPARTURE": false,
+          "at:serial-deck-a:REFUGE": false,
+          "moving:serial-deck-b": false,
+          "at:serial-deck-b:DEPARTURE": true,
+          "at:serial-deck-b:FAR": false,
+          "closed:serial-freight-gate": true,
+          "clear:serial-freight-gate": false,
+          "safety:serial-freight-gate": false,
+          "door-safety": false,
+          "moving:serial-freight-gate": false,
+          "closed:serial-refuge-arrival-door": true,
+          "clear:serial-refuge-arrival-door": false,
+          "safety:serial-refuge-arrival-door": false,
+          "moving:serial-refuge-arrival-door": false,
+          "closed:serial-refuge-departure-door": false,
+          "clear:serial-refuge-departure-door": true,
+          "safety:serial-refuge-departure-door": false,
+          "moving:serial-refuge-departure-door": false,
+          "closed:serial-far-dock-door": true,
+          "clear:serial-far-dock-door": false,
+          "safety:serial-far-dock-door": false,
+          "moving:serial-far-dock-door": false,
+          "closed:serial-freight-exit-door": false,
+          "clear:serial-freight-exit-door": true,
+          "safety:serial-freight-exit-door": false,
+          "moving:serial-freight-exit-door": false,
+          "closed:serial-inspection-boarding": false,
+          "clear:serial-inspection-boarding": true,
+          "safety:serial-inspection-boarding": false,
+          "moving:serial-inspection-boarding": false,
+          "moving:serial-inspection-lift": false,
+          "at:serial-inspection-lift:LOWER": true,
+          "at:serial-inspection-lift:UPPER": false,
+          "closed:serial-inspection-dock": true,
+          "clear:serial-inspection-dock": false,
+          "safety:serial-inspection-dock": false,
+          "moving:serial-inspection-dock": false,
+          "closed:serial-inspection-exit-door": false,
+          "clear:serial-inspection-exit-door": true,
+          "safety:serial-inspection-exit-door": false,
+          "moving:serial-inspection-exit-door": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "lift-motor",
+            "time": 12008,
+            "id": "serial-deck-a"
+          },
+          {
+            "type": "shutter-close",
+            "time": 12017,
+            "id": "serial-freight-gate"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 13508,
+            "id": "serial-inspection-lift",
+            "value": "UPPER"
+          },
+          {
+            "type": "shutter-open",
+            "time": 13517,
+            "id": "serial-inspection-dock"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 16008,
+            "id": "serial-deck-a",
+            "value": "REFUGE"
+          },
+          {
+            "type": "shutter-open",
+            "time": 16017,
+            "id": "serial-refuge-arrival-door"
+          },
+          {
+            "type": "lift-motor",
+            "time": 23508,
+            "id": "serial-inspection-lift"
+          },
+          {
+            "type": "shutter-close",
+            "time": 23517,
+            "id": "serial-inspection-dock"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 27008,
+            "id": "serial-inspection-lift",
+            "value": "base"
+          },
+          {
+            "type": "shutter-open",
+            "time": 27017,
+            "id": "serial-inspection-boarding"
+          },
+          {
+            "type": "footstep",
+            "time": 27817
+          },
+          {
+            "type": "lift-motor",
+            "time": 28008,
+            "id": "serial-deck-a"
+          },
+          {
+            "type": "shutter-close",
+            "time": 28017,
+            "id": "serial-refuge-arrival-door"
+          },
+          {
+            "type": "footstep",
+            "time": 28242
+          },
+          {
+            "type": "footstep",
+            "time": 28667
+          },
+          {
+            "type": "footstep",
+            "time": 29092
+          }
+        ]
+      },
+      "contacts": []
+    },
+    {
+      "label": "actual-requested-physical-completion",
+      "state": {
+        "room": "chamber-44",
+        "number": 44,
+        "mission": "If the inspection lift is at its lower dock, the boarding door opens. Board it there and use inspection.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            17.60346031188965,
+            5.06488037109375,
+            14.9999418258667
+          ],
+          "velocity": [
+            4.799999998457711,
+            0,
+            0.00011383420896448692
+          ],
+          "yaw": -1.5708205939274875,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "serial-source",
+            "position": [
+              -3,
+              1.55,
+              19.96
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "serial-return",
+            "position": [
+              -6,
+              1.55,
+              12.44
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "serial-near-start",
+            "kind": "switch",
+            "label": "TRANSFER START",
+            "position": [
+              -3,
+              1.25,
+              13
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-refuge-start",
+            "kind": "switch",
+            "label": "TRANSFER START",
+            "position": [
+              3,
+              1.25,
+              -2
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-deck-a",
+            "kind": "moving-platform",
+            "label": "TRANSFER A",
+            "position": [
+              0,
+              -0.2,
+              6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "DEPARTURE",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-deck-b",
+            "kind": "moving-platform",
+            "label": "TRANSFER B",
+            "position": [
+              0,
+              -0.2,
+              -6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "DEPARTURE",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-freight-gate",
+            "kind": "shutter",
+            "label": "FREIGHT",
+            "position": [
+              0,
+              5,
+              10.08
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-refuge-arrival-door",
+            "kind": "shutter",
+            "label": "REFUGE ARRIVAL",
+            "position": [
+              0,
+              1.5,
+              -0.72
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-refuge-departure-door",
+            "kind": "shutter",
+            "label": "TRANSFER B DOCK",
+            "position": [
+              0,
+              5,
+              -3.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-far-dock-door",
+            "kind": "shutter",
+            "label": "FAR DOCK",
+            "position": [
+              0,
+              1.5,
+              -16.72
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-freight-exit-door",
+            "kind": "shutter",
+            "label": "FREIGHT EXIT",
+            "position": [
+              0,
+              5,
+              -20.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-inspection-boarding",
+            "kind": "shutter",
+            "label": "BOARDING",
+            "position": [
+              4,
+              1.5,
+              15
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-inspection-lift",
+            "kind": "lift",
+            "label": "INSPECTION",
+            "position": [
+              8,
+              4,
+              15
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": "LOWER",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-inspection-dock",
+            "kind": "shutter",
+            "label": "UPPER DOCK",
+            "position": [
+              10.72,
+              9.2,
+              15
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-inspection-exit-door",
+            "kind": "shutter",
+            "label": "INSPECTION EXIT",
+            "position": [
+              17.12,
+              9.2,
+              15
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "serial-source",
+            "position": [
+              -3,
+              1.75,
+              19.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "serial-return",
+            "position": [
+              -6,
+              1.75,
+              12.415
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "freight-exit",
+            "label": "EXIT",
+            "position": [
+              0,
+              1.5,
+              -22.490000000000002
+            ],
+            "size": [
+              3.16,
+              3,
+              3.7799999999999976
+            ]
+          },
+          {
+            "id": "inspection-exit",
+            "label": "EXIT",
+            "position": [
+              19.490000000000002,
+              5.7,
+              15
+            ],
+            "size": [
+              3.7799999999999976,
+              3,
+              3.1599999999999984
+            ]
+          }
+        ],
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "inspection-exit",
+          "reason": "",
+          "events": [
+            {
+              "type": "shutter-open",
+              "time": 8,
+              "id": "serial-freight-gate"
+            },
+            {
+              "type": "shutter-open",
+              "time": 8,
+              "id": "serial-refuge-departure-door"
+            },
+            {
+              "type": "shutter-open",
+              "time": 8,
+              "id": "serial-freight-exit-door"
+            },
+            {
+              "type": "shutter-open",
+              "time": 8,
+              "id": "serial-inspection-boarding"
+            },
+            {
+              "type": "shutter-open",
+              "time": 8,
+              "id": "serial-inspection-exit-door"
+            },
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "portalA",
+              "time": 300,
+              "surface": "serial-source",
+              "point": [
+                -3,
+                1.55,
+                19.96
+              ]
+            },
+            {
+              "type": "portalB",
+              "time": 308,
+              "surface": "serial-return",
+              "point": [
+                -6,
+                1.55,
+                12.44
+              ]
+            },
+            {
+              "type": "footstep",
+              "time": 425
+            },
+            {
+              "type": "footstep",
+              "time": 850
+            },
+            {
+              "type": "enter",
+              "time": 908,
+              "body": "player",
+              "from": 0,
+              "to": 1,
+              "fromSurface": "serial-source",
+              "toSurface": "serial-return",
+              "speed": 4.787345848874565,
+              "exitSpeed": 4.787345848874565,
+              "held": null
+            },
+            {
+              "type": "land",
+              "time": 917
+            },
+            {
+              "type": "footstep",
+              "time": 1275
+            },
+            {
+              "type": "footstep",
+              "time": 1700
+            },
+            {
+              "type": "footstep",
+              "time": 2125
+            },
+            {
+              "type": "footstep",
+              "time": 2550
+            },
+            {
+              "type": "footstep",
+              "time": 2975
+            },
+            {
+              "type": "footstep",
+              "time": 3400
+            },
+            {
+              "type": "lift-motor",
+              "time": 10008,
+              "id": "serial-inspection-lift"
+            },
+            {
+              "type": "shutter-close",
+              "time": 10017,
+              "id": "serial-inspection-boarding"
+            },
+            {
+              "type": "lift-motor",
+              "time": 12008,
+              "id": "serial-deck-a"
+            },
+            {
+              "type": "shutter-close",
+              "time": 12017,
+              "id": "serial-freight-gate"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 13508,
+              "id": "serial-inspection-lift",
+              "value": "UPPER"
+            },
+            {
+              "type": "shutter-open",
+              "time": 13517,
+              "id": "serial-inspection-dock"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 16008,
+              "id": "serial-deck-a",
+              "value": "REFUGE"
+            },
+            {
+              "type": "shutter-open",
+              "time": 16017,
+              "id": "serial-refuge-arrival-door"
+            },
+            {
+              "type": "lift-motor",
+              "time": 23508,
+              "id": "serial-inspection-lift"
+            },
+            {
+              "type": "shutter-close",
+              "time": 23517,
+              "id": "serial-inspection-dock"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 27008,
+              "id": "serial-inspection-lift",
+              "value": "base"
+            },
+            {
+              "type": "shutter-open",
+              "time": 27017,
+              "id": "serial-inspection-boarding"
+            },
+            {
+              "type": "footstep",
+              "time": 27817
+            },
+            {
+              "type": "lift-motor",
+              "time": 28008,
+              "id": "serial-deck-a"
+            },
+            {
+              "type": "shutter-close",
+              "time": 28017,
+              "id": "serial-refuge-arrival-door"
+            },
+            {
+              "type": "footstep",
+              "time": 28242
+            },
+            {
+              "type": "footstep",
+              "time": 28667
+            },
+            {
+              "type": "footstep",
+              "time": 29092
+            },
+            {
+              "type": "lift-arrival",
+              "time": 32008,
+              "id": "serial-deck-a",
+              "value": "base"
+            },
+            {
+              "type": "shutter-open",
+              "time": 32017,
+              "id": "serial-freight-gate"
+            },
+            {
+              "type": "lift-motor",
+              "time": 37008,
+              "id": "serial-inspection-lift"
+            },
+            {
+              "type": "shutter-close",
+              "time": 37017,
+              "id": "serial-inspection-boarding"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 40508,
+              "id": "serial-inspection-lift",
+              "value": "UPPER"
+            },
+            {
+              "type": "shutter-open",
+              "time": 40517,
+              "id": "serial-inspection-dock"
+            },
+            {
+              "type": "footstep",
+              "time": 41317
+            },
+            {
+              "type": "footstep",
+              "time": 41742
+            },
+            {
+              "type": "footstep",
+              "time": 42292
+            },
+            {
+              "type": "footstep",
+              "time": 42717
+            },
+            {
+              "type": "footstep",
+              "time": 43142
+            }
+          ],
+          "mechanisms": [
+            "shutters",
+            "portals",
+            "lifts"
+          ]
+        },
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "moving:serial-near-start": false,
+          "moving:serial-refuge-start": false,
+          "moving:serial-deck-a": false,
+          "at:serial-deck-a:DEPARTURE": true,
+          "at:serial-deck-a:REFUGE": false,
+          "moving:serial-deck-b": false,
+          "at:serial-deck-b:DEPARTURE": true,
+          "at:serial-deck-b:FAR": false,
+          "closed:serial-freight-gate": false,
+          "clear:serial-freight-gate": true,
+          "safety:serial-freight-gate": false,
+          "door-safety": true,
+          "moving:serial-freight-gate": false,
+          "closed:serial-refuge-arrival-door": true,
+          "clear:serial-refuge-arrival-door": false,
+          "safety:serial-refuge-arrival-door": false,
+          "moving:serial-refuge-arrival-door": false,
+          "closed:serial-refuge-departure-door": false,
+          "clear:serial-refuge-departure-door": true,
+          "safety:serial-refuge-departure-door": false,
+          "moving:serial-refuge-departure-door": false,
+          "closed:serial-far-dock-door": true,
+          "clear:serial-far-dock-door": false,
+          "safety:serial-far-dock-door": false,
+          "moving:serial-far-dock-door": false,
+          "closed:serial-freight-exit-door": false,
+          "clear:serial-freight-exit-door": true,
+          "safety:serial-freight-exit-door": false,
+          "moving:serial-freight-exit-door": false,
+          "closed:serial-inspection-boarding": true,
+          "clear:serial-inspection-boarding": false,
+          "safety:serial-inspection-boarding": false,
+          "moving:serial-inspection-boarding": false,
+          "moving:serial-inspection-lift": false,
+          "at:serial-inspection-lift:LOWER": false,
+          "at:serial-inspection-lift:UPPER": true,
+          "closed:serial-inspection-dock": false,
+          "clear:serial-inspection-dock": true,
+          "safety:serial-inspection-dock": false,
+          "moving:serial-inspection-dock": false,
+          "closed:serial-inspection-exit-door": false,
+          "clear:serial-inspection-exit-door": true,
+          "safety:serial-inspection-exit-door": true,
+          "moving:serial-inspection-exit-door": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "shutter-close",
+            "time": 28017,
+            "id": "serial-refuge-arrival-door"
+          },
+          {
+            "type": "footstep",
+            "time": 28242
+          },
+          {
+            "type": "footstep",
+            "time": 28667
+          },
+          {
+            "type": "footstep",
+            "time": 29092
+          },
+          {
+            "type": "lift-arrival",
+            "time": 32008,
+            "id": "serial-deck-a",
+            "value": "base"
+          },
+          {
+            "type": "shutter-open",
+            "time": 32017,
+            "id": "serial-freight-gate"
+          },
+          {
+            "type": "lift-motor",
+            "time": 37008,
+            "id": "serial-inspection-lift"
+          },
+          {
+            "type": "shutter-close",
+            "time": 37017,
+            "id": "serial-inspection-boarding"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 40508,
+            "id": "serial-inspection-lift",
+            "value": "UPPER"
+          },
+          {
+            "type": "shutter-open",
+            "time": 40517,
+            "id": "serial-inspection-dock"
+          },
+          {
+            "type": "footstep",
+            "time": 41317
+          },
+          {
+            "type": "footstep",
+            "time": 41742
+          },
+          {
+            "type": "footstep",
+            "time": 42292
+          },
+          {
+            "type": "footstep",
+            "time": 42717
+          },
+          {
+            "type": "footstep",
+            "time": 43142
+          },
+          {
+            "type": "complete",
+            "time": 43508,
+            "chamber": 44
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "serial-inspection-vestibule",
+          "normal": {
+            "x": -0.000076166725193616,
+            "y": 0.9999999403953552,
+            "z": 0
+          },
+          "witness": {
+            "x": 17.57146644592285,
+            "y": 4.199988842010498,
+            "z": 14.99228286743164
+          },
+          "applied": {
+            "x": 0.007991834543645382,
+            "y": -0.0002219954039901495,
+            "z": 1.8953002722810197e-7
+          },
+          "remaining": {
+            "x": 0.03200816363096237,
+            "y": -0.000889115734025836,
+            "z": 7.590883797092829e-7
+          }
+        }
+      ]
+    },
+    {
+      "label": "final",
+      "state": {
+        "room": "chamber-44",
+        "number": 44,
+        "mission": "If the inspection lift is at its lower dock, the boarding door opens. Board it there and use inspection.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            17.60346031188965,
+            5.06488037109375,
+            14.9999418258667
+          ],
+          "velocity": [
+            4.799999998457711,
+            0,
+            0.00011383420896448692
+          ],
+          "yaw": -1.5708205939274875,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "serial-source",
+            "position": [
+              -3,
+              1.55,
+              19.96
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "serial-return",
+            "position": [
+              -6,
+              1.55,
+              12.44
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "serial-near-start",
+            "kind": "switch",
+            "label": "TRANSFER START",
+            "position": [
+              -3,
+              1.25,
+              13
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-refuge-start",
+            "kind": "switch",
+            "label": "TRANSFER START",
+            "position": [
+              3,
+              1.25,
+              -2
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-deck-a",
+            "kind": "moving-platform",
+            "label": "TRANSFER A",
+            "position": [
+              0,
+              -0.2,
+              6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "DEPARTURE",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-deck-b",
+            "kind": "moving-platform",
+            "label": "TRANSFER B",
+            "position": [
+              0,
+              -0.2,
+              -6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "DEPARTURE",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-freight-gate",
+            "kind": "shutter",
+            "label": "FREIGHT",
+            "position": [
+              0,
+              5,
+              10.08
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-refuge-arrival-door",
+            "kind": "shutter",
+            "label": "REFUGE ARRIVAL",
+            "position": [
+              0,
+              1.5,
+              -0.72
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-refuge-departure-door",
+            "kind": "shutter",
+            "label": "TRANSFER B DOCK",
+            "position": [
+              0,
+              5,
+              -3.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-far-dock-door",
+            "kind": "shutter",
+            "label": "FAR DOCK",
+            "position": [
+              0,
+              1.5,
+              -16.72
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-freight-exit-door",
+            "kind": "shutter",
+            "label": "FREIGHT EXIT",
+            "position": [
+              0,
+              5,
+              -20.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-inspection-boarding",
+            "kind": "shutter",
+            "label": "BOARDING",
+            "position": [
+              4,
+              1.5,
+              15
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-inspection-lift",
+            "kind": "lift",
+            "label": "INSPECTION",
+            "position": [
+              8,
+              4,
+              15
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": "LOWER",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-inspection-dock",
+            "kind": "shutter",
+            "label": "UPPER DOCK",
+            "position": [
+              10.72,
+              9.2,
+              15
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "serial-inspection-exit-door",
+            "kind": "shutter",
+            "label": "INSPECTION EXIT",
+            "position": [
+              17.12,
+              9.2,
+              15
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "serial-source",
+            "position": [
+              -3,
+              1.75,
+              19.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "serial-return",
+            "position": [
+              -6,
+              1.75,
+              12.415
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "freight-exit",
+            "label": "EXIT",
+            "position": [
+              0,
+              1.5,
+              -22.490000000000002
+            ],
+            "size": [
+              3.16,
+              3,
+              3.7799999999999976
+            ]
+          },
+          {
+            "id": "inspection-exit",
+            "label": "EXIT",
+            "position": [
+              19.490000000000002,
+              5.7,
+              15
+            ],
+            "size": [
+              3.7799999999999976,
+              3,
+              3.1599999999999984
+            ]
+          }
+        ],
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "inspection-exit",
+          "reason": "",
+          "events": [
+            {
+              "type": "shutter-open",
+              "time": 8,
+              "id": "serial-freight-gate"
+            },
+            {
+              "type": "shutter-open",
+              "time": 8,
+              "id": "serial-refuge-departure-door"
+            },
+            {
+              "type": "shutter-open",
+              "time": 8,
+              "id": "serial-freight-exit-door"
+            },
+            {
+              "type": "shutter-open",
+              "time": 8,
+              "id": "serial-inspection-boarding"
+            },
+            {
+              "type": "shutter-open",
+              "time": 8,
+              "id": "serial-inspection-exit-door"
+            },
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "portalA",
+              "time": 300,
+              "surface": "serial-source",
+              "point": [
+                -3,
+                1.55,
+                19.96
+              ]
+            },
+            {
+              "type": "portalB",
+              "time": 308,
+              "surface": "serial-return",
+              "point": [
+                -6,
+                1.55,
+                12.44
+              ]
+            },
+            {
+              "type": "footstep",
+              "time": 425
+            },
+            {
+              "type": "footstep",
+              "time": 850
+            },
+            {
+              "type": "enter",
+              "time": 908,
+              "body": "player",
+              "from": 0,
+              "to": 1,
+              "fromSurface": "serial-source",
+              "toSurface": "serial-return",
+              "speed": 4.787345848874565,
+              "exitSpeed": 4.787345848874565,
+              "held": null
+            },
+            {
+              "type": "land",
+              "time": 917
+            },
+            {
+              "type": "footstep",
+              "time": 1275
+            },
+            {
+              "type": "footstep",
+              "time": 1700
+            },
+            {
+              "type": "footstep",
+              "time": 2125
+            },
+            {
+              "type": "footstep",
+              "time": 2550
+            },
+            {
+              "type": "footstep",
+              "time": 2975
+            },
+            {
+              "type": "footstep",
+              "time": 3400
+            },
+            {
+              "type": "lift-motor",
+              "time": 10008,
+              "id": "serial-inspection-lift"
+            },
+            {
+              "type": "shutter-close",
+              "time": 10017,
+              "id": "serial-inspection-boarding"
+            },
+            {
+              "type": "lift-motor",
+              "time": 12008,
+              "id": "serial-deck-a"
+            },
+            {
+              "type": "shutter-close",
+              "time": 12017,
+              "id": "serial-freight-gate"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 13508,
+              "id": "serial-inspection-lift",
+              "value": "UPPER"
+            },
+            {
+              "type": "shutter-open",
+              "time": 13517,
+              "id": "serial-inspection-dock"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 16008,
+              "id": "serial-deck-a",
+              "value": "REFUGE"
+            },
+            {
+              "type": "shutter-open",
+              "time": 16017,
+              "id": "serial-refuge-arrival-door"
+            },
+            {
+              "type": "lift-motor",
+              "time": 23508,
+              "id": "serial-inspection-lift"
+            },
+            {
+              "type": "shutter-close",
+              "time": 23517,
+              "id": "serial-inspection-dock"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 27008,
+              "id": "serial-inspection-lift",
+              "value": "base"
+            },
+            {
+              "type": "shutter-open",
+              "time": 27017,
+              "id": "serial-inspection-boarding"
+            },
+            {
+              "type": "footstep",
+              "time": 27817
+            },
+            {
+              "type": "lift-motor",
+              "time": 28008,
+              "id": "serial-deck-a"
+            },
+            {
+              "type": "shutter-close",
+              "time": 28017,
+              "id": "serial-refuge-arrival-door"
+            },
+            {
+              "type": "footstep",
+              "time": 28242
+            },
+            {
+              "type": "footstep",
+              "time": 28667
+            },
+            {
+              "type": "footstep",
+              "time": 29092
+            },
+            {
+              "type": "lift-arrival",
+              "time": 32008,
+              "id": "serial-deck-a",
+              "value": "base"
+            },
+            {
+              "type": "shutter-open",
+              "time": 32017,
+              "id": "serial-freight-gate"
+            },
+            {
+              "type": "lift-motor",
+              "time": 37008,
+              "id": "serial-inspection-lift"
+            },
+            {
+              "type": "shutter-close",
+              "time": 37017,
+              "id": "serial-inspection-boarding"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 40508,
+              "id": "serial-inspection-lift",
+              "value": "UPPER"
+            },
+            {
+              "type": "shutter-open",
+              "time": 40517,
+              "id": "serial-inspection-dock"
+            },
+            {
+              "type": "footstep",
+              "time": 41317
+            },
+            {
+              "type": "footstep",
+              "time": 41742
+            },
+            {
+              "type": "footstep",
+              "time": 42292
+            },
+            {
+              "type": "footstep",
+              "time": 42717
+            },
+            {
+              "type": "footstep",
+              "time": 43142
+            }
+          ],
+          "mechanisms": [
+            "shutters",
+            "portals",
+            "lifts"
+          ]
+        },
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "moving:serial-near-start": false,
+          "moving:serial-refuge-start": false,
+          "moving:serial-deck-a": false,
+          "at:serial-deck-a:DEPARTURE": true,
+          "at:serial-deck-a:REFUGE": false,
+          "moving:serial-deck-b": false,
+          "at:serial-deck-b:DEPARTURE": true,
+          "at:serial-deck-b:FAR": false,
+          "closed:serial-freight-gate": false,
+          "clear:serial-freight-gate": true,
+          "safety:serial-freight-gate": false,
+          "door-safety": true,
+          "moving:serial-freight-gate": false,
+          "closed:serial-refuge-arrival-door": true,
+          "clear:serial-refuge-arrival-door": false,
+          "safety:serial-refuge-arrival-door": false,
+          "moving:serial-refuge-arrival-door": false,
+          "closed:serial-refuge-departure-door": false,
+          "clear:serial-refuge-departure-door": true,
+          "safety:serial-refuge-departure-door": false,
+          "moving:serial-refuge-departure-door": false,
+          "closed:serial-far-dock-door": true,
+          "clear:serial-far-dock-door": false,
+          "safety:serial-far-dock-door": false,
+          "moving:serial-far-dock-door": false,
+          "closed:serial-freight-exit-door": false,
+          "clear:serial-freight-exit-door": true,
+          "safety:serial-freight-exit-door": false,
+          "moving:serial-freight-exit-door": false,
+          "closed:serial-inspection-boarding": true,
+          "clear:serial-inspection-boarding": false,
+          "safety:serial-inspection-boarding": false,
+          "moving:serial-inspection-boarding": false,
+          "moving:serial-inspection-lift": false,
+          "at:serial-inspection-lift:LOWER": false,
+          "at:serial-inspection-lift:UPPER": true,
+          "closed:serial-inspection-dock": false,
+          "clear:serial-inspection-dock": true,
+          "safety:serial-inspection-dock": false,
+          "moving:serial-inspection-dock": false,
+          "closed:serial-inspection-exit-door": false,
+          "clear:serial-inspection-exit-door": true,
+          "safety:serial-inspection-exit-door": true,
+          "moving:serial-inspection-exit-door": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "shutter-close",
+            "time": 28017,
+            "id": "serial-refuge-arrival-door"
+          },
+          {
+            "type": "footstep",
+            "time": 28242
+          },
+          {
+            "type": "footstep",
+            "time": 28667
+          },
+          {
+            "type": "footstep",
+            "time": 29092
+          },
+          {
+            "type": "lift-arrival",
+            "time": 32008,
+            "id": "serial-deck-a",
+            "value": "base"
+          },
+          {
+            "type": "shutter-open",
+            "time": 32017,
+            "id": "serial-freight-gate"
+          },
+          {
+            "type": "lift-motor",
+            "time": 37008,
+            "id": "serial-inspection-lift"
+          },
+          {
+            "type": "shutter-close",
+            "time": 37017,
+            "id": "serial-inspection-boarding"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 40508,
+            "id": "serial-inspection-lift",
+            "value": "UPPER"
+          },
+          {
+            "type": "shutter-open",
+            "time": 40517,
+            "id": "serial-inspection-dock"
+          },
+          {
+            "type": "footstep",
+            "time": 41317
+          },
+          {
+            "type": "footstep",
+            "time": 41742
+          },
+          {
+            "type": "footstep",
+            "time": 42292
+          },
+          {
+            "type": "footstep",
+            "time": 42717
+          },
+          {
+            "type": "footstep",
+            "time": 43142
+          },
+          {
+            "type": "complete",
+            "time": 43508,
+            "chamber": 44
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "serial-inspection-vestibule",
+          "normal": {
+            "x": -0.000076166725193616,
+            "y": 0.9999999403953552,
+            "z": 0
+          },
+          "witness": {
+            "x": 17.57146644592285,
+            "y": 4.199988842010498,
+            "z": 14.99228286743164
+          },
+          "applied": {
+            "x": 0.007991834543645382,
+            "y": -0.0002219954039901495,
+            "z": 1.8953002722810197e-7
+          },
+          "remaining": {
+            "x": 0.03200816363096237,
+            "y": -0.000889115734025836,
+            "z": 7.590883797092829e-7
+          }
+        }
+      ]
+    }
+  ]
+}

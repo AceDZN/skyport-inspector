@@ -1,0 +1,71 @@
+{
+  "scope": "Only visual mark metadata changed after48 first source snapshot. No collider/host/device/cargo/pad/goal/physics geometry changes. Floor normal support owned/approved separately by Root+Art; no Scene edit by author.",
+  "beforeSha256": "a89c29339b9fd575a237453fcf6c9ebf7b6d53935153f2123583c99b8d976381",
+  "afterSha256": "32e9418080191ad7069aff221a647b740b7e3be332de307643ac2861368ba01a",
+  "changedBlocks": [
+    {
+      "before": [
+        "  w.marks.push({text:station+' · '+id.toUpperCase(),position:[x,-.15,6.225],normal:[0,0,1],width:2.5,height:.27});"
+      ],
+      "after": [
+        "  w.marks.push({text:station+' · '+id.toUpperCase(),position:[x,.004,6.7],normal:[0,1,0],width:2.5,height:.27});"
+      ]
+    },
+    {
+      "before": [
+        "   {text:station+' · SOURCE TO OPERATOR',position:[x,2.65,13.975],normal:[0,0,-1],width:3.7,height:.25},",
+        "   {text:id==='deep'?'Use my deeper shaft.':'Use my shallower shaft.',position:[x,2.15,13.975],normal:[0,0,-1],width:3.7,height:.25},",
+        "   {text:id==='deep'?'Land on my upper platform.':'Land on my lower platform.',position:[x,1.7,13.975],normal:[0,0,-1],width:3.7,height:.25},"
+      ],
+      "after": [
+        "   {text:station+' · SOURCE TO OPERATOR',position:[x,2.65,13.94],normal:[0,0,-1],width:3.7,height:.25},",
+        "   {text:id==='deep'?'Use my deeper shaft.':'Use my shallower shaft.',position:[x,2.15,13.94],normal:[0,0,-1],width:3.7,height:.25},",
+        "   {text:id==='deep'?'Land on my upper platform.':'Land on my lower platform.',position:[x,1.7,13.94],normal:[0,0,-1],width:3.7,height:.25},"
+      ]
+    },
+    {
+      "before": [
+        "  w.marks.push({text:l.station+' · '+(l.id==='higher'?'UPPER':'LOWER'),position:[maxX,l.y+3.25,z],normal:[-1,0,0],width:2.4,height:.27});"
+      ],
+      "after": [
+        "  w.marks.push({text:l.station+' · '+(l.id==='higher'?'UPPER':'LOWER'),position:[maxX-.06,l.y+3.25,z],normal:[-1,0,0],width:2.4,height:.27});"
+      ]
+    },
+    {
+      "before": [
+        "  {text:'ENTRY · SOURCE TO OPERATOR',position:[-9,2.8,.625],normal:[0,0,1],width:4.6,height:.25},",
+        "  {text:'Keep my walking hatch open',position:[-9,2.3,.625],normal:[0,0,1],width:4.6,height:.25},",
+        "  {text:'while you bring a cube to my bay.',position:[-9,1.8,.625],normal:[0,0,1],width:4.6,height:.25},",
+        "  {text:'FREIGHT · SOURCE',position:[7.35,3.2,.625],normal:[0,0,1],width:3.1,height:.25},",
+        "  {text:'Send a cube to my low window.',position:[7.35,2.7,.625],normal:[0,0,1],width:3.1,height:.25},",
+        "  {text:'Then use my stairs.',position:[7.35,2.2,.625],normal:[0,0,1],width:3.1,height:.25},",
+        "  {text:'FREIGHT',position:[5,1.65,.625],normal:[0,0,1],width:1.4,height:.23},",
+        "  {text:'FREIGHT STAIRS',position:[10.5,3.35,7.225],normal:[0,0,1],width:2.5,height:.25},"
+      ],
+      "after": [
+        "  {text:'ENTRY · SOURCE TO OPERATOR',position:[-9,2.8,.66],normal:[0,0,1],width:4.6,height:.25},",
+        "  {text:'Keep my walking hatch open',position:[-9,2.3,.66],normal:[0,0,1],width:4.6,height:.25},",
+        "  {text:'while you bring a cube to my bay.',position:[-9,1.8,.66],normal:[0,0,1],width:4.6,height:.25},",
+        "  {text:'FREIGHT · SOURCE',position:[7.35,3.2,.66],normal:[0,0,1],width:3.1,height:.25},",
+        "  {text:'Send a cube to my low window.',position:[7.35,2.7,.66],normal:[0,0,1],width:3.1,height:.25},",
+        "  {text:'Then use my stairs.',position:[7.35,2.2,.66],normal:[0,0,1],width:3.1,height:.25},",
+        "  {text:'FREIGHT',position:[5,1.65,.66],normal:[0,0,1],width:1.4,height:.23},",
+        "  {text:'FREIGHT STAIRS',position:[10.5,3.35,7.26],normal:[0,0,1],width:2.5,height:.25},"
+      ]
+    },
+    {
+      "before": [
+        "  {text:'CONTROL · PROCEDURE COPY',position:[0,2.8,13.975],normal:[0,0,-1],width:4.8,height:.25},",
+        "  {text:'Is the freight lift at LOADING?',position:[0,2.3,13.975],normal:[0,0,-1],width:4.8,height:.25},",
+        "  {text:'If not, call it and wait.',position:[0,1.8,13.975],normal:[0,0,-1],width:4.8,height:.25},",
+        "  {text:'SERVICE · CROSSING',position:[18,3.35,-4],normal:[-1,0,0],width:2.8,height:.25},"
+      ],
+      "after": [
+        "  {text:'CONTROL · PROCEDURE COPY',position:[0,2.8,13.94],normal:[0,0,-1],width:4.8,height:.25},",
+        "  {text:'Is the freight lift at LOADING?',position:[0,2.3,13.94],normal:[0,0,-1],width:4.8,height:.25},",
+        "  {text:'If not, call it and wait.',position:[0,1.8,13.94],normal:[0,0,-1],width:4.8,height:.25},",
+        "  {text:'SERVICE · CROSSING',position:[5.96,3.35,-4],normal:[-1,0,0],width:2.8,height:.25},"
+      ]
+    }
+  ]
+}

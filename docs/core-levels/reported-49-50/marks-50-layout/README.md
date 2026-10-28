@@ -1,0 +1,7 @@
+# C50 backed procedure groups — source-only readability correction
+
+Lead approved the exact two-card arrangement after Art found the old first group too high above the0m walkway. Current accepted source is preserved before/after with hashes in `MARKS_ONLY.json`. Exactly one marks-position expression changed; all source text outside it is byte-identical. No compiler, native test, browser, build or recipe execution ran. D2 remains unchanged.
+
+Both full original procedure groups keep their words, named ownership and order. Both remain on the backed east annex wallX14.94, normal−X, width2.4m, line height.18m. Header/first line isY2.8 and existing line spacing.28m is retained. LOADING+FREIGHT is centredZ21.6, span[20.4,22.8], with lastY1.68. GALLERY+ARCHIVE is centredZ24.5, span[23.3,25.7], with lastY1.40. Their spans do not overlap; both fit the actual east walkwayZ20..26 and wallZ14..40. The near optical white band endsZ20, before these cards. No portal host exists on their positions.
+
+No solid, device, circuit, pad, optical pose, mission, goal, source ownership, C49 mark or route command changed. Prepared JSONL recipes retain their original creation/provenance hashes and remain unexecuted; no new readability or gameplay pass is inferred. Root will independently compare old/new physical blueprints excluding marks/notes. Actual frozen rendering, frame clearance and source-card legibility still require review.

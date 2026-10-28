@@ -25,4 +25,15 @@ export const reported4648English:Record<number,EarlyEnglishEntry>={
    physicalChange:'Deliver an ordinary compatible cube through the real low cargo opening to FREIGHT receipt. Its current pressure opens the separate full-height stair entry and upper freight exit; the upright player cannot use the cargo port. ENTRY’s maintained walking hatch and ground receiving bay remain unchanged and are a different source’s route. Either cube may supply either receipt; no original-cargo, used-window, copied-message or action-history flag is checked.',
   },
  },
+ 48:{
+  name:'Asked If the Deck Is There',chapter:'Passing On Instructions',
+  mission:'CONTROL asked if the freight lift is at LOADING. If not, call it and wait. Use the freight gallery.',
+  he:'תחנת CONTROL שאלה אם מעלית המטען נמצאת ב־LOADING. אם לא, הזמינו אותה וחכו. השתמשו בגלריית המטען.',
+  sources:[{url:source,practice:'Recognise a reported yes/no question with ask if and statement order. The question does not assert a yes answer or a current arrival. Source/copy procedures identify the same actual machine and dock; inspect current support, call the real stop if absent, and wait for actual stopped alignment. No tense backshift, grammatical answer, query-read, ride count or past-arrival flag gates the physical route.'}],
+  contrast:{
+   mission:'CONTROL asked if the service deck is at CROSSING. If not, call it and wait. Cross on its parked deck.',
+   he:'תחנת CONTROL שאלה אם משטח השירות נמצא ב־CROSSING. אם לא, הזמינו אותו וחכו. חצו על המשטח כשהוא חונה שם.',
+   physicalChange:'Call/park the independent horizontal service deck at its actual CROSSING pose, then walk across the real gap, instead of calling the absent freight lift to LOADING and riding to its upper gallery. Parking from a fixed bank without riding is valid. Both manual transports, supported banks, call stations, current dock leaves and catch stairs remain identical. No cargo/pressure, selected-target, earlier arrival, used-lift/deck or report-answer flag is added.',
+  },
+ },
 };

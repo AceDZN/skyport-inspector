@@ -1,0 +1,890 @@
+{
+  "scope": "Unregistered authored-spawn native route. Camera/WASD/E/ray-clear portals only. Decorative visibility, realtime mouse and earned save remain pending.",
+  "number": 41,
+  "contrast": true,
+  "error": null,
+  "inputs": [],
+  "ridingFrames": {},
+  "maxDeviceStep": {
+    "conditional-inspection-gate": 0,
+    "conditional-cargo-lift": 0,
+    "cargo-retrieval-leaf": 0,
+    "cargo-call-lower": 0,
+    "cargo-call-upper": 0,
+    "conditional-ferry": 0,
+    "conditional-dock-leaf": 0,
+    "conditional-freight-gate": 0
+  },
+  "events": [
+    {
+      "type": "land",
+      "time": 0.008333333333333333
+    }
+  ],
+  "checkpoints": [
+    {
+      "label": "actual-authored-spawn",
+      "state": {
+        "room": "chamber-41",
+        "number": 41,
+        "mission": "If SERVICE is pressed and POWER is not pressed, the inspection gate opens. Keep that arrangement and use inspection.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            2.985928801990667e-7,
+            0.8647589087486267,
+            11
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [
+          {
+            "id": "conditional-cube-a",
+            "position": [
+              -11,
+              0.5498895645141602,
+              10
+            ],
+            "velocity": [
+              -0.0000044214089029992465,
+              -1.488627390244801e-7,
+              -0.000004284936039766762
+            ],
+            "rotation": [
+              3.645739354851685e-7,
+              3.898047683248418e-12,
+              -3.701265143263299e-7,
+              1
+            ],
+            "angularVelocity": [
+              -0.000007747716153971851,
+              -1.5667096511688085e-26,
+              0.000007994475708983373
+            ],
+            "held": false,
+            "crossings": 0
+          },
+          {
+            "id": "conditional-cube-b",
+            "position": [
+              8.999995231628418,
+              2.9496026039123535,
+              6.999970436096191
+            ],
+            "velocity": [
+              -0.00004840204928768799,
+              -0.0000016188168956432492,
+              -0.000046856803237460554
+            ],
+            "rotation": [
+              0.000007568077307951171,
+              1.7970494883834398e-11,
+              -0.000008781722499406897,
+              1
+            ],
+            "angularVelocity": [
+              -0.00008474504284095019,
+              -2.822018660419978e-12,
+              0.0000875397672643885
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "conditional-power",
+            "position": [
+              -3,
+              0.14,
+              6
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "conditional-aux",
+            "position": [
+              3,
+              0.14,
+              6
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "conditional-service",
+            "position": [
+              -4,
+              0.14,
+              11
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "conditional-inspection-gate",
+            "kind": "shutter",
+            "label": "INSPECTION",
+            "position": [
+              -14.12,
+              1.5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "conditional-cargo-lift",
+            "kind": "lift",
+            "label": "CARGO LIFT",
+            "position": [
+              9,
+              2.2,
+              7
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "UPPER",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "cargo-retrieval-leaf",
+            "kind": "shutter",
+            "label": "CARGO ACCESS",
+            "position": [
+              9,
+              1.5,
+              9.12
+            ],
+            "size": [
+              4.4,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "cargo-call-lower",
+            "kind": "switch",
+            "label": "CARGO DOWN",
+            "position": [
+              5.7,
+              1.25,
+              10.8
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "cargo-call-upper",
+            "kind": "switch",
+            "label": "CARGO UP",
+            "position": [
+              12.3,
+              1.25,
+              10.8
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "conditional-ferry",
+            "kind": "moving-platform",
+            "label": "FREIGHT TRANSFER",
+            "position": [
+              0,
+              -0.2,
+              0
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "NEAR",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "conditional-dock-leaf",
+            "kind": "shutter",
+            "label": "FAR DOCK",
+            "position": [
+              0,
+              1.5,
+              -10.72
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "conditional-freight-gate",
+            "kind": "shutter",
+            "label": "FREIGHT",
+            "position": [
+              0,
+              1.5,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "conditional-source",
+            "position": [
+              0,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "conditional-return",
+            "position": [
+              -13.985,
+              1.75,
+              11
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 4.8,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "inspection-exit",
+            "label": "EXIT",
+            "position": [
+              -16.49,
+              1.5,
+              7
+            ],
+            "size": [
+              3.7799999999999994,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "freight-exit",
+            "label": "EXIT",
+            "position": [
+              0,
+              1.5,
+              -16.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.7799999999999994
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "conditional-power": false,
+          "conditional-aux": false,
+          "conditional-service": false,
+          "closed:conditional-inspection-gate": true,
+          "clear:conditional-inspection-gate": false,
+          "safety:conditional-inspection-gate": false,
+          "door-safety": false,
+          "moving:conditional-inspection-gate": false,
+          "moving:conditional-cargo-lift": false,
+          "at:conditional-cargo-lift:UPPER": true,
+          "at:conditional-cargo-lift:LOWER": false,
+          "closed:cargo-retrieval-leaf": true,
+          "clear:cargo-retrieval-leaf": false,
+          "safety:cargo-retrieval-leaf": false,
+          "moving:cargo-retrieval-leaf": false,
+          "moving:cargo-call-lower": false,
+          "moving:cargo-call-upper": false,
+          "moving:conditional-ferry": false,
+          "at:conditional-ferry:NEAR": true,
+          "at:conditional-ferry:FAR": false,
+          "closed:conditional-dock-leaf": true,
+          "clear:conditional-dock-leaf": false,
+          "safety:conditional-dock-leaf": false,
+          "moving:conditional-dock-leaf": false,
+          "closed:conditional-freight-gate": true,
+          "clear:conditional-freight-gate": false,
+          "safety:conditional-freight-gate": false,
+          "moving:conditional-freight-gate": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "together-near-bank",
+          "normal": {
+            "x": -0.0006373156793415546,
+            "y": 0.9999958872795105,
+            "z": -0.002797904657199979
+          },
+          "witness": {
+            "x": -0.008646226488053799,
+            "y": -0.00001728534698486328,
+            "z": 10.996782302856445
+          },
+          "applied": {
+            "x": 0,
+            "y": -0.00025564085808582604,
+            "z": 0
+          },
+          "remaining": {
+            "x": 0,
+            "y": -0.0008554703090339899,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "final",
+      "state": {
+        "room": "chamber-41",
+        "number": 41,
+        "mission": "If SERVICE is pressed and POWER is not pressed, the inspection gate opens. Keep that arrangement and use inspection.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            2.985928801990667e-7,
+            0.8647589087486267,
+            11
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [
+          {
+            "id": "conditional-cube-a",
+            "position": [
+              -11,
+              0.5498895645141602,
+              10
+            ],
+            "velocity": [
+              -0.0000044214089029992465,
+              -1.488627390244801e-7,
+              -0.000004284936039766762
+            ],
+            "rotation": [
+              3.645739354851685e-7,
+              3.898047683248418e-12,
+              -3.701265143263299e-7,
+              1
+            ],
+            "angularVelocity": [
+              -0.000007747716153971851,
+              -1.5667096511688085e-26,
+              0.000007994475708983373
+            ],
+            "held": false,
+            "crossings": 0
+          },
+          {
+            "id": "conditional-cube-b",
+            "position": [
+              8.999995231628418,
+              2.9496026039123535,
+              6.999970436096191
+            ],
+            "velocity": [
+              -0.00004840204928768799,
+              -0.0000016188168956432492,
+              -0.000046856803237460554
+            ],
+            "rotation": [
+              0.000007568077307951171,
+              1.7970494883834398e-11,
+              -0.000008781722499406897,
+              1
+            ],
+            "angularVelocity": [
+              -0.00008474504284095019,
+              -2.822018660419978e-12,
+              0.0000875397672643885
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "conditional-power",
+            "position": [
+              -3,
+              0.14,
+              6
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "conditional-aux",
+            "position": [
+              3,
+              0.14,
+              6
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "conditional-service",
+            "position": [
+              -4,
+              0.14,
+              11
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "conditional-inspection-gate",
+            "kind": "shutter",
+            "label": "INSPECTION",
+            "position": [
+              -14.12,
+              1.5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "conditional-cargo-lift",
+            "kind": "lift",
+            "label": "CARGO LIFT",
+            "position": [
+              9,
+              2.2,
+              7
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "UPPER",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "cargo-retrieval-leaf",
+            "kind": "shutter",
+            "label": "CARGO ACCESS",
+            "position": [
+              9,
+              1.5,
+              9.12
+            ],
+            "size": [
+              4.4,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "cargo-call-lower",
+            "kind": "switch",
+            "label": "CARGO DOWN",
+            "position": [
+              5.7,
+              1.25,
+              10.8
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "cargo-call-upper",
+            "kind": "switch",
+            "label": "CARGO UP",
+            "position": [
+              12.3,
+              1.25,
+              10.8
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "conditional-ferry",
+            "kind": "moving-platform",
+            "label": "FREIGHT TRANSFER",
+            "position": [
+              0,
+              -0.2,
+              0
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "NEAR",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "conditional-dock-leaf",
+            "kind": "shutter",
+            "label": "FAR DOCK",
+            "position": [
+              0,
+              1.5,
+              -10.72
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "conditional-freight-gate",
+            "kind": "shutter",
+            "label": "FREIGHT",
+            "position": [
+              0,
+              1.5,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "conditional-source",
+            "position": [
+              0,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "conditional-return",
+            "position": [
+              -13.985,
+              1.75,
+              11
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 4.8,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "inspection-exit",
+            "label": "EXIT",
+            "position": [
+              -16.49,
+              1.5,
+              7
+            ],
+            "size": [
+              3.7799999999999994,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "freight-exit",
+            "label": "EXIT",
+            "position": [
+              0,
+              1.5,
+              -16.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.7799999999999994
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "conditional-power": false,
+          "conditional-aux": false,
+          "conditional-service": false,
+          "closed:conditional-inspection-gate": true,
+          "clear:conditional-inspection-gate": false,
+          "safety:conditional-inspection-gate": false,
+          "door-safety": false,
+          "moving:conditional-inspection-gate": false,
+          "moving:conditional-cargo-lift": false,
+          "at:conditional-cargo-lift:UPPER": true,
+          "at:conditional-cargo-lift:LOWER": false,
+          "closed:cargo-retrieval-leaf": true,
+          "clear:cargo-retrieval-leaf": false,
+          "safety:cargo-retrieval-leaf": false,
+          "moving:cargo-retrieval-leaf": false,
+          "moving:cargo-call-lower": false,
+          "moving:cargo-call-upper": false,
+          "moving:conditional-ferry": false,
+          "at:conditional-ferry:NEAR": true,
+          "at:conditional-ferry:FAR": false,
+          "closed:conditional-dock-leaf": true,
+          "clear:conditional-dock-leaf": false,
+          "safety:conditional-dock-leaf": false,
+          "moving:conditional-dock-leaf": false,
+          "closed:conditional-freight-gate": true,
+          "clear:conditional-freight-gate": false,
+          "safety:conditional-freight-gate": false,
+          "moving:conditional-freight-gate": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "together-near-bank",
+          "normal": {
+            "x": -0.0006373156793415546,
+            "y": 0.9999958872795105,
+            "z": -0.002797904657199979
+          },
+          "witness": {
+            "x": -0.008646226488053799,
+            "y": -0.00001728534698486328,
+            "z": 10.996782302856445
+          },
+          "applied": {
+            "x": 0,
+            "y": -0.00025564085808582604,
+            "z": 0
+          },
+          "remaining": {
+            "x": 0,
+            "y": -0.0008554703090339899,
+            "z": 0
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3624 @@
+{
+  "scope": "Unregistered authored-spawn native input path only. No actor/cargo/machine/history/save setters, resets or browser/completion claims. Native portal rays ignore glass; real visual framing remains browser-pending.",
+  "number": 36,
+  "contrast": true,
+  "error": null,
+  "sources": {
+    "src/core/levels/completion.ts": "f1b391be23e0c97d642e73c1457ceef264631e3088538886f3625a602cbfbb1a",
+    "src/core/levels/completion-english.ts": "0e614046f4e2b475d586465175eb84f6abb1d600dce48a758b49d419bb545932",
+    "src/core/level.ts": "4dc6e0989e9a3ebe3a22f4a115ac5116073fec2e2d7d8777ff76f81f7b9db272",
+    "src/core/world.ts": "054fe818b86b3eda9d17d240b1f0aeebaa960aff1afe4669003df8131a60af23",
+    "src/core/machine-journal.ts": "b400ede48dd62294f3a212e504495a50f8ca2db93dc4efb4f5d66e6962108de1",
+    "src/systems.ts": "b53edc09e8fd038b506b4504443ca24073e2d02be8ae807d56000354b30b7716",
+    "tests/core-completion-routes.test.ts": "5a743bc9ae55f985985a80d9a87502d4c9b27ec7688fff5f88db8a6829e442b4",
+    "tests/helpers/completion-route.ts": "52c77921696405304ded7b699d1bcbc788f2e08997a36c0d6efb5497565ae548"
+  },
+  "ridingFrames": {},
+  "events": [
+    {
+      "type": "land"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "portalA",
+      "surface": "release-source",
+      "point": [
+        10.959999999999999,
+        1.55,
+        8
+      ]
+    },
+    {
+      "type": "portalB",
+      "surface": "release-return",
+      "point": [
+        -10.959999999999999,
+        1.55,
+        8
+      ]
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "receiver-power",
+      "id": "release-light"
+    },
+    {
+      "type": "switch-toggle",
+      "id": "release-test",
+      "value": true
+    },
+    {
+      "type": "shutter-open",
+      "id": "cargo-hatch"
+    },
+    {
+      "type": "beam-blocked",
+      "id": "release-light"
+    },
+    {
+      "type": "switch-toggle",
+      "id": "release-test",
+      "value": false
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "pickup",
+      "body": "journey-cube"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "drop",
+      "body": "journey-cube"
+    },
+    {
+      "type": "shutter-open",
+      "id": "store-door"
+    },
+    {
+      "type": "pad",
+      "pad": "store-pressure",
+      "crate": "journey-cube"
+    },
+    {
+      "type": "contact",
+      "body": "journey-cube",
+      "speed": 2.4607302571898098
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "complete",
+      "chamber": 36
+    }
+  ],
+  "checkpoints": [
+    {
+      "label": "actual-authored-spawn",
+      "state": {
+        "room": "chamber-36",
+        "number": 36,
+        "mission": "Open the cargo hatch. Switch TEST off, then deliver the cube to STORE. Leave the gallery lift unpowered.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -0.000001322151547356043,
+            0.8647183179855347,
+            11.999998092651367
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [
+          {
+            "id": "journey-cube",
+            "position": [
+              6.999997138977051,
+              0.5498895645141602,
+              -6.000001430511475
+            ],
+            "velocity": [
+              -0.000005078573849459644,
+              -7.474938001905684e-7,
+              -0.000004326824637246318
+            ],
+            "rotation": [
+              2.0004875977974734e-7,
+              3.890176375476173e-12,
+              -2.2702667479279626e-7,
+              1
+            ],
+            "angularVelocity": [
+              -0.000007823456144251395,
+              -4.5750163775665556e-14,
+              0.000009182714165945072
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "lift-pressure",
+            "position": [
+              -7,
+              0.14,
+              -1
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "store-pressure",
+            "position": [
+              7,
+              0.14,
+              -1
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "gallery-door",
+            "kind": "shutter",
+            "label": "GALLERY",
+            "position": [
+              -6,
+              7.1,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "store-door",
+            "kind": "shutter",
+            "label": "STORE",
+            "position": [
+              11.12,
+              1.5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "cargo-hatch",
+            "kind": "shutter",
+            "label": "CARGO HATCH",
+            "position": [
+              0,
+              1.5,
+              2
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "release-test",
+            "kind": "switch",
+            "label": "TEST",
+            "position": [
+              0,
+              1.25,
+              11
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "journey-lift",
+            "kind": "lift",
+            "label": "GALLERY TRANSFER",
+            "position": [
+              -6,
+              -0.2,
+              -7
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "LOADING",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "release-source",
+            "position": [
+              10.985,
+              1.75,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          },
+          {
+            "id": "release-return",
+            "position": [
+              -10.985,
+              1.75,
+              8
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "gallery-exit",
+            "label": "EXIT",
+            "position": [
+              -6,
+              7.1,
+              -16.29
+            ],
+            "size": [
+              3.16,
+              3,
+              3.380000000000001
+            ]
+          },
+          {
+            "id": "store-exit",
+            "label": "EXIT",
+            "position": [
+              13.39,
+              1.5,
+              -10
+            ],
+            "size": [
+              3.58,
+              3,
+              3.16
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "lift-pressure": false,
+          "store-pressure": false,
+          "closed:gallery-door": true,
+          "clear:gallery-door": false,
+          "safety:gallery-door": false,
+          "door-safety": false,
+          "moving:gallery-door": false,
+          "closed:store-door": true,
+          "clear:store-door": false,
+          "safety:store-door": false,
+          "moving:store-door": false,
+          "closed:cargo-hatch": true,
+          "clear:cargo-hatch": false,
+          "safety:cargo-hatch": false,
+          "moving:cargo-hatch": false,
+          "moving:release-test": false,
+          "moving:journey-lift": false,
+          "at:journey-lift:LOADING": true,
+          "at:journey-lift:GALLERY": false,
+          "release-light": false
+        },
+        "journal": {
+          "reports": [
+            {
+              "id": "hatch-opened",
+              "status": "NOT YET OBSERVED",
+              "text": "The cargo hatch has not opened fully yet.",
+              "observedAt": null,
+              "pastText": null
+            },
+            {
+              "id": "gallery-arrival",
+              "status": "NOT YET OBSERVED",
+              "text": "The lift has not reached GALLERY yet.",
+              "observedAt": null,
+              "pastText": null
+            }
+          ],
+          "attempt": 1,
+          "rows": [],
+          "truncated": false,
+          "now": [
+            {
+              "id": "cargo-hatch",
+              "label": "CARGO HATCH",
+              "kind": "shutter",
+              "state": "CLOSED"
+            },
+            {
+              "id": "release-light",
+              "label": "RELEASE RECEIVER",
+              "kind": "light",
+              "state": "DARK"
+            },
+            {
+              "id": "lift-pressure",
+              "label": "LIFT",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "store-pressure",
+              "label": "STORE",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "journey-lift",
+              "label": "GALLERY TRANSFER",
+              "kind": "dock",
+              "state": "AT LOADING"
+            },
+            {
+              "id": "gallery-door",
+              "label": "GALLERY DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            },
+            {
+              "id": "store-door",
+              "label": "STORE DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          }
+        ]
+      }
+    },
+    {
+      "label": "actual-hatch-complete-lift-not-started",
+      "state": {
+        "room": "chamber-36",
+        "number": 36,
+        "mission": "Open the cargo hatch. Switch TEST off, then deliver the cube to STORE. Leave the gallery lift unpowered.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -0.1265212893486023,
+            0.8645250797271729,
+            12.702882766723633
+          ],
+          "velocity": [
+            -8.264371680576197e-8,
+            0,
+            1.887367944073463e-9
+          ],
+          "yaw": -0.08398800940501648,
+          "pitch": -0.17367456141865228,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "release-source",
+            "position": [
+              10.959999999999999,
+              1.55,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "release-return",
+            "position": [
+              -10.959999999999999,
+              1.55,
+              8
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "journey-cube",
+            "position": [
+              6.999997138977051,
+              0.5498895645141602,
+              -6.000001430511475
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              2.0004875977974734e-7,
+              3.890176375476173e-12,
+              -2.2702667479279626e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "lift-pressure",
+            "position": [
+              -7,
+              0.14,
+              -1
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "store-pressure",
+            "position": [
+              7,
+              0.14,
+              -1
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "gallery-door",
+            "kind": "shutter",
+            "label": "GALLERY",
+            "position": [
+              -6,
+              7.1,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "store-door",
+            "kind": "shutter",
+            "label": "STORE",
+            "position": [
+              11.12,
+              1.5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "cargo-hatch",
+            "kind": "shutter",
+            "label": "CARGO HATCH",
+            "position": [
+              0,
+              5,
+              2
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "release-test",
+            "kind": "switch",
+            "label": "TEST",
+            "position": [
+              0,
+              1.25,
+              11
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "journey-lift",
+            "kind": "lift",
+            "label": "GALLERY TRANSFER",
+            "position": [
+              -6,
+              -0.2,
+              -7
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "LOADING",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "release-source",
+            "position": [
+              10.985,
+              1.75,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          },
+          {
+            "id": "release-return",
+            "position": [
+              -10.985,
+              1.75,
+              8
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "gallery-exit",
+            "label": "EXIT",
+            "position": [
+              -6,
+              7.1,
+              -16.29
+            ],
+            "size": [
+              3.16,
+              3,
+              3.380000000000001
+            ]
+          },
+          {
+            "id": "store-exit",
+            "label": "EXIT",
+            "position": [
+              13.39,
+              1.5,
+              -10
+            ],
+            "size": [
+              3.58,
+              3,
+              3.16
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "lift-pressure": false,
+          "store-pressure": false,
+          "closed:gallery-door": true,
+          "clear:gallery-door": false,
+          "safety:gallery-door": false,
+          "door-safety": false,
+          "moving:gallery-door": false,
+          "closed:store-door": true,
+          "clear:store-door": false,
+          "safety:store-door": false,
+          "moving:store-door": false,
+          "closed:cargo-hatch": false,
+          "clear:cargo-hatch": true,
+          "safety:cargo-hatch": false,
+          "moving:cargo-hatch": false,
+          "moving:release-test": false,
+          "moving:journey-lift": false,
+          "at:journey-lift:LOADING": true,
+          "at:journey-lift:GALLERY": false,
+          "release-light": false
+        },
+        "journal": {
+          "reports": [
+            {
+              "id": "hatch-opened",
+              "status": "OBSERVED",
+              "text": "The cargo hatch has opened.",
+              "observedAt": 5.300000000000053,
+              "pastText": "During TEST, the cargo hatch opened."
+            },
+            {
+              "id": "gallery-arrival",
+              "status": "NOT YET OBSERVED",
+              "text": "The lift has not reached GALLERY yet.",
+              "observedAt": null,
+              "pastText": null
+            }
+          ],
+          "attempt": 1,
+          "rows": [
+            {
+              "sequence": 1,
+              "time": 4.500000000000013,
+              "text": "TEST began."
+            },
+            {
+              "sequence": 2,
+              "time": 4.500000000000013,
+              "text": "RELEASE RECEIVER received light."
+            },
+            {
+              "sequence": 3,
+              "time": 5.300000000000053,
+              "text": "CARGO HATCH opened fully."
+            },
+            {
+              "sequence": 4,
+              "time": 5.308333333333387,
+              "text": "TEST ended."
+            },
+            {
+              "sequence": 5,
+              "time": 5.308333333333387,
+              "text": "RELEASE RECEIVER lost light."
+            }
+          ],
+          "truncated": false,
+          "now": [
+            {
+              "id": "cargo-hatch",
+              "label": "CARGO HATCH",
+              "kind": "shutter",
+              "state": "OPEN"
+            },
+            {
+              "id": "release-light",
+              "label": "RELEASE RECEIVER",
+              "kind": "light",
+              "state": "DARK"
+            },
+            {
+              "id": "lift-pressure",
+              "label": "LIFT",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "store-pressure",
+              "label": "STORE",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "journey-lift",
+              "label": "GALLERY TRANSFER",
+              "kind": "dock",
+              "state": "AT LOADING"
+            },
+            {
+              "id": "gallery-door",
+              "label": "GALLERY DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            },
+            {
+              "id": "store-door",
+              "label": "STORE DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            }
+          ],
+          "tests": [
+            {
+              "label": "TEST",
+              "status": "ENDED",
+              "observations": [
+                {
+                  "label": "CARGO HATCH",
+                  "opened": "YES",
+                  "remainedClosed": "NO"
+                }
+              ]
+            }
+          ]
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 933
+          },
+          {
+            "type": "footstep",
+            "time": 1358
+          },
+          {
+            "type": "footstep",
+            "time": 1783
+          },
+          {
+            "type": "footstep",
+            "time": 2208
+          },
+          {
+            "type": "portalA",
+            "time": 2508,
+            "surface": "release-source",
+            "point": [
+              10.959999999999999,
+              1.55,
+              8
+            ]
+          },
+          {
+            "type": "portalB",
+            "time": 2517,
+            "surface": "release-return",
+            "point": [
+              -10.959999999999999,
+              1.55,
+              8
+            ]
+          },
+          {
+            "type": "footstep",
+            "time": 2633
+          },
+          {
+            "type": "footstep",
+            "time": 3058
+          },
+          {
+            "type": "footstep",
+            "time": 3483
+          },
+          {
+            "type": "footstep",
+            "time": 3908
+          },
+          {
+            "type": "footstep",
+            "time": 4333
+          },
+          {
+            "type": "receiver-power",
+            "time": 4500,
+            "id": "release-light"
+          },
+          {
+            "type": "switch-toggle",
+            "time": 4500,
+            "id": "release-test",
+            "value": true
+          },
+          {
+            "type": "shutter-open",
+            "time": 4500,
+            "id": "cargo-hatch"
+          },
+          {
+            "type": "beam-blocked",
+            "time": 5308,
+            "id": "release-light"
+          },
+          {
+            "type": "switch-toggle",
+            "time": 5308,
+            "id": "release-test",
+            "value": false
+          }
+        ]
+      }
+    },
+    {
+      "label": "actual-pressure-store-pressure",
+      "state": {
+        "room": "chamber-36",
+        "number": 36,
+        "mission": "Open the cargo hatch. Switch TEST off, then deliver the cube to STORE. Leave the gallery lift unpowered.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            5.193461894989014,
+            0.8650880455970764,
+            -0.8776084184646606
+          ],
+          "velocity": [
+            -8.704101402731094e-16,
+            0,
+            1.6272391721227024e-14
+          ],
+          "yaw": -1.5208401514398373,
+          "pitch": -0.06955243950718562,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "release-source",
+            "position": [
+              10.959999999999999,
+              1.55,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "release-return",
+            "position": [
+              -10.959999999999999,
+              1.55,
+              8
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "journey-cube",
+            "position": [
+              7.059481143951416,
+              0.6898929476737976,
+              -0.9729727506637573
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0.0000020650768419727683,
+              -0.000009706442142487504,
+              5.534584488486871e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "lift-pressure",
+            "position": [
+              -7,
+              0.14,
+              -1
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "store-pressure",
+            "position": [
+              7,
+              0.14,
+              -1
+            ],
+            "pressed": true,
+            "crate": "journey-cube"
+          }
+        ],
+        "devices": [
+          {
+            "id": "gallery-door",
+            "kind": "shutter",
+            "label": "GALLERY",
+            "position": [
+              -6,
+              7.1,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "store-door",
+            "kind": "shutter",
+            "label": "STORE",
+            "position": [
+              11.12,
+              5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "cargo-hatch",
+            "kind": "shutter",
+            "label": "CARGO HATCH",
+            "position": [
+              0,
+              5,
+              2
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "release-test",
+            "kind": "switch",
+            "label": "TEST",
+            "position": [
+              0,
+              1.25,
+              11
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "journey-lift",
+            "kind": "lift",
+            "label": "GALLERY TRANSFER",
+            "position": [
+              -6,
+              -0.2,
+              -7
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "LOADING",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "release-source",
+            "position": [
+              10.985,
+              1.75,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          },
+          {
+            "id": "release-return",
+            "position": [
+              -10.985,
+              1.75,
+              8
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "gallery-exit",
+            "label": "EXIT",
+            "position": [
+              -6,
+              7.1,
+              -16.29
+            ],
+            "size": [
+              3.16,
+              3,
+              3.380000000000001
+            ]
+          },
+          {
+            "id": "store-exit",
+            "label": "EXIT",
+            "position": [
+              13.39,
+              1.5,
+              -10
+            ],
+            "size": [
+              3.58,
+              3,
+              3.16
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "lift-pressure": false,
+          "store-pressure": true,
+          "closed:gallery-door": true,
+          "clear:gallery-door": false,
+          "safety:gallery-door": false,
+          "door-safety": false,
+          "moving:gallery-door": false,
+          "closed:store-door": false,
+          "clear:store-door": true,
+          "safety:store-door": false,
+          "moving:store-door": false,
+          "closed:cargo-hatch": false,
+          "clear:cargo-hatch": true,
+          "safety:cargo-hatch": false,
+          "moving:cargo-hatch": false,
+          "moving:release-test": false,
+          "moving:journey-lift": false,
+          "at:journey-lift:LOADING": true,
+          "at:journey-lift:GALLERY": false,
+          "release-light": false
+        },
+        "journal": {
+          "reports": [
+            {
+              "id": "hatch-opened",
+              "status": "OBSERVED",
+              "text": "The cargo hatch has opened.",
+              "observedAt": 5.300000000000053,
+              "pastText": "During TEST, the cargo hatch opened."
+            },
+            {
+              "id": "gallery-arrival",
+              "status": "NOT YET OBSERVED",
+              "text": "The lift has not reached GALLERY yet.",
+              "observedAt": null,
+              "pastText": null
+            }
+          ],
+          "attempt": 1,
+          "rows": [
+            {
+              "sequence": 1,
+              "time": 4.500000000000013,
+              "text": "TEST began."
+            },
+            {
+              "sequence": 2,
+              "time": 4.500000000000013,
+              "text": "RELEASE RECEIVER received light."
+            },
+            {
+              "sequence": 3,
+              "time": 5.300000000000053,
+              "text": "CARGO HATCH opened fully."
+            },
+            {
+              "sequence": 4,
+              "time": 5.308333333333387,
+              "text": "TEST ended."
+            },
+            {
+              "sequence": 5,
+              "time": 5.308333333333387,
+              "text": "RELEASE RECEIVER lost light."
+            },
+            {
+              "sequence": 6,
+              "time": 14.558333333333147,
+              "text": "Cargo reached STORE."
+            },
+            {
+              "sequence": 7,
+              "time": 15.366666666666434,
+              "text": "STORE DOOR opened fully."
+            }
+          ],
+          "truncated": false,
+          "now": [
+            {
+              "id": "cargo-hatch",
+              "label": "CARGO HATCH",
+              "kind": "shutter",
+              "state": "OPEN"
+            },
+            {
+              "id": "release-light",
+              "label": "RELEASE RECEIVER",
+              "kind": "light",
+              "state": "DARK"
+            },
+            {
+              "id": "lift-pressure",
+              "label": "LIFT",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "store-pressure",
+              "label": "STORE",
+              "kind": "pressure",
+              "state": "PRESSED",
+              "cargo": true
+            },
+            {
+              "id": "journey-lift",
+              "label": "GALLERY TRANSFER",
+              "kind": "dock",
+              "state": "AT LOADING"
+            },
+            {
+              "id": "gallery-door",
+              "label": "GALLERY DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            },
+            {
+              "id": "store-door",
+              "label": "STORE DOOR",
+              "kind": "shutter",
+              "state": "OPEN"
+            }
+          ],
+          "tests": [
+            {
+              "label": "TEST",
+              "status": "ENDED",
+              "observations": [
+                {
+                  "label": "CARGO HATCH",
+                  "opened": "YES",
+                  "remainedClosed": "NO"
+                }
+              ]
+            }
+          ]
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 9242
+          },
+          {
+            "type": "footstep",
+            "time": 9667
+          },
+          {
+            "type": "footstep",
+            "time": 10092
+          },
+          {
+            "type": "footstep",
+            "time": 10517
+          },
+          {
+            "type": "footstep",
+            "time": 10942
+          },
+          {
+            "type": "footstep",
+            "time": 11417
+          },
+          {
+            "type": "pickup",
+            "time": 11483,
+            "body": "journey-cube"
+          },
+          {
+            "type": "footstep",
+            "time": 11842
+          },
+          {
+            "type": "footstep",
+            "time": 12267
+          },
+          {
+            "type": "footstep",
+            "time": 12692
+          },
+          {
+            "type": "footstep",
+            "time": 13117
+          },
+          {
+            "type": "footstep",
+            "time": 13542
+          },
+          {
+            "type": "drop",
+            "time": 14417,
+            "body": "journey-cube"
+          },
+          {
+            "type": "shutter-open",
+            "time": 14567,
+            "id": "store-door"
+          },
+          {
+            "type": "pad",
+            "time": 14567,
+            "pad": "store-pressure",
+            "crate": "journey-cube"
+          },
+          {
+            "type": "contact",
+            "time": 14575,
+            "body": "journey-cube",
+            "speed": 2.4607302571898098
+          }
+        ]
+      }
+    },
+    {
+      "label": "actual-current-store-pressure",
+      "state": {
+        "room": "chamber-36",
+        "number": 36,
+        "mission": "Open the cargo hatch. Switch TEST off, then deliver the cube to STORE. Leave the gallery lift unpowered.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            5.193461894989014,
+            0.8650880455970764,
+            -0.8776084184646606
+          ],
+          "velocity": [
+            -8.704101402731094e-16,
+            0,
+            1.6272391721227024e-14
+          ],
+          "yaw": -1.5208401514398373,
+          "pitch": -0.06955243950718562,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "release-source",
+            "position": [
+              10.959999999999999,
+              1.55,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "release-return",
+            "position": [
+              -10.959999999999999,
+              1.55,
+              8
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "journey-cube",
+            "position": [
+              7.059481143951416,
+              0.6898929476737976,
+              -0.9729727506637573
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0.0000020650768419727683,
+              -0.000009706442142487504,
+              5.534584488486871e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "lift-pressure",
+            "position": [
+              -7,
+              0.14,
+              -1
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "store-pressure",
+            "position": [
+              7,
+              0.14,
+              -1
+            ],
+            "pressed": true,
+            "crate": "journey-cube"
+          }
+        ],
+        "devices": [
+          {
+            "id": "gallery-door",
+            "kind": "shutter",
+            "label": "GALLERY",
+            "position": [
+              -6,
+              7.1,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "store-door",
+            "kind": "shutter",
+            "label": "STORE",
+            "position": [
+              11.12,
+              5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "cargo-hatch",
+            "kind": "shutter",
+            "label": "CARGO HATCH",
+            "position": [
+              0,
+              5,
+              2
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "release-test",
+            "kind": "switch",
+            "label": "TEST",
+            "position": [
+              0,
+              1.25,
+              11
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "journey-lift",
+            "kind": "lift",
+            "label": "GALLERY TRANSFER",
+            "position": [
+              -6,
+              -0.2,
+              -7
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "LOADING",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "release-source",
+            "position": [
+              10.985,
+              1.75,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          },
+          {
+            "id": "release-return",
+            "position": [
+              -10.985,
+              1.75,
+              8
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "gallery-exit",
+            "label": "EXIT",
+            "position": [
+              -6,
+              7.1,
+              -16.29
+            ],
+            "size": [
+              3.16,
+              3,
+              3.380000000000001
+            ]
+          },
+          {
+            "id": "store-exit",
+            "label": "EXIT",
+            "position": [
+              13.39,
+              1.5,
+              -10
+            ],
+            "size": [
+              3.58,
+              3,
+              3.16
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "lift-pressure": false,
+          "store-pressure": true,
+          "closed:gallery-door": true,
+          "clear:gallery-door": false,
+          "safety:gallery-door": false,
+          "door-safety": false,
+          "moving:gallery-door": false,
+          "closed:store-door": false,
+          "clear:store-door": true,
+          "safety:store-door": false,
+          "moving:store-door": false,
+          "closed:cargo-hatch": false,
+          "clear:cargo-hatch": true,
+          "safety:cargo-hatch": false,
+          "moving:cargo-hatch": false,
+          "moving:release-test": false,
+          "moving:journey-lift": false,
+          "at:journey-lift:LOADING": true,
+          "at:journey-lift:GALLERY": false,
+          "release-light": false
+        },
+        "journal": {
+          "reports": [
+            {
+              "id": "hatch-opened",
+              "status": "OBSERVED",
+              "text": "The cargo hatch has opened.",
+              "observedAt": 5.300000000000053,
+              "pastText": "During TEST, the cargo hatch opened."
+            },
+            {
+              "id": "gallery-arrival",
+              "status": "NOT YET OBSERVED",
+              "text": "The lift has not reached GALLERY yet.",
+              "observedAt": null,
+              "pastText": null
+            }
+          ],
+          "attempt": 1,
+          "rows": [
+            {
+              "sequence": 1,
+              "time": 4.500000000000013,
+              "text": "TEST began."
+            },
+            {
+              "sequence": 2,
+              "time": 4.500000000000013,
+              "text": "RELEASE RECEIVER received light."
+            },
+            {
+              "sequence": 3,
+              "time": 5.300000000000053,
+              "text": "CARGO HATCH opened fully."
+            },
+            {
+              "sequence": 4,
+              "time": 5.308333333333387,
+              "text": "TEST ended."
+            },
+            {
+              "sequence": 5,
+              "time": 5.308333333333387,
+              "text": "RELEASE RECEIVER lost light."
+            },
+            {
+              "sequence": 6,
+              "time": 14.558333333333147,
+              "text": "Cargo reached STORE."
+            },
+            {
+              "sequence": 7,
+              "time": 15.366666666666434,
+              "text": "STORE DOOR opened fully."
+            }
+          ],
+          "truncated": false,
+          "now": [
+            {
+              "id": "cargo-hatch",
+              "label": "CARGO HATCH",
+              "kind": "shutter",
+              "state": "OPEN"
+            },
+            {
+              "id": "release-light",
+              "label": "RELEASE RECEIVER",
+              "kind": "light",
+              "state": "DARK"
+            },
+            {
+              "id": "lift-pressure",
+              "label": "LIFT",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "store-pressure",
+              "label": "STORE",
+              "kind": "pressure",
+              "state": "PRESSED",
+              "cargo": true
+            },
+            {
+              "id": "journey-lift",
+              "label": "GALLERY TRANSFER",
+              "kind": "dock",
+              "state": "AT LOADING"
+            },
+            {
+              "id": "gallery-door",
+              "label": "GALLERY DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            },
+            {
+              "id": "store-door",
+              "label": "STORE DOOR",
+              "kind": "shutter",
+              "state": "OPEN"
+            }
+          ],
+          "tests": [
+            {
+              "label": "TEST",
+              "status": "ENDED",
+              "observations": [
+                {
+                  "label": "CARGO HATCH",
+                  "opened": "YES",
+                  "remainedClosed": "NO"
+                }
+              ]
+            }
+          ]
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 9242
+          },
+          {
+            "type": "footstep",
+            "time": 9667
+          },
+          {
+            "type": "footstep",
+            "time": 10092
+          },
+          {
+            "type": "footstep",
+            "time": 10517
+          },
+          {
+            "type": "footstep",
+            "time": 10942
+          },
+          {
+            "type": "footstep",
+            "time": 11417
+          },
+          {
+            "type": "pickup",
+            "time": 11483,
+            "body": "journey-cube"
+          },
+          {
+            "type": "footstep",
+            "time": 11842
+          },
+          {
+            "type": "footstep",
+            "time": 12267
+          },
+          {
+            "type": "footstep",
+            "time": 12692
+          },
+          {
+            "type": "footstep",
+            "time": 13117
+          },
+          {
+            "type": "footstep",
+            "time": 13542
+          },
+          {
+            "type": "drop",
+            "time": 14417,
+            "body": "journey-cube"
+          },
+          {
+            "type": "shutter-open",
+            "time": 14567,
+            "id": "store-door"
+          },
+          {
+            "type": "pad",
+            "time": 14567,
+            "pad": "store-pressure",
+            "crate": "journey-cube"
+          },
+          {
+            "type": "contact",
+            "time": 14575,
+            "body": "journey-cube",
+            "speed": 2.4607302571898098
+          }
+        ]
+      }
+    },
+    {
+      "label": "actual-physical-completion",
+      "state": {
+        "room": "chamber-36",
+        "number": 36,
+        "mission": "Open the cargo hatch. Switch TEST off, then deliver the cube to STORE. Leave the gallery lift unpowered.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            11.617337226867676,
+            0.8646298050880432,
+            -9.999492645263672
+          ],
+          "velocity": [
+            4.799952691689729,
+            0,
+            -0.0010224151314305679
+          ],
+          "yaw": -1.570583363682068,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "release-source",
+            "position": [
+              10.959999999999999,
+              1.55,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "release-return",
+            "position": [
+              -10.959999999999999,
+              1.55,
+              8
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "journey-cube",
+            "position": [
+              7.059481143951416,
+              0.6898929476737976,
+              -0.9729727506637573
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0.0000020650768419727683,
+              -0.000009706442142487504,
+              5.534584488486871e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "lift-pressure",
+            "position": [
+              -7,
+              0.14,
+              -1
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "store-pressure",
+            "position": [
+              7,
+              0.14,
+              -1
+            ],
+            "pressed": true,
+            "crate": "journey-cube"
+          }
+        ],
+        "devices": [
+          {
+            "id": "gallery-door",
+            "kind": "shutter",
+            "label": "GALLERY",
+            "position": [
+              -6,
+              7.1,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "store-door",
+            "kind": "shutter",
+            "label": "STORE",
+            "position": [
+              11.12,
+              5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "cargo-hatch",
+            "kind": "shutter",
+            "label": "CARGO HATCH",
+            "position": [
+              0,
+              5,
+              2
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "release-test",
+            "kind": "switch",
+            "label": "TEST",
+            "position": [
+              0,
+              1.25,
+              11
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "journey-lift",
+            "kind": "lift",
+            "label": "GALLERY TRANSFER",
+            "position": [
+              -6,
+              -0.2,
+              -7
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "LOADING",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "release-source",
+            "position": [
+              10.985,
+              1.75,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          },
+          {
+            "id": "release-return",
+            "position": [
+              -10.985,
+              1.75,
+              8
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "gallery-exit",
+            "label": "EXIT",
+            "position": [
+              -6,
+              7.1,
+              -16.29
+            ],
+            "size": [
+              3.16,
+              3,
+              3.380000000000001
+            ]
+          },
+          {
+            "id": "store-exit",
+            "label": "EXIT",
+            "position": [
+              13.39,
+              1.5,
+              -10
+            ],
+            "size": [
+              3.58,
+              3,
+              3.16
+            ]
+          }
+        ],
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "store-exit",
+          "reason": "",
+          "events": [
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "footstep",
+              "time": 508
+            },
+            {
+              "type": "footstep",
+              "time": 933
+            },
+            {
+              "type": "footstep",
+              "time": 1358
+            },
+            {
+              "type": "footstep",
+              "time": 1783
+            },
+            {
+              "type": "footstep",
+              "time": 2208
+            },
+            {
+              "type": "portalA",
+              "time": 2508,
+              "surface": "release-source",
+              "point": [
+                10.959999999999999,
+                1.55,
+                8
+              ]
+            },
+            {
+              "type": "portalB",
+              "time": 2517,
+              "surface": "release-return",
+              "point": [
+                -10.959999999999999,
+                1.55,
+                8
+              ]
+            },
+            {
+              "type": "footstep",
+              "time": 2633
+            },
+            {
+              "type": "footstep",
+              "time": 3058
+            },
+            {
+              "type": "footstep",
+              "time": 3483
+            },
+            {
+              "type": "footstep",
+              "time": 3908
+            },
+            {
+              "type": "footstep",
+              "time": 4333
+            },
+            {
+              "type": "receiver-power",
+              "time": 4500,
+              "id": "release-light"
+            },
+            {
+              "type": "switch-toggle",
+              "time": 4500,
+              "id": "release-test",
+              "value": true
+            },
+            {
+              "type": "shutter-open",
+              "time": 4500,
+              "id": "cargo-hatch"
+            },
+            {
+              "type": "beam-blocked",
+              "time": 5308,
+              "id": "release-light"
+            },
+            {
+              "type": "switch-toggle",
+              "time": 5308,
+              "id": "release-test",
+              "value": false
+            },
+            {
+              "type": "footstep",
+              "time": 5317
+            },
+            {
+              "type": "footstep",
+              "time": 5742
+            },
+            {
+              "type": "footstep",
+              "time": 6167
+            },
+            {
+              "type": "footstep",
+              "time": 6592
+            },
+            {
+              "type": "footstep",
+              "time": 7017
+            },
+            {
+              "type": "footstep",
+              "time": 7442
+            },
+            {
+              "type": "footstep",
+              "time": 7967
+            },
+            {
+              "type": "footstep",
+              "time": 8392
+            },
+            {
+              "type": "footstep",
+              "time": 8817
+            },
+            {
+              "type": "footstep",
+              "time": 9242
+            },
+            {
+              "type": "footstep",
+              "time": 9667
+            },
+            {
+              "type": "footstep",
+              "time": 10092
+            },
+            {
+              "type": "footstep",
+              "time": 10517
+            },
+            {
+              "type": "footstep",
+              "time": 10942
+            },
+            {
+              "type": "footstep",
+              "time": 11417
+            },
+            {
+              "type": "pickup",
+              "time": 11483,
+              "body": "journey-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 11842
+            },
+            {
+              "type": "footstep",
+              "time": 12267
+            },
+            {
+              "type": "footstep",
+              "time": 12692
+            },
+            {
+              "type": "footstep",
+              "time": 13117
+            },
+            {
+              "type": "footstep",
+              "time": 13542
+            },
+            {
+              "type": "drop",
+              "time": 14417,
+              "body": "journey-cube"
+            },
+            {
+              "type": "shutter-open",
+              "time": 14567,
+              "id": "store-door"
+            },
+            {
+              "type": "pad",
+              "time": 14567,
+              "pad": "store-pressure",
+              "crate": "journey-cube"
+            },
+            {
+              "type": "contact",
+              "time": 14575,
+              "body": "journey-cube",
+              "speed": 2.4607302571898098
+            },
+            {
+              "type": "footstep",
+              "time": 15633
+            },
+            {
+              "type": "footstep",
+              "time": 16058
+            },
+            {
+              "type": "footstep",
+              "time": 16483
+            },
+            {
+              "type": "footstep",
+              "time": 16908
+            },
+            {
+              "type": "footstep",
+              "time": 17333
+            },
+            {
+              "type": "footstep",
+              "time": 17758
+            },
+            {
+              "type": "footstep",
+              "time": 18183
+            },
+            {
+              "type": "footstep",
+              "time": 18608
+            },
+            {
+              "type": "footstep",
+              "time": 19033
+            },
+            {
+              "type": "footstep",
+              "time": 19458
+            },
+            {
+              "type": "footstep",
+              "time": 19883
+            }
+          ],
+          "mechanisms": [
+            "beams",
+            "switches",
+            "shutters",
+            "cargo",
+            "buttons"
+          ]
+        },
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "lift-pressure": false,
+          "store-pressure": true,
+          "closed:gallery-door": true,
+          "clear:gallery-door": false,
+          "safety:gallery-door": false,
+          "door-safety": false,
+          "moving:gallery-door": false,
+          "closed:store-door": false,
+          "clear:store-door": true,
+          "safety:store-door": false,
+          "moving:store-door": false,
+          "closed:cargo-hatch": false,
+          "clear:cargo-hatch": true,
+          "safety:cargo-hatch": false,
+          "moving:cargo-hatch": false,
+          "moving:release-test": false,
+          "moving:journey-lift": false,
+          "at:journey-lift:LOADING": true,
+          "at:journey-lift:GALLERY": false,
+          "release-light": false
+        },
+        "journal": {
+          "reports": [
+            {
+              "id": "hatch-opened",
+              "status": "OBSERVED",
+              "text": "The cargo hatch has opened.",
+              "observedAt": 5.300000000000053,
+              "pastText": "During TEST, the cargo hatch opened."
+            },
+            {
+              "id": "gallery-arrival",
+              "status": "NOT YET OBSERVED",
+              "text": "The lift has not reached GALLERY yet.",
+              "observedAt": null,
+              "pastText": null
+            }
+          ],
+          "attempt": 1,
+          "rows": [
+            {
+              "sequence": 1,
+              "time": 4.500000000000013,
+              "text": "TEST began."
+            },
+            {
+              "sequence": 2,
+              "time": 4.500000000000013,
+              "text": "RELEASE RECEIVER received light."
+            },
+            {
+              "sequence": 3,
+              "time": 5.300000000000053,
+              "text": "CARGO HATCH opened fully."
+            },
+            {
+              "sequence": 4,
+              "time": 5.308333333333387,
+              "text": "TEST ended."
+            },
+            {
+              "sequence": 5,
+              "time": 5.308333333333387,
+              "text": "RELEASE RECEIVER lost light."
+            },
+            {
+              "sequence": 6,
+              "time": 14.558333333333147,
+              "text": "Cargo reached STORE."
+            },
+            {
+              "sequence": 7,
+              "time": 15.366666666666434,
+              "text": "STORE DOOR opened fully."
+            }
+          ],
+          "truncated": false,
+          "now": [
+            {
+              "id": "cargo-hatch",
+              "label": "CARGO HATCH",
+              "kind": "shutter",
+              "state": "OPEN"
+            },
+            {
+              "id": "release-light",
+              "label": "RELEASE RECEIVER",
+              "kind": "light",
+              "state": "DARK"
+            },
+            {
+              "id": "lift-pressure",
+              "label": "LIFT",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "store-pressure",
+              "label": "STORE",
+              "kind": "pressure",
+              "state": "PRESSED",
+              "cargo": true
+            },
+            {
+              "id": "journey-lift",
+              "label": "GALLERY TRANSFER",
+              "kind": "dock",
+              "state": "AT LOADING"
+            },
+            {
+              "id": "gallery-door",
+              "label": "GALLERY DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            },
+            {
+              "id": "store-door",
+              "label": "STORE DOOR",
+              "kind": "shutter",
+              "state": "OPEN"
+            }
+          ],
+          "tests": [
+            {
+              "label": "TEST",
+              "status": "ENDED",
+              "observations": [
+                {
+                  "label": "CARGO HATCH",
+                  "opened": "YES",
+                  "remainedClosed": "NO"
+                }
+              ]
+            }
+          ]
+        },
+        "events": [
+          {
+            "type": "drop",
+            "time": 14417,
+            "body": "journey-cube"
+          },
+          {
+            "type": "shutter-open",
+            "time": 14567,
+            "id": "store-door"
+          },
+          {
+            "type": "pad",
+            "time": 14567,
+            "pad": "store-pressure",
+            "crate": "journey-cube"
+          },
+          {
+            "type": "contact",
+            "time": 14575,
+            "body": "journey-cube",
+            "speed": 2.4607302571898098
+          },
+          {
+            "type": "footstep",
+            "time": 15633
+          },
+          {
+            "type": "footstep",
+            "time": 16058
+          },
+          {
+            "type": "footstep",
+            "time": 16483
+          },
+          {
+            "type": "footstep",
+            "time": 16908
+          },
+          {
+            "type": "footstep",
+            "time": 17333
+          },
+          {
+            "type": "footstep",
+            "time": 17758
+          },
+          {
+            "type": "footstep",
+            "time": 18183
+          },
+          {
+            "type": "footstep",
+            "time": 18608
+          },
+          {
+            "type": "footstep",
+            "time": 19033
+          },
+          {
+            "type": "footstep",
+            "time": 19458
+          },
+          {
+            "type": "footstep",
+            "time": 19883
+          },
+          {
+            "type": "complete",
+            "time": 20267,
+            "chamber": 36
+          }
+        ]
+      }
+    },
+    {
+      "label": "final",
+      "state": {
+        "room": "chamber-36",
+        "number": 36,
+        "mission": "Open the cargo hatch. Switch TEST off, then deliver the cube to STORE. Leave the gallery lift unpowered.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            11.617337226867676,
+            0.8646298050880432,
+            -9.999492645263672
+          ],
+          "velocity": [
+            4.799952691689729,
+            0,
+            -0.0010224151314305679
+          ],
+          "yaw": -1.570583363682068,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "release-source",
+            "position": [
+              10.959999999999999,
+              1.55,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "release-return",
+            "position": [
+              -10.959999999999999,
+              1.55,
+              8
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "journey-cube",
+            "position": [
+              7.059481143951416,
+              0.6898929476737976,
+              -0.9729727506637573
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0.0000020650768419727683,
+              -0.000009706442142487504,
+              5.534584488486871e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "lift-pressure",
+            "position": [
+              -7,
+              0.14,
+              -1
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "store-pressure",
+            "position": [
+              7,
+              0.14,
+              -1
+            ],
+            "pressed": true,
+            "crate": "journey-cube"
+          }
+        ],
+        "devices": [
+          {
+            "id": "gallery-door",
+            "kind": "shutter",
+            "label": "GALLERY",
+            "position": [
+              -6,
+              7.1,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "store-door",
+            "kind": "shutter",
+            "label": "STORE",
+            "position": [
+              11.12,
+              5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "cargo-hatch",
+            "kind": "shutter",
+            "label": "CARGO HATCH",
+            "position": [
+              0,
+              5,
+              2
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "release-test",
+            "kind": "switch",
+            "label": "TEST",
+            "position": [
+              0,
+              1.25,
+              11
+            ],
+            "size": [
+              0.4,
+              0.7,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "journey-lift",
+            "kind": "lift",
+            "label": "GALLERY TRANSFER",
+            "position": [
+              -6,
+              -0.2,
+              -7
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "LOADING",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "release-source",
+            "position": [
+              10.985,
+              1.75,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          },
+          {
+            "id": "release-return",
+            "position": [
+              -10.985,
+              1.75,
+              8
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "gallery-exit",
+            "label": "EXIT",
+            "position": [
+              -6,
+              7.1,
+              -16.29
+            ],
+            "size": [
+              3.16,
+              3,
+              3.380000000000001
+            ]
+          },
+          {
+            "id": "store-exit",
+            "label": "EXIT",
+            "position": [
+              13.39,
+              1.5,
+              -10
+            ],
+            "size": [
+              3.58,
+              3,
+              3.16
+            ]
+          }
+        ],
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "store-exit",
+          "reason": "",
+          "events": [
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "footstep",
+              "time": 508
+            },
+            {
+              "type": "footstep",
+              "time": 933
+            },
+            {
+              "type": "footstep",
+              "time": 1358
+            },
+            {
+              "type": "footstep",
+              "time": 1783
+            },
+            {
+              "type": "footstep",
+              "time": 2208
+            },
+            {
+              "type": "portalA",
+              "time": 2508,
+              "surface": "release-source",
+              "point": [
+                10.959999999999999,
+                1.55,
+                8
+              ]
+            },
+            {
+              "type": "portalB",
+              "time": 2517,
+              "surface": "release-return",
+              "point": [
+                -10.959999999999999,
+                1.55,
+                8
+              ]
+            },
+            {
+              "type": "footstep",
+              "time": 2633
+            },
+            {
+              "type": "footstep",
+              "time": 3058
+            },
+            {
+              "type": "footstep",
+              "time": 3483
+            },
+            {
+              "type": "footstep",
+              "time": 3908
+            },
+            {
+              "type": "footstep",
+              "time": 4333
+            },
+            {
+              "type": "receiver-power",
+              "time": 4500,
+              "id": "release-light"
+            },
+            {
+              "type": "switch-toggle",
+              "time": 4500,
+              "id": "release-test",
+              "value": true
+            },
+            {
+              "type": "shutter-open",
+              "time": 4500,
+              "id": "cargo-hatch"
+            },
+            {
+              "type": "beam-blocked",
+              "time": 5308,
+              "id": "release-light"
+            },
+            {
+              "type": "switch-toggle",
+              "time": 5308,
+              "id": "release-test",
+              "value": false
+            },
+            {
+              "type": "footstep",
+              "time": 5317
+            },
+            {
+              "type": "footstep",
+              "time": 5742
+            },
+            {
+              "type": "footstep",
+              "time": 6167
+            },
+            {
+              "type": "footstep",
+              "time": 6592
+            },
+            {
+              "type": "footstep",
+              "time": 7017
+            },
+            {
+              "type": "footstep",
+              "time": 7442
+            },
+            {
+              "type": "footstep",
+              "time": 7967
+            },
+            {
+              "type": "footstep",
+              "time": 8392
+            },
+            {
+              "type": "footstep",
+              "time": 8817
+            },
+            {
+              "type": "footstep",
+              "time": 9242
+            },
+            {
+              "type": "footstep",
+              "time": 9667
+            },
+            {
+              "type": "footstep",
+              "time": 10092
+            },
+            {
+              "type": "footstep",
+              "time": 10517
+            },
+            {
+              "type": "footstep",
+              "time": 10942
+            },
+            {
+              "type": "footstep",
+              "time": 11417
+            },
+            {
+              "type": "pickup",
+              "time": 11483,
+              "body": "journey-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 11842
+            },
+            {
+              "type": "footstep",
+              "time": 12267
+            },
+            {
+              "type": "footstep",
+              "time": 12692
+            },
+            {
+              "type": "footstep",
+              "time": 13117
+            },
+            {
+              "type": "footstep",
+              "time": 13542
+            },
+            {
+              "type": "drop",
+              "time": 14417,
+              "body": "journey-cube"
+            },
+            {
+              "type": "shutter-open",
+              "time": 14567,
+              "id": "store-door"
+            },
+            {
+              "type": "pad",
+              "time": 14567,
+              "pad": "store-pressure",
+              "crate": "journey-cube"
+            },
+            {
+              "type": "contact",
+              "time": 14575,
+              "body": "journey-cube",
+              "speed": 2.4607302571898098
+            },
+            {
+              "type": "footstep",
+              "time": 15633
+            },
+            {
+              "type": "footstep",
+              "time": 16058
+            },
+            {
+              "type": "footstep",
+              "time": 16483
+            },
+            {
+              "type": "footstep",
+              "time": 16908
+            },
+            {
+              "type": "footstep",
+              "time": 17333
+            },
+            {
+              "type": "footstep",
+              "time": 17758
+            },
+            {
+              "type": "footstep",
+              "time": 18183
+            },
+            {
+              "type": "footstep",
+              "time": 18608
+            },
+            {
+              "type": "footstep",
+              "time": 19033
+            },
+            {
+              "type": "footstep",
+              "time": 19458
+            },
+            {
+              "type": "footstep",
+              "time": 19883
+            }
+          ],
+          "mechanisms": [
+            "beams",
+            "switches",
+            "shutters",
+            "cargo",
+            "buttons"
+          ]
+        },
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "lift-pressure": false,
+          "store-pressure": true,
+          "closed:gallery-door": true,
+          "clear:gallery-door": false,
+          "safety:gallery-door": false,
+          "door-safety": false,
+          "moving:gallery-door": false,
+          "closed:store-door": false,
+          "clear:store-door": true,
+          "safety:store-door": false,
+          "moving:store-door": false,
+          "closed:cargo-hatch": false,
+          "clear:cargo-hatch": true,
+          "safety:cargo-hatch": false,
+          "moving:cargo-hatch": false,
+          "moving:release-test": false,
+          "moving:journey-lift": false,
+          "at:journey-lift:LOADING": true,
+          "at:journey-lift:GALLERY": false,
+          "release-light": false
+        },
+        "journal": {
+          "reports": [
+            {
+              "id": "hatch-opened",
+              "status": "OBSERVED",
+              "text": "The cargo hatch has opened.",
+              "observedAt": 5.300000000000053,
+              "pastText": "During TEST, the cargo hatch opened."
+            },
+            {
+              "id": "gallery-arrival",
+              "status": "NOT YET OBSERVED",
+              "text": "The lift has not reached GALLERY yet.",
+              "observedAt": null,
+              "pastText": null
+            }
+          ],
+          "attempt": 1,
+          "rows": [
+            {
+              "sequence": 1,
+              "time": 4.500000000000013,
+              "text": "TEST began."
+            },
+            {
+              "sequence": 2,
+              "time": 4.500000000000013,
+              "text": "RELEASE RECEIVER received light."
+            },
+            {
+              "sequence": 3,
+              "time": 5.300000000000053,
+              "text": "CARGO HATCH opened fully."
+            },
+            {
+              "sequence": 4,
+              "time": 5.308333333333387,
+              "text": "TEST ended."
+            },
+            {
+              "sequence": 5,
+              "time": 5.308333333333387,
+              "text": "RELEASE RECEIVER lost light."
+            },
+            {
+              "sequence": 6,
+              "time": 14.558333333333147,
+              "text": "Cargo reached STORE."
+            },
+            {
+              "sequence": 7,
+              "time": 15.366666666666434,
+              "text": "STORE DOOR opened fully."
+            }
+          ],
+          "truncated": false,
+          "now": [
+            {
+              "id": "cargo-hatch",
+              "label": "CARGO HATCH",
+              "kind": "shutter",
+              "state": "OPEN"
+            },
+            {
+              "id": "release-light",
+              "label": "RELEASE RECEIVER",
+              "kind": "light",
+              "state": "DARK"
+            },
+            {
+              "id": "lift-pressure",
+              "label": "LIFT",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "store-pressure",
+              "label": "STORE",
+              "kind": "pressure",
+              "state": "PRESSED",
+              "cargo": true
+            },
+            {
+              "id": "journey-lift",
+              "label": "GALLERY TRANSFER",
+              "kind": "dock",
+              "state": "AT LOADING"
+            },
+            {
+              "id": "gallery-door",
+              "label": "GALLERY DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            },
+            {
+              "id": "store-door",
+              "label": "STORE DOOR",
+              "kind": "shutter",
+              "state": "OPEN"
+            }
+          ],
+          "tests": [
+            {
+              "label": "TEST",
+              "status": "ENDED",
+              "observations": [
+                {
+                  "label": "CARGO HATCH",
+                  "opened": "YES",
+                  "remainedClosed": "NO"
+                }
+              ]
+            }
+          ]
+        },
+        "events": [
+          {
+            "type": "drop",
+            "time": 14417,
+            "body": "journey-cube"
+          },
+          {
+            "type": "shutter-open",
+            "time": 14567,
+            "id": "store-door"
+          },
+          {
+            "type": "pad",
+            "time": 14567,
+            "pad": "store-pressure",
+            "crate": "journey-cube"
+          },
+          {
+            "type": "contact",
+            "time": 14575,
+            "body": "journey-cube",
+            "speed": 2.4607302571898098
+          },
+          {
+            "type": "footstep",
+            "time": 15633
+          },
+          {
+            "type": "footstep",
+            "time": 16058
+          },
+          {
+            "type": "footstep",
+            "time": 16483
+          },
+          {
+            "type": "footstep",
+            "time": 16908
+          },
+          {
+            "type": "footstep",
+            "time": 17333
+          },
+          {
+            "type": "footstep",
+            "time": 17758
+          },
+          {
+            "type": "footstep",
+            "time": 18183
+          },
+          {
+            "type": "footstep",
+            "time": 18608
+          },
+          {
+            "type": "footstep",
+            "time": 19033
+          },
+          {
+            "type": "footstep",
+            "time": 19458
+          },
+          {
+            "type": "footstep",
+            "time": 19883
+          },
+          {
+            "type": "complete",
+            "time": 20267,
+            "chamber": 36
+          }
+        ]
+      }
+    }
+  ]
+}

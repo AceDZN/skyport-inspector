@@ -1,6 +1,7 @@
 /** Optional reading support. Nothing here is read by physics, goals or saved frontier. */
 import type{CoreLevel}from'./level';
 const vocabulary:[string,string][]=[
+ ['told','אמרו ל־ / הורו ל־'],['asked','ביקשו מ־'],['their','שלהם / שלהן'],['its','שלו / שלה — של החפץ'],['there','שם'],['here','כאן'],
  ['is opened by','נפתח/ת על ידי'],['are opened by','נפתחים על ידי'],['is carried by','מוסע/ת על ידי'],['is blocked by','נחסם/ת על ידי'],['is released by','משוחרר/ת על ידי'],['is stopped by','נעצר/ת עקב'],['has not opened','עדיין לא נפתח'],['has opened','כבר נפתח'],['has not reached','עדיין לא הגיע'],['has reached','כבר הגיע'],
  ["don't have to",'לא חייבים'],["mustn't",'אסור'],['do not','אל ת־'],['bring back','להחזיר'],['in front of','לפני / בחזית'],['behind','מאחורי'],['through','דרך'],['on','על'],['button','לחצן'],['upper','עליון'],['lower','תחתון'],['each','כל אחד'],['both','שניהם'],['either','אחד מהשניים'],['must','חייבים'],['can','אפשר / מותר'],['before','לפני'],['after','אחרי'],['when','כאשר'],['while','בזמן ש־'],['deeper','עמוק יותר'],['higher','גבוה יותר'],['shallower','רדוד יותר'],['farther','רחוק יותר'],['nearer','קרוב יותר'],['wider','רחב יותר'],['narrower','צר יותר'],['faster','מהיר יותר'],['slower','איטי יותר'],['smaller','קטן יותר'],['larger','גדול יותר'],['is powered by','מקבל כוח מ־'],['that','ש־'],['remained closed','נשאר סגור'],['opened','נפתח'],['still','עדיין'],['already','כבר'],['yet','עדיין / טרם'],['if','אם'],['until','עד ש־'],['keep','השאירו / שמרו'],['leave','השאירו'],['beam','קרן'],['receiver','מקלט'],['cube','קובייה']
 ];

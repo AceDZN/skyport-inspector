@@ -1,0 +1,245 @@
+{
+  "sourceExact": true,
+  "cases": [
+    {
+      "file": "47-body-window-exclusion-and-receipt-recovery.json",
+      "error": null,
+      "respawns": 0,
+      "result": {
+        "goalMatched": true,
+        "physicalComplete": true,
+        "exit": "freight-exit",
+        "reason": ""
+      }
+    },
+    {
+      "file": "47-entry-two-supplies.json",
+      "error": "AssertionError [ERR_ASSERTION]: ACCESS never fully clears the actual walking hatch",
+      "respawns": 0,
+      "result": {}
+    },
+    {
+      "file": "47-equivalent-swapped-cargo.json",
+      "error": "AssertionError [ERR_ASSERTION]: ACCESS never fully clears the actual walking hatch",
+      "respawns": 0,
+      "result": {}
+    },
+    {
+      "file": "47-freight-low-window-stairs.json",
+      "error": null,
+      "respawns": 0,
+      "result": {
+        "goalMatched": true,
+        "physicalComplete": true,
+        "exit": "freight-exit",
+        "reason": ""
+      }
+    },
+    {
+      "file": "47-maintained-access-removal-recovery.json",
+      "error": "AssertionError [ERR_ASSERTION]: ACCESS never fully clears the actual walking hatch",
+      "respawns": 0,
+      "result": {}
+    },
+    {
+      "file": "47-wrong-freight-return-entry.json",
+      "error": "AssertionError [ERR_ASSERTION]: Actual WASD did not reach -5,-2",
+      "respawns": 0,
+      "result": {}
+    }
+  ],
+  "entryEvidence": [
+    {
+      "label": "actual-normal-depth-then-turn-west",
+      "player": [
+        -3.5973024368286133,
+        0.8650994896888733,
+        5.698136806488037
+      ],
+      "cargo": [
+        {
+          "id": "listener-cube-a",
+          "position": [
+            -5.396987438201904,
+            1.0150995254516602,
+            5.664468765258789
+          ],
+          "velocity": [
+            -0.41877827048301697,
+            0.0023008224088698626,
+            -0.007888533174991608
+          ],
+          "held": true
+        },
+        {
+          "id": "listener-cube-b",
+          "position": [
+            3.9999873638153076,
+            0.5498895645141602,
+            11
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "held": false
+        }
+      ],
+      "access": {
+        "id": "listener-access",
+        "position": [
+          -5,
+          0.14,
+          6
+        ],
+        "pressed": false,
+        "crate": null
+      }
+    },
+    {
+      "label": "actual-released-pressure-listener-access",
+      "player": [
+        -6.918886184692383,
+        0.8650838732719421,
+        6.011837482452393
+      ],
+      "cargo": [
+        {
+          "id": "listener-cube-a",
+          "position": [
+            -5.116563320159912,
+            0.6898946166038513,
+            6.002779960632324
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "held": false
+        },
+        {
+          "id": "listener-cube-b",
+          "position": [
+            3.9999873638153076,
+            0.5498895645141602,
+            11
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "held": false
+        }
+      ],
+      "access": {
+        "id": "listener-access",
+        "position": [
+          -5,
+          0.14,
+          6
+        ],
+        "pressed": true,
+        "crate": "listener-cube-a"
+      }
+    },
+    {
+      "label": "actual-normal-depth-then-turn-west",
+      "player": [
+        -3.621236562728882,
+        0.8649803996086121,
+        5.696296215057373
+      ],
+      "cargo": [
+        {
+          "id": "listener-cube-a",
+          "position": [
+            -8.044382095336914,
+            0.8693691492080688,
+            6.07423210144043
+          ],
+          "velocity": [
+            -4.608561038970947,
+            2.8241591453552246,
+            1.651847243309021
+          ],
+          "held": false
+        },
+        {
+          "id": "listener-cube-b",
+          "position": [
+            -5.420485496520996,
+            1.014980435371399,
+            5.644308567047119
+          ],
+          "velocity": [
+            -0.41992151737213135,
+            -0.012004290707409382,
+            -0.012118617072701454
+          ],
+          "held": true
+        }
+      ],
+      "access": {
+        "id": "listener-access",
+        "position": [
+          -5,
+          0.14,
+          6
+        ],
+        "pressed": false,
+        "crate": null
+      }
+    },
+    {
+      "label": "failure",
+      "player": [
+        -5.035236358642578,
+        0.8649858832359314,
+        1.9040048122406006
+      ],
+      "cargo": [
+        {
+          "id": "listener-cube-a",
+          "position": [
+            -10.669232368469238,
+            0.5498899817466736,
+            6.601982116699219
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "held": false
+        },
+        {
+          "id": "listener-cube-b",
+          "position": [
+            -5.2945356369018555,
+            1.0146833658218384,
+            1.3917683362960815
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "held": true
+        }
+      ],
+      "access": {
+        "id": "listener-access",
+        "position": [
+          -5,
+          0.14,
+          6
+        ],
+        "pressed": false,
+        "crate": null
+      }
+    }
+  ]
+}

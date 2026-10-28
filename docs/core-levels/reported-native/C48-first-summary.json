@@ -1,0 +1,140 @@
+{
+  "sourceExact": true,
+  "nativePass": 8,
+  "nativeFail": 0,
+  "scope": "FIRST48 only, no renderer/browser/build or registration.",
+  "routes": [
+    {
+      "file": "48-catch-cut-stair-return.json",
+      "error": null,
+      "respawns": 0,
+      "jumpEvents": 0,
+      "crossings": 1,
+      "ridingFrames": {},
+      "maxDeviceStep": {
+        "question-freight-lift": 0,
+        "question-service-deck": 0.02999999999999936
+      },
+      "result": {
+        "goalMatched": true,
+        "physicalComplete": true,
+        "exit": "service-exit",
+        "reason": ""
+      }
+    },
+    {
+      "file": "48-earlier-arrival-departure-recall.json",
+      "error": null,
+      "respawns": 0,
+      "jumpEvents": 0,
+      "crossings": 1,
+      "ridingFrames": {},
+      "maxDeviceStep": {
+        "question-freight-lift": 0,
+        "question-service-deck": 0.02999999999999936
+      },
+      "result": {
+        "goalMatched": true,
+        "physicalComplete": true,
+        "exit": "service-exit",
+        "reason": ""
+      }
+    },
+    {
+      "file": "48-freight-current-loading-gallery.json",
+      "error": null,
+      "respawns": 0,
+      "jumpEvents": 0,
+      "crossings": 1,
+      "ridingFrames": {
+        "question-freight-lift": 559
+      },
+      "maxDeviceStep": {
+        "question-freight-lift": 0.020000000000071183,
+        "question-service-deck": 0
+      },
+      "result": {
+        "goalMatched": true,
+        "physicalComplete": true,
+        "exit": "freight-exit",
+        "reason": ""
+      }
+    },
+    {
+      "file": "48-selected-is-not-docked.json",
+      "error": null,
+      "respawns": 0,
+      "jumpEvents": 0,
+      "crossings": 1,
+      "ridingFrames": {},
+      "maxDeviceStep": {
+        "question-freight-lift": 0,
+        "question-service-deck": 0.02999999999999936
+      },
+      "result": {
+        "goalMatched": true,
+        "physicalComplete": true,
+        "exit": "service-exit",
+        "reason": ""
+      }
+    },
+    {
+      "file": "48-service-park-without-riding.json",
+      "error": null,
+      "respawns": 0,
+      "jumpEvents": 0,
+      "crossings": 1,
+      "ridingFrames": {},
+      "maxDeviceStep": {
+        "question-freight-lift": 0,
+        "question-service-deck": 0.02999999999999936
+      },
+      "result": {
+        "goalMatched": true,
+        "physicalComplete": true,
+        "exit": "service-exit",
+        "reason": ""
+      }
+    },
+    {
+      "file": "48-wrong-freight-descend-service.json",
+      "error": null,
+      "respawns": 0,
+      "jumpEvents": 0,
+      "crossings": 1,
+      "ridingFrames": {
+        "question-freight-lift": 1118
+      },
+      "maxDeviceStep": {
+        "question-freight-lift": 0.020000000000071183,
+        "question-service-deck": 0.02999999999999936
+      },
+      "result": {
+        "goalMatched": true,
+        "physicalComplete": true,
+        "exit": "service-exit",
+        "reason": ""
+      }
+    },
+    {
+      "file": "48-wrong-service-return-freight.json",
+      "error": null,
+      "respawns": 0,
+      "jumpEvents": 0,
+      "crossings": 1,
+      "ridingFrames": {
+        "question-freight-lift": 559
+      },
+      "maxDeviceStep": {
+        "question-freight-lift": 0.020000000000071183,
+        "question-service-deck": 0.02999999999999936
+      },
+      "result": {
+        "goalMatched": true,
+        "physicalComplete": true,
+        "exit": "freight-exit",
+        "reason": ""
+      }
+    }
+  ]
+}

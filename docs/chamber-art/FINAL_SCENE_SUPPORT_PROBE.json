@@ -1,0 +1,331 @@
+{
+  "status": "CPU actual-blueprint/Three BufferGeometry support math PASS; no WebGL/native/full compiler/build",
+  "results": [
+    {
+      "number": 46,
+      "kind": "roof",
+      "zones": 6,
+      "clearArea": 974.256,
+      "hardwareInstances": 290,
+      "materials": [
+        "graphite",
+        "panelQuiet",
+        "aluminum",
+        "light"
+      ],
+      "mounts": [
+        {
+          "x": 3,
+          "y": 13,
+          "z": 7,
+          "roof": "twin-shaft-ceiling"
+        },
+        {
+          "x": 1,
+          "y": 13,
+          "z": -6,
+          "roof": "twin-shaft-ceiling"
+        },
+        {
+          "x": 18.5,
+          "y": 13,
+          "z": -6,
+          "roof": "twin-shaft-ceiling"
+        },
+        {
+          "x": 26.5,
+          "y": 13,
+          "z": -6,
+          "roof": "twin-shaft-ceiling"
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "kind": "roof",
+      "zones": 31,
+      "clearArea": 733.8515999999998,
+      "hardwareInstances": 246,
+      "materials": [
+        "graphite",
+        "panelQuiet",
+        "aluminum",
+        "light"
+      ],
+      "mounts": [
+        {
+          "x": 0,
+          "y": 12,
+          "z": 11,
+          "roof": "question-roof"
+        },
+        {
+          "x": -11,
+          "y": 12,
+          "z": -4,
+          "roof": "question-roof"
+        },
+        {
+          "x": 2,
+          "y": 12,
+          "z": -4,
+          "roof": "question-roof"
+        },
+        {
+          "x": 15,
+          "y": 12,
+          "z": -4,
+          "roof": "question-roof"
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "kind": "roof",
+      "zones": 18,
+      "clearArea": 1556.4181999999996,
+      "hardwareInstances": 541,
+      "materials": [
+        "graphite",
+        "panelQuiet",
+        "aluminum",
+        "light"
+      ],
+      "mounts": [
+        {
+          "x": 1,
+          "y": 13,
+          "z": 7,
+          "roof": "vault-roof"
+        },
+        {
+          "x": 23,
+          "y": 13,
+          "z": -6,
+          "roof": "vault-roof"
+        },
+        {
+          "x": 3.5,
+          "y": 13,
+          "z": 24,
+          "roof": "transfer-roof"
+        },
+        {
+          "x": 8.5,
+          "y": 13,
+          "z": 36,
+          "roof": "transfer-roof"
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "kind": "paint",
+      "circuitPairs": 5,
+      "geometries": 5,
+      "drawsPerPair": 1,
+      "paints": [
+        {
+          "pad": "listener-access",
+          "door": "entry-door",
+          "supportY": 0,
+          "spans": [
+            {
+              "x1": -11.77,
+              "x2": -5,
+              "z1": 5.982,
+              "z2": 6.018,
+              "y": 0.004
+            },
+            {
+              "x1": -11.788,
+              "x2": -11.751999999999999,
+              "z1": -7,
+              "z2": 6,
+              "y": 0.004
+            }
+          ],
+          "triangles": 4
+        },
+        {
+          "pad": "listener-entry-receipt",
+          "door": "entry-door",
+          "supportY": 0,
+          "spans": [
+            {
+              "x1": -11.77,
+              "x2": -5,
+              "z1": -4.018,
+              "z2": -3.982,
+              "y": 0.004
+            },
+            {
+              "x1": -11.788,
+              "x2": -11.751999999999999,
+              "z1": -7,
+              "z2": -4,
+              "y": 0.004
+            }
+          ],
+          "triangles": 4
+        },
+        {
+          "pad": "listener-freight-receipt",
+          "door": "freight-door",
+          "supportY": 0,
+          "spans": [
+            {
+              "x1": 5,
+              "x2": 11.975,
+              "z1": -1.418,
+              "z2": -1.382,
+              "y": 0.004
+            }
+          ],
+          "triangles": 2
+        },
+        {
+          "pad": "listener-access",
+          "door": "listener-entry-hatch",
+          "supportY": 0,
+          "spans": [
+            {
+              "x1": -5,
+              "x2": -4.65,
+              "z1": 5.982,
+              "z2": 6.018,
+              "y": 0.004
+            },
+            {
+              "x1": -4.668,
+              "x2": -4.632000000000001,
+              "z1": 0.68,
+              "z2": 6,
+              "y": 0.004
+            }
+          ],
+          "triangles": 4
+        },
+        {
+          "pad": "listener-freight-receipt",
+          "door": "listener-stair-gate",
+          "supportY": 0,
+          "spans": [
+            {
+              "x1": 5,
+              "x2": 10.85,
+              "z1": -1.418,
+              "z2": -1.382,
+              "y": 0.004
+            },
+            {
+              "x1": 10.831999999999999,
+              "x2": 10.868,
+              "z1": -1.4,
+              "z2": 7,
+              "y": 0.004
+            }
+          ],
+          "triangles": 4
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "kind": "paint",
+      "circuitPairs": 3,
+      "geometries": 3,
+      "drawsPerPair": 1,
+      "paints": [
+        {
+          "pad": "return-pressure",
+          "door": "vault-return-cover",
+          "supportY": 5,
+          "spans": [
+            {
+              "x1": 23,
+              "x2": 29.950000000000003,
+              "z1": -6.018,
+              "z2": -5.982,
+              "y": 5.004
+            }
+          ],
+          "triangles": 2
+        },
+        {
+          "pad": "freight-store",
+          "door": "freight-final-door",
+          "supportY": 0,
+          "spans": [
+            {
+              "x1": -5,
+              "x2": -2.65,
+              "z1": 18.982,
+              "z2": 19.018,
+              "y": 0.004
+            },
+            {
+              "x1": -2.6679999999999997,
+              "x2": -2.632,
+              "z1": 19,
+              "z2": 19.975,
+              "y": 0.004
+            },
+            {
+              "x1": -2.6679999999999997,
+              "x2": -2.632,
+              "z1": 36.025,
+              "z2": 40.12,
+              "y": 0.004
+            }
+          ],
+          "triangles": 6
+        },
+        {
+          "pad": "archive-store",
+          "door": "archive-final-door",
+          "supportY": 0,
+          "spans": [
+            {
+              "x1": 9.35,
+              "x2": 12,
+              "z1": 16.482,
+              "z2": 16.518,
+              "y": 0.004
+            },
+            {
+              "x1": 9.331999999999999,
+              "x2": 9.368,
+              "z1": 16.5,
+              "z2": 19.975,
+              "y": 0.004
+            },
+            {
+              "x1": 9.331999999999999,
+              "x2": 9.368,
+              "z1": 24.025,
+              "z2": 25.975,
+              "y": 0.004
+            },
+            {
+              "x1": 9.331999999999999,
+              "x2": 9.368,
+              "z1": 36.025,
+              "z2": 40.12,
+              "y": 0.004
+            }
+          ],
+          "triangles": 8
+        }
+      ]
+    }
+  ],
+  "paletteAndCircuitUpdatesUnchanged": true,
+  "heroFontC11C25AADiagnosticsUnchanged": true,
+  "newMaterials": 0,
+  "newTextures": 0,
+  "rectAreaLightBudget": 4,
+  "softwareRectAreaLightBudget": 0,
+  "depthTestingPreserved": true,
+  "sourceSHA256": "45805a6c744ab03b7e18966dfaa7b6d22f3b1c15e36cf0b97cf510dd5c46aee2"
+}

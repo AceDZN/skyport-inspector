@@ -1,0 +1,191 @@
+{
+  "nativeExit": 0,
+  "passed": 8,
+  "failed": 0,
+  "all14HashesExact": true,
+  "files": {
+    "src/core/world.ts": "e04f8690ddfb9306c9602a25a104b5e47dbe6829b937cf53da82debf52be3d94",
+    "src/core/portal-placement.ts": "655b0716bec176c8dc553ffa546c45287c16e3633d6475753342d8129bf28875",
+    "src/systems.ts": "13d3dbf57ced0b8d18b499762d60282a82686cbc698f972c55dbff0c6b0ea67b",
+    "src/physics.ts": "a6dadd039ea5ef703681ab5276cb4c14f48c72bebb7d34d86013f35b4bf870b4",
+    "src/core/chambers.ts": "3ffced015159e6f62b42eae056a6137eb714096c75cd7c6bf19db4ec94a0b6b3",
+    "src/core/level.ts": "4dc6e0989e9a3ebe3a22f4a115ac5116073fec2e2d7d8777ff76f81f7b9db272",
+    "src/core/level-kit.ts": "4f7b4c12e2816a838cb2653943e2a44fa3bed1f9272b13a34d795e325cbbf694",
+    "src/core/levels/conditional.ts": "9564d0b8893c9f9920f1f598b926e258a47e67fa52189cd5637c6cf5db4cc0b5",
+    "src/core/levels/conditional-english.ts": "bac3d1f4335282d58836a7fc2c2c982d36f61dae846e659fe67be23022caf514",
+    "src/core/machine-journal.ts": "b400ede48dd62294f3a212e504495a50f8ca2db93dc4efb4f5d66e6962108de1",
+    "src/core/machine-state.ts": "abc74516d31b59493f749fcf4220cf492cc3ce2578519d50c6ccc98e7a715458",
+    "tests/core-conditional-routes.test.ts": "95b6eef5a4dc2df21994c3a744d668f9dff12e1ed6fb321c53883df3c03cd3ea",
+    "tests/core-conditional-flat-entry.test.ts": "8b67258e1bd158e16c385598f52ca414a532cea5d972cf95473c3ce95345f29d",
+    "tests/helpers/conditional-route.ts": "f138938e7d646fef735b560821823ab98ca6fdd63c1036cd64769c5aba192f17"
+  },
+  "routes": [
+    {
+      "file": "45-cargo-fit-body-blocked-base.json",
+      "error": null,
+      "jumpEvents": 0,
+      "finalPlayer": {
+        "position": [
+          -14.60107707977295,
+          5.064651012420654,
+          6.000064849853516
+        ],
+        "velocity": [
+          -4.799425108809431,
+          0,
+          -0.00012006882714129285
+        ],
+        "yaw": 1.5707693461728551,
+        "pitch": 0,
+        "grounded": true,
+        "crossings": 2
+      },
+      "ridingFrames": {
+        "final-archive-lift": 420
+      }
+    },
+    {
+      "file": "45-dark-service-inspection-contrast.json",
+      "error": null,
+      "jumpEvents": 0,
+      "finalPlayer": {
+        "position": [
+          14.619935989379883,
+          0.8652196526527405,
+          8.001937866210938
+        ],
+        "velocity": [
+          4.799997544666626,
+          0,
+          -0.003908870294729978
+        ],
+        "yaw": -1.5699825726747232,
+        "pitch": 0,
+        "grounded": true,
+        "crossings": 2
+      },
+      "ridingFrames": {}
+    },
+    {
+      "file": "45-equivalent-store-before-light-base.json",
+      "error": null,
+      "jumpEvents": 0,
+      "finalPlayer": {
+        "position": [
+          -14.62054443359375,
+          5.064846992492676,
+          6.00001859664917
+        ],
+        "velocity": [
+          -4.7995846421947235,
+          0,
+          -2.7716517132504326e-05
+        ],
+        "yaw": 1.5707886404876785,
+        "pitch": 0,
+        "grounded": true,
+        "crossings": 2
+      },
+      "ridingFrames": {
+        "final-archive-lift": 420
+      }
+    },
+    {
+      "file": "45-flat-entry-stationary-frame-roof-and-escape-base.json",
+      "error": null,
+      "jumpEvents": 0,
+      "finalPlayer": {
+        "position": [
+          -14.632193565368652,
+          5.064645290374756,
+          5.999966144561768
+        ],
+        "velocity": [
+          -4.799584641704429,
+          0,
+          7.216108198444861e-05
+        ],
+        "yaw": 1.570810981624157,
+        "pitch": 0,
+        "grounded": true,
+        "crossings": 2
+      },
+      "ridingFrames": {
+        "final-archive-lift": 420
+      }
+    },
+    {
+      "file": "45-stage-light-store-archive-base.json",
+      "error": null,
+      "jumpEvents": 0,
+      "finalPlayer": {
+        "position": [
+          -14.628966331481934,
+          5.0649094581604,
+          6.000087738037109
+        ],
+        "velocity": [
+          -4.79958463930812,
+          0,
+          -0.00016671389141902443
+        ],
+        "yaw": 1.570760134293524,
+        "pitch": 0,
+        "grounded": true,
+        "crossings": 2
+      },
+      "ridingFrames": {
+        "final-archive-lift": 420
+      }
+    },
+    {
+      "file": "45-well-return-control-recovery-base.json",
+      "error": null,
+      "jumpEvents": 0,
+      "finalPlayer": {
+        "position": [
+          -14.612238883972168,
+          5.06480598449707,
+          6.000030994415283
+        ],
+        "velocity": [
+          -4.7995113435711625,
+          0,
+          -4.983404046388749e-05
+        ],
+        "yaw": 1.5707833636980841,
+        "pitch": 0,
+        "grounded": true,
+        "crossings": 2
+      },
+      "ridingFrames": {
+        "final-archive-lift": 420
+      }
+    },
+    {
+      "file": "45-wrong-inspection-reallocation-base.json",
+      "error": null,
+      "jumpEvents": 0,
+      "finalPlayer": {
+        "position": [
+          -14.638677597045898,
+          5.064664363861084,
+          5.999953746795654
+        ],
+        "velocity": [
+          -4.799646945070372,
+          0,
+          9.061768540917308e-05
+        ],
+        "yaw": 1.5708161840924113,
+        "pitch": 0,
+        "grounded": true,
+        "crossings": 2
+      },
+      "ridingFrames": {
+        "final-archive-lift": 420
+      }
+    }
+  ],
+  "closedAt": "2026-10-28T15:08:09.343731+00:00"
+}

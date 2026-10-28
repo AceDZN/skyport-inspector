@@ -1,0 +1,27 @@
+{
+  "startedAt": "2026-10-28T15:01:07.784583+00:00",
+  "finishedAt": "2026-10-28T15:01:11.117357+00:00",
+  "elapsedWallSeconds": 3.333,
+  "exitCode": 0,
+  "command": [
+    "npx",
+    "tsc",
+    "--noEmit",
+    "--strict",
+    "--target",
+    "ES2022",
+    "--module",
+    "ESNext",
+    "--moduleResolution",
+    "Bundler",
+    "--skipLibCheck",
+    "--esModuleInterop",
+    "--resolveJsonModule",
+    "--typeRoots",
+    "./node_modules/@types,/Users/acedzn/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/@types",
+    "--types",
+    "node",
+    "tests/core-reported-final-routes.test.ts",
+    "tests/helpers/reported-final-route.ts"
+  ]
+}

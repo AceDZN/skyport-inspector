@@ -1,0 +1,31 @@
+{
+  "createdAt": "2026-10-28T11:42:24.132193+00:00",
+  "status": "SOURCE ONLY, lead-approved generous corridor. Three affected cases prepared; no compile/native run.",
+  "physicalChanges": [
+    "Vestibule side wings X[-15.4,-11.0]",
+    "West ledge floor extends east to X-9.7",
+    "Only west stair-glass centre moves to X-9.7; unchanged tread centres and dimensions",
+    "Approach centre X-10.4, real clearance1.22m/usable stair width2.12m"
+  ],
+  "unchanged": "Door, goal bounds, circuit, receiver/beam, freight, cargo, final lift, test assertions. First failures and passed base/light/hardware remain preserved.",
+  "before": {
+    "src/core/levels/completion.ts": {
+      "sha256": "bdb14763e930b53f9d18e2d58d9c4551f3a2199d50b08c6dc61012fdddf95c26",
+      "snapshot": "before__src__core__levels__completion.ts.txt"
+    },
+    "tests/core-completion-routes.test.ts": {
+      "sha256": "46e1fd771233a70c22790cd36820834f0e35ef6076b1fade7f7c31ea15b9bd33",
+      "snapshot": "before__tests__core-completion-routes.test.ts.txt"
+    }
+  },
+  "after": {
+    "src/core/levels/completion.ts": {
+      "sha256": "1e07435502c93a64c692a13e21f047e3b46220f2c0ef311f720a357b2935c845",
+      "snapshot": "after__src__core__levels__completion.ts.txt"
+    },
+    "tests/core-completion-routes.test.ts": {
+      "sha256": "c3c951884fe4a1f44159a0b9e277276986cdccb97906075852ded29ba5e5e7ff",
+      "snapshot": "after__tests__core-completion-routes.test.ts.txt"
+    }
+  }
+}

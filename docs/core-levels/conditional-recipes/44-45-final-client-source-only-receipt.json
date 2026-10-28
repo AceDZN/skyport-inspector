@@ -1,0 +1,47 @@
+{
+  "status": "UNEXECUTED source-only JSONL handoff; no browser/native/compiler/build run",
+  "runner": "docs/chamber-qa/final-campaign/browser-client.mjs",
+  "recipes": [
+    {
+      "file": "44-base-final-client-UNEXECUTED.jsonl",
+      "commands": 43,
+      "sha256": "126d9b9d135219525063ed0bc570964f5ecb1f929950c63d4f19596c89de5a63",
+      "completionAssertions": [
+        {
+          "action": "assert",
+          "path": "world.result.goalMatched",
+          "equals": true
+        },
+        {
+          "action": "assert",
+          "path": "world.result.exit",
+          "equals": "freight-exit"
+        }
+      ]
+    },
+    {
+      "file": "45-base-cargo-first-final-client-UNEXECUTED.jsonl",
+      "commands": 70,
+      "sha256": "831702ef8748e651f72ecdef45f72f3b899386e9c3083a530ed9e10c1034925e",
+      "completionAssertions": [
+        {
+          "action": "assert",
+          "path": "world.result.goalMatched",
+          "equals": true
+        },
+        {
+          "action": "assert",
+          "path": "world.result.exit",
+          "equals": "archive-exit"
+        }
+      ]
+    }
+  ],
+  "readOnlySourceHashes": {
+    "src/core/world.ts": "e04f8690ddfb9306c9602a25a104b5e47dbe6829b937cf53da82debf52be3d94",
+    "src/core/levels/conditional.ts": "9564d0b8893c9f9920f1f598b926e258a47e67fa52189cd5637c6cf5db4cc0b5",
+    "src/core/levels/conditional-english.ts": "bac3d1f4335282d58836a7fc2c2c982d36f61dae846e659fe67be23022caf514",
+    "src/core/levels/reported-46-48.ts": "a652b9dbd8879d94aa4de245ffba09afba7c8ae6a64cec51901e4f2e0f34945c",
+    "docs/chamber-qa/final-campaign/browser-client.mjs": "bb41de2179bd7a1834b4c654e909d135c7d89324036aa4e9b240bae94b76c84f"
+  }
+}

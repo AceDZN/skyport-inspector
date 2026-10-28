@@ -1,0 +1,27 @@
+/** Registered-campaign startup contracts, not level completions or browser proof. */
+import test,{before}from'node:test';
+import assert from'node:assert/strict';
+import{coreLevels,getCoreLevel}from'../src/core/levels';
+import{CoreWorld,initializePhysics}from'../src/core/world';
+before(initializePhysics);
+test('the saved campaign resolves exactly fifty distinct authored numbered rooms',()=>{
+ assert.deepEqual(coreLevels.map(l=>l.number),Array.from({length:50},(_,i)=>i+1));
+ assert.equal(new Set(coreLevels.map(l=>l.number)).size,50);
+ assert.throws(()=>getCoreLevel(0));assert.throws(()=>getCoreLevel(51));
+});
+test('all fifty normal registry entries construct their actual world without pre-awarding a result',()=>{
+ for(const level of coreLevels){
+  const w=new CoreWorld(level.number);
+  try{
+   assert.equal(w.level,level);assert.equal(w.number,level.number);
+   assert.deepEqual(w.blueprint.spawn,level.blueprint().spawn);
+   assert.ok(w.solids.length>0,`Missing physical room in ${level.number}`);
+   assert.equal(w.surfaces.length,w.blueprint.surfaces.length,`Registry portal-surface mismatch in ${level.number}`);
+   assert.equal(w.campaignResult,undefined);assert.equal(w.respawns,0);
+   for(let i=0;i<30;i++)w.step(1/120,{forward:0,strafe:0,jump:false});
+   assert.equal(w.campaignResult,undefined,`Room ${level.number} awards a goal without playing`);
+   assert.equal(w.respawns,0,`Room ${level.number} starts in a recovery loop`);
+   assert.ok([w.player.pos.x,w.player.pos.y,w.player.pos.z].every(Number.isFinite));
+  }finally{w.dispose();}
+ }
+});

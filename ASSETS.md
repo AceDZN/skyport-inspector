@@ -77,3 +77,8 @@ Search/acquisition, local file parsing and isolated proof rendering are complete
 ## Actual first-room art inspection
 
 The art helper independently opened the replacement game in Chrome, placed a real A/B pair with keyboard aiming, saw the live destination view, picked up the small module usingE, captured it at normal carry distance, and released it withE. Captures: `docs/rift-art/gameplay-linked-portals.png` and `docs/rift-art/gameplay-carry.png`. Model scale, front orientation, ground contact, bumper/handle/fastener detail and carry silhouette were visually checked. `docs/rift-art/REVIEW.md` records remaining scene lighting/sparsity, portal image quality and label-size recommendations. No guide integration or full game completion is inferred from that first-room review.
+
+
+## Frozen 50-room engineering finish
+
+The50-room candidate uses Scene `45805a6c744ab03b7e18966dfaa7b6d22f3b1c15e36cf0b97cf510dd5c46aee2`, with the same accepted hero helper `91ab46ce…`, GLB binaries and actual hero/cargo clip/copy code. Later changes fit blueprint fonts, orient floor marks, derive46/48/50 ceiling hardware from their actual roof slabs and restrict47/50 circuit paint to static floor support. Existing material batches/four area lights are reused; no new model/image generation or purchased asset is introduced. CPU support/font probes are in `docs/chamber-art/FINAL_SCENE_SUPPORT*` and `CAPSTONE_*`. Actual C1 model acceptance remains the earlier D2 record; final all-room pixels, listening and fresh1→50 are still pending. The model-intake source hashes remain historical acquisition/integration receipts, not a claim that the entire current Scene matches the earlier c99c3ffd source.

@@ -1,0 +1,1402 @@
+{
+  "scope": "Unregistered authored-spawn native input path only. No actor/cargo/machine/history/save setters, resets or browser/completion claims. Native portal rays ignore glass; real visual framing remains browser-pending.",
+  "number": 38,
+  "contrast": false,
+  "error": null,
+  "sources": {
+    "src/core/levels/completion.ts": "c81b6bf3fbe6cc5aeb1a6a8b87c1d83d0a9ceb4495b4e2aef9e96dd6b6775e7b",
+    "src/core/levels/completion-english.ts": "aee32b7eaf6333cf86b70fef2b2efdef8f29f7f04794267114c55aefbfe4e265",
+    "src/core/level.ts": "4dc6e0989e9a3ebe3a22f4a115ac5116073fec2e2d7d8777ff76f81f7b9db272",
+    "src/core/world.ts": "054fe818b86b3eda9d17d240b1f0aeebaa960aff1afe4669003df8131a60af23",
+    "src/core/machine-journal.ts": "b400ede48dd62294f3a212e504495a50f8ca2db93dc4efb4f5d66e6962108de1",
+    "src/systems.ts": "13d3dbf57ced0b8d18b499762d60282a82686cbc698f972c55dbff0c6b0ea67b",
+    "tests/core-completion-routes.test.ts": "4324b6ea7141e7dd55336fd789bf3bd1436ace17bf9a3f982ebfc827bb323514",
+    "tests/helpers/completion-route.ts": "b9de5a6768fa7a68421a9205141f94e34f42cfa650bdd23022202d9b86484a19"
+  },
+  "ridingFrames": {},
+  "events": [
+    {
+      "type": "land"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "land"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    }
+  ],
+  "checkpoints": [
+    {
+      "label": "actual-authored-spawn",
+      "state": {
+        "room": "chamber-38",
+        "number": 38,
+        "mission": "Complete the crossing to FAR DOCK. Keep the receiver lit while the carrier moves.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            2.999999523162842,
+            0.865100085735321,
+            12
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -6,
+              1.5,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "far-door",
+            "kind": "shutter",
+            "label": "FAR DOCK",
+            "position": [
+              6,
+              1.5,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "transfer-carrier",
+            "kind": "lift",
+            "label": "TRANSFER CARRIER",
+            "position": [
+              -6,
+              -0.2,
+              6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "LOADING",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "crossing-source",
+            "position": [
+              10.985,
+              1.75,
+              11
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          },
+          {
+            "id": "crossing-optical-return",
+            "position": [
+              0,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "crossing-side-return",
+            "position": [
+              -10.985,
+              1.75,
+              -6
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -6,
+              1.5,
+              -16.29
+            ],
+            "size": [
+              3.16,
+              3,
+              3.380000000000001
+            ]
+          },
+          {
+            "id": "far-exit",
+            "label": "EXIT",
+            "position": [
+              6,
+              1.5,
+              -16.29
+            ],
+            "size": [
+              3.16,
+              3,
+              3.380000000000001
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "crossing-emitter": {
+            "segments": [
+              {
+                "from": [
+                  7,
+                  0.9,
+                  11
+                ],
+                "to": [
+                  10.999999761581421,
+                  0.9,
+                  11
+                ]
+              }
+            ],
+            "stop": "obstacle",
+            "obstacle": "crossing-side-11.2",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "closed:service-door": true,
+          "clear:service-door": false,
+          "safety:service-door": false,
+          "door-safety": false,
+          "moving:service-door": false,
+          "closed:far-door": true,
+          "clear:far-door": false,
+          "safety:far-door": false,
+          "moving:far-door": false,
+          "moving:transfer-carrier": false,
+          "at:transfer-carrier:LOADING": true,
+          "at:transfer-carrier:SERVICE": false,
+          "at:transfer-carrier:FAR": false,
+          "crossing-light": false
+        },
+        "journal": {
+          "reports": [
+            {
+              "id": "far-arrival",
+              "status": "NOT YET OBSERVED",
+              "text": "The carrier has not reached FAR yet.",
+              "observedAt": null,
+              "pastText": null
+            },
+            {
+              "id": "service-arrival",
+              "status": "NOT YET OBSERVED",
+              "text": "The carrier has not reached SERVICE yet.",
+              "observedAt": null,
+              "pastText": null
+            },
+            {
+              "id": "midrail-stop",
+              "status": "NOT YET OBSERVED",
+              "text": "No stop between docks has been observed.",
+              "observedAt": null,
+              "pastText": null
+            }
+          ],
+          "attempt": 1,
+          "rows": [],
+          "truncated": false,
+          "now": [
+            {
+              "id": "transfer-carrier",
+              "label": "TRANSFER CARRIER",
+              "kind": "dock",
+              "state": "AT LOADING"
+            },
+            {
+              "id": "crossing-light",
+              "label": "RECEIVER",
+              "kind": "light",
+              "state": "DARK"
+            },
+            {
+              "id": "service-door",
+              "label": "SERVICE DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            },
+            {
+              "id": "far-door",
+              "label": "FAR DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          }
+        ]
+      }
+    },
+    {
+      "label": "actual-unpowered-crossing-catch",
+      "state": {
+        "room": "chamber-38",
+        "number": 38,
+        "mission": "Complete the crossing to FAR DOCK. Keep the receiver lit while the carrier moves.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            2.2951483726501465,
+            -3.4880480766296387,
+            5.335376262664795
+          ],
+          "velocity": [
+            -3.492860112985648,
+            0,
+            -3.2924085843859316
+          ],
+          "yaw": 0.8159951658408473,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -6,
+              1.5,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "far-door",
+            "kind": "shutter",
+            "label": "FAR DOCK",
+            "position": [
+              6,
+              1.5,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "transfer-carrier",
+            "kind": "lift",
+            "label": "TRANSFER CARRIER",
+            "position": [
+              -6,
+              -0.2,
+              6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "LOADING",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "crossing-source",
+            "position": [
+              10.985,
+              1.75,
+              11
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          },
+          {
+            "id": "crossing-optical-return",
+            "position": [
+              0,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "crossing-side-return",
+            "position": [
+              -10.985,
+              1.75,
+              -6
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -6,
+              1.5,
+              -16.29
+            ],
+            "size": [
+              3.16,
+              3,
+              3.380000000000001
+            ]
+          },
+          {
+            "id": "far-exit",
+            "label": "EXIT",
+            "position": [
+              6,
+              1.5,
+              -16.29
+            ],
+            "size": [
+              3.16,
+              3,
+              3.380000000000001
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "crossing-emitter": {
+            "segments": [
+              {
+                "from": [
+                  7,
+                  0.9,
+                  11
+                ],
+                "to": [
+                  10.999999761581421,
+                  0.9,
+                  11
+                ]
+              }
+            ],
+            "stop": "obstacle",
+            "obstacle": "crossing-side-11.2",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "closed:service-door": true,
+          "clear:service-door": false,
+          "safety:service-door": false,
+          "door-safety": false,
+          "moving:service-door": false,
+          "closed:far-door": true,
+          "clear:far-door": false,
+          "safety:far-door": false,
+          "moving:far-door": false,
+          "moving:transfer-carrier": false,
+          "at:transfer-carrier:LOADING": true,
+          "at:transfer-carrier:SERVICE": false,
+          "at:transfer-carrier:FAR": false,
+          "crossing-light": false
+        },
+        "journal": {
+          "reports": [
+            {
+              "id": "far-arrival",
+              "status": "NOT YET OBSERVED",
+              "text": "The carrier has not reached FAR yet.",
+              "observedAt": null,
+              "pastText": null
+            },
+            {
+              "id": "service-arrival",
+              "status": "NOT YET OBSERVED",
+              "text": "The carrier has not reached SERVICE yet.",
+              "observedAt": null,
+              "pastText": null
+            },
+            {
+              "id": "midrail-stop",
+              "status": "NOT YET OBSERVED",
+              "text": "No stop between docks has been observed.",
+              "observedAt": null,
+              "pastText": null
+            }
+          ],
+          "attempt": 1,
+          "rows": [],
+          "truncated": false,
+          "now": [
+            {
+              "id": "transfer-carrier",
+              "label": "TRANSFER CARRIER",
+              "kind": "dock",
+              "state": "AT LOADING"
+            },
+            {
+              "id": "crossing-light",
+              "label": "RECEIVER",
+              "kind": "light",
+              "state": "DARK"
+            },
+            {
+              "id": "service-door",
+              "label": "SERVICE DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            },
+            {
+              "id": "far-door",
+              "label": "FAR DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "footstep",
+            "time": 508
+          },
+          {
+            "type": "footstep",
+            "time": 933
+          },
+          {
+            "type": "footstep",
+            "time": 1358
+          },
+          {
+            "type": "footstep",
+            "time": 1783
+          },
+          {
+            "type": "land",
+            "time": 2658
+          }
+        ]
+      }
+    },
+    {
+      "label": "actual-near-bank-recovery",
+      "state": {
+        "room": "chamber-38",
+        "number": 38,
+        "mission": "Complete the crossing to FAR DOCK. Keep the receiver lit while the carrier moves.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            9.499791145324707,
+            0.8649382591247559,
+            8.577735900878906
+          ],
+          "velocity": [
+            -0.002283448131008677,
+            0,
+            0.682756615348784
+          ],
+          "yaw": 3.138245131096901,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -6,
+              1.5,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "far-door",
+            "kind": "shutter",
+            "label": "FAR DOCK",
+            "position": [
+              6,
+              1.5,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "transfer-carrier",
+            "kind": "lift",
+            "label": "TRANSFER CARRIER",
+            "position": [
+              -6,
+              -0.2,
+              6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "LOADING",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "crossing-source",
+            "position": [
+              10.985,
+              1.75,
+              11
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          },
+          {
+            "id": "crossing-optical-return",
+            "position": [
+              0,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "crossing-side-return",
+            "position": [
+              -10.985,
+              1.75,
+              -6
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -6,
+              1.5,
+              -16.29
+            ],
+            "size": [
+              3.16,
+              3,
+              3.380000000000001
+            ]
+          },
+          {
+            "id": "far-exit",
+            "label": "EXIT",
+            "position": [
+              6,
+              1.5,
+              -16.29
+            ],
+            "size": [
+              3.16,
+              3,
+              3.380000000000001
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "crossing-emitter": {
+            "segments": [
+              {
+                "from": [
+                  7,
+                  0.9,
+                  11
+                ],
+                "to": [
+                  10.999999761581421,
+                  0.9,
+                  11
+                ]
+              }
+            ],
+            "stop": "obstacle",
+            "obstacle": "crossing-side-11.2",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "closed:service-door": true,
+          "clear:service-door": false,
+          "safety:service-door": false,
+          "door-safety": false,
+          "moving:service-door": false,
+          "closed:far-door": true,
+          "clear:far-door": false,
+          "safety:far-door": false,
+          "moving:far-door": false,
+          "moving:transfer-carrier": false,
+          "at:transfer-carrier:LOADING": true,
+          "at:transfer-carrier:SERVICE": false,
+          "at:transfer-carrier:FAR": false,
+          "crossing-light": false
+        },
+        "journal": {
+          "reports": [
+            {
+              "id": "far-arrival",
+              "status": "NOT YET OBSERVED",
+              "text": "The carrier has not reached FAR yet.",
+              "observedAt": null,
+              "pastText": null
+            },
+            {
+              "id": "service-arrival",
+              "status": "NOT YET OBSERVED",
+              "text": "The carrier has not reached SERVICE yet.",
+              "observedAt": null,
+              "pastText": null
+            },
+            {
+              "id": "midrail-stop",
+              "status": "NOT YET OBSERVED",
+              "text": "No stop between docks has been observed.",
+              "observedAt": null,
+              "pastText": null
+            }
+          ],
+          "attempt": 1,
+          "rows": [],
+          "truncated": false,
+          "now": [
+            {
+              "id": "transfer-carrier",
+              "label": "TRANSFER CARRIER",
+              "kind": "dock",
+              "state": "AT LOADING"
+            },
+            {
+              "id": "crossing-light",
+              "label": "RECEIVER",
+              "kind": "light",
+              "state": "DARK"
+            },
+            {
+              "id": "service-door",
+              "label": "SERVICE DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            },
+            {
+              "id": "far-door",
+              "label": "FAR DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 3092
+          },
+          {
+            "type": "footstep",
+            "time": 3517
+          },
+          {
+            "type": "footstep",
+            "time": 3942
+          },
+          {
+            "type": "footstep",
+            "time": 4367
+          },
+          {
+            "type": "footstep",
+            "time": 4792
+          },
+          {
+            "type": "footstep",
+            "time": 5217
+          },
+          {
+            "type": "footstep",
+            "time": 5642
+          },
+          {
+            "type": "footstep",
+            "time": 6067
+          },
+          {
+            "type": "footstep",
+            "time": 6492
+          },
+          {
+            "type": "footstep",
+            "time": 6917
+          },
+          {
+            "type": "footstep",
+            "time": 7342
+          },
+          {
+            "type": "footstep",
+            "time": 7767
+          },
+          {
+            "type": "footstep",
+            "time": 8192
+          },
+          {
+            "type": "footstep",
+            "time": 8617
+          },
+          {
+            "type": "footstep",
+            "time": 9042
+          },
+          {
+            "type": "footstep",
+            "time": 9467
+          }
+        ]
+      }
+    },
+    {
+      "label": "final",
+      "state": {
+        "room": "chamber-38",
+        "number": 38,
+        "mission": "Complete the crossing to FAR DOCK. Keep the receiver lit while the carrier moves.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            9.499791145324707,
+            0.8649382591247559,
+            8.577735900878906
+          ],
+          "velocity": [
+            -0.002283448131008677,
+            0,
+            0.682756615348784
+          ],
+          "yaw": 3.138245131096901,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [],
+        "pads": [],
+        "devices": [
+          {
+            "id": "service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -6,
+              1.5,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "far-door",
+            "kind": "shutter",
+            "label": "FAR DOCK",
+            "position": [
+              6,
+              1.5,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "transfer-carrier",
+            "kind": "lift",
+            "label": "TRANSFER CARRIER",
+            "position": [
+              -6,
+              -0.2,
+              6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "LOADING",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "crossing-source",
+            "position": [
+              10.985,
+              1.75,
+              11
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 6,
+            "height": 3.5
+          },
+          {
+            "id": "crossing-optical-return",
+            "position": [
+              0,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "crossing-side-return",
+            "position": [
+              -10.985,
+              1.75,
+              -6
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 3.5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -6,
+              1.5,
+              -16.29
+            ],
+            "size": [
+              3.16,
+              3,
+              3.380000000000001
+            ]
+          },
+          {
+            "id": "far-exit",
+            "label": "EXIT",
+            "position": [
+              6,
+              1.5,
+              -16.29
+            ],
+            "size": [
+              3.16,
+              3,
+              3.380000000000001
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "crossing-emitter": {
+            "segments": [
+              {
+                "from": [
+                  7,
+                  0.9,
+                  11
+                ],
+                "to": [
+                  10.999999761581421,
+                  0.9,
+                  11
+                ]
+              }
+            ],
+            "stop": "obstacle",
+            "obstacle": "crossing-side-11.2",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "closed:service-door": true,
+          "clear:service-door": false,
+          "safety:service-door": false,
+          "door-safety": false,
+          "moving:service-door": false,
+          "closed:far-door": true,
+          "clear:far-door": false,
+          "safety:far-door": false,
+          "moving:far-door": false,
+          "moving:transfer-carrier": false,
+          "at:transfer-carrier:LOADING": true,
+          "at:transfer-carrier:SERVICE": false,
+          "at:transfer-carrier:FAR": false,
+          "crossing-light": false
+        },
+        "journal": {
+          "reports": [
+            {
+              "id": "far-arrival",
+              "status": "NOT YET OBSERVED",
+              "text": "The carrier has not reached FAR yet.",
+              "observedAt": null,
+              "pastText": null
+            },
+            {
+              "id": "service-arrival",
+              "status": "NOT YET OBSERVED",
+              "text": "The carrier has not reached SERVICE yet.",
+              "observedAt": null,
+              "pastText": null
+            },
+            {
+              "id": "midrail-stop",
+              "status": "NOT YET OBSERVED",
+              "text": "No stop between docks has been observed.",
+              "observedAt": null,
+              "pastText": null
+            }
+          ],
+          "attempt": 1,
+          "rows": [],
+          "truncated": false,
+          "now": [
+            {
+              "id": "transfer-carrier",
+              "label": "TRANSFER CARRIER",
+              "kind": "dock",
+              "state": "AT LOADING"
+            },
+            {
+              "id": "crossing-light",
+              "label": "RECEIVER",
+              "kind": "light",
+              "state": "DARK"
+            },
+            {
+              "id": "service-door",
+              "label": "SERVICE DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            },
+            {
+              "id": "far-door",
+              "label": "FAR DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 3092
+          },
+          {
+            "type": "footstep",
+            "time": 3517
+          },
+          {
+            "type": "footstep",
+            "time": 3942
+          },
+          {
+            "type": "footstep",
+            "time": 4367
+          },
+          {
+            "type": "footstep",
+            "time": 4792
+          },
+          {
+            "type": "footstep",
+            "time": 5217
+          },
+          {
+            "type": "footstep",
+            "time": 5642
+          },
+          {
+            "type": "footstep",
+            "time": 6067
+          },
+          {
+            "type": "footstep",
+            "time": 6492
+          },
+          {
+            "type": "footstep",
+            "time": 6917
+          },
+          {
+            "type": "footstep",
+            "time": 7342
+          },
+          {
+            "type": "footstep",
+            "time": 7767
+          },
+          {
+            "type": "footstep",
+            "time": 8192
+          },
+          {
+            "type": "footstep",
+            "time": 8617
+          },
+          {
+            "type": "footstep",
+            "time": 9042
+          },
+          {
+            "type": "footstep",
+            "time": 9467
+          }
+        ]
+      }
+    }
+  ]
+}

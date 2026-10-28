@@ -1,0 +1,3928 @@
+{
+  "scope": "Unregistered authored-spawn native input path only. No actor/cargo/machine/history/save setters, resets or browser/completion claims. Native portal rays ignore glass; real visual framing remains browser-pending.",
+  "number": 49,
+  "contrast": false,
+  "error": null,
+  "sources": {
+    "src/core/levels/reported-49-50.ts": "af68f30d5a13ec73ebcb6b7b7d7ff2036d6259ac7fc609cce48d3f70b53302c5",
+    "src/core/levels/reported-49-50-english.ts": "7178149d432a983a5934ec7f8c8f535a04c50f09bb38cea32d25e6688419325b",
+    "src/core/level.ts": "4dc6e0989e9a3ebe3a22f4a115ac5116073fec2e2d7d8777ff76f81f7b9db272",
+    "src/core/world.ts": "dbcad5ccf5adefdbfa0debe6c08e6e0242e2df45650445c69c39a8d322a8a5ec",
+    "src/core/portal-placement.ts": "655b0716bec176c8dc553ffa546c45287c16e3633d6475753342d8129bf28875",
+    "src/core/machine-journal.ts": "b400ede48dd62294f3a212e504495a50f8ca2db93dc4efb4f5d66e6962108de1",
+    "src/systems.ts": "13d3dbf57ced0b8d18b499762d60282a82686cbc698f972c55dbff0c6b0ea67b",
+    "tests/core-reported-final-routes.test.ts": "af4768d88d7a0ea1f62d3cccdbb47ca5167510bc09a612817c787043c28a409b",
+    "tests/helpers/reported-final-route.ts": "7bc676f6ce03cb6c70e88307e36b34e6beea900658552772042563f754533886"
+  },
+  "ridingFrames": {},
+  "events": [
+    {
+      "type": "land"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "portalA",
+      "surface": "copy-source",
+      "point": [
+        10.959999999999999,
+        1.55,
+        8
+      ]
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "portalB",
+      "surface": "loading-return",
+      "point": [
+        -5,
+        1.55,
+        -13.959999999999999
+      ]
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "pickup",
+      "body": "copy-cube"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "enter",
+      "body": "copy-cube",
+      "from": 0,
+      "to": 1,
+      "fromSurface": "copy-source",
+      "toSurface": "loading-return",
+      "speed": 17.981973692511144,
+      "exitSpeed": 17.981973692511147,
+      "held": "copy-cube"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "enter",
+      "body": "player",
+      "from": 0,
+      "to": 1,
+      "fromSurface": "copy-source",
+      "toSurface": "loading-return",
+      "speed": 4.7964125352343965,
+      "exitSpeed": 4.7964125352343965,
+      "held": "copy-cube"
+    },
+    {
+      "type": "land"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "receiver-power",
+      "id": "loading-light"
+    },
+    {
+      "type": "shutter-open",
+      "id": "loading-door"
+    },
+    {
+      "type": "pad",
+      "pad": "loading-pressure",
+      "crate": "player"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "beam-blocked",
+      "id": "loading-light"
+    },
+    {
+      "type": "button-release",
+      "pad": "loading-pressure",
+      "crate": "player"
+    },
+    {
+      "type": "drop",
+      "body": "copy-cube"
+    },
+    {
+      "type": "receiver-power",
+      "id": "loading-light"
+    },
+    {
+      "type": "shutter-open",
+      "id": "loading-door"
+    },
+    {
+      "type": "pad",
+      "pad": "loading-pressure",
+      "crate": "copy-cube"
+    },
+    {
+      "type": "contact",
+      "body": "copy-cube",
+      "speed": 2.4606877820114663
+    },
+    {
+      "type": "portalB",
+      "surface": "gallery-return",
+      "point": [
+        5,
+        4.95,
+        -13.959999999999999
+      ]
+    },
+    {
+      "type": "beam-blocked",
+      "id": "loading-light"
+    },
+    {
+      "type": "receiver-power",
+      "id": "gallery-light"
+    },
+    {
+      "type": "shutter-close",
+      "id": "loading-door"
+    },
+    {
+      "type": "portalB",
+      "surface": "loading-return",
+      "point": [
+        -5,
+        1.55,
+        -13.959999999999999
+      ]
+    },
+    {
+      "type": "receiver-power",
+      "id": "loading-light"
+    },
+    {
+      "type": "beam-blocked",
+      "id": "gallery-light"
+    },
+    {
+      "type": "shutter-open",
+      "id": "loading-door"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "footstep"
+    },
+    {
+      "type": "complete",
+      "chamber": 49
+    }
+  ],
+  "checkpoints": [
+    {
+      "label": "actual-authored-spawn",
+      "state": {
+        "room": "chamber-49",
+        "number": 49,
+        "mission": "The copy at GALLERY says: LOADING told the operator to leave the cube there and keep its receiver lit. Follow LOADING’s instruction.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -0.000001322151547356043,
+            0.8647183179855347,
+            11.999998092651367
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [
+          {
+            "id": "copy-cube",
+            "position": [
+              -4.000002384185791,
+              0.5498895645141602,
+              7.999998569488525
+            ],
+            "velocity": [
+              -0.000005075819444755325,
+              -7.472593779311865e-7,
+              -0.000004324674137023976
+            ],
+            "rotation": [
+              2.000175953753569e-7,
+              3.889897084996541e-12,
+              -2.2712788450007793e-7,
+              1
+            ],
+            "angularVelocity": [
+              -0.000007819567144906614,
+              -1.646387087534014e-14,
+              0.000009177734682452865
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "loading-pressure",
+            "position": [
+              -8,
+              0.14,
+              -11
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "gallery-pressure",
+            "position": [
+              8,
+              3.54,
+              -11
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "loading-door",
+            "kind": "shutter",
+            "label": "LOADING",
+            "position": [
+              -11.12,
+              1.5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "gallery-door",
+            "kind": "shutter",
+            "label": "GALLERY",
+            "position": [
+              11.12,
+              4.9,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "copy-source",
+            "position": [
+              10.985,
+              1.75,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "loading-return",
+            "position": [
+              -5,
+              1.75,
+              -13.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "gallery-return",
+            "position": [
+              5,
+              5.15,
+              -13.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "loading-exit",
+            "label": "EXIT",
+            "position": [
+              -13.39,
+              1.5,
+              -10
+            ],
+            "size": [
+              3.58,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "gallery-exit",
+            "label": "EXIT",
+            "position": [
+              13.39,
+              4.9,
+              -10
+            ],
+            "size": [
+              3.58,
+              3,
+              3.16
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "loading-pressure": false,
+          "gallery-pressure": false,
+          "closed:loading-door": true,
+          "clear:loading-door": false,
+          "safety:loading-door": false,
+          "door-safety": false,
+          "moving:loading-door": false,
+          "closed:gallery-door": true,
+          "clear:gallery-door": false,
+          "safety:gallery-door": false,
+          "moving:gallery-door": false,
+          "loading-light": false,
+          "gallery-light": false
+        },
+        "journal": {
+          "reports": [],
+          "attempt": 1,
+          "rows": [],
+          "truncated": false,
+          "now": [
+            {
+              "id": "loading-pressure",
+              "label": "LOADING",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "gallery-pressure",
+              "label": "GALLERY",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "loading-light",
+              "label": "LOADING RECEIVER",
+              "kind": "light",
+              "state": "DARK"
+            },
+            {
+              "id": "gallery-light",
+              "label": "GALLERY RECEIVER",
+              "kind": "light",
+              "state": "DARK"
+            },
+            {
+              "id": "loading-door",
+              "label": "LOADING DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            },
+            {
+              "id": "gallery-door",
+              "label": "GALLERY DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          }
+        ]
+      }
+    },
+    {
+      "label": "actual-placed-link-is-not-supplied",
+      "state": {
+        "room": "chamber-49",
+        "number": 49,
+        "mission": "The copy at GALLERY says: LOADING told the operator to leave the cube there and keep its receiver lit. Follow LOADING’s instruction.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -1.0621552467346191,
+            0.8650890588760376,
+            12.49997615814209
+          ],
+          "velocity": [
+            -0.5803462866015341,
+            0,
+            -0.00030946273567693293
+          ],
+          "yaw": 0.14777953232186852,
+          "pitch": 0.00130435423064532,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          {
+            "surface": "copy-source",
+            "position": [
+              10.959999999999999,
+              1.55,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "loading-return",
+            "position": [
+              -5,
+              1.55,
+              -13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "copy-cube",
+            "position": [
+              -4.000002384185791,
+              0.5498895645141602,
+              7.999998569488525
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              2.000175953753569e-7,
+              3.889897084996541e-12,
+              -2.2712788450007793e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "loading-pressure",
+            "position": [
+              -8,
+              0.14,
+              -11
+            ],
+            "pressed": false,
+            "crate": null
+          },
+          {
+            "id": "gallery-pressure",
+            "position": [
+              8,
+              3.54,
+              -11
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "loading-door",
+            "kind": "shutter",
+            "label": "LOADING",
+            "position": [
+              -11.12,
+              1.5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "gallery-door",
+            "kind": "shutter",
+            "label": "GALLERY",
+            "position": [
+              11.12,
+              4.9,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "copy-source",
+            "position": [
+              10.985,
+              1.75,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "loading-return",
+            "position": [
+              -5,
+              1.75,
+              -13.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "gallery-return",
+            "position": [
+              5,
+              5.15,
+              -13.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "loading-exit",
+            "label": "EXIT",
+            "position": [
+              -13.39,
+              1.5,
+              -10
+            ],
+            "size": [
+              3.58,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "gallery-exit",
+            "label": "EXIT",
+            "position": [
+              13.39,
+              4.9,
+              -10
+            ],
+            "size": [
+              3.58,
+              3,
+              3.16
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {},
+        "signals": {
+          "loading-pressure": false,
+          "gallery-pressure": false,
+          "closed:loading-door": true,
+          "clear:loading-door": false,
+          "safety:loading-door": false,
+          "door-safety": false,
+          "moving:loading-door": false,
+          "closed:gallery-door": true,
+          "clear:gallery-door": false,
+          "safety:gallery-door": false,
+          "moving:gallery-door": false,
+          "loading-light": false,
+          "gallery-light": false
+        },
+        "journal": {
+          "reports": [],
+          "attempt": 1,
+          "rows": [],
+          "truncated": false,
+          "now": [
+            {
+              "id": "loading-pressure",
+              "label": "LOADING",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "gallery-pressure",
+              "label": "GALLERY",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "loading-light",
+              "label": "LOADING RECEIVER",
+              "kind": "light",
+              "state": "DARK"
+            },
+            {
+              "id": "gallery-light",
+              "label": "GALLERY RECEIVER",
+              "kind": "light",
+              "state": "DARK"
+            },
+            {
+              "id": "loading-door",
+              "label": "LOADING DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            },
+            {
+              "id": "gallery-door",
+              "label": "GALLERY DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "footstep",
+            "time": 508
+          },
+          {
+            "type": "footstep",
+            "time": 933
+          },
+          {
+            "type": "footstep",
+            "time": 1358
+          },
+          {
+            "type": "footstep",
+            "time": 1783
+          },
+          {
+            "type": "footstep",
+            "time": 2208
+          },
+          {
+            "type": "portalA",
+            "time": 2508,
+            "surface": "copy-source",
+            "point": [
+              10.959999999999999,
+              1.55,
+              8
+            ]
+          },
+          {
+            "type": "footstep",
+            "time": 2633
+          },
+          {
+            "type": "footstep",
+            "time": 3058
+          },
+          {
+            "type": "footstep",
+            "time": 3483
+          },
+          {
+            "type": "footstep",
+            "time": 3908
+          },
+          {
+            "type": "footstep",
+            "time": 4333
+          },
+          {
+            "type": "portalB",
+            "time": 4725,
+            "surface": "loading-return",
+            "point": [
+              -5,
+              1.55,
+              -13.959999999999999
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "actual-pressure-loading-pressure",
+      "state": {
+        "room": "chamber-49",
+        "number": 49,
+        "mission": "The copy at GALLERY says: LOADING told the operator to leave the cube there and keep its receiver lit. Follow LOADING’s instruction.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -8.045737266540527,
+            0.8642185926437378,
+            -12.887192726135254
+          ],
+          "velocity": [
+            -7.18483073471237e-15,
+            0,
+            -1.43667477666047e-14
+          ],
+          "yaw": -3.1246764224419246,
+          "pitch": -0.06955320292504179,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "copy-source",
+            "position": [
+              10.959999999999999,
+              1.55,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "loading-return",
+            "position": [
+              -5,
+              1.55,
+              -13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "copy-cube",
+            "position": [
+              -8.016546249389648,
+              0.68990159034729,
+              -11.016526222229004
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -0.0000021609635041386355,
+              -0.7071071863174438,
+              1.4498668576834461e-7,
+              0.7071064710617065
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 1
+          }
+        ],
+        "pads": [
+          {
+            "id": "loading-pressure",
+            "position": [
+              -8,
+              0.14,
+              -11
+            ],
+            "pressed": true,
+            "crate": "copy-cube"
+          },
+          {
+            "id": "gallery-pressure",
+            "position": [
+              8,
+              3.54,
+              -11
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "loading-door",
+            "kind": "shutter",
+            "label": "LOADING",
+            "position": [
+              -11.12,
+              5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "gallery-door",
+            "kind": "shutter",
+            "label": "GALLERY",
+            "position": [
+              11.12,
+              4.9,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "copy-source",
+            "position": [
+              10.985,
+              1.75,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "loading-return",
+            "position": [
+              -5,
+              1.75,
+              -13.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "gallery-return",
+            "position": [
+              5,
+              5.15,
+              -13.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "loading-exit",
+            "label": "EXIT",
+            "position": [
+              -13.39,
+              1.5,
+              -10
+            ],
+            "size": [
+              3.58,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "gallery-exit",
+            "label": "EXIT",
+            "position": [
+              13.39,
+              4.9,
+              -10
+            ],
+            "size": [
+              3.58,
+              3,
+              3.16
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "copy-emitter": {
+            "segments": [
+              {
+                "from": [
+                  7,
+                  0.9,
+                  8
+                ],
+                "to": [
+                  10.959999999999999,
+                  0.9,
+                  8
+                ],
+                "portal": "0"
+              },
+              {
+                "from": [
+                  -5,
+                  0.9,
+                  -13.959
+                ],
+                "to": [
+                  -5,
+                  0.9,
+                  -7.840000000000001
+                ]
+              }
+            ],
+            "stop": "receiver",
+            "receiver": "loading-light",
+            "hops": 1
+          }
+        },
+        "signals": {
+          "loading-pressure": true,
+          "gallery-pressure": false,
+          "closed:loading-door": false,
+          "clear:loading-door": true,
+          "safety:loading-door": false,
+          "door-safety": false,
+          "moving:loading-door": false,
+          "closed:gallery-door": true,
+          "clear:gallery-door": false,
+          "safety:gallery-door": false,
+          "moving:gallery-door": false,
+          "loading-light": true,
+          "gallery-light": false
+        },
+        "journal": {
+          "reports": [],
+          "attempt": 1,
+          "rows": [
+            {
+              "sequence": 1,
+              "time": 12.79166666666658,
+              "text": "LOADING was pressed."
+            },
+            {
+              "sequence": 2,
+              "time": 12.79166666666658,
+              "text": "LOADING RECEIVER received light."
+            },
+            {
+              "sequence": 3,
+              "time": 12.974999999999904,
+              "text": "LOADING became empty."
+            },
+            {
+              "sequence": 4,
+              "time": 12.974999999999904,
+              "text": "LOADING RECEIVER lost light."
+            },
+            {
+              "sequence": 5,
+              "time": 13.16666666666656,
+              "text": "LOADING DOOR closed fully."
+            },
+            {
+              "sequence": 6,
+              "time": 13.799999999999857,
+              "text": "Cargo reached LOADING."
+            },
+            {
+              "sequence": 7,
+              "time": 13.799999999999857,
+              "text": "LOADING RECEIVER received light again."
+            },
+            {
+              "sequence": 8,
+              "time": 14.608333333333144,
+              "text": "LOADING DOOR opened fully."
+            }
+          ],
+          "truncated": false,
+          "now": [
+            {
+              "id": "loading-pressure",
+              "label": "LOADING",
+              "kind": "pressure",
+              "state": "PRESSED",
+              "cargo": true
+            },
+            {
+              "id": "gallery-pressure",
+              "label": "GALLERY",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "loading-light",
+              "label": "LOADING RECEIVER",
+              "kind": "light",
+              "state": "LIT"
+            },
+            {
+              "id": "gallery-light",
+              "label": "GALLERY RECEIVER",
+              "kind": "light",
+              "state": "DARK"
+            },
+            {
+              "id": "loading-door",
+              "label": "LOADING DOOR",
+              "kind": "shutter",
+              "state": "OPEN"
+            },
+            {
+              "id": "gallery-door",
+              "label": "GALLERY DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "enter",
+            "time": 11842,
+            "body": "copy-cube",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "copy-source",
+            "toSurface": "loading-return",
+            "speed": 17.981973692511144,
+            "exitSpeed": 17.981973692511147,
+            "held": "copy-cube"
+          },
+          {
+            "type": "footstep",
+            "time": 11983
+          },
+          {
+            "type": "enter",
+            "time": 12050,
+            "body": "player",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "copy-source",
+            "toSurface": "loading-return",
+            "speed": 4.7964125352343965,
+            "exitSpeed": 4.7964125352343965,
+            "held": "copy-cube"
+          },
+          {
+            "type": "land",
+            "time": 12058
+          },
+          {
+            "type": "footstep",
+            "time": 12408
+          },
+          {
+            "type": "receiver-power",
+            "time": 12800,
+            "id": "loading-light"
+          },
+          {
+            "type": "shutter-open",
+            "time": 12800,
+            "id": "loading-door"
+          },
+          {
+            "type": "pad",
+            "time": 12800,
+            "pad": "loading-pressure",
+            "crate": "player"
+          },
+          {
+            "type": "footstep",
+            "time": 12833
+          },
+          {
+            "type": "beam-blocked",
+            "time": 12983,
+            "id": "loading-light"
+          },
+          {
+            "type": "button-release",
+            "time": 12983,
+            "pad": "loading-pressure",
+            "crate": "player"
+          },
+          {
+            "type": "drop",
+            "time": 13658,
+            "body": "copy-cube"
+          },
+          {
+            "type": "receiver-power",
+            "time": 13808,
+            "id": "loading-light"
+          },
+          {
+            "type": "shutter-open",
+            "time": 13808,
+            "id": "loading-door"
+          },
+          {
+            "type": "pad",
+            "time": 13808,
+            "pad": "loading-pressure",
+            "crate": "copy-cube"
+          },
+          {
+            "type": "contact",
+            "time": 13817,
+            "body": "copy-cube",
+            "speed": 2.4606877820114663
+          }
+        ]
+      }
+    },
+    {
+      "label": "actual-local-cargo-and-optical-supply-loading",
+      "state": {
+        "room": "chamber-49",
+        "number": 49,
+        "mission": "The copy at GALLERY says: LOADING told the operator to leave the cube there and keep its receiver lit. Follow LOADING’s instruction.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -8.045737266540527,
+            0.8642185926437378,
+            -12.887192726135254
+          ],
+          "velocity": [
+            -7.18483073471237e-15,
+            0,
+            -1.43667477666047e-14
+          ],
+          "yaw": -3.1246764224419246,
+          "pitch": -0.06955320292504179,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "copy-source",
+            "position": [
+              10.959999999999999,
+              1.55,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "loading-return",
+            "position": [
+              -5,
+              1.55,
+              -13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "copy-cube",
+            "position": [
+              -8.016546249389648,
+              0.68990159034729,
+              -11.016526222229004
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -0.0000021609635041386355,
+              -0.7071071863174438,
+              1.4498668576834461e-7,
+              0.7071064710617065
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 1
+          }
+        ],
+        "pads": [
+          {
+            "id": "loading-pressure",
+            "position": [
+              -8,
+              0.14,
+              -11
+            ],
+            "pressed": true,
+            "crate": "copy-cube"
+          },
+          {
+            "id": "gallery-pressure",
+            "position": [
+              8,
+              3.54,
+              -11
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "loading-door",
+            "kind": "shutter",
+            "label": "LOADING",
+            "position": [
+              -11.12,
+              5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "gallery-door",
+            "kind": "shutter",
+            "label": "GALLERY",
+            "position": [
+              11.12,
+              4.9,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "copy-source",
+            "position": [
+              10.985,
+              1.75,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "loading-return",
+            "position": [
+              -5,
+              1.75,
+              -13.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "gallery-return",
+            "position": [
+              5,
+              5.15,
+              -13.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "loading-exit",
+            "label": "EXIT",
+            "position": [
+              -13.39,
+              1.5,
+              -10
+            ],
+            "size": [
+              3.58,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "gallery-exit",
+            "label": "EXIT",
+            "position": [
+              13.39,
+              4.9,
+              -10
+            ],
+            "size": [
+              3.58,
+              3,
+              3.16
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "copy-emitter": {
+            "segments": [
+              {
+                "from": [
+                  7,
+                  0.9,
+                  8
+                ],
+                "to": [
+                  10.959999999999999,
+                  0.9,
+                  8
+                ],
+                "portal": "0"
+              },
+              {
+                "from": [
+                  -5,
+                  0.9,
+                  -13.959
+                ],
+                "to": [
+                  -5,
+                  0.9,
+                  -7.840000000000001
+                ]
+              }
+            ],
+            "stop": "receiver",
+            "receiver": "loading-light",
+            "hops": 1
+          }
+        },
+        "signals": {
+          "loading-pressure": true,
+          "gallery-pressure": false,
+          "closed:loading-door": false,
+          "clear:loading-door": true,
+          "safety:loading-door": false,
+          "door-safety": false,
+          "moving:loading-door": false,
+          "closed:gallery-door": true,
+          "clear:gallery-door": false,
+          "safety:gallery-door": false,
+          "moving:gallery-door": false,
+          "loading-light": true,
+          "gallery-light": false
+        },
+        "journal": {
+          "reports": [],
+          "attempt": 1,
+          "rows": [
+            {
+              "sequence": 1,
+              "time": 12.79166666666658,
+              "text": "LOADING was pressed."
+            },
+            {
+              "sequence": 2,
+              "time": 12.79166666666658,
+              "text": "LOADING RECEIVER received light."
+            },
+            {
+              "sequence": 3,
+              "time": 12.974999999999904,
+              "text": "LOADING became empty."
+            },
+            {
+              "sequence": 4,
+              "time": 12.974999999999904,
+              "text": "LOADING RECEIVER lost light."
+            },
+            {
+              "sequence": 5,
+              "time": 13.16666666666656,
+              "text": "LOADING DOOR closed fully."
+            },
+            {
+              "sequence": 6,
+              "time": 13.799999999999857,
+              "text": "Cargo reached LOADING."
+            },
+            {
+              "sequence": 7,
+              "time": 13.799999999999857,
+              "text": "LOADING RECEIVER received light again."
+            },
+            {
+              "sequence": 8,
+              "time": 14.608333333333144,
+              "text": "LOADING DOOR opened fully."
+            }
+          ],
+          "truncated": false,
+          "now": [
+            {
+              "id": "loading-pressure",
+              "label": "LOADING",
+              "kind": "pressure",
+              "state": "PRESSED",
+              "cargo": true
+            },
+            {
+              "id": "gallery-pressure",
+              "label": "GALLERY",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "loading-light",
+              "label": "LOADING RECEIVER",
+              "kind": "light",
+              "state": "LIT"
+            },
+            {
+              "id": "gallery-light",
+              "label": "GALLERY RECEIVER",
+              "kind": "light",
+              "state": "DARK"
+            },
+            {
+              "id": "loading-door",
+              "label": "LOADING DOOR",
+              "kind": "shutter",
+              "state": "OPEN"
+            },
+            {
+              "id": "gallery-door",
+              "label": "GALLERY DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "enter",
+            "time": 11842,
+            "body": "copy-cube",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "copy-source",
+            "toSurface": "loading-return",
+            "speed": 17.981973692511144,
+            "exitSpeed": 17.981973692511147,
+            "held": "copy-cube"
+          },
+          {
+            "type": "footstep",
+            "time": 11983
+          },
+          {
+            "type": "enter",
+            "time": 12050,
+            "body": "player",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "copy-source",
+            "toSurface": "loading-return",
+            "speed": 4.7964125352343965,
+            "exitSpeed": 4.7964125352343965,
+            "held": "copy-cube"
+          },
+          {
+            "type": "land",
+            "time": 12058
+          },
+          {
+            "type": "footstep",
+            "time": 12408
+          },
+          {
+            "type": "receiver-power",
+            "time": 12800,
+            "id": "loading-light"
+          },
+          {
+            "type": "shutter-open",
+            "time": 12800,
+            "id": "loading-door"
+          },
+          {
+            "type": "pad",
+            "time": 12800,
+            "pad": "loading-pressure",
+            "crate": "player"
+          },
+          {
+            "type": "footstep",
+            "time": 12833
+          },
+          {
+            "type": "beam-blocked",
+            "time": 12983,
+            "id": "loading-light"
+          },
+          {
+            "type": "button-release",
+            "time": 12983,
+            "pad": "loading-pressure",
+            "crate": "player"
+          },
+          {
+            "type": "drop",
+            "time": 13658,
+            "body": "copy-cube"
+          },
+          {
+            "type": "receiver-power",
+            "time": 13808,
+            "id": "loading-light"
+          },
+          {
+            "type": "shutter-open",
+            "time": 13808,
+            "id": "loading-door"
+          },
+          {
+            "type": "pad",
+            "time": 13808,
+            "pad": "loading-pressure",
+            "crate": "copy-cube"
+          },
+          {
+            "type": "contact",
+            "time": 13817,
+            "body": "copy-cube",
+            "speed": 2.4606877820114663
+          }
+        ]
+      }
+    },
+    {
+      "label": "actual-mixed-source-neither-local-AND-complete",
+      "state": {
+        "room": "chamber-49",
+        "number": 49,
+        "mission": "The copy at GALLERY says: LOADING told the operator to leave the cube there and keep its receiver lit. Follow LOADING’s instruction.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -8.045737266540527,
+            0.8643186092376709,
+            -12.887192726135254
+          ],
+          "velocity": [
+            -1.0234163135328688e-21,
+            0,
+            -2.04641759557663e-21
+          ],
+          "yaw": -1.486843469742765,
+          "pitch": 0.2566491420063917,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "copy-source",
+            "position": [
+              10.959999999999999,
+              1.55,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "gallery-return",
+            "position": [
+              5,
+              4.95,
+              -13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "copy-cube",
+            "position": [
+              -8.016546249389648,
+              0.68990159034729,
+              -11.016526222229004
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -0.0000021609635041386355,
+              -0.7071071863174438,
+              1.4498668576834461e-7,
+              0.7071064710617065
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 1
+          }
+        ],
+        "pads": [
+          {
+            "id": "loading-pressure",
+            "position": [
+              -8,
+              0.14,
+              -11
+            ],
+            "pressed": true,
+            "crate": "copy-cube"
+          },
+          {
+            "id": "gallery-pressure",
+            "position": [
+              8,
+              3.54,
+              -11
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "loading-door",
+            "kind": "shutter",
+            "label": "LOADING",
+            "position": [
+              -11.12,
+              1.5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "gallery-door",
+            "kind": "shutter",
+            "label": "GALLERY",
+            "position": [
+              11.12,
+              4.9,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "copy-source",
+            "position": [
+              10.985,
+              1.75,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "loading-return",
+            "position": [
+              -5,
+              1.75,
+              -13.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "gallery-return",
+            "position": [
+              5,
+              5.15,
+              -13.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "loading-exit",
+            "label": "EXIT",
+            "position": [
+              -13.39,
+              1.5,
+              -10
+            ],
+            "size": [
+              3.58,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "gallery-exit",
+            "label": "EXIT",
+            "position": [
+              13.39,
+              4.9,
+              -10
+            ],
+            "size": [
+              3.58,
+              3,
+              3.16
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "copy-emitter": {
+            "segments": [
+              {
+                "from": [
+                  7,
+                  0.9,
+                  8
+                ],
+                "to": [
+                  10.959999999999999,
+                  0.9,
+                  8
+                ],
+                "portal": "0"
+              },
+              {
+                "from": [
+                  5,
+                  4.3,
+                  -13.959
+                ],
+                "to": [
+                  5,
+                  4.3,
+                  -7.840000000000001
+                ]
+              }
+            ],
+            "stop": "receiver",
+            "receiver": "gallery-light",
+            "hops": 1
+          }
+        },
+        "signals": {
+          "loading-pressure": true,
+          "gallery-pressure": false,
+          "closed:loading-door": false,
+          "clear:loading-door": false,
+          "safety:loading-door": false,
+          "door-safety": false,
+          "moving:loading-door": true,
+          "closed:gallery-door": true,
+          "clear:gallery-door": false,
+          "safety:gallery-door": false,
+          "moving:gallery-door": false,
+          "loading-light": false,
+          "gallery-light": true
+        },
+        "journal": {
+          "reports": [],
+          "attempt": 1,
+          "rows": [
+            {
+              "sequence": 4,
+              "time": 12.974999999999904,
+              "text": "LOADING RECEIVER lost light."
+            },
+            {
+              "sequence": 5,
+              "time": 13.16666666666656,
+              "text": "LOADING DOOR closed fully."
+            },
+            {
+              "sequence": 6,
+              "time": 13.799999999999857,
+              "text": "Cargo reached LOADING."
+            },
+            {
+              "sequence": 7,
+              "time": 13.799999999999857,
+              "text": "LOADING RECEIVER received light again."
+            },
+            {
+              "sequence": 8,
+              "time": 14.608333333333144,
+              "text": "LOADING DOOR opened fully."
+            },
+            {
+              "sequence": 9,
+              "time": 14.874999999999796,
+              "text": "LOADING RECEIVER lost light."
+            },
+            {
+              "sequence": 10,
+              "time": 14.874999999999796,
+              "text": "GALLERY RECEIVER received light."
+            },
+            {
+              "sequence": 11,
+              "time": 15.67499999999975,
+              "text": "LOADING DOOR closed fully."
+            }
+          ],
+          "truncated": true,
+          "now": [
+            {
+              "id": "loading-pressure",
+              "label": "LOADING",
+              "kind": "pressure",
+              "state": "PRESSED",
+              "cargo": true
+            },
+            {
+              "id": "gallery-pressure",
+              "label": "GALLERY",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "loading-light",
+              "label": "LOADING RECEIVER",
+              "kind": "light",
+              "state": "DARK"
+            },
+            {
+              "id": "gallery-light",
+              "label": "GALLERY RECEIVER",
+              "kind": "light",
+              "state": "LIT"
+            },
+            {
+              "id": "loading-door",
+              "label": "LOADING DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            },
+            {
+              "id": "gallery-door",
+              "label": "GALLERY DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "footstep",
+            "time": 12408
+          },
+          {
+            "type": "receiver-power",
+            "time": 12800,
+            "id": "loading-light"
+          },
+          {
+            "type": "shutter-open",
+            "time": 12800,
+            "id": "loading-door"
+          },
+          {
+            "type": "pad",
+            "time": 12800,
+            "pad": "loading-pressure",
+            "crate": "player"
+          },
+          {
+            "type": "footstep",
+            "time": 12833
+          },
+          {
+            "type": "beam-blocked",
+            "time": 12983,
+            "id": "loading-light"
+          },
+          {
+            "type": "button-release",
+            "time": 12983,
+            "pad": "loading-pressure",
+            "crate": "player"
+          },
+          {
+            "type": "drop",
+            "time": 13658,
+            "body": "copy-cube"
+          },
+          {
+            "type": "receiver-power",
+            "time": 13808,
+            "id": "loading-light"
+          },
+          {
+            "type": "shutter-open",
+            "time": 13808,
+            "id": "loading-door"
+          },
+          {
+            "type": "pad",
+            "time": 13808,
+            "pad": "loading-pressure",
+            "crate": "copy-cube"
+          },
+          {
+            "type": "contact",
+            "time": 13817,
+            "body": "copy-cube",
+            "speed": 2.4606877820114663
+          },
+          {
+            "type": "portalB",
+            "time": 14867,
+            "surface": "gallery-return",
+            "point": [
+              5,
+              4.95,
+              -13.959999999999999
+            ]
+          },
+          {
+            "type": "beam-blocked",
+            "time": 14875,
+            "id": "loading-light"
+          },
+          {
+            "type": "receiver-power",
+            "time": 14875,
+            "id": "gallery-light"
+          },
+          {
+            "type": "shutter-close",
+            "time": 14875,
+            "id": "loading-door"
+          }
+        ]
+      }
+    },
+    {
+      "label": "actual-physical-completion",
+      "state": {
+        "room": "chamber-49",
+        "number": 49,
+        "mission": "The copy at GALLERY says: LOADING told the operator to leave the cube there and keep its receiver lit. Follow LOADING’s instruction.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -11.639561653137207,
+            0.8648722767829895,
+            -9.936928749084473
+          ],
+          "velocity": [
+            -4.798049589648967,
+            0,
+            -0.1281281810245726
+          ],
+          "yaw": 1.5440826465367257,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "copy-source",
+            "position": [
+              10.959999999999999,
+              1.55,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "loading-return",
+            "position": [
+              -5,
+              1.55,
+              -13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "copy-cube",
+            "position": [
+              -8.016546249389648,
+              0.68990159034729,
+              -11.016526222229004
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -0.0000021609635041386355,
+              -0.7071071863174438,
+              1.4498668576834461e-7,
+              0.7071064710617065
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 1
+          }
+        ],
+        "pads": [
+          {
+            "id": "loading-pressure",
+            "position": [
+              -8,
+              0.14,
+              -11
+            ],
+            "pressed": true,
+            "crate": "copy-cube"
+          },
+          {
+            "id": "gallery-pressure",
+            "position": [
+              8,
+              3.54,
+              -11
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "loading-door",
+            "kind": "shutter",
+            "label": "LOADING",
+            "position": [
+              -11.12,
+              5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "gallery-door",
+            "kind": "shutter",
+            "label": "GALLERY",
+            "position": [
+              11.12,
+              4.9,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "copy-source",
+            "position": [
+              10.985,
+              1.75,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "loading-return",
+            "position": [
+              -5,
+              1.75,
+              -13.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "gallery-return",
+            "position": [
+              5,
+              5.15,
+              -13.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "loading-exit",
+            "label": "EXIT",
+            "position": [
+              -13.39,
+              1.5,
+              -10
+            ],
+            "size": [
+              3.58,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "gallery-exit",
+            "label": "EXIT",
+            "position": [
+              13.39,
+              4.9,
+              -10
+            ],
+            "size": [
+              3.58,
+              3,
+              3.16
+            ]
+          }
+        ],
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "loading-exit",
+          "reason": "",
+          "events": [
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "footstep",
+              "time": 508
+            },
+            {
+              "type": "footstep",
+              "time": 933
+            },
+            {
+              "type": "footstep",
+              "time": 1358
+            },
+            {
+              "type": "footstep",
+              "time": 1783
+            },
+            {
+              "type": "footstep",
+              "time": 2208
+            },
+            {
+              "type": "portalA",
+              "time": 2508,
+              "surface": "copy-source",
+              "point": [
+                10.959999999999999,
+                1.55,
+                8
+              ]
+            },
+            {
+              "type": "footstep",
+              "time": 2633
+            },
+            {
+              "type": "footstep",
+              "time": 3058
+            },
+            {
+              "type": "footstep",
+              "time": 3483
+            },
+            {
+              "type": "footstep",
+              "time": 3908
+            },
+            {
+              "type": "footstep",
+              "time": 4333
+            },
+            {
+              "type": "portalB",
+              "time": 4725,
+              "surface": "loading-return",
+              "point": [
+                -5,
+                1.55,
+                -13.959999999999999
+              ]
+            },
+            {
+              "type": "footstep",
+              "time": 4758
+            },
+            {
+              "type": "footstep",
+              "time": 5183
+            },
+            {
+              "type": "footstep",
+              "time": 5608
+            },
+            {
+              "type": "footstep",
+              "time": 6033
+            },
+            {
+              "type": "footstep",
+              "time": 6458
+            },
+            {
+              "type": "footstep",
+              "time": 6883
+            },
+            {
+              "type": "pickup",
+              "time": 7025,
+              "body": "copy-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 7308
+            },
+            {
+              "type": "footstep",
+              "time": 7733
+            },
+            {
+              "type": "footstep",
+              "time": 8158
+            },
+            {
+              "type": "footstep",
+              "time": 8583
+            },
+            {
+              "type": "footstep",
+              "time": 9008
+            },
+            {
+              "type": "footstep",
+              "time": 9433
+            },
+            {
+              "type": "footstep",
+              "time": 9858
+            },
+            {
+              "type": "footstep",
+              "time": 10283
+            },
+            {
+              "type": "footstep",
+              "time": 10708
+            },
+            {
+              "type": "footstep",
+              "time": 11133
+            },
+            {
+              "type": "footstep",
+              "time": 11558
+            },
+            {
+              "type": "enter",
+              "time": 11842,
+              "body": "copy-cube",
+              "from": 0,
+              "to": 1,
+              "fromSurface": "copy-source",
+              "toSurface": "loading-return",
+              "speed": 17.981973692511144,
+              "exitSpeed": 17.981973692511147,
+              "held": "copy-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 11983
+            },
+            {
+              "type": "enter",
+              "time": 12050,
+              "body": "player",
+              "from": 0,
+              "to": 1,
+              "fromSurface": "copy-source",
+              "toSurface": "loading-return",
+              "speed": 4.7964125352343965,
+              "exitSpeed": 4.7964125352343965,
+              "held": "copy-cube"
+            },
+            {
+              "type": "land",
+              "time": 12058
+            },
+            {
+              "type": "footstep",
+              "time": 12408
+            },
+            {
+              "type": "receiver-power",
+              "time": 12800,
+              "id": "loading-light"
+            },
+            {
+              "type": "shutter-open",
+              "time": 12800,
+              "id": "loading-door"
+            },
+            {
+              "type": "pad",
+              "time": 12800,
+              "pad": "loading-pressure",
+              "crate": "player"
+            },
+            {
+              "type": "footstep",
+              "time": 12833
+            },
+            {
+              "type": "beam-blocked",
+              "time": 12983,
+              "id": "loading-light"
+            },
+            {
+              "type": "button-release",
+              "time": 12983,
+              "pad": "loading-pressure",
+              "crate": "player"
+            },
+            {
+              "type": "drop",
+              "time": 13658,
+              "body": "copy-cube"
+            },
+            {
+              "type": "receiver-power",
+              "time": 13808,
+              "id": "loading-light"
+            },
+            {
+              "type": "shutter-open",
+              "time": 13808,
+              "id": "loading-door"
+            },
+            {
+              "type": "pad",
+              "time": 13808,
+              "pad": "loading-pressure",
+              "crate": "copy-cube"
+            },
+            {
+              "type": "contact",
+              "time": 13817,
+              "body": "copy-cube",
+              "speed": 2.4606877820114663
+            },
+            {
+              "type": "portalB",
+              "time": 14867,
+              "surface": "gallery-return",
+              "point": [
+                5,
+                4.95,
+                -13.959999999999999
+              ]
+            },
+            {
+              "type": "beam-blocked",
+              "time": 14875,
+              "id": "loading-light"
+            },
+            {
+              "type": "receiver-power",
+              "time": 14875,
+              "id": "gallery-light"
+            },
+            {
+              "type": "shutter-close",
+              "time": 14875,
+              "id": "loading-door"
+            },
+            {
+              "type": "portalB",
+              "time": 15675,
+              "surface": "loading-return",
+              "point": [
+                -5,
+                1.55,
+                -13.959999999999999
+              ]
+            },
+            {
+              "type": "receiver-power",
+              "time": 15683,
+              "id": "loading-light"
+            },
+            {
+              "type": "beam-blocked",
+              "time": 15683,
+              "id": "gallery-light"
+            },
+            {
+              "type": "shutter-open",
+              "time": 15683,
+              "id": "loading-door"
+            },
+            {
+              "type": "footstep",
+              "time": 15692
+            },
+            {
+              "type": "footstep",
+              "time": 16125
+            },
+            {
+              "type": "footstep",
+              "time": 16550
+            },
+            {
+              "type": "footstep",
+              "time": 16975
+            }
+          ],
+          "mechanisms": [
+            "cargo",
+            "portals",
+            "beams",
+            "shutters",
+            "buttons"
+          ]
+        },
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "copy-emitter": {
+            "segments": [
+              {
+                "from": [
+                  7,
+                  0.9,
+                  8
+                ],
+                "to": [
+                  10.959999999999999,
+                  0.9,
+                  8
+                ],
+                "portal": "0"
+              },
+              {
+                "from": [
+                  -5,
+                  0.9,
+                  -13.959
+                ],
+                "to": [
+                  -5,
+                  0.9,
+                  -7.840000000000001
+                ]
+              }
+            ],
+            "stop": "receiver",
+            "receiver": "loading-light",
+            "hops": 1
+          }
+        },
+        "signals": {
+          "loading-pressure": true,
+          "gallery-pressure": false,
+          "closed:loading-door": false,
+          "clear:loading-door": true,
+          "safety:loading-door": false,
+          "door-safety": false,
+          "moving:loading-door": false,
+          "closed:gallery-door": true,
+          "clear:gallery-door": false,
+          "safety:gallery-door": false,
+          "moving:gallery-door": false,
+          "loading-light": true,
+          "gallery-light": false
+        },
+        "journal": {
+          "reports": [],
+          "attempt": 1,
+          "rows": [
+            {
+              "sequence": 7,
+              "time": 13.799999999999857,
+              "text": "LOADING RECEIVER received light again."
+            },
+            {
+              "sequence": 8,
+              "time": 14.608333333333144,
+              "text": "LOADING DOOR opened fully."
+            },
+            {
+              "sequence": 9,
+              "time": 14.874999999999796,
+              "text": "LOADING RECEIVER lost light."
+            },
+            {
+              "sequence": 10,
+              "time": 14.874999999999796,
+              "text": "GALLERY RECEIVER received light."
+            },
+            {
+              "sequence": 11,
+              "time": 15.67499999999975,
+              "text": "LOADING DOOR closed fully."
+            },
+            {
+              "sequence": 12,
+              "time": 15.683333333333083,
+              "text": "LOADING RECEIVER received light again."
+            },
+            {
+              "sequence": 13,
+              "time": 15.683333333333083,
+              "text": "GALLERY RECEIVER lost light."
+            },
+            {
+              "sequence": 14,
+              "time": 16.48333333333304,
+              "text": "LOADING DOOR opened fully."
+            }
+          ],
+          "truncated": true,
+          "now": [
+            {
+              "id": "loading-pressure",
+              "label": "LOADING",
+              "kind": "pressure",
+              "state": "PRESSED",
+              "cargo": true
+            },
+            {
+              "id": "gallery-pressure",
+              "label": "GALLERY",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "loading-light",
+              "label": "LOADING RECEIVER",
+              "kind": "light",
+              "state": "LIT"
+            },
+            {
+              "id": "gallery-light",
+              "label": "GALLERY RECEIVER",
+              "kind": "light",
+              "state": "DARK"
+            },
+            {
+              "id": "loading-door",
+              "label": "LOADING DOOR",
+              "kind": "shutter",
+              "state": "OPEN"
+            },
+            {
+              "id": "gallery-door",
+              "label": "GALLERY DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "shutter-open",
+            "time": 13808,
+            "id": "loading-door"
+          },
+          {
+            "type": "pad",
+            "time": 13808,
+            "pad": "loading-pressure",
+            "crate": "copy-cube"
+          },
+          {
+            "type": "contact",
+            "time": 13817,
+            "body": "copy-cube",
+            "speed": 2.4606877820114663
+          },
+          {
+            "type": "portalB",
+            "time": 14867,
+            "surface": "gallery-return",
+            "point": [
+              5,
+              4.95,
+              -13.959999999999999
+            ]
+          },
+          {
+            "type": "beam-blocked",
+            "time": 14875,
+            "id": "loading-light"
+          },
+          {
+            "type": "receiver-power",
+            "time": 14875,
+            "id": "gallery-light"
+          },
+          {
+            "type": "shutter-close",
+            "time": 14875,
+            "id": "loading-door"
+          },
+          {
+            "type": "portalB",
+            "time": 15675,
+            "surface": "loading-return",
+            "point": [
+              -5,
+              1.55,
+              -13.959999999999999
+            ]
+          },
+          {
+            "type": "receiver-power",
+            "time": 15683,
+            "id": "loading-light"
+          },
+          {
+            "type": "beam-blocked",
+            "time": 15683,
+            "id": "gallery-light"
+          },
+          {
+            "type": "shutter-open",
+            "time": 15683,
+            "id": "loading-door"
+          },
+          {
+            "type": "footstep",
+            "time": 15692
+          },
+          {
+            "type": "footstep",
+            "time": 16125
+          },
+          {
+            "type": "footstep",
+            "time": 16550
+          },
+          {
+            "type": "footstep",
+            "time": 16975
+          },
+          {
+            "type": "complete",
+            "time": 17367,
+            "chamber": 49
+          }
+        ]
+      }
+    },
+    {
+      "label": "final",
+      "state": {
+        "room": "chamber-49",
+        "number": 49,
+        "mission": "The copy at GALLERY says: LOADING told the operator to leave the cube there and keep its receiver lit. Follow LOADING’s instruction.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -11.639561653137207,
+            0.8648722767829895,
+            -9.936928749084473
+          ],
+          "velocity": [
+            -4.798049589648967,
+            0,
+            -0.1281281810245726
+          ],
+          "yaw": 1.5440826465367257,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "copy-source",
+            "position": [
+              10.959999999999999,
+              1.55,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ]
+          },
+          {
+            "surface": "loading-return",
+            "position": [
+              -5,
+              1.55,
+              -13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "copy-cube",
+            "position": [
+              -8.016546249389648,
+              0.68990159034729,
+              -11.016526222229004
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -0.0000021609635041386355,
+              -0.7071071863174438,
+              1.4498668576834461e-7,
+              0.7071064710617065
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 1
+          }
+        ],
+        "pads": [
+          {
+            "id": "loading-pressure",
+            "position": [
+              -8,
+              0.14,
+              -11
+            ],
+            "pressed": true,
+            "crate": "copy-cube"
+          },
+          {
+            "id": "gallery-pressure",
+            "position": [
+              8,
+              3.54,
+              -11
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "loading-door",
+            "kind": "shutter",
+            "label": "LOADING",
+            "position": [
+              -11.12,
+              5,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "gallery-door",
+            "kind": "shutter",
+            "label": "GALLERY",
+            "position": [
+              11.12,
+              4.9,
+              -10
+            ],
+            "size": [
+              0.3,
+              3,
+              3.2
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "copy-source",
+            "position": [
+              10.985,
+              1.75,
+              8
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "loading-return",
+            "position": [
+              -5,
+              1.75,
+              -13.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "gallery-return",
+            "position": [
+              5,
+              5.15,
+              -13.985
+            ],
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "width": 5,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "loading-exit",
+            "label": "EXIT",
+            "position": [
+              -13.39,
+              1.5,
+              -10
+            ],
+            "size": [
+              3.58,
+              3,
+              3.16
+            ]
+          },
+          {
+            "id": "gallery-exit",
+            "label": "EXIT",
+            "position": [
+              13.39,
+              4.9,
+              -10
+            ],
+            "size": [
+              3.58,
+              3,
+              3.16
+            ]
+          }
+        ],
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "loading-exit",
+          "reason": "",
+          "events": [
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "footstep",
+              "time": 508
+            },
+            {
+              "type": "footstep",
+              "time": 933
+            },
+            {
+              "type": "footstep",
+              "time": 1358
+            },
+            {
+              "type": "footstep",
+              "time": 1783
+            },
+            {
+              "type": "footstep",
+              "time": 2208
+            },
+            {
+              "type": "portalA",
+              "time": 2508,
+              "surface": "copy-source",
+              "point": [
+                10.959999999999999,
+                1.55,
+                8
+              ]
+            },
+            {
+              "type": "footstep",
+              "time": 2633
+            },
+            {
+              "type": "footstep",
+              "time": 3058
+            },
+            {
+              "type": "footstep",
+              "time": 3483
+            },
+            {
+              "type": "footstep",
+              "time": 3908
+            },
+            {
+              "type": "footstep",
+              "time": 4333
+            },
+            {
+              "type": "portalB",
+              "time": 4725,
+              "surface": "loading-return",
+              "point": [
+                -5,
+                1.55,
+                -13.959999999999999
+              ]
+            },
+            {
+              "type": "footstep",
+              "time": 4758
+            },
+            {
+              "type": "footstep",
+              "time": 5183
+            },
+            {
+              "type": "footstep",
+              "time": 5608
+            },
+            {
+              "type": "footstep",
+              "time": 6033
+            },
+            {
+              "type": "footstep",
+              "time": 6458
+            },
+            {
+              "type": "footstep",
+              "time": 6883
+            },
+            {
+              "type": "pickup",
+              "time": 7025,
+              "body": "copy-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 7308
+            },
+            {
+              "type": "footstep",
+              "time": 7733
+            },
+            {
+              "type": "footstep",
+              "time": 8158
+            },
+            {
+              "type": "footstep",
+              "time": 8583
+            },
+            {
+              "type": "footstep",
+              "time": 9008
+            },
+            {
+              "type": "footstep",
+              "time": 9433
+            },
+            {
+              "type": "footstep",
+              "time": 9858
+            },
+            {
+              "type": "footstep",
+              "time": 10283
+            },
+            {
+              "type": "footstep",
+              "time": 10708
+            },
+            {
+              "type": "footstep",
+              "time": 11133
+            },
+            {
+              "type": "footstep",
+              "time": 11558
+            },
+            {
+              "type": "enter",
+              "time": 11842,
+              "body": "copy-cube",
+              "from": 0,
+              "to": 1,
+              "fromSurface": "copy-source",
+              "toSurface": "loading-return",
+              "speed": 17.981973692511144,
+              "exitSpeed": 17.981973692511147,
+              "held": "copy-cube"
+            },
+            {
+              "type": "footstep",
+              "time": 11983
+            },
+            {
+              "type": "enter",
+              "time": 12050,
+              "body": "player",
+              "from": 0,
+              "to": 1,
+              "fromSurface": "copy-source",
+              "toSurface": "loading-return",
+              "speed": 4.7964125352343965,
+              "exitSpeed": 4.7964125352343965,
+              "held": "copy-cube"
+            },
+            {
+              "type": "land",
+              "time": 12058
+            },
+            {
+              "type": "footstep",
+              "time": 12408
+            },
+            {
+              "type": "receiver-power",
+              "time": 12800,
+              "id": "loading-light"
+            },
+            {
+              "type": "shutter-open",
+              "time": 12800,
+              "id": "loading-door"
+            },
+            {
+              "type": "pad",
+              "time": 12800,
+              "pad": "loading-pressure",
+              "crate": "player"
+            },
+            {
+              "type": "footstep",
+              "time": 12833
+            },
+            {
+              "type": "beam-blocked",
+              "time": 12983,
+              "id": "loading-light"
+            },
+            {
+              "type": "button-release",
+              "time": 12983,
+              "pad": "loading-pressure",
+              "crate": "player"
+            },
+            {
+              "type": "drop",
+              "time": 13658,
+              "body": "copy-cube"
+            },
+            {
+              "type": "receiver-power",
+              "time": 13808,
+              "id": "loading-light"
+            },
+            {
+              "type": "shutter-open",
+              "time": 13808,
+              "id": "loading-door"
+            },
+            {
+              "type": "pad",
+              "time": 13808,
+              "pad": "loading-pressure",
+              "crate": "copy-cube"
+            },
+            {
+              "type": "contact",
+              "time": 13817,
+              "body": "copy-cube",
+              "speed": 2.4606877820114663
+            },
+            {
+              "type": "portalB",
+              "time": 14867,
+              "surface": "gallery-return",
+              "point": [
+                5,
+                4.95,
+                -13.959999999999999
+              ]
+            },
+            {
+              "type": "beam-blocked",
+              "time": 14875,
+              "id": "loading-light"
+            },
+            {
+              "type": "receiver-power",
+              "time": 14875,
+              "id": "gallery-light"
+            },
+            {
+              "type": "shutter-close",
+              "time": 14875,
+              "id": "loading-door"
+            },
+            {
+              "type": "portalB",
+              "time": 15675,
+              "surface": "loading-return",
+              "point": [
+                -5,
+                1.55,
+                -13.959999999999999
+              ]
+            },
+            {
+              "type": "receiver-power",
+              "time": 15683,
+              "id": "loading-light"
+            },
+            {
+              "type": "beam-blocked",
+              "time": 15683,
+              "id": "gallery-light"
+            },
+            {
+              "type": "shutter-open",
+              "time": 15683,
+              "id": "loading-door"
+            },
+            {
+              "type": "footstep",
+              "time": 15692
+            },
+            {
+              "type": "footstep",
+              "time": 16125
+            },
+            {
+              "type": "footstep",
+              "time": 16550
+            },
+            {
+              "type": "footstep",
+              "time": 16975
+            }
+          ],
+          "mechanisms": [
+            "cargo",
+            "portals",
+            "beams",
+            "shutters",
+            "buttons"
+          ]
+        },
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "copy-emitter": {
+            "segments": [
+              {
+                "from": [
+                  7,
+                  0.9,
+                  8
+                ],
+                "to": [
+                  10.959999999999999,
+                  0.9,
+                  8
+                ],
+                "portal": "0"
+              },
+              {
+                "from": [
+                  -5,
+                  0.9,
+                  -13.959
+                ],
+                "to": [
+                  -5,
+                  0.9,
+                  -7.840000000000001
+                ]
+              }
+            ],
+            "stop": "receiver",
+            "receiver": "loading-light",
+            "hops": 1
+          }
+        },
+        "signals": {
+          "loading-pressure": true,
+          "gallery-pressure": false,
+          "closed:loading-door": false,
+          "clear:loading-door": true,
+          "safety:loading-door": false,
+          "door-safety": false,
+          "moving:loading-door": false,
+          "closed:gallery-door": true,
+          "clear:gallery-door": false,
+          "safety:gallery-door": false,
+          "moving:gallery-door": false,
+          "loading-light": true,
+          "gallery-light": false
+        },
+        "journal": {
+          "reports": [],
+          "attempt": 1,
+          "rows": [
+            {
+              "sequence": 7,
+              "time": 13.799999999999857,
+              "text": "LOADING RECEIVER received light again."
+            },
+            {
+              "sequence": 8,
+              "time": 14.608333333333144,
+              "text": "LOADING DOOR opened fully."
+            },
+            {
+              "sequence": 9,
+              "time": 14.874999999999796,
+              "text": "LOADING RECEIVER lost light."
+            },
+            {
+              "sequence": 10,
+              "time": 14.874999999999796,
+              "text": "GALLERY RECEIVER received light."
+            },
+            {
+              "sequence": 11,
+              "time": 15.67499999999975,
+              "text": "LOADING DOOR closed fully."
+            },
+            {
+              "sequence": 12,
+              "time": 15.683333333333083,
+              "text": "LOADING RECEIVER received light again."
+            },
+            {
+              "sequence": 13,
+              "time": 15.683333333333083,
+              "text": "GALLERY RECEIVER lost light."
+            },
+            {
+              "sequence": 14,
+              "time": 16.48333333333304,
+              "text": "LOADING DOOR opened fully."
+            }
+          ],
+          "truncated": true,
+          "now": [
+            {
+              "id": "loading-pressure",
+              "label": "LOADING",
+              "kind": "pressure",
+              "state": "PRESSED",
+              "cargo": true
+            },
+            {
+              "id": "gallery-pressure",
+              "label": "GALLERY",
+              "kind": "pressure",
+              "state": "EMPTY",
+              "cargo": false
+            },
+            {
+              "id": "loading-light",
+              "label": "LOADING RECEIVER",
+              "kind": "light",
+              "state": "LIT"
+            },
+            {
+              "id": "gallery-light",
+              "label": "GALLERY RECEIVER",
+              "kind": "light",
+              "state": "DARK"
+            },
+            {
+              "id": "loading-door",
+              "label": "LOADING DOOR",
+              "kind": "shutter",
+              "state": "OPEN"
+            },
+            {
+              "id": "gallery-door",
+              "label": "GALLERY DOOR",
+              "kind": "shutter",
+              "state": "CLOSED"
+            }
+          ],
+          "tests": []
+        },
+        "events": [
+          {
+            "type": "shutter-open",
+            "time": 13808,
+            "id": "loading-door"
+          },
+          {
+            "type": "pad",
+            "time": 13808,
+            "pad": "loading-pressure",
+            "crate": "copy-cube"
+          },
+          {
+            "type": "contact",
+            "time": 13817,
+            "body": "copy-cube",
+            "speed": 2.4606877820114663
+          },
+          {
+            "type": "portalB",
+            "time": 14867,
+            "surface": "gallery-return",
+            "point": [
+              5,
+              4.95,
+              -13.959999999999999
+            ]
+          },
+          {
+            "type": "beam-blocked",
+            "time": 14875,
+            "id": "loading-light"
+          },
+          {
+            "type": "receiver-power",
+            "time": 14875,
+            "id": "gallery-light"
+          },
+          {
+            "type": "shutter-close",
+            "time": 14875,
+            "id": "loading-door"
+          },
+          {
+            "type": "portalB",
+            "time": 15675,
+            "surface": "loading-return",
+            "point": [
+              -5,
+              1.55,
+              -13.959999999999999
+            ]
+          },
+          {
+            "type": "receiver-power",
+            "time": 15683,
+            "id": "loading-light"
+          },
+          {
+            "type": "beam-blocked",
+            "time": 15683,
+            "id": "gallery-light"
+          },
+          {
+            "type": "shutter-open",
+            "time": 15683,
+            "id": "loading-door"
+          },
+          {
+            "type": "footstep",
+            "time": 15692
+          },
+          {
+            "type": "footstep",
+            "time": 16125
+          },
+          {
+            "type": "footstep",
+            "time": 16550
+          },
+          {
+            "type": "footstep",
+            "time": 16975
+          },
+          {
+            "type": "complete",
+            "time": 17367,
+            "chamber": 49
+          }
+        ]
+      }
+    }
+  ]
+}

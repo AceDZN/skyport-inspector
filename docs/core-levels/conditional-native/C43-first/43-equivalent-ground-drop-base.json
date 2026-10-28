@@ -1,0 +1,3813 @@
+{
+  "scope": "Unregistered authored-spawn native route. Camera/WASD/E/ray-clear portals only. Decorative visibility, realtime mouse and earned save remain pending.",
+  "number": 43,
+  "contrast": false,
+  "error": null,
+  "inputs": [
+    {
+      "action": "aim",
+      "target": [
+        -5,
+        1.55,
+        13.985
+      ]
+    },
+    {
+      "action": "place",
+      "index": 0
+    },
+    {
+      "action": "aim",
+      "target": [
+        -13.985,
+        3.95,
+        -5
+      ]
+    },
+    {
+      "action": "place",
+      "index": 1
+    },
+    {
+      "action": "walk",
+      "x": -5,
+      "z": 12.7
+    },
+    {
+      "action": "aim",
+      "target": [
+        -5,
+        1.55,
+        15.959999999999999
+      ]
+    },
+    {
+      "action": "key",
+      "code": "KeyW",
+      "ms": 291.6666666666667,
+      "nativeTimingOnly": true
+    },
+    {
+      "action": "walk",
+      "x": -9.8,
+      "z": -7
+    },
+    {
+      "action": "aim",
+      "target": [
+        -8,
+        2.9498960971832275,
+        -7.000001430511475
+      ]
+    },
+    {
+      "action": "press",
+      "code": "KeyE"
+    },
+    {
+      "action": "walk",
+      "x": -9.8,
+      "z": -5
+    },
+    {
+      "action": "walk",
+      "x": -8.8,
+      "z": -3.8
+    },
+    {
+      "action": "aim",
+      "target": [
+        -8.8,
+        3.46,
+        -2
+      ]
+    },
+    {
+      "action": "press",
+      "code": "KeyE"
+    },
+    {
+      "action": "walk",
+      "x": -10.8,
+      "z": -3.8
+    },
+    {
+      "action": "walk",
+      "x": -10.8,
+      "z": 1
+    },
+    {
+      "action": "walk",
+      "x": -3,
+      "z": 7
+    },
+    {
+      "action": "walk",
+      "x": 2,
+      "z": 7
+    },
+    {
+      "action": "walk",
+      "x": 8,
+      "z": -2.5
+    },
+    {
+      "action": "walk",
+      "x": 8,
+      "z": -5.5
+    },
+    {
+      "action": "walk",
+      "x": 8,
+      "z": -10
+    },
+    {
+      "action": "walk",
+      "x": 8,
+      "z": -17
+    }
+  ],
+  "ridingFrames": {
+    "negative-archive-lift": 660
+  },
+  "maxDeviceStep": {
+    "negative-service-door": 0,
+    "negative-archive-access": 0.036458333333333925,
+    "negative-archive-lift": 0.01000000000000334,
+    "negative-archive-dock": 0.03437500000000071,
+    "negative-archive-door": 0.03437500000000071
+  },
+  "events": [
+    {
+      "type": "land",
+      "time": 0.008333333333333333
+    },
+    {
+      "type": "portalA",
+      "time": 0.3000000000000001,
+      "surface": "negative-source",
+      "point": [
+        -5,
+        1.55,
+        13.959999999999999
+      ]
+    },
+    {
+      "type": "portalB",
+      "time": 0.30833333333333346,
+      "surface": "negative-return",
+      "point": [
+        -13.959999999999999,
+        3.95,
+        -5
+      ]
+    },
+    {
+      "type": "footstep",
+      "time": 0.4250000000000005
+    },
+    {
+      "type": "footstep",
+      "time": 0.8499999999999994
+    },
+    {
+      "type": "enter",
+      "time": 1.1333333333333317,
+      "body": "player",
+      "from": 0,
+      "to": 1,
+      "fromSurface": "negative-source",
+      "toSurface": "negative-return",
+      "speed": 4.785167207497633,
+      "exitSpeed": 4.785167207497633,
+      "held": null
+    },
+    {
+      "type": "land",
+      "time": 1.141666666666665
+    },
+    {
+      "type": "footstep",
+      "time": 1.3249999999999977
+    },
+    {
+      "type": "footstep",
+      "time": 1.7499999999999962
+    },
+    {
+      "type": "footstep",
+      "time": 2.174999999999995
+    },
+    {
+      "type": "pickup",
+      "time": 2.391666666666661,
+      "body": "negative-cube"
+    },
+    {
+      "type": "receiver-power",
+      "time": 2.5249999999999937,
+      "id": "archive-light"
+    },
+    {
+      "type": "shutter-open",
+      "time": 2.5249999999999937,
+      "id": "negative-archive-access"
+    },
+    {
+      "type": "shutter-open",
+      "time": 2.5249999999999937,
+      "id": "negative-archive-door"
+    },
+    {
+      "type": "footstep",
+      "time": 2.5999999999999934
+    },
+    {
+      "type": "footstep",
+      "time": 3.024999999999992
+    },
+    {
+      "type": "drop",
+      "time": 3.824999999999989,
+      "body": "negative-cube"
+    },
+    {
+      "type": "contact",
+      "time": 4.383333333333341,
+      "body": "negative-cube",
+      "speed": 8.642348959520902
+    },
+    {
+      "type": "footstep",
+      "time": 4.400000000000008
+    },
+    {
+      "type": "footstep",
+      "time": 4.8250000000000295
+    },
+    {
+      "type": "footstep",
+      "time": 5.250000000000051
+    },
+    {
+      "type": "land",
+      "time": 5.7833333333334105
+    },
+    {
+      "type": "footstep",
+      "time": 5.7833333333334105
+    },
+    {
+      "type": "footstep",
+      "time": 6.208333333333432
+    },
+    {
+      "type": "footstep",
+      "time": 6.633333333333453
+    },
+    {
+      "type": "footstep",
+      "time": 7.058333333333474
+    },
+    {
+      "type": "footstep",
+      "time": 7.483333333333495
+    },
+    {
+      "type": "footstep",
+      "time": 7.908333333333516
+    },
+    {
+      "type": "footstep",
+      "time": 8.333333333333501
+    },
+    {
+      "type": "lift-motor",
+      "time": 8.525000000000157,
+      "id": "negative-archive-lift"
+    },
+    {
+      "type": "footstep",
+      "time": 8.758333333333477
+    },
+    {
+      "type": "footstep",
+      "time": 9.183333333333453
+    },
+    {
+      "type": "footstep",
+      "time": 9.691666666666757
+    },
+    {
+      "type": "footstep",
+      "time": 10.116666666666733
+    },
+    {
+      "type": "footstep",
+      "time": 10.541666666666709
+    },
+    {
+      "type": "footstep",
+      "time": 10.966666666666685
+    },
+    {
+      "type": "footstep",
+      "time": 11.39166666666666
+    },
+    {
+      "type": "footstep",
+      "time": 11.816666666666636
+    },
+    {
+      "type": "lift-arrival",
+      "time": 14.024999999999844,
+      "id": "negative-archive-lift",
+      "value": "ARCHIVE"
+    },
+    {
+      "type": "shutter-open",
+      "time": 14.033333333333177,
+      "id": "negative-archive-dock"
+    },
+    {
+      "type": "lift-motor",
+      "time": 20.024999999999505,
+      "id": "negative-archive-lift"
+    },
+    {
+      "type": "shutter-close",
+      "time": 20.033333333332838,
+      "id": "negative-archive-dock"
+    },
+    {
+      "type": "lift-arrival",
+      "time": 25.524999999999192,
+      "id": "negative-archive-lift",
+      "value": "base"
+    },
+    {
+      "type": "footstep",
+      "time": 25.533333333332525
+    },
+    {
+      "type": "footstep",
+      "time": 25.9583333333325
+    },
+    {
+      "type": "lift-motor",
+      "time": 31.52499999999885,
+      "id": "negative-archive-lift"
+    },
+    {
+      "type": "lift-arrival",
+      "time": 37.02499999999854,
+      "id": "negative-archive-lift",
+      "value": "ARCHIVE"
+    },
+    {
+      "type": "shutter-open",
+      "time": 37.033333333331875,
+      "id": "negative-archive-dock"
+    },
+    {
+      "type": "footstep",
+      "time": 37.83333333333183
+    },
+    {
+      "type": "footstep",
+      "time": 38.258333333331805
+    },
+    {
+      "type": "footstep",
+      "time": 38.68333333333178
+    },
+    {
+      "type": "footstep",
+      "time": 39.10833333333176
+    },
+    {
+      "type": "footstep",
+      "time": 39.53333333333173
+    },
+    {
+      "type": "complete",
+      "time": 39.916666666665044,
+      "chamber": 43
+    }
+  ],
+  "checkpoints": [
+    {
+      "label": "actual-authored-spawn",
+      "state": {
+        "room": "chamber-43",
+        "number": 43,
+        "mission": "If the beam is blocked, the archive lift does not move. Clear it and use the lift.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -5.000000953674316,
+            0.8648960590362549,
+            11
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "yaw": 0,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 0
+        },
+        "portals": [
+          null,
+          null
+        ],
+        "crates": [
+          {
+            "id": "negative-cube",
+            "position": [
+              -8,
+              2.9498960971832275,
+              -7.000001430511475
+            ],
+            "velocity": [
+              -0.00002051380397460889,
+              -0.00000306214587908471,
+              -0.000017453041436965577
+            ],
+            "rotation": [
+              8.483689271088224e-7,
+              3.9678603284964975e-12,
+              -9.75472858044668e-7,
+              1
+            ],
+            "angularVelocity": [
+              -0.00003155716331093572,
+              -5.4728183620969106e-15,
+              0.00003709138400154188
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "negative-service",
+            "position": [
+              -4,
+              2.54,
+              -7
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "negative-service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -14.12,
+              1.5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "negative-archive-access",
+            "kind": "shutter",
+            "label": "ARCHIVE ACCESS",
+            "position": [
+              0,
+              1.5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "negative-archive-lift",
+            "kind": "lift",
+            "label": "ARCHIVE LIFT",
+            "position": [
+              8,
+              -0.2,
+              -6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "BASE",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "negative-archive-dock",
+            "kind": "shutter",
+            "label": "ARCHIVE DOCK",
+            "position": [
+              8,
+              8.1,
+              -8.72
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "negative-archive-door",
+            "kind": "shutter",
+            "label": "ARCHIVE EXIT",
+            "position": [
+              8,
+              8.1,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "negative-source",
+            "position": [
+              -5,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "negative-return",
+            "position": [
+              -13.985,
+              4.15,
+              -5
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 4,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -16.49,
+              1.5,
+              7
+            ],
+            "size": [
+              3.7799999999999994,
+              3,
+              2.7600000000000007
+            ]
+          },
+          {
+            "id": "archive-exit",
+            "label": "EXIT",
+            "position": [
+              8,
+              8.1,
+              -16.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.7799999999999994
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "negative-emitter": {
+            "segments": [
+              {
+                "from": [
+                  -11,
+                  3.05,
+                  -7
+                ],
+                "to": [
+                  -8.549999713897705,
+                  3.05,
+                  -7
+                ]
+              }
+            ],
+            "stop": "obstacle",
+            "obstacle": "negative-cube",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "negative-service": false,
+          "closed:negative-service-door": true,
+          "clear:negative-service-door": false,
+          "safety:negative-service-door": false,
+          "door-safety": false,
+          "moving:negative-service-door": false,
+          "closed:negative-archive-access": true,
+          "clear:negative-archive-access": false,
+          "safety:negative-archive-access": false,
+          "moving:negative-archive-access": false,
+          "moving:negative-archive-lift": false,
+          "at:negative-archive-lift:BASE": true,
+          "at:negative-archive-lift:ARCHIVE": false,
+          "closed:negative-archive-dock": true,
+          "clear:negative-archive-dock": false,
+          "safety:negative-archive-dock": false,
+          "moving:negative-archive-dock": false,
+          "closed:negative-archive-door": true,
+          "clear:negative-archive-door": false,
+          "safety:negative-archive-door": false,
+          "moving:negative-archive-door": false,
+          "archive-light": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "negative-ground",
+          "normal": {
+            "x": -0.000032005555112846196,
+            "y": 1,
+            "z": 0.000016002777556423098
+          },
+          "witness": {
+            "x": -5.000028610229492,
+            "y": 0,
+            "z": 10.99945068359375
+          },
+          "applied": {
+            "x": 0,
+            "y": -0.00009997870802180842,
+            "z": 0
+          },
+          "remaining": {
+            "x": 0,
+            "y": -0.0010111323790624738,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-ground-to-mezzanine-access",
+      "state": {
+        "room": "chamber-43",
+        "number": 43,
+        "mission": "If the beam is blocked, the archive lift does not move. Clear it and use the lift.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -13.665465354919434,
+            3.265073776245117,
+            -5.000105857849121
+          ],
+          "velocity": [
+            0.1576502115544431,
+            0,
+            4.4201801669122466e-7
+          ],
+          "yaw": -1.5707989064274246,
+          "pitch": 0.011145360544581298,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "negative-source",
+            "position": [
+              -5,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "negative-return",
+            "position": [
+              -13.959999999999999,
+              3.95,
+              -5
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "negative-cube",
+            "position": [
+              -8,
+              2.9498960971832275,
+              -7.000001430511475
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              7.482149726456555e-7,
+              3.952119447675484e-12,
+              -8.756805982557125e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "negative-service",
+            "position": [
+              -4,
+              2.54,
+              -7
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "negative-service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -14.12,
+              1.5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "negative-archive-access",
+            "kind": "shutter",
+            "label": "ARCHIVE ACCESS",
+            "position": [
+              0,
+              1.5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "negative-archive-lift",
+            "kind": "lift",
+            "label": "ARCHIVE LIFT",
+            "position": [
+              8,
+              -0.2,
+              -6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": "BASE",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "negative-archive-dock",
+            "kind": "shutter",
+            "label": "ARCHIVE DOCK",
+            "position": [
+              8,
+              8.1,
+              -8.72
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "negative-archive-door",
+            "kind": "shutter",
+            "label": "ARCHIVE EXIT",
+            "position": [
+              8,
+              8.1,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "negative-source",
+            "position": [
+              -5,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "negative-return",
+            "position": [
+              -13.985,
+              4.15,
+              -5
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 4,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -16.49,
+              1.5,
+              7
+            ],
+            "size": [
+              3.7799999999999994,
+              3,
+              2.7600000000000007
+            ]
+          },
+          {
+            "id": "archive-exit",
+            "label": "EXIT",
+            "position": [
+              8,
+              8.1,
+              -16.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.7799999999999994
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "negative-emitter": {
+            "segments": [
+              {
+                "from": [
+                  -11,
+                  3.05,
+                  -7
+                ],
+                "to": [
+                  -8.549999713897705,
+                  3.05,
+                  -7
+                ]
+              }
+            ],
+            "stop": "obstacle",
+            "obstacle": "negative-cube",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "negative-service": false,
+          "closed:negative-service-door": true,
+          "clear:negative-service-door": false,
+          "safety:negative-service-door": false,
+          "door-safety": false,
+          "moving:negative-service-door": false,
+          "closed:negative-archive-access": true,
+          "clear:negative-archive-access": false,
+          "safety:negative-archive-access": false,
+          "moving:negative-archive-access": false,
+          "moving:negative-archive-lift": false,
+          "at:negative-archive-lift:BASE": true,
+          "at:negative-archive-lift:ARCHIVE": false,
+          "closed:negative-archive-dock": true,
+          "clear:negative-archive-dock": false,
+          "safety:negative-archive-dock": false,
+          "moving:negative-archive-dock": false,
+          "closed:negative-archive-door": true,
+          "clear:negative-archive-door": false,
+          "safety:negative-archive-door": false,
+          "moving:negative-archive-door": false,
+          "archive-light": false
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "land",
+            "time": 8
+          },
+          {
+            "type": "portalA",
+            "time": 300,
+            "surface": "negative-source",
+            "point": [
+              -5,
+              1.55,
+              13.959999999999999
+            ]
+          },
+          {
+            "type": "portalB",
+            "time": 308,
+            "surface": "negative-return",
+            "point": [
+              -13.959999999999999,
+              3.95,
+              -5
+            ]
+          },
+          {
+            "type": "footstep",
+            "time": 425
+          },
+          {
+            "type": "footstep",
+            "time": 850
+          },
+          {
+            "type": "enter",
+            "time": 1133,
+            "body": "player",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "negative-source",
+            "toSurface": "negative-return",
+            "speed": 4.785167207497633,
+            "exitSpeed": 4.785167207497633,
+            "held": null
+          },
+          {
+            "type": "land",
+            "time": 1142
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "negative-mezzanine",
+          "normal": {
+            "x": 0,
+            "y": 1,
+            "z": 0.000007957986781548243
+          },
+          "witness": {
+            "x": -13.666065216064453,
+            "y": 2.4000000953674316,
+            "z": -4.99998664855957
+          },
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": 0.0013137517962604761,
+            "y": -0.0011111111380159855,
+            "z": 3.6834835182020242e-9
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-cube-falls-below-raised-ray",
+      "state": {
+        "room": "chamber-43",
+        "number": 43,
+        "mission": "If the beam is blocked, the archive lift does not move. Clear it and use the lift.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -8.724251747131348,
+            3.265064239501953,
+            -3.719418525695801
+          ],
+          "velocity": [
+            4.947894113752991e-9,
+            0,
+            5.247707365555019e-9
+          ],
+          "yaw": 3.105767097855665,
+          "pitch": -0.256415916241342,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "negative-source",
+            "position": [
+              -5,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "negative-return",
+            "position": [
+              -13.959999999999999,
+              3.95,
+              -5
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "negative-cube",
+            "position": [
+              -8.795945167541504,
+              0.5263184309005737,
+              -1.719071388244629
+            ],
+            "velocity": [
+              -0.012540310621261597,
+              0.11524097621440887,
+              0.15699999034404755
+            ],
+            "rotation": [
+              -0.0002882422413676977,
+              -1.6333901342591162e-8,
+              0.0005479297833517194,
+              0.9999998807907104
+            ],
+            "angularVelocity": [
+              0.11525900661945343,
+              2.320114989018407e-9,
+              -0.021689480170607567
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "negative-service",
+            "position": [
+              -4,
+              2.54,
+              -7
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "negative-service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -14.12,
+              1.5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "negative-archive-access",
+            "kind": "shutter",
+            "label": "ARCHIVE ACCESS",
+            "position": [
+              0,
+              5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "negative-archive-lift",
+            "kind": "lift",
+            "label": "ARCHIVE LIFT",
+            "position": [
+              8,
+              -0.2,
+              -6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "BASE",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "negative-archive-dock",
+            "kind": "shutter",
+            "label": "ARCHIVE DOCK",
+            "position": [
+              8,
+              8.1,
+              -8.72
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "negative-archive-door",
+            "kind": "shutter",
+            "label": "ARCHIVE EXIT",
+            "position": [
+              8,
+              11.4,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "negative-source",
+            "position": [
+              -5,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "negative-return",
+            "position": [
+              -13.985,
+              4.15,
+              -5
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 4,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -16.49,
+              1.5,
+              7
+            ],
+            "size": [
+              3.7799999999999994,
+              3,
+              2.7600000000000007
+            ]
+          },
+          {
+            "id": "archive-exit",
+            "label": "EXIT",
+            "position": [
+              8,
+              8.1,
+              -16.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.7799999999999994
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "negative-emitter": {
+            "segments": [
+              {
+                "from": [
+                  -11,
+                  3.05,
+                  -7
+                ],
+                "to": [
+                  2.6800000000000175,
+                  3.05,
+                  -7
+                ]
+              }
+            ],
+            "stop": "receiver",
+            "receiver": "archive-light",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "negative-service": false,
+          "closed:negative-service-door": true,
+          "clear:negative-service-door": false,
+          "safety:negative-service-door": false,
+          "door-safety": false,
+          "moving:negative-service-door": false,
+          "closed:negative-archive-access": false,
+          "clear:negative-archive-access": true,
+          "safety:negative-archive-access": false,
+          "moving:negative-archive-access": false,
+          "moving:negative-archive-lift": false,
+          "at:negative-archive-lift:BASE": true,
+          "at:negative-archive-lift:ARCHIVE": false,
+          "closed:negative-archive-dock": true,
+          "clear:negative-archive-dock": false,
+          "safety:negative-archive-dock": false,
+          "moving:negative-archive-dock": false,
+          "closed:negative-archive-door": false,
+          "clear:negative-archive-door": true,
+          "safety:negative-archive-door": false,
+          "moving:negative-archive-door": false,
+          "archive-light": true
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "portalB",
+            "time": 308,
+            "surface": "negative-return",
+            "point": [
+              -13.959999999999999,
+              3.95,
+              -5
+            ]
+          },
+          {
+            "type": "footstep",
+            "time": 425
+          },
+          {
+            "type": "footstep",
+            "time": 850
+          },
+          {
+            "type": "enter",
+            "time": 1133,
+            "body": "player",
+            "from": 0,
+            "to": 1,
+            "fromSurface": "negative-source",
+            "toSurface": "negative-return",
+            "speed": 4.785167207497633,
+            "exitSpeed": 4.785167207497633,
+            "held": null
+          },
+          {
+            "type": "land",
+            "time": 1142
+          },
+          {
+            "type": "footstep",
+            "time": 1325
+          },
+          {
+            "type": "footstep",
+            "time": 1750
+          },
+          {
+            "type": "footstep",
+            "time": 2175
+          },
+          {
+            "type": "pickup",
+            "time": 2392,
+            "body": "negative-cube"
+          },
+          {
+            "type": "receiver-power",
+            "time": 2525,
+            "id": "archive-light"
+          },
+          {
+            "type": "shutter-open",
+            "time": 2525,
+            "id": "negative-archive-access"
+          },
+          {
+            "type": "shutter-open",
+            "time": 2525,
+            "id": "negative-archive-door"
+          },
+          {
+            "type": "footstep",
+            "time": 2600
+          },
+          {
+            "type": "footstep",
+            "time": 3025
+          },
+          {
+            "type": "drop",
+            "time": 3825,
+            "body": "negative-cube"
+          },
+          {
+            "type": "contact",
+            "time": 4383,
+            "body": "negative-cube",
+            "speed": 8.642348959520902
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "negative-mezzanine",
+          "normal": {
+            "x": -0.000015801324479980394,
+            "y": 1,
+            "z": 0.0000019751655599975493
+          },
+          "witness": {
+            "x": -8.724859237670898,
+            "y": 2.4000000953674316,
+            "z": -3.7213821411132812
+          },
+          "applied": {
+            "x": 3.7089918809851685e-12,
+            "y": -0.0000999480253085494,
+            "z": 3.933734848277082e-12
+          },
+          "remaining": {
+            "x": 3.752346003360607e-11,
+            "y": -0.001011163112707436,
+            "z": 3.979715862412192e-11
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-zero-reset-mezzanine-ground-recovery",
+      "state": {
+        "room": "chamber-43",
+        "number": 43,
+        "mission": "If the beam is blocked, the archive lift does not move. Clear it and use the lift.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            -10.797917366027832,
+            0.8650996685028076,
+            1.0918439626693726
+          ],
+          "velocity": [
+            0.009586993543354629,
+            0,
+            0.4191906339614511
+          ],
+          "yaw": -3.118622008014538,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "negative-source",
+            "position": [
+              -5,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "negative-return",
+            "position": [
+              -13.959999999999999,
+              3.95,
+              -5
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "negative-cube",
+            "position": [
+              -8.793299674987793,
+              0.5498855113983154,
+              -1.7149115800857544
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -9.001562375487993e-7,
+              2.883849106183334e-7,
+              5.621486707241274e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "negative-service",
+            "position": [
+              -4,
+              2.54,
+              -7
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "negative-service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -14.12,
+              1.5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "negative-archive-access",
+            "kind": "shutter",
+            "label": "ARCHIVE ACCESS",
+            "position": [
+              0,
+              5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "negative-archive-lift",
+            "kind": "lift",
+            "label": "ARCHIVE LIFT",
+            "position": [
+              8,
+              -0.2,
+              -6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "BASE",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "negative-archive-dock",
+            "kind": "shutter",
+            "label": "ARCHIVE DOCK",
+            "position": [
+              8,
+              8.1,
+              -8.72
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "negative-archive-door",
+            "kind": "shutter",
+            "label": "ARCHIVE EXIT",
+            "position": [
+              8,
+              11.4,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "negative-source",
+            "position": [
+              -5,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "negative-return",
+            "position": [
+              -13.985,
+              4.15,
+              -5
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 4,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -16.49,
+              1.5,
+              7
+            ],
+            "size": [
+              3.7799999999999994,
+              3,
+              2.7600000000000007
+            ]
+          },
+          {
+            "id": "archive-exit",
+            "label": "EXIT",
+            "position": [
+              8,
+              8.1,
+              -16.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.7799999999999994
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "negative-emitter": {
+            "segments": [
+              {
+                "from": [
+                  -11,
+                  3.05,
+                  -7
+                ],
+                "to": [
+                  2.6800000000000175,
+                  3.05,
+                  -7
+                ]
+              }
+            ],
+            "stop": "receiver",
+            "receiver": "archive-light",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "negative-service": false,
+          "closed:negative-service-door": true,
+          "clear:negative-service-door": false,
+          "safety:negative-service-door": false,
+          "door-safety": false,
+          "moving:negative-service-door": false,
+          "closed:negative-archive-access": false,
+          "clear:negative-archive-access": true,
+          "safety:negative-archive-access": false,
+          "moving:negative-archive-access": false,
+          "moving:negative-archive-lift": false,
+          "at:negative-archive-lift:BASE": true,
+          "at:negative-archive-lift:ARCHIVE": false,
+          "closed:negative-archive-dock": true,
+          "clear:negative-archive-dock": false,
+          "safety:negative-archive-dock": false,
+          "moving:negative-archive-dock": false,
+          "closed:negative-archive-door": false,
+          "clear:negative-archive-door": true,
+          "safety:negative-archive-door": false,
+          "moving:negative-archive-door": false,
+          "archive-light": true
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "footstep",
+            "time": 1325
+          },
+          {
+            "type": "footstep",
+            "time": 1750
+          },
+          {
+            "type": "footstep",
+            "time": 2175
+          },
+          {
+            "type": "pickup",
+            "time": 2392,
+            "body": "negative-cube"
+          },
+          {
+            "type": "receiver-power",
+            "time": 2525,
+            "id": "archive-light"
+          },
+          {
+            "type": "shutter-open",
+            "time": 2525,
+            "id": "negative-archive-access"
+          },
+          {
+            "type": "shutter-open",
+            "time": 2525,
+            "id": "negative-archive-door"
+          },
+          {
+            "type": "footstep",
+            "time": 2600
+          },
+          {
+            "type": "footstep",
+            "time": 3025
+          },
+          {
+            "type": "drop",
+            "time": 3825,
+            "body": "negative-cube"
+          },
+          {
+            "type": "contact",
+            "time": 4383,
+            "body": "negative-cube",
+            "speed": 8.642348959520902
+          },
+          {
+            "type": "footstep",
+            "time": 4400
+          },
+          {
+            "type": "footstep",
+            "time": 4825
+          },
+          {
+            "type": "footstep",
+            "time": 5250
+          },
+          {
+            "type": "land",
+            "time": 5783
+          },
+          {
+            "type": "footstep",
+            "time": 5783
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "negative-ground",
+          "normal": {
+            "x": 0,
+            "y": 1,
+            "z": 0
+          },
+          "witness": {
+            "x": -10.79679012298584,
+            "y": -3.5762786865234375e-7,
+            "z": 1.0881943702697754
+          },
+          "applied": {
+            "x": 0.000006135121566330781,
+            "y": -0.00008532562060281634,
+            "z": 0.00026825774693861604
+          },
+          "remaining": {
+            "x": 0.0000737564914743416,
+            "y": -0.0010257854592055082,
+            "z": 0.0032249975483864546
+          }
+        }
+      ]
+    },
+    {
+      "label": "actual-archive-lift-boarding",
+      "state": {
+        "room": "chamber-43",
+        "number": 43,
+        "mission": "If the beam is blocked, the archive lift does not move. Clear it and use the lift.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            7.997647285461426,
+            0.8651000261306763,
+            -5.623542785644531
+          ],
+          "velocity": [
+            -0.007983081048085205,
+            0,
+            -0.41922270842367454
+          ],
+          "yaw": 0.01904369569651332,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "negative-source",
+            "position": [
+              -5,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "negative-return",
+            "position": [
+              -13.959999999999999,
+              3.95,
+              -5
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "negative-cube",
+            "position": [
+              -8.793299674987793,
+              0.5498855113983154,
+              -1.7149115800857544
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -9.001562375487993e-7,
+              2.883849106183334e-7,
+              5.621486707241274e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "negative-service",
+            "position": [
+              -4,
+              2.54,
+              -7
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "negative-service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -14.12,
+              1.5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "negative-archive-access",
+            "kind": "shutter",
+            "label": "ARCHIVE ACCESS",
+            "position": [
+              0,
+              5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "negative-archive-lift",
+            "kind": "lift",
+            "label": "ARCHIVE LIFT",
+            "position": [
+              8,
+              -0.2,
+              -6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 0,
+            "choice": "BASE",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "negative-archive-dock",
+            "kind": "shutter",
+            "label": "ARCHIVE DOCK",
+            "position": [
+              8,
+              8.1,
+              -8.72
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "negative-archive-door",
+            "kind": "shutter",
+            "label": "ARCHIVE EXIT",
+            "position": [
+              8,
+              11.4,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "negative-source",
+            "position": [
+              -5,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "negative-return",
+            "position": [
+              -13.985,
+              4.15,
+              -5
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 4,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -16.49,
+              1.5,
+              7
+            ],
+            "size": [
+              3.7799999999999994,
+              3,
+              2.7600000000000007
+            ]
+          },
+          {
+            "id": "archive-exit",
+            "label": "EXIT",
+            "position": [
+              8,
+              8.1,
+              -16.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.7799999999999994
+            ]
+          }
+        ],
+        "result": null,
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "negative-emitter": {
+            "segments": [
+              {
+                "from": [
+                  -11,
+                  3.05,
+                  -7
+                ],
+                "to": [
+                  2.6800000000000175,
+                  3.05,
+                  -7
+                ]
+              }
+            ],
+            "stop": "receiver",
+            "receiver": "archive-light",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "negative-service": false,
+          "closed:negative-service-door": true,
+          "clear:negative-service-door": false,
+          "safety:negative-service-door": false,
+          "door-safety": false,
+          "moving:negative-service-door": false,
+          "closed:negative-archive-access": false,
+          "clear:negative-archive-access": true,
+          "safety:negative-archive-access": false,
+          "moving:negative-archive-access": false,
+          "moving:negative-archive-lift": false,
+          "at:negative-archive-lift:BASE": true,
+          "at:negative-archive-lift:ARCHIVE": false,
+          "closed:negative-archive-dock": true,
+          "clear:negative-archive-dock": false,
+          "safety:negative-archive-dock": false,
+          "moving:negative-archive-dock": false,
+          "closed:negative-archive-door": false,
+          "clear:negative-archive-door": true,
+          "safety:negative-archive-door": false,
+          "moving:negative-archive-door": false,
+          "archive-light": true
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "lift-motor",
+            "time": 8525,
+            "id": "negative-archive-lift"
+          },
+          {
+            "type": "footstep",
+            "time": 8758
+          },
+          {
+            "type": "footstep",
+            "time": 9183
+          },
+          {
+            "type": "footstep",
+            "time": 9692
+          },
+          {
+            "type": "footstep",
+            "time": 10117
+          },
+          {
+            "type": "footstep",
+            "time": 10542
+          },
+          {
+            "type": "footstep",
+            "time": 10967
+          },
+          {
+            "type": "footstep",
+            "time": 11392
+          },
+          {
+            "type": "footstep",
+            "time": 11817
+          },
+          {
+            "type": "lift-arrival",
+            "time": 14025,
+            "id": "negative-archive-lift",
+            "value": "ARCHIVE"
+          },
+          {
+            "type": "shutter-open",
+            "time": 14033,
+            "id": "negative-archive-dock"
+          },
+          {
+            "type": "lift-motor",
+            "time": 20025,
+            "id": "negative-archive-lift"
+          },
+          {
+            "type": "shutter-close",
+            "time": 20033,
+            "id": "negative-archive-dock"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 25525,
+            "id": "negative-archive-lift",
+            "value": "base"
+          },
+          {
+            "type": "footstep",
+            "time": 25533
+          },
+          {
+            "type": "footstep",
+            "time": 25958
+          }
+        ]
+      },
+      "contacts": []
+    },
+    {
+      "label": "actual-requested-physical-completion",
+      "state": {
+        "room": "chamber-43",
+        "number": 43,
+        "mission": "If the beam is blocked, the archive lift does not move. Clear it and use the lift.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            8.000044822692871,
+            7.464862823486328,
+            -14.629768371582031
+          ],
+          "velocity": [
+            -0.0000919230369896318,
+            0,
+            -4.799999986492858
+          ],
+          "yaw": 0.0000189925181326036,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "negative-source",
+            "position": [
+              -5,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "negative-return",
+            "position": [
+              -13.959999999999999,
+              3.95,
+              -5
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "negative-cube",
+            "position": [
+              -8.793299674987793,
+              0.5498855113983154,
+              -1.7149115800857544
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -9.001562375487993e-7,
+              2.883849106183334e-7,
+              5.621486707241274e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "negative-service",
+            "position": [
+              -4,
+              2.54,
+              -7
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "negative-service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -14.12,
+              1.5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "negative-archive-access",
+            "kind": "shutter",
+            "label": "ARCHIVE ACCESS",
+            "position": [
+              0,
+              5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "negative-archive-lift",
+            "kind": "lift",
+            "label": "ARCHIVE LIFT",
+            "position": [
+              8,
+              6.4,
+              -6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": "BASE",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "negative-archive-dock",
+            "kind": "shutter",
+            "label": "ARCHIVE DOCK",
+            "position": [
+              8,
+              11.4,
+              -8.72
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "negative-archive-door",
+            "kind": "shutter",
+            "label": "ARCHIVE EXIT",
+            "position": [
+              8,
+              11.4,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "negative-source",
+            "position": [
+              -5,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "negative-return",
+            "position": [
+              -13.985,
+              4.15,
+              -5
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 4,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -16.49,
+              1.5,
+              7
+            ],
+            "size": [
+              3.7799999999999994,
+              3,
+              2.7600000000000007
+            ]
+          },
+          {
+            "id": "archive-exit",
+            "label": "EXIT",
+            "position": [
+              8,
+              8.1,
+              -16.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.7799999999999994
+            ]
+          }
+        ],
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "archive-exit",
+          "reason": "",
+          "events": [
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "portalA",
+              "time": 300,
+              "surface": "negative-source",
+              "point": [
+                -5,
+                1.55,
+                13.959999999999999
+              ]
+            },
+            {
+              "type": "portalB",
+              "time": 308,
+              "surface": "negative-return",
+              "point": [
+                -13.959999999999999,
+                3.95,
+                -5
+              ]
+            },
+            {
+              "type": "footstep",
+              "time": 425
+            },
+            {
+              "type": "footstep",
+              "time": 850
+            },
+            {
+              "type": "enter",
+              "time": 1133,
+              "body": "player",
+              "from": 0,
+              "to": 1,
+              "fromSurface": "negative-source",
+              "toSurface": "negative-return",
+              "speed": 4.785167207497633,
+              "exitSpeed": 4.785167207497633,
+              "held": null
+            },
+            {
+              "type": "land",
+              "time": 1142
+            },
+            {
+              "type": "footstep",
+              "time": 1325
+            },
+            {
+              "type": "footstep",
+              "time": 1750
+            },
+            {
+              "type": "footstep",
+              "time": 2175
+            },
+            {
+              "type": "pickup",
+              "time": 2392,
+              "body": "negative-cube"
+            },
+            {
+              "type": "receiver-power",
+              "time": 2525,
+              "id": "archive-light"
+            },
+            {
+              "type": "shutter-open",
+              "time": 2525,
+              "id": "negative-archive-access"
+            },
+            {
+              "type": "shutter-open",
+              "time": 2525,
+              "id": "negative-archive-door"
+            },
+            {
+              "type": "footstep",
+              "time": 2600
+            },
+            {
+              "type": "footstep",
+              "time": 3025
+            },
+            {
+              "type": "drop",
+              "time": 3825,
+              "body": "negative-cube"
+            },
+            {
+              "type": "contact",
+              "time": 4383,
+              "body": "negative-cube",
+              "speed": 8.642348959520902
+            },
+            {
+              "type": "footstep",
+              "time": 4400
+            },
+            {
+              "type": "footstep",
+              "time": 4825
+            },
+            {
+              "type": "footstep",
+              "time": 5250
+            },
+            {
+              "type": "land",
+              "time": 5783
+            },
+            {
+              "type": "footstep",
+              "time": 5783
+            },
+            {
+              "type": "footstep",
+              "time": 6208
+            },
+            {
+              "type": "footstep",
+              "time": 6633
+            },
+            {
+              "type": "footstep",
+              "time": 7058
+            },
+            {
+              "type": "footstep",
+              "time": 7483
+            },
+            {
+              "type": "footstep",
+              "time": 7908
+            },
+            {
+              "type": "footstep",
+              "time": 8333
+            },
+            {
+              "type": "lift-motor",
+              "time": 8525,
+              "id": "negative-archive-lift"
+            },
+            {
+              "type": "footstep",
+              "time": 8758
+            },
+            {
+              "type": "footstep",
+              "time": 9183
+            },
+            {
+              "type": "footstep",
+              "time": 9692
+            },
+            {
+              "type": "footstep",
+              "time": 10117
+            },
+            {
+              "type": "footstep",
+              "time": 10542
+            },
+            {
+              "type": "footstep",
+              "time": 10967
+            },
+            {
+              "type": "footstep",
+              "time": 11392
+            },
+            {
+              "type": "footstep",
+              "time": 11817
+            },
+            {
+              "type": "lift-arrival",
+              "time": 14025,
+              "id": "negative-archive-lift",
+              "value": "ARCHIVE"
+            },
+            {
+              "type": "shutter-open",
+              "time": 14033,
+              "id": "negative-archive-dock"
+            },
+            {
+              "type": "lift-motor",
+              "time": 20025,
+              "id": "negative-archive-lift"
+            },
+            {
+              "type": "shutter-close",
+              "time": 20033,
+              "id": "negative-archive-dock"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 25525,
+              "id": "negative-archive-lift",
+              "value": "base"
+            },
+            {
+              "type": "footstep",
+              "time": 25533
+            },
+            {
+              "type": "footstep",
+              "time": 25958
+            },
+            {
+              "type": "lift-motor",
+              "time": 31525,
+              "id": "negative-archive-lift"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 37025,
+              "id": "negative-archive-lift",
+              "value": "ARCHIVE"
+            },
+            {
+              "type": "shutter-open",
+              "time": 37033,
+              "id": "negative-archive-dock"
+            },
+            {
+              "type": "footstep",
+              "time": 37833
+            },
+            {
+              "type": "footstep",
+              "time": 38258
+            },
+            {
+              "type": "footstep",
+              "time": 38683
+            },
+            {
+              "type": "footstep",
+              "time": 39108
+            },
+            {
+              "type": "footstep",
+              "time": 39533
+            }
+          ],
+          "mechanisms": [
+            "portals",
+            "cargo",
+            "beams",
+            "shutters",
+            "lifts"
+          ]
+        },
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "negative-emitter": {
+            "segments": [
+              {
+                "from": [
+                  -11,
+                  3.05,
+                  -7
+                ],
+                "to": [
+                  2.6800000000000175,
+                  3.05,
+                  -7
+                ]
+              }
+            ],
+            "stop": "receiver",
+            "receiver": "archive-light",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "negative-service": false,
+          "closed:negative-service-door": true,
+          "clear:negative-service-door": false,
+          "safety:negative-service-door": false,
+          "door-safety": false,
+          "moving:negative-service-door": false,
+          "closed:negative-archive-access": false,
+          "clear:negative-archive-access": true,
+          "safety:negative-archive-access": false,
+          "moving:negative-archive-access": false,
+          "moving:negative-archive-lift": false,
+          "at:negative-archive-lift:BASE": false,
+          "at:negative-archive-lift:ARCHIVE": true,
+          "closed:negative-archive-dock": false,
+          "clear:negative-archive-dock": true,
+          "safety:negative-archive-dock": false,
+          "moving:negative-archive-dock": false,
+          "closed:negative-archive-door": false,
+          "clear:negative-archive-door": true,
+          "safety:negative-archive-door": false,
+          "moving:negative-archive-door": false,
+          "archive-light": true
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "lift-arrival",
+            "time": 14025,
+            "id": "negative-archive-lift",
+            "value": "ARCHIVE"
+          },
+          {
+            "type": "shutter-open",
+            "time": 14033,
+            "id": "negative-archive-dock"
+          },
+          {
+            "type": "lift-motor",
+            "time": 20025,
+            "id": "negative-archive-lift"
+          },
+          {
+            "type": "shutter-close",
+            "time": 20033,
+            "id": "negative-archive-dock"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 25525,
+            "id": "negative-archive-lift",
+            "value": "base"
+          },
+          {
+            "type": "footstep",
+            "time": 25533
+          },
+          {
+            "type": "footstep",
+            "time": 25958
+          },
+          {
+            "type": "lift-motor",
+            "time": 31525,
+            "id": "negative-archive-lift"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 37025,
+            "id": "negative-archive-lift",
+            "value": "ARCHIVE"
+          },
+          {
+            "type": "shutter-open",
+            "time": 37033,
+            "id": "negative-archive-dock"
+          },
+          {
+            "type": "footstep",
+            "time": 37833
+          },
+          {
+            "type": "footstep",
+            "time": 38258
+          },
+          {
+            "type": "footstep",
+            "time": 38683
+          },
+          {
+            "type": "footstep",
+            "time": 39108
+          },
+          {
+            "type": "footstep",
+            "time": 39533
+          },
+          {
+            "type": "complete",
+            "time": 39917,
+            "chamber": 43
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "negative-archive-vestibule",
+          "normal": {
+            "x": 0,
+            "y": 0.9999998807907104,
+            "z": -0.0003340348193887621
+          },
+          "witness": {
+            "x": 7.9962615966796875,
+            "y": 6.59998893737793,
+            "z": -14.60422420501709
+          },
+          "applied": {
+            "x": -1.867752956741242e-7,
+            "y": -0.0002709154796320945,
+            "z": -0.00975295715034008
+          },
+          "remaining": {
+            "x": -5.792500132884015e-7,
+            "y": -0.0008401956874877214,
+            "z": -0.030247041955590248
+          }
+        }
+      ]
+    },
+    {
+      "label": "final",
+      "state": {
+        "room": "chamber-43",
+        "number": 43,
+        "mission": "If the beam is blocked, the archive lift does not move. Clear it and use the lift.",
+        "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+        "player": {
+          "position": [
+            8.000044822692871,
+            7.464862823486328,
+            -14.629768371582031
+          ],
+          "velocity": [
+            -0.0000919230369896318,
+            0,
+            -4.799999986492858
+          ],
+          "yaw": 0.0000189925181326036,
+          "pitch": 0,
+          "grounded": true,
+          "crossings": 1
+        },
+        "portals": [
+          {
+            "surface": "negative-source",
+            "position": [
+              -5,
+              1.55,
+              13.959999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ]
+          },
+          {
+            "surface": "negative-return",
+            "position": [
+              -13.959999999999999,
+              3.95,
+              -5
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "crates": [
+          {
+            "id": "negative-cube",
+            "position": [
+              -8.793299674987793,
+              0.5498855113983154,
+              -1.7149115800857544
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              -9.001562375487993e-7,
+              2.883849106183334e-7,
+              5.621486707241274e-7,
+              1
+            ],
+            "angularVelocity": [
+              0,
+              0,
+              0
+            ],
+            "held": false,
+            "crossings": 0
+          }
+        ],
+        "pads": [
+          {
+            "id": "negative-service",
+            "position": [
+              -4,
+              2.54,
+              -7
+            ],
+            "pressed": false,
+            "crate": null
+          }
+        ],
+        "devices": [
+          {
+            "id": "negative-service-door",
+            "kind": "shutter",
+            "label": "SERVICE",
+            "position": [
+              -14.12,
+              1.5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": false,
+            "progress": 0,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "negative-archive-access",
+            "kind": "shutter",
+            "label": "ARCHIVE ACCESS",
+            "position": [
+              0,
+              5,
+              7
+            ],
+            "size": [
+              0.3,
+              3,
+              2.8
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "negative-archive-lift",
+            "kind": "lift",
+            "label": "ARCHIVE LIFT",
+            "position": [
+              8,
+              6.4,
+              -6
+            ],
+            "size": [
+              4,
+              0.4,
+              4
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": "BASE",
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "negative-archive-dock",
+            "kind": "shutter",
+            "label": "ARCHIVE DOCK",
+            "position": [
+              8,
+              11.4,
+              -8.72
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          },
+          {
+            "id": "negative-archive-door",
+            "kind": "shutter",
+            "label": "ARCHIVE EXIT",
+            "position": [
+              8,
+              11.4,
+              -14.12
+            ],
+            "size": [
+              3.2,
+              3,
+              0.3
+            ],
+            "active": true,
+            "progress": 1,
+            "choice": 0,
+            "angle": 0,
+            "powered": null,
+            "blocked": false
+          }
+        ],
+        "panels": [
+          {
+            "id": "negative-source",
+            "position": [
+              -5,
+              1.75,
+              13.985
+            ],
+            "normal": [
+              0,
+              0,
+              -1
+            ],
+            "width": 5,
+            "height": 3.5
+          },
+          {
+            "id": "negative-return",
+            "position": [
+              -13.985,
+              4.15,
+              -5
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "width": 4,
+            "height": 3.5
+          }
+        ],
+        "exits": [
+          {
+            "id": "service-exit",
+            "label": "EXIT",
+            "position": [
+              -16.49,
+              1.5,
+              7
+            ],
+            "size": [
+              3.7799999999999994,
+              3,
+              2.7600000000000007
+            ]
+          },
+          {
+            "id": "archive-exit",
+            "label": "EXIT",
+            "position": [
+              8,
+              8.1,
+              -16.49
+            ],
+            "size": [
+              3.16,
+              3,
+              3.7799999999999994
+            ]
+          }
+        ],
+        "result": {
+          "goalMatched": true,
+          "physicalComplete": true,
+          "exit": "archive-exit",
+          "reason": "",
+          "events": [
+            {
+              "type": "land",
+              "time": 8
+            },
+            {
+              "type": "portalA",
+              "time": 300,
+              "surface": "negative-source",
+              "point": [
+                -5,
+                1.55,
+                13.959999999999999
+              ]
+            },
+            {
+              "type": "portalB",
+              "time": 308,
+              "surface": "negative-return",
+              "point": [
+                -13.959999999999999,
+                3.95,
+                -5
+              ]
+            },
+            {
+              "type": "footstep",
+              "time": 425
+            },
+            {
+              "type": "footstep",
+              "time": 850
+            },
+            {
+              "type": "enter",
+              "time": 1133,
+              "body": "player",
+              "from": 0,
+              "to": 1,
+              "fromSurface": "negative-source",
+              "toSurface": "negative-return",
+              "speed": 4.785167207497633,
+              "exitSpeed": 4.785167207497633,
+              "held": null
+            },
+            {
+              "type": "land",
+              "time": 1142
+            },
+            {
+              "type": "footstep",
+              "time": 1325
+            },
+            {
+              "type": "footstep",
+              "time": 1750
+            },
+            {
+              "type": "footstep",
+              "time": 2175
+            },
+            {
+              "type": "pickup",
+              "time": 2392,
+              "body": "negative-cube"
+            },
+            {
+              "type": "receiver-power",
+              "time": 2525,
+              "id": "archive-light"
+            },
+            {
+              "type": "shutter-open",
+              "time": 2525,
+              "id": "negative-archive-access"
+            },
+            {
+              "type": "shutter-open",
+              "time": 2525,
+              "id": "negative-archive-door"
+            },
+            {
+              "type": "footstep",
+              "time": 2600
+            },
+            {
+              "type": "footstep",
+              "time": 3025
+            },
+            {
+              "type": "drop",
+              "time": 3825,
+              "body": "negative-cube"
+            },
+            {
+              "type": "contact",
+              "time": 4383,
+              "body": "negative-cube",
+              "speed": 8.642348959520902
+            },
+            {
+              "type": "footstep",
+              "time": 4400
+            },
+            {
+              "type": "footstep",
+              "time": 4825
+            },
+            {
+              "type": "footstep",
+              "time": 5250
+            },
+            {
+              "type": "land",
+              "time": 5783
+            },
+            {
+              "type": "footstep",
+              "time": 5783
+            },
+            {
+              "type": "footstep",
+              "time": 6208
+            },
+            {
+              "type": "footstep",
+              "time": 6633
+            },
+            {
+              "type": "footstep",
+              "time": 7058
+            },
+            {
+              "type": "footstep",
+              "time": 7483
+            },
+            {
+              "type": "footstep",
+              "time": 7908
+            },
+            {
+              "type": "footstep",
+              "time": 8333
+            },
+            {
+              "type": "lift-motor",
+              "time": 8525,
+              "id": "negative-archive-lift"
+            },
+            {
+              "type": "footstep",
+              "time": 8758
+            },
+            {
+              "type": "footstep",
+              "time": 9183
+            },
+            {
+              "type": "footstep",
+              "time": 9692
+            },
+            {
+              "type": "footstep",
+              "time": 10117
+            },
+            {
+              "type": "footstep",
+              "time": 10542
+            },
+            {
+              "type": "footstep",
+              "time": 10967
+            },
+            {
+              "type": "footstep",
+              "time": 11392
+            },
+            {
+              "type": "footstep",
+              "time": 11817
+            },
+            {
+              "type": "lift-arrival",
+              "time": 14025,
+              "id": "negative-archive-lift",
+              "value": "ARCHIVE"
+            },
+            {
+              "type": "shutter-open",
+              "time": 14033,
+              "id": "negative-archive-dock"
+            },
+            {
+              "type": "lift-motor",
+              "time": 20025,
+              "id": "negative-archive-lift"
+            },
+            {
+              "type": "shutter-close",
+              "time": 20033,
+              "id": "negative-archive-dock"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 25525,
+              "id": "negative-archive-lift",
+              "value": "base"
+            },
+            {
+              "type": "footstep",
+              "time": 25533
+            },
+            {
+              "type": "footstep",
+              "time": 25958
+            },
+            {
+              "type": "lift-motor",
+              "time": 31525,
+              "id": "negative-archive-lift"
+            },
+            {
+              "type": "lift-arrival",
+              "time": 37025,
+              "id": "negative-archive-lift",
+              "value": "ARCHIVE"
+            },
+            {
+              "type": "shutter-open",
+              "time": 37033,
+              "id": "negative-archive-dock"
+            },
+            {
+              "type": "footstep",
+              "time": 37833
+            },
+            {
+              "type": "footstep",
+              "time": 38258
+            },
+            {
+              "type": "footstep",
+              "time": 38683
+            },
+            {
+              "type": "footstep",
+              "time": 39108
+            },
+            {
+              "type": "footstep",
+              "time": 39533
+            }
+          ],
+          "mechanisms": [
+            "portals",
+            "cargo",
+            "beams",
+            "shutters",
+            "lifts"
+          ]
+        },
+        "held": null,
+        "holdSpaceTransform": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "launchUsed": false,
+        "respawns": 0,
+        "beams": {
+          "negative-emitter": {
+            "segments": [
+              {
+                "from": [
+                  -11,
+                  3.05,
+                  -7
+                ],
+                "to": [
+                  2.6800000000000175,
+                  3.05,
+                  -7
+                ]
+              }
+            ],
+            "stop": "receiver",
+            "receiver": "archive-light",
+            "hops": 0
+          }
+        },
+        "signals": {
+          "negative-service": false,
+          "closed:negative-service-door": true,
+          "clear:negative-service-door": false,
+          "safety:negative-service-door": false,
+          "door-safety": false,
+          "moving:negative-service-door": false,
+          "closed:negative-archive-access": false,
+          "clear:negative-archive-access": true,
+          "safety:negative-archive-access": false,
+          "moving:negative-archive-access": false,
+          "moving:negative-archive-lift": false,
+          "at:negative-archive-lift:BASE": false,
+          "at:negative-archive-lift:ARCHIVE": true,
+          "closed:negative-archive-dock": false,
+          "clear:negative-archive-dock": true,
+          "safety:negative-archive-dock": false,
+          "moving:negative-archive-dock": false,
+          "closed:negative-archive-door": false,
+          "clear:negative-archive-door": true,
+          "safety:negative-archive-door": false,
+          "moving:negative-archive-door": false,
+          "archive-light": true
+        },
+        "journal": null,
+        "events": [
+          {
+            "type": "lift-arrival",
+            "time": 14025,
+            "id": "negative-archive-lift",
+            "value": "ARCHIVE"
+          },
+          {
+            "type": "shutter-open",
+            "time": 14033,
+            "id": "negative-archive-dock"
+          },
+          {
+            "type": "lift-motor",
+            "time": 20025,
+            "id": "negative-archive-lift"
+          },
+          {
+            "type": "shutter-close",
+            "time": 20033,
+            "id": "negative-archive-dock"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 25525,
+            "id": "negative-archive-lift",
+            "value": "base"
+          },
+          {
+            "type": "footstep",
+            "time": 25533
+          },
+          {
+            "type": "footstep",
+            "time": 25958
+          },
+          {
+            "type": "lift-motor",
+            "time": 31525,
+            "id": "negative-archive-lift"
+          },
+          {
+            "type": "lift-arrival",
+            "time": 37025,
+            "id": "negative-archive-lift",
+            "value": "ARCHIVE"
+          },
+          {
+            "type": "shutter-open",
+            "time": 37033,
+            "id": "negative-archive-dock"
+          },
+          {
+            "type": "footstep",
+            "time": 37833
+          },
+          {
+            "type": "footstep",
+            "time": 38258
+          },
+          {
+            "type": "footstep",
+            "time": 38683
+          },
+          {
+            "type": "footstep",
+            "time": 39108
+          },
+          {
+            "type": "footstep",
+            "time": 39533
+          },
+          {
+            "type": "complete",
+            "time": 39917,
+            "chamber": 43
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "id": "negative-archive-vestibule",
+          "normal": {
+            "x": 0,
+            "y": 0.9999998807907104,
+            "z": -0.0003340348193887621
+          },
+          "witness": {
+            "x": 7.9962615966796875,
+            "y": 6.59998893737793,
+            "z": -14.60422420501709
+          },
+          "applied": {
+            "x": -1.867752956741242e-7,
+            "y": -0.0002709154796320945,
+            "z": -0.00975295715034008
+          },
+          "remaining": {
+            "x": -5.792500132884015e-7,
+            "y": -0.0008401956874877214,
+            "z": -0.030247041955590248
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -122,6 +122,14 @@ export class ChamberScene extends RiftScene {
   b.putImageData(color,0,0);c.putImageData(vectors,0,0);const map=this.texture(new T.CanvasTexture(base)),normalMap=this.texture(new T.CanvasTexture(normal));map.colorSpace=T.SRGBColorSpace;for(const texture of[map,normalMap]){texture.wrapS=texture.wrapT=T.RepeatWrapping;texture.anisotropy=Math.min(8,this.renderer.capabilities.getMaxAnisotropy());}return{map,normalMap};
  }
  private floorGeometry(size:T.Vector3,pos:T.Vector3){const g=this.geo(new T.BoxGeometry(size.x,size.y,size.z)),a=g.getAttribute('position'),uv=g.getAttribute('uv'),normal=g.getAttribute('normal');for(let i=0;i<a.count;i++){if(Math.abs(normal.getY(i))>.5)uv.setXY(i,(a.getX(i)+pos.x)/2,(a.getZ(i)+pos.z)/2);else uv.setXY(i,(a.getX(i)+pos.x)/2,(a.getY(i)+pos.y)/2);}return g;}
+ private fittedBlueprintMark(text:string,width:number,height:number){
+  // Blueprint prose is often much wider than it is tall. Fit the exact inherited label canvas,
+  // leaving all other C1/device label() callers and its line placement unchanged.
+  const measure=document.createElement('canvas');measure.width=1024;measure.height=Math.round(1024*height/width);const context=measure.getContext('2d')!,lines=text.split('\n');
+  let font=Math.max(1,Math.min(220,Math.floor(measure.height*.72/Math.max(1,lines.length))));context.font=`bold ${font}px Arial`;
+  const widest=Math.max(1,...lines.map(line=>context.measureText(line).width));font=Math.max(1,Math.floor(font*Math.min(1,920/widest)));
+  return this.label(text,width,height,'#20292e','#c7d3d6',font);
+ }
  private wallCladding(min:T.Vector3,max:T.Vector3,axis:'x'|'z',sign:number,solidID=''){
   const a=axis==='x'?'z':'x',u1=min[a],u2=max[a],y1=min.y,y2=max.y,plane=sign>0?max[axis]:min[axis];
   const freight=this.core.number===25&&axis==='z'&&['hatch-front-west','hatch-front-east','hatch-header'].includes(solidID);
@@ -166,6 +174,38 @@ export class ChamberScene extends RiftScene {
   const materials=[this.finishes.freightService,this.finishes.floor,this.finishes.aluminum];
   for(let i=0;i<pieces.length;i++){const geometry=mergeGeometries(pieces[i],false);if(!geometry)throw Error('Freight stair finish merge failed');const mesh=this.mesh(this.geo(geometry),materials[i]);mesh.name='freight-stairs-'+['bodies','treads','nosings'][i];mesh.userData.sourceSolids=ids;mesh.userData.finishOnly=true;for(const part of pieces[i])part.dispose();}
  }
+ private ceilingFinishZones(){
+  const ids=this.core.number===46?['twin-shaft-ceiling']:this.core.number===48?['question-roof']:this.core.number===50?['vault-roof','transfer-roof']:[],zones:{id:string;x1:number;x2:number;z1:number;z2:number;y:number}[]=[];
+  type Zone=typeof zones[number];
+  const subtract=(parts:Zone[],cut:{x1:number;x2:number;z1:number;z2:number})=>parts.flatMap(r=>{const x1=Math.max(r.x1,cut.x1),x2=Math.min(r.x2,cut.x2),z1=Math.max(r.z1,cut.z1),z2=Math.min(r.z2,cut.z2);if(x2<=x1||z2<=z1)return[r];return[{...r,x2:x1},{...r,x1:x2},{...r,x1,x2,z2:z1},{...r,x1,x2,z1:z2}].filter(q=>q.x2-q.x1>.001&&q.z2-q.z1>.001);});
+  for(const id of ids){const roof=this.core.solids.find(s=>s.id===id);if(!roof)continue;let parts:Zone[]=[{id,x1:roof.min.x+.45,x2:roof.max.x-.45,z1:roof.min.z+.45,z2:roof.max.z-.45,y:roof.min.y}];
+   // Hardware stays on actual slab area, clear of every full-height opaque/glazed partition.
+   for(const solid of this.core.solids){if(solid===roof||solid.max.y<roof.min.y-.01||solid.min.y>roof.min.y-.10)continue;parts=subtract(parts,{x1:solid.min.x-.06,x2:solid.max.x+.06,z1:solid.min.z-.06,z2:solid.max.z+.06});}
+   for(const prior of zones)if(Math.abs(prior.y-roof.min.y)<.01)parts=subtract(parts,prior);
+   zones.push(...parts);
+  }
+  return zones;
+ }
+ private ceilingLuminaireMounts(){
+  const specs=this.core.number===46?[[3,7,'twin-shaft-ceiling'],[1,-6,'twin-shaft-ceiling'],[18.5,-6,'twin-shaft-ceiling'],[26.5,-6,'twin-shaft-ceiling']]:this.core.number===48?[[0,11,'question-roof'],[-11,-4,'question-roof'],[2,-4,'question-roof'],[15,-4,'question-roof']]:this.core.number===50?[[1,7,'vault-roof'],[23,-6,'vault-roof'],[3.5,24,'transfer-roof'],[8.5,36,'transfer-roof']]:[],zones=this.ceilingFinishZones();
+  const mounts:{x:number;y:number;z:number;roof:string}[]=[];
+  for(const[rawX,rawZ,rawID]of specs){const x=rawX as number,z=rawZ as number,id=rawID as string,roof=this.core.solids.find(s=>s.id===id);if(!roof)continue;const w=3.88,d=1.18,area=w*d,covered=zones.filter(r=>r.id===id).reduce((sum,r)=>sum+Math.max(0,Math.min(r.x2,x+w/2)-Math.max(r.x1,x-w/2))*Math.max(0,Math.min(r.z2,z+d/2)-Math.max(r.z1,z-d/2)),0);
+   if(covered>=area-1e-5)mounts.push({x,y:roof.min.y,z,roof:id});
+  }
+  return mounts;
+ }
+ private slabCeilingHardware(){
+  const f=this.finishes;
+  for(const r of this.ceilingFinishZones()){
+   if(r.x2-r.x1<.6||r.z2-r.z1<.6)continue;
+   for(let x=r.x1;x<r.x2-.05;x+=2)for(let z=r.z1;z<r.z2-.05;z+=4){const w=Math.min(2,r.x2-x),d=Math.min(4,r.z2-z);if(w<.6||d<.6)continue;this.staticPart([x+w/2,r.y-.08,z+d/2],[w-.04,.12,d-.06],f.graphite,undefined,true);this.staticPart([x+w/2,r.y-.16,z+d/2],[w-.23,.045,d-.28],f.panelQuiet);}
+   for(let z=r.z1+.10;z<r.z2-.08;z+=4)this.staticPart([(r.x1+r.x2)/2,r.y-.3,z],[r.x2-r.x1-.04,.24,.18],f.graphite);
+  }
+  for(const p of this.ceilingLuminaireMounts()){
+   for(const side of[-1,1])this.staticPart([p.x+side*1.33,p.y-.075,p.z],[.045,.15,.045],f.graphite);
+   this.staticPart([p.x,p.y-.26,p.z],[3.8,.22,1.1],f.aluminum,undefined,true);this.staticPart([p.x,p.y-.375,p.z],[3.66,.035,.98],f.light);
+  }
+ }
  private architecture(){
   const f=this.finishes,b=this.core.blueprint,{height,halfWidth:half,style}=this.core.level.architecture,freightSteps:{mesh:T.Mesh;min:T.Vector3;max:T.Vector3;id:string}[]=[];
   for(const s of this.core.solids){const size=s.max.clone().sub(s.min),p=s.min.clone().add(s.max).multiplyScalar(.5);
@@ -187,9 +227,9 @@ export class ChamberScene extends RiftScene {
   }
   if(freightSteps.length)this.finishFreightStairs(freightSteps);
   // Ceiling coffers have real depth and recessed perforated service lanes.
-  for(let z=-14;z<14;z+=4){for(let x=-half+1;x<half;x+=2){this.staticPart([x,height-.08,z+1],[1.96,.12,3.94],f.graphite,undefined,true);this.staticPart([x,height-.16,z+1],[1.77,.045,3.72],this.core.number>=6?f.panelQuiet:f.recess);}this.staticPart([0,height-.3,z],[half*2,.24,.18],f.graphite);}
+  if([46,48,50].includes(this.core.number))this.slabCeilingHardware();else for(let z=-14;z<14;z+=4){for(let x=-half+1;x<half;x+=2){this.staticPart([x,height-.08,z+1],[1.96,.12,3.94],f.graphite,undefined,true);this.staticPart([x,height-.16,z+1],[1.77,.045,3.72],this.core.number>=6?f.panelQuiet:f.recess);}this.staticPart([0,height-.3,z],[half*2,.24,.18],f.graphite);}
   for(const x of[-half+.12,half-.12]){if(this.core.number<=5)this.staticPart([x,height-.42,-1],[.28,.8,30],f.graphite);for(let z=-12;z<=12;z+=4){if(this.core.machines.devices.some(d=>d.spec.kind==='shutter'&&d.spec.size[0]<d.spec.size[2]&&Math.abs(d.spec.position[0]-x)<.5&&Math.abs(d.spec.position[2]-z)<d.spec.size[2]/2+.2))continue;const physical=this.core.solids.some(s=>s.id.startsWith('structural-rib-')&&Math.abs((s.min.x+s.max.x)/2-x)<.05&&Math.abs((s.min.z+s.max.z)/2-z)<.05);if(!physical&&this.core.number>5)continue;if(!physical)this.staticPart([x,height/2,z],[.22,height,.18],f.graphite);this.staticPart([x*.994,height-.86,z],[.035,.13,.7],f.light);}}
-  for(const x of[-half*.55,half*.55])for(const z of[-10,-4,3,10]){this.staticPart([x,height-.26,z],[.43,.22,3.4],f.aluminum,undefined,true);this.staticPart([x,height-.39,z],[.25,.035,3.08],f.light);}
+  if(![46,48,50].includes(this.core.number))for(const x of[-half*.55,half*.55])for(const z of[-10,-4,3,10]){this.staticPart([x,height-.26,z],[.43,.22,3.4],f.aluminum,undefined,true);this.staticPart([x,height-.39,z],[.25,.035,3.08],f.light);}
   if(this.core.number===1){
    for(const x of[-8,-4,0,4,8])this.staticPart([x,3.5,.015],[.065,7,.16],f.graphite);
    for(const y of[.08,6.93])this.staticPart([0,y,.015],[16,.12,.2],f.aluminum);
@@ -210,11 +250,11 @@ export class ChamberScene extends RiftScene {
   if(this.core.number>2)this.glassFrames();
   const entryInlay=this.core.solids.find(s=>s.id==='entry-service-inlay');
   if(this.core.number<=2||entryInlay){const plaque=this.label(String(this.core.number).padStart(2,'0'),.5,.4,'#252b30','#bbc4c6',160);plaque.position.set(entryInlay?entryInlay.max.x+.03:-half+.14,entryInlay?1.65:1.55,this.core.number===1?12.95:this.core.number===2?11:0);plaque.rotation.y=Math.PI/2;this.root.add(plaque);}
-  for(const mark of b.marks){const sign=this.label(mark.text,mark.width??1,mark.height??.22,'#20292e','#c7d3d6',220),normal=V(...(mark.normal??[0,0,1]));sign.position.set(...mark.position);
+  for(const mark of b.marks){const sign=this.fittedBlueprintMark(mark.text,mark.width??1,mark.height??.22),normal=V(...(mark.normal??[0,0,1]));sign.position.set(...mark.position);
    // Door names belong on the front of the retraction pocket; wall-plane signs were occluded by it.
    const door=this.core.machines.devices.find(d=>d.spec.kind==='shutter'&&d.spec.label===mark.text&&Math.hypot(mark.position[0]-d.spec.position[0],mark.position[2]-d.spec.position[2])<1);
    if(door){sign.position.set(...door.spec.position).addScaledVector(normal,.56);sign.position.y=door.spec.position[1]+door.spec.size[1]/2+.53;}
-   sign.quaternion.setFromRotationMatrix(poseMatrix(sign.position,normal,V(0,1,0)));this.root.add(sign);}
+   sign.quaternion.setFromRotationMatrix(poseMatrix(sign.position,normal,Math.abs(normal.y)>.9?V(0,0,-1):V(0,1,0)));this.root.add(sign);}
   for(const s of b.surfaces){const integrated=style==='ceramic'&&!s.floor,visualMaterial=integrated?this.material(new T.MeshBasicMaterial({transparent:true,opacity:0,depthWrite:false})):f.white;const face=this.mesh(this.geo(new T.PlaneGeometry(s.width,s.height)),visualMaterial);face.matrix.copy(poseMatrix(s.center.clone().addScaledVector(s.normal,integrated?.05:.008),s.normal,s.up));face.matrix.decompose(face.position,face.quaternion,face.scale);face.userData.surface=s.id;this.targets.unshift(face);
    // Full eligible wall regions are integrated surfaces, not labelled predetermined rectangles.
 
@@ -264,6 +304,18 @@ export class ChamberScene extends RiftScene {
   for(const x of[-w/2-.04,w/2+.04]){this.part(group,[x,(h+rise)/2,0],[.07,h+rise+.08,depth+.10],f.graphite,.012);this.part(group,[x,(h+rise)/2,depth/2+.045],[.02,h+rise,.02],f.aluminum,.004);}
   this.part(group,[0,h+rise/2+.06,-.01],[w+.18,rise+.12,depth+.16],f.graphite,.022);for(let y=h+.15;y<h+rise;y+=.16)this.part(group,[0,y,depth/2+.08],[w-.08,.025,.018],f.aluminum,.004);const lamp=this.material(new T.MeshStandardMaterial({color:0xc7a76f,emissive:0xffb437,emissiveIntensity:.8}));this.part(group,[0,h+.07,depth/2+.10],[Math.min(.28,w*.5),.035,.016],lamp,.004);group.traverse(o=>{if(o instanceof T.Mesh)this.targets.push(o);});return lamp;
  }
+ private supportedFloorTrace(pad:T.Vector3,door:DeviceState){
+  const floor=this.core.solids.filter(s=>s.kind==='floor'&&pad.x>=s.min.x&&pad.x<=s.max.x&&pad.z>=s.min.z&&pad.z<=s.max.z&&s.max.y<=pad.y+.01&&s.max.y>=pad.y-.3).sort((a,b)=>b.max.y-a.max.y)[0];if(!floor)return null;
+  const supportY=floor.max.y,half=.018,inset=.025,floors=this.core.solids.filter(s=>s.kind==='floor'&&Math.abs(s.max.y-supportY)<.01),points=[[pad.x,pad.z],[door.spec.position[0]+.35,pad.z],[door.spec.position[0]+.35,door.spec.position[2]]],spans:{x1:number;x2:number;z1:number;z2:number;y:number}[]=[],vertices:number[]=[],normals:number[]=[],indices:number[]=[];
+  for(let i=1;i<points.length;i++){
+   const a=points[i-1],b=points[i],alongX=Math.abs(a[0]-b[0])>.0001,axis=alongX?'x':'z',cross=alongX?'z':'x',constant=a[alongX?1:0],start=Math.min(a[alongX?0:1],b[alongX?0:1]),end=Math.max(a[alongX?0:1],b[alongX?0:1]);if(end-start<.001)continue;
+   // Require the whole paint width to have same-height static support. Catch floors and decks do not qualify.
+   const intervals=floors.filter(s=>constant-half>=s.min[cross]+.002&&constant+half<=s.max[cross]-.002).map(s=>({lo:s.min[axis],hi:s.max[axis]})).sort((a,b)=>a.lo-b.lo),merged:{lo:number;hi:number}[]=[];
+   for(const interval of intervals){const last=merged.at(-1);if(last&&interval.lo<=last.hi+.001)last.hi=Math.max(last.hi,interval.hi);else merged.push({...interval});}
+   for(const interval of merged){const lo=Math.max(start,interval.lo+inset),hi=Math.min(end,interval.hi-inset);if(hi-lo<.01)continue;const span={x1:alongX?lo:constant-half,x2:alongX?hi:constant+half,z1:alongX?constant-half:lo,z2:alongX?constant+half:hi,y:supportY+.004},base=vertices.length/3;spans.push(span);vertices.push(span.x1,span.y,span.z1,span.x1,span.y,span.z2,span.x2,span.y,span.z2,span.x2,span.y,span.z1);for(let j=0;j<4;j++)normals.push(0,1,0);indices.push(base,base+1,base+2,base,base+2,base+3);}
+  }
+  if(!spans.length)return null;const geometry=new T.BufferGeometry();geometry.setAttribute('position',new T.Float32BufferAttribute(vertices,3));geometry.setAttribute('normal',new T.Float32BufferAttribute(normals,3));geometry.setIndex(indices);return{geometry,spans,supportY};
+ }
  private mechanisms(){const f=this.finishes;this.doors=[];this.buttons=new Map();
   for(const d of this.core.machines.devices.filter(d=>d.spec.kind==='shutter')){const alongX=d.spec.size[0]<d.spec.size[2],sign=(alongX?d.spec.direction?.[0]:d.spec.direction?.[2])??1,w=Math.max(d.spec.size[0],d.spec.size[2]),h=d.spec.size[1],depth=Math.min(d.spec.size[0],d.spec.size[2]);const frameStatus=h<2?this.compactShutterSurround(d,alongX,sign):this.doorSurround(d.spec.position[0]+(alongX?sign*depth*.55:0),d.spec.position[1]-h/2,d.spec.position[2]+(alongX?0:sign*depth*.55),w,alongX?'x':'z',sign);const leaf=new T.Group();leaf.position.copy(d.position);leaf.rotation.y=alongX?sign*Math.PI/2:sign<0?Math.PI:0;this.root.add(leaf);
    this.part(leaf,[0,0,0],[w,h,depth],f.graphite,.035);
@@ -302,7 +354,7 @@ export class ChamberScene extends RiftScene {
   }
   this.circuitTraces=[];
   for(const door of this.core.machines.devices.filter(d=>d.spec.kind==='shutter'))for(const p of this.core.pads){const c=door.spec.circuit;if(![...c?.all??[],...c?.any??[]].includes(p.id))continue;
-   const material=this.material(new T.MeshStandardMaterial({color:0x68593b,emissive:0xffb541,emissiveIntensity:.18,roughness:.4,metalness:.5})),pad=p.pos,y=pad.y-.122,points=[V(pad.x,y,pad.z),V(door.spec.position[0]+.35,y,pad.z),V(door.spec.position[0]+.35,y,door.spec.position[2])],doorBase=door.spec.position[1]-door.spec.size[1]/2;if(Math.abs(doorBase-y)>.25)points.push(V(door.spec.position[0]+.35,doorBase+.018,door.spec.position[2]));const line=new T.CurvePath<T.Vector3>();for(let i=1;i<points.length;i++)line.add(new T.LineCurve3(points[i-1],points[i]));this.mesh(this.geo(new T.TubeGeometry(line,32,.018,6,false)),material);this.circuitTraces.push({material,pad:p.id});
+   const material=this.material(new T.MeshStandardMaterial({color:0x68593b,emissive:0xffb541,emissiveIntensity:.18,roughness:.4,metalness:.5}));if(this.core.number===47||this.core.number===50){const paint=this.supportedFloorTrace(p.pos,door);if(!paint)continue;const mesh=this.mesh(this.geo(paint.geometry),material);mesh.castShadow=false;mesh.name='floor-circuit-paint:'+p.id+':'+door.spec.id;mesh.userData.supportY=paint.supportY;this.circuitTraces.push({material,pad:p.id});continue;}const pad=p.pos,y=pad.y-.122,points=[V(pad.x,y,pad.z),V(door.spec.position[0]+.35,y,pad.z),V(door.spec.position[0]+.35,y,door.spec.position[2])],doorBase=door.spec.position[1]-door.spec.size[1]/2;if(Math.abs(doorBase-y)>.25)points.push(V(door.spec.position[0]+.35,doorBase+.018,door.spec.position[2]));const line=new T.CurvePath<T.Vector3>();for(let i=1;i<points.length;i++)line.add(new T.LineCurve3(points[i-1],points[i]));this.mesh(this.geo(new T.TubeGeometry(line,32,.018,6,false)),material);this.circuitTraces.push({material,pad:p.id});
   }
  }
  private pressed(p:{crateId?:string}){return (p as {pressed?:boolean}).pressed??!!p.crateId;}
@@ -482,7 +534,7 @@ export class ChamberScene extends RiftScene {
   if(this.core.number===25)fixture(V(-6,3.12,5.8),V(0,0,-1),.60,.04,{id:'freight-near-bank',mount:'hatch-header',target:V(-6,.12,4.5),reach:2,power:62,range:6.5});
   // Authored opaque gallery spine and real service-corridor walls need light at walking height.
   for(const s of this.core.solids){if(s.id==='gallery-spine')fixture(V(s.min.x,(s.min.y+s.max.y)/2,s.max.z-.65),V(-1,0,0),.055,.48);if(s.id.startsWith('side-gallery-wall-')){const sign=(s.min.z+s.max.z)>0?-1:1;fixture(V((s.min.x+s.max.x)/2,s.min.y+1.45,sign>0?s.max.z:s.min.z),V(0,0,sign),.055,.48);}}
-  const receiving=(id:string)=>/(?:^|-)(?:receiving|landing|dock|gallery)(?:-|$)/.test(id)&&!/(?:source|approach|spawn)/.test(id);
+  const receiving=(id:string)=>(this.core.number===50&&id==='retrieval-vault')||(/(?:^|-)(?:receiving|landing|dock|gallery)(?:-|$)/.test(id)&&!/(?:source|approach|spawn)/.test(id));
   const floors=this.core.solids.filter(s=>{const size=s.max.clone().sub(s.min);return s.kind==='floor'&&size.x>2&&size.z>2&&(s.max.y>1.5||this.core.solids.some(lower=>lower.kind==='floor'&&lower.max.y<s.min.y-.5&&lower.min.x<s.max.x&&lower.max.x>s.min.x&&lower.min.z<s.max.z&&lower.max.z>s.min.z));}).sort((a,b)=>Number(receiving(b.id))-Number(receiving(a.id))||b.max.y-a.max.y||(b.max.x-b.min.x)*(b.max.z-b.min.z)-(a.max.x-a.min.x)*(a.max.z-a.min.z)).slice(0,this.core.number===25?1:2);
   for(const s of floors){const size=s.max.clone().sub(s.min),x=(s.min.x+s.max.x)/2;
    if(this.core.blueprint.family==='launch-spire'&&receiving(s.id))for(const fraction of[.25,.75]){
@@ -530,7 +582,8 @@ export class ChamberScene extends RiftScene {
   this.scene.add(new T.HemisphereLight(split?0xe4d9c9:finished?0xd4dce2:0xcbdce5,0x3b3028,split?.34:finished?.24:.48));
   const ceiling=this.core.level.architecture.height;
   if(this.software){const key=new T.DirectionalLight(split?0xffe5c4:finished?0xe3e9ed:0xdce8ed,split?1.1:finished?1.3:1.55);key.position.set(-4,10,5);this.scene.add(key);const fill=new T.DirectionalLight(finished?0xe0e6e9:0xffdcaf,split?.5:finished?.52:.65);fill.position.set(5,6,-8);this.scene.add(fill);}
-  for(const x of(this.software?[]:[-4.2,4.2]))for(const z of(finished?[-6,7]:[-9,-1,8])){const area=new T.RectAreaLight(split?0xffe6c7:finished?0xe2e9ed:0xe2edf5,split?5.8:finished?4.4:6.8,3.8,1.1);area.position.set(x,ceiling-.45,z);area.rotation.x=-Math.PI/2;this.scene.add(area);}
+  if(!this.software&&[46,48,50].includes(this.core.number)){for(const mount of this.ceilingLuminaireMounts()){const area=new T.RectAreaLight(0xe2e9ed,4.4,3.8,1.1);area.position.set(mount.x,mount.y-.45,mount.z);area.rotation.x=-Math.PI/2;area.userData.slabMount=mount;this.scene.add(area);}}
+  else if(![46,48,50].includes(this.core.number))for(const x of(this.software?[]:[-4.2,4.2]))for(const z of(finished?[-6,7]:[-9,-1,8])){const area=new T.RectAreaLight(split?0xffe6c7:finished?0xe2e9ed:0xe2edf5,split?5.8:finished?4.4:6.8,3.8,1.1);area.position.set(x,ceiling-.45,z);area.rotation.x=-Math.PI/2;this.scene.add(area);}
   const key=new T.SpotLight(split?0xffd9a8:finished?0xf1f4f5:0xffedcf,this.software?0:finished?240:150,28,.92,.7,2);key.position.set(-4,ceiling-.55,5);key.target.position.set(0,0,-3);key.castShadow=!this.software;key.shadow.mapSize.set(1024,1024);key.shadow.bias=-.0001;key.shadow.normalBias=.025;this.scene.add(key,key.target);key.userData.chamberLight=true;key.target.userData.chamberLight=true;
   if(!finished)for(const x of[-7.6,7.6]){const fill=new T.PointLight(0xffce8a,14,9,2);fill.position.set(x,.7,-8);this.scene.add(fill);}
   if(finished){this.architecturePracticals();this.exitPracticalWashes();}

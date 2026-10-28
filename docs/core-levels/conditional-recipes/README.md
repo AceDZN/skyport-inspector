@@ -1,0 +1,9 @@
+# Planned conditional public-input segments
+
+UNEXECUTED.41-base-segment requires a legitimate future earned40→41 transition; contrast/wrong recovery require genuinely completed41 and the visible replay controls. Public mouse/WASD/E only via existing normal-input.mjs; no direct load/pose/history/save/unlock writes. Fixed600ms portal approaches, actual window predicates and decorative-white visibility remain hypotheses until a granted frozen browser run.
+
+The cleared south aisle avoids the real cargo-lift glass and POWER support. Native first run3/6 and targeted corrected3/3 are retained separately. SERVICE was nudged by the original contrast departure while pressure stayed true; these planned UI paths use the proven wrong-route south detour. Wrong recovery must aim at the actual visible released cube;[-4.12,.69,10.99] is a source-native hypothesis, never a pose assignment. All final segments require actual requested result and0resets. Preserve genuine earned game-only storage for the final fresh50 runner.
+
+42-base-segment requires legitimate earned41→42;42contrast/wrong recovery require genuine42 completion and visible replay. UNEXECUTED. The native7 prove real one-hop optics, later docking, body obstruction/restart, reversed portal-index equivalent and safe service recovery. Ordinary mouse rays and decorative frames remain pending. UI recipes capture current selected-device pose without assuming the tooling finishes within an initial dwell; the no-instant-arrival assertion is separately native. No future-state/history flag or direct loader is used.
+
+43-base-segment requires actual earned42→43;43contrast/wrong require genuine43 replay. UNEXECUTED. Raised return shot3.95m/white band2.4..5.9 and beam3.05 are native metric hypotheses for real mouse aiming. Archive dock6.6m is physically reached by the lift; body/cargo truth is current real state, not a conditional-answer flag. No direct load/pose/save/history writes.

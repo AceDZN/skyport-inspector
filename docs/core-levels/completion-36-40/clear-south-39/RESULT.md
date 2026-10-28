@@ -1,0 +1,9 @@
+# C39 corrected south aim — two optical passes, inspection clearance fails
+
+The target strict compilation exited0 in133.423s wall time. One serial four-case native process then exited1 in310.796s: **2/4 PASS,2FAIL**, exact pre/post source equality. Actual elapsed timing is preserved without attribution to a verified host-load cause. No second job or unrelated process intervention occurred.
+
+Passing: the real loose cargo travels along the receiver ray, a placed pair is genuinely stopped on that body, actual pickup clears it, RELEASE maintains pressure and the separate loaded gallery transfer completes. The second pass interrupts the real receiver during ascent, verifies physical braking/current DARK while the earlier positive connection report persists, restores the source without a phase jump, and completes the loaded gallery. Both have0respawns. Together with unchanged initial hardware/catch passes, four of the six distinct cases have proof across batches; this is not a combined6/6.
+
+The dark SERVICE contrast and wrong-inspection repair both reach the actual current dark/pressure state, then fail walking toward`(-10.65,8)`, stopped near`(-10.6498,.8649,10.2948)`. The inspection vestibule side wall atZ9.8 spansX[−15.4,−10.6]. Its eastern protrusion and the stair-glass face atX−10.28 leave only.32m, below actual capsule width. This is an authored clearance defect, not a successful negative route or a physics rejection.
+
+Proposed bounded correction sent to lead: stop both vestibule side walls atX−11.0, flush with the west room face, using centreX−13.2 and sizeX4.4. Keep their Z/height, actual door, floor/goal bounds and all assertions unchanged. The existing ledge then supplies.72m between actual west wall and glass. This correction has not been applied or rerun in this receipt. First2/6 and the corrected2/4 raw outputs/source snapshots remain preserved. Native/strict slot was explicitly released to queued QA45.

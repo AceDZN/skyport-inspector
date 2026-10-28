@@ -1,0 +1,7 @@
+# C49 first assigned six
+
+Targeted strict compilation of the dedicated new test and helper exited0 before WASM. The first serial native run **PASS6/6, exit0**, elapsed wall **2.240s**, exact pre/post source equality on World`dbcad5cc…`/placement helper`655b0716…`. First source text snapshots, full output, compile/timing receipts and per-route JSON are retained here.
+
+Actual lower LOADING and upper GALLERY cargo/receiver routes pass with real held wall→wall transport and their local pressure/light AND leaves. A wrong mixed allocation lights the other receiver but closes both exits until the real return is corrected. A complete wrong upper branch returns the same held cube, relinks and delivers to the requested lower station. Actual cargo pressure loss extinguishes the receiver/closes its leaf; real replacement restores it. All complete routes have0respawns.
+
+Both physical originals and both fixed copies remain present under either instruction. Pads are off the optical rays; one current local pad/receiver combination opens its own real route. No final lift, cargo-owner, board-read, language-match, history-use, actor/cargo/velocity/machine/save setter or fabricated unlock appears. This is authored-spawn native mechanical/reference evidence, not public board readability, English mastery, browser/audio/model parity or saved campaign proof. Native/strict slot was explicitly released after actual exit. No C50 geometry is authored from this result; its coordinate proposal requires lead review.

@@ -1,0 +1,39 @@
+# Reported final plans49–50 — separate authored lane
+
+49's first assigned strict→native six passes6/6 with exact source equality and0respawns; see `reported-49-50/initial-49/RESULT.md`. Its original full source/English/test/helper snapshots are retained there.50’s first targeted strict→native run now passes **9/9**, with exact locked source and zero respawns; see `reported-49-50/initial-50/RESULT.md`. Both rooms remain unregistered; no browser/build or earned-campaign proof is inferred. Root owns registration and final saved progression; QA separately owns46–48. No shared reported module or engine/scene/asset edit occurred here.
+
+##49 — source/copy reference has real two-height consequences
+
+The actual LOADING original, GALLERY original and both fixed report copies exist under either mission. A copy at GALLERY naming LOADING THERE identifies its lower local pad/receiver; naming GALLERY HERE identifies its upper supply. The current local pressure and local receiver AND opens that real leaf. Either pad powers the shared emitter through OR, but a mixed allocation closes both routes. Original cargo/receiver ownership is not secretly tagged. No final lift, board-read or grammar-match flag appears.
+
+First six genuinely carry cargo through both floor-aligned heights, correct mixed optics, return a full wrong upper branch with the same held cube and restore actual pressure/light after removal. The source pack supports reported instructions and meaning-based pronoun/place references without mandatory backshift. These are original situated reading/mediation tasks, not productive or whole-unit mastery proof. Native routes remain distinct from public plaque size/readability, live views, model/audio and earned campaign acceptance.
+
+##50 — approved retrieval plus distinct group transport
+
+Root reviewed `FINAL-50-COORDINATE-PROPOSAL.md` and explicitly approved the exact closed40 retrieval envelope, enclosed south annex,12m ferry,10m parked bridge/fixed call/current native dock guards and return-only22-step channel. It refined optical stance to`(8,19.2)` and physical guide tops to≤−1.9. Both refinements are authored. Source50’s pre-execution candidate/digests remain in `reported-49-50/prepared-50/`. Its separate first 9/9 native evidence is in `reported-49-50/initial-50/`; the historical prepared snapshot is unchanged.
+
+Before geometry, the parent twin-shaft v2 target and README/inspection/prompts, selected18 transfer target/inspection and07 deck target were re-viewed. Human-approved canonical-family reuse applies. Retain thick enclosed masses, original cargo/projector/machinery and warm practicals; reject raster metric inference, commercial round props, arrival rails and walkable guide bridges. No new generation/paid model is required.
+
+The unladen launch remains deep−18, wall9, high floor5/frontX15, ceiling13 and basin−22, with exact closed lip/source/exit anchors and4m/s RETURN recovery. The upper actual cargo pressure releases a real opaque latch, the same cube is removed with full cover opening retained, and body/cargo walk through the same floor-aligned upper/lower wall pair. The main−22→0 retaining sill and lower return host remain. Same high vault under both source groups is explicitly approved; no untested held-cube fling or high/far bypass host is added.
+
+The reported plural source group then selects its actual STORE, receiver and final plan together. Near-bank STORE F`(-5,.14,19)`/STORE A`(12,.14,16.5)` power one source through OR. Source`(14.985,1.55,18)` redirects to west return`(-7.985,1.55,17)`/lens`(-4,.9,17)`, or north back-face return`(10,1.55,14.415)`/lens`(10,.9,17.3)`. Both cargo pads are off-ray. The refined native aiming stance isX8, not the rejectedX13 line that could encounter the STORE A cube. Test navigation uses a clear west drop stance for A and an X8 aisle around the real cabinets; those are ordinary movement choices, not geometry/physics changes.
+
+LOADING/FREIGHT maintains its own current STORE+receiver for a4m automatic deck travellingZ22→34 over12m,6s travel/8s dwells. Its real far leaf additionally requires actual stopped FAR. GALLERY/ARCHIVE maintains its own supplies for a4×10m manual deck HOME`(3,-.2,31)`→PARK`(9,-.2,31)`, with visible fixed PARK call and existing hold-on-power-loss mode. East walkway/arm endsZ26; the parked deck physically spans26→36. The operator can park without riding, then cross supported geometry; its final leaf requires native stopped PARK plus current supplies. No selected-stop, used-ride, source-owner, visited-stage or history/language result flag exists.
+
+Physical guides have top−1.9. A separate enclosed22×(.6/.2) stair channel returns annex catch−4.4 only to the near bank; far access is basement-height, so it is not a fixed far route. Main basin recovery remains separate and unchanged. Far divider begins behind arrival edges and does not intersect the bridge sweep. The bounded first paths and two recoveries now pass natively; these bounds are not a universal air-control exclusion. A clever physically supported equivalent satisfying actual current conditions remains accepted.
+
+## Prepared50 checks and honest final boundary
+
+Nine opt-in cases pass on their first run: fixed fixtures/messages/guide/sill; full freight plan; full archive park-without-ride; mixed supplies/relink; wrong complete branch/reallocation; actual loaded ferry interruption/resumption; parked power loss/current-leaf closure/restoration; annex catch/all22stairs; main deep miss/basin/RETURN/recentred full plan. The dedicated driver uses authored construction and ordinary step/camera/ray/E only. No actor/body/velocity/history/goal/save setter or forced reset exists.49 test operations are unchanged; the driver only extends its level union to50. Targeted strict exited 0 before the nine native cases, all 9/9 exited 0, and all watched source hashes remained equal. No source correction was needed.
+
+Final game acceptance still requires real completed50/frontier50, Continue/replay and a full fresh earned1→50 public-input campaign on a frozen integration. A native override fixture cannot fabricate that save history. Public model/lighting/linked-view/English/cue/control review remains independent. D2 and all served artifacts are untouched by this unregistered source/native task.
+
+
+## C49 source-only card correction after the native runs
+
+Art found a real backing/readability problem in the accepted source: 2.1 m jamb cards at Z−12.5 hung .15 m into trim, and report Y8.7 was too high. Lead approved marks-only correction. `reported-49-50/marks-49-layout/` preserves before/after source and static prefix/suffix equality: only original/report marks changed; all physical data, mission/English wording and complete C50 function/exports are unchanged. Originals now sit on backed standing-height faces, and each fixed report has a separate COPY AT GALLERY heading on a fully backed jamb. Both missions still contain identical cards. No new compiler/native/browser/build run occurred; the earlier 6/6 and 9/9 receipts retain their original source digests and are not rewritten as a visual pass.
+
+
+## C50 source-only procedure-card correction
+
+Before final build, Lead approved Art’s bounded readability correction: the two unchanged original groups now sit side by side on the backed east annex wallX14.94, normal−X, width2.4, centresZ21.6/24.5, firstY2.8 with unchanged.28 line spacing (lastY1.68/1.40). `reported-49-50/marks-50-layout/` preserves before/after source and proves exactly one marks-position expression changed. All physical data, circuit/goal/mission ownership, full words, C49 marks and prepared route commands are untouched. No new compiler/native/browser/build or recipe execution ran. The earlier native receipts and recipe creation hashes retain their original source scope; actual final legibility remains pending.

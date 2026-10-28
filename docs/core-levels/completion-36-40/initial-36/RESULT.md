@@ -1,0 +1,11 @@
+# C36 first bounded native batch: 5/5 pass
+
+The single assigned C36-only process fully exited0. Measured subprocess wall time2.931s; native test duration2333ms. `timing-source-after.json` confirms exact pre/post source hash equality. Raw `native-five.txt`, before/after hashes and individual actual snapshots remain here. No repeat was launched after the lead independently verified the files during a capacity-retry message.
+
+Passed: identical base/contrast geometry and empty new-attempt journal; real optical full hatch release/TEST off followed by actual slow5.6m loaded gallery transfer; same release with STORE allocation and LIFT unpowered; actual pressure loss brakes unfinished travel and replacement resumes its phase; wrong STORE delivery returns and reallocates cargo before genuine gallery completion. All routes use0respawns, authored spawns and only ordinary camera/aimed portals/WASD/E/grab/drop.
+
+The base explicitly observes a genuinely fully-open hatch while the lift is MOVING, the GALLERY dock signal is false and the actual upper leaf remains closed. It then waits for a real LOADING return, records loaded carriage to native stopped GALLERY, clears the physical leaf and reaches the destination. An old opening report or selected height does not complete that journey. The contrast uses a different maintained allocation and lower door; no ride/history/identity goal variable exists.
+
+These are physical and existing journal-sensor foundations, **not acceptance of perfect/past teaching**. The missions are imperatives; meaningful completed/unfinished report wording must be presented after real observed moments, with the current remaining task. Lead is adding that optional read-only language capability; examples/IDs are planned in `../../COMPLETION_REPORTS.md`. There are no invented spawn reports, false has-not-arrived after departure, new history goals or report-driven circuits.
+
+No fixture/engine/assertion relaxation, registry, build, GPU/browser, parent storage, fabricated win or paid model/service changed. Native slot was explicitly released to queued QA41 after this process exited. Source37 authoring begins only after this proof; later rooms remain proposals. Public controls/render/audio/save and final clean1→50 remain separate.

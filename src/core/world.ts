@@ -463,11 +463,11 @@ export class CoreWorld {
     }
     private ridingPlatform(){return this.machines.devices.find(d=>['lift','moving-platform'].includes(d.spec.kind)&&this.player.grounded&&Math.abs(this.player.pos.y-.85-(d.previous.y+d.spec.size[1]/2))<.08&&Math.abs(this.player.pos.x-d.previous.x)<d.spec.size[0]/2-.01&&Math.abs(this.player.pos.z-d.previous.z)<d.spec.size[2]/2-.01);}
     private computeCharacterMovement(requested:Vector3,platformCollider?:number){
-        // A stationary kinematic deck's predictive friction can cancel the KCC's
+        // A stationary kinematic frame's predictive friction can cancel the KCC's
         // separation nudge at a floor seam. Keep its exact collision geometry in
         // this query, but omit that friction by querying it as Fixed. Actual
         // integration always uses its original kinematic body type.
-        const stationary=this.machines.devices.filter(d=>['lift','moving-platform'].includes(d.spec.kind)&&d.delta.lengthSq()===0).map(d=>this.doors.get(d.spec.id)!.rigid).filter(body=>{
+        const stationary=this.machines.devices.filter(d=>['lift','moving-platform','conveyor'].includes(d.spec.kind)&&d.delta.lengthSq()===0).map(d=>this.doors.get(d.spec.id)!.rigid).filter(body=>{
             if(body.bodyType()!==RAPIER.RigidBodyType.KinematicPositionBased)return false;
             const v=body.linvel(),a=body.angvel();
             // Arrival/brake frames still have a genuine previous native velocity.

@@ -1,0 +1,115 @@
+{
+  "sourceExact": true,
+  "recordedRoofCheckpoints": 6,
+  "roofExamples": [
+    {
+      "label": "real-roof-contact-excludes-upright-body-cargo-pressure-persists",
+      "player": {
+        "position": [
+          -3.50519061088562,
+          1.9532151222229004,
+          11.064910888671875
+        ],
+        "velocity": [
+          -4.799971636070801,
+          -1.3333333333333381,
+          0.03262301203413017
+        ],
+        "yaw": 1.5717298890781082,
+        "pitch": 0,
+        "grounded": false,
+        "crossings": 2
+      },
+      "roofContacts": [
+        {
+          "id": "final-cargo-throat-roof",
+          "normal": {
+            "x": 1,
+            "y": 0,
+            "z": -1.0130315786227584e-06
+          },
+          "witness": {
+            "x": -3.799999952316284,
+            "y": 2.409198760986328,
+            "z": 11.064643859863281
+          },
+          "applied": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "remaining": {
+            "x": -0.039999764412641525,
+            "y": -0.011111111380159855,
+            "z": 0.0002718584437388927
+          }
+        }
+      ]
+    },
+    {
+      "label": "ordinary-escape-from-belt-throat-frame-0",
+      "player": {
+        "position": [
+          -3.5053048133850098,
+          1.9409458637237549,
+          11.065159797668457
+        ],
+        "velocity": [
+          -4.7333065238550205,
+          -1.4666666666666714,
+          0.03216775638966358
+        ],
+        "yaw": -1.5639674390519622,
+        "pitch": 0,
+        "grounded": false,
+        "crossings": 2
+      },
+      "roofContacts": [
+        {
+          "id": "final-cargo-throat-roof",
+          "normal": {
+            "x": 0.9999992251396179,
+            "y": -0.0011945063015446067,
+            "z": -0.0004899342311546206
+          },
+          "witness": {
+            "x": -3.8000199794769287,
+            "y": 2.403203248977661,
+            "z": 11.068737030029297
+          },
+          "applied": {
+            "x": -0.00019966931722592562,
+            "y": -6.186971586430445e-05,
+            "z": 1.3569614338848623e-06
+          },
+          "remaining": {
+            "x": -0.039244551211595535,
+            "y": -0.012160352431237698,
+            "z": 0.0002667076769284904
+          }
+        }
+      ]
+    }
+  ],
+  "jumpEvents": 6,
+  "ridingFrames": {
+    "final-archive-lift": 420
+  },
+  "respawns": 0,
+  "result": {
+    "goalMatched": true,
+    "physicalComplete": true,
+    "exit": "archive-exit",
+    "reason": "",
+    "mechanisms": [
+      "conveyors",
+      "beams",
+      "shutters",
+      "portals",
+      "cargo",
+      "buttons",
+      "lifts"
+    ]
+  },
+  "error": null
+}
