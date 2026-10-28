@@ -1,0 +1,621 @@
+{
+  "scope": "Synthetic safety fixture only; authored position inventory set once through blueprint construction. Ordinary camera/portal placement/grabDrop commands afterward; no body pose/velocity/clock/history/save setters. Not browser play.",
+  "scenario": "opaque-before",
+  "error": null,
+  "readings": [
+    {
+      "stage": "before-E",
+      "entry": 0,
+      "apparent": [
+        -5.0200000000000005,
+        0.55,
+        1.7763568394002505e-15
+      ],
+      "range": 2.4226638231500472,
+      "state": {
+        "snapshot": {
+          "room": "chamber-91",
+          "number": 91,
+          "mission": "Safety fixture",
+          "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+          "player": {
+            "position": [
+              -2.8,
+              0.87,
+              0
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "yaw": 1.5707963267948974,
+            "pitch": -0.4119377401435853,
+            "grounded": false,
+            "crossings": 0
+          },
+          "portals": [
+            {
+              "surface": "A-white",
+              "position": [
+                -3.96,
+                1.55,
+                0
+              ],
+              "normal": [
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "surface": "B-white",
+              "position": [
+                10,
+                1.55,
+                -5.96
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ]
+            }
+          ],
+          "crates": [
+            {
+              "id": "safety-cube",
+              "position": [
+                10,
+                0.55,
+                -4.9
+              ],
+              "velocity": [
+                0,
+                0,
+                0
+              ],
+              "rotation": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "angularVelocity": [
+                0,
+                0,
+                0
+              ],
+              "held": false,
+              "crossings": 0
+            }
+          ],
+          "pads": [],
+          "devices": [],
+          "panels": [
+            {
+              "id": "A-white",
+              "position": [
+                -3.985,
+                2,
+                0
+              ],
+              "normal": [
+                1,
+                0,
+                0
+              ],
+              "width": 4,
+              "height": 4
+            },
+            {
+              "id": "B-white",
+              "position": [
+                10,
+                2,
+                -5.985
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ],
+              "width": 4,
+              "height": 4
+            }
+          ],
+          "exits": [],
+          "result": null,
+          "held": null,
+          "holdSpaceTransform": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "launchUsed": false,
+          "respawns": 0,
+          "beams": {},
+          "signals": {},
+          "journal": null,
+          "events": [
+            {
+              "type": "portalA",
+              "time": 0,
+              "surface": "A-white",
+              "point": [
+                -3.96,
+                1.55,
+                0
+              ]
+            },
+            {
+              "type": "portalB",
+              "time": 0,
+              "surface": "B-white",
+              "point": [
+                10,
+                1.55,
+                -5.96
+              ]
+            }
+          ]
+        },
+        "native": {
+          "type": 0,
+          "position": {
+            "x": 10,
+            "y": 0.5499862432479858,
+            "z": -4.900001525878906
+          },
+          "nextPosition": {
+            "x": 10,
+            "y": 0.5499862432479858,
+            "z": -4.900001525878906
+          },
+          "rotation": {
+            "x": 5.767829236447142e-8,
+            "y": 5.551692460782631e-13,
+            "z": -4.088976766070118e-7,
+            "w": 1
+          },
+          "nextRotation": {
+            "x": 5.767829236447142e-8,
+            "y": 5.551692460782631e-13,
+            "z": -4.088976766070118e-7,
+            "w": 1
+          },
+          "linear": {
+            "x": -0.00023498799419030547,
+            "y": -0.00007153564365580678,
+            "z": -0.00017679798475001007
+          },
+          "angular": {
+            "x": -0.0003196414327248931,
+            "y": 0,
+            "z": 0.0004248458717484027
+          }
+        }
+      }
+    },
+    {
+      "stage": "immediately-after-E",
+      "state": {
+        "snapshot": {
+          "room": "chamber-91",
+          "number": 91,
+          "mission": "Safety fixture",
+          "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+          "player": {
+            "position": [
+              -2.8,
+              0.87,
+              0
+            ],
+            "velocity": [
+              0,
+              0,
+              0
+            ],
+            "yaw": 1.5707963267948974,
+            "pitch": -0.4119377401435853,
+            "grounded": false,
+            "crossings": 0
+          },
+          "portals": [
+            {
+              "surface": "A-white",
+              "position": [
+                -3.96,
+                1.55,
+                0
+              ],
+              "normal": [
+                1,
+                0,
+                0
+              ]
+            },
+            {
+              "surface": "B-white",
+              "position": [
+                10,
+                1.55,
+                -5.96
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ]
+            }
+          ],
+          "crates": [
+            {
+              "id": "safety-cube",
+              "position": [
+                10,
+                0.55,
+                -4.9
+              ],
+              "velocity": [
+                0,
+                0,
+                0
+              ],
+              "rotation": [
+                0,
+                0,
+                0,
+                1
+              ],
+              "angularVelocity": [
+                0,
+                0,
+                0
+              ],
+              "held": false,
+              "crossings": 0
+            }
+          ],
+          "pads": [],
+          "devices": [],
+          "panels": [
+            {
+              "id": "A-white",
+              "position": [
+                -3.985,
+                2,
+                0
+              ],
+              "normal": [
+                1,
+                0,
+                0
+              ],
+              "width": 4,
+              "height": 4
+            },
+            {
+              "id": "B-white",
+              "position": [
+                10,
+                2,
+                -5.985
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ],
+              "width": 4,
+              "height": 4
+            }
+          ],
+          "exits": [],
+          "result": null,
+          "held": null,
+          "holdSpaceTransform": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "launchUsed": false,
+          "respawns": 0,
+          "beams": {},
+          "signals": {},
+          "journal": null,
+          "events": [
+            {
+              "type": "portalA",
+              "time": 0,
+              "surface": "A-white",
+              "point": [
+                -3.96,
+                1.55,
+                0
+              ]
+            },
+            {
+              "type": "portalB",
+              "time": 0,
+              "surface": "B-white",
+              "point": [
+                10,
+                1.55,
+                -5.96
+              ]
+            },
+            {
+              "type": "invalid",
+              "time": 0,
+              "reason": "Move closer and look at the cube."
+            }
+          ]
+        },
+        "native": {
+          "type": 0,
+          "position": {
+            "x": 10,
+            "y": 0.5499862432479858,
+            "z": -4.900001525878906
+          },
+          "nextPosition": {
+            "x": 10,
+            "y": 0.5499862432479858,
+            "z": -4.900001525878906
+          },
+          "rotation": {
+            "x": 5.767829236447142e-8,
+            "y": 5.551692460782631e-13,
+            "z": -4.088976766070118e-7,
+            "w": 1
+          },
+          "nextRotation": {
+            "x": 5.767829236447142e-8,
+            "y": 5.551692460782631e-13,
+            "z": -4.088976766070118e-7,
+            "w": 1
+          },
+          "linear": {
+            "x": -0.00023498799419030547,
+            "y": -0.00007153564365580678,
+            "z": -0.00017679798475001007
+          },
+          "angular": {
+            "x": -0.0003196414327248931,
+            "y": 0,
+            "z": 0.0004248458717484027
+          }
+        }
+      }
+    }
+  ],
+  "final": {
+    "snapshot": {
+      "room": "chamber-91",
+      "number": 91,
+      "mission": "Safety fixture",
+      "physics": "Rapier3D 0.21 · capsule KCC + dynamic rigid cubes",
+      "player": {
+        "position": [
+          -2.8,
+          0.87,
+          0
+        ],
+        "velocity": [
+          0,
+          0,
+          0
+        ],
+        "yaw": 1.5707963267948974,
+        "pitch": -0.4119377401435853,
+        "grounded": false,
+        "crossings": 0
+      },
+      "portals": [
+        {
+          "surface": "A-white",
+          "position": [
+            -3.96,
+            1.55,
+            0
+          ],
+          "normal": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "surface": "B-white",
+          "position": [
+            10,
+            1.55,
+            -5.96
+          ],
+          "normal": [
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "crates": [
+        {
+          "id": "safety-cube",
+          "position": [
+            10,
+            0.55,
+            -4.9
+          ],
+          "velocity": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "angularVelocity": [
+            0,
+            0,
+            0
+          ],
+          "held": false,
+          "crossings": 0
+        }
+      ],
+      "pads": [],
+      "devices": [],
+      "panels": [
+        {
+          "id": "A-white",
+          "position": [
+            -3.985,
+            2,
+            0
+          ],
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "width": 4,
+          "height": 4
+        },
+        {
+          "id": "B-white",
+          "position": [
+            10,
+            2,
+            -5.985
+          ],
+          "normal": [
+            0,
+            0,
+            1
+          ],
+          "width": 4,
+          "height": 4
+        }
+      ],
+      "exits": [],
+      "result": null,
+      "held": null,
+      "holdSpaceTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "launchUsed": false,
+      "respawns": 0,
+      "beams": {},
+      "signals": {},
+      "journal": null,
+      "events": [
+        {
+          "type": "portalA",
+          "time": 0,
+          "surface": "A-white",
+          "point": [
+            -3.96,
+            1.55,
+            0
+          ]
+        },
+        {
+          "type": "portalB",
+          "time": 0,
+          "surface": "B-white",
+          "point": [
+            10,
+            1.55,
+            -5.96
+          ]
+        },
+        {
+          "type": "invalid",
+          "time": 0,
+          "reason": "Move closer and look at the cube."
+        }
+      ]
+    },
+    "native": {
+      "type": 0,
+      "position": {
+        "x": 10,
+        "y": 0.5499862432479858,
+        "z": -4.900001525878906
+      },
+      "nextPosition": {
+        "x": 10,
+        "y": 0.5499862432479858,
+        "z": -4.900001525878906
+      },
+      "rotation": {
+        "x": 5.767829236447142e-8,
+        "y": 5.551692460782631e-13,
+        "z": -4.088976766070118e-7,
+        "w": 1
+      },
+      "nextRotation": {
+        "x": 5.767829236447142e-8,
+        "y": 5.551692460782631e-13,
+        "z": -4.088976766070118e-7,
+        "w": 1
+      },
+      "linear": {
+        "x": -0.00023498799419030547,
+        "y": -0.00007153564365580678,
+        "z": -0.00017679798475001007
+      },
+      "angular": {
+        "x": -0.0003196414327248931,
+        "y": 0,
+        "z": 0.0004248458717484027
+      }
+    }
+  }
+}

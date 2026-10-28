@@ -1,0 +1,17 @@
+# C4 connected drop baseline: first native result
+
+Status: targeted strict 0; native **0/1**, expected recovery failure. All 57 copied source/test hashes and active World19db/fixture/Scene hashes are unchanged. Native and read processes are closed. No production, browser, or user-room action was taken.
+
+The single case starts at the genuine authored C4 spawn. Real pressure opens ACCESS, actual ray-checked shots create the measured portal pair, ordinary W traverses to the remote cube, E picks it up, ordinary approach/hold carries it through ahead of the player, and ordinary E drops it. The native translation uses bounded W bursts with neutral0.15s key/aim overhead. No actor/body/velocity/portal-array/clock/machine/history/save setters, nudge, reset, or jump are used. The preserved original36-command Parent packet is `parent-prefix.jsonl`, SHA `14295c6b60bf532861494ca5d64282970bf3bbe0c05742782eaeec4e794370a3`.
+
+Before regrab, native cube centre distance is16.9503m, while the mapped connected apparent centre is2.04646m away with forward dot.87989. Both source and mapped-exit cube aperture fits are true. E remains unheld and emits `Move closer and look at the cube.` W800 then moves to the portal boundary, emits `blocked` for the player, and retains player crossings1. This is a legitimate solid destination obstruction combined with failed connected-space pickup, not a stationary-machine back-out pin.
+
+Drop-frame telemetry confirms an independent frame mismatch: player-space release approximately `[0,0,-.50000004]`; hold-map transformed release approximately `[+.50000004,0,0]`; actual immediate native cube release `[−1.97e−12,0,−.50000006]`. No velocity was assigned by the test.
+
+## Exact-pose caveat
+
+Parent actual settled player Z is−10.66868; this native translation settles at−10.71932, about5.06cm closer. Parent cube front distance from source portal is.50921m, inside its.55m oriented support: a real straddle. This first native cube front distance is.55998m versus support.55000m. Renderer-copy eligibility has an extra.035m margin; enabling that copy does not prove a visible front-side clipped mesh. The native cube remains reachable through the linked portal view, but this first result does **not** prove Parent's precise straddling pose. Cube crossings1 also differs from Parent's3; no crossing count was forced or erased.
+
+The first test's post-settle visible-copy guard must remain preserved. Correctly mapped release velocity may naturally move a repaired cube fully clear of the exit, so a future companion should measure true straddle before drop and then test genuinely reachable visibility through the linked opening, without requiring a repaired cube to remain lodged. Exact-straddle ordinary-approach refinement requires a separately recorded/approved run, not a pose assignment or silently rewritten first result.
+
+`SUMMARY.json` contains compact measurements; `trajectory.json` retains1059 native step records, input/look actions, native/current/queued cube state, hold transforms, release frame, apparent/native reach, aperture/occlusion, contacts/events and W attempt. `strict-job.json` and `native-job.json` retain exact commands, env selectors, exits, source locks and active-source invariants. Isolated source snapshot: `work/chamber-qa/C4-partial-drop-baseline-first/sources/`; test SHA `9d0ff57626bc3cd6661b1728e550a3369a8c252f76f999a46117b4ae2fbf8178`.

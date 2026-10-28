@@ -1,0 +1,56 @@
+--- v4/src/core/world.ts
++++ connected-pickup-candidate/src/core/world.ts
+@@ -349,9 +349,37 @@
+         c.rigid.setNextKinematicTranslation(c.pos.clone().add(corrected));
+     }
+     private grabbableCube() {
+-        const eye=this.eye(),dir=this.forward();
+-        const candidates=this.crates.filter(c=>c.pos.distanceTo(eye)<3.1&&c.pos.clone().sub(eye).normalize().dot(dir)>.65).sort((a,b)=>a.pos.distanceTo(eye)-b.pos.distanceTo(eye));
+-        return candidates.find(c=>{const delta=c.pos.clone().sub(eye),distance=delta.length(),ray=new Ray(eye,delta.normalize());return !this.activeSolids().some(s=>{const p=ray.intersectBox(new Box3(s.min,s.max),V());return p&&p.distanceTo(eye)<distance-c.half.x*.8;});});
++        const eye=this.eye(),forward=this.forward(),solids=this.activeSolids();
++        const occluded=(origin:Vector3,direction:Vector3,distance:number)=>{
++            const ray=new Ray(origin,direction);
++            return solids.some(s=>{const box=new Box3(s.min,s.max);if(box.containsPoint(origin))return true;const hit=ray.intersectBox(box,V());return !!hit&&hit.distanceTo(origin)<distance-.001;});
++        };
++        const surfaceDistance=(cube:RigidCube,origin:Vector3,direction:Vector3)=>{
++            const inverse=cube.rotation.clone().invert(),local=origin.clone().sub(cube.pos).applyQuaternion(inverse),box=new Box3(cube.half.clone().negate(),cube.half.clone());
++            if(box.containsPoint(local))return 0;
++            const hit=new Ray(local,direction.clone().applyQuaternion(inverse)).intersectBox(box,V());return hit?hit.distanceTo(local):undefined;
++        };
++        const spaces:{map:Matrix4;entry?:Portal;exit?:Portal}[]=[{map:new Matrix4()}];
++        if(this.portals.every(Boolean))for(let i=0;i<2;i++){const entry=this.portals[i]!,exit=this.portals[1-i]!;spaces.push({map:portalMatrix(entry,exit),entry,exit});}
++        const candidates:{cube:RigidCube;map:Matrix4;distance:number}[]=[];
++        for(const cube of this.crates)for(const space of spaces){
++            const apparent=cube.pos.clone().applyMatrix4(space.map.clone().invert()),delta=apparent.sub(eye),distance=delta.length();
++            if(distance>=3.1||distance<.000001||delta.normalize().dot(forward)<=.65)continue;
++            if(space.entry&&space.exit){
++                const entry=space.entry,denominator=delta.dot(entry.normal),front=eye.clone().sub(entry.center).dot(entry.normal);
++                if(front<=0||denominator>=-.000001)continue;
++                const travel=-front/denominator;if(travel<=0||travel>distance+.000001)continue;
++                const point=eye.clone().addScaledVector(delta,travel),local=point.clone().applyMatrix4(entry.matrix.clone().invert()),floor=Math.abs(entry.normal.y)>.8,rx=floor?1.144:.88,ry=floor?1.102:1.53;
++                // Sight must pass through the actual visible opening, never the full host wall.
++                if((local.x/rx)**2+(local.y/ry)**2>1||occluded(eye,delta,travel))continue;
++                const remote=point.applyMatrix4(space.map),direction=delta.clone().transformDirection(space.map),surface=surfaceDistance(cube,remote,direction);
++                if(surface===undefined||occluded(remote,direction,surface))continue;
++            }else{
++                const surface=surfaceDistance(cube,eye,delta);if(surface===undefined||occluded(eye,delta,surface))continue;
++            }
++            candidates.push({cube,map:space.map,distance});
++        }
++        return candidates.sort((a,b)=>a.distance-b.distance)[0];
+     }
+     private nearbyControl(){
+         const eye=this.eye(),forward=this.forward();
+@@ -372,9 +400,9 @@
+     interactionHint(){return this.heldId?'E · Drop':this.nearbyControl()?'E · Use '+this.nearbyControl()!.spec.label:this.grabbableCube()?'E · Pick up':this.coveredControlHint()??'';}
+     heldFootprint(){const cube=this.crates.find(c=>c.id===this.heldId);return cube?queryHeldFootprint(this.physics,cube,this.portals,c=>this.fixed.get(c.handle)?.id??this.bodyForCollider(c.handle)?.id??[...this.doors].find(([,body])=>body.collider.handle===c.handle)?.[0]??'support:'+c.handle):null;}
+     grabDrop() {
+-        if(this.heldId){const c=this.crates.find(c=>c.id===this.heldId)!;this.heldId=undefined;this.holdMap.identity();c.held=false;c.rigid.setBodyType(RAPIER.RigidBodyType.Dynamic,true);c.rigid.setLinvel(this.player.vel.clone().addScaledVector(this.forward(),.5),true);this.event('drop',{body:c.id});return;}
+-        const c=this.grabbableCube();if(!c){this.event('invalid',{reason:this.coveredControlHint()??'Move closer and look at the cube.'});return;}
+-        this.heldId=c.id;this.holdMap.identity();c.held=true;c.rigid.setBodyType(RAPIER.RigidBodyType.KinematicPositionBased,true);c.rigid.setLinvel(V(),true);c.rigid.setAngvel(V(),true);this.event('pickup',{body:c.id});
++        if(this.heldId){const c=this.crates.find(c=>c.id===this.heldId)!,velocity=this.player.vel.clone().addScaledVector(this.forward(),.5).applyQuaternion(new Quaternion().setFromRotationMatrix(this.holdMap));this.heldId=undefined;this.holdMap.identity();c.held=false;c.rigid.setBodyType(RAPIER.RigidBodyType.Dynamic,true);c.rigid.setLinvel(velocity,true);this.event('drop',{body:c.id});return;}
++        const target=this.grabbableCube();if(!target){this.event('invalid',{reason:this.coveredControlHint()??'Move closer and look at the cube.'});return;}
++        const c=target.cube;this.heldId=c.id;this.holdMap.copy(target.map);c.held=true;c.rigid.setBodyType(RAPIER.RigidBodyType.KinematicPositionBased,true);c.rigid.setLinvel(V(),true);c.rigid.setAngvel(V(),true);this.event('pickup',{body:c.id});
+     }
+     interact() { if(this.heldId)return false;const d=this.nearbyControl();return d?this.machines.interact(d.spec.id):false; }
+     respawn() { this.respawns++; this.campaignResult = undefined; this.player.pos.copy(this.spawn); this.player.vel.set(0, 0, 0); this.blockedEntry.clear(); this.character.setTranslation(this.spawn, true); this.character.setNextKinematicTranslation(this.spawn); if (this.heldId) {

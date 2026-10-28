@@ -1,0 +1,314 @@
+{
+  "status": "BASELINE EXPECTED E RECOVERY FAILURE; W BLOCK MEASURED",
+  "error": "AssertionError [ERR_ASSERTION]: E cannot retrieve the actual nearby visible portal-straddled cube; W attempt is preserved in diagnostics\n\nfalse !== true\n",
+  "strictExit": 0,
+  "nativeExit": 1,
+  "sourceExact": true,
+  "playerBeforeE": {
+    "proxy": [
+      -4.000001907348633,
+      0.8650760054588318,
+      -10.719318389892578
+    ],
+    "native": {
+      "x": -4.000001907348633,
+      "y": 0.8650760054588318,
+      "z": -10.719318389892578
+    },
+    "next": {
+      "x": -4.000001907348633,
+      "y": 0.8650760054588318,
+      "z": -10.719318389892578
+    },
+    "velocity": [
+      -1.150777204355913e-22,
+      0,
+      -2.48960325536604e-18
+    ],
+    "grounded": true,
+    "crossings": 1
+  },
+  "cubeBeforeE": {
+    "proxy": [
+      -7.40001916885376,
+      0.5498896241188049,
+      5.858415603637695
+    ],
+    "rotation": [
+      -2.492334942871821e-07,
+      -0.7071057558059692,
+      -7.210288544001742e-08,
+      0.7071077823638916
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "crossings": 1,
+    "cooldown": 0,
+    "held": false,
+    "native": {
+      "type": 0,
+      "position": {
+        "x": -7.40001916885376,
+        "y": 0.5498896241188049,
+        "z": 5.858415603637695
+      },
+      "nextPosition": {
+        "x": -7.40001916885376,
+        "y": 0.5498896241188049,
+        "z": 5.858415603637695
+      },
+      "rotation": {
+        "x": -2.492334942871821e-07,
+        "y": -0.7071057558059692,
+        "z": -7.210288544001742e-08,
+        "w": 0.7071077823638916
+      },
+      "nextRotation": {
+        "x": -2.492334942871821e-07,
+        "y": -0.7071057558059692,
+        "z": -7.210288544001742e-08,
+        "w": 0.7071077823638916
+      },
+      "linear": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "angular": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    }
+  },
+  "nativeReachCandidate": false,
+  "representations": [
+    {
+      "kind": "native-centre",
+      "position": [
+        -7.40001916885376,
+        0.5498896241188049,
+        5.858415603637695
+      ],
+      "distance": 16.950308743191265,
+      "dot": -0.9780195891823711,
+      "fullSolidRay": [
+        {
+          "id": "access-west-jamb",
+          "distance": 8.710785023247608,
+          "point": [
+            -5.7472750626059925,
+            1.0190655077977513,
+            -2.200000000000001
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "mapped-visible-copy-from-0",
+      "position": [
+        -4.118444396362304,
+        0.5498896241188049,
+        -12.519980831146242
+      ],
+      "distance": 2.0464600170219827,
+      "dot": 0.879891337370957,
+      "fullSolidRay": [
+        {
+          "id": "remote-north-wall",
+          "distance": 1.45549973697206,
+          "point": [
+            -4.084241526091139,
+            0.8286083918800745,
+            -12
+          ]
+        }
+      ]
+    }
+  ],
+  "apertures": [
+    {
+      "index": 0,
+      "surface": "source-west",
+      "position": [
+        -7.96,
+        1.55,
+        5.97669
+      ],
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "signedNativeDistance": 0.5599808311462402,
+      "orientedNormalSupport": 0.5500018262306677,
+      "local": [
+        0.1182743963623043,
+        -1.0001103758811951,
+        0.5599808311462402
+      ],
+      "nativeEntryFits": true,
+      "mappedExitFits": true,
+      "renderedCopy": true
+    },
+    {
+      "index": 1,
+      "surface": "remote-north",
+      "position": [
+        -4.00017,
+        1.55,
+        -11.959999999999999
+      ],
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "signedNativeDistance": 17.818415603637696,
+      "orientedNormalSupport": 0.550001714065436,
+      "local": [
+        -3.39984916885376,
+        -1.0001103758811951,
+        17.818415603637696
+      ],
+      "nativeEntryFits": false,
+      "mappedExitFits": false,
+      "renderedCopy": false
+    }
+  ],
+  "actualERegrab": false,
+  "W": {
+    "seconds": 0.8,
+    "start": {
+      "proxy": [
+        -4.000001907348633,
+        0.8650000095367432,
+        -10.719318389892578
+      ],
+      "native": {
+        "x": -4.000001907348633,
+        "y": 0.8650000095367432,
+        "z": -10.719318389892578
+      },
+      "next": {
+        "x": -4.000001907348633,
+        "y": 0.8650000095367432,
+        "z": -10.719318389892578
+      },
+      "velocity": [
+        -9.78160623702526e-23,
+        0,
+        -2.116162767061134e-18
+      ],
+      "grounded": true,
+      "crossings": 1
+    },
+    "end": {
+      "proxy": [
+        -3.9995877742767334,
+        0.8649607300758362,
+        -11.704899787902832
+      ],
+      "native": {
+        "x": -3.9995877742767334,
+        "y": 0.8649607300758362,
+        "z": -11.704899787902832
+      },
+      "next": {
+        "x": -3.9995877742767334,
+        "y": 0.8649607300758362,
+        "z": -11.704899787902832
+      },
+      "velocity": [
+        -1.6391815028983244e-29,
+        0,
+        -4.799671180280507
+      ],
+      "grounded": true,
+      "crossings": 1
+    },
+    "events": [
+      {
+        "type": "enter",
+        "time": 4767,
+        "body": "player",
+        "from": 0,
+        "to": 1,
+        "fromSurface": "source-west",
+        "toSurface": "remote-north",
+        "speed": 4.790019313567171,
+        "exitSpeed": 4.790019313567171,
+        "held": null
+      },
+      {
+        "type": "enter",
+        "time": 5850,
+        "body": "cube",
+        "from": 1,
+        "to": 0,
+        "fromSurface": "remote-north",
+        "toSurface": "source-west",
+        "speed": 17.981980987349917,
+        "exitSpeed": 17.981980987349917,
+        "held": "cube"
+      },
+      {
+        "type": "invalid",
+        "time": 8017,
+        "reason": "Move closer and look at the cube."
+      },
+      {
+        "type": "blocked",
+        "time": 8333,
+        "body": "player"
+      }
+    ]
+  },
+  "drop": {
+    "beforeHoldMap": [
+      -1.2246467991473532e-16,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      -1,
+      0,
+      -1.2246467991473532e-16,
+      0,
+      -19.919999999999998,
+      0,
+      9.976859999999999,
+      1
+    ],
+    "beforePlayerVelocity": [
+      -1.973544947163472e-12,
+      0,
+      -4.269587463560649e-08
+    ],
+    "unmappedPlayerRelease": [
+      -1.973544947163472e-12,
+      0.0,
+      -0.5000000426958746
+    ],
+    "expectedMappedRelease": [
+      0.5000000426958746,
+      0.0,
+      -1.9734837148182863e-12
+    ],
+    "actualImmediateNativeRelease": {
+      "x": -1.973545025318879e-12,
+      "y": 0,
+      "z": -0.5000000596046448
+    }
+  },
+  "scopeCaveat": "Native braked approach settles5.06cm nearer portal than parent, cube centre is0.55998m in front of exit vs oriented support0.55000m. Renderer-copy eligibility includes+.035 margin; this is a reachable cube viewed through the linked opening, not proof of an actual front-side clipped piece. Parent actualcube0.50921m is truly straddling. Original first case preserved; exact-straddle path refinement needs separate grant.",
+  "frames": 1059,
+  "respawns": 0,
+  "jumps": []
+}

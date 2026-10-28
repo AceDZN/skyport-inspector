@@ -1,0 +1,147 @@
+{
+  "scope": "Actual standard UI reproduction of human C4 report on frozenv4. Held cargo carried ahead through orange, dropped, then visible but E cannot retrieve; trusted W remains blocked. No game state/clock/pose/save injection. Own genuine prior earned50 engineering profile, not fresh acceptance. Process0 means observation collection closed normally; gameplay defect remains.",
+  "processExit": 0,
+  "bundleSHA256": "4736e8868fd357eec805dd007d7a40b3adfbf03dfcab817628bb142461f90be7",
+  "manifestSHA256": "70e1dad1ebd1ac90d568f3689775cdb703fabf8445669bfd9d453fe2357e0e83",
+  "actions": 44,
+  "captures": 8,
+  "pageErrors": [],
+  "consoleErrors": [],
+  "commandFailures": [],
+  "movements": [
+    {
+      "input": {
+        "action": "trusted-key",
+        "code": "KeyW",
+        "ms": 700
+      },
+      "from": [
+        -4.000024318695068,
+        0.8649666905403137,
+        -10.668683052062988
+      ],
+      "to": [
+        -4.00030517578125,
+        0.8651009202003479,
+        -11.704899787902832
+      ],
+      "distanceXZ": 1.0362167739017176,
+      "crossings": 1
+    },
+    {
+      "input": {
+        "action": "trusted-key",
+        "code": "KeyW",
+        "ms": 400
+      },
+      "from": [
+        -4.000301361083984,
+        0.8648946285247803,
+        -11.70493221282959
+      ],
+      "to": [
+        -3.999452829360962,
+        0.865013599395752,
+        -11.704976081848145
+      ],
+      "distanceXZ": 0.0008496649785441424,
+      "crossings": 1
+    }
+  ],
+  "player": {
+    "position": [
+      -3.999448776245117,
+      0.8650038838386536,
+      -11.704986572265625
+    ],
+    "velocity": [
+      1.5e-323,
+      0,
+      -1.5e-323
+    ],
+    "yaw": -6.28244536466208,
+    "pitch": -0.9133433715820316,
+    "grounded": true,
+    "crossings": 1
+  },
+  "portals": [
+    {
+      "surface": "source-west",
+      "position": [
+        -7.96,
+        1.55,
+        5.976687296778499
+      ],
+      "normal": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "surface": "remote-north",
+      "position": [
+        -4.000172875626409,
+        1.55,
+        -11.959999999999999
+      ],
+      "normal": [
+        0,
+        0,
+        1
+      ]
+    }
+  ],
+  "crates": [
+    {
+      "id": "cube",
+      "position": [
+        -7.450787544250488,
+        0.5498900413513184,
+        5.858276844024658
+      ],
+      "velocity": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        -2.1065892497063032e-7,
+        -0.7071017026901245,
+        -1.8842767346427536e-8,
+        0.7071119546890259
+      ],
+      "angularVelocity": [
+        0,
+        0,
+        0
+      ],
+      "held": false,
+      "crossings": 3
+    }
+  ],
+  "lastInvalid": {
+    "type": "invalid",
+    "time": 303683,
+    "reason": "Move closer and look at the cube."
+  },
+  "held": null,
+  "stages": [
+    {
+      "path": "/Users/acedzn/idea-plotter/reports/rift-final-campaign-review/v4-c4-seam-baseline-setup.jsonl",
+      "sha256": "14295c6b60bf532861494ca5d64282970bf3bbe0c05742782eaeec4e794370a3",
+      "startIndex": 0,
+      "inputCount": 36,
+      "status": "complete",
+      "currentIndex": 35
+    },
+    {
+      "path": "/Users/acedzn/idea-plotter/reports/rift-final-campaign-review/v4-c4-seam-baseline-blocked.jsonl",
+      "sha256": "ab653cd1d7cbf1d99fd0b6e4e4cb217ec3417ea38e679bfb255553323c9ee8fa",
+      "startIndex": 0,
+      "inputCount": 8,
+      "status": "complete",
+      "currentIndex": 7
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+# Ordinary browser C4 jam baseline
+
+Byte-exact copy of the closed Parent v4 reproduction:44 ordinary UI commands,8 actual captures, process0 for observation collection, no page/console/command errors. **Gameplay failed:** visible dropped cargo cannot be picked up with E and legitimately blocks W traversal. This uses genuinely earned unlocked C4 access for scoped engineering, not fresh campaign acceptance. Frozen-v4 main SHA4736e8868fd357eec805dd007d7a40b3adfbf03dfcab817628bb142461f90be7.
+
+`C4-SEAM-JAM-REPRODUCED.json` records native/player/portal poses, failed E and both trusted W movements; the second400ms W moved only0.0008497m and kept player crossings1. Cargo source-side distance0.50921m is within oriented support0.55m, establishing the actual straddle that the separate native baseline did not exactly match. Root inspected actual capture008: the cargo is directly visible at the lower portal opening, the projector remains visible, and the pickup hint is absent. No asset/renderer change is inferred from this image.
+
+All8 PNGs and both command plans are exact copies. Manifest/actions/checkpoints have lossless `.gz` archives with original raw/stored SHA256 and source locations in `COPY_PROVENANCE.json`; source files were verified unchanged after copying. No browser or user-room action was performed during this copy/review. The later candidate uses mapped release velocity, so its natural settled pose may differ; preserve that distinction when assessing recovery.

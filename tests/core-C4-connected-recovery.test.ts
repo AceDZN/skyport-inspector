@@ -1,0 +1,56 @@
+/** One authored-spawn partial-drop recovery contract. No actor/body/velocity/clock/portal-array writes. */
+import test,{before} from 'node:test';
+import assert from 'node:assert/strict';
+import {mkdirSync,writeFileSync} from 'node:fs';
+import {Box3,Ray,Quaternion} from 'three';
+import RAPIER from '@dimforge/rapier3d-compat';
+import {CoreWorld,initializePhysics} from '../src/core/world';
+import {V,portalMatrix,type Input} from '../src/physics';
+const enabled=process.env.RIFT_C4_PARTIAL_DROP==='1',dt=1/120,idle:Input={forward:0,strafe:0,jump:false},forward:Input={...idle,forward:1};
+before(async()=>{if(enabled)await initializePhysics();});
+test('native authored C4 connected drop regrabs pulls back and completes through the same pair',{skip:!enabled},()=>{
+ const w=new CoreWorld(4),c=w.crates.find(c=>c.id==='cube')!,out=process.env.RIFT_C4_PARTIAL_DROP_OUT;assert.ok(out,'Unique evidence directory required');
+ const inputs:unknown[]=[],frames:unknown[]=[],notes:unknown[]=[],diagnostics:Record<string,unknown>={};let error:unknown;
+ const native=()=>({type:c.rigid.bodyType(),position:{...c.rigid.translation()},nextPosition:{...c.rigid.nextTranslation()},rotation:{...c.rigid.rotation()},nextRotation:{...c.rigid.nextRotation()},linear:{...c.rigid.linvel()},angular:{...c.rigid.angvel()}});
+ const contacts=()=>Array.from({length:w.controller.numComputedCollisions()},(_,i)=>w.controller.computedCollision(i)!).map(v=>({id:v.collider?(w.fixed.get(v.collider.handle)?.id??[...w.doors].find(([,d])=>d.collider.handle===v.collider!.handle)?.[0]??'cargo/body'):'none',normal:{...v.normal1},applied:{...v.translationDeltaApplied},remaining:{...v.translationDeltaRemaining}}));
+ const state=()=>({time:w.time,player:{proxy:w.player.pos.toArray(),native:{...w.character.translation()},next:{...w.character.nextTranslation()},velocity:w.player.vel.toArray(),grounded:w.player.grounded,crossings:w.player.crossings},cube:{proxy:c.pos.toArray(),rotation:c.rotation.toArray(),velocity:c.vel.toArray(),crossings:c.crossings,cooldown:c.cooldown,held:!!c.held,native:native()},holdMap:w.snapshot().holdSpaceTransform,look:{yaw:w.yaw,pitch:w.pitch},held:w.heldId??null,hint:w.interactionHint(),respawns:w.respawns});
+ const step=(label:string,input:Input=idle)=>{w.step(dt,input);frames.push({label,dt,input:{...input},state:state()});};
+ const tick=(label:string,seconds:number,input:Input=idle)=>{inputs.push({label,seconds,input:{...input}});for(let i=0;i<Math.ceil(seconds/dt);i++)step(label,input);};
+ const look=(target:ReturnType<typeof V>)=>{const d=target.clone().sub(w.eye());w.yaw=Math.atan2(-d.x,-d.z);w.pitch=Math.asin(d.y/d.length());inputs.push({action:'camera-look',target:target.toArray()});};
+ // Standard W bursts and neutral braking; no fixture/pose/velocity assignment.
+ const walk=(label:string,x:number,z:number,stop=.25)=>{inputs.push({action:'ordinary-walk',label,x,z,stop,scope:'Client-style bounded W bursts; native neutral0.15s substitutes ordinary UI aim/key-release overhead.'});for(let i=0;i<100;i++){const d=Math.hypot(w.player.pos.x-x,w.player.pos.z-z);if(w.campaignResult||d<stop)return;look(V(x,w.eye().y,z));tick(label+'-W',Math.min(.45,d/4.8),forward);tick(label+'-key-release-neutral',.15);}assert.fail('Ordinary walk did not reach '+label);};
+ const e=(label:string)=>{const before=state();if(!w.interact())w.grabDrop();const immediatelyAfter=state();step(label);notes.push({label,before,immediatelyAfter,after:state()});};
+ const shot=(index:0|1,id:string,p:ReturnType<typeof V>)=>{const s=w.surfaces.find(s=>s.id===id)!;look(p);const delta=p.clone().sub(w.eye()),len=delta.length(),hit=w.physics.castRay(new RAPIER.Ray(w.eye(),delta.normalize()),len-.07,true,undefined,undefined,w.characterCollider,undefined,col=>{const solid=w.fixed.get(col.handle);return !(solid&&(solid.id===s.solidId||solid.kind==='glass'));});assert.equal(hit,null,'Real opaque body blocks aimed portal shot');assert.equal(w.place(index,id,p),true);step('actual-aimed-portal-'+id);tick('ordinary-placement-settle',.18);};
+ const geometry=()=>{
+  const eye=w.eye(),direction=w.forward();const rayInfo=(position:ReturnType<typeof V>)=>{const d=position.clone().sub(eye),distance=d.length(),ray=new Ray(eye,d.clone().normalize());return{position:position.toArray(),distance,dot:d.clone().normalize().dot(direction),fullSolidRay:w.activeSolids().map(s=>({id:s.id,hit:ray.intersectBox(new Box3(s.min,s.max),V())})).filter(v=>v.hit&&v.hit.distanceTo(eye)<distance-c.half.x*.8).map(v=>({id:v.id,distance:v.hit!.distanceTo(eye),point:v.hit!.toArray()}))};};
+  const representations=[{kind:'native-centre',...rayInfo(c.pos)}],apertures=[];
+  if(w.portals.every(Boolean))for(let i=0;i<2;i++){const p=w.portals[i]!,exit=w.portals[1-i]!,matrix=portalMatrix(p,exit),rotation=c.rotation.clone().premultiply(new Quaternion().setFromRotationMatrix(matrix)),mapped=c.pos.clone().applyMatrix4(matrix),axes=[V(1,0,0),V(0,1,0),V(0,0,1)].map(v=>v.applyQuaternion(c.rotation)),radius=axes.reduce((a,v,j)=>a+Math.abs(v.dot(p.normal))*[c.half.x,c.half.y,c.half.z][j],0),signed=c.pos.clone().sub(p.center).dot(p.normal),local=c.pos.clone().applyMatrix4(p.matrix.clone().invert()),floor=Math.abs(p.normal.y)>.8,renderedCopy=Math.abs(signed)<=radius+.035&&Math.abs(local.x)<=(floor?1.15:.9)+radius&&Math.abs(local.y)<=(floor?1.15:1.55)+radius;
+   apertures.push({index:i,surface:p.surfaceId,position:p.center.toArray(),normal:p.normal.toArray(),signedNativeDistance:signed,orientedNormalSupport:radius,local:local.toArray(),nativeEntryFits:w.aperture(c,p),mappedExitFits:w.aperture(c,exit,mapped,rotation),renderedCopy});representations.push({kind:'connected-view-from-'+i,...rayInfo(mapped)});
+  }
+  return{apertures,representations,nativeReachCandidate:representations[0].distance<3.1&&representations[0].dot>.65,contacts:contacts(),world:w.snapshot()};
+ };
+ try{
+  assert.ok(w.player.pos.distanceTo(V(-5,.87,7))<.05);tick('actual-authored-spawn-wait',.25);assert.equal(w.respawns,0);
+  walk('real-maintenance-button',-4,4);tick('real-button-open-wait',1);assert.equal(w.pads.find(p=>p.id==='maintenance-button')!.pressed,true);assert.ok(w.machines.devices.find(d=>d.spec.id==='access-door')!.progress>.99);
+  // Aim at the observed UI ray coordinates; place() performs its normal surface offset.
+  shot(0,'source-west',V(-7.985,1.55,5.97669));shot(1,'remote-north',V(-4.00017,1.55,-11.985));
+  walk('source-pair-approach',-6.7,6);tick('source-pair-wait',.8);look(V(-8.5,1.55,6));tick('ordinary-W500-source-entry',.5,forward);assert.equal(w.player.crossings,1);
+  walk('original-cube-approach',-4,-9.8);look(V(-4,.55,-8));tick('original-cube-look-wait',.25);e('ordinary-E-original-pickup');assert.equal(w.heldId,'cube');
+  walk('orange-partial-carry-approach',-4,-10.7,.05);look(w.eye().add(V(0,0,-20)));tick('ordinary-North-facing-partial-hold',.8);notes.push({label:'before-ordinary-partial-drop',state:state(),geometry:geometry()});
+  assert.equal(w.player.crossings,1,'Player must remain in remote room before the partial drop');assert.ok(c.crossings>0,'Cube must have independently crossed through ordinary carry');assert.ok(w.snapshot().holdSpaceTransform.some((v,i)=>Math.abs(v-([0,5,10,15].includes(i)?1:0))>.001));
+  e('ordinary-E-partial-drop');assert.equal(w.heldId,undefined);tick('ordinary-dropped-settle',1.2);const beforeRegrab=geometry();diagnostics.beforeRegrab={state:state(),geometry:beforeRegrab};
+  const visible=beforeRegrab.representations.find(v=>v.kind.startsWith('connected-view')&&v.distance<3.1&&v.dot>.65);assert.ok(visible,'Actual post-drop cube must remain within aimed connected-view reach; it need not remain lodged');
+  e('ordinary-E-visible-seam-regrab');const regrabbed=w.snapshot().held==='cube';diagnostics.regrabbed=regrabbed;diagnostics.afterRegrab={state:state(),geometry:geometry()};
+  const beforeW=state();
+  if(regrabbed){
+   const pickup=notes.find(v=>(v as {label:string}).label==='ordinary-E-visible-seam-regrab') as {immediatelyAfter:{holdMap:number[]}};
+   const expectedMap=portalMatrix(w.portals[1]!,w.portals[0]!).elements;assert.ok(pickup.immediatelyAfter.holdMap.every((v,i)=>Math.abs(v-expectedMap[i])<1e-6),'Connected pickup must retain selected player-to-native space');
+   const prior=c.crossings;tick('ordinary-S600-connected-pullback',.6,{...idle,forward:-1});assert.equal(w.player.crossings,1,'Pullback may not teleport player');assert.ok(c.crossings>prior,'Ordinary pullback must recover cube to player side');tick('normal-pullback-brake',.2);
+   look(w.eye().add(V(0,0,-20)));for(let i=0;i<480&&w.player.crossings===1;i++)step('ordinary-W-retraverse',forward);tick('ordinary-W-exit-clearance',.18,forward);
+  }else tick('ordinary-W800-after-E',.8,forward);
+  diagnostics.WAttempt={before:beforeW,after:state(),geometry:geometry(),events:w.events.slice(-24)};
+  assert.equal(regrabbed,true,'E cannot retrieve the actual nearby visible portal-straddled cube; W attempt is preserved in diagnostics');assert.ok(w.player.crossings>1,'Ordinary W must traverse after legal connected-space regrab');
+  walk('actual-button-drop-approach',-5.8,4);look(V(-4,1.2,4));tick('normal-button-release-aim',.35);e('ordinary-E-maintenance-placement');tick('normal-button-pressure-settle',1.2);assert.equal(w.pads.find(p=>p.id==='maintenance-button')!.crateId,'cube');
+  walk('south-detour',-4,6);walk('east-exit-branch',2,5.5);walk('exit-approach',6.5,2);walk('actual-exit',10.7,2);assert.equal(w.campaignResult?.goalMatched,true);assert.equal(w.respawns,0);assert.equal(w.events.some(e=>e.type==='jump'),false);
+ }catch(e){error=e;throw e;}finally{mkdirSync(out,{recursive:true});writeFileSync(out+'/trajectory.json',JSON.stringify({scope:'ONE actual authored C4 spawn/input path, translating parent36-command v4 prefix. No body/actor/velocity/portal-array/machine/clock/goal/history/save setter. Native camera/aimed portal/WASD/E only. Connected-view reach may persist after correctly mapped release clears physical straddle. No browser/user-room action.',prefixSource:'/Users/acedzn/idea-plotter/reports/rift-final-campaign-review/v4-c4-seam-baseline-setup.jsonl',translation:'Observed UI portal ray coordinates retained; native W bursts use ordinary neutral braking0.15s for UI key/aim overhead. No pose matching by assignment.',error:error?String(error):null,diagnostics,notes,inputs,frames,events:w.events,final:state(),world:w.snapshot()},null,2)+'\n');w.dispose();}
+});
