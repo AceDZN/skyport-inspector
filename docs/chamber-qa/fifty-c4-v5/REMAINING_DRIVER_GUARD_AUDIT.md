@@ -1,0 +1,11 @@
+# Remaining38–50 driver guard audit
+
+**Clean within this narrow static scope. No correction is proposed.** Audited the stated Parent tail `v5-recovery26-result-flow-and-tail.jsonl`, rows767–1633, SHA `e02d24cf11fa1b8f96d57a1f4195f430eb07445e52274254dae1472d596fba4d` unchanged before/after. This checks only the known optional-signal `=== false` and result/menu-flow patterns, not route geometry, timing, audio commands, live plan selection or gameplay completion. Parent's independent audit also reported clean.
+
+All31 remaining false signal predicates have explicit producers:28 `moving:DEVICE` checks for authored devices, plus three optical receiver checks (C45 `final-gallery-light` twice; C50 `archive-light` once). CoreWorld assigns `moving:` for every device on update, initializes every authored optical receiver flag to false before tracing, and snapshots those published flags. The corresponding device/receiver definitions exist in the38–50 blueprints. There is no remaining false guard on an absent optional switch-ID signal like the earlier C24 driver fault.
+
+No stale result-to-menu wait occurs. The twelve38→49 transitions click the result's Next action and then expect playing; `load()` sets playing. The only remaining menu assertion is row1629, immediately after the explicit final reload at1628, matching `initializeGame()` setting menu. Result guards follow physical completion, including C50's final key-when that stops on result. No result/menu condition needs relaxing or removal.
+
+`MachineSystems.flag()` returning a fallback false for circuit evaluation does not publish that key in `world.signals`. The remaining predicates avoid that trap. Retain valid `moving:* === false` checks: `devices.active === false` would not be an equivalent replacement because a powered device can be stationary at a dock. Optical receiver false checks are also explicitly published and should stay unchanged.
+
+The JSON companion retains every audited false predicate with row/level, exact original condition and source-line evidence; mode/reload/Next commands, source hashes and file SHA are also recorded. No Parent repo/plan, runtime, app or fixture was modified. No native, compiler, build, browser or Git command ran. All native jobs remain closed; Parent watcher20296/browser66166 owns the remaining fresh campaign and final wrap.

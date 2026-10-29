@@ -1,0 +1,1093 @@
+{
+  "status": "CLEAN_WITHIN_NARROW_STATIC_SCOPE",
+  "scope": "Read-only audit of stated Parent tail, remaining38\u201350 known optional-signal false and result/menu-wait patterns only. No native/compiler/build/browser/Git, app or Parent-plan edit. No physical route/timing/audio correctness or gameplay completion claim. Parent own audit also reported clean.",
+  "plan": {
+    "path": "/Users/acedzn/idea-plotter/reports/rift-final-campaign-review/v5-recovery26-result-flow-and-tail.jsonl",
+    "sha256Before": "e02d24cf11fa1b8f96d57a1f4195f430eb07445e52274254dae1472d596fba4d",
+    "sha256After": "e02d24cf11fa1b8f96d57a1f4195f430eb07445e52274254dae1472d596fba4d",
+    "rows": 1633,
+    "auditedRows": [
+      767,
+      1633
+    ],
+    "levels": [
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50
+    ]
+  },
+  "findings": [],
+  "equivalentPublicStateCorrections": [],
+  "falseSignalPredicateCount": 31,
+  "falseSignalClasses": {
+    "explicit-derived-motion-field": 28,
+    "explicit-optical-receiver-field": 3
+  },
+  "falseSignalChecks": [
+    {
+      "row": 815,
+      "level": 39,
+      "location": ".when[3]",
+      "oldPredicate": {
+        "path": "world.signals.moving:beam-freight",
+        "equals": false
+      },
+      "verdict": "VALID; retain unchanged",
+      "classification": "explicit-derived-motion-field",
+      "producer": {
+        "file": "src/core/world.ts",
+        "line": 482,
+        "fragment": "flags['moving:'+d.spec.id]=d.moving"
+      },
+      "blueprintDevice": {
+        "file": "src/core/levels/completion.ts",
+        "line": 113,
+        "fragment": "id:'beam-freight'"
+      }
+    },
+    {
+      "row": 820,
+      "level": 39,
+      "location": ".when[3]",
+      "oldPredicate": {
+        "path": "world.signals.moving:beam-freight",
+        "equals": false
+      },
+      "verdict": "VALID; retain unchanged",
+      "classification": "explicit-derived-motion-field",
+      "producer": {
+        "file": "src/core/world.ts",
+        "line": 482,
+        "fragment": "flags['moving:'+d.spec.id]=d.moving"
+      },
+      "blueprintDevice": {
+        "file": "src/core/levels/completion.ts",
+        "line": 113,
+        "fragment": "id:'beam-freight'"
+      }
+    },
+    {
+      "row": 836,
+      "level": 39,
+      "location": ".when[3]",
+      "oldPredicate": {
+        "path": "world.signals.moving:connection-lift",
+        "equals": false
+      },
+      "verdict": "VALID; retain unchanged",
+      "classification": "explicit-derived-motion-field",
+      "producer": {
+        "file": "src/core/world.ts",
+        "line": 482,
+        "fragment": "flags['moving:'+d.spec.id]=d.moving"
+      },
+      "blueprintDevice": {
+        "file": "src/core/levels/completion.ts",
+        "line": 120,
+        "fragment": "id:'connection-lift'"
+      }
+    },
+    {
+      "row": 838,
+      "level": 39,
+      "location": ".when[3]",
+      "oldPredicate": {
+        "path": "world.signals.moving:connection-lift",
+        "equals": false
+      },
+      "verdict": "VALID; retain unchanged",
+      "classification": "explicit-derived-motion-field",
+      "producer": {
+        "file": "src/core/world.ts",
+        "line": 482,
+        "fragment": "flags['moving:'+d.spec.id]=d.moving"
+      },
+      "blueprintDevice": {
+        "file": "src/core/levels/completion.ts",
+        "line": 120,
+        "fragment": "id:'connection-lift'"
+      }
+    },
+    {
+      "row": 918,
+      "level": 40,
+      "location": ".when[3]",
+      "oldPredicate": {
+        "path": "world.signals.moving:final-lift",
+        "equals": false
+      },
+      "verdict": "VALID; retain unchanged",
+      "classification": "explicit-derived-motion-field",
+      "producer": {
+        "file": "src/core/world.ts",
+        "line": 482,
+        "fragment": "flags['moving:'+d.spec.id]=d.moving"
+      },
+      "blueprintDevice": {
+        "file": "src/core/levels/completion.ts",
+        "line": 152,
+        "fragment": "id:'final-lift'"
+      }
+    },
+    {
+      "row": 920,
+      "level": 40,
+      "location": ".when[3]",
+      "oldPredicate": {
+        "path": "world.signals.moving:final-lift",
+        "equals": false
+      },
+      "verdict": "VALID; retain unchanged",
+      "classification": "explicit-derived-motion-field",
+      "producer": {
+        "file": "src/core/world.ts",
+        "line": 482,
+        "fragment": "flags['moving:'+d.spec.id]=d.moving"
+      },
+      "blueprintDevice": {
+        "file": "src/core/levels/completion.ts",
+        "line": 152,
+        "fragment": "id:'final-lift'"
+      }
+    },
+    {
+      "row": 964,
+      "level": 41,
+      "location": "",
+      "oldPredicate": {
+        "action": "assert",
+        "path": "world.signals.moving:conditional-ferry",
+        "equals": false
+      },
+      "verdict": "VALID; retain unchanged",
+      "classification": "explicit-derived-motion-field",
+      "producer": {
+        "file": "src/core/world.ts",
+        "line": 482,
+        "fragment": "flags['moving:'+d.spec.id]=d.moving"
+      },
+      "blueprintDevice": {
+        "file": "src/core/levels/conditional.ts",
+        "line": 45,
+        "fragment": "id:'conditional-ferry'"
+      }
+    },
+    {
+      "row": 970,
+      "level": 41,
+      "location": ".conditions[1]",
+      "oldPredicate": {
+        "path": "world.signals.moving:conditional-cargo-lift",
+        "equals": false
+      },
+      "verdict": "VALID; retain unchanged",
+      "classification": "explicit-derived-motion-field",
+      "producer": {
+        "file": "src/core/world.ts",
+        "line": 482,
+        "fragment": "flags['moving:'+d.spec.id]=d.moving"
+      },
+      "blueprintDevice": {
+        "file": "src/core/levels/conditional.ts",
+        "line": 34,
+        "fragment": "id:'conditional-cargo-lift'"
+      }
+    },
+    {
+      "row": 991,
+      "level": 41,
+      "location": ".when[3]",
+      "oldPredicate": {
+        "path": "world.signals.moving:conditional-ferry",
+        "equals": false
+      },
+      "verdict": "VALID; retain unchanged",
+      "classification": "explicit-derived-motion-field",
+      "producer": {
+        "file": "src/core/world.ts",
+        "line": 482,
+        "fragment": "flags['moving:'+d.spec.id]=d.moving"
+      },
+      "blueprintDevice": {
+        "file": "src/core/levels/conditional.ts",
+        "line": 45,
+        "fragment": "id:'conditional-ferry'"
+      }
+    },
+    {
+      "row": 994,
+      "level": 41,
+      "location": ".when[3]",
+      "oldPredicate": {
+        "path": "world.signals.moving:conditional-ferry",
+        "equals": false
+      },
+      "verdict": "VALID; retain unchanged",
+      "classification": "explicit-derived-motion-field",
+      "producer": {
+        "file": "src/core/world.ts",
+        "line": 482,
+        "fragment": "flags['moving:'+d.spec.id]=d.moving"
+      },
+      "blueprintDevice": {
+        "file": "src/core/levels/conditional.ts",
+        "line": 45,
+        "fragment": "id:'conditional-ferry'"
+      }
+    },
+    {
+      "row": 1023,
+      "level": 42,
+      "location": ".when[3]",
+      "oldPredicate": {
+        "path": "world.signals.moving:arrival-gallery-lift",
+        "equals": false
+      },
+      "verdict": "VALID; retain unchanged",
+      "classification": "explicit-derived-motion-field",
+      "producer": {
+        "file": "src/core/world.ts",
+        "line": 482,
+        "fragment": "flags['moving:'+d.spec.id]=d.moving"
+      },
+      "blueprintDevice": {
+        "file": "src/core/levels/conditional.ts",
+        "line": 108,
+        "fragment": "id:'arrival-gallery-lift'"
+      }
+    },
+    {
+      "row": 1026,
+      "level": 42,
+      "location": ".when[3]",
+      "oldPredicate": {
+        "path": "world.signals.moving:arrival-gallery-lift",
+        "equals": false
+      },
+      "verdict": "VALID; retain unchanged",
+      "classification": "explicit-derived-motion-field",
+      "producer": {
+        "file": "src/core/world.ts",
+        "line": 482,
+        "fragment": "flags['moving:'+d.spec.id]=d.moving"
+      },
+      "blueprintDevice": {
+        "file": "src/core/levels/conditional.ts",
+        "line": 108,
+        "fragment": "id:'arrival-gallery-lift'"
+      }
+    },
+    {
+      "row": 1082,
+      "level": 43,
+      "location": ".when[3]",
+      "oldPredicate": {
+        "path": "world.signals.moving:negative-archive-lift",
+        "equals": false
+      },
+      "verdict": "VALID; retain unchanged",
+      "classification": "explicit-derived-motion-field",
+      "producer": {
+        "file": "src/core/world.ts",
+        "line": 482,
+        "fragment": "flags['moving:'+d.spec.id]=d.moving"
+      },
+      "blueprintDevice": {
+        "file": "src/core/levels/conditional.ts",
+        "line": 206,
+        "fragment": "id:'negative-archive-lift'"
+      }
+    },
+    {
+      "row": 1085,
+      "level": 43,
+      "location": ".when[3]",
+      "oldPredicate": {
+        "path": "world.signals.moving:negative-archive-lift",
+        "equals": false
+      },
+      "verdict": "VALID; retain unchanged",
+      "classification": "explicit-derived-motion-field",
+      "producer": {
+        "file": "src/core/world.ts",
+        "line": 482,
+        "fragment": "flags['moving:'+d.spec.id]=d.moving"
+      },
+      "blueprintDevice": {
+        "file": "src/core/levels/conditional.ts",
+        "line": 206,
+        "fragment": "id:'negative-archive-lift'"
+      }
+    },
+    {
+      "row": 1118,
+      "level": 44,
+      "location": ".when[2]",
+      "oldPredicate": {
+        "path": "world.signals.moving:serial-deck-a",
+        "equals": false
+      },
+      "verdict": "VALID; retain unchanged",
+      "classification": "explicit-derived-motion-field",
+      "producer": {
+        "file": "src/core/world.ts",
+        "line": 482,
+        "fragment": "flags['moving:'+d.spec.id]=d.moving"
+      },
+      "blueprintDevice": {
+        "file": "src/core/levels/conditional.ts",
+        "line": 257,
+        "fragment": "id:'serial-deck-a'"
+      }
+    },
+    {
+      "row": 1120,
+      "level": 44,
+      "location": ".when[1]",
+      "oldPredicate": {
+        "path": "world.signals.moving:serial-deck-a",
+        "equals": false
+      },
+      "verdict": "VALID; retain unchanged",
+      "classification": "explicit-derived-motion-field",
+      "producer": {
+        "file": "src/core/world.ts",
+        "line": 482,
+        "fragment": "flags['moving:'+d.spec.id]=d.moving"
+      },
+      "blueprintDevice": {
+        "file": "src/core/levels/conditional.ts",
+        "line": 257,
+        "fragment": "id:'serial-deck-a'"
+      }
+    },
+    {
+      "row": 1123,
+      "level": 44,
+      "location": ".when[1]",
+      "oldPredicate": {
+        "path": "world.signals.moving:serial-deck-a",
+        "equals": false
+      },
+      "verdict": "VALID; retain unchanged",
+      "classification": "explicit-derived-motion-field",
+      "producer": {
+        "file": "src/core/world.ts",
+        "line": 482,
+        "fragment": "flags['moving:'+d.spec.id]=d.moving"
+      },
+      "blueprintDevice": {
+        "file": "src/core/levels/conditional.ts",
+        "line": 257,
+        "fragment": "id:'serial-deck-a'"
+      }
+    },
+    {
+      "row": 1131,
+      "level": 44,
+      "location": ".when[1]",
+      "oldPredicate": {
+        "path": "world.signals.moving:serial-deck-b",
+        "equals": false
+      },
+      "verdict": "VALID; retain unchanged",
+      "classification": "explicit-derived-motion-field",
+      "producer": {
+        "file": "src/core/world.ts",
+        "line": 482,
+        "fragment": "flags['moving:'+d.spec.id]=d.moving"
+      },
+      "blueprintDevice": {
+        "file": "src/core/levels/conditional.ts",
+        "line": 258,
+        "fragment": "id:'serial-deck-b'"
+      }
+    },
+    {
+      "row": 1134,
+      "level": 44,
+      "location": ".when[1]",
+      "oldPredicate": {
+        "path": "world.signals.moving:serial-deck-b",
+        "equals": false
+      },
+      "verdict": "VALID; retain unchanged",
+      "classification": "explicit-derived-motion-field",
+      "producer": {
+        "file": "src/core/world.ts",
+        "line": 482,
+        "fragment": "flags['moving:'+d.spec.id]=d.moving"
+      },
+      "blueprintDevice": {
+        "file": "src/core/levels/conditional.ts",
+        "line": 258,
+        "fragment": "id:'serial-deck-b'"
+      }
+    },
+    {
+      "row": 1169,
+      "level": 45,
+      "location": ".conditions[0]",
+      "oldPredicate": {
+        "path": "world.signals.final-gallery-light",
+        "equals": false
+      },
+      "verdict": "VALID; retain unchanged",
+      "classification": "explicit-optical-receiver-field",
+      "producer": {
+        "file": "src/core/world.ts",
+        "line": 415,
+        "fragment": "flags[receiver.id]=false"
+      },
+      "blueprintReceiver": {
+        "file": "src/core/levels/conditional.ts",
+        "line": 412,
+        "fragment": "receivers:[{id:'final-gallery-light'"
+      }
+    },
+    {
+      "row": 1190,
+      "level": 45,
+      "location": ".conditions[2]",
+      "oldPredicate": {
+        "path": "world.signals.final-gallery-light",
+        "equals": false
+      },
+      "verdict": "VALID; retain unchanged",
+      "classification": "explicit-optical-receiver-field",
+      "producer": {
+        "file": "src/core/world.ts",
+        "line": 415,
+        "fragment": "flags[receiver.id]=false"
+      },
+      "blueprintReceiver": {
+        "file": "src/core/levels/conditional.ts",
+        "line": 412,
+        "fragment": "receivers:[{id:'final-gallery-light'"
+      }
+    },
+    {
+      "row": 1239,
+      "level": 45,
+      "location": ".when[1]",
+      "oldPredicate": {
+        "path": "world.signals.moving:final-archive-lift",
+        "equals": false
+      },
+      "verdict": "VALID; retain unchanged",
+      "classification": "explicit-derived-motion-field",
+      "producer": {
+        "file": "src/core/world.ts",
+        "line": 482,
+        "fragment": "flags['moving:'+d.spec.id]=d.moving"
+      },
+      "blueprintDevice": {
+        "file": "src/core/levels/conditional.ts",
+        "line": 372,
+        "fragment": "id:'final-archive-lift'"
+      }
+    },
+    {
+      "row": 1242,
+      "level": 45,
+      "location": ".when[1]",
+      "oldPredicate": {
+        "path": "world.signals.moving:final-archive-lift",
+        "equals": false
+      },
+      "verdict": "VALID; retain unchanged",
+      "classification": "explicit-derived-motion-field",
+      "producer": {
+        "file": "src/core/world.ts",
+        "line": 482,
+        "fragment": "flags['moving:'+d.spec.id]=d.moving"
+      },
+      "blueprintDevice": {
+        "file": "src/core/levels/conditional.ts",
+        "line": 372,
+        "fragment": "id:'final-archive-lift'"
+      }
+    },
+    {
+      "row": 1418,
+      "level": 48,
+      "location": ".conditions[1]",
+      "oldPredicate": {
+        "path": "world.signals.moving:question-freight-lift",
+        "equals": false
+      },
+      "verdict": "VALID; retain unchanged",
+      "classification": "explicit-derived-motion-field",
+      "producer": {
+        "file": "src/core/world.ts",
+        "line": 482,
+        "fragment": "flags['moving:'+d.spec.id]=d.moving"
+      },
+      "blueprintDevice": {
+        "file": "src/core/levels/reported-46-48.ts",
+        "line": 207,
+        "fragment": "id:'question-freight-lift'"
+      }
+    },
+    {
+      "row": 1424,
+      "level": 48,
+      "location": ".when[1]",
+      "oldPredicate": {
+        "path": "world.signals.moving:question-freight-lift",
+        "equals": false
+      },
+      "verdict": "VALID; retain unchanged",
+      "classification": "explicit-derived-motion-field",
+      "producer": {
+        "file": "src/core/world.ts",
+        "line": 482,
+        "fragment": "flags['moving:'+d.spec.id]=d.moving"
+      },
+      "blueprintDevice": {
+        "file": "src/core/levels/reported-46-48.ts",
+        "line": 207,
+        "fragment": "id:'question-freight-lift'"
+      }
+    },
+    {
+      "row": 1429,
+      "level": 48,
+      "location": ".conditions[1]",
+      "oldPredicate": {
+        "path": "world.signals.moving:question-freight-lift",
+        "equals": false
+      },
+      "verdict": "VALID; retain unchanged",
+      "classification": "explicit-derived-motion-field",
+      "producer": {
+        "file": "src/core/world.ts",
+        "line": 482,
+        "fragment": "flags['moving:'+d.spec.id]=d.moving"
+      },
+      "blueprintDevice": {
+        "file": "src/core/levels/reported-46-48.ts",
+        "line": 207,
+        "fragment": "id:'question-freight-lift'"
+      }
+    },
+    {
+      "row": 1431,
+      "level": 48,
+      "location": ".when[1]",
+      "oldPredicate": {
+        "path": "world.signals.moving:question-freight-lift",
+        "equals": false
+      },
+      "verdict": "VALID; retain unchanged",
+      "classification": "explicit-derived-motion-field",
+      "producer": {
+        "file": "src/core/world.ts",
+        "line": 482,
+        "fragment": "flags['moving:'+d.spec.id]=d.moving"
+      },
+      "blueprintDevice": {
+        "file": "src/core/levels/reported-46-48.ts",
+        "line": 207,
+        "fragment": "id:'question-freight-lift'"
+      }
+    },
+    {
+      "row": 1602,
+      "level": 50,
+      "location": ".conditions[1]",
+      "oldPredicate": {
+        "path": "world.signals.archive-light",
+        "equals": false
+      },
+      "verdict": "VALID; retain unchanged",
+      "classification": "explicit-optical-receiver-field",
+      "producer": {
+        "file": "src/core/world.ts",
+        "line": 415,
+        "fragment": "flags[receiver.id]=false"
+      },
+      "blueprintReceiver": {
+        "file": "src/core/levels/reported-49-50.ts",
+        "line": 81,
+        "fragment": "{id:'archive-light',position:"
+      }
+    },
+    {
+      "row": 1606,
+      "level": 50,
+      "location": ".when[1]",
+      "oldPredicate": {
+        "path": "world.signals.moving:final-ferry",
+        "equals": false
+      },
+      "verdict": "VALID; retain unchanged",
+      "classification": "explicit-derived-motion-field",
+      "producer": {
+        "file": "src/core/world.ts",
+        "line": 482,
+        "fragment": "flags['moving:'+d.spec.id]=d.moving"
+      },
+      "blueprintDevice": {
+        "file": "src/core/levels/reported-49-50.ts",
+        "line": 54,
+        "fragment": "id:'final-ferry'"
+      }
+    },
+    {
+      "row": 1609,
+      "level": 50,
+      "location": ".when[1]",
+      "oldPredicate": {
+        "path": "world.signals.moving:final-ferry",
+        "equals": false
+      },
+      "verdict": "VALID; retain unchanged",
+      "classification": "explicit-derived-motion-field",
+      "producer": {
+        "file": "src/core/world.ts",
+        "line": 482,
+        "fragment": "flags['moving:'+d.spec.id]=d.moving"
+      },
+      "blueprintDevice": {
+        "file": "src/core/levels/reported-49-50.ts",
+        "line": 54,
+        "fragment": "id:'final-ferry'"
+      }
+    },
+    {
+      "row": 1612,
+      "level": 50,
+      "location": ".when[2]",
+      "oldPredicate": {
+        "path": "world.signals.moving:final-ferry",
+        "equals": false
+      },
+      "verdict": "VALID; retain unchanged",
+      "classification": "explicit-derived-motion-field",
+      "producer": {
+        "file": "src/core/world.ts",
+        "line": 482,
+        "fragment": "flags['moving:'+d.spec.id]=d.moving"
+      },
+      "blueprintDevice": {
+        "file": "src/core/levels/reported-49-50.ts",
+        "line": 54,
+        "fragment": "id:'final-ferry'"
+      }
+    }
+  ],
+  "modeFlow": {
+    "modePredicates": [
+      {
+        "row": 801,
+        "levelContext": 38,
+        "action": "assert",
+        "location": "",
+        "equals": "playing"
+      },
+      {
+        "row": 849,
+        "levelContext": 39,
+        "action": "assert",
+        "location": "",
+        "equals": "playing"
+      },
+      {
+        "row": 931,
+        "levelContext": 40,
+        "action": "assert",
+        "location": "",
+        "equals": "playing"
+      },
+      {
+        "row": 1006,
+        "levelContext": 41,
+        "action": "assert",
+        "location": "",
+        "equals": "playing"
+      },
+      {
+        "row": 1038,
+        "levelContext": 42,
+        "action": "assert",
+        "location": "",
+        "equals": "playing"
+      },
+      {
+        "row": 1097,
+        "levelContext": 43,
+        "action": "assert",
+        "location": "",
+        "equals": "playing"
+      },
+      {
+        "row": 1100,
+        "levelContext": 44,
+        "action": "assert",
+        "location": "",
+        "equals": "playing"
+      },
+      {
+        "row": 1147,
+        "levelContext": 44,
+        "action": "assert",
+        "location": "",
+        "equals": "playing"
+      },
+      {
+        "row": 1150,
+        "levelContext": 45,
+        "action": "assert",
+        "location": "",
+        "equals": "playing"
+      },
+      {
+        "row": 1203,
+        "levelContext": 45,
+        "action": "assert",
+        "location": "",
+        "equals": "playing"
+      },
+      {
+        "row": 1255,
+        "levelContext": 45,
+        "action": "assert",
+        "location": "",
+        "equals": "playing"
+      },
+      {
+        "row": 1258,
+        "levelContext": 46,
+        "action": "assert",
+        "location": "",
+        "equals": "playing"
+      },
+      {
+        "row": 1308,
+        "levelContext": 46,
+        "action": "assert",
+        "location": "",
+        "equals": "playing"
+      },
+      {
+        "row": 1311,
+        "levelContext": 47,
+        "action": "assert",
+        "location": "",
+        "equals": "playing"
+      },
+      {
+        "row": 1388,
+        "levelContext": 47,
+        "action": "assert",
+        "location": "",
+        "equals": "playing"
+      },
+      {
+        "row": 1391,
+        "levelContext": 48,
+        "action": "assert",
+        "location": "",
+        "equals": "playing"
+      },
+      {
+        "row": 1448,
+        "levelContext": 48,
+        "action": "assert",
+        "location": "",
+        "equals": "playing"
+      },
+      {
+        "row": 1451,
+        "levelContext": 49,
+        "action": "assert",
+        "location": "",
+        "equals": "playing"
+      },
+      {
+        "row": 1498,
+        "levelContext": 49,
+        "action": "assert",
+        "location": "",
+        "equals": "result"
+      },
+      {
+        "row": 1512,
+        "levelContext": 49,
+        "action": "assert",
+        "location": "",
+        "equals": "playing"
+      },
+      {
+        "row": 1515,
+        "levelContext": 50,
+        "action": "assert",
+        "location": "",
+        "equals": "playing"
+      },
+      {
+        "row": 1612,
+        "levelContext": 50,
+        "action": "key-when",
+        "location": ".until[0]",
+        "equals": "result"
+      },
+      {
+        "row": 1613,
+        "levelContext": 50,
+        "action": "assert",
+        "location": "",
+        "equals": "result"
+      },
+      {
+        "row": 1629,
+        "levelContext": 50,
+        "action": "assert",
+        "location": "",
+        "equals": "menu"
+      }
+    ],
+    "remainingMenuWaits": [],
+    "explicitReloads": [
+      {
+        "row": 1628,
+        "followingRow": 1629,
+        "followingCommand": {
+          "action": "assert",
+          "path": "mode",
+          "equals": "menu"
+        }
+      }
+    ],
+    "nextTransitions": [
+      {
+        "row": 800,
+        "afterCompletedLevel": 38,
+        "followingModeCommand": {
+          "action": "assert",
+          "path": "mode",
+          "equals": "playing"
+        },
+        "followingLevelCommand": {
+          "action": "assert",
+          "path": "level",
+          "equals": 39
+        }
+      },
+      {
+        "row": 848,
+        "afterCompletedLevel": 39,
+        "followingModeCommand": {
+          "action": "assert",
+          "path": "mode",
+          "equals": "playing"
+        },
+        "followingLevelCommand": {
+          "action": "assert",
+          "path": "level",
+          "equals": 40
+        }
+      },
+      {
+        "row": 930,
+        "afterCompletedLevel": 40,
+        "followingModeCommand": {
+          "action": "assert",
+          "path": "mode",
+          "equals": "playing"
+        },
+        "followingLevelCommand": {
+          "action": "assert",
+          "path": "level",
+          "equals": 41
+        }
+      },
+      {
+        "row": 1005,
+        "afterCompletedLevel": 41,
+        "followingModeCommand": {
+          "action": "assert",
+          "path": "mode",
+          "equals": "playing"
+        },
+        "followingLevelCommand": {
+          "action": "assert",
+          "path": "level",
+          "equals": 42
+        }
+      },
+      {
+        "row": 1037,
+        "afterCompletedLevel": 42,
+        "followingModeCommand": {
+          "action": "assert",
+          "path": "mode",
+          "equals": "playing"
+        },
+        "followingLevelCommand": {
+          "action": "assert",
+          "path": "level",
+          "equals": 43
+        }
+      },
+      {
+        "row": 1096,
+        "afterCompletedLevel": 43,
+        "followingModeCommand": {
+          "action": "assert",
+          "path": "mode",
+          "equals": "playing"
+        },
+        "followingLevelCommand": {
+          "action": "assert",
+          "path": "level",
+          "equals": 44
+        }
+      },
+      {
+        "row": 1146,
+        "afterCompletedLevel": 44,
+        "followingModeCommand": {
+          "action": "assert",
+          "path": "mode",
+          "equals": "playing"
+        },
+        "followingLevelCommand": {
+          "action": "assert",
+          "path": "level",
+          "equals": 45
+        }
+      },
+      {
+        "row": 1254,
+        "afterCompletedLevel": 45,
+        "followingModeCommand": {
+          "action": "assert",
+          "path": "mode",
+          "equals": "playing"
+        },
+        "followingLevelCommand": {
+          "action": "assert",
+          "path": "level",
+          "equals": 46
+        }
+      },
+      {
+        "row": 1307,
+        "afterCompletedLevel": 46,
+        "followingModeCommand": {
+          "action": "assert",
+          "path": "mode",
+          "equals": "playing"
+        },
+        "followingLevelCommand": {
+          "action": "assert",
+          "path": "level",
+          "equals": 47
+        }
+      },
+      {
+        "row": 1387,
+        "afterCompletedLevel": 47,
+        "followingModeCommand": {
+          "action": "assert",
+          "path": "mode",
+          "equals": "playing"
+        },
+        "followingLevelCommand": {
+          "action": "assert",
+          "path": "level",
+          "equals": 48
+        }
+      },
+      {
+        "row": 1447,
+        "afterCompletedLevel": 48,
+        "followingModeCommand": {
+          "action": "assert",
+          "path": "mode",
+          "equals": "playing"
+        },
+        "followingLevelCommand": {
+          "action": "assert",
+          "path": "level",
+          "equals": 49
+        }
+      },
+      {
+        "row": 1511,
+        "afterCompletedLevel": 49,
+        "followingModeCommand": {
+          "action": "assert",
+          "path": "mode",
+          "equals": "playing"
+        },
+        "followingLevelCommand": {
+          "action": "assert",
+          "path": "level",
+          "equals": 50
+        }
+      }
+    ],
+    "verdict": "No stale result-to-menu wait without reload. Next transitions expect playing. Only menu assertion follows final explicit reload."
+  },
+  "sourceEvidence": {
+    "signalsSnapshot": {
+      "file": "src/core/world.ts",
+      "line": 605,
+      "fragment": "signals:{...this.machines.flags}"
+    },
+    "flagFallbackIsNotPublication": {
+      "file": "src/systems.ts",
+      "line": 12,
+      "fragment": "flag(id:string)"
+    },
+    "actualDeviceState": {
+      "file": "src/systems.ts",
+      "line": 34,
+      "fragment": "snapshot(){return this.devices.map"
+    },
+    "resultOnAcceptedGoal": {
+      "file": "src/core/main.ts",
+      "line": 59,
+      "fragment": "mode = 'result'; release();"
+    },
+    "loadPlaying": {
+      "file": "src/core/main.ts",
+      "line": 72,
+      "fragment": "mode = 'playing'; started = true"
+    },
+    "nextLoadsNext": {
+      "file": "src/core/main.ts",
+      "line": 116,
+      "fragment": "if (action === 'second' || action === 'next')"
+    },
+    "reloadInitialMenu": {
+      "file": "src/core/main.ts",
+      "line": 227,
+      "fragment": "mode='menu';render();if(progress.warning)"
+    }
+  },
+  "sourceHashes": {
+    "src/core/world.ts": "e444b9be69182af22e88e554e512e462e3cb7f5d97f18a16f90ef3f8ebd7be43",
+    "src/systems.ts": "13d3dbf57ced0b8d18b499762d60282a82686cbc698f972c55dbff0c6b0ea67b",
+    "src/core/main.ts": "4f8f8a90314cc2f08172d7e3d83d4dfea90ac365ad210e043be3b4db3a51f6e0",
+    "src/core/levels/completion.ts": "1e07435502c93a64c692a13e21f047e3b46220f2c0ef311f720a357b2935c845",
+    "src/core/levels/conditional.ts": "9564d0b8893c9f9920f1f598b926e258a47e67fa52189cd5637c6cf5db4cc0b5",
+    "src/core/levels/reported-46-48.ts": "a652b9dbd8879d94aa4de245ffba09afba7c8ae6a64cec51901e4f2e0f34945c",
+    "src/core/levels/reported-49-50.ts": "38c476025e114d5e0f063a7e50a8be94a83678e39e0d2f68ea6abbe08aabdabb"
+  },
+  "importantDistinction": "MachineSystems.flag() supplies a fallback for circuit evaluation, but snapshot signals copies only explicitly published keys. All remaining false guards audited here have explicit producers; do not replace valid moving:* false with device.active false because power-enabled and stationary are different states.",
+  "allNativeJobsRemainClosed": true
+}

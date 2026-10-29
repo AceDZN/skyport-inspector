@@ -1,0 +1,113 @@
+{
+  "scope": "Prepared ordinary UI continuation from the actual grounded lip; not yet validated by the floor shot. The driver failed arrival at6.45 with25mm tolerance, while actual6.4202 is29.8mm from target, about4.8mm outside driver tolerance. No movement nudge, game/physics tolerance change, source edit, reset, pose/clock/save assignment. Resume and attempt original deep-floor ray/launch with all actual hit/landing/goal guards retained.",
+  "recordedAt": "2026-10-29T01:29:39.029Z",
+  "failedStage": {
+    "path": "/Users/acedzn/idea-plotter/reports/rift-final-campaign-review/v5-recovery26-result-flow-and-tail.jsonl",
+    "sha256": "e02d24cf11fa1b8f96d57a1f4195f430eb07445e52274254dae1472d596fba4d",
+    "startIndex": 0,
+    "inputCount": 1633,
+    "status": "failed",
+    "currentIndex": 1280,
+    "failedIndex": 1280,
+    "error": "Error: Blocked walking to 3,6.45; actual 3.000150442123413,0.8650262951850891,6.420202732086182"
+  },
+  "actualPlayer": {
+    "position": [
+      3.000150442123413,
+      0.8650262951850891,
+      6.420202732086182
+    ],
+    "velocity": [
+      7.401311122052864e-37,
+      0,
+      -1.6801086058400233e-34
+    ],
+    "yaw": 3.1365438720703676,
+    "pitch": -1.734723475976807e-18,
+    "grounded": true,
+    "crossings": 1
+  },
+  "held": null,
+  "earnedPrefix": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45
+  ],
+  "originalCommand": {
+    "action": "walk",
+    "x": 3,
+    "z": 6.45,
+    "stop": 0.025
+  },
+  "nextShot": [
+    {
+      "action": "assert",
+      "path": "world.held",
+      "equals": null
+    },
+    {
+      "action": "aim",
+      "target": [
+        3,
+        -17.975,
+        -1.1
+      ]
+    },
+    {
+      "action": "place",
+      "index": 0
+    },
+    {
+      "action": "assert",
+      "path": "world.portals.0.surface",
+      "equals": "deep-floor"
+    }
+  ],
+  "plan": "v5-recovery46-current-lip-and-tail.jsonl",
+  "commands": 359,
+  "sha256": "a57fe6f3e61d8a592e64a3377000dd4b9c728aa4f8019768ee77f6784e116b6c",
+  "pageErrors": [],
+  "consoleErrors": []
+}

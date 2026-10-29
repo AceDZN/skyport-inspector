@@ -1,0 +1,19 @@
+# Frozen v5 acceptance
+
+The [local game](http://localhost:4261/) contains50 authored enclosed Portal puzzles with saved numbered progression, Continue/replay and no grade selector. The final initially empty-profile campaign earned all50 base goals in order on one unchanged artifact. Runtime, assets and source remain exact to the [frozen build](BUILD.json): `main-JsffBW03.js`, SHA256 `6118b7babda0b016488965b14826a9d94c1c8a26528b0fda355bf3c624e6c1c1`.
+
+| Check | Recorded result |
+| --- | --- |
+| Native contracts |497/497 passed,0failed/skipped;135 copied inputs and active invariants exact. Actual24/26 observers recorded24,578 character/native/restored-physics checks each,1,374 held queries,16portal checks and12 bounded held samples with0violations. |
+| Fresh campaign |50 actual requested goals in ascending order; normal browser exit0.2970 commands,316 checkpoints and304 actual PNG captures. No imported storage, reset/jump inputs or per-goal respawns. |
+| Browser errors |0page, console or network errors. Four retained driver failures were corrected through ordinary input in the same context. |
+| Save/controls |Reload persistence at10/25/50, actual Continue11/26/50, help/pause real-input immobility, time/audio pause and final all50 menu passed. English/Hebrew help fits the shown1440×900 and900×1100 views. |
+| Heroes |All50 goal states reported ready original assets, one projector and cargo instances matching physical crate counts. All104 current runtime/asset hashes match frozen v5. |
+| Audio |Actual275.22s capstone graph recording,48kHz stereo, decode0, peak−13.05dBFS/RMS−30.53dBFS,0full-scale samples or observation errors.29 published/current audio assets match the frozen build. |
+| Visual review |51 selected actual playing stills, HUD-confirming rooms1–50, with unchanged PNG hashes. This is bounded pixel coverage; no all-angle or target-parity claim. |
+
+The four driver recoveries are preserved:24 compared an absent optional switch signal with false;26–30 retained menu waits after the normal-Next conversion removed per-room reloads;46 requested a lip waypoint4.8mm beyond its arrival tolerance;47 released W after crossing and stopped2.07cm beyond a passive guard. The actual device-state check, result waits, unchanged-position floor shot and ordinary W80 continuation respectively completed the routes. No actor, geometry, clock, goal, save, tolerance or runtime mutation substituted for those inputs. This is neither an error-free uninterrupted script nor an all-trusted-input/human comprehension study.
+
+Known presentation limits remain: C10's vertical fascia uses a studded floor treatment; C41's gold trace appears unsupported across the well; several spaces have simpler, flatter/darker finishes than the retained references; and some selected distant, edge-on or obstructed views limit assessment. These observations establish no new functional blocker and do not imply target parity. Audio evidence is objective pre-OS-mute output, without subjective listening or physical-speaker claims. English activities support situated comprehension/vocabulary; no measured learning or whole-unit mastery is claimed.
+
+The [all50 receipt](final-browser/FRESH-V5-ALL50-VERIFIED.json), [independent final check](final-browser/INDEPENDENT_FINAL_CHECK.json), [objective audio receipt](final-browser/FRESH-V5-AUDIO-VERIFIED.json), [native closure](../C4-partial-drop/full-regression-native-first/CLOSURE.json) and [machine-readable acceptance](FINAL_ACCEPTANCE.json) retain exact boundaries. [Source provenance](final-browser/CLOSED_SOURCE_PROVENANCE.json) binds retained closed raw logs/save/manifest and unchanged copied audio/final screenshots. The canonical source handoff is this directory and `final-browser/`. Historical builds/first failures remain their own records. The human's room/storage were not operated, and no production deployment was performed.

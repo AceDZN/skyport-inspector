@@ -1,0 +1,782 @@
+{
+  "recordedAt": "2026-10-29T02:13:58.420485+00:00",
+  "status": "CLOSED EVIDENCE OBJECTIVE REVIEW \u2014 identities consistent, no new playback/decoding/testing.",
+  "scope": "Read/hash closed parent receipts, frozen/current audio identities and bounded8.35MB checkpoint file only. No runtime/source/model/packet/parent-report edits; no browser/GPU/native/compiler/Git/FFmpeg/re-decode or subjective listening. Only this review MD/JSON are written.",
+  "frozenIdentity": {
+    "url": "http://localhost:4261/fifty-v5/",
+    "mainScript": "main-JsffBW03.js",
+    "mainSHA256": "6118b7babda0b016488965b14826a9d94c1c8a26528b0fda355bf3c624e6c1c1",
+    "observedVersions": 4,
+    "everyObservedMainMatches": true,
+    "currentAndArchivedAudioSHA256": "418427fe94864111c7c91fed02570fe1b670ebdd8de82967fdf35b83d6411c68",
+    "currentAndArchivedCoreMainSHA256": "4f8f8a90314cc2f08172d7e3d83d4dfea90ac365ad210e043be3b4db3a51f6e0",
+    "buildReceiptSHA256": "d60fe14f51b9e2bf2d10772cc2008309bca83aefc6ce2f629b4b420f016e2898"
+  },
+  "inputFilesIndependentlyHashed": {
+    "/Users/acedzn/idea-plotter/reports/rift-final-campaign-review/FRESH-V5-AUDIO-VERIFIED.json": {
+      "bytes": 1317,
+      "sha256": "b25f68709a9acb5403805fb73bcaf48f543794ab9ef228ca061f5c877d78e6fe"
+    },
+    "/Users/acedzn/idea-plotter/reports/rift-final-campaign-review/FRESH-V5-ALL50-VERIFIED.json": {
+      "bytes": 90418,
+      "sha256": "246f89f4a064754c2b1526f8348ea1d07c85e2bac26ecc3a4f071e47214fb017"
+    },
+    "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/fifty-c4-v5/BUILD.json": {
+      "bytes": 54770,
+      "sha256": "d60fe14f51b9e2bf2d10772cc2008309bca83aefc6ce2f629b4b420f016e2898"
+    },
+    "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/work/frozen-builds/fifty-c4-v5/BUILD.json": {
+      "bytes": 54770,
+      "sha256": "d60fe14f51b9e2bf2d10772cc2008309bca83aefc6ce2f629b4b420f016e2898"
+    },
+    "/Users/acedzn/idea-plotter/reports/rift-final-campaign-review/browser-audio-observer.mjs": {
+      "bytes": 2567,
+      "sha256": "45d23acf88cf24c2c997a68dc39bd4ce22c60ec128538d6b6f5d92a2fedec4dc"
+    },
+    "/Users/acedzn/idea-plotter/reports/rift-final-campaign-review/audit-v5-audio.py": {
+      "bytes": 2609,
+      "sha256": "e0021166522ba71e8754e6226c0025fcd72339de95e130cf9b78ceed3f9c6773"
+    },
+    "/Users/acedzn/idea-plotter/reports/rift-final-campaign-review/audio-tool.raw.log": {
+      "bytes": 26516,
+      "sha256": "2c5d084dbed7d7354020f525f15f2abce6e219718d53c785edaa19c07c781fa6"
+    },
+    "/Users/acedzn/idea-plotter/reports/rift-final-campaign-review/fresh50-v5-run/audio-01-fresh50-real-capstone-mix-and-victory-tail-0.webm": {
+      "bytes": 3349531,
+      "sha256": "2c5896190184e13bb2e214d536e4378f76cb09e3fdeaf08ddba435084a074faf"
+    },
+    "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/src/audio.ts": {
+      "bytes": 15965,
+      "sha256": "418427fe94864111c7c91fed02570fe1b670ebdd8de82967fdf35b83d6411c68"
+    },
+    "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/work/frozen-builds/fifty-c4-v5/sources/src/audio.ts": {
+      "bytes": 15965,
+      "sha256": "418427fe94864111c7c91fed02570fe1b670ebdd8de82967fdf35b83d6411c68"
+    },
+    "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/src/core/main.ts": {
+      "bytes": 22513,
+      "sha256": "4f8f8a90314cc2f08172d7e3d83d4dfea90ac365ad210e043be3b4db3a51f6e0"
+    },
+    "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/work/frozen-builds/fifty-c4-v5/sources/src/core/main.ts": {
+      "bytes": 22513,
+      "sha256": "4f8f8a90314cc2f08172d7e3d83d4dfea90ac365ad210e043be3b4db3a51f6e0"
+    },
+    "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/dist/fifty-v5/assets/main-JsffBW03.js": {
+      "bytes": 5739054,
+      "sha256": "6118b7babda0b016488965b14826a9d94c1c8a26528b0fda355bf3c624e6c1c1"
+    },
+    "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/work/frozen-builds/fifty-c4-v5/dist/assets/main-JsffBW03.js": {
+      "bytes": 5739054,
+      "sha256": "6118b7babda0b016488965b14826a9d94c1c8a26528b0fda355bf3c624e6c1c1"
+    },
+    "/Users/acedzn/idea-plotter/reports/rift-final-campaign-review/v4-final-wrap-plan.jsonl": {
+      "bytes": 1686,
+      "sha256": "9082571131aa244498b85549054d371dfeb8ffb996531cba97e34dac8b3723e2"
+    },
+    "/Users/acedzn/idea-plotter/reports/rift-final-campaign-review/fresh50-v5-run/checkpoints.raw.jsonl": {
+      "bytes": 8347745,
+      "sha256": "1297ccb94f59e70aa1a4e877453699f287560546bbbd5e2bdfde322083956c72"
+    }
+  },
+  "linkedLargeManifest": {
+    "path": "/Users/acedzn/idea-plotter/reports/rift-final-campaign-review/fresh50-v5-run/manifest.json",
+    "sha256": "a9474090241cac8445fd0b80cf53545fea0efe5aaf11e8f721afe4d210c0b835",
+    "independentlyRehashed": false,
+    "reason": "Parent recorded closed manifest hash retained;440MB manifest was not read/reparsed or rehashed in this bounded review."
+  },
+  "mediaIdentity": {
+    "path": "/Users/acedzn/idea-plotter/reports/rift-final-campaign-review/fresh50-v5-run/audio-01-fresh50-real-capstone-mix-and-victory-tail-0.webm",
+    "bytes": 3349531,
+    "sha256": "2c5896190184e13bb2e214d536e4378f76cb09e3fdeaf08ddba435084a074faf",
+    "matchesRecordingAndDecodeReceipts": true,
+    "mimeType": "audio/webm;codecs=opus",
+    "reportedRecorderWallSeconds": 276.71919999998806,
+    "endContextState": "suspended",
+    "tap": "Passive parallel game AudioContext destination tap before OS speaker mute; original destination stays connected. No microphone/physical-speaker capture or observer context resume."
+  },
+  "reportedClosedDecode": {
+    "file": "audio-01-fresh50-real-capstone-mix-and-victory-tail-0.webm",
+    "sha256": "2c5896190184e13bb2e214d536e4378f76cb09e3fdeaf08ddba435084a074faf",
+    "decodeExit": 0,
+    "decodeDiagnostics": "",
+    "sampleRate": 48000,
+    "channels": 2,
+    "samples": 26421120,
+    "seconds": 275.22,
+    "peakDBFS": -13.05284490236485,
+    "RMSDBFS": -30.527929557225217,
+    "samplesAtOrAboveFullScale": 0,
+    "metricProvenance": "Parent FFmpeg decode + standalone analysis receipt; inspected and arithmetically checked, not independently decoded/recomputed here.",
+    "sampleCountConvention": "Interleaved scalar channel samples;13,210,560 stereo frames /48,000=275.22s.",
+    "durationLimit": "Recorder performance interval276.7192s and decoded PCM275.22s are different measurements; no complete wall-clock synchronization is inferred.",
+    "peakLimit": "Decoded sample peak/threshold count for this capstone mix at recorded gains, not oversampled true peak or all-device/all-volume certification."
+  },
+  "runtimeAudioAssets": {
+    "count": 29,
+    "encodedBytes": 10079180,
+    "allCurrentAndPublishedHashesMatchBuild": true,
+    "files": [
+      {
+        "source": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/public/audio/beam-blocked.wav",
+        "published": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/dist/fifty-v5/audio/beam-blocked.wav",
+        "bytes": 61484,
+        "expectedSHA256": "2218e1c127ec6567bcb3ea7a0c1548190ae6059111a195035d6f66f0dc16363c",
+        "sourceSHA256": "2218e1c127ec6567bcb3ea7a0c1548190ae6059111a195035d6f66f0dc16363c",
+        "publishedSHA256": "2218e1c127ec6567bcb3ea7a0c1548190ae6059111a195035d6f66f0dc16363c"
+      },
+      {
+        "source": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/public/audio/bridge.wav",
+        "published": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/dist/fifty-v5/audio/bridge.wav",
+        "bytes": 217644,
+        "expectedSHA256": "eab3f9144b18427d2bca2c4811017729213f554b708d60867bcf2d606bfd48ee",
+        "sourceSHA256": "eab3f9144b18427d2bca2c4811017729213f554b708d60867bcf2d606bfd48ee",
+        "publishedSHA256": "eab3f9144b18427d2bca2c4811017729213f554b708d60867bcf2d606bfd48ee"
+      },
+      {
+        "source": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/public/audio/complete.wav",
+        "published": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/dist/fifty-v5/audio/complete.wav",
+        "bytes": 332844,
+        "expectedSHA256": "da283e8bfa07e1900af93a0742e2f1bda1d9f31013d20ef9b1d364218ff5f969",
+        "sourceSHA256": "da283e8bfa07e1900af93a0742e2f1bda1d9f31013d20ef9b1d364218ff5f969",
+        "publishedSHA256": "da283e8bfa07e1900af93a0742e2f1bda1d9f31013d20ef9b1d364218ff5f969"
+      },
+      {
+        "source": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/public/audio/contact.wav",
+        "published": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/dist/fifty-v5/audio/contact.wav",
+        "bytes": 28204,
+        "expectedSHA256": "14470040ca05b0ff9d711285384121cde9edf418f5594b26fdb03f4e0f9d714a",
+        "sourceSHA256": "14470040ca05b0ff9d711285384121cde9edf418f5594b26fdb03f4e0f9d714a",
+        "publishedSHA256": "14470040ca05b0ff9d711285384121cde9edf418f5594b26fdb03f4e0f9d714a"
+      },
+      {
+        "source": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/public/audio/conveyor-clutch.wav",
+        "published": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/dist/fifty-v5/audio/conveyor-clutch.wav",
+        "bytes": 89644,
+        "expectedSHA256": "80f89b90df55c34adf3ab18e2dff15bd7519e8bce6cb7ef110b3bd2795e08ab4",
+        "sourceSHA256": "80f89b90df55c34adf3ab18e2dff15bd7519e8bce6cb7ef110b3bd2795e08ab4",
+        "publishedSHA256": "80f89b90df55c34adf3ab18e2dff15bd7519e8bce6cb7ef110b3bd2795e08ab4"
+      },
+      {
+        "source": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/public/audio/drop.wav",
+        "published": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/dist/fifty-v5/audio/drop.wav",
+        "bytes": 57644,
+        "expectedSHA256": "0d2d8254ca44ea46267fb104d9d00fb5215f98bdff730edab2bcd47f47fc2b6d",
+        "sourceSHA256": "0d2d8254ca44ea46267fb104d9d00fb5215f98bdff730edab2bcd47f47fc2b6d",
+        "publishedSHA256": "0d2d8254ca44ea46267fb104d9d00fb5215f98bdff730edab2bcd47f47fc2b6d"
+      },
+      {
+        "source": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/public/audio/enter.wav",
+        "published": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/dist/fifty-v5/audio/enter.wav",
+        "bytes": 83244,
+        "expectedSHA256": "6e20aa1f7a75b2c544ce89179283fb5b734674d403adce36b815ca20284c7f2c",
+        "sourceSHA256": "6e20aa1f7a75b2c544ce89179283fb5b734674d403adce36b815ca20284c7f2c",
+        "publishedSHA256": "6e20aa1f7a75b2c544ce89179283fb5b734674d403adce36b815ca20284c7f2c"
+      },
+      {
+        "source": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/public/audio/error.wav",
+        "published": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/dist/fifty-v5/audio/error.wav",
+        "bytes": 53804,
+        "expectedSHA256": "8ebd94a9e0fffb38a9197498443c0c350b0561c04be533e478fec084988a868c",
+        "sourceSHA256": "8ebd94a9e0fffb38a9197498443c0c350b0561c04be533e478fec084988a868c",
+        "publishedSHA256": "8ebd94a9e0fffb38a9197498443c0c350b0561c04be533e478fec084988a868c"
+      },
+      {
+        "source": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/public/audio/exit.wav",
+        "published": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/dist/fifty-v5/audio/exit.wav",
+        "bytes": 83244,
+        "expectedSHA256": "39431d607ca465fdba0293e93418d37eacfdf7b6a9f4b286a872d4cda51cdaa9",
+        "sourceSHA256": "39431d607ca465fdba0293e93418d37eacfdf7b6a9f4b286a872d4cda51cdaa9",
+        "publishedSHA256": "39431d607ca465fdba0293e93418d37eacfdf7b6a9f4b286a872d4cda51cdaa9"
+      },
+      {
+        "source": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/public/audio/invalid.wav",
+        "published": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/dist/fifty-v5/audio/invalid.wav",
+        "bytes": 53804,
+        "expectedSHA256": "ccbaba2eb64641c09e9da79800d9bf379c9f63eebd67456717538807dded311a",
+        "sourceSHA256": "ccbaba2eb64641c09e9da79800d9bf379c9f63eebd67456717538807dded311a",
+        "publishedSHA256": "ccbaba2eb64641c09e9da79800d9bf379c9f63eebd67456717538807dded311a"
+      },
+      {
+        "source": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/public/audio/jump.wav",
+        "published": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/dist/fifty-v5/audio/jump.wav",
+        "bytes": 32044,
+        "expectedSHA256": "2490f0be02eba518696210ac67753edd7105790b44f3cdc7559252f173c686c3",
+        "sourceSHA256": "2490f0be02eba518696210ac67753edd7105790b44f3cdc7559252f173c686c3",
+        "publishedSHA256": "2490f0be02eba518696210ac67753edd7105790b44f3cdc7559252f173c686c3"
+      },
+      {
+        "source": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/public/audio/junction-rotate.wav",
+        "published": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/dist/fifty-v5/audio/junction-rotate.wav",
+        "bytes": 140844,
+        "expectedSHA256": "04d5bd7da53416ee27f37774e65d1c525584a8aa959fdef2d34ffc9141845d54",
+        "sourceSHA256": "04d5bd7da53416ee27f37774e65d1c525584a8aa959fdef2d34ffc9141845d54",
+        "publishedSHA256": "04d5bd7da53416ee27f37774e65d1c525584a8aa959fdef2d34ffc9141845d54"
+      },
+      {
+        "source": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/public/audio/land.wav",
+        "published": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/dist/fifty-v5/audio/land.wav",
+        "bytes": 38444,
+        "expectedSHA256": "fda4745ecc87c5c8b09207801ad6a55e5510b169a510c03d7f4ab86f1a768e8b",
+        "sourceSHA256": "fda4745ecc87c5c8b09207801ad6a55e5510b169a510c03d7f4ab86f1a768e8b",
+        "publishedSHA256": "fda4745ecc87c5c8b09207801ad6a55e5510b169a510c03d7f4ab86f1a768e8b"
+      },
+      {
+        "source": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/public/audio/lift-arrival.wav",
+        "published": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/dist/fifty-v5/audio/lift-arrival.wav",
+        "bytes": 102444,
+        "expectedSHA256": "c6f6e8e5ce1a00dace8681e43a8b9c349ac0eb3b99105053f271d9cb1839c85f",
+        "sourceSHA256": "c6f6e8e5ce1a00dace8681e43a8b9c349ac0eb3b99105053f271d9cb1839c85f",
+        "publishedSHA256": "c6f6e8e5ce1a00dace8681e43a8b9c349ac0eb3b99105053f271d9cb1839c85f"
+      },
+      {
+        "source": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/public/audio/lift-motor.wav",
+        "published": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/dist/fifty-v5/audio/lift-motor.wav",
+        "bytes": 307244,
+        "expectedSHA256": "c7d1c132bbb28daaa37e6db042013b3766d7fe9c658ca3d7a055ce8fd7a9ccb1",
+        "sourceSHA256": "c7d1c132bbb28daaa37e6db042013b3766d7fe9c658ca3d7a055ce8fd7a9ccb1",
+        "publishedSHA256": "c7d1c132bbb28daaa37e6db042013b3766d7fe9c658ca3d7a055ce8fd7a9ccb1"
+      },
+      {
+        "source": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/public/audio/pad.wav",
+        "published": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/dist/fifty-v5/audio/pad.wav",
+        "bytes": 64044,
+        "expectedSHA256": "1f97a34ab455e64cba1276690c3682a4387c96466b7d8a7a714ec5f2083a670a",
+        "sourceSHA256": "1f97a34ab455e64cba1276690c3682a4387c96466b7d8a7a714ec5f2083a670a",
+        "publishedSHA256": "1f97a34ab455e64cba1276690c3682a4387c96466b7d8a7a714ec5f2083a670a"
+      },
+      {
+        "source": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/public/audio/pickup.wav",
+        "published": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/dist/fifty-v5/audio/pickup.wav",
+        "bytes": 41004,
+        "expectedSHA256": "96efc0b282deef07bf7ee133113934d7104d2cb188c7b0d303757c1f799d52f7",
+        "sourceSHA256": "96efc0b282deef07bf7ee133113934d7104d2cb188c7b0d303757c1f799d52f7",
+        "publishedSHA256": "96efc0b282deef07bf7ee133113934d7104d2cb188c7b0d303757c1f799d52f7"
+      },
+      {
+        "source": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/public/audio/platform-move.wav",
+        "published": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/dist/fifty-v5/audio/platform-move.wav",
+        "bytes": 236844,
+        "expectedSHA256": "2ddc92e77411aa072772034339a4375b65ad4ff07d4076b9e10a5214849a871c",
+        "sourceSHA256": "2ddc92e77411aa072772034339a4375b65ad4ff07d4076b9e10a5214849a871c",
+        "publishedSHA256": "2ddc92e77411aa072772034339a4375b65ad4ff07d4076b9e10a5214849a871c"
+      },
+      {
+        "source": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/public/audio/portalA.wav",
+        "published": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/dist/fifty-v5/audio/portalA.wav",
+        "bytes": 96044,
+        "expectedSHA256": "30c0cd7d6d631fd15b9a34bd9a7716730566f006d0c93c0ff902fd7d8c72bf21",
+        "sourceSHA256": "30c0cd7d6d631fd15b9a34bd9a7716730566f006d0c93c0ff902fd7d8c72bf21",
+        "publishedSHA256": "30c0cd7d6d631fd15b9a34bd9a7716730566f006d0c93c0ff902fd7d8c72bf21"
+      },
+      {
+        "source": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/public/audio/portalB.wav",
+        "published": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/dist/fifty-v5/audio/portalB.wav",
+        "bytes": 96044,
+        "expectedSHA256": "b64e4dceeb4434ffdeb59ef86b5b9cdf30ba1b71bcb4d3518f86b0eab0dae939",
+        "sourceSHA256": "b64e4dceeb4434ffdeb59ef86b5b9cdf30ba1b71bcb4d3518f86b0eab0dae939",
+        "publishedSHA256": "b64e4dceeb4434ffdeb59ef86b5b9cdf30ba1b71bcb4d3518f86b0eab0dae939"
+      },
+      {
+        "source": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/public/audio/receiver-power.wav",
+        "published": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/dist/fifty-v5/audio/receiver-power.wav",
+        "bytes": 204844,
+        "expectedSHA256": "4cbcf751db1047a0fe814ce867713833638b169c8d6ed6267b8ac6119e87497f",
+        "sourceSHA256": "4cbcf751db1047a0fe814ce867713833638b169c8d6ed6267b8ac6119e87497f",
+        "publishedSHA256": "4cbcf751db1047a0fe814ce867713833638b169c8d6ed6267b8ac6119e87497f"
+      },
+      {
+        "source": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/public/audio/relay-align.wav",
+        "published": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/dist/fifty-v5/audio/relay-align.wav",
+        "bytes": 108844,
+        "expectedSHA256": "eebd437cb37f3dab1e2dc33d79b44aee093a796a02819402f31466cb24d097a5",
+        "sourceSHA256": "eebd437cb37f3dab1e2dc33d79b44aee093a796a02819402f31466cb24d097a5",
+        "publishedSHA256": "eebd437cb37f3dab1e2dc33d79b44aee093a796a02819402f31466cb24d097a5"
+      },
+      {
+        "source": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/public/audio/respawn.wav",
+        "published": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/dist/fifty-v5/audio/respawn.wav",
+        "bytes": 160044,
+        "expectedSHA256": "21d1d91a9d247cb4fb34c5e81749eb20ac1b425286399dbbe1530bd122aa4175",
+        "sourceSHA256": "21d1d91a9d247cb4fb34c5e81749eb20ac1b425286399dbbe1530bd122aa4175",
+        "publishedSHA256": "21d1d91a9d247cb4fb34c5e81749eb20ac1b425286399dbbe1530bd122aa4175"
+      },
+      {
+        "source": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/public/audio/rift-air.flac",
+        "published": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/dist/fifty-v5/audio/rift-air.flac",
+        "bytes": 1342468,
+        "expectedSHA256": "6b66628be1d00fab5d22288467116111a955ed86aac4dfb4e28496a961173d17",
+        "sourceSHA256": "6b66628be1d00fab5d22288467116111a955ed86aac4dfb4e28496a961173d17",
+        "publishedSHA256": "6b66628be1d00fab5d22288467116111a955ed86aac4dfb4e28496a961173d17"
+      },
+      {
+        "source": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/public/audio/rift-connection.flac",
+        "published": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/dist/fifty-v5/audio/rift-connection.flac",
+        "bytes": 2165834,
+        "expectedSHA256": "f1122064cd902fbdc9455ff1217dc5f0d5b121526917b284299f2715ad6f9959",
+        "sourceSHA256": "f1122064cd902fbdc9455ff1217dc5f0d5b121526917b284299f2715ad6f9959",
+        "publishedSHA256": "f1122064cd902fbdc9455ff1217dc5f0d5b121526917b284299f2715ad6f9959"
+      },
+      {
+        "source": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/public/audio/rift-courtyard.flac",
+        "published": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/dist/fifty-v5/audio/rift-courtyard.flac",
+        "bytes": 3559174,
+        "expectedSHA256": "bd608859da2d26b7dd16af6962ded02fc19621f871a40cf0945a981680e5e6c6",
+        "sourceSHA256": "bd608859da2d26b7dd16af6962ded02fc19621f871a40cf0945a981680e5e6c6",
+        "publishedSHA256": "bd608859da2d26b7dd16af6962ded02fc19621f871a40cf0945a981680e5e6c6"
+      },
+      {
+        "source": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/public/audio/shutter-close.wav",
+        "published": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/dist/fifty-v5/audio/shutter-close.wav",
+        "bytes": 134444,
+        "expectedSHA256": "07c3187a046cd08a3a1fb8e6a6698c6ddaac0cd03516c2a1c322201015e3a464",
+        "sourceSHA256": "07c3187a046cd08a3a1fb8e6a6698c6ddaac0cd03516c2a1c322201015e3a464",
+        "publishedSHA256": "07c3187a046cd08a3a1fb8e6a6698c6ddaac0cd03516c2a1c322201015e3a464"
+      },
+      {
+        "source": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/public/audio/shutter-open.wav",
+        "published": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/dist/fifty-v5/audio/shutter-open.wav",
+        "bytes": 153644,
+        "expectedSHA256": "99be0e7b99ed31661331097e4bc8096e48c7848a3def088de66b2816a48bedcf",
+        "sourceSHA256": "99be0e7b99ed31661331097e4bc8096e48c7848a3def088de66b2816a48bedcf",
+        "publishedSHA256": "99be0e7b99ed31661331097e4bc8096e48c7848a3def088de66b2816a48bedcf"
+      },
+      {
+        "source": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/public/audio/switch-toggle.wav",
+        "published": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/dist/fifty-v5/audio/switch-toggle.wav",
+        "bytes": 33324,
+        "expectedSHA256": "ebc84ef428beda415ac9135f681c8ad5fc412a7a0e2d53565daa5cec7174fcbe",
+        "sourceSHA256": "ebc84ef428beda415ac9135f681c8ad5fc412a7a0e2d53565daa5cec7174fcbe",
+        "publishedSHA256": "ebc84ef428beda415ac9135f681c8ad5fc412a7a0e2d53565daa5cec7174fcbe"
+      }
+    ],
+    "decodeScope": "Hash comparison only; no asset re-decode in this review."
+  },
+  "campaignReceiptScope": {
+    "actualProcessExit": 0,
+    "importedEarnedStorage": null,
+    "orderedBaseGoals": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50
+    ],
+    "actions": 2970,
+    "captures": 304,
+    "checkpointCount": 316,
+    "respawns": 0,
+    "jumpInputs": 0,
+    "preservedDriverFailures": [
+      {
+        "input": "{\"action\":\"stage\",\"path\":\"/Users/acedzn/idea-plotter/reports/rift-final-campaign-review/fresh-v5-normal-next50-with-seam-plan.jsonl\"}",
+        "error": "Error: page.evaluate: Error: Real dock/support never reached input condition\n    at end (eval at evaluate (:370:30), <anonymous>:5:137)\n    at observe (eval at evaluate (:370:30), <anonymous>:7:385)",
+        "level": 24,
+        "mode": "playing"
+      },
+      {
+        "input": "{\"action\":\"stage\",\"path\":\"/Users/acedzn/idea-plotter/reports/rift-final-campaign-review/v5-recovery24-device-state-and-tail.jsonl\"}",
+        "error": "Error: Timed out waiting for actual public state: [{\"path\":\"mode\",\"equals\":\"menu\"}]",
+        "level": 26,
+        "mode": "result"
+      },
+      {
+        "input": "{\"action\":\"stage\",\"path\":\"/Users/acedzn/idea-plotter/reports/rift-final-campaign-review/v5-recovery26-result-flow-and-tail.jsonl\"}",
+        "error": "Error: Blocked walking to 3,6.45; actual 3.000150442123413,0.8650262951850891,6.420202732086182",
+        "level": 46,
+        "mode": "playing"
+      },
+      {
+        "input": "{\"action\":\"stage\",\"path\":\"/Users/acedzn/idea-plotter/reports/rift-final-campaign-review/v5-recovery46-current-lip-and-tail.jsonl\"}",
+        "error": "Error: Timed out waiting for actual public state: [{\"path\":\"world.player.grounded\",\"equals\":true},{\"path\":\"world.player.position.1\",\"min\":0.8,\"max\":1.05},{\"path\":\"world.player.position.2\",\"min\":8.5,\"max\":13.65}]",
+        "level": 47,
+        "mode": "playing"
+      }
+    ],
+    "pageErrors": [],
+    "consoleErrors": [],
+    "networkFailures": [],
+    "finalCompleted": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50
+    ],
+    "highestUnlocked": 50,
+    "resumeLevel": 50,
+    "limits": "One initially empty context, four preserved driver failures corrected with ordinary UI; not an error-free uninterrupted script or all-trusted-input/human-comprehension study. Audio recording is capstone only, not50 continuous room recordings."
+  },
+  "sampledAudioState": {
+    "checkpointCount": 316,
+    "startedCheckpointCount": 310,
+    "everyStartedSample": {
+      "loadedBuffers": 29,
+      "loopCount": 3,
+      "loadErrors": []
+    },
+    "contextCounts": {
+      "not-started": 6,
+      "running": 270,
+      "suspended": 40
+    },
+    "sampledMaxActiveSfx": 4,
+    "sampledGains": [
+      {
+        "master": 0.8,
+        "music": 0.7,
+        "sfx": 0.74,
+        "voice": 0.8
+      }
+    ],
+    "selectedFinalStates": [
+      {
+        "label": "50-requested-physical-result-if-executed",
+        "level": 50,
+        "mode": "result",
+        "audio": {
+          "context": "running",
+          "paused": true,
+          "completionActive": true,
+          "loopCount": 3,
+          "activeSfx": 1,
+          "cuesPlayed": 2266,
+          "energy": true,
+          "chapter": 3,
+          "intensity": 0,
+          "environment": "chamber",
+          "airSpeed": 0,
+          "airActive": false,
+          "recentCues": [
+            "shutter-close",
+            "lift-arrival",
+            "footstep",
+            "footstep",
+            "lift-motor",
+            "lift-arrival",
+            "shutter-open",
+            "footstep",
+            "footstep",
+            "footstep",
+            "footstep",
+            "complete"
+          ],
+          "paired": true,
+          "bridge": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 29,
+          "loadErrors": [],
+          "timeline": 5849.906666666667
+        }
+      },
+      {
+        "label": "final-Continue-real-level50-with-verified-heroes",
+        "level": 50,
+        "mode": "playing",
+        "audio": {
+          "context": "running",
+          "paused": false,
+          "completionActive": false,
+          "loopCount": 3,
+          "activeSfx": 0,
+          "cuesPlayed": 0,
+          "energy": false,
+          "chapter": 3,
+          "intensity": 0,
+          "environment": "chamber",
+          "airSpeed": 0,
+          "airActive": false,
+          "recentCues": [],
+          "paired": false,
+          "bridge": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 29,
+          "loadErrors": [],
+          "timeline": 0.32799999999999996
+        }
+      },
+      {
+        "label": "final-level50-English-Hebrew-reading-support",
+        "level": 50,
+        "mode": "help",
+        "audio": {
+          "context": "suspended",
+          "paused": true,
+          "completionActive": false,
+          "loopCount": 3,
+          "activeSfx": 0,
+          "cuesPlayed": 0,
+          "energy": false,
+          "chapter": 3,
+          "intensity": 0,
+          "environment": "chamber",
+          "airSpeed": 0,
+          "airActive": false,
+          "recentCues": [],
+          "paired": false,
+          "bridge": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 29,
+          "loadErrors": [],
+          "timeline": 3.9546666666666663
+        }
+      },
+      {
+        "label": "final-reading-support-portrait",
+        "level": 50,
+        "mode": "help",
+        "audio": {
+          "context": "suspended",
+          "paused": true,
+          "completionActive": false,
+          "loopCount": 3,
+          "activeSfx": 0,
+          "cuesPlayed": 0,
+          "energy": false,
+          "chapter": 3,
+          "intensity": 0,
+          "environment": "chamber",
+          "airSpeed": 0,
+          "airActive": false,
+          "recentCues": [],
+          "paired": false,
+          "bridge": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 29,
+          "loadErrors": [],
+          "timeline": 3.9546666666666663
+        }
+      },
+      {
+        "label": "final-closed-on-earned50-profile",
+        "level": 50,
+        "mode": "menu",
+        "audio": {
+          "context": "suspended",
+          "paused": true,
+          "completionActive": false,
+          "loopCount": 3,
+          "activeSfx": 0,
+          "cuesPlayed": 0,
+          "energy": false,
+          "chapter": 3,
+          "intensity": 0,
+          "environment": "chamber",
+          "airSpeed": 0,
+          "airActive": false,
+          "recentCues": [],
+          "paired": false,
+          "bridge": false,
+          "ducked": false,
+          "gains": {
+            "master": 0.8,
+            "music": 0.7,
+            "sfx": 0.74,
+            "voice": 0.8
+          },
+          "loadedBuffers": 29,
+          "loadErrors": [],
+          "timeline": 4.205333333333333
+        }
+      }
+    ],
+    "scopeLimit": "Checkpoint samples and12-entry recent-cue histories do not certify every-frame cue density, absence of all transient duplication, individual waveform timing or subjective mix fatigue."
+  },
+  "pauseAndControls": {
+    "actualPausedObservations": [
+      {
+        "level": 26,
+        "mode": "journal",
+        "input": {
+          "action": "paused-observation",
+          "ms": 600
+        },
+        "observation": {
+          "scope": "Real-time ordinary W attempt while paused; no advanceTime call",
+          "mode": "journal",
+          "actualPositionDelta": 0,
+          "machineryUnchanged": true,
+          "audioPaused": true
+        }
+      },
+      {
+        "level": 36,
+        "mode": "journal",
+        "input": {
+          "action": "paused-observation",
+          "ms": 600
+        },
+        "observation": {
+          "scope": "Real-time ordinary W attempt while paused; no advanceTime call",
+          "mode": "journal",
+          "actualPositionDelta": 0,
+          "machineryUnchanged": true,
+          "audioPaused": true
+        }
+      },
+      {
+        "level": 50,
+        "mode": "help",
+        "input": {
+          "action": "paused-observation",
+          "ms": 600
+        },
+        "observation": {
+          "scope": "Real-time ordinary W attempt while paused; no advanceTime call",
+          "mode": "help",
+          "actualPositionDelta": 0,
+          "machineryUnchanged": true,
+          "audioPaused": true
+        }
+      },
+      {
+        "level": 50,
+        "mode": "pause",
+        "input": {
+          "action": "paused-observation",
+          "ms": 600
+        },
+        "observation": {
+          "scope": "Real-time ordinary W attempt while paused; no advanceTime call",
+          "mode": "pause",
+          "actualPositionDelta": 0,
+          "machineryUnchanged": true,
+          "audioPaused": true
+        }
+      }
+    ],
+    "finalWrapPlan": {
+      "path": "/Users/acedzn/idea-plotter/reports/rift-final-campaign-review/v4-final-wrap-plan.jsonl",
+      "sha256": "9082571131aa244498b85549054d371dfeb8ffb996531cba97e34dac8b3723e2",
+      "stageComplete": true
+    },
+    "observed": "N26/N36 journals, final50 Help/Pause:600ms ordinary W attempts show0 actor delta, unchanged machinery and audioPaused. Final Help and portrait samples are suspended with identical timeline3.9546667; final Continue sample is running/29buffers/3loops, and Home closes suspended. Result sample has complete as last cue, completionActive true,1SFX/no flight air; recording ends suspended.",
+    "limits": "No new mute/gain sweep, objective speaker output or auditory judgement. Reviewed v5 checkpoint gain values are defaults only. Earlier module/mute/calibration receipts are historical scopes, not silently promoted to this run."
+  },
+  "analysisCompatibilityFailure": {
+    "status": "PARENT-REPORTED, not traceback-inspected",
+    "firstAttempt": "Standalone analysis initially used unavailable hashlib.file_digest; only the analysis script was corrected to chunked hashing.",
+    "retention": "No raw recording, gameplay evidence or first failure was replaced/erased by this review. Current corrected audit script and its hash are listed; audio-tool.raw.log is hashed but is not claimed to contain that traceback.",
+    "sourceGameplayChanged": false
+  },
+  "explicitLimits": [
+    "No subjective listening or physical-speaker claim.",
+    "No waveform/audio-model ingestion or additional playback by this reviewer.",
+    "No all-target visual parity, learning gain, grammar mastery or source chapter coverage claim.",
+    "No duplicate decode/test/job or new browser session.",
+    "Frozen BUILD creation-time pending flags remain historical; later closed receipts provide subsequent scoped evidence."
+  ]
+}
