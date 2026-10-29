@@ -1,0 +1,46 @@
+# Fresh v5 middle coverage — 18 actual playing frames
+
+**Offline still-image review only.** One saved frame was displayed for each room6,7,9 and11–25, including the later requested24/25 extension. Every room was confirmed from its actual CHAMBER HUD, not its filename. Exact paths, dimensions, before/after hashes and source receipts are in `FRESH_V5_MIDDLE_6_25_OFFLINE_REVIEW.json`. Only these two review files were written. Active browser, manifest and traces were neither read/copied nor altered; runtime/GLBs/builds were untouched. No browser/GPU/render/native/compiler/build ran.
+
+The frozen v5 binding remains `main-JsffBW03.js` SHA `6118b7babda0b016488965b14826a9d94c1c8a26528b0fda355bf3c624e6c1c1`, Scene `46bb5b3d01be8d920c84f3e75a9406d151e723223bc0b48c1b3aacd5d0ae98ad`. The immutable halfway receipt reports a genuinely empty-source campaign through25, reload/Continue11 and26, and one preserved C24 driver optional-signal correction followed by normal Resume. It explicitly leaves full50/process closure pending. This review does not recast the driver correction as an app/pixel defect or replay any route.
+
+## HUD-confirmed actual views
+
+| Room/frame | Visible finding | Boundary |
+| --- | --- | --- |
+| C6 / 044 | Glass-separated bay, near pad, white wall band and projector are clear; mission HUD is legible. | The powered cargo/north doorway are outside this angle; initial state is not proven by the filename. |
+| C7 / 051 | TRANSFER / AT NORTH / NEXT EAST and NORTH doorway sign are readable. Actual deck outline and catch stairs are visible. | A still cannot show movement, dock timing or full-body support. No readout crop is apparent at this view. |
+| C9 / 067 | Both gold/cyan cargo meshes are visible in distinct low glazed and raised routes; pads and lift guides read clearly. | Cargo is small at this distance; either-cube equivalence and travel/contact remain route evidence. |
+| C11 / 081 | Beam, blue/amber portals, gold cargo, glass and open access frame make the optical enclosure readable. | A single beam image does not prove receiver power or lift motion. The emitter model/receiver readout is not closely shown. |
+| C12 / 085 | EAST/WEST doorway labels and differing open/closed leaves are visible behind the booth glass; HUD is readable. | Timer face text is not readable in this chosen view. A nearer operator-facing view is required before phase-readout acceptance; no missing-display defect is inferred. |
+| C13 / 090 | Sealed belt tunnel, arrow surface and receiving cap are visible through glass; projector/HUD are clear. | Controls and cargo are outside this corridor view; an EAST label is cut by the viewport edge, not proven to be cropped on its texture. |
+| C14 / 100 | Gold cargo/plate, lit emitter, visible beam, amber host, glazing and open lift/access frame are coherent. | A still does not establish circuit causality or moving support. Large dark casing/frame surfaces have limited value separation. |
+| C15 / 104 | Glazed belt/arrow surface, receiving cap, optics port and distant transfer deck are visible. | The close control cabinet crops its own display and much of the route. These are viewpoint limits, not proof of a failed display or missing platform. |
+| C16 / 111 | Two shaft openings, connecting approach and enclosure/glass boundary are visible; HUD confirms the deeper/higher instruction. | Shaft bottoms, destination heights and flight are not shown. This is not the retained target's pit-edge composition. |
+| C17 / 117 | Approach, separated openings and glass/wall enclosure render coherently with a readable farther/wider mission. | Near/far destinations are not visible, so the comparative geometry cannot be judged from this angle. |
+| C18 / 122 | Two deck edges are visible around the central white host behind the booth; enclosed carrier family is recognisable. | The host obstructs most lanes from here. Speed/equal-length comparison needs temporal/other-view evidence; off-camera decks are not treated as missing. |
+| C19 / 128 | Two differently sized actual gold cargo meshes, NARROW/WIDE labels and distinct low openings are clearly visible. | A still cannot prove whole-oriented size fit. The very broad smooth black bulkhead/hotspot is a presentation limitation rather than a missing-material claim. |
+| C20 / 136 | Blue/amber links and visible beam are coherent; UPPER is readable through the linked view and a raised gallery is visible. | Which receiver currently powers which door cannot be proved by this one beam view. No whole-atlas/through-portal correctness claim. |
+| C21 / 140 | Gold cargo/plate, live beam behind glass, amber link and actual projector are readable. | Maintained second pressure, blocker removal and lift power are not independently established by this still. |
+| C22 / 145 | WINDOW RECEIVER plaque is recognisable/unclipped; linked bay, overhead gallery, well edge and projector are visible. | Native lift support and receiver-driven causality remain route evidence. Foreground cargo is partly outside the frame. |
+| C23 / 151 | Actual gold cargo is visible on the near pressure-cap area; SERVICE label and projector/HUD are readable. | The requested OUTPUT route and opened input state are mostly outside this angle. The visible SERVICE door is not evidence of choosing the wrong result. |
+| C24 / 153 | HUD confirms C24; booth glazing, large white host, circuit trace and enclosure render clearly. | The central host masks both route/controls from spawn. Timer-phase/manual-state readability and passage motion are not shown. |
+| C25 / 158 | Two actual cargo meshes/plate areas, glass, carrier edge and recovery stairs are visible with the ivory projector. | This is a delivered-cargo stage, not the target's operator composition. Prior loose transport, two current circuit conditions and contact cannot be independently proved from it. |
+
+## Existing family comparisons for15–25
+
+Re-viewed only existing, previously inspected targets; no image/model generation. Their old depicted props are superseded by the actual Tripo heroes. Raster railings, aperture poses and dimensions remain non-authoritative.
+
+- **C15 actual104 vs `sequences-transfer-15.png`:** Both show a sealed glazed belt and transfer/clearance family. Actual104 is a close side/control view before the broader transfer sequence; the target is a front-on overview exposing cargo/beam/deck together. Their state and composition differ, so no overall layout/causal parity follows. Actual construction remains much flatter/cooler and its machinery trim less layered than the reference.
+- **C16 actual111 vs `twin-shaft-target-v2.png`:** The actual approach and openings are present, but the target looks into both depths and across receiving galleries. The selected actual camera faces the observation enclosure, omitting those depths/destinations. It cannot confirm or reject the whole twin-shaft architecture. Visible grey grid/rib mass and limited local warmth differ from the target; no flight claim comes from this still.
+- **C25 actual158 vs `references/chamber-25-target.png`:** Both show separate cargo/pressure allocations and a glazed transport well. Actual158 shows a later delivered cargo on a near cap plus the other cargo in the background; the target is a different operator overview with HATCH/LIFT/SERVICE labels and an exposed carrier. Functional family resemblance is visible, but presentation/state/camera are unmatched. Actual large grey fields remain darker/less articulated, while the actual gold/ivory heroes are legible.
+
+## Readability, defects and acceptance boundary
+
+All18 mission HUDs are readable in the selected images. The close C7 transfer card and shown NORTH/EAST/WEST/NARROW/WIDE/SERVICE labels are legible where stated; that is not a blanket sign/readout pass. C12 phase text, C15's close cropped control and several distant/tiny devices remain unassessed from useful operator views. These are documented view/scale limits, not invented missing-widget defects.
+
+No new hard missing-mesh, alternating hero-face, obvious portal pop or definite texture-crop defect is established by this sample. Visible projectors and cargo retain continuous textured silhouettes; cropping by the viewport, nearby cabinets or real glass frames is not classified as broken geometry. Some smaller distant cargo remains recognisable from its gold/cyan silhouette. This does not establish all-angle clipping, mesh lifecycle or physical contacts.
+
+Persistent presentation limits are the repeated flat grey/rib grid, near-black casings/bulkheads, concentrated light pools and less differentiated local structure than retained references. C19's broad plain black front is an obvious example. These differences do not justify whitening ineligible hosts or adding unsupported rails/props. No runtime change is proposed or made.
+
+Together with the prior early review's8 frames/7 distinct rooms, these18 additional frames provide **at least one inspected playing still for each room1–25** (26 frames total). This is selected pixel coverage, not full room, route, physics, all-angle, target-parity, learning or audio acceptance. Parent fresh progression is a separate partial receipt; the older later-v3 review keeps its separate build/context scope. Full50 remains unclaimed.

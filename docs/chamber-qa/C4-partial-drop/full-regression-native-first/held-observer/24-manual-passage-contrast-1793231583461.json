@@ -1,0 +1,2875 @@
+{
+  "scope": "Metrics-only wrapper on unchanged authored24/26 input routes. No state setters or physics overrides. All originals called once. These counts distinguish actual invoked held queries from installed hooks.",
+  "number": 24,
+  "id": "manual-passage",
+  "contrast": true,
+  "error": null,
+  "counts": {
+    "character": 1877,
+    "native": 1877,
+    "physics": 1877,
+    "held": 102,
+    "portal": 2,
+    "violations": 0
+  },
+  "nativeTypes": {
+    "timer:1": 1877,
+    "switch:1": 1877,
+    "shutter:2": 388,
+    "shutter:1": 3366
+  },
+  "samples": [
+    {
+      "stage": "inside-native-query",
+      "current": [
+        {
+          "id": "opening-clock",
+          "kind": "timer",
+          "type": 1,
+          "pose": {
+            "position": {
+              "x": -3.5,
+              "y": 1.2000000476837158,
+              "z": 11
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": -3.5,
+              "y": 1.2000000476837158,
+              "z": 11
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "opening-manual",
+          "kind": "switch",
+          "type": 1,
+          "pose": {
+            "position": {
+              "x": 6,
+              "y": 1.2999999523162842,
+              "z": 10.699999809265137
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": 6,
+              "y": 1.2999999523162842,
+              "z": 10.699999809265137
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "timed-opening",
+          "kind": "shutter",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": -5,
+              "y": 1.5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": -5,
+              "y": 1.5364583730697632,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "manual-opening",
+          "kind": "shutter",
+          "type": 1,
+          "pose": {
+            "position": {
+              "x": 5,
+              "y": 1.5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": 5,
+              "y": 1.5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "stage": "restored-query",
+      "before": [
+        {
+          "id": "opening-clock",
+          "kind": "timer",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": -3.5,
+              "y": 1.2000000476837158,
+              "z": 11
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": -3.5,
+              "y": 1.2000000476837158,
+              "z": 11
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "opening-manual",
+          "kind": "switch",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": 6,
+              "y": 1.2999999523162842,
+              "z": 10.699999809265137
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": 6,
+              "y": 1.2999999523162842,
+              "z": 10.699999809265137
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "timed-opening",
+          "kind": "shutter",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": -5,
+              "y": 1.5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": -5,
+              "y": 1.5364583730697632,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "manual-opening",
+          "kind": "shutter",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": 5,
+              "y": 1.5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": 5,
+              "y": 1.5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      ],
+      "after": [
+        {
+          "id": "opening-clock",
+          "kind": "timer",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": -3.5,
+              "y": 1.2000000476837158,
+              "z": 11
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": -3.5,
+              "y": 1.2000000476837158,
+              "z": 11
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "opening-manual",
+          "kind": "switch",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": 6,
+              "y": 1.2999999523162842,
+              "z": 10.699999809265137
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": 6,
+              "y": 1.2999999523162842,
+              "z": 10.699999809265137
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "timed-opening",
+          "kind": "shutter",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": -5,
+              "y": 1.5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": -5,
+              "y": 1.5364583730697632,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "manual-opening",
+          "kind": "shutter",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": 5,
+              "y": 1.5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": 5,
+              "y": 1.5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "stage": "inside-native-query",
+      "current": [
+        {
+          "id": "opening-clock",
+          "kind": "timer",
+          "type": 1,
+          "pose": {
+            "position": {
+              "x": -3.5,
+              "y": 1.2000000476837158,
+              "z": 11
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": -3.5,
+              "y": 1.2000000476837158,
+              "z": 11
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "opening-manual",
+          "kind": "switch",
+          "type": 1,
+          "pose": {
+            "position": {
+              "x": 6,
+              "y": 1.2999999523162842,
+              "z": 10.699999809265137
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": 6,
+              "y": 1.2999999523162842,
+              "z": 10.699999809265137
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "timed-opening",
+          "kind": "shutter",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": -5,
+              "y": 1.5364583730697632,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": -5,
+              "y": 1.5729166269302368,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 4.375004291534424,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "manual-opening",
+          "kind": "shutter",
+          "type": 1,
+          "pose": {
+            "position": {
+              "x": 5,
+              "y": 1.5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": 5,
+              "y": 1.5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "stage": "restored-query",
+      "before": [
+        {
+          "id": "opening-clock",
+          "kind": "timer",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": -3.5,
+              "y": 1.2000000476837158,
+              "z": 11
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": -3.5,
+              "y": 1.2000000476837158,
+              "z": 11
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "opening-manual",
+          "kind": "switch",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": 6,
+              "y": 1.2999999523162842,
+              "z": 10.699999809265137
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": 6,
+              "y": 1.2999999523162842,
+              "z": 10.699999809265137
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "timed-opening",
+          "kind": "shutter",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": -5,
+              "y": 1.5364583730697632,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": -5,
+              "y": 1.5729166269302368,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 4.375004291534424,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "manual-opening",
+          "kind": "shutter",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": 5,
+              "y": 1.5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": 5,
+              "y": 1.5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      ],
+      "after": [
+        {
+          "id": "opening-clock",
+          "kind": "timer",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": -3.5,
+              "y": 1.2000000476837158,
+              "z": 11
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": -3.5,
+              "y": 1.2000000476837158,
+              "z": 11
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "opening-manual",
+          "kind": "switch",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": 6,
+              "y": 1.2999999523162842,
+              "z": 10.699999809265137
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": 6,
+              "y": 1.2999999523162842,
+              "z": 10.699999809265137
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "timed-opening",
+          "kind": "shutter",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": -5,
+              "y": 1.5364583730697632,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": -5,
+              "y": 1.5729166269302368,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 4.375004291534424,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "manual-opening",
+          "kind": "shutter",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": 5,
+              "y": 1.5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": 5,
+              "y": 1.5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "stage": "inside-native-query",
+      "current": [
+        {
+          "id": "opening-clock",
+          "kind": "timer",
+          "type": 1,
+          "pose": {
+            "position": {
+              "x": -3.5,
+              "y": 1.2000000476837158,
+              "z": 11
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": -3.5,
+              "y": 1.2000000476837158,
+              "z": 11
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "opening-manual",
+          "kind": "switch",
+          "type": 1,
+          "pose": {
+            "position": {
+              "x": 6,
+              "y": 1.2999999523162842,
+              "z": 10.699999809265137
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": 6,
+              "y": 1.2999999523162842,
+              "z": 10.699999809265137
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "timed-opening",
+          "kind": "shutter",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": -5,
+              "y": 1.5729166269302368,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": -5,
+              "y": 1.609375,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 4.374989986419678,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "manual-opening",
+          "kind": "shutter",
+          "type": 1,
+          "pose": {
+            "position": {
+              "x": 5,
+              "y": 1.5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": 5,
+              "y": 1.5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "stage": "restored-query",
+      "before": [
+        {
+          "id": "opening-clock",
+          "kind": "timer",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": -3.5,
+              "y": 1.2000000476837158,
+              "z": 11
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": -3.5,
+              "y": 1.2000000476837158,
+              "z": 11
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "opening-manual",
+          "kind": "switch",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": 6,
+              "y": 1.2999999523162842,
+              "z": 10.699999809265137
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": 6,
+              "y": 1.2999999523162842,
+              "z": 10.699999809265137
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "timed-opening",
+          "kind": "shutter",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": -5,
+              "y": 1.5729166269302368,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": -5,
+              "y": 1.609375,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 4.374989986419678,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "manual-opening",
+          "kind": "shutter",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": 5,
+              "y": 1.5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": 5,
+              "y": 1.5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      ],
+      "after": [
+        {
+          "id": "opening-clock",
+          "kind": "timer",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": -3.5,
+              "y": 1.2000000476837158,
+              "z": 11
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": -3.5,
+              "y": 1.2000000476837158,
+              "z": 11
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "opening-manual",
+          "kind": "switch",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": 6,
+              "y": 1.2999999523162842,
+              "z": 10.699999809265137
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": 6,
+              "y": 1.2999999523162842,
+              "z": 10.699999809265137
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "timed-opening",
+          "kind": "shutter",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": -5,
+              "y": 1.5729166269302368,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": -5,
+              "y": 1.609375,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 4.374989986419678,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "manual-opening",
+          "kind": "shutter",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": 5,
+              "y": 1.5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": 5,
+              "y": 1.5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "stage": "inside-native-query",
+      "current": [
+        {
+          "id": "opening-clock",
+          "kind": "timer",
+          "type": 1,
+          "pose": {
+            "position": {
+              "x": -3.5,
+              "y": 1.2000000476837158,
+              "z": 11
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": -3.5,
+              "y": 1.2000000476837158,
+              "z": 11
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "opening-manual",
+          "kind": "switch",
+          "type": 1,
+          "pose": {
+            "position": {
+              "x": 6,
+              "y": 1.2999999523162842,
+              "z": 10.699999809265137
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": 6,
+              "y": 1.2999999523162842,
+              "z": 10.699999809265137
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "timed-opening",
+          "kind": "shutter",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": -5,
+              "y": 1.609375,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": -5,
+              "y": 1.6458333730697632,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 4.375004291534424,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "manual-opening",
+          "kind": "shutter",
+          "type": 1,
+          "pose": {
+            "position": {
+              "x": 5,
+              "y": 1.5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": 5,
+              "y": 1.5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "stage": "restored-query",
+      "before": [
+        {
+          "id": "opening-clock",
+          "kind": "timer",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": -3.5,
+              "y": 1.2000000476837158,
+              "z": 11
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": -3.5,
+              "y": 1.2000000476837158,
+              "z": 11
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "opening-manual",
+          "kind": "switch",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": 6,
+              "y": 1.2999999523162842,
+              "z": 10.699999809265137
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": 6,
+              "y": 1.2999999523162842,
+              "z": 10.699999809265137
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "timed-opening",
+          "kind": "shutter",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": -5,
+              "y": 1.609375,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": -5,
+              "y": 1.6458333730697632,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 4.375004291534424,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "manual-opening",
+          "kind": "shutter",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": 5,
+              "y": 1.5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": 5,
+              "y": 1.5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      ],
+      "after": [
+        {
+          "id": "opening-clock",
+          "kind": "timer",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": -3.5,
+              "y": 1.2000000476837158,
+              "z": 11
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": -3.5,
+              "y": 1.2000000476837158,
+              "z": 11
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "opening-manual",
+          "kind": "switch",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": 6,
+              "y": 1.2999999523162842,
+              "z": 10.699999809265137
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": 6,
+              "y": 1.2999999523162842,
+              "z": 10.699999809265137
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "timed-opening",
+          "kind": "shutter",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": -5,
+              "y": 1.609375,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": -5,
+              "y": 1.6458333730697632,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 4.375004291534424,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "manual-opening",
+          "kind": "shutter",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": 5,
+              "y": 1.5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": 5,
+              "y": 1.5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "stage": "actual-invoked-held-query-restoration",
+      "before": [
+        {
+          "id": "opening-clock",
+          "kind": "timer",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": -3.5,
+              "y": 1.2000000476837158,
+              "z": 11
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": -3.5,
+              "y": 1.2000000476837158,
+              "z": 11
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "opening-manual",
+          "kind": "switch",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": 6,
+              "y": 1.2999999523162842,
+              "z": 10.699999809265137
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": 6,
+              "y": 1.2999999523162842,
+              "z": 10.699999809265137
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "timed-opening",
+          "kind": "shutter",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": -5,
+              "y": 5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": -5,
+              "y": 5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "manual-opening",
+          "kind": "shutter",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": 5,
+              "y": 1.5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": 5,
+              "y": 1.5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      ],
+      "after": [
+        {
+          "id": "opening-clock",
+          "kind": "timer",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": -3.5,
+              "y": 1.2000000476837158,
+              "z": 11
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": -3.5,
+              "y": 1.2000000476837158,
+              "z": 11
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "opening-manual",
+          "kind": "switch",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": 6,
+              "y": 1.2999999523162842,
+              "z": 10.699999809265137
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": 6,
+              "y": 1.2999999523162842,
+              "z": 10.699999809265137
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "timed-opening",
+          "kind": "shutter",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": -5,
+              "y": 5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": -5,
+              "y": 5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "manual-opening",
+          "kind": "shutter",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": 5,
+              "y": 1.5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": 5,
+              "y": 1.5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "stage": "actual-invoked-held-query-restoration",
+      "before": [
+        {
+          "id": "opening-clock",
+          "kind": "timer",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": -3.5,
+              "y": 1.2000000476837158,
+              "z": 11
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": -3.5,
+              "y": 1.2000000476837158,
+              "z": 11
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "opening-manual",
+          "kind": "switch",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": 6,
+              "y": 1.2999999523162842,
+              "z": 10.699999809265137
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": 6,
+              "y": 1.2999999523162842,
+              "z": 10.699999809265137
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "timed-opening",
+          "kind": "shutter",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": -5,
+              "y": 5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": -5,
+              "y": 5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "manual-opening",
+          "kind": "shutter",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": 5,
+              "y": 1.5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": 5,
+              "y": 1.5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      ],
+      "after": [
+        {
+          "id": "opening-clock",
+          "kind": "timer",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": -3.5,
+              "y": 1.2000000476837158,
+              "z": 11
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": -3.5,
+              "y": 1.2000000476837158,
+              "z": 11
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "opening-manual",
+          "kind": "switch",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": 6,
+              "y": 1.2999999523162842,
+              "z": 10.699999809265137
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": 6,
+              "y": 1.2999999523162842,
+              "z": 10.699999809265137
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "timed-opening",
+          "kind": "shutter",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": -5,
+              "y": 5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": -5,
+              "y": 5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        {
+          "id": "manual-opening",
+          "kind": "shutter",
+          "type": 2,
+          "pose": {
+            "position": {
+              "x": 5,
+              "y": 1.5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "next": {
+            "position": {
+              "x": 5,
+              "y": 1.5,
+              "z": -10.119999885559082
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            }
+          },
+          "linear": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "angular": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      ]
+    }
+  ],
+  "final": [
+    {
+      "id": "opening-clock",
+      "kind": "timer",
+      "type": 2,
+      "pose": {
+        "position": {
+          "x": -3.5,
+          "y": 1.2000000476837158,
+          "z": 11
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "w": 1
+        }
+      },
+      "next": {
+        "position": {
+          "x": -3.5,
+          "y": 1.2000000476837158,
+          "z": 11
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "w": 1
+        }
+      },
+      "linear": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "angular": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "id": "opening-manual",
+      "kind": "switch",
+      "type": 2,
+      "pose": {
+        "position": {
+          "x": 6,
+          "y": 1.2999999523162842,
+          "z": 10.699999809265137
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "w": 1
+        }
+      },
+      "next": {
+        "position": {
+          "x": 6,
+          "y": 1.2999999523162842,
+          "z": 10.699999809265137
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "w": 1
+        }
+      },
+      "linear": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "angular": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "id": "timed-opening",
+      "kind": "shutter",
+      "type": 2,
+      "pose": {
+        "position": {
+          "x": -5,
+          "y": 1.5,
+          "z": -10.119999885559082
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "w": 1
+        }
+      },
+      "next": {
+        "position": {
+          "x": -5,
+          "y": 1.5,
+          "z": -10.119999885559082
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "w": 1
+        }
+      },
+      "linear": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "angular": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "id": "manual-opening",
+      "kind": "shutter",
+      "type": 2,
+      "pose": {
+        "position": {
+          "x": 5,
+          "y": 5,
+          "z": -10.119999885559082
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "w": 1
+        }
+      },
+      "next": {
+        "position": {
+          "x": 5,
+          "y": 5,
+          "z": -10.119999885559082
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "w": 1
+        }
+      },
+      "linear": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "angular": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    }
+  ]
+}

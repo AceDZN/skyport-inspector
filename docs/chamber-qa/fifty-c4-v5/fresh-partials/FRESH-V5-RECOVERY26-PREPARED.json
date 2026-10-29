@@ -1,0 +1,708 @@
+{
+  "scope": "Prepared QA normal-flow conversion correction; not yet executed. Actual room26 win/earned1–26 preserved, currentmodeResult correct. Original room-specific recipes reloaded every room, but normal Start/Next conversion removed reload and missed5 wait-for-menu conditions in26–30. Correct only those waits to result, then normal original Next. No source/game/pose/clock/save changes or room reset.",
+  "recordedAt": "2026-10-29T00:12:55.738Z",
+  "oldSourceSHA256": "4d5c4700d0b16b3803105c769bf1b146e7cffb1dd14fce53292d4345bfc181a8",
+  "failedStage": {
+    "path": "/Users/acedzn/idea-plotter/reports/rift-final-campaign-review/v5-recovery24-device-state-and-tail.jsonl",
+    "sha256": "4d5c4700d0b16b3803105c769bf1b146e7cffb1dd14fce53292d4345bfc181a8",
+    "startIndex": 0,
+    "inputCount": 1829,
+    "status": "failed",
+    "currentIndex": 197,
+    "failedIndex": 197,
+    "error": "Error: Timed out waiting for actual public state: [{\"path\":\"mode\",\"equals\":\"menu\"}]"
+  },
+  "actualMode": "result",
+  "actualGoal": {
+    "goalMatched": true,
+    "physicalComplete": true,
+    "exit": "a-exit",
+    "reason": "",
+    "events": [
+      {
+        "type": "timer-open",
+        "time": 271217,
+        "id": "test-clock"
+      },
+      {
+        "type": "shutter-open",
+        "time": 271217,
+        "id": "gate-a"
+      },
+      {
+        "type": "receiver-power",
+        "time": 271217,
+        "id": "test-drive",
+        "value": "test-drive"
+      },
+      {
+        "type": "timer-close",
+        "time": 280217,
+        "id": "test-clock"
+      },
+      {
+        "type": "shutter-close",
+        "time": 280217,
+        "id": "gate-a"
+      },
+      {
+        "type": "timer-open",
+        "time": 285217,
+        "id": "test-clock"
+      },
+      {
+        "type": "shutter-open",
+        "time": 285217,
+        "id": "gate-a"
+      },
+      {
+        "type": "receiver-power",
+        "time": 285217,
+        "id": "test-drive",
+        "value": "test-drive"
+      },
+      {
+        "type": "timer-close",
+        "time": 294217,
+        "id": "test-clock"
+      },
+      {
+        "type": "shutter-close",
+        "time": 294217,
+        "id": "gate-a"
+      },
+      {
+        "type": "pad",
+        "time": 298125,
+        "pad": "manual-power",
+        "crate": "test-cube"
+      },
+      {
+        "type": "timer-open",
+        "time": 299225,
+        "id": "test-clock"
+      },
+      {
+        "type": "shutter-open",
+        "time": 299225,
+        "id": "gate-a"
+      },
+      {
+        "type": "receiver-power",
+        "time": 299225,
+        "id": "test-drive",
+        "value": "test-drive"
+      },
+      {
+        "type": "timer-close",
+        "time": 308225,
+        "id": "test-clock"
+      },
+      {
+        "type": "shutter-close",
+        "time": 308225,
+        "id": "gate-a"
+      },
+      {
+        "type": "timer-open",
+        "time": 313225,
+        "id": "test-clock"
+      },
+      {
+        "type": "shutter-open",
+        "time": 313225,
+        "id": "gate-a"
+      },
+      {
+        "type": "receiver-power",
+        "time": 313225,
+        "id": "test-drive",
+        "value": "test-drive"
+      },
+      {
+        "type": "timer-close",
+        "time": 322225,
+        "id": "test-clock"
+      },
+      {
+        "type": "shutter-close",
+        "time": 322225,
+        "id": "gate-a"
+      },
+      {
+        "type": "timer-open",
+        "time": 327225,
+        "id": "test-clock"
+      },
+      {
+        "type": "shutter-open",
+        "time": 327225,
+        "id": "gate-a"
+      },
+      {
+        "type": "receiver-power",
+        "time": 327225,
+        "id": "test-drive",
+        "value": "test-drive"
+      },
+      {
+        "type": "drop",
+        "time": 328092,
+        "body": "test-cube"
+      },
+      {
+        "type": "timer-close",
+        "time": 336225,
+        "id": "test-clock"
+      },
+      {
+        "type": "shutter-close",
+        "time": 336225,
+        "id": "gate-a"
+      },
+      {
+        "type": "timer-open",
+        "time": 341225,
+        "id": "test-clock"
+      },
+      {
+        "type": "shutter-open",
+        "time": 341225,
+        "id": "gate-a"
+      },
+      {
+        "type": "receiver-power",
+        "time": 341225,
+        "id": "test-drive",
+        "value": "test-drive"
+      },
+      {
+        "type": "timer-close",
+        "time": 350225,
+        "id": "test-clock"
+      },
+      {
+        "type": "shutter-close",
+        "time": 350225,
+        "id": "gate-a"
+      },
+      {
+        "type": "timer-open",
+        "time": 355225,
+        "id": "test-clock"
+      },
+      {
+        "type": "shutter-open",
+        "time": 355225,
+        "id": "gate-a"
+      },
+      {
+        "type": "receiver-power",
+        "time": 355225,
+        "id": "test-drive",
+        "value": "test-drive"
+      },
+      {
+        "type": "timer-close",
+        "time": 364225,
+        "id": "test-clock"
+      },
+      {
+        "type": "shutter-close",
+        "time": 364225,
+        "id": "gate-a"
+      },
+      {
+        "type": "timer-open",
+        "time": 369225,
+        "id": "test-clock"
+      },
+      {
+        "type": "shutter-open",
+        "time": 369225,
+        "id": "gate-a"
+      },
+      {
+        "type": "receiver-power",
+        "time": 369225,
+        "id": "test-drive",
+        "value": "test-drive"
+      },
+      {
+        "type": "timer-close",
+        "time": 378225,
+        "id": "test-clock"
+      },
+      {
+        "type": "shutter-close",
+        "time": 378225,
+        "id": "gate-a"
+      },
+      {
+        "type": "footstep",
+        "time": 378733
+      },
+      {
+        "type": "timer-open",
+        "time": 383225,
+        "id": "test-clock"
+      },
+      {
+        "type": "shutter-open",
+        "time": 383225,
+        "id": "gate-a"
+      },
+      {
+        "type": "receiver-power",
+        "time": 383225,
+        "id": "test-drive",
+        "value": "test-drive"
+      },
+      {
+        "type": "footstep",
+        "time": 390958
+      },
+      {
+        "type": "footstep",
+        "time": 391383
+      },
+      {
+        "type": "timer-close",
+        "time": 392225,
+        "id": "test-clock"
+      },
+      {
+        "type": "shutter-close",
+        "time": 392225,
+        "id": "gate-a"
+      },
+      {
+        "type": "timer-open",
+        "time": 397225,
+        "id": "test-clock"
+      },
+      {
+        "type": "shutter-open",
+        "time": 397225,
+        "id": "gate-a"
+      },
+      {
+        "type": "receiver-power",
+        "time": 397225,
+        "id": "test-drive",
+        "value": "test-drive"
+      },
+      {
+        "type": "footstep",
+        "time": 397342
+      },
+      {
+        "type": "footstep",
+        "time": 397767
+      },
+      {
+        "type": "footstep",
+        "time": 400658
+      },
+      {
+        "type": "footstep",
+        "time": 401083
+      },
+      {
+        "type": "footstep",
+        "time": 404158
+      },
+      {
+        "type": "footstep",
+        "time": 404583
+      },
+      {
+        "type": "footstep",
+        "time": 405042
+      },
+      {
+        "type": "timer-close",
+        "time": 406225,
+        "id": "test-clock"
+      },
+      {
+        "type": "shutter-close",
+        "time": 406225,
+        "id": "gate-a"
+      },
+      {
+        "type": "timer-open",
+        "time": 411225,
+        "id": "test-clock"
+      },
+      {
+        "type": "shutter-open",
+        "time": 411225,
+        "id": "gate-a"
+      },
+      {
+        "type": "receiver-power",
+        "time": 411225,
+        "id": "test-drive",
+        "value": "test-drive"
+      },
+      {
+        "type": "timer-close",
+        "time": 420225,
+        "id": "test-clock"
+      },
+      {
+        "type": "shutter-close",
+        "time": 420225,
+        "id": "gate-a"
+      },
+      {
+        "type": "switch-toggle",
+        "time": 423925,
+        "id": "test-power",
+        "value": false
+      },
+      {
+        "type": "shutter-open",
+        "time": 423925,
+        "id": "manual-cover"
+      },
+      {
+        "type": "switch-toggle",
+        "time": 432350,
+        "id": "test-power",
+        "value": true
+      },
+      {
+        "type": "shutter-close",
+        "time": 432350,
+        "id": "manual-cover"
+      },
+      {
+        "type": "timer-open",
+        "time": 433650,
+        "id": "test-clock"
+      },
+      {
+        "type": "shutter-open",
+        "time": 433650,
+        "id": "gate-a"
+      },
+      {
+        "type": "receiver-power",
+        "time": 433650,
+        "id": "test-drive",
+        "value": "test-drive"
+      },
+      {
+        "type": "switch-toggle",
+        "time": 440717,
+        "id": "test-power",
+        "value": false
+      },
+      {
+        "type": "timer-close",
+        "time": 440717,
+        "id": "test-clock"
+      },
+      {
+        "type": "shutter-close",
+        "time": 440717,
+        "id": "gate-a"
+      },
+      {
+        "type": "shutter-open",
+        "time": 440717,
+        "id": "manual-cover"
+      },
+      {
+        "type": "footstep",
+        "time": 476817
+      },
+      {
+        "type": "footstep",
+        "time": 477242
+      },
+      {
+        "type": "footstep",
+        "time": 505717
+      },
+      {
+        "type": "footstep",
+        "time": 506142
+      },
+      {
+        "type": "footstep",
+        "time": 537958
+      },
+      {
+        "type": "footstep",
+        "time": 560692
+      },
+      {
+        "type": "footstep",
+        "time": 561117
+      },
+      {
+        "type": "footstep",
+        "time": 564342
+      },
+      {
+        "type": "footstep",
+        "time": 574958
+      },
+      {
+        "type": "footstep",
+        "time": 575383
+      },
+      {
+        "type": "footstep",
+        "time": 579558
+      },
+      {
+        "type": "switch-toggle",
+        "time": 588450,
+        "id": "manual-a",
+        "value": true
+      },
+      {
+        "type": "shutter-open",
+        "time": 588450,
+        "id": "gate-a"
+      },
+      {
+        "type": "shutter-open",
+        "time": 588450,
+        "id": "a-exit-leaf"
+      },
+      {
+        "type": "receiver-power",
+        "time": 588450,
+        "id": "manual-drive-a",
+        "value": "manual-drive-a"
+      },
+      {
+        "type": "footstep",
+        "time": 616058
+      },
+      {
+        "type": "footstep",
+        "time": 616483
+      },
+      {
+        "type": "footstep",
+        "time": 624942
+      },
+      {
+        "type": "footstep",
+        "time": 653950
+      },
+      {
+        "type": "footstep",
+        "time": 654375
+      },
+      {
+        "type": "footstep",
+        "time": 658750
+      },
+      {
+        "type": "footstep",
+        "time": 659175
+      },
+      {
+        "type": "footstep",
+        "time": 661033
+      },
+      {
+        "type": "footstep",
+        "time": 661458
+      },
+      {
+        "type": "footstep",
+        "time": 662567
+      },
+      {
+        "type": "footstep",
+        "time": 665700
+      },
+      {
+        "type": "footstep",
+        "time": 666125
+      },
+      {
+        "type": "footstep",
+        "time": 666550
+      },
+      {
+        "type": "footstep",
+        "time": 667167
+      },
+      {
+        "type": "footstep",
+        "time": 667592
+      },
+      {
+        "type": "footstep",
+        "time": 668017
+      },
+      {
+        "type": "footstep",
+        "time": 682067
+      },
+      {
+        "type": "footstep",
+        "time": 682492
+      },
+      {
+        "type": "footstep",
+        "time": 684450
+      },
+      {
+        "type": "footstep",
+        "time": 684875
+      },
+      {
+        "type": "footstep",
+        "time": 686683
+      },
+      {
+        "type": "footstep",
+        "time": 694367
+      },
+      {
+        "type": "footstep",
+        "time": 694792
+      },
+      {
+        "type": "footstep",
+        "time": 695217
+      },
+      {
+        "type": "footstep",
+        "time": 695642
+      },
+      {
+        "type": "footstep",
+        "time": 696067
+      },
+      {
+        "type": "footstep",
+        "time": 696492
+      }
+    ],
+    "mechanisms": [
+      "portals",
+      "switches",
+      "shutters",
+      "beams",
+      "cargo",
+      "buttons"
+    ]
+  },
+  "earnedPrefix": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26
+  ],
+  "respawns": 0,
+  "changes": [
+    {
+      "oldStep": 197,
+      "old": {
+        "action": "wait-for",
+        "conditions": [
+          {
+            "path": "mode",
+            "equals": "menu"
+          }
+        ],
+        "timeoutMs": 120000,
+        "stableMs": 160
+      }
+    },
+    {
+      "oldStep": 275,
+      "old": {
+        "action": "wait-for",
+        "conditions": [
+          {
+            "path": "mode",
+            "equals": "menu"
+          }
+        ],
+        "timeoutMs": 120000,
+        "stableMs": 160
+      }
+    },
+    {
+      "oldStep": 359,
+      "old": {
+        "action": "wait-for",
+        "conditions": [
+          {
+            "path": "mode",
+            "equals": "menu"
+          }
+        ],
+        "timeoutMs": 120000,
+        "stableMs": 160
+      }
+    },
+    {
+      "oldStep": 425,
+      "old": {
+        "action": "wait-for",
+        "conditions": [
+          {
+            "path": "mode",
+            "equals": "menu"
+          }
+        ],
+        "timeoutMs": 120000,
+        "stableMs": 160
+      }
+    },
+    {
+      "oldStep": 538,
+      "old": {
+        "action": "wait-for",
+        "conditions": [
+          {
+            "path": "mode",
+            "equals": "menu"
+          }
+        ],
+        "timeoutMs": 120000,
+        "stableMs": 160
+      }
+    }
+  ],
+  "plan": "v5-recovery26-result-flow-and-tail.jsonl",
+  "commands": 1633,
+  "sha256": "e02d24cf11fa1b8f96d57a1f4195f430eb07445e52274254dae1472d596fba4d",
+  "pageErrors": [],
+  "consoleErrors": []
+}

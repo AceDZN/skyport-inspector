@@ -1,0 +1,42 @@
+{
+  "scope": "Metrics-only observers and new focused authored/safety test source only. Existing legacy synthetic units deliberately use explicit setup; no claim that all497 are input-only. Camera look assignments and blueprint construction are allowed. Wrappers call originals once with unchanged args.",
+  "totalForbiddenSetterMatches": 0,
+  "files": {
+    "tests/helpers/machine-query-state-observer.ts": {
+      "sha256": "8508abaf740f84c5c7348cbe1fffa0c44ce14e17c84352802fa67ea721e968f4",
+      "forbiddenSetterMatches": {
+        "nativePoseVelocityTypeSetters": 0,
+        "actorOrCubeProxyPoseSetters": 0,
+        "portalArrayAssignments": 0,
+        "worldClockAssignments": 0
+      }
+    },
+    "tests/helpers/authored-held-state-observer.ts": {
+      "sha256": "32d93e2ebf3bb9986c1797d9699a3ece7dfe58fe13ef467f49fd80ff3c99f60f",
+      "forbiddenSetterMatches": {
+        "nativePoseVelocityTypeSetters": 0,
+        "actorOrCubeProxyPoseSetters": 0,
+        "portalArrayAssignments": 0,
+        "worldClockAssignments": 0
+      }
+    },
+    "tests/core-C4-connected-recovery.test.ts": {
+      "sha256": "402440704150a5cd677c247e07b28fed27e8b387fb81903b61859484af49131f",
+      "forbiddenSetterMatches": {
+        "nativePoseVelocityTypeSetters": 0,
+        "actorOrCubeProxyPoseSetters": 0,
+        "portalArrayAssignments": 0,
+        "worldClockAssignments": 0
+      }
+    },
+    "tests/core-connected-pickup-safety.test.ts": {
+      "sha256": "34eafd5a54b78c472dcec5d77cf85b22d8ac0f7a5ddd8aa0f4ee3208e4a74cab",
+      "forbiddenSetterMatches": {
+        "nativePoseVelocityTypeSetters": 0,
+        "actorOrCubeProxyPoseSetters": 0,
+        "portalArrayAssignments": 0,
+        "worldClockAssignments": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "status": "PASS; FULL497 CLOSED",
+  "worldSHA256": "e444b9be69182af22e88e554e512e462e3cb7f5d97f18a16f90ef3f8ebd7be43",
+  "nativeExit": 0,
+  "sourceCount": 135,
+  "sourceExact": true,
+  "activeOriginalsExact": true,
+  "physicalFixturesUnchanged": true,
+  "strictRepeated": false,
+  "strictProofReused": true,
+  "elapsedSeconds": 9202.841147899628,
+  "nativeReceipt": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/C4-partial-drop/full-regression-native-first/native-job.json",
+  "nativeLog": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/C4-partial-drop/full-regression-native-first/native.txt",
+  "nativeSlot": "RELEASED",
+  "passed": 497,
+  "failed": 0,
+  "skipped": 0,
+  "heldStateTotals": {
+    "24": {
+      "instances": 7,
+      "counts": {
+        "character": 13470,
+        "native": 13470,
+        "physics": 13470,
+        "held": 408,
+        "portal": 10,
+        "violations": 0
+      },
+      "heldRoutes": 3,
+      "heldSamples": 6
+    },
+    "26": {
+      "instances": 5,
+      "counts": {
+        "character": 11108,
+        "native": 11108,
+        "physics": 11108,
+        "held": 966,
+        "portal": 6,
+        "violations": 0
+      },
+      "heldRoutes": 3,
+      "heldSamples": 6
+    }
+  },
+  "allOwnedJobsClosed": true,
+  "freshBrowserProof": "Separate Parent-owned run; not claimed here.",
+  "readme": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/C4-partial-drop/full-regression-native-first/README.md",
+  "detailedResult": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/C4-partial-drop/full-regression-native-first/RESULT.json",
+  "totalActualHeldQueries": 1374,
+  "totalActualCharacterNativePhysicsQueries": 24578,
+  "boundedActualHeldSamples": 12,
+  "stateViolations": 0,
+  "forbiddenSetterMatchesInScopedObserversAndNewTests": 0,
+  "exactReceipts": {
+    "fullBeforeAfterCommandEnvNiceAndActive": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/C4-partial-drop/full-regression-native-first/native-job.json",
+    "sourceBeforeAndSaveInputs": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/C4-partial-drop/full-regression-native-first/source-receipt.json",
+    "nativePlan51Files": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/C4-partial-drop/full-regression-native-first/plan.json",
+    "worldBefore": "e444b9be69182af22e88e554e512e462e3cb7f5d97f18a16f90ef3f8ebd7be43",
+    "worldAfter": "e444b9be69182af22e88e554e512e462e3cb7f5d97f18a16f90ef3f8ebd7be43",
+    "sceneBefore": "46bb5b3d01be8d920c84f3e75a9406d151e723223bc0b48c1b3aacd5d0ae98ad",
+    "sceneAfter": "46bb5b3d01be8d920c84f3e75a9406d151e723223bc0b48c1b3aacd5d0ae98ad",
+    "activeBefore": {
+      "src/core/world.ts": "e444b9be69182af22e88e554e512e462e3cb7f5d97f18a16f90ef3f8ebd7be43",
+      "src/core/levels/early.ts": "85fbe5b5357d8b3b43a9c45adccd815e297a0446960580f43cb2b8fb17159b2b",
+      "src/chamber-scene.ts": "46bb5b3d01be8d920c84f3e75a9406d151e723223bc0b48c1b3aacd5d0ae98ad",
+      "tests/core-C4-connected-recovery.test.ts": "402440704150a5cd677c247e07b28fed27e8b387fb81903b61859484af49131f",
+      "tests/core-connected-pickup-safety.test.ts": "34eafd5a54b78c472dcec5d77cf85b22d8ac0f7a5ddd8aa0f4ee3208e4a74cab"
+    },
+    "activeAfter": {
+      "src/core/world.ts": "e444b9be69182af22e88e554e512e462e3cb7f5d97f18a16f90ef3f8ebd7be43",
+      "src/core/levels/early.ts": "85fbe5b5357d8b3b43a9c45adccd815e297a0446960580f43cb2b8fb17159b2b",
+      "src/chamber-scene.ts": "46bb5b3d01be8d920c84f3e75a9406d151e723223bc0b48c1b3aacd5d0ae98ad",
+      "tests/core-C4-connected-recovery.test.ts": "402440704150a5cd677c247e07b28fed27e8b387fb81903b61859484af49131f",
+      "tests/core-connected-pickup-safety.test.ts": "34eafd5a54b78c472dcec5d77cf85b22d8ac0f7a5ddd8aa0f4ee3208e4a74cab"
+    }
+  },
+  "distinctCaseAudit": {
+    "priorActuallyPassed": 487,
+    "newActuallyPassed": 10,
+    "fullActualPassed": 497,
+    "testFileCount": 51,
+    "disjointProvenance": {
+      "priorActuallyPassed": 487,
+      "priorNativeReceipt": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-machine-query/common-full-required-complete-first/native-job.json",
+      "focusedActuallyPassed": 10,
+      "focusedNativeReceipt": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/C4-partial-drop/connected-focused-second/native-job.json",
+      "focusedFilesNotInPriorPlan": true,
+      "newCaseNamesDisjoint": true,
+      "expected": 497,
+      "actualMustBeReportedAfterExecution": true
+    },
+    "syntheticUnitsAreNotBrowserProof": true
+  },
+  "strictProvenance": {
+    "runtimeTscAndVite": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/fifty-c4-v5/build-result.json",
+    "focusedNewTwoStrict0": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/C4-partial-drop/connected-focused-second/strict-job.json",
+    "priorUnchangedSevenStrict0": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/stationary-machine-query/common-full-required-complete-first/strict-job.json",
+    "interruptedAttemptNotPassed": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/C4-partial-drop/full-regression-first/INTERRUPTION.json",
+    "authorization": "Root explicitly grants native-only reuse after actual natural v5 UI68cmd recovery. Avoiding redundant compilation; no interrupted strict pass claimed."
+  },
+  "preservedCompilerInterruption": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/docs/chamber-qa/C4-partial-drop/full-regression-first/INTERRUPTION.json",
+  "rawTracesUntouched": true
+}
