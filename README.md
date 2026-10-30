@@ -24,3 +24,10 @@ npm run preview
 WASD moves; mouse looks; left/right click places portals; E uses/grabs/drops; Space jumps; R retries; M opens help; N opens a configured journal; Escape pauses. Drag look is available in settings. Reading pauses physics and continuous room audio.
 
 REAL-PORTAL-RESET.md and PORTAL-CAMPAIGN-QUALITY.md govern the work. Historical tags retain the rejected graded/AABB draft and earlier reviewed checkpoints. They are source history, not the current game or final campaign evidence.
+
+
+## Workbook integration ·30 October2026
+
+The game now supports Workbook's version1 iframe bridge and canonical `?level=1..50` direct entry. Ahead-of-save entries are session-only practice without skipped-room unlocks. Ready follows required models and a real render; starts/retries and actual base physical completions are reported once, using pause-excluded active attempt duration. Exact parent/source guards and transient host mute are included. Standalone saved campaign behavior is retained.
+
+See [adapter contract and verification](docs/workbook-integration/README.md), [focused acceptance](docs/workbook-integration/ACCEPTANCE.json), and [real gameplay poster](public/poster.png). Ten host unit tests, strict TypeScript/Vite build, skill-client inspection and a real iframe C1 solve/retry/next/error sequence pass. The accepted physical campaign/scene/model/content sources are unchanged; the prior497/native and fresh50 evidence was retained, not rerun for this bridge. The acedzn-tools catalog/hosting release is handled separately.

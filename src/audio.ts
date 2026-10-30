@@ -22,6 +22,8 @@ export class SkyportAudio {
  private values: Settings = {...defaults};
  private loading?: Promise<void>;
  private paused = false;
+ private hostMuted = false;
+ private effectiveMaster(){return this.hostMuted?0:this.values.master;}
  private high = false;
  private paired = false;
  private bridgeActive = false;
@@ -56,12 +58,12 @@ export class SkyportAudio {
    this.buses.music.connect(this.musicColour);this.musicColour.connect(this.duckGain); this.duckGain.connect(this.buses.master);
    this.buses.sfx.connect(this.buses.master); this.buses.voice.connect(this.buses.master);
    this.buses.master.connect(this.limiter); this.limiter.connect(c.destination);
-   for (const k of Object.keys(defaults) as Bus[]) this.buses[k].gain.value=this.values[k];
+   for (const k of Object.keys(defaults) as Bus[]) this.buses[k].gain.value=k==='master'?this.effectiveMaster():this.values[k];
    this.energyGain.gain.value=this.energyLevel(); this.energyGain.connect(this.buses.music);this.applyMusicVariation();
    this.loading=this.load();
   }
   window.clearTimeout(this.pauseTimer); this.paused=false;
-  this.ramp(this.buses!.master.gain,this.values.master,.12);
+  this.ramp(this.buses!.master.gain,this.effectiveMaster(),.12);
   this.ramp(this.buses!.music.gain,this.values.music,.12);
   // Resume is invoked synchronously in the user gesture, before awaiting fetch/decode.
   await this.ctx.resume();
@@ -133,7 +135,7 @@ export class SkyportAudio {
   const source=this.playCue('complete',0,true);
   if(!source||!this.ctx||!this.buses){this.setPaused(true);return;}
   this.completionSource=source;
-  this.ramp(this.buses.music.gain,0,.09);this.ramp(this.buses.master.gain,this.values.master,.08);
+  this.ramp(this.buses.music.gain,0,.09);this.ramp(this.buses.master.gain,this.effectiveMaster(),.08);
   const cleanup=source.onended;
   source.onended=event=>{
    cleanup?.call(source,event);
@@ -151,7 +153,7 @@ export class SkyportAudio {
    this.ramp(this.buses.master.gain,0,.09);
    this.pauseTimer=window.setTimeout(()=>{if(this.paused)void this.ctx?.suspend();},130);
   } else {
-   void this.ctx.resume(); this.ramp(this.buses.master.gain,this.values.master,.12);this.ramp(this.buses.music.gain,this.values.music,.12);
+   void this.ctx.resume(); this.ramp(this.buses.master.gain,this.effectiveMaster(),.12);this.ramp(this.buses.music.gain,this.values.music,.12);
   }
  }
  setEnergy(high: boolean): void {this.high=high;this.paired=false;this.bridgeActive=false;this.applyMusicVariation();}
@@ -190,7 +192,12 @@ export class SkyportAudio {
   if(!(bus in defaults) || !Number.isFinite(value))return; const key=bus as Bus;
   this.values[key]=Math.min(1,Math.max(0,value));
   try {localStorage.setItem(storageKey,JSON.stringify(this.values));}catch{}
-  if(this.buses && !(key==='master'&&this.paused&&!this.completionSource) && !(key==='music'&&this.completionSource))this.ramp(this.buses[key].gain,this.values[key]);
+  if(this.buses && !(key==='master'&&this.paused&&!this.completionSource) && !(key==='music'&&this.completionSource))this.ramp(this.buses[key].gain,key==='master'?this.effectiveMaster():this.values[key]);
+ }
+ /** Host mute is transient and never overwrites the player's saved mixer. */
+ setHostMuted(muted:boolean):void {
+  this.hostMuted=muted;
+  if(this.buses)this.ramp(this.buses.master.gain,this.paused&&!this.completionSource?0:this.effectiveMaster());
  }
  /** Reserved for optional subtitled voice playback; ambience/music reduce under speech. */
  setDucking(ducked: boolean): void {this.ducked=ducked;if(this.duckGain)this.ramp(this.duckGain.gain,ducked?.24:1,ducked?.12:.5);}
@@ -200,7 +207,7 @@ export class SkyportAudio {
   const s=this.ctx!.createBufferSource();s.buffer=b;s.connect(this.buses!.voice);this.voiceSource=s;this.setDucking(true);
   s.onended=()=>{if(this.voiceSource===s){this.voiceSource=undefined;this.setDucking(false);}s.disconnect();};s.start();
  }
- state() {return {context:this.ctx?.state||'not-started',paused:this.paused,completionActive:!!this.completionSource,loopCount:this.loops.length,activeSfx:this.shots.size,cuesPlayed:this.cueCount,energy:this.high,chapter:this.chapter,intensity:this.intensity,environment:this.environment,airSpeed:this.airSpeed,airActive:!!this.air,recentCues:[...this.recentCues],paired:this.paired,bridge:this.bridgeActive,ducked:this.ducked,gains:this.settings(),loadedBuffers:this.buffers.size,loadErrors:[...this.failures],timeline:this.ctx?Math.max(0,this.ctx.currentTime-this.startedAt):0};}
+ state() {return {context:this.ctx?.state||'not-started',paused:this.paused,hostMuted:this.hostMuted,completionActive:!!this.completionSource,loopCount:this.loops.length,activeSfx:this.shots.size,cuesPlayed:this.cueCount,energy:this.high,chapter:this.chapter,intensity:this.intensity,environment:this.environment,airSpeed:this.airSpeed,airActive:!!this.air,recentCues:[...this.recentCues],paired:this.paired,bridge:this.bridgeActive,ducked:this.ducked,gains:this.settings(),loadedBuffers:this.buffers.size,loadErrors:[...this.failures],timeline:this.ctx?Math.max(0,this.ctx.currentTime-this.startedAt):0};}
 }
 
 /** New product name; the old export remains source-compatible for integration. */

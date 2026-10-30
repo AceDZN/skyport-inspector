@@ -1,0 +1,175 @@
+{
+  "scope": "Preserved failed observer/harness attempts; none counted as final passes. Raw files remain locally at their original hashes. Runtime World/Scene unchanged throughout. Only final adapter adds read-only activeSeconds diagnostic.",
+  "attempts": [
+    {
+      "name": "browser-harness-first",
+      "status": "failed",
+      "failure": "TimeoutError: frame.waitForFunction: Timeout 30000ms exceeded.",
+      "reason": "Parent document was route-fulfilled without a real socket; Chromium blocked child with ERR_BLOCKED_BY_LOCAL_NETWORK_ACCESS_CHECKS before game loading. Switched to real HTTP parent server.",
+      "originalResultSha256": "74197b3693ea189902c30b8e5b1c58af049c286ff509c7211f1e1532f0fd44bc",
+      "retainedPath": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/work/workbook-release/work/host-harness-attempts/browser-harness-first",
+      "files": [
+        {
+          "path": "FAILED.png",
+          "sha256": "99db2a93b06fa1bf617f5c495e02dcf6c0b76961108491217e2cf4fed8699d35",
+          "bytes": 5851
+        },
+        {
+          "path": "RESULT.json",
+          "sha256": "74197b3693ea189902c30b8e5b1c58af049c286ff509c7211f1e1532f0fd44bc",
+          "bytes": 334
+        }
+      ]
+    },
+    {
+      "name": "browser-harness-second",
+      "status": "failed",
+      "failure": "TimeoutError: page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.2:4263/rift-iframe?src=http%3A%2F%2F127.0.0.1%3A4262%2F%3Flevel%3D1\", waiting until \"load\"\u001b[22m\n",
+      "reason": "127.0.0.2 is not bound as a loopback alias on this host; foreign-parent navigation timed out. Switched to foreign.localhost resolved to 127.0.0.1.",
+      "originalResultSha256": "2a96d3bf4f53408414eefafe779f352f7a45ca010b905268ffc721c3b987a300",
+      "retainedPath": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/work/workbook-release/work/host-harness-attempts/browser-harness-second",
+      "files": [
+        {
+          "path": "01-real-room50-direct-entry.png",
+          "sha256": "5afb8b40020aa4dcb6575ce6dea3e56c9a025b9b2e52604763899b1ff85549fe",
+          "bytes": 707758
+        },
+        {
+          "path": "RESULT.json",
+          "sha256": "2a96d3bf4f53408414eefafe779f352f7a45ca010b905268ffc721c3b987a300",
+          "bytes": 73758
+        }
+      ]
+    },
+    {
+      "name": "browser-harness-third",
+      "status": "failed",
+      "failure": "Error: Model retry lifecycle wrong",
+      "reason": "Foreign insecure ancestor lacked crypto.subtle; changed test to secure-context *.localhost. Model Retry was actually successful in captured error,ready,start sequence, but observer read it before async delivery; wait now observes delivery.",
+      "originalResultSha256": "dd8c9581ed87386960fbdfc1b9ae58388588c4d242dc1a3c288f8e1c5bd4de26",
+      "retainedPath": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/work/workbook-release/work/host-harness-attempts/browser-harness-third",
+      "files": [
+        {
+          "path": "01-real-room50-direct-entry.png",
+          "sha256": "28815b2690ce9cce10ef8d0334512f24a421e7adbc29525536214521bb157d5d",
+          "bytes": 710799
+        },
+        {
+          "path": "02-required-model-error-no-fallback.png",
+          "sha256": "d32bfcac7c31551b2e36f8408a850dfa742fd9c64a8f96d7efa524927ea928fc",
+          "bytes": 14923
+        },
+        {
+          "path": "FAILED.png",
+          "sha256": "7195c8c452c6b59a9a2c7eab8a791f9e67859e96de02661df61e34a4daad3009",
+          "bytes": 999585
+        },
+        {
+          "path": "RESULT.json",
+          "sha256": "dd8c9581ed87386960fbdfc1b9ae58388588c4d242dc1a3c288f8e1c5bd4de26",
+          "bytes": 106938
+        }
+      ]
+    },
+    {
+      "name": "browser-harness-fourth",
+      "status": "failed",
+      "failure": "Error: Duration is not active attempt time",
+      "reason": "Actual C1 physical goal and one completion passed. Test wrongly read absent world.time, so duration comparison failed (NaN).",
+      "originalResultSha256": "ec5ba232f2c7aa392441c3fbd4dd6a3dc415d5cd6dad261b549903daca428b10",
+      "retainedPath": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/work/workbook-release/work/host-harness-attempts/browser-harness-fourth",
+      "files": [
+        {
+          "path": "01-real-room50-direct-entry.png",
+          "sha256": "2eea75acf9eb02158f98658f75768f0d7c05ce7f70bb25298ca8090aeb109477",
+          "bytes": 711459
+        },
+        {
+          "path": "02-required-model-error-no-fallback.png",
+          "sha256": "d32bfcac7c31551b2e36f8408a850dfa742fd9c64a8f96d7efa524927ea928fc",
+          "bytes": 14923
+        },
+        {
+          "path": "03-real-linked-portals-and-projector.png",
+          "sha256": "36881b14b4f632bed41938a9f9de6e1c1d6c01e5d3db1038aceaea876781e900",
+          "bytes": 984481
+        },
+        {
+          "path": "04-real-projector-and-held-cargo.png",
+          "sha256": "9e88dfd87cd18fc70ee18138778f4ccd63db09914454971ea8ff8f05485eb56c",
+          "bytes": 1269104
+        },
+        {
+          "path": "05-real-cargo-on-pressure-plate.png",
+          "sha256": "c571d42e36d3fcf736f06d9dfb7841ee86580af8ec0193a4e07937d35b1bb868",
+          "bytes": 1217141
+        },
+        {
+          "path": "FAILED.png",
+          "sha256": "67c73dd60b1e522f4b0844bd7022939d6c027f16710cf8ebd69d01a0856f0c0f",
+          "bytes": 150808
+        },
+        {
+          "path": "LIVE.json",
+          "sha256": "ec5ba232f2c7aa392441c3fbd4dd6a3dc415d5cd6dad261b549903daca428b10",
+          "bytes": 291847
+        },
+        {
+          "path": "RESULT.json",
+          "sha256": "ec5ba232f2c7aa392441c3fbd4dd6a3dc415d5cd6dad261b549903daca428b10",
+          "bytes": 291847
+        }
+      ]
+    },
+    {
+      "name": "browser-harness-fifth",
+      "status": "failed",
+      "failure": "Error: Duration is not active attempt time",
+      "reason": "Actual C1 physical goal and one completion passed again. Added keydown observer still read absent world.time. Added read-only top-level activeSeconds, then final run measured real pause and exact attempt duration.",
+      "originalResultSha256": "cf2c63b468c35fd36c6603d82f94e828e0a816b1eb2035695a5578fa195ae087",
+      "retainedPath": "/Users/acedzn/dev/AceDZN-exp/skyport-inspector/work/workbook-release/work/host-harness-attempts/browser-harness-fifth",
+      "files": [
+        {
+          "path": "01-real-room50-direct-entry.png",
+          "sha256": "3a06a1b78fc15d9a7b5fa689ef331ed34ee184ce3fd506ec3cea206ba5e925b9",
+          "bytes": 710299
+        },
+        {
+          "path": "02-required-model-error-no-fallback.png",
+          "sha256": "d32bfcac7c31551b2e36f8408a850dfa742fd9c64a8f96d7efa524927ea928fc",
+          "bytes": 14923
+        },
+        {
+          "path": "03-real-linked-portals-and-projector.png",
+          "sha256": "120ce0d8ab28ab5229017100df97ce65aff2b241cd45283d0e84a688b5718e6b",
+          "bytes": 984390
+        },
+        {
+          "path": "04-real-projector-and-held-cargo.png",
+          "sha256": "bbb0225fa373586f4d74fcc161404eef2a5eca06862c94d6453f74cb219e01a5",
+          "bytes": 1270499
+        },
+        {
+          "path": "05-real-cargo-on-pressure-plate.png",
+          "sha256": "bbd88e2072c4eb685b583915fdf0cef0bcb333d806a4d13de885f558f8a651c1",
+          "bytes": 1218052
+        },
+        {
+          "path": "FAILED.png",
+          "sha256": "e33f14493fdce8bcf8079874e0b3be30da1c551bd6f93a8346a95382e1392fb0",
+          "bytes": 150198
+        },
+        {
+          "path": "LIVE.json",
+          "sha256": "cf2c63b468c35fd36c6603d82f94e828e0a816b1eb2035695a5578fa195ae087",
+          "bytes": 291945
+        },
+        {
+          "path": "RESULT.json",
+          "sha256": "cf2c63b468c35fd36c6603d82f94e828e0a816b1eb2035695a5578fa195ae087",
+          "bytes": 291945
+        }
+      ]
+    }
+  ]
+}

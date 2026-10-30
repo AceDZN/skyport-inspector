@@ -1,3 +1,9 @@
+# Workbook adapter ·30 October2026
+
+Explicit new human request: merge the game into its repo and add it to Workbook games at `/Users/acedzn/dev/acedzn-tools/`. Accepted game main alreadyef64e2e; this source-side change adds the minimal version1 bridge, exact parent/origin/source guards, canonical1–50 direct entry, non-persisted locked-room practice, real base attempt/completion lifecycle, pause-excluded duration, required-model error reports and transient host mute. No engine/room/model/scene/curriculum changes. Read-only activeSeconds improves precise host observation; relative favicon supports nested release paths.
+
+Focused verification passed:10 host unit tests; strict runtime TypeScript/Vite build; develop-web-game client + opened screenshot; actual iframe room50 fresh-save/no fake unlock; mute/source/foreign protocol guards; duplicate query rejection; intentional required model503→error/no ready→real Retry→ready/start; help freezes measured active time/position/audio; real R attempt; C1 aimed portals→cube→carried return→pad→physical exit, exactly one duration-correct completion; Next2/restart2, ready once. Zero unexpected page/console errors. Poster is the unedited actual gameplay capture. `docs/workbook-integration/ACCEPTANCE.json` records scope; failed observer/harness attempts are SHA-bound and explicitly excluded. No full497 or50 replay was rerun; the unchanged accepted physical sources retain earlier proof. Root owns acedzn-tools catalog/R2/host checks. Keep the clean release worktree/build for release handoff; no additional gameplay scope is pending here.
+
 # Current status ·29 October2026
 
 **Accepted within recorded scope:** exactly50 authored escalating enclosed Portal levels, one saved numbered campaign, no grade selector. Actual Tripo projector/cargo, room architecture/detail and English mission/help/debrief support are integrated. No new generation or manual export is pending.

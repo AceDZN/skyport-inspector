@@ -1,0 +1,70 @@
+TAP version 13
+# Subtest: all 50 canonical deep links select their exact authored index
+ok 1 - all 50 canonical deep links select their exact authored index
+  ---
+  duration_ms: 0.712333
+  type: 'test'
+  ...
+# Subtest: only exact canonical Workbook/loopback or same-origin Vercel parents are trusted
+ok 2 - only exact canonical Workbook/loopback or same-origin Vercel parents are trusted
+  ---
+  duration_ms: 0.245375
+  type: 'test'
+  ...
+# Subtest: standalone and denied foreign parents receive no events or listeners
+ok 3 - standalone and denied foreign parents receive no events or listeners
+  ---
+  duration_ms: 0.215541
+  type: 'test'
+  ...
+# Subtest: bridge envelopes target the exact immediate parent and listener disposal is complete
+ok 4 - bridge envelopes target the exact immediate parent and listener disposal is complete
+  ---
+  duration_ms: 0.62675
+  type: 'test'
+  ...
+# Subtest: mute requires parent source, exact allowed origin and the complete typed envelope
+ok 5 - mute requires parent source, exact allowed origin and the complete typed envelope
+  ---
+  duration_ms: 0.206958
+  type: 'test'
+  ...
+# Subtest: ready follows rendering once and precedes queued actual attempt events
+ok 6 - ready follows rendering once and precedes queued actual attempt events
+  ---
+  duration_ms: 0.132125
+  type: 'test'
+  ...
+# Subtest: completion is tied to an active base attempt and cannot repeat after success or home
+ok 7 - completion is tied to an active base attempt and cannot repeat after success or home
+  ---
+  duration_ms: 0.116833
+  type: 'test'
+  ...
+# Subtest: retry is a fresh same-room attempt and duration excludes earlier attempts and paused world time
+ok 8 - retry is a fresh same-room attempt and duration excludes earlier attempts and paused world time
+  ---
+  duration_ms: 0.065041
+  type: 'test'
+  ...
+# Subtest: invalid attempt levels and durations never consume a valid completion
+ok 9 - invalid attempt levels and durations never consume a valid completion
+  ---
+  duration_ms: 0.085125
+  type: 'test'
+  ...
+# Subtest: host mute never changes saved master preference and every resume/completion keeps its effective gain silent
+ok 10 - host mute never changes saved master preference and every resume/completion keeps its effective gain silent
+  ---
+  duration_ms: 0.477958
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 136.325291

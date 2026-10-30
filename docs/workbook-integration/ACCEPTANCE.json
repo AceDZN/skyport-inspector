@@ -1,0 +1,189 @@
+{
+  "status": "passed",
+  "baselineCommit": "ef64e2e527bd71824357bf674967e54c470a55dc",
+  "scope": "Workbook host adapter only. Ten host unit tests + strict runtime TypeScript/Vite build + skill browser + focused actual iframe integration. Prior 497 native and fresh50 evidence retained for unchanged world/rooms/assets, not rerun.",
+  "browserChecks": [
+    {
+      "name": "locked-level50-entry-save-and-ready",
+      "passed": true,
+      "hostEvents": [
+        {
+          "type": "ready",
+          "source": "workbook-game",
+          "version": 1,
+          "slug": "rift-runner"
+        },
+        {
+          "type": "level-start",
+          "level": 50,
+          "source": "workbook-game",
+          "version": 1,
+          "slug": "rift-runner"
+        }
+      ]
+    },
+    {
+      "name": "actual-parent-mute-invalid-protocol-and-sibling-rejected",
+      "passed": true
+    },
+    {
+      "name": "duplicate-level-rejected",
+      "passed": true
+    },
+    {
+      "name": "actual-foreign-parent-denied",
+      "passed": true
+    },
+    {
+      "name": "required-model-error-and-real-retry",
+      "passed": true,
+      "hostEvents": [
+        {
+          "type": "error",
+          "message": "Rift Runner could not load its required models or renderer. Try again.",
+          "source": "workbook-game",
+          "version": 1,
+          "slug": "rift-runner"
+        },
+        {
+          "type": "ready",
+          "source": "workbook-game",
+          "version": 1,
+          "slug": "rift-runner"
+        },
+        {
+          "type": "level-start",
+          "level": 1,
+          "source": "workbook-game",
+          "version": 1,
+          "slug": "rift-runner"
+        }
+      ]
+    },
+    {
+      "name": "help-freeze-and-real-R-attempt",
+      "passed": true,
+      "hostEvents": [
+        {
+          "type": "ready",
+          "source": "workbook-game",
+          "version": 1,
+          "slug": "rift-runner"
+        },
+        {
+          "type": "level-start",
+          "level": 1,
+          "source": "workbook-game",
+          "version": 1,
+          "slug": "rift-runner"
+        },
+        {
+          "type": "level-start",
+          "level": 1,
+          "source": "workbook-game",
+          "version": 1,
+          "slug": "rift-runner"
+        }
+      ],
+      "pausedActiveSeconds": 0.16666666666666666,
+      "retryActiveSeconds": 0.16666666666666666
+    },
+    {
+      "name": "actual-C1-physical-completion-and-pause-excluded-duration",
+      "passed": true,
+      "hostEvents": [
+        {
+          "type": "ready",
+          "source": "workbook-game",
+          "version": 1,
+          "slug": "rift-runner"
+        },
+        {
+          "type": "level-start",
+          "level": 1,
+          "source": "workbook-game",
+          "version": 1,
+          "slug": "rift-runner"
+        },
+        {
+          "type": "level-start",
+          "level": 1,
+          "source": "workbook-game",
+          "version": 1,
+          "slug": "rift-runner"
+        },
+        {
+          "type": "level-complete",
+          "level": 1,
+          "durationMs": 18167,
+          "source": "workbook-game",
+          "version": 1,
+          "slug": "rift-runner"
+        }
+      ],
+      "attemptStartActiveSeconds": 0.16666666666666666,
+      "goalActiveSeconds": 18.333333333332934,
+      "durationMs": 18167,
+      "completedLevels": [
+        1
+      ]
+    },
+    {
+      "name": "next-and-restart",
+      "passed": true,
+      "hostEvents": [
+        {
+          "type": "ready",
+          "source": "workbook-game",
+          "version": 1,
+          "slug": "rift-runner"
+        },
+        {
+          "type": "level-start",
+          "level": 1,
+          "source": "workbook-game",
+          "version": 1,
+          "slug": "rift-runner"
+        },
+        {
+          "type": "level-start",
+          "level": 1,
+          "source": "workbook-game",
+          "version": 1,
+          "slug": "rift-runner"
+        },
+        {
+          "type": "level-complete",
+          "level": 1,
+          "durationMs": 18167,
+          "source": "workbook-game",
+          "version": 1,
+          "slug": "rift-runner"
+        },
+        {
+          "type": "level-start",
+          "level": 2,
+          "source": "workbook-game",
+          "version": 1,
+          "slug": "rift-runner"
+        },
+        {
+          "type": "level-start",
+          "level": 2,
+          "source": "workbook-game",
+          "version": 1,
+          "slug": "rift-runner"
+        }
+      ]
+    }
+  ],
+  "unexpectedBrowserErrors": [],
+  "poster": {
+    "path": "public/poster.png",
+    "sha256": "f752d35948bcd192d96ead5e90b276ff05e6288e8e55a5c6932cf3f1d6f2f191",
+    "width": 1440,
+    "height": 900,
+    "source": "Unedited actual C1 gameplay: real cargo pressure button, open exit, linked portal and projector. Generated by normal input in final iframe run."
+  },
+  "rawBrowserReceiptSha256": "9494a082ae75fef31af7fed368dd4d5b065f675e31aa07f596c2e7746c2137f2"
+}

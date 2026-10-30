@@ -6,6 +6,7 @@ import { CampaignProgress, CAMPAIGN_LENGTH, type Store } from '../progression';
 import { coreLevels, getCoreLevel } from './levels';
 import { FixedStepClock } from './fixed-step';
 import {englishSupport,firstRoomHint} from './learning';
+import {connectHost,parseLevelParam,WorkbookSession} from '../host';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 app.innerHTML = '<canvas id="world" tabindex="0" aria-label="Rift Runner test chamber"></canvas><div id="hud"></div><div id="crosshair"><i></i><b></b></div><div id="hint"></div><div id="toast" role="status"></div><div id="overlay"></div>';
@@ -16,6 +17,11 @@ const hint = document.querySelector<HTMLDivElement>('#hint')!;
 const toastEl = document.querySelector<HTMLDivElement>('#toast')!;
 let observedEnglish:HTMLElement|null=null;
 const audio = new RiftAudio();
+const host=connectHost(muted=>audio.setHostMuted(muted));
+const hostSession=new WorkbookSession(host.send);
+const requestedLevel=parseLevelParam(location.search,CAMPAIGN_LENGTH);
+// A locked deep link is session-only practice; skipped campaign rooms stay locked.
+let directPractice=false;
 const SAVE_KEY = 'rift-runner-rapier-campaign-v1';
 let storage: Store | undefined;
 try { storage = localStorage; } catch { /* Session progress still works. */ }
@@ -52,27 +58,34 @@ function event(type: string, data: Record<string, unknown> = {}) {
     if (type === 'blocked') message('הצד השני חסום. פנו מקום או מקמו מחדש את השער.');
     if (type === 'invalid' || type === 'wrong-exit') message(String(data.reason ?? 'Aim at a white surface.'));
     if (type === 'portalA' || type === 'portalB') audio.setConnection(world.portals.every(Boolean));
-    if (type === 'respawn') message('בחזרה לנקודת ההתחלה. השערים נשמרו.');
+    if (type === 'respawn') {
+        if(!alternate)hostSession.startAttempt(number,world.time);
+        message('בחזרה לנקודת ההתחלה. השערים נשמרו.');
+    }
     if (type === 'complete' && world.campaignResult?.goalMatched) {
-        const accepted = progress.observe(number, {goalMatched:true, assistance, retries:world.respawns, seconds:world.time, portalCrossings:world.player.crossings, mechanisms:world.campaignResult.mechanisms,variant:alternate?'contrast':'base'});
+        const accepted = directPractice || progress.observe(number, {goalMatched:true, assistance, retries:world.respawns, seconds:world.time, portalCrossings:world.player.crossings, mechanisms:world.campaignResult.mechanisms,variant:alternate?'contrast':'base'});
         if (!accepted) { home(); message(progress.warning ?? 'This result belongs to an older campaign. Start the room again.'); return; }
+        if(!alternate)hostSession.completeLevel(number,world.time);
         mode = 'result'; release(); audio.pauseWithCompletion(); render();
     }
 }
-function load(n: number, contrast = false) {
+function load(n: number, contrast = false, allowDirect = false) {
     progress.refresh();
-    if (!available(n) || !progress.canPlay(n) || (contrast && progress.status(n) !== 'completed')) return;
-    if (!progress.enter(n)) { if (progress.warning) message(progress.warning); return; }
+    if (!available(n) || (!progress.canPlay(n) && !allowDirect) || (contrast && progress.status(n) !== 'completed')) return;
+    const practice=!progress.canPlay(n);
+    if (!practice && !progress.enter(n)) { if (progress.warning) message(progress.warning); return; }
     dismissMessage(); release(); started = false;
-    world?.dispose(); number = n; alternate = contrast; assistance = 0;
+    world?.dispose(); number = n; alternate = contrast; directPractice=practice; assistance = 0;
     world = new CoreWorld(n, event, undefined, contrast);
     if (scene) scene.setWorld(world as unknown as ChamberSceneWorld);
     else scene = new ChamberScene(canvas, world as unknown as ChamberSceneWorld);
     scene.reducedMotion = matchMedia('(prefers-reduced-motion:reduce)').matches;
     mode = 'playing'; started = true;
+    hostSession.leave();
+    if(!alternate)hostSession.startAttempt(number,world.time);
     audio.setConnection(false);
     void audio.start().then(() => { audio.setPaused(mode !== 'playing'); audio.setChapter(Math.min(3, Math.ceil(n / 17)) as 1|2|3); });
-    render(); canvas.focus(); void lock();
+    render(); canvas.focus(); if(navigator.userActivation.isActive)void lock();
     if (progress.warning) message(progress.warning);
 }
 function render() {
@@ -105,7 +118,7 @@ function render() {
 }
 function pause(next = 'pause') { if (next === 'help') assistance++; mode = next; release(); audio.setPaused(true); render(); }
 function resume() { mode = started ? 'playing' : 'menu'; audio.setPaused(mode !== 'playing'); render(); canvas.focus(); if (mode === 'playing') void lock(); }
-function home() { release(); started = false; mode = 'menu'; audio.setPaused(true); render(); }
+function home() { hostSession.leave(); release(); started = false; mode = 'menu'; audio.setPaused(true); render(); }
 app.addEventListener('click', e => {
     const button = (e.target as HTMLElement).closest<HTMLElement>('[data-action]');
     const action = button?.dataset.action;
@@ -113,7 +126,7 @@ app.addEventListener('click', e => {
     if(action==='retry-load')void initializeGame();
     if (action === 'start') load(1);
     if (action === 'continue') load(continueLevel());
-    if (action === 'second' || action === 'next') load(number + 1);
+    if ((action === 'second' || action === 'next') && mode==='result') load(number + 1,false,directPractice);
     if (action === 'level' || action === 'contrast') load(Number(button?.dataset.level), action === 'contrast');
     if (action === 'resume') resume();
     if (action === 'pause') pause();
@@ -122,7 +135,7 @@ app.addEventListener('click', e => {
     if (action === 'settings') { settingsBack = started ? 'pause' : mode; pause('settings'); }
     if (action === 'back') { previewTicket++; mode = settingsBack; audio.setPaused(mode !== 'playing'); render(); }
     if (action === 'retry') { resume(); dismissMessage(); world.respawn(); }
-    if (action === 'restart') load(number, alternate);
+    if (action === 'restart') load(number, alternate, directPractice);
     if (action === 'home') home();
     if (action === 'levels') pause('levels');
     if (action === 'new-game') pause('new-game');
@@ -149,6 +162,7 @@ canvas.addEventListener('contextmenu', e => e.preventDefault());
 canvas.addEventListener('pointerdown', e => {
     if (mode !== 'playing') return;
     canvas.focus();
+    if(audio.state().context!=='running')void audio.start().then(()=>audio.setPaused(mode!=='playing'));
     if (document.pointerLockElement) fire(e.button === 2 ? 1 : 0);
     else if (dragLook) { moved = false; drag = {x:e.clientX,y:e.clientY}; canvas.setPointerCapture(e.pointerId); }
     else void lock();
@@ -205,12 +219,12 @@ function step(ms: number) {
 }
 function frame(now: number) {
     const dt = Math.min(40,now-last); last = now; step(dt);
-    if (scene && (mode === 'playing' || sceneDirty)) { scene.update(mode === 'playing' ? dt/1000 : 0); sceneDirty = false; if (mode === 'playing') { const hit = scene.aim(); document.querySelector('#crosshair')!.classList.toggle('valid', !!hit?.surface); hint.textContent = world.heldId ? 'E · Drop' : world.interactionHint() || (hit?.surface ? 'LMB / RMB · Place portal' : ''); } }
+    if (scene && (mode === 'playing' || sceneDirty)) { scene.update(mode === 'playing' ? dt/1000 : 0); hostSession.markReady(); sceneDirty = false; if (mode === 'playing') { const hit = scene.aim(); document.querySelector('#crosshair')!.classList.toggle('valid', !!hit?.surface); hint.textContent = world.heldId ? 'E · Drop' : world.interactionHint() || (hit?.surface ? 'LMB / RMB · Place portal' : ''); } }
     requestAnimationFrame(frame);
 }
 function transportReadings(){return world?world.machines.devices.filter(d=>['lift','moving-platform'].includes(d.spec.kind)).map(d=>{const body=world.doors.get(d.spec.id)!.rigid,p=body.translation(),v=body.linvel(),stopped=Math.hypot(v.x,v.y,v.z)<=1e-5;const stops=d.spec.stops??[{label:'BASE',position:d.spec.position},...(d.spec.target?[{label:d.spec.targetLabel??'UPPER',position:d.spec.target}]:[])];const at=stopped?stops.find(stop=>Math.hypot(p.x-stop.position[0],p.y-stop.position[1],p.z-stop.position[2])<.015)?.label??null:null;return{id:d.spec.id,position:[p.x,p.y,p.z],velocity:[v.x,v.y,v.z],stopped,at};}):[];}
 Object.assign(window, {
-    render_game_to_text: () => JSON.stringify({title:'Rift Runner',version:'rapier-authored-campaign',mode,level:number,alternate,world:world?.snapshot(),progress:{...progress.save,completed:completed(),resume:continueLevel(),registered:coreLevels.length},saveDiagnostics:{...progress.diagnostics(),origin:location.origin},pointerLocked:!!document.pointerLockElement,controls:{unlocked:dragLook,sensitivity},audio:audio.state(),assets:scene?.assetDiagnostics?.()??null,heroAssets:ChamberScene.heroAssetStatus(),heroInstances:scene?.heroAssetDiagnostics?.()??null,initializationError,portalRendering:scene?.renderDiagnostics?.()??null,transportMotion:transportReadings()}),
+    render_game_to_text: () => JSON.stringify({title:'Rift Runner',version:'rapier-authored-campaign',mode,level:number,alternate,directPractice,activeSeconds:world?.time??0,world:world?.snapshot(),progress:{...progress.save,completed:completed(),resume:continueLevel(),registered:coreLevels.length},saveDiagnostics:{...progress.diagnostics(),origin:location.origin},pointerLocked:!!document.pointerLockElement,controls:{unlocked:dragLook,sensitivity},audio:audio.state(),assets:scene?.assetDiagnostics?.()??null,heroAssets:ChamberScene.heroAssetStatus(),heroInstances:scene?.heroAssetDiagnostics?.()??null,initializationError,portalRendering:scene?.renderDiagnostics?.()??null,transportMotion:transportReadings()}),
     advanceTime:(ms:number) => { step(ms); scene?.update(0); }
 });
 render();
@@ -224,11 +238,15 @@ async function initializeGame(){
         pendingWorld=new CoreWorld(1,event);
         const readyScene=new ChamberScene(canvas,pendingWorld as unknown as ChamberSceneWorld);
         world=pendingWorld;scene=readyScene;
-        mode='menu';render();if(progress.warning)message(progress.warning);
+        mode='menu';render();
+        if(requestedLevel!==null)load(requestedLevel+1,false,true);
+        if(progress.warning)message(progress.warning);
         if(!frameStarted){frameStarted=true;last=performance.now();requestAnimationFrame(frame);}
     }catch(error){
         pendingWorld?.dispose();
-        initializationError=String(error);mode='load-error';render();console.error(error);
+        initializationError=String(error);mode='load-error';render();
+        host.send({type:'error',message:'Rift Runner could not load its required models or renderer. Try again.'});
+        console.error(error);
     }finally{initializing=false;}
 }
 void initializeGame();
